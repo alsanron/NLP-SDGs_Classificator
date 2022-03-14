@@ -1,0 +1,322 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/325934555
+
+Articial Intelligence: A Study on Governance, Policies, and Regulations
+Conference Paper  May 2018
+
+CITATIONS
+
+READS
+
+14
+
+4,470
+
+2 authors, including:
+Keng Siau
+Missouri University of Science and Technology
+535 PUBLICATIONS 10,307 CITATIONS
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+Supply Chain Management View project
+
+All content following this page was uploaded by Keng Siau on 11 September 2018.
+The user has requested enhancement of the downloaded file.
+
+Association for Information Systems
+
+AIS Electronic Library (AISeL)
+MWAIS 2018 Proceedings
+
+Midwest (MWAIS)
+
+5-2018
+
+Artificial Intelligence: A Study on Governance,
+Policies, and Regulations
+Weiyu Wang
+Missouri University of Science and Technology, wwpmc@mst.edu
+
+Keng Siau
+Missouri University of Science and Technology, siauk@mst.edu
+
+Follow this and additional works at: http://aisel.aisnet.org/mwais2018
+Recommended Citation
+Wang, Weiyu and Siau, Keng, "Artificial Intelligence: A Study on Governance, Policies, and Regulations" (2018). MWAIS 2018
+Proceedings. 40.
+http://aisel.aisnet.org/mwais2018/40
+
+This material is brought to you by the Midwest (MWAIS) at AIS Electronic Library (AISeL). It has been accepted for inclusion in MWAIS 2018
+Proceedings by an authorized administrator of AIS Electronic Library (AISeL). For more information, please contact elibrary@aisnet.org.
+
+Wang et al.
+
+AI: Governance, Policies, and Regulations
+
+Artificial Intelligence: A Study on Governance, Policies,
+and Regulations
+Weiyu Wang
+Missouri University of Science and Technology
+wwpmc@mst.edu
+
+Keng Siau
+Missouri University of Science and Technology
+siauk@mst.edu
+
+ABSTRACT
+
+Artificial Intelligence (AI) is displacing jobs and creating an upheaval in the world. It will change the way we work and the
+way we live. What should be the AI governance, policies, and regulations? How can AI governance, policies, and regulations
+mitigate and alleviate the negative aspects of AI advancement? How will AI governance, policies, and regulations impact the
+future of work and the future of humanity? This longitudinal multiple case studies research will study the evolution and
+revolution of AI governance, policies, and regulations, and how governance, policies and regulations impact AI advancement
+and are impacted by AI advancement. The research plans to study the top five leading countries in AI research  China, US,
+Japan, UK, and Germany.
+Keywords
+
+Artificial Intelligence, Machine Learning, Robots, Automation, Governance, Policy, Regulation.
+
+Proceedings of the Thirteenth Midwest Association for Information Systems Conference, Saint Louis, Missouri May 17-18, 2018
+
+1
+
+Wang et al.
+
+AI: Governance, Policies, and Regulations
+
+INTRODUCTION
+
+Artificial intelligence (AI) is a fairly broad concept and is ubiquitous today (Siau and Wang, 2018). The recommendation
+assistant from Amazon, virtual assistants such as Apples Siri and Google Assistant, systems that detect of credit card frauds,
+and face recognition applications are all supported by AI technology. Self-driving cars and home assistants are well-known
+AI-based applications. These applications are able to carry out specific tasks very well and this type of AI technology is
+known as narrow AI (or weak AI). The Artificial General Intelligence (AGI, or strong AI) is able to support multitasks
+simultaneously and is regarded as the intelligence that can surpass or even replace human intelligence.
+Experts have different opinions about how soon AGI will become a reality. For instance, AI researchers Muller and Bostrom
+report in a survey that AGI will have 50% chance to be developed between 2040 and 2050, and 90% by 2075 (Health, 2018).
+Some AI experts believe that AGI is still centuries away. Nevertheless, the investment and research in AI cannot be ignored.
+AI attracted US $12 billions of investment from venture capitalists globally in 2017, double the volume in 2016 (Yu, 2018).
+In July 2017, China unveiled a national plan in which AI will be built into a US$152.5 billion industry by 2030 (Yi, 2017).
+According to Columbus (2017), 80% of enterprises have some forms of AI today, 30% plan on expanding their investment in
+AI, and 62% expect to hire a Chief AI Officer.
+AI is a double-edged sword. AI can assist us in our jobs and lives, and release us from mundane and monotonous tasks (Siau,
+2017). However, AI is replacing human jobs (Siau and Yang, 2017; Siau, 2018). Amazon Go, a cashier-free supermarket, has
+demonstrated AIs ability to replace cashiers. Self-driving trucks are predicted to take over 1.7 million jobs in the next decade
+(Health, 2018). Another big concern is the ethical issues caused by AI. What is the role of governments in creating, adopting,
+and enforcing ethical and moral standards? AI and automation are expected to further widen the wealth gap. What kind of
+government policies and regulations can help to close the wealth gap? What should the governments do to help the workers
+who are replaced by AI? Should Universal Basic Income be implemented? If so, how to fund the Universal Basic Income?
+How can the governments verify/certify that AI applications are not contaminated with human biases (especially those biases
+that are unlawful)?
+The same situation existed in the early days of the Internet. Policymakers, at that time, were struggling with how to best deal
+with that shifts and how to regulate the new technology to capitalize on its potential benefits while mitigating the potential
+risks. The previous governance experience will be helpful in resolving todays AI issues. AI, as a new phenomenon, will
+likely create governance and regulatory issues that are not encountered in earlier technology evolutions. This qualitative
+study will collect data from literature and policymakers in different countries to analyze the governments economic policies
+and regulations, and examine how these policies and regulations impact AI advancement and are impacted by AI
+advancement.
+LITERATURE REVIEW
+Nature of AI
+
+Although AI has been widely applied to areas such as medical, finance, education, transportation, courtrooms, and homes,
+there is no universally accepted definition of AI. AI is regarded as an umbrella term that refers to a wide range of disciplines
+and techniques. Machine learning, automation, and robotics are all relevant to or belong to AI technology. AI can be broadly
+classified into two categories: weak AI and strong AI. Strong AI is a highly controversial topic and some regard strong AI as
+an existential threat to humans. Many weak AI applications exist and the adoption of weak AI has already led to policy,
+governance, and legal issues. For instance, safety and privacy issues, and justice and equality issues.
+Gasser and Almeida (2017) highlight three challenges of building a governance model of AI. First, the black boxes in AI
+applications (e.g., deep learning applications have very limited capability to explain their recommendations or decisions) give
+rise to peoples limited understanding of technological and social implications of AI, causing massive information
+asymmetries among AI experts, AI users, and policymakers. Second, finding normative consensus among different
+stakeholders is not easy. Third, the undercurrents put limits on traditional approaches to policymaking in the AI age.
+Advanced governance models, such as active matrix theory and hybrid regulation, may be able to shed light on the
+governance of AI.
+
+Proceedings of the Thirteenth Midwest Association for Information Systems Conference, Saint Louis, Missouri May 17-18, 2018
+
+2
+
+Wang et al.
+
+AI: Governance, Policies, and Regulations
+
+Concept of Governance and Policy Change
+
+Governance refers to the various ways in which social life is coordinated. It has become a popular buzzword in a variety of
+scientific fields, leading to a considerable debate about the many uses of the word. Toikka (2011, p.10) defines governance as
+self-organizing, inter-organizational networks that are charged with policy-making. Fukuyama (2013) writes that
+governance is a government's ability to make and enforce rules, and to deliver services. Policy change refers to incremental
+shifts in existing structures, or new and innovative policies (Cerna, 2013). However, path dependence model argues that it is
+generally difficult to change policies (Greener, 2002) because the institutions are usually sticky and the policies are designed
+to be hard to change. Policy learning, which is an important aspect of policy change, suggests that countries and regions can
+realize policy change by learning from others and shifting their beliefs (Heclo, 1974).
+Previous study of governance and policy change of AI
+
+There are not many studies on AI governance, policy, and regulatory issues. However, the potential threads of AI and the
+challenges posed by AI must receive the attention of policymakers. More than 20,000 researchers signed a letter, warning
+policymakers of the dangers of autonomous weapons that may use algorithms to strike specific targets (Zeichner, 2017). This
+signature event is caused by the concerns on the possible military uses of AI. Policy change and governance arrangements
+can come both from the street level (bottom-up theory) and authoritys statute (top-down theory) (Ewalt, 2001).
+Researchers, practitioners, and policymakers are starting to pay attention to AI governance, policies, and regulatory issues. In
+the Spring of 2016, United States government announces the White House Future of Artificial Intelligence Initiative to
+explore the impacts of artificial intelligence (Lyons, 2017). Initially funded with $27 million, the Ethics and Governance of
+Artificial Intelligence Fund have started to catalyze global research that advances AI for the public interest, with an
+emphasis on applied research and education (Slotnick, 2017, para. 4).
+GOVERNANCE THEORIES
+
+Good governance should be transparent, accountable, effective and equitable, ensuring that economic, social and political
+priorities are based on broad consensus. In order to apply governance, which offers organizing theories, the objectives of
+governance must be specified. According to Ewalt (2001), the objective of governance includes but not limited to resulting
+citizens value, winning adherence to norms, identifying the mission, services, and customers, building accountability,
+separating service from control, and expanding customer choice.
+Given that the threats of AI are indisputably real, governance and regulation are inevitable and necessary. A distinction is
+often made between economic and social regulation (Den Hertog, 1999). Economic regulation can be grouped in positive and
+normative theories. According to positive theories of regulation, regulation occurs because the government is interested in
+overcoming information asymmetries with the operator and in aligning the operators interest with the governments interest
+(Theories of Regulation, n.d.). Another theory of regulation, normative theories of regulation, conclude that regulators
+should minimize the costs of information asymmetries, provide price structures that improve economic efficiency, provide
+regulation under the law, and establish regulatory processes that provide independence, transparency, predictability,
+legitimacy, and credibility for the regulatory system (Theories of Regulation, n.d.). From the economic perspective, the
+supply-side policy encourages cutting taxes to stimulate economic growth. Cutting taxes, however, can result in budget
+deficits and unemployment may remain high (Theories of Economic Policy, n.d.).
+According to Lyons (2017), the responsibility of governance and policy is global. Governance theory will not be a one-sizefits-all prescription, but a coherent framework upon which each practice can vary in recognition of cultural and contextual
+particulars. The AI governance will ultimately cross borders and leverage international governance bodies. A global AI
+governance system must be flexible enough to accommodate cultural differences and bridge gaps across different national
+legal systems (Gasser and Almeida, 2017, p.58). Werlin (2003) argues that the difference between poor countries and rich
+countries has to do with governance rather than resources. Governance will play an important role in ensuring the appropriate
+redistribution of wealth and alleviating the job losses caused by AI.
+RESEARCH QUESTIONS AND PROCEDURE
+
+This longitudinal multiple case studies research will study the evolution and revolution of AI governance, policies, and
+regulations, and how governance, policies and regulations impact AI advancement and are impacted by AI advancement. The
+research plans to study the top five leading countries in AI research  China, US, Japan, UK, and Germany.
+We will utilize the qualitative approach to conduct this research (Yin, 2016). Governance, policy, and regulatory issues
+related to AI is a new and complex topic, and many people have different ideas and opinions on the topic. Qualitative
+
+Proceedings of the Thirteenth Midwest Association for Information Systems Conference, Saint Louis, Missouri May 17-18, 2018
+
+3
+
+Wang et al.
+
+AI: Governance, Policies, and Regulations
+
+research provides the flexibility in gathering data and manage the research process, which may be lengthy and ambiguous.
+Case study research is an effective methodology to investigate and understand complex, comprehensive, and in-depth issues
+in real-world settings. It is especially recommended to answer how, why, and what research questions (Harrison, Birks,
+Franklin and Mills, 2017). In this study, a multiple-case case study will be conducted. The target participants are
+policymakers and government officials from five countries that publish most research on AI (Jacobsen, 2018). To understand
+the research question better and track the fast-changing technology environment, a longitudinal study will be implemented to
+trace the evolution and revolution of AI governance, policies, and regulations in these five countries.
+CONCLUSIONS AND EXPECTED CONTRIBUTIONS
+
+Understanding and addressing governance, policy, and regulatory issues related to AI are still in an infancy stage.
+Nevertheless, AI is advancing rapidly, and the governance, policy, and regulatory issues are critical and need to be discussed
+now. This research aims to call attention to the urgent need for various policymakers and government officials to pay
+attention to these issues. While attempting to formulate the governance, policy, and regulatory models for AI, we will gain
+insights into the future development of AI technology, understand the economic, social, and political impact of AI better, and
+improve our understanding and application of governance, policy, and regulatory theories in the AI age. This study is
+expected to contribute to both the academic progress in the field, and the writing and implementation of governance, policies,
+and regulations that are related to AI.
+REFERENCES
+
+1.
+
+Cerna, L. (2013) The nature of policy change and implementation: a review of different theoretical approaches,
+Organisation for Economic Cooperation and Development (OECD) report.
+
+2.
+
+Columbus, L. (2017) 80% of Enterprises are investing in AI Today, Forbes, Retrieved from
+https://www.forbes.com/sites/louiscolumbus/2017/10/16/80-of-enterprises-are-investing-in-ai-today/#4f1069d54d8e
+
+3.
+
+Den Hertog, J. A. (1999) General theories of regulation.
+
+4.
+
+Ewalt, S. (2001) Theories of governance and new public management: links to understanding welfare policy
+implementation.
+
+5.
+
+Fukuyama, F. (2013) What is governance? Governance, 26(3), 347-368.
+
+6.
+
+Gasser, U. and Almeida, V. A. (2017) A Layered Model for AI Governance, IEEE Internet Computing, 21(6), 58-62.
+
+7.
+
+Greener, I. (2002) Understanding NHS reform: the policy-transfer, social learning and path-dependency perspectives,
+Governance, 15(2): 161-183.
+
+8.
+
+Harrison, H., Birks, M., Franklin, R. and Mills, J. (2017) Case Study Research: Foundations and Methodological
+Orientations, In Forum Qualitative Sozialforschung/Forum: Qualitative Social Research, Vol. 18, No. 1.
+
+9.
+
+Health, N. (2018) What is AI? Everything you need to know about Artificial Intelligence, ZDNet, Retrieved from
+http://www.zdnet.com/article/what-is-ai-everything-you-need-to-know-about-artificial-intelligence/
+
+10. Heclo, H. (1974) Social Policy in Britain and Sweden, New Haven: Yale University Press.
+11. Jacobsen, B. (2018) 5 Countries Leading the Way in AI, Future Proof, Retrieved
+https://www.futuresplatform.com/blog/5-countries-leading-way-ai-artificial-intelligence-machine-learning
+
+from
+
+12. Lyons, T. (2017) The International Project of AI Governance, Retrieved from https://medium.com/read-writeparticipate/the-international-project-of-ai-governance-1fca928e05d4
+13. Slotnick, S. (2017) MIT Media Lab to participate in new $27 million initiative on ethics and governance in AI, MIT
+Media Lab, Retrieved from https://www.media.mit.edu/posts/mit-media-lab-to-participate-in-new-27-million-initiativeon-ethics-and-governance-in-ai/
+14. Siau, K. (2017) Impact of Artificial Intelligence, Robotics, and Automation on Higher Education. Americas Conference
+on Information Systems (AMCIS 2017), Boston, MA, August 10-12.
+15. Siau K. (2018) Education in the Age of Artificial Intelligence: How will Technology Shape Learning? The Global
+Analyst, Vol. 7, No. 3, pp. 22-24.
+
+Proceedings of the Thirteenth Midwest Association for Information Systems Conference, Saint Louis, Missouri May 17-18, 2018
+
+4
+
+Wang et al.
+
+AI: Governance, Policies, and Regulations
+
+16. Siau K. and Wang, W. (2018) Building Trust in Artificial Intelligence, Machine Learning, and Robotics, Cutter Business
+Technology Journal, Vol. 31, No. 2, pp. 47-53.
+17. Siau, K. and Yang, Y. (2017) Impact of Artificial Intelligence, Robotics, and Machine Learning on Sales and Marketing,
+Twelve Annual Midwest Association for Information Systems Conference (MWAIS 2017), Springfield, Illinois, May 1819.
+18. Theories of Economic Policy (n.d.). Retrieved
+government/economic-policy/theories-of-economic-policy
+
+from
+
+https://www.cliffsnotes.com/study-guides/american-
+
+19. Theories of Regulation. (n.d.) Retrieved from http://regulationbodyofknowledge.org/general-concepts/theories-ofregulation/
+20. Toikka, A. (2011) Governance theory as a framework for empirical research, A Case Study on Local Environmental
+Policy-Making in Helsinki, Finland. Helsinki: Department of Social Research University of Helsinki.
+21. Werlin, H. H. (2003) Poor nations, rich nations: A theory of governance, Public Administration Review, 63(3), 329-342.
+22. Yi, Z. (2017) Robots bring Asia into the AI research ethics debate, COSMOS,
+https://cosmosmagazine.com/physics/robots-bring-asia-into-the-ai-research-ethics-debate
+
+Retrieved
+
+from
+
+23. Yin, R. (2016) Qualitative Research from Start to Finish, Second Edition, The Guilford Press.
+24. Yu, X. (2018) Venture capital investment in AI doubled to US$12 billion in 2017, South China Morning Post, Retrieved
+from http://www.scmp.com/business.
+25. Zeichner, D. (2017) Data will change the world, and we must get its governance right, Retrieved from
+https://www.theguardian.com/science/political-science/2017/dec/15/data-will-change-the-world-and-we-must-get-itsgovernance-right.
+
+Proceedings of the Thirteenth Midwest Association for Information Systems Conference, Saint Louis, Missouri May 17-18, 2018
+
+View publication stats
+
+5
+
+

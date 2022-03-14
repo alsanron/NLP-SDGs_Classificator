@@ -1,0 +1,867 @@
+Communication, Culture & Critique ISSN 1753-9129
+
+ORIGINAL ARTICLE
+
+Toward a Political Economic Framework
+for Analyzing Digital Development Games:
+A Case Study of Three Games for Africa
+Jolene Fisher
+School of Journalism and Communication, University of Oregon, Eugene, OR 97403, USA
+
+This study analyzes 3 digital games for development in Africa, examining them as individual texts that operate as part of a broader international development discourse, and as
+political economic products with implications for international development and gaming
+industries. A conceptual framework is proposed as part of this process. By looking at individual games alongside the organizations and funding structures behind them, I argue that
+digital games, as a new technological platform, do not in-and-of themselves present a revolutionary approach to development across Africa; rather, they both reinforce and subvert
+dominant approaches already at play.
+Keywords: Digital Development Games, Games, Gamification, Development, Neoliberalism.
+doi:10.1111/cccr.12128
+
+In the 10 years since the release of the UN World Food Programmes downloadable PC game Food Forcebilled as the first-ever humanitarian aid video gamethe
+production of digital games for use within the international development industry
+has expanded substantially. While the earliest Digital Development Games (DDGs)
+focused on raising awareness about development and humanitarian aid issues by targeting students in the Global North, more recent versions have been designed to
+carry out on-the-ground development work in countries such as Kenya and Tanzania.
+Celebrated as the next frontier for advocacy and aid groups, international organizations are looking to DDGs as a radical new approach to development. But, despite
+enthusiasm for the potential of games as educational and behavior change tools, little
+attention has been paid to the development ideologies embedded within them. Thus,
+
+Corresponding author: Jolene Fisher; e-mail: ijf@uoregon.edu
+30
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+an important question remains: While digital games certainly present a new technological channel for carrying out development projects, do they present a radically new
+approach to conceptualizing and enacting the development process?
+In this study, I argue that the gamification of the development industry must
+be understood as a process of productive purpose in which games, embedded with particular development ideologies, are used in an attempt to generate
+development-oriented results in nongame contexts (Rughinis, 2013). Whether they
+are effective in achieving them or not, understanding the intended results of games
+through an analysis of their narratives, procedural rhetoric, and political economic
+foundations is imperative in order to expose the development ideologies and agendas
+embedded in DDGs designed for use across Africa, where they come from, and what
+they mean for the industry at large. Further, DDGs must be understood as political
+economic products, which, imbricated in both a global gaming and global development industry, inculcate or challenge the established knowledge/power hierarchies of
+a global development system. While DDGs do present a new technological platform
+for carrying out development projects, they do not in-and-of themselves present
+a revolutionary approach to conceptualizing or enacting development across the
+African continent; rather, they both reinforce and subvert the dominant approaches
+already at play.
+How games will save Africa! (even if radio, satellite, and the Internet could
+not  )
+
+Although the potential for digital games to be used as effective educational and
+behavior change tools has been well documented (Gee, 2005; Shaffer, 2004), a
+decades worth of DDGs suggests it is not, as predicted by social-cause game developer Jane McGonigal (2010), as easy to save the world in real life as it is in games.
+Indeed, analysis of the use of digital games for education and international development shows decidedly mixed results in terms of project outcomes. While the
+current field is relatively small (approximately 30 games), the funds provided for,
+and media attention around, recent DDG projects indicate future growth. The use
+of such games to disseminate educational messages, expose people to new ideas, and
+facilitate behavior change at the individual level is, understandably, of interest to the
+international development industry, which has long looked to mass communication
+technologies to accomplish such tasks (Lerner, 1958; Melkote & Steeves, 2001;
+Rao, 1963; Rogers, 1973, 1976; Schramm, 1964; Shaffer, 2004; Singhal & Rogers,
+1999). However, research that focuses only on the effectiveness of DDGs would be
+shortsighted; rather, critical attention must be paid to the ideological frames and
+development narratives embedded within DDGs, as well as the political economic
+implications of the production behind them, to make clear how DDGs are used to
+further specific development agendas and whose interests they serve (Bogost, 2006;
+Escobar, 1984; Wilkins, 1999; Wilkins & Enghel, 2013). Two levels of analysis are
+necessary to accomplish this. The first considers games as texts.
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+31
+
+Games for Africa
+
+J. Fisher
+
+Game studies scholars argue that a critical textual analysis of games is not
+only possible, it is necessary (Bogost, 2006; Fernandez-Vara, 2015; Flanagan,
+2009; Flanagan & Nissenbaum, 2014). The meaning created both within games,
+meaningful play, and around them, cultural significance, lends itself to textual
+interpretation (Fernandez-Vara, 2015, p. 6), and the ethical and political values
+embedded in games by designers (whether intentional or not) necessitate a critical
+approach to these texts (Bogost, 2006; Flanagan, 2009; Flanagan & Nissenbaum,
+2014). Unveiling the pattern of beliefs that have been worked into a text, along with
+whose interests are represented by it, is achieved through a close analysis of the text
+itself along with a description of the relationships that exist between the artifact and
+its context (Foss, 2009).
+Thus, a critical textual analysis of DDGs must be grounded in the broader development industry discourse, beginning with the term development itself, which has
+long defied any singular definition. Generally assumed to be an intentional process
+meant to improve quality of life and create beneficial social change, consensus on
+what beneficial change looks like, who is in the best position to enact it, how it should
+be done, and for whom is lacking (Escobar, 1984; Melkote & Steeves, 2001; Parpart,
+Rai, & Staudt, 2002; Wilkins & Mody, 2001). The debate over the term development,
+then, is really a struggle over the shape of futures (Nederveen Pieterse, 2009,
+p. xviii), with processes such as globalization and the spread of neoliberalism playing
+a role in how this debate is framed, legitimizing certain futures over others. Although
+often challenged, the dominant future in the development field has been based
+on modernization, which prioritizes capitalist economic development, promotes
+rationality and objectivity in individuals, and emphasizes technology acquisition and
+industrialization (Melkote & Steeves, 2001).
+Alternative perspectives have critiqued the ethnocentrism of the dominant
+modernization paradigm, calling for more holistic and contextual approaches
+that take into account the roles of gender, the environment, religion, and indigenous knowledge in creating sustainable development solutions. Whether feminist,
+environmental, theological, and/or grassroots in nature, these critical approaches
+work to disrupt the top-down hierarchical structure of a Western-development
+model and move beyond economic definitions of development. Nonetheless,
+approaches based on theories of modernization and neoliberal economics remain
+dominant within the worlds largest development institutions, such as the
+World Bank (WB).
+Trends and changes in the global development landscape impact how issues and
+solutions are framed within the discourse (Wilkins, 2000, 2008). For instance, the rise
+of celebrity advocacy, causumerism, and clicktivismseen perhaps most easily
+in U2 frontman Bonos global (RED) campaignhas led to an emphasis on compassionate consumption and capitalist solutions to development problems. Although
+it has gained mainstream popularity, development scholars argue such an approach
+works to not only erase, but to in fact re-create and reproduce the productive forces
+behind global inequality (Cameron & Haanstra, 2008; Kapoor, 2013; Wilkins &
+32
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+Enghel, 2013). Similarly, enthusiastic discourse about the magical potential of
+the Internet to act as a democratizing force in closing information gaps accelerated the scale of development projects based on information and communication
+technologies and the promise of a painless transition to modernity through technology (Chakravartty, 2009, p. 37). But such a discourse has simultaneously erased
+the effects of growing inequalities in access to technology (Leye, 2009; Ogan et al.,
+2009; Wilkins & Enghel, 2013). The discourse around and within DDGs, the newest
+development trend, must be given similar critical attention.
+DDGs must likewise be understood as material products produced within
+a specific sociohistorical and economic context (Fernandez-Vara, 2015). As the
+multibillion-dollar global digital games industry continues to grow at a rate unparalleled by the rest of the entertainment industry, it is necessary to consider the political
+economic implications of the production of DDGs, especially as smaller game developers and development organizations create products alongside large international
+bodies and private game corporations. Without attention to the asymmetrical structures of power at play in their design and production, DDGs risk replicating issues
+seen in earlier Information Communication Technology (ICT) projects, including
+the continuation of problematic top-down, one-way information structures; the
+incorporation of gender biases that further entrench existing social issues; the
+sustainment of knowledge monopolies that privilege Western ways of knowing;
+and the erasure of important local contexts and needs (Kwami, Wolf-Monteiro, &
+Steeves, 2011). The uneven flows of images and capital produced by the complex
+processes of a globalized media industry, of which digital games are a large part, are
+important to analyze as they create new configurations of power and produce new
+subject positions, new forms of oppression (and resistance), and new instruments
+of power/knowledge  that cut across political, national and racial boundaries in
+unexpected ways (Shome & Hegde, 2002, p. 176).
+Considered the media of Empire in the 21st century, digital gameplay often
+works in favor of global hypercapitalism as it trains flexible personalities for flexible
+jobs, shapes subjects for militarized markets, and makes becoming a neoliberal subject
+fun (Dyer-Witheford & De Peuter, 2009, pp. xxixxxx); but it also offers the possibility for alternatives to, or ways out of, the system. Digital games are worthy of our
+attention as they have the potential to shape work, learning, health care and more,
+including the field of international development (Flanagan & Nissenbaum, 2014, p. 3).
+The DDGs analyzed in this article were created to facilitate development across
+Africa, which, historically, has been a major target of projects spanning the spectrum
+of media innovations: From radio, to satellite television, to ICT projects, each new
+innovation has been latched onto as the key to developing the continent (Melkote
+& Steeves, 2001). Enthusiasm for the transformative potential of DDGs has been no
+less, but, like technologies before them, it remains unclear whether games present a
+radically new approach to development, or simply a new technological platform for
+replicating traditional projects. Although DDGs have been produced by a variety
+of organizations to tackle a range of development issues, an overview of the field
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+33
+
+Games for Africa
+
+J. Fisher
+
+indicates broad similarities in terms of purpose and intent. Thus, understanding
+how DDGs operate individually and in relation to one another is a necessary step in
+analyzing the use and implications of Digital Games for Development (DG4D).
+
+Toward a political economic framework for game analysis
+
+The gamification of the development industry must be understood as more than a
+simple system of applied game mechanics and game elements (i.e., point systems and
+progress bars) to nongame development activities; rather, it is a process of productive
+purpose in which games are used to produce specific development-oriented results
+in nongame contexts (Rughinis, 2013). If gamification is understood as designing
+technology-with-intent, then, intent matters (Rughinis, 2013, p. 4). Thus, as DDGs
+are integrated into the system as a way to conduct or do development, replacing traditional projects that would previously have been carried out in a nongame context, it
+is necessary to understand them as technology-with-intent, and to critically analyze
+what that intent is. The productive purpose of DDGs can be broken down into three
+main areas: games meant to teach an audience how to do development; to actually
+develop an audience; or to highlight issues of inequality and engage an audience in
+critique. To that end, this study proposes a political economic framework comprised
+of three categories to be used as a tool for understanding and analyzing DDGs across
+the African continent and beyond.
+The first category, Developing Developers (DD), encompasses games that present
+an audience located primarily in the Global North with development issues situated
+in the Global South. While the specific projects vary, the purpose of DD games is to
+construct for players an understanding of developmentwhat it should look like,
+how it should be done and who should be in control of itas well as to call on players
+as actors in the development process within the game and beyond. The second,
+Digital Interventions (DI), is made up of games intended for use as on-the-ground
+development interventions. The purpose of DI games is to develop individuals living in the Global South, using digital formats as a new avenue for carrying out health,
+education, and skills-based projects. The final category, Critical Play (CP), is made
+up of games that address structural inequality as the root cause of underdevelopment and ask players to engage in critique and conceptualize solutions outside of the
+current system. The purpose of CP games is to challenge local and global power structures through gameplay and educate players about systemic issues that exacerbate
+development issues.
+I argue that DDGs must be understood as political economic products that carry
+an embedded development narrative to a target audience and, in this way, further a
+particular development agenda. Analyzing games according to their position in the
+framework proposed here is an important step in this process as it highlights the
+games productive purpose. By asking whether a game is attempting to Develop Developers act as a Development Intervention, or engage an audience in Critical Play, an
+34
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+important motive is identified. Thus, this study analyzes one game, and the organization responsible for its production, to illustrate each of the three categories. The
+analysis presented here is only a first stepmore studies applying the framework
+could help refine it while further illuminating how political economic issues of production influence the types of games created.
+Digital interventions: The World Bank Institute and Urgent EVOKE
+
+The World Bank (WB), referred to as the foremost international development
+agency (Payer, 1982, p. 15), has historically worked in tandem with the International
+Monetary Fund (IMF) to lend money to the Global South. This control of resources
+and influence over borrowing nations has allowed the WB to wield great authority in
+directing the path of international development and global policy discourse on a host
+of issues within a neoliberal framework (Adhikary, 2014; Holman, 1984; Klees, 2012;
+Spring, 2009). Critics of the WB argue its emphasis on the marketization of services
+such as healthcare and education promotes competition, excellence, efficiency,
+expenditure, and economic rate of return while undercutting the sociopolitical
+role and disruptive potential of social goods (Adhikary, 2014, p. 4). The World
+Bank Institute (WBI) operates as an implementation arm for the WB and, rather
+than focusing on relationships with local governments, emphasizes new forms of
+development collaboration that include publicprivate partnerships for things like
+heath and education (World Bank Institute, n.d.). Within this marketized framework,
+education becomes an asset that allows individuals to secure competitive advantage
+in a global capitalist system; the role of such an asymmetrical economic system in
+exacerbating global inequalities in education, however, is elided (Adhikary, 2014;
+Tarabini, 2010). This marketized, neoliberal approach to development can be seen at
+play in the WBIs 2010 game Urgent EVOKE (EVOKE).
+Designed by award-winning game designer Jane McGonigal, EVOKE was created
+to help empower people all over the world to come up with creative solutions to
+our most urgent social problems (Urgent EVOKE, 2010). Online and free to play,
+EVOKE offered a new approach for including youth across sub-Saharan Africa
+(SSA), its target demographic, in the development process by inviting them to voice
+their own ideas about, and solutions to, specific development issues. Certainly, the
+potential for EVOKE to generate a new space for participation by stakeholders in the
+development process was exciting, but in reality the constraints on such participation
+were significant and the game all but failed in reaching its target demographic.
+Further, the WBIs narrow definition of game success framed development issues
+and solutions within a neoliberal framework that greatly constrained the context in
+which players were able to participate.
+The 19,386 people from across the world who registered to play EVOKE were
+tasked with 10 missions, covering topics such as social innovation, food security, the
+future of money, empowering women, and preserving indigenous knowledge (Gaible
+& Dabla, 2010). Players completed missions in three phases by contributing blog posts
+or uploading pictures and videos as evidence of what they had learned about the
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+35
+
+Games for Africa
+
+J. Fisher
+
+weeks issue, how they were taking action in their communities to address it, and how
+they would act locally/and or globally in the future. Although nearly 20,000 players registered, only 1,529 were from SSA: 1,010 of these players were from South
+Africa, while the other 519 were from the rest of the SSA countries combined (Gaible
+& Dabla, 2010). Compared to the 9,577 players in the United States, or the 1,672 in
+Canada, the number of players from the target demographic seems scarce. A strategic
+communication campaign, used to advertise the game and secure relationships with
+high-schools and universities, was responsible for the higher number of players in
+South Africa, but the barriers to play for those not in these classrooms were many.
+Beyond reliable access to the Internet, issues of gender, language skills, and social
+class affected who got to play: EVOKE was programmed in English only; it required
+access to additional technological resources and equipment skills in order to create
+and post evidence; and it necessitated Web 2.0 skills, which require a high level of
+Internet literacy. Users with these skills and access are more likely to be university
+students and on this account and on others, are likely to be members of privileged,
+if not elite, groups within their countries (Gaible & Dabla, 2010, p. 32). EVOKE was
+designed to empower the youth of SSA by facilitating access to knowledge and social
+networks, however, the material and immaterial resources necessary for access were
+beyond the reach of the majority of SSA youth, ultimately precluding the WBIs target
+demographic from participating and further entrenching existing information/power
+structures.
+The development ideology embedded in the game acts as its own constraint to participation as it narrowly defines success within the game world and beyond. According
+to the games executive producer Robert Hawkins, EVOKEs success was measured
+by player development of a set of specific 21st-century skills in relation to social
+innovation (Gaible & Dabla, 2010, p. 11). These skills, which are laid out as a list
+of powers on the games website, evoke a neoliberal sensibility that emphasizes market skills and individual resourcefulness as key to solving broad social problems. For
+instance, entrepreneurship is defined as the power to Achieve goals with sound
+business strategy. Focus on innovation and large-scale transformation. Make your
+idea financially sustainable. Create something that will thrive for a long time; the
+power of local insight challenges players to Know your market. Meet local needs
+and build on local assets. Create solutions that fit the community; and to gain the
+power of resourcefulness players must Make something out of nothing. Rise to
+the occasion no matter what (Urgent EVOKE, 2010). In this context, development is
+achieved through widespread expansion and support of the market, and development
+is the responsibility of individuals who must gain the necessary skills for market participation and then make something out of nothing. The 21st-century higher-order
+thinking skills that the EVOKE powers are based on include: information literacy;
+problem solving; the discovery, use, and citing of facts and information, and; communication and collaboration skills (especially those provided by Web 2.0 tools), as
+well as soft skills important to leadership, such as empathy [italics added for emphasis]
+(Gaible & Dabla, 2010, p. 11).
+36
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+A primary goal of modernization has always been to bring specific technological
+skills to populations in order to promote national economic growth and individual
+behavior change. Indeed, the need for traditional populations to acquire empathy was
+one of Daniel Lerners (1958)the original pioneer of modernizationkey prerequisites for transition to the modern world.
+EVOKEs powers are based on a framework from the Partnership for 21st Century
+Skills, a U.S. organization that advocates for educational policy change at the local,
+federal, and state level to shift the conversation for kids and ensure theyre ready to
+lead and take on the challenges of the 21st century (Partnership, Partnership for
+21st Century Skills, n.d.). The partnerships board, which has included AOL, Apple,
+Dell, Cable in the Classroom, Cisco, Ford Motor Company, Intel, Microsoft, and
+The Walt Disney Company, has a vested interest in creating citizens with Web 2.0
+skills who value technological innovation, who appreciate and engage with a global
+economy, and who rely on media and technology systems to do so. Thus, furthering
+the expansion of these skills in developing regions via an online game serves the
+interests of both the Partnership for 21st Century Skills and the WBI well. A postgame
+evaluation recommends that EVOKE be framed as a transitional intervention, one
+that channels university students, recent graduates, and other young, socially minded
+individuals into development-focused activities and careers (Gaible & Dabla, 2010,
+p. 40), a move that would certainly shift the focus from empowering people all over
+the world to come up with solutions to world problems to creating an NGO social
+class of educated individuals from particular privileged backgrounds. If the WBI
+follows the postgame evaluations recommendations to engage further with students,
+coordinate with university calendars, develop orientation guides for teachers to use,
+and model future projects on the success of the partnerships with classrooms in
+South Africa, it certainly has the potential to become more involved in developing
+global educational curriculum and policy, especially in the Global South.
+Although EVOKE theoretically created a new space for stakeholder participation in the development process, such participation was inhibited by material and
+immaterial constraints. While it is important to consider how and why the WBI
+missed its target demographic almost entirely, it is even more important to consider
+how EVOKE, as a DI game, reflects and reinforces the neoliberal development
+agenda of the WBI. By defining game success according to a skill set that emphasizes
+entrepreneurship, market participation, and reliance on technology above all else, the
+game acts as an on-the-ground development intervention that reinforces a problematic development approach in which all elements of social life, including education,
+are taken up in the market.
+DD: The Half the Sky Movement: The Game
+
+Based on the best-selling book Half the Sky: Turning Oppression Into Opportunity
+for Women Worldwide, published in 2009 by journalists Nicholas Kristof and Sheryl
+WuDunn, the U.S.-based Half the Sky Movement (HTSM) has developed into a
+multidonor, multimedia initiative that seeks to ignite the change needed to put
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+37
+
+Games for Africa
+
+J. Fisher
+
+an end to the oppression of women and girls worldwide (Half the Sky Movement,
+n.d.a). Like the book, the HTSM focuses on challenges faced by women around the
+world and outlines specific solutions in the fight to end female oppression, which it
+refers to as the central moral challenge of our time (Half the Sky Movement, n.d.b).
+The purpose of the HTSM is to galvanize audiences around a set of issues Kristof
+and WuDunn have identified as causes of, or ways out of, the systemic oppression
+of women and girls, including forced prostitution, sex trafficking, gender-based
+violence, maternal mortality, economic empowerment, and education. The HTSMs
+focus on women and economic empowerment as a key to solving a host of development issues is reflective of a mainstream Women in Development (WID) approach
+in which arguments based on efficiency are used to highlight womens potential as
+economic producers and the benefits women bring to development when they are
+included in economic processes. But critics of the WID approach have argued this
+focus on women and productivity has in fact created greater inequality for women
+(Kabeer, 1994; Moser, 1989; Razavi & Miller, 1995).
+Although it received ample praise from the mainstream, the Half the Sky book was
+called out by critics for a variety of issues including the oversimplification of complex
+problems, problematic issues of power and consent that accompany the voyeuristic
+expose techniques used to tell the stories of young rape victims, and an overall white
+savior mentality that provides solutions while failing to explore the transnational
+contexts and global power structures that exacerbate development issues. The more
+recent HTSM and its accompanying multimedia products perpetuate many of the
+problematic approaches and assumptions of the 2009 text. Pertinent to this study is the
+Half the Sky Movement: The Game (HTSMG), which was developed for Facebook and
+programmed in English and French for play on desktop and laptop computers. Four
+months after its 2013 launch, the HTSMG had reached 1 million players, and mainstream media outlets were hailing video games as the new frontier for activism and
+social change (Sydell, 2013). The HTSMG was created as an awareness and fundraising tool to support the HTSM in its mission to empower women and girls around
+the world, (Half the Sky Movement: The Game, 2012) and, according to the developers, it is the first game to introduce direct virtual-to-real-life translation (Frima, n.d.).
+Developed by Frima (the largest Canadian-owned game studio), the HTSMG is meant
+to target a mainstream, social-media-savvy audience in an attempt to educate players
+about the challenges faced by women and girls around the globe. The game presents
+players with real-world challenges, and invites them to become part of the solution through issue-specific actions that support the HTSMs nonprofit partners (Half
+the Sky Movement: The Game, 2012).
+In the HTSMG, players join Radhika, an Indian woman, on a journey from
+oppression to opportunity as she completes a series of quests in her hometown and
+then travels to help other women in Kenya, Vietnam, and Afghanistan, ending her
+journey in the United States. The game begins with Radhika telling the player she is
+unable to afford medicine for her sick child; the player then navigates through a series
+of quests to earn the money necessary to purchase it. Gameplay happens in two ways:
+38
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+In the first, players are able to choose one of two options presented at the end of a
+brief interactive scene between Radhika and another game character; in the second,
+players complete basic puzzle games in which similar items must be linked together
+using the computers mouse. From selling mangoes in the market, to applying for
+a microcredit loan, to buying a goat and starting a small business by selling the
+milk it produces, the journey from oppression to opportunity that the player joins
+Radhika on is one firmly rooted in economic self-help and entrepreneurship. Once
+players have helped Radhika secure a loan to build an addition to her house, they
+join her as she travels to her next destination: Kenya. When Radhika gets to Kenya
+she goes directly to a rural clinic where she meets a nurse who informs her of the
+high rates of human immunodeficiency virus (HIV) in the country. She then meets
+the nurses daughter who admits she has tested positive for HIV. Radhika next learns
+about the high rates of malaria in Kenya and is asked to help the nurses decide if
+they will sell the clinics supply of mosquito nets, or give them away for free to local
+women and children and risk them being sold on the black market. Next, Radhika
+helps the nurses at the clinic organize a community discussion about family planning
+and the use of birth control, but she and her supporters are chased away by a group of
+angry community members before their meeting is able to begin. Radhika eventually
+moves through the other countries and ultimately ends up at the UN Headquarters in
+the United States. But just getting from India to Kenya takes a substantial amount of
+time and real money from the player: The game times-out after minimal gameplay,
+forcing players to wait or pay to continue play.
+The emphasis on women entering the market via microloans and small businesses woven throughout Radhikas story reflects a broader WID-based, neoliberal
+development agenda that identifies poor women in the Global South as an untapped
+resource and frames them as individual entrepreneurs responsible not only for their
+own development but also for the development of society at large, regardless of the
+various constraints (e.g., lack of material resources, skills, education, childcare) they
+may face (Brown, 2003; Karim, 2011; Moser, 1989; Razavi & Miller, 1995). Rather
+than questioning what negative effects a global capitalist system has on womens lives
+(Aguilar & Lacsamana, 2004), the HTSMG encourages individual players to act as
+model neoliberal citizens and find development solutions among the various social,
+political, and economic options made available through it (Brown, 2003, p. 15). It
+does not, however, ask them to join with others to alter or organize these options
+(Brown, 2003, p. 15). Throughout the game, players are asked to participate in what
+game developer Frima refers to as virtual-to-real-life translation by purchasing a
+good or service identical to the one that has just been used in the game through one of
+its seven nonprofit partners. For instance, after Radhika prospers from buying a goat
+and selling its milk, the player is asked if she wants to help a woman in real-life by
+purchasing a goat through Heifer International. By connecting these financial donations to the concept of womens empowerment, the game participates in what Dingo
+(2012) refers to as the megarhetoric of empowerment: a mainstreamed, naturalized
+discourse, in which it is assumed that womens empowerment is equal to womens
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+39
+
+Games for Africa
+
+J. Fisher
+
+individual financial security. By unlocking material support through gameplay and
+engaging with in-game donations and purchases, players are able to assume they have
+empowered a poor woman in the Global South, and the player gains a sense of action
+and of personal empowerment along the way. This positioning of the game player
+supports a hierarchy of expertise, power, and agency, which rests with the women
+who have the access, resources, and skills to play the game, and which constructs
+them as most capable of directing and impacting the lives of women throughout the
+Global South (Kwami et al., 2011).
+If the solution to womens empowerment is indeed individual financial support,
+there is little reason to consider broader political action once this support has been
+given. Dingo (2012) argues that approaches to empowerment that focus on financial
+exchange between individuals in the Global North and Global South reinforce the
+notion of personal agency and monetary exchange over a broader feminist understanding of the transnational contexts that make donations, charity work, and development programs necessary in the first place (p. 177). While the game provides
+players with information on key issues as identified by the HTSM (such as the number of women living in poverty and the number of people infected with HIV), there is
+little given in the way of context: The women facing these issues are in India, Kenya,
+Afghanistan, Vietnam, and the United States, but there is no explanation of regional
+differences regarding these issues, or of why certain women are in poverty while others
+are not, or how historical and current political and economic processes have impacted
+such issues. The player might gain a better sense of scale regarding the issues identified
+by the HTSM, but what she is unlikely to come away with is a nuanced understanding of either the potentially negative impacts processes like capitalism and globalization have on women in the developing world or the ways in which asymmetrical
+North/South power structures contribute to the oppressive reality of women in the
+developing world and exacerbate issues of inequality. Moreover, the HTSMG fails
+to provide any meaningful discussion on the ways in which microlending practices
+oppress women in new ways while simultaneously benefiting the middle class at the
+expense of the poorest (Karim, 2011). Rather, because the player has given money
+(either by directly donating funds herself or by unlocking material goods and services through gameplay), she can simply forget about the broader context of poverty
+and feel assuaged by her or his action (Dingo, 2012, p. 177). Womens oppression
+and inequality are thus presented to the player not as a challenge to a system that is
+inherently asymmetrical, but instead as a depoliticized tool that promotes new market
+subjects (Karim, 2011).
+DD games present development issues situated in the Global South to a primarily
+Northern audience while constructing for them a particular understanding of what
+development should look like, how it should be done, and what their role is in it. In
+the case of the HTSMG, development is achieved by individual women in the Global
+South entering the global marketplace via microcredit loans and small businesses; the
+role of the game player, situated in the Global North, is to facilitate that productivity
+40
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+through material donations. This emphasis on private aid and individual empowerment aligns nicely with a broader neoliberal development agenda that reduces social
+change to entrepreneurship in a market-based system, and civic involvement and
+voice to clicktivism (Wilkins & Enghel, 2013, p. 169). When the concept of individual empowerment is emphasized above all else, the constraints that social inequalities
+place on achieving individual success are erased, creating a depoliticized approach
+that supports a neoliberal project, in which market-based exchanges are assumed to
+be beneficial without serious critique (Wilkins & Enghel, 2013, p. 170).
+CP: Afroes and Haki 2: Chaguo Ni Lako
+
+Afroes, a Southern Africa mobile gaming company, was founded by Anne
+Githuku-Shongwe to create uniquely African mobile content that is contextually relevant and easily accessible for youth audiences across the continent (Afroes,
+n.d.). In a TEDx talk, Githuku-Shongwe (2012) argues that a lack of broad results
+in Africa after some 50 years of international development projects is not due to a
+lack of resources, rather it is because Africans are still limited by our own beliefs.
+For change to occur, people must be able to reimagine Africa and, according to the
+Afroes founder, this process can be accomplished through games (Githuku-Shongwe,
+2012). With support from mLab, a mobile technology incubator for startups in
+Southern Africa, Afroes developed a variety of mobile games designed to instill
+messages of hope and possibility in young people through content that celebrates
+Africas rich heritage (Afroes, n.d.; mLab, n.d.).
+Unlike the previous games, which were created by large international organizations for broad and often dispersed audiences, Afroes games are designed to be contextually relevant and easily accessible to a Southern African youth audience. But, to
+ensure that its content is accessible regardless of the class, economic status, or education level of its audience, it has been necessary for the local gaming company to
+engage with a global capitalist system and partner with some of the largest communication corporations in the world. The high growth rate of mobile phones in Africa
+gives games designed for a mobile platform the potential to reach a wide swath of
+youth audiences in Afroes target markets of South Africa and Kenya; but the high
+costs charged by mobile network operators to host games makes them prohibitively
+expensive, thus limiting accessibility (Pitman, 2011). Thus, Afroes has partnered with
+global corporations such as Microsoft, Vodacom, Samsung, and Nokia, as well as large
+development organizations, and has engaged a variety of other funding and distribution strategies (e.g., using school systems to distribute games and licensing mobile
+content to Ministries of Education and NGOs throughout Africa and other developing regions) in order address these cost issues.
+Although Afroes participates in an unabashedly neoliberal project in order to
+fund its content (see, for instance, Afroes recent partnership with the Digital Jobs
+Africa initiative, a $100 million dollar Rockefeller Foundation project meant to
+facilitate the growth of the tech sector across the continent), the discourse offered up
+by the organization on how to affect social change and the game content it produces
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+41
+
+Games for Africa
+
+J. Fisher
+
+move far beyond a neoliberal framework. Indeed, Afroes conceptualization of social
+change is one based on civic participation, institutional change, and a critique of
+current global processes. Rather than focusing on fixing a problem, the organization emphasizes shaping new mindsets amongst youth and [empowering] them
+as citizens to address their countries challenges (Rom, n.d.). Entrepreneurship and
+leadership are addressed as part of the solution, but the 400 million African youth
+who are disempowered, jobless, and considered a threat to the stability of countries
+or a burden to states (Schwab Foundation for Social Entrepreneurship, n.d.) can
+be best helped, according to Githuku-Shongwe, by creating mindsets that are not
+limited by current circumstances, but can re-imagine and re-create new possibilities
+(Rom, n.d.). In other words, mindsets that look for solutions both within and outside
+of the current system.
+The CP games created by Afroes are reflective of this discourse and cover a much
+broader range of issues and solutions than those previously examined in this article.
+They include issues of gender violence and legal rights; corporate exploitation; democracy, voting, and civic voice; government and corporate corruption; child safety and
+abuse; environmental rights; and peace through social justice. Although unemployment and local poverty is one of the main issues the organization hopes to address,
+Afroes does not look to entrepreneurship alone as the solution; rather, the organization is focused on empowering youth as citizens who must address their countries
+challenges at a range of social, political, and economic levels. In Haki 1: Shield and
+Defend, the first game in a series, players are given the opportunity to mend the
+wrongs that tear at the social fabric and in the process defend [their] rights by going
+on a mission to stop illegal logging in a protected forest in Kenya (Afroes, n.d.). The
+game opens with a call to action: Oh the beautiful green forest is being destroyed.
+Defend our Haki (Rights). Join the Underground! (Haki 1, 2012). Players get points
+for defeating the evil agents who are destroying the forest and are told that, Haki
+(Justice) gives you wings (Haki 1, 2012). In the recently released Haki 2: Chaguo
+Ni Lako, players join the Underground, a group of heroes who strive for peace and
+tranquility as they attempt to stop Mboss, an evil mastermind trying to destabilize
+the country by causing discontent, disunity, disharmony and civil unrest (Afroes,
+n.d.). In this game, players are asked to be a champion of peace by solving puzzles
+and quizzes that hold clues to how they can stop Mboss from reaching his destructive
+goals (Afroes, n.d.). The emphasis in the Haki games is on social justice and protecting the rights of people and communities; in this context, Kenya does not need to be
+saved by outsiders, rather it needs to be saved by locals from outside forces such as
+the Entity, whose corporate practices are responsible for destroying the forest.
+The Haki series was designed in partnership with the TUVUKE Peace Initiative,
+a countrywide collective platform launched after the violence that erupted during
+20072008 to promote peaceful, free, and fair elections in Kenya (Haki Facebook,
+n.d.). The Haki games are meant to bolster community involvement in political
+processes by inspiring a commitment to peace and tolerance in Kenyan youth. In a
+promotional YouTube video for Haki 2, a young man tells potential players to Get
+42
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+inspired. Think about your actions. Find out where you stand. Play for peace (Haki 2
+Video, 2013). Games like Haki 2 are meant to further TUVUKEs goals of sustainable
+peace and inclusive public participation, improve the relationships between land and
+natural resource dependent communities, engage youth in civil governance processes
+and support safer, peaceful, diversified communities (Tuvuke Initiative, n.d.). In
+another game, Moraba, Afroes addresses issues of gender inequality through a focus
+on human and legal rights. The questions in this chess/quiz based game focus on
+interpersonal power dynamics within individual relationships, the legal structures of
+personal rights, and on individual and communal reporting of abuse. While Moraba
+fails to bring up gendered power dynamics and biases within the legal system itself,
+it does emphasize the rights of men and women equally, rather than focusing on
+women only. Unlike the emphasis on market participation seen in the HTSMG,
+which also presents issues of gender inequality and gender violence, Moraba takes up
+a rights based argument that highlights the social construction of gender and gender
+roles and pushes back against them.
+The games produced by Afroes operate as CP games in that they are specifically
+designed as catalysts for Southern African youth to reimagine and reshape the world
+around them as they point to structural inequalities as a root cause of development
+issues. The discourse of the organization and the content of the games themselves
+take an approach to social change that moves beyond a neoliberal project of market
+participation as the solution to development issues, instead focusing on civic participation, institutional change, a critique of current global processes, personal and
+communal rights, and peace and social justice. That being said, calling on Kenyans
+to fight against issues like illegal logging, or to play for peace, is a more abstract
+development approach than presenting specific solutions individuals can take in their
+daily lives. CP games play an important role in critiquing asymmetrical power structures and institutional inequality that affect development issues and solutions, but CP
+games that propose specific alternatives alongside such a critique may have more viability in development practice. However, it is Afroes mission of reimagining that
+has, thus far, set it apart. A small, local organization, it has produced contextually
+relevant content that goes beyond mainstream modernization narratives of narrow
+economic development and even points to the inequalities exacerbated by such a system. It will be important to pay attention to whether Afroes is able to maintain the
+critical approach it has taken within game content as the political economic relationships necessary for it to sustain game production continue to develop. And, more
+critically, it is worth asking whether these relationships force Afroes to be complicit in
+the continuation of the very transglobal power structures that feed the global inequalities responsible for the issues they are trying to address in the first place.
+Conclusion
+
+Regardless of the type of game developed (DD, DI, or CP), each of the organizations
+analyzed here discusses the potential of its game to empower players: For the WBI,
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+43
+
+Games for Africa
+
+J. Fisher
+
+empowerment is equivalent to the development of 21st-century skills, specifically
+for young people living in Africa; for the HTSM, womens empowerment is related
+to financial independence, which game players situated in the Global North can
+facilitate through in-game giving; and for Afroes, empowerment necessitates civic
+participation, the securing of individual rights, and the ability to imagine and shape
+new futures. DDGs, it is clear, are not a revolutionary tool that will necessarily
+promote a radically new approach to conceptualizing and enacting development;
+rather they reflect the ideology of the organization behind them. In the case of
+EVOKE and the HTSMG, that means reinforcing a dominant approach to development that emphasizes capitalist solutions and the broad marketization of all areas
+of life. Although the first iteration of EVOKE (for which the WBI spent $622,000
+USD to develop and market) broadly missed its target audience, a second version is
+in the works and the many resources available to the WBI will, no doubt, allow the
+organization to continue to develop and distribute DDGs to enhance 21st-century
+skills and affect educational policy across the developing world. The Half the Sky
+Movement Media and Technology Engagement Initiative, a recent alliance among
+USAID, the Ford Foundation, Show of Force, and Games for Change, and a $1.4
+million USAID investment in the HTSMs mobile games makes wider dissemination
+of their games an almost certainty. Such support will allow the HTSM to further distribute its WID-based, neoliberal agenda that prioritizes microcredit loans, individual
+entrepreneurship, and economic participation by women in a global marketplace.
+Games such as these take an uncritical stance in assuming that the processes of
+globalization and neoliberalism are not only beneficial for poor, marginalized people across the developing world but also are necessary for development to occur. By
+design, DDGs like EVOKE and the HTSMG promote a global capitalist system as a
+change agent for eradicating global poverty, while ignoring the role such a system
+plays in exacerbating inequality. But their contribution is not only discursive. In cases
+like the HTSMG, developed by the largest Canadian-owned game studio, the production of DDGs is directly tied to the growth of the global digital games sector, a highly
+concentrated media system in which the Western loci of production, technology, and
+skills reinforces established North/South knowledge/power divides.
+All that being said, DDGs still hold the potential to be radical players in the development process. The case of Afroes highlights how local organizations can work to
+produce relevant content for local audiences and offer up alternatives to established
+development narratives. Reflective of their mission to help others reimagine Africa,
+Afroes games consider not only solutions to development issues but also their causes
+as well. Digital games have shown great possibility for use as educational tools and
+their dynamic nature could, theoretically, be used to incorporate a host of participatory feedback loops and user directed narratives that would disrupt current top-down
+development constraints. Further, open-world gaming platforms create the potential
+for audiences to take control of the game space, presenting opportunities for bringing
+players into the construction of development projects in games and beyond (see, for
+44
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+example, the UN Habitats Block by Block project). And, of course, the rate of dissemination of mobile phones presents an undeniably broad channel for reaching people,
+allowing a level of accessibility unheard of with other ICT-based projects. But, as seen
+in the case of Afroes, trying to keep games accessible to a Southern African audience
+has meant engaging in a range of partnerships and business strategies that are, or
+could become, counterintuitive to what they hope to achieve with their games. While
+smaller organizations and independent developers might have the necessary tools to
+create DDGs, the cost to distribute them and ensure they reach their target audience
+is often prohibitive and might impact their sustainability in the industry.
+As the field continues to grow, the great potential of DDGs will necessitate more
+studies that ask how games are actually being used, by whom, and to what end. Further
+use of the framework presented here, including identifying overlapping categories,
+will help generate important micro and macrolevel analysis on the production and
+use of DDGs. By situating the analysis of a games productive purpose and political
+economic foundations within the framework, broader trends in the DDG field will be
+highlighted. As with any technological innovation in the development field, potential
+must be understood within the context of actual use. In the case of DDGs, which
+operate both as texts that espouse a particular organizations ideology and as political
+economic products with implications for local and global development and gaming
+industries, actual use is varied and must be analyzed. It is likely, for instance, that some
+players of DD and DI games read them critically, while some players of CP games do
+not understand messages as intended. Hence, studies to tap how players and others
+understand and use DDGs are encouraged.
+References
+Adhikary, R. W. (2014). Relating development to quality of education: A study on the World
+Banks neoliberal policy discourse in education. KEDI Journal of Educational Policy,
+11(1), 325.
+Afroes. (n.d.). About. Retrieved from http://www.afroes.com/games/
+Aguilar, D. D., & Lacsamana, A. E. (2004). Women and globalization. Amherst, NY:
+Humanity Books.
+Bogost, I. (2006). Videogames and ideological frames. Popular Communication, 4(3),
+165183.
+Brown, W. (2003). Neo-liberalism and the end of liberal democracy. Theory & Event, 7(1),
+143.
+Cameron, J. & Haanstra, A. (2008). Development made sexy: How it happened and what it
+means. Third World Quarterly, 29(8), 14751489.
+Chakravartty, P. (2009). Modernization redux? Cultural studies & development
+communication. Television & New Media, 10(1), 3739.
+Dingo, R. (2012). Turning the tables on the megarhetoric of womens empowerment. In R.
+Dingo & J. B. Scott (Eds.), The megarhetorics of global development (pp. 174198).
+Pittsburgh, PA: University of Pittsburgh Press.
+Dyer-Witheford, N., & De Peuter, G. (2009). Games of empire: Global capitalism and video
+game. Minneapolis: University of Minnesota Press.
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+45
+
+Games for Africa
+
+J. Fisher
+
+Escobar, A. (1984). Discourse and power in development: Michel Foucault and the relevance
+of his work to the Third World. Alternatives: Global, Local, Political, 10(3), 377400.
+Fernandez-Vara, C. (2015). Introduction to game analysis. New York, NY: Routledge.
+Flanagan, M. (2009). Critical play: Radical game design. Cambridge: MIT Press.
+Flanagan, M., & Nissenbaum, H. (2014). Values at play in digital games. Cambridge: MIT
+Press.
+Foss, S. (2009). Rhetorical criticism: Exploration and practice (40 ed.). Long Grove, IL:
+Waveland Press.
+Frima. (n.d.). Half the Sky Movement: The Game. Retrieved from http://frimastudio.com/
+portfolio#/socialwebgames/hakf_the_sky_movement_the_game
+Gaible, E., & Dabla, A. (2010). Project evaluation EVOKE. Natoma Group. Prepared for
+Robert Hawkins, The World Bank. Retrieved from http://siteresources.worldbank.org/
+EDUCATION/Resources/ProjectEVOKE-evaluation-final-16oct11.pdf
+Gee, J. P. (2005). Good video games and good learning. Phi Kappa Forum, 85(2), 3337.
+Githuku-Shongwe, A. (Speaker). (2012, November 20). Mobile games that change culture:
+Anne Githuku-Shongwe at TedxSoweto 2012. Retrieved from https://www.youtube.com/
+watch?v=VuL_ANW58Vo
+Haki 1: Shield and Defend. (2012). [Mobile game]. Retrieved from http://www.afroes.com/
+games/
+Haki 2 Video. (2013, February 10). Haki 2 Video. Retrieved from https://www.youtube.com/
+watch?v=1UvkProPh-U
+Haki Facebook. (n.d.). About. Retrieved from https://www.facebook.com/pages/AfroesGames/185317804821699
+Half the Sky Movement. (n.d.a). About: Movement. Retrieved from http://www.
+halftheskymovement.org/pages/movement
+Half the Sky Movement. (n.d.b). About. Retrieved from http://www.halftheskymovement.
+org/pages/about-half-the-sky-movement
+Half the Sky Movement: The Game (2012, January 1). About. Retrieved from https://www.
+facebook.com/HalftheGame
+Holman, J. (1984). Underdevelopment aid: A critique of the International Monetary Fund
+and the World Bank. Berkeley Journal of Sociology, 29, 119152.
+Kabeer, N. (1994). Reversed realities: Gender hierarchies in development thought. London,
+England: Verso.
+Kapoor, I. (2013). Celebrity humanitarianism: The ideology of global charity. Oxon, England:
+Routledge.
+Karim, L. (2011). Microfinance and its discontents: Women in debt in Bangladesh.
+Minneapolis: University of Minnesota Press.
+Klees, S. J. (2012). World Bank and education: Ideological premises and ideological
+conclusions. In C. S. Collins & A. W. Wiseman (Eds.), Education strategy in the developing
+world: Revising the World Banks education policy (pp. 81109). London, England:
+Emerald Group Publishing.
+Kwami, J. D., Wolf-Monteiro, B., & Steeves, H. L. (2011). Toward a macro-micro analysis of
+gender, power and ICTs: A response to Mickey Lees critique of the human development
+approach to new ICTs. International Communication Gazette, 73(6), 539549.
+Lerner, D. (1958). The passing of traditional society: Modernizing the Middle East. Glencoe, IL:
+Free Press.
+46
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+J. Fisher
+
+Games for Africa
+
+Leye, V. (2009). Information and communication technologies for development: A critical
+perspective. Global Governance, 15, 2935.
+McGonigal, J. (Speaker). (2010, March). Jane McGonigal: Gaming can make a better world
+[TED Talk]. Retrieved from http://www.ted.com/talks/jane_mcgonigal_
+gaming_can_make_a_better_world.html
+Melkote, S. & Steeves, H. L. (2001). Communication for development in the Third World.
+Thousand Oaks, CA: SAGE.
+mLab. (n.d.). mLab Southern Africa. Retrieved from http://www.mlab.co.za/about/
+Moser, C. (1989). Gender planning in the Third World: Meeting practical and strategic
+gender needs. World Development, 17(11), 17991825.
+Nederveen Pieterse, J. (2009). Development theory: Deconstructive/reconstructions. London,
+England: SAGE.
+Ogan, C., Bashir, M., Camaj, L., Luo, Y., Gaddie, B., Pennington, R., & Salih, M. (2009).
+Development communication: The state of research in an era of ICTs and globalization.
+International Communication Gazzette, 71(8), 655670.
+Parpart, J., Rai, S., & Staudt, K., (Eds.). (2002). Rethinking empowerment: Gender and
+development in a global/local world. New York, NY: Routledge.
+Partnership for 21st Century Skills. (n.d.). Our history. Retrieved from http://www.p21.
+org/about-us/our-history
+Payer, C. (1982). The World Bank: A critical analysis. New York, NY: Monthly Review Press.
+Pitman, J. (2011, February 3). Afroes: Anne Githuku-Shongwe. Entrepreneur. Retrieved from
+http://www.entrepreneurmag.co.za/advice/success-stories/snapshots/afroes-annegithuku-shongwe/
+Rao, L. (1963). Communication and development: A study of two Indian villages. Unpublished
+doctoral dissertation, University of Minnesota, St. Paul.
+Razavi, S., & Miller, C. (1995). From WID to GAD: Conceptual shifts in the women and
+development discourse. Presented to the United Nations Research Institute for Social
+Development Programme, Geneva, Switzerland. Retrieved from http://iupuebla.com/
+Doctorado/Docto_Generoyderecho/MA_Doctorado_Genero/MA_from%20wid%20to%
+20gad.pdf
+Rogers, E. M. (1973). Communication strategies for family planning. New York, NY: Free Press.
+Rogers, E. M. (1976). Where are we in understanding the diffusion of innovations?
+In W. Schramm & D. Lerner (Eds.), Communication and change (pp. 20422). Honolulu:
+University Press of Hawaii.
+Rom, F. (n.d.). A new vision for Africas future: Emerging stars. Retrieved from http://www.
+emergingstars.com/success-stories/new-vision-africa%E2%80%99s-future
+Rughinis, R. (2013). Gamification for productive interaction: Reading and working with the
+gamification debate in education. Paper presented at the Information Systems and
+Technologies (CISTI) 8th Iberian Conference on Information Systems and Technologies
+(CISTI), INSPEC Accession Number 13848780 (IEEE Xplore Digital Library, 2013), 2.
+Schramm, W. (1964). Mass media and national development. Stanford, CA: Stanford
+University Press.
+Schwab Foundation for Social Entrepreneurship. (n.d.). Anne Githuku-Shongwe. Retrieved
+from http://www.schwabfound.org/content/anne-githuku-shongwe
+Shaffer, D. W. (2004, June). Epistemic frames and islands of expertise: Learning from infusion
+experiences. Paper presented at the International Conference of the Learning Sciences
+(ICLS), Santa Monica, CA.
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+47
+
+Games for Africa
+
+J. Fisher
+
+Shome, R., & Hegde, R. S. (2002). Culture, communication, and the challenge of
+globalization. Critical Studies in Media Communication, 19(2), 172189.
+Singhal, A., & Rogers, E. M. (1999). Entertainment-education: A communication strategy for
+social change. Mahwah, NJ: Erlbaum.
+Spring, J. (2009). Globalization of education: An introduction. New York, NY: Routledge.
+Sydell, L. (2013, November 29). For advocacy groups, video games are the next frontier. NPR.
+Retrieved from http://www.npr.org/blogs/alltechconsidered/2013/11/29/247515389/
+for-advocacy-groups-video-games-are-the-next-frontier
+Tarabini, A. (2010). Education and poverty in the global development agenda: Emergence,
+evolution and consolidation. International Journal of Educational Development, 30,
+204212.
+Tuvuke Initiative. (n.d.). Tuvuke Initiative. Retrieved from http://tuvuke.org/pages/Tuvuke_
+Initiative.htm
+Urgent EVOKE. (2010, January 27). About the EVOKE Game. Retrieved from
+http://blog.urgentevoke.net/2010/01/27/about-the-evoke-game/
+Wilkins, K. G. (1999). Development discourse on gender and communication in strategies for
+social change. Journal of Communication, 49(1), 4668.
+Wilkins, K. G. (2000). Redeveloping communication for social change: Theory, practice and
+power. Boulder, CO: Rowman and Littlefield.
+Wilkins, K. G. (2008). Development communication. In W. Donsbach (Ed.), The international
+encyclopedia of communication (pp. 12291238). London, England: Wiley-Blackwell.
+Wilkins, K. G., & Enghel, F. (2013). The privatization of development through global
+communication industries: Living proof? Media, Culture and Society, 35(2), 165181.
+Wilkins, K. G., & Mody, B. (2001). Reshaping development communication: Developing
+communication and communicating development. Communication Theory, 11(4),
+385396.
+World Bank Institute. (n.d.). About WBI. Retrieved from http://wbi.worldbank.org/wbi/about
+
+48
+
+Communication, Culture & Critique 9 (2016) 3048  2016 International Communication Association
+
+

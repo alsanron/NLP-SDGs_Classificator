@@ -1,0 +1,172 @@
+Engineering Applications of Articial Intelligence 16 (2003) 7590
+
+Articial intelligence for management and control of pollution
+minimization and mitigation processes
+Christine W. Chana,*, Guo H. Huangb
+b
+
+a
+Department of Computer Science, University of Regina, Regina, Sask., Canada S4S 0A2
+Environmental Systems Engineering Program, Faculty of Engineering, University of Regina, Regina, Sask., Canada S4S 0A2
+
+Abstract
+The reduction of environmental pollution and the conservation and recycling of natural resources are signicant social and
+environmental concerns. As valuable means for pollution control, minimization and mitigation remain attractive approaches.
+However, interactive, dynamic and uncertain features are associated with these processes, resulting in difculties in their
+management and control. Articial intelligence (AI) is an effective approach for tackling these complexities. In this study, the recent
+advancements of AI-based technologies for management and control of pollution minimization and mitigation processes are
+examined. Literature relevant to the area of application of AI to control and management of pollution minimization and mitigation
+processes is investigated. Especially, technologies of expert systems, fuzzy logic, and neural networks, which emerge as the most
+frequently employed approaches for realizing process control, are highlighted. The results not only provide an overview of the
+updated progress in the study eld but also, more importantly, reveal perspectives of research for more effective environmental
+process control through the AI-aided measures. Several demanding areas for enhanced research efforts are discussed, including
+issues of data availability and reliability, methodology validity, and system complexity.
+r 2003 Elsevier Ltd. All rights reserved.
+Keywords: Articial intelligence; Environment; Expert systems; Fuzzy logic; Mitigation; Minimization; Neural networks; Process control
+
+1. Introduction
+Most of environmental engineering problems are
+related to a number of factors with multi-source,
+multi-layer, multi-stage, and multi-objective characteristics. Effective reection of these complexities is
+currently an important issue emphasized by many
+public-sector decision-makers and private industries
+for sound management and control of pollution minimization and mitigation processes. Previously, many
+modeling tools have been developed for simulating
+processes in water/wastewater treatment plants, solid
+waste incinerators and air pollution control facilities.
+However, the uncertain, interactive and dynamic features of these processes often lead to difculties in
+obtaining desired system performance. Integrated consideration that incorporates a number of uncertain and
+dynamic components in the study systems within a
+*Corresponding author. Tel.: +1-306-585-5225; fax: +1-306-5854745.
+E-mail address: christine.chan@uregina.ca (C.W. Chan).
+0952-1976/03/$ - see front matter r 2003 Elsevier Ltd. All rights reserved.
+doi:10.1016/S0952-1976(03)00062-9
+
+general framework rather than examining them in
+isolation is needed for potential improvement (Rynk,
+1992).
+Articial intelligence (AI) is an effective approach for
+tackling the above complexities. For example, the
+complicated interrelationships among a number of
+system factors and activities can be explicated through
+the process of knowledge acquisition. Also, the gap
+between result generated from detailed modeling efforts
+and applicability of that result to a practical situation
+can be lled by building an automated system, allowing
+incorporation of implicit, and often qualitative considerations deemed crucial by engineers and/or operators. A knowledge-based system can perform trade-off
+analysis to compare the costs/benets of economic
+versus environmental concerns. Besides, the modeling
+result usually does not satisfactorily address specic
+issues concerning impacts of a control action. An
+automated system can investigate the key variables in
+greater detail and provide more insight into the specic
+implications of a generalized solution. For effective realtime control, an expert system can provide more insight
+
+76
+
+C.W. Chan, G.H. Huang / Engineering Applications of Artificial Intelligence 16 (2003) 7590
+
+into the specic implications of a generalized solution
+and can complement or rene a simulation program
+(Liang, 2001).
+Recently, some applications of AI to real-time control
+of pollution minimization and mitigation processes have
+been reported. They demonstrate an emerging area for
+more extensive studies. The objective of this paper is to
+examine the recent advancements of AI-based technologies for management and control of pollution minimization and mitigation processes. Literature relevant
+to the area of application of AI to control and
+management of pollution minimization and mitigation
+processes will be investigated. Especially, technologies of
+expert systems, fuzzy logic, and neural networks, which
+emerge as the most frequently employed approaches
+underlying AI for realizing process control, will be
+highlighted.
+This paper is organized as follows. Section 2 provides
+an overview of the related technologies for environmental process control. This is followed by a review of
+works on the development of expert systems and
+decision support systems that are critical to process
+control. Section 4 describes neural networks and their
+applications to the area of pollution minimization and
+mitigation; and Section 5 presents works that adopt a
+hybrid approach to system development and integrate
+expert systems, neural networks, and fuzzy logic.
+Section 6 concludes this review study.
+
+2. Overview of AI-based technologies for environmental
+process control
+Application of AI for controlling an environmental
+process involves a number of subprocesses that need to
+be managed or automated. For example, in a pollution
+mitigationplant environment, there are several levels at
+which to address the problem of management and
+control. At the lowest level, there are instruments that
+monitor, sense, and manipulate process variables. The
+instruments are often connected to a control structure
+that is capable of implementing a control law. The next
+level is the supervisory host computer that is usually
+connected to some control hardware by network
+communications. The supervisory host computer maintains the applications that are one level above the
+primary control functions such as the database. The
+supervisory host computer may in turn be connected to
+a plant-wide and then the corporate-wide computer
+systems (Rynk, 1992).
+In the most general terms, AI is the use of computers
+to emulate the reasoning and decision-making processes
+of humans (Walker, 1993). There are many opportunities for applying AI and expert systems into process
+control and management. These opportunities are most
+often realized by implementing functionality on the
+
+supervisory host computer, and can include applications
+such as computer-aided instruction and training, maintenance, conguration, plant planning and optimization, scheduling, alarm management, and operator
+decision support (Stock, 1989). Most studies on
+application of AI to the process industries involve the
+technologies of expert systems, fuzzy logic, and neural
+networks.
+Expert systems can emulate human problem solving
+by representing the expertise in its knowledge base. An
+expert system usually consists of three major components: a knowledge base, an inference engine, and a
+working memory. The knowledge base contains facts
+and heuristics associated with the application domain.
+The inference engine searches the knowledge base for
+applicable rules, and applies the rules for solving the
+problem. The working memory is the repository to store
+the new information generated as the inference engine
+searches and selects rules. In addition to the three
+components, an expert system typically contains other
+components such as a user interface and explanation
+facility.
+Fuzzy logic has emerged as an alternative to classical
+or binary valued logic in application areas ranging from
+industrial process control to consumer products to
+aerospace and bioengineering (Langari and Yen,
+1995). The role that fuzzy logic plays in the diverse
+applications is to bridge the gap between symbolic
+processing and numerical computation in shaping a
+suitable rule-based and linguistic control strategy. In
+bridging the gap, fuzzy logic has expanded the domain
+of application of control engineering to those that have
+traditionally fallen outside its realm if a strictly binary
+valued logic has been applied. Hence, fuzzy logic forms
+the basis for implementation of control strategies in the
+wide sense to enable decision-making or supervisory
+control. The major distinctions between fuzzy logic
+and expert systems are the use of linguistic rather
+than numeric variables, and the use of fuzzy conditional
+statements rather than exact expressions. Rules that
+incorporate linguistic and inexact data can be manipulated as a useful tool for reasoning about difcult
+process management and control situations (Walker,
+1993).
+Neural networks are a computational paradigm
+modeled on the human brain. The three important
+similarities to the brains capabilities are the ability to
+lter out essential data from a larger set of data
+containing irrelevant information, the ability to learn
+from experience, and the ability to generalize from
+previous experience to predict new outcomes (Walker,
+1993). An articial neural network (ANN) model is
+made of input and output connections, which simulates
+the human mental processes. This paradigm has become
+increasingly popular for two main reasons. Neural
+networks are inherently parallel machines. They can be
+
+

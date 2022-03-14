@@ -1,0 +1,463 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/330513053
+
+International Information Management Corporation
+Conference Paper  May 2018
+
+CITATIONS
+
+READS
+
+0
+
+155
+
+2 authors:
+Richard Karanja
+
+Simon Mwendia
+
+KCA University
+
+KCA University
+
+1 PUBLICATION 0 CITATIONS
+
+14 PUBLICATIONS 26 CITATIONS
+
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+Open mobile ambient learning (OMAL) project View project
+
+All content following this page was uploaded by Simon Mwendia on 21 January 2019.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+IST-Africa 2018 Conference Proceedings
+Paul Cunningham and Miriam Cunningham (Eds)
+IIMC International Information Management Corporation, 2018
+ISBN: 978-1-905824-59-5
+
+Ambient Learning - Knowledge as a
+Service Model: Towards the Achievement
+of Sustainable Development Goal Four
+Richard Gicharu KARANJA, Simon Nyaga MWENDIA
+KCA University, P.O. BOX 56808, Nairobi, Kenya.
+Email: r.karanja@kca.ac.ke, smwendia@kca.ac.ke.
+Abstract: Studies show that United Nations Sustainable Development Goal Four is
+yet to be achieved. This paper presents an artefact named Ambient learningKnowledge as a Service model for describing how actionable knowledge can be
+extracted from ambient learning systems to support improvement and consequently
+facilitate the achievement of Sustainable Development Goal Four. A creative process
+was adopted to guide the development of the model. The process involved carrying
+out problem analysis through literature review, designing the model by combining
+ambient learning and Knowledge as a Service concepts and demonstrating its
+application by developing a prototype. Evaluation results revealed that C4.5
+algorithm that is implemented in Waikato Environment for Knowledge Analysis
+(WEKA) software is suitable for extracting knowledge from ambient learning
+systems while Swi-prolog software can be applied to create a tool for knowledge
+delivery.
+Keywords: Knowledge as Service, knowledge extraction, ambient learning,
+knowledge consumers.
+
+1.
+
+Introduction
+
+The 2030 agenda for Sustainable Development which was adopted by the United Nations
+General Assembly on 25 September 2015 seeks to leave no one behind as it aspires to transform
+the world we live in [1]. Among the 17 goals that were specified in the agenda, Goal four seeks
+to ensure inclusive and quality education for all and to promote lifelong learning. However,
+studies reveal that this goal is yet to be fully realized. For instance, results from Kenya National
+Adult Literacy Survey show that only 61.5% of the adult and out-of-school youth above 15
+years have attained minimum literacy level leaving 38.5% (7.8 million) adults illiterate. A
+majority of these are individuals from less fortunate backgrounds who have a limited chance of
+attaining quality education owing to lack of reading material and other resources. There also
+exists gender disparity in literacy levels with men rated at 64.1% and women at 58.9%[2].
+Ambient learning promises to bridge this gap by allowing personalized access to high
+quality learning content from anywhere, anytime and anyhow[3]. Nevertheless, the existing
+ambient learning models do not describe how knowledge from ambient learning systems can be
+extracted to support improvement of such systems. Therefore, there is need to initiate new
+mechanisms and paradigms for describing how knowledge can be retrieved and applied to
+enhance ambient learning systems.
+Knowledge as a Service (KaaS) has been hailed as the new paradigm for acquiring
+knowledge through the cloud to support knowledge management [4]. Old knowledge
+management technology cannot cut it in this new age of open data and big data environments.
+The potential capability of KaaS paradigm presents a unique opportunity for combining it with
+ambient approaches to continuously improve quality of education services offered by ambient
+learning systems. Despite such an opportunity, little or no research has been undertaken to
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 1 of 8
+
+explore appropriate model(s) that can be derived from both KaaS and ambient learning
+concepts in order to enhance the achievement of sustainable development goal four (SDG 4).
+
+2.
+
+Objectives
+
+The main purpose of our study was to establish an appropriate model that describes how
+knowledge can be extracted from ambient learning systems and be used for improving such
+systems towards achieving SDG 4. Specific objectives of this work included the following:
+1. To establish an appropriate algorithm for extracting knowledge from a typical ambient
+learning system.
+2. To demonstrate how extracted knowledge can be delivered to the relevant knowledge
+consumers.
+
+3.
+
+Research Methodology
+
+To achieve the main objective of our study, the creative process [5] was adopted. This
+process is characterized by a sequence of five cognitive activities that can lead to novel, yet
+appropriate, productions in a given problem context [5]. The first activity was problem
+analysis that entailed to exploring literature in ambient learning and KaaS areas articles to
+find existing knowledge gaps. By the end of that activity, twelve (12) publications were
+purposively selected and reviewed. The second activity was ideation, which involved
+deriving the proposed model using combination strategy [5] to integrate KaaS and ambient
+learning concepts. The third activity was Evaluation that entailed assessing the validity of
+the model using investigators triangulation method. During this activity, the proposed
+model was iteratively submitted to information technology lecturers at KCA University for
+the purpose of gathering their opinions until a consensus was reached. The feedback
+received from the lecturers was then used to enhance the proposed model. Implementation
+activity was the last activity and it involved demonstrating how the model can be
+implemented by developing a proof of concept using WEKA data mining tool and Swiprolog software.
+
+4. Technology Description
+4.1 Ambient Learning Overview
+According to [6], there are three ambient learning approaches that can be implemented in
+different contexts depending on the availability of information technology infrastructure.
+These are (i) Mobile Interface Ambient Learning (MIAL) that utilizes mobile devices only,
+(ii) Fixed Interface Ambient Learning (FIAL) that utilizes location dependent devices only,
+and (iii) Hybrid Interface Ambient Learning (HIAL) that utilizes both location dependent
+devices and mobile devices.
+Open Mobile Ambient Learning (OMAL) [3] is an example of MIAL that combines
+characteristics of ambient intelligence (AMI) with mobile learning, open education
+resources (OERs) and cloud computing services. This is shown in Figure 1 below.
+As indicated in Figure 1, OMAL system consists of the following features [3,7]:
+1. Cloud services: provides help in managing and overcoming storage limitations of
+mobile devices.
+2. Content manager: retrieves relevant online learning material (videos, audios and text)
+3. Context manager: collects, evaluates and stores learners details i.e. identity, education
+level and preferences.
+4. Multimodal access: allows internet access to different data or content representation
+modes like audio, video and text.
+
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 2 of 8
+
+Figure 1: The OMAL system architectue. Adopted from [7]
+
+However, there are two knowledge gaps in the reviewed literature. First, system
+architectures for illustrating how FIAL and HIAL can be implemented are lacking. Second,
+OMAL system architecture does not describe how knowledge can be extracted from the
+context database for the purpose of continuous improvement of ambient learning system.
+Therefore, there is need for innovative models that can be used to address the two gaps.
+4.2 Knowledge as a Service (KaaS) Paradigm.
+Traditional stand-alone platforms of client and server architecture are too rigid to keep pace
+with changes in knowledge management but cloud computing solves this challenge
+efficiently and effectively[8] . Cloud computing by definition is a three layer model of
+distributed computing. That is, (i) Software as a Service (SaaS) which provides the interface
+and top-level functionality, (ii) Platform as a Service (PaaS) which handles the processing
+necessary for applications to work and, (iii) Infrastructure as a Service (IaaS) layer that
+handles low level services like database administration [9]. KaaS on the other hand refers to
+a platform for providing the best knowledge, leveraging it from anywhere, anything and
+anyone in a distributed computing model [10]. Figure 2 illustrates the basic KaaS
+paradigm.
+Knowledge as a Service
+
+Data Owner 1
+
+Knowledge extractor
+e.g. (the data owners
+Knowledge
+Jointly run a privacyServer
+Knowledge Server
+Preserving data mining
+Algorithm
+
+Data owner 2
+
+Knowledge
+Consumer 1
+
+Knowledge
+Consumer 2
+
+Knowledge
+Consumer m
+
+Data Owner m
+
+Figure 2: KaaS paradigm. Adopted from [10]
+
+As described in Figure 2, KaaS paradigm consists of three main interacting components.
+That is, (i) Data owners who collect data from their daily system usage logs, (ii) Knowledge
+service providers who deliver extracted knowledge from datasets through an appropriate
+knowledge extractor and, (iii) Knowledge consumers who access a knowledge server in
+their decision making procedures [10].
+4.3 Knowledge Extraction Algorithms
+In recent years, many algorithms in the literature have been created for extracting
+knowledge in the data. Examples are 10 artificial intelligence algorithms that have been
+identified that have been identified by the IEEE International Conference on Data Mining
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 3 of 8
+
+(ICDM) as among the most influential algorithms for classification, statistical learning,
+association analysis, clustering and link mining [11]. They include (1) C4.5 and beyond, (2)
+K-means, (3) support vector machines, (4)Apriori algorithm, (5)The Expectation
+Maximization algorithm, (6) PageRank, (7) AdaBoost, (8) Knn-Nearest Neighbor, (9)
+Naive Bayes and finally (10) Classification and Regression Trees (CART). All these
+algorithms are applied effectively in various areas of applications such as technology
+enhanced learning to overcome knowledge extraction challenges.
+
+5. Developments
+
+Ambient
+Learning
+System Module
+
+Data
+
+Knowledge
+KAAS
+KAAS Provider
+Provider
+Knowledge
+Knowledge
+Knowledge
+Knowledge
+Extractor
+serverbased
+Cloud
+Extractor
+server
+(e.g. artificial
+( e.g.
+intelligence
+artificial
+algorithm)
+intelligence
+algorithm
+
+KaaS
+Paradigm
+Module
+
+Figure 3: Ambient Learning - Knowledge as a Service Model.
+
+The main objective of KaaS is to generate knowledge from heterogeneous data located in a
+cloud environment and make it available as a knowledge service[12]. This objective
+provides a potential solution for addressing knowledge management limitation of OMAL
+system architecture. Nevertheless, little or no research has been conducted to explore how
+the KaaS can be merged with ambient learning approaches to enhance knowledge
+management in ambient learning systems.
+To address this gap, we propose an ambient learning-KaaS model that can be used to
+continually enhance ambient learning systems. The framework is derived from[7] and [10]
+models. This is shown in Figure 3.
+As illustrated in Figure 3, the proposed architecture consists of the following components:
+ Ambient learning system module: Allows learners to access open education resources
+and other cloud related service in different contexts as is relevant to the learners.
+ KaaS Paradigm module has three main components that can be summarized as follows:
+(a) Data owners access data from ambient learning system through context database.
+They can freely utilize the data and are responsible for ensuring its security. An
+example is the learning institution that provides the data storage infrastructure.
+(b) KaaS provider is made up of two sub-components. First, a knowledge extractor in
+the form of a data mining algorithm that processes and transforms the data from the
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 4 of 8
+
+ambient learning system context database and finds the patterns hidden in the data.
+Second, a knowledge server that is used to deliver knowledge to knowledge
+consumers e.g. knowledge based systems (KBS).
+(c) Knowledge consumer is any entity that consumes the services offered by the KaaS
+provider under specific service level agreements (SLA).
+In order to demonstrate feasibility of ambient learning-KaaS model, proof of concept
+was developed. KCA University, which acted as data owner provided data collected from
+ambient learning system that was piloted in 2014 by [3, 7]. Decision tree algorithm named
+C4.5 was then applied to extract knowledge from the already collected data. Finally, Swiprolog software was adopted to develop a knowledge server prototype for delivering
+knowledge to ambient learning experts that represented knowledge consumers. These
+included the authors of open mobile ambient learning (OMAL) system in KCA University
+[3]. The results of this proof of concept are presented and analyzed in the results section
+below.
+
+6.
+
+Results
+
+Among the identified 10 ten data mining algorithms, C4.5 constructs decision trees that can
+readily be grasped by non-specialists like some of the knowledge consumers in ambient
+learning environment [11]. Therefore, the algorithm was adopted to build decision tree
+using OMAL system. This is shown in Figure 4.
+Action Performed
+
+=AccessFeedback
+
+Local Service
+(203.0)
+
+=ReadText
+
+Googledocs
+(218.0/53.0)
+
+=WatchVideo =Collaborate
+
+Googledrive
+(76.0/6.0)
+
+Facebook
+(34.0)
+
+=AccessExample
+
+Googledocs
+(71.0/25.0)
+
+Figure 4: C4.5 Decision Tree
+
+As illustrated in Figure 4, the following knowledge was extracted from the data:
+1. Ambient learning system can allow learners to access feedback, read text materials,
+watch videos, collaborate and access examples. Using a test data of 602 cases, cross
+validation results indicated that, the decision tree model was 84.4% accurate. That is,
+508 instances were correctly classified instances while 94 instances were incorrectly
+classified instances.
+2. Learners can access feedback through local service (local database server).Findings
+indicated that course work results were accessed from locally available database instead
+of cloud-based repository. Cross validation test results showed that out of 203 cases
+covered by this rule, none of them was misclassified.
+3. Ambient learning system enables learners to access text-based materials through
+Google docs. Cross validation test results revealed that out of 218 instances covered by
+this rule, 53 of them were incorrectly classified.
+4. Ambient learning system can allow access to video materials stored in a Google drive.
+10-fold cross-validation test results showed that out of 76 cases covered by this rule,
+only 6 of them were incorrectly classified.
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 5 of 8
+
+5. Ambient learning system can allow learners to collaborate through Facebook.
+Evaluation results showed that, out of 34 instances covered by this rule, none of them
+was misclassified.
+Having extracted knowledge from ambient learning system, the next step was to create
+knowledge server (KS) for delivering knowledge to knowledge consumers. For the purpose
+of our study, prolog was used to demonstrate how stand alone knowledge server can be
+implemented. The server was made up of the following three main components:
+1. Inference engine that is already inbuilt within prolog.
+2. Knowledgebase component that was used for storing rules and facts extracted from
+ambient learning system. Figure 5 shows a sample of knowledge stored in the
+knowledgebase.
+
+Figure 5: Sample of Knowledge Stored in the Knowledgebase.
+
+3. User interface component, which was created to support interaction between
+knowledge consumers (KC) and the server. This shown in figure 6.
+
+Figure 6: User Interface for Enabling Interaction between KC and the Server.
+
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 6 of 8
+
+As illustrated in Figure 6, knowledge consumers could be an ambient learning expert,
+inquiring which cloud-based tools that can be integrated in ambient learning system for
+enabling certain actions. For example, when the knowledge consumer (KC) starts the server
+he/she types menu on the prolog prompt and gets a reply of the cloud based services and
+local service available. Upon keying in the relevant number for either a cloud or local
+service, KC receives action knowledge regarding tools that can be incorporated in an
+ambient learning system to enhance its effectiveness.
+
+7.
+
+Benefits
+
+The adoption of the proposed model is expected to support continuous enhancement of
+existing ambient learning systems towards the realization of SDG goal 4. Therefore, the
+model will not only help revolutionize learning but also bring ambient learning to the
+forefront as one of the most efficient tools for providing inclusive and quality education for
+all. Additionally, incorporating an interactive component in KAAS can help to crowd
+source knowledge that may be useful in size or time units to knowledge consumers in
+ambient learning environments.
+
+8.
+
+Conclusions and Future Work
+
+This study proposed a new model that was derived from a combination of ambient learning
+concept and KaaS with an aim of supporting the achievement of United Nations SDG 4.
+Results revealed that the model can be implemented using an appropriate data mining tool
+to extract knowledge from ambient learning system and using swi-prolog to create stand
+knowledge server. The extracted knowledge can then be used by the ambient learning
+system experts to improve an existing or new ambient learning system.
+However, the study has three limitations. First, the proposed model was evaluated using
+only data collected from a case of MIAL approach. That is, the OMAL system that was
+piloted in KCA University. Second, among the identified top ten knowledge extraction
+algorithms, only C4.5 was used to demonstrate the application of the proposed model.
+Third, implementation of knowledge server was demonstrated using only one artificial
+intelligence tool. That is, swi-prolog that use predicate logic to represent knowledge.
+Therefore, future research activities that are aimed to extend ate extending this work can
+focus on three main areas. That is, (i) Evaluating the model using data from instantiations
+FIAL and HIAL, (ii) Exploring other data mining algorithms that can handle different sets
+of data for faster and easier dissemination of knowledge, and (iii) Explore other
+programming tools in the field of artificial intelligence that can facilitate implementation of
+a knowledge server with a more user friendly interface.
+
+References
+[1] The United Nations, Transforming Our World: The 2030 Agenda for Sustainable Development. The
+United Nations, 2017.
+[2] UNESCO, Adult and Youth Literacy: National, Regional and Global Trends, 1985-2015. UNESCO,
+2013.
+[3] S. Mwendia, O. Robert, and P. Waiganjo, Dynamic Heuristics - Greedy Search: A Mobile Information
+Retrieval Algorithm for Ambient Learning Systems, presented at the Africhi06, Nairobi, 2016.
+[4] A. Depeige and D. Doyencourt, Actionable Knowledge as a Service (AKAAS): Leveraging big data
+analytics in cloud computing environments, J. Big Data, vol. 2, 2015.
+[5] L. Zeng, Robert W. Proctor, and Gavriel Salvendy, Can Traditional Divergent Thinking Tests Be
+Trusted in Measuring and Predicting Real-World Creativity?, Creat. Res. J., vol. 23, no. 1, pp. 2437,
+2011.
+[6] S. Mwendia, P. Waiganjo, and R. Oboko, 3-Category Pedagogical Framework for Context Based
+Ambient Learning, presented at the IST Africa, 2013.
+
+Copyright  2018 The authors
+
+www.IST-Africa.org/Conference2018
+
+Page 7 of 8
+
+[7] S. N. Mwendia, S. Manske, and H. U. Hoppe, Proceedings of the 22nd International Conference on
+Computers in Education. Japan: Asia-Pacific Society for Computers in Education, 2014.
+[8] M. Mohamed and S. Pillutla, Cloud computing: a collaborative green platform for the knowledge
+society, VINE, vol. 44, no. 3, pp. 357374, 2014.
+[9] N. Aharony, Cloud computing: information professionals and educational technology experts
+perspectives, Libr. Hi Tech, vol. 32, no. 4, pp. 645666, 2014.
+[10] S. Xu and W. Zhang, Knowledge as a service and knowledge breaching, in 2005 IEEE International
+Conference on Services Computing(SCC05), Orlando,Florida, 2005.
+[11] X. Wu et al., Top 10 algorithms in Datamining, Springer-Verlang, vol. 14, no. 1, 2008.
+[12] A. Talib, R. Atan, R. Abdulleh, and M. Murad, A model of knowledge management system for
+facilitating knowledge as a service (KaaS) in cloud computing environment, IEEE, 2011.
+
+Copyright  2018 The authors
+
+View publication stats
+
+www.IST-Africa.org/Conference2018
+
+Page 8 of 8
+
+

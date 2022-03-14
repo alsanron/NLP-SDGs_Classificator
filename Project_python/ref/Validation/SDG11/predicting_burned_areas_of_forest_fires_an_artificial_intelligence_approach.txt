@@ -1,0 +1,872 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/274889641
+
+Predicting Burned Areas of Forest Fires: An Articial Intelligence Approach
+Article in Fire Ecology  April 2015
+DOI: 10.4996/fireecology.1101106
+
+CITATIONS
+
+READS
+
+55
+
+8,944
+
+3 authors:
+Mauro Castelli
+
+Leonardo Vanneschi
+
+Universidade NOVA de Lisboa
+
+Universidade NOVA de Lisboa
+
+174 PUBLICATIONS 2,534 CITATIONS
+
+250 PUBLICATIONS 3,849 CITATIONS
+
+SEE PROFILE
+
+Ale Popovi
+NEOMA Business School
+84 PUBLICATIONS 3,790 CITATIONS
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+Multidisciplinary Applications View project
+
+Large Scale Evolutionary Learning View project
+
+All content following this page was uploaded by Ale Popovi on 13 April 2015.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 106
+
+Research Article
+
+PREDICTING BURNED AREAS OF FOREST FIRES:
+AN ARTIFICIAL INTELLIGENCE APPROACH
+Mauro Castelli1*, Leonardo Vanneschi1, and Ale Popovi1,2
+1
+
+NOVA IMS, Universidade Nova de Lisboa,
+1070-312, Lisboa, Portugal
+
+University of Ljubljana, Faculty of Economics,
+Kardeljeva pload 17, 1000 Ljubljana, Slovenia
+2
+
+*
+
+Corresponding author: Tel.: +351213828628; e-mail: mcastelli@novaims.unl.pt
+ABSTRACT
+
+RESUMEN
+
+Forest fires importantly influence our
+environment and lives. The ability of
+accurately predicting the area that may
+be involved in a forest fire event may
+help in optimizing fire management efforts. Given the complexity of the
+task, powerful computational tools are
+needed for predicting the amount of
+area that will be burned during a forest
+fire. The purpose of this study was to
+develop an intelligent system based on
+genetic programming for the prediction
+of burned areas, using only data related
+to the forest under analysis and meteorological data. We used geometric semantic genetic programming based on
+recently defined geometric semantic
+genetic operators for genetic programming. Experimental results, achieved
+using a database of 517 forest fire
+events between 2000 and 2003, showed
+the appropriateness of the proposed
+system for the prediction of the burned
+areas. In particular, results obtained
+with geometric semantic genetic programming were significantly better
+than those produced by standard genetic programming and other state of the
+art machine learning methods on both
+training and out-of-sample data. This
+
+Los incendios forestales influencian de manera
+importante nuestro ambiente y vidas. La habilidad para predecir con precisin el rea que
+podra estar implicada en un evento de incendio puede ayudar a optimizar los esfuerzos
+para su manejo. Dada la complejidad de esta
+tarea, son necesarias herramientas computacionales poderosas para predecir el tamao del
+rea que podra quemarse durante un incendio
+forestal. El propsito de este estudio fue desarrollar un sistema inteligente basado en programacin gentica para la prediccin de reas
+quemadas, usando solamente datos relacionados con el bosque bajo anlisis y datos meteorolgicos.
+Nosotros usamos programas
+geomtrico-semnticos y genticos basados en
+operadores geomtrico-semnticos y genticos
+recientemente definidos para programacin
+gentica.
+Los resultados experimentales,
+usando una base de datos de 517 eventos de
+incendios forestales entre 2000 y 2003, mostraron lo adecuado del sistema propuesto para
+la prediccin de las reas quemadas. En particular, los resultados obtenidos con los programas geomtrico-semnticos y genticos fueron
+significativamente mejores que aquellos producidos por programacin gentica estndar y
+otros mtodos de aprendizaje automtico que
+consideren tanto datos de entrenamiento como
+datos fuera de los muestreos. Este estudio su-
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 107
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+study suggests that deeper investigation of genetic programming in the
+field of forest fires prediction may be
+productive.
+
+giere que investigaciones ms profundas de
+programacin gentica en el campo de la prediccin de los incendios forestales pueden ser
+productivas.
+
+Keywords: climatic data, forest fires, genetic programming, Portugal, semantics
+Citation: Castelli, M., L. Vanneschi, and A. Popovi. 2015. Predicting burned areas of forest fires: an artificial intelligence approach. Fire Ecology 11(1): 106118. doi: 10.4996/
+fireecology.110106
+INTRODUCTION
+Forest fires are well-known events, especially during summer. Forest fires, regularly
+experienced in regions with hot, dry, or mediterranean climates, represent a risk to life and
+extant infrastructure. In Portugal, there are
+typically between 15 000 and 25 000 forest
+fires each year (Mateus and Fernandes 2014),
+burning from 150 000 ha to 250 000 ha. Notwithstanding the fact that these fires can cause
+extensive economic damage (typically with
+tangible repercussions for many years to
+come), they also threaten human life. Furthermore, the aftermath of forest fires can have
+other far-reaching consequences. For example, many physical, chemical, mineralogical,
+and biological soil properties can be affected
+by forest fires (Certini 2005). Negative effects
+resulting from high levels of burn severity include significant removal of organic matter,
+deterioration of both soil structure and porosity, considerable loss of nutrients through volatilization, ash entrapment in smoke columns,
+leaching, and erosion. Also, the release of
+hazardous chemicals significantly impacts human health and increases the risk of future diseases. As suggested by Lipsett et al. (2008),
+wildfire smoke is accompanied by high concentrations of carbon dioxide, which can result
+in consequences such as headache, mental
+confusion, nausea, disorientation, coma, and
+even death. Even at lower concentrations, the
+effects of carbon dioxide should not be neglected; individuals with cardiovascular dis-
+
+ease may experience chest pain and cardiac arrhythmia. A comprehensive study tracking
+wildfire firefighter deaths from 1990 to 2006
+reported that 21.9 % of their deaths occurred
+from heart attacks (Mangan 2007).
+The ability to predict fire progression and
+area burned is crucial to mitigating the immediate and far-reaching consequences of wildfires. Existing studies have attempted to fill
+this gap, mainly through mathematical models
+(e.g. Rothermel 1972), but predictive techniques would enable decision makers to deal
+with large amount of data in a more timely
+manner. The Wildland Fire Management Research, Development & Application Organization (2012) proposed a wildland fire decision
+support tool called FSPro (Fire Spread Probability). FSPro is a geospatial probabilistic
+model that predicts fire growth, and is designed to support long-term (more than five
+days) decision making. FSPro addresses fire
+growth beyond the timeframes of reliable
+weather forecasts by using historic climatological data. FSPro calculates and maps the probability that fire will spread to areas on the
+landscape based on the current fire perimeter
+or ignition point.
+In this paper, we propose an intelligent
+system based on genetic programming for the
+prediction of burned areas of forest fires. In
+order to build predictive models, we only considered data relating to forest characteristics
+and meteorological data. Drawing on the idea
+of using computational intelligence techniques
+(and genetic programming in particular; e.g.
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 108
+
+Brumby et al. 2001, Manson 2005), we employed recently defined geometric semantic
+genetic operators for genetic programming,
+which were able to produce results significantly better than traditional methods.
+Genetic Programming
+
+Genetic Programming (GP) (Koza 1992;
+Poli et al. 2008) belongs to the family of
+bio-inspired computational intelligence techniques. The main idea of GP is to mimic the
+biological evolutionary process in order to create, by stepwise iteration, more refined solutions to a given problem.
+In GP, candidate solutions are represented
+using a tree structure (Figure 1). In order to
+create new solutions, GP uses stochastic operators called genetic operators, typically entitled crossover and mutation. In the standard
+version of GP, these two operators work as follows: given two solutions (called parents),
+crossover builds two new solutions (offspring)
+by swapping a subtree of the first parent with a
+subtree of the second parent. The subtrees are
+usually chosen at random. Mutation acts on
+one solution: given a tree, it creates a new
+solution by replacing a randomly chosen subtree with a newly generated subtree. These
+operators act on the structure (i.e., the syntax)
+of the individuals and ignore the information
+related to semantics. The application of standard crossover and mutation operators yields
+new tree structures (Figures 2 and 3).
+
+Figure 1. The genetic programming iterative
+search process.
+
+Figure 2. Example of the application of the standard, syntax-based, crossover operator. Given two
+solutions (called parents), the crossover operator
+builds two new solutions (offspring) by swapping
+a subtree of the first parent with a subtree of the
+second parent. The subtrees are usually chosen at
+random.
+
+Since its definition, GP has been used to
+solve complex problems in several domains
+(Koza 2010) using only syntax-based genetic
+operators. Abstraction from semantics allows
+GP to use simple genetic operators that are
+easy to define and that are independent of any
+particular application. Hence, standard genetic operators can be used for addressing regression, classification, or even clustering problems without changing their definition. A second advantage is the existence of a solid theory that guarantees asymptotic convergence of
+standard GP towards optimal solutions (Poli
+and Langdon 1998). Nevertheless, relying on
+syntax-based genetic operators results in some
+difficulties: abstraction from the semantics
+will produce solutions that completely ignore
+the knowledge associated with the available
+data, and it is difficult for an expert of a particular domain to accept and adopt a model built
+without considering this information. To offset this limitation, researchers have recently
+focused on the definition of methods that are
+able to integrate the semantic information in
+the search process.
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Figure 3. Example of the application of the standard, syntax-based, mutation operator. Given a
+tree, the mutation operator creates a new solution
+by replacing a randomly chosen subtree with a
+newly generated subtree.
+Geometric Semantic Operators
+
+This section introduces the concepts related to the definition of semantic-based methods, describing the semantic genetic operators
+that were used in this study. Even though the
+term semantics can have several different interpretations, the most common interpretation
+(and the one used here) is to identify the semantics of a solution with the vector of its output values on the training data (Vanneschi et
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 109
+
+al. 2014). From this perspective, a GP individual can be identified with a point (its semantics) in a multidimensional space known
+as semantic space. The term Geometric Semantic Genetic Programming (GS-GP) indicates a variant of GP in which traditional
+crossover and mutation operators are replaced
+by so-called geometric semantic operators,
+which exploit semantic awareness and induce
+precise geometric properties on the semantic
+space.
+Geometric semantic operators, introduced
+by Moraglio et al. (2012), are becoming more
+and more popular in the GP community
+(Vanneschi et al. 2014) because of their property of inducing a unimodal fitness landscape
+on any problem consisting of matching sets of
+input data into known targets (e.g., supervised
+learning problems such as regression and
+classification).
+To understand this property (for a full
+proof see Moraglio et al. 2012), let us first
+consider a Genetic Algorithms (GAs) problem
+in which the unique global optimum is known
+and the fitness of each individual (to be minimized) corresponds to its distance to that global optimum (our reasoning holds for any employed distance). In this problem, if we use,
+for instance, ball mutation (Krawiec and Lichocki 2009) (i.e., a variation operator that
+slightly perturbs some of the coordinates of a
+solution), then any possible individual different from the global optimum has at least one
+fitter neighbor (another individual resulting
+from its mutation). Similar considerations
+hold also for many types of crossover, including various kinds of geometric crossover
+(Krawiec and Lichocki 2009). Accordingly,
+there are no local optima other than the global
+optimum, and the fitness landscape is unimodal, resulting in a problem characterized by a
+good evolvability.
+Now, let us consider the typical GP problem of finding a function that maps sets of input data into known target values (e.g., regression and classification). The fitness of an indi-
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 110
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+vidual for this problem is typically considered
+to be represented as a distance between its predicted output values and the target ones (an error measure). Geometric semantic operators
+simply define transformations on the syntax of
+the individuals that correspond to geometric
+crossover and ball mutation in the semantic
+space, thus allowing us to map the considered
+GP problem into the previously discussed GA
+problem.
+The definitions of semantic crossover and
+semantic mutation follow.
+Geometric semantic crossover. Given two
+parent functions T1, T2: Rn  R, the geometric
+semantic crossover returns the real function
+TXO = (T1  TR) + ((1  TR)  T2) ,
+
+(1)
+
+where TR is a random function such that TR: Rn
+ [0, 1].
+To constrain TR in producing values in [0;
+1] we use the sigmoid function
+ 
+
+1
+
+1   
+
+,
+
+(2)
+
+where Trand is a random tree with no constraints on the output values.
+Geometric semantic mutation. Given a
+parent function T: Rn  R, the geometric semantic mutation with mutation step ms returns
+the real function
+TM = T + ms  (TR1  TR2) ,
+
+(3)
+
+where TR1 and TR2 are random real functions.
+Moraglio et al. (2012) showed that geometric semantic crossover corresponds to geometric crossover in semantic space (i.e., the
+point representing the offspring stands on the
+segment joining the points representing the
+parents), and geometric semantic mutation
+corresponds to ball mutation on the semantic
+space (and thus induces a unimodal fitness
+
+landscape on the above mentioned types of
+problem). Moraglio et al. (2012) further
+showed that these operators create much larger
+offspring than their parents and the fast growth
+of the individuals in the population makes fitness evaluation unbearably slow, making the
+system unusable. Vanneschi et al. (2013) and
+Castelli et al. (2014) proposed a possible solution to this problem, consisting of an implementation of the Moraglio et al. (2012) operators that makes them not only usable in practice, but also very efficient. Their implementation is based on the idea that, besides storing
+the initial trees, at every generation it is
+enough to maintain in memory, for each individual, its semantics and a reference to its parents. Vanneschi et al. (2013) showed that the
+computational cost of evolving a population of
+n individuals for g generations is O(ng), while
+the cost of evaluating a new, unseen instance is
+O(g).
+Geometric semantic operators have a
+known limitation (Castelli et al. 2014; Vanneschi et al. 2014): the reconstruction of the best
+individual at the end of a run can be a difficult
+(and sometimes even impossible) task, due to
+its large size. As a result, the interpretation of
+the optimal GP individual can be difficult, and
+the system can come to resemble a black box .
+METHODS
+To test the GP-GS method on a fire-frequent region, we selected Montesinho Natural
+Park, a protected area located in the municipalities of Vinhais and Bragana, in the mountainous region of northeast Portugal (Figure
+4). The park consists of 748 000 ha of natural
+wooded landscape and traditional mountain
+agricultural landscape, with highly variable
+gradients. The park lies in the northeast Trsos-Montes plateau, part of the northern Iberian
+Meseta, with elevations generally from 750 m
+to 900 m (Castro et al. 2010). However, in
+Montesinho, the elevation range is more than
+1000 m: from the lowest point in the River
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 111
+
+Figure 4. Location of the Montesinho Natural Park in Portugal.
+
+Mente (436 m), which is the parks western
+border, to peak of Sierra de Montesinho, at
+1487 m. The main altitudinal belts correspond
+to the main landforms found in the area. Climatic diversity within the park is high, with a
+mean annual rainfall of 800 mm to 1500 mm
+and an average annual temperature of 8 C to
+13 C; this variation follows continental and altitudinal gradients (Ranha and Fernandes
+2002). The summer drought period is usually
+four months. Vegetation is dominated by extensive shrub land areas, with important and
+flammable pine plantations (Pinus pinaster Aiton, P. nigra J.F. Arnold, and P. sylvestris L.).
+Natural hardwood stands (Quercus rotundifolia Lam., Q. faginea Lam., and Q. pyrenaica
+
+Willd.) occur as residual patches in the landscape (Castro et al. 2010). Schist is the most
+widely represented soil parent material in the
+area, but basic rocks, ultramafic rocks, granites, and migmatites are also important lithological groups (Fonseca et al. 2012). The spatial distribution of the soil groups is characterized by the strong dominance of Leptosols
+(77.1 %), followed by Cambisols (20.1 %),
+with the well-developed soils (Luvisols and
+Alisols) covering 2 % of the territory.
+The park includes 92 small villages inhabited by less than 8000 people. Intensive grazing takes place from May to August when
+about 5000 sheep are transported from the surrounding lowlands to graze in the highlands.
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 112
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+The non-regulated use of fire is common and
+related to agricultural and pastoral activities.
+Consequently, this area is very often subjected
+to wildfires, either naturally ignited or as a result of escaped human ignitions.
+Data
+
+We created a database of wildfire activity
+within the boundaries of the Montesinho Natural Park from January 2000 to December 2003,
+comprising 517 wildfires. Fuel and meteorological data related to the fires included the
+forest Fire Weather Index (FWI) (Taylor and
+Alexander 2006), which is the Canadian system for rating fire danger and includes five
+components: Fine Fuel Moisture Code
+(FFMC), Duff Moisture Code (DMC),
+Drought Code (DC), Initial Spread Index (ISI),
+and Buildup Index (BUI). The first three are
+related to fuel codes and are measured at the
+beginning of the year by means of a ground
+surveythe FFMC denotes the moisture con-
+
+tent of surface litter and influences ignition
+and fire spread, while the DMC and DC represent the moisture content of shallow and deep
+organic layers, which affect fire intensity. The
+ISI is a score that correlates with fire spread,
+while BUI represents the amount of available
+fuel. Although different scales are used for
+each of the FWI elements, high values suggest
+more severe burning conditions (Taylor and
+Alexander 2006).
+For each forest fire, several attributes were
+registered on a daily basis, such as the time,
+date, spatial location, the type of vegetation involved, the five components of the FWI system, and the total burned area (Table 1). More
+precisely, the areas affected by the fires were
+assessed by the parks personnel, using ground
+survey with GPS and false color aerial photography. The FWI components were calculated
+using meteorological information measured
+every 30 min by an automatic weather station
+located in the center of Montesinho Natural
+Park. Temperature, relative humidity, and
+
+Table 1. Description of input data and prediction data (burned area).
+Variable
+
+Description
+
+X
+
+x-axis coordinate (from 1 to 9). It indicates one of the 9 sub-areas obtained
+from the division of the area of study along the X axis. All the areas have the
+same size.
+
+Y
+
+y-axis coordinate (from 1 to 9). It indicates one of the 9 sub-areas obtained
+from the division of the area of study along the Y axis. All the areas have the
+same size.
+
+MONTH
+DAY
+
+Month of the year (from 1 to 12)
+Day of the week (from 1 to 7)
+
+FFMC
+
+Fine Fuel Moisture Code (from 18.7 to 96.20)
+
+DMC
+
+Duff Moisture Code (from 1.1 to 291.3)
+
+DC
+
+Drought Code (from 7.9 to 860.6)
+
+ISI
+
+Initial Spread Index (from 0 to 56.10)
+
+TEMP
+
+Temperature (C) (from 2.2 to 33.30)
+
+RH
+
+Relative humidity (%) (from 15.0 to 100)
+
+WIND
+
+Wind speed (km hr-1) (from 0.40 to 9.40)
+
+RAIN
+
+Rain (mm) (from 0.0 to 6.4)
+
+BURNED AREA
+
+Total burned area (ha) (from 0 to 1090.84)
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+wind speed were averages calculated during
+the time the fire was burning. Rain information was the total amount of rain during the
+time the fire burned. The full dataset of 517
+instances is available at: https://archive.ics.uci.
+edu/ml/datasets/Forest+Fires, and a complete
+description of the data can be found in Cortez
+and Morais (2007).
+Following the same procedure reported in
+Cortez and Morais (2007), month and day of
+the week have been chosen as temporal variables. The day of the week could influence
+forest fires (e.g., workdays vs. weekends),
+considering that most fires have a human
+cause. The BUI was discarded, since it is dependent on the other values (FFMC, DMC,
+DC, and ISI). Regarding the meteorological
+data, only the weather attributes used by the
+FWI system have been considered.
+Experimental Settings
+
+We tested the proposed implementation of
+GP with geometric semantic operators (GS-GP
+from now on), and we compared it to a standard GP system (ST-GP) (i.e., to the system
+that was originally defined in Koza 1992). All
+of the parameters were obtained by means of a
+preliminary tuning experimental analysis. We
+performed a total of 50 runs with each technique. In each run, a different partition between training and test data was considered.
+All the runs used populations of 100 individuals and the evolution was stopped after 500
+generations. Tree initialization was performed
+with the Ramped Half-and-Half method (Koza
+1992) with a maximum initial depth of six.
+The function set contained arithmetic operators, including division protected by returning
+a numeric constant when the denominator was
+equal to zero, a well-known method proposed
+in Koza (1992) to avoid system failures due to
+failures in the evaluation of the individuals.
+Fitness was calculated as the mean absolute
+error (MAE) between predicted and target values, defined as:
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 113
+
+
+1
+    |   | ,
+
+
+(4)
+
+
+
+where yi is the predicted value given input i
+(output of the generated model, evaluated on
+the training data), and ti is the corresponding
+target value.
+The terminal set contained 12 variables,
+each one corresponding to a different feature
+in the dataset. To create new individuals, STGP used standard (subtree swapping) crossover and subtree mutation (Koza 1992) with
+probabilities equal to 0.9 and 0.1, respectively.
+For GS-GP, the crossover rate was 0.7, and the
+mutation rate was 0.3. The mutation step parameter was 0.1. Survival from one generation to the other was always guaranteed to the
+best individual of the population (elitism). No
+maximum tree depth limit was imposed during
+the evolution.
+RESULTS
+GS-GP vs. Standard GP
+
+GS-GP outperformed ST-GP both on training and on out-of-samples data (Figure 5).
+GS-GP returned a MAE of 12.0 on the training
+set, whereas ST-GP produced a MAE of 13.8.
+GS-GP was more explanatory on the test data,
+with a MAE of 12.9, compared to ST-GP,
+which produced a MAE of 21.0.
+To examine the statistical significance of
+these results, we tested the median errors. Preliminary analysis using the Kolmogorov-Smirnov test showed that the data were not
+normally distributed and hence a rank-based
+statistic was used. The Wilcoxon rank-sum test
+for pairwise data comparison was used with the
+alternative hypothesis that the samples do not
+have equal medians of burned area (P < 0.001
+for training data, P = 0.002 for test data).
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 114
+
+Figure 5. Boxplots of mean absolute error for (a) training and (b) test fitness at the end of the evolution.
+On each box, the central mark is the median, the edges of the box are the 25th and 75th percentiles, and the
+whiskers extend to the most extreme data points that are not considered outliers.
+GS-GP vs. Other Machine Learning
+Techniques
+
+Besides comparing GS-GP with ST-GP, we
+also compared GS-GP with other well-known
+state-of-the-art machine learning methods. To
+perform the comparisons with other machine
+learning methods, we used the implementations provided by the Weka public domain
+software (Machine Learning Project 2015).
+As we did for the previous experimental phase,
+
+we performed a preliminary analysis to tune
+the parameters for each considered techniques.
+The results of the comparison are reported
+in Figure 6, while Table 2 summarizes all the
+results. In the figure and in the table, LIN
+stands for linear regression (Weisberg 2005),
+RBF stands for radial basis function network
+(Haykin 1999), ISO stands for isotonic regression (Hoffmann 2009), SVM-2 refers to the
+support vector machines (Schlkopf and Smola 2002) with polynomial kernel of second de-
+
+Figure 6. Boxplots of mean absolute error for (a) training and (b) test fitness for the 50 runs of the considered machine learning techniques. On each box, the central mark is the median, the edges of the box are
+the 25th and 75th percentiles, and the whiskers extend to the most extreme data points that are not considered outliers.
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 115
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Table 2. Experimental comparison between different non-evolutionary machine learning techniques for
+burned area prediction. Median of training error and test error calculated over 50 runs of each technique.
+Method
+
+Training
+
+Test
+
+GS-GP
+
+12.0
+
+12.9
+
+SVM polynomial kernel (second degree)
+
+12.3
+
+13.6
+
+Random forests
+
+13.2
+
+14.3
+
+Radial basis function network
+
+18.5
+
+19.3
+
+Linear regression
+
+18.9
+
+19.6
+
+ST-GP
+
+13.8
+
+21.0
+
+Isotonic regression
+
+18.3
+
+21.5
+
+Neural networks
+
+20.3
+
+33.8
+
+gree, NN refers to feed-forward artificial neural networks, trained with the backpropagation
+learning rule (Gurney 2003) and RF refers to
+random forests (Breiman 2001). Median error
+values for GS-GP were lower than those of all
+other considered methods (Table 2). There
+was a marked difference between the various
+methods: GS-GP, SVM-2, and RF performed
+well on this problem; LIN, RBF, and ISO performed less well; and NN performed poorly.
+We speculate, therefore, that the relationships
+hidden in the data cannot be satisfactorily approximated by a linear model. This speculation is supported by the fact that GS-GP, RF
+(which can generate non-linear models), and
+SVM-2 (which uses a quadratic kernel, and
+thus produces non-linear models) outperformed LIN, RBF, and ISO. The poor performance of NN on this problem deserves further
+discussion. One possible reason for the poor
+performance of NN could be due to the high
+number of unexpected events that affect some
+
+particular instances of the data in the studied
+problem. NN has difficulty integrating these
+elements of discontinuities.
+To assess the statistical significance of the
+model comparisons, the same set of tests performed in the previous section were done, but
+with a Bonferroni correction for the standard 
+= 0.05 was applied (hence, the final value of 
+was 0.014). The differences in terms of training and test fitness between GS-GP and the
+considered machine learning techniques were
+significant, except for the cases when GS-GP
+and SVM-2 were compared as well as when
+GS-GP and RF were compared (Table 3).
+CONCLUSIONS
+The new genetic operators of genetic programming, called geometric semantic operators, have the extremely interesting property of
+inducing a unimodal fitness landscape for any
+problem consisting of matching input data into
+
+Table 3. Comparison of geometric semantic genetic programming (GS-GP) with other machine learning
+methods. A P-value less than  = 0.014 indicates that GS-GP is superior. LIN stands for linear regression, RBF for radial basis functions, ISO for isotonic regression, SVM-2 for support vector machines with
+polynomial kernel of degree 2, NN for neural networks, and RF for random forests.
+
+GS-GP
+
+LIN
+
+RBF
+
+ISO
+
+SVM-2
+
+NN
+
+RF
+
+TRAIN
+
+<0.001
+
+<0.001
+
+<0.001
+
+0.13
+
+<0.001
+
+0.07
+
+TEST
+
+<0.001
+
+<0.001
+
+<0.001
+
+0.06
+
+<0.001
+
+0.004
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 116
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+known output values (regression and classification are instances of this general problem).
+Here we showed a new intelligent GP-based
+system that makes use of these operators to examine burned area. The main objective was
+the development of a system for predicting the
+amount of area that will be burned during a
+forest fire, based on explicit relationships between meteorological data, forest-related data,
+
+and the amount of burned area. The comparatively small MAE obtained from experimental
+results showed that geometric semantic genetic programming outperforms standard genetic
+programming and produces results that are
+better or comparable to the ones achieved with
+state-of-the-art machine learning methods for
+this application.
+
+LITERATURE CITED
+Breiman, L. 2001. Random forests. Machine Learning 45: 5-32. doi: 10.1023/A:1010933404324
+Brumby, S.P., N.R. Harvey, J.J. Bloch, J.P. Theiler, S.J. Perkins, A.C. Young, and J.J. Szymanski.
+2001. Evolving forest fire burn severity classification algorithms for multispectral imagery.
+Pages 236-245 in: S.S. Shen and M.R. Descour, editors. Algorithms for multispectral, hyperspectral, and ultraspectral imagery VII. Proceedings of a symposium. SPIE Volume 4381.
+International Society for Optics and Photonics, 16-19 Apr 2001, Orlando, Florida, USA.
+Castelli, M., S. Silva, and L. Vanneschi. 2014. A C++ framework for geometric semantic genetic
+programming. Genetic Programming and Evolvable Machines 15: 1-9.
+Castro, J., T. Figueiredo, F. Fonseca, J.P. Castro, S. Nobre, and L. Pires. 2010. Montesinho Natural Park: general description and natural values. Pages 119-132 in: N. Evelpidou, T. Figueiredo, F. Mauro, V. Tecim, and A. Vassilopoulos, editors. Natural Heritage from East to West.
+Springer, Berlin Heidelberg, Germany.
+Certini, G. 2005. Effects of fire on properties of forest soils: a review. Oecologia 143(1): 1-10.
+doi: 10.1007/s00442-004-1788-8
+Cortez, P., and A.d.J.R. Morais. 2007. A data mining approach to predict forest fires using meteorological data. Pages 512-523 in: J.M. Neves, M.F. Santos, and J.M. Machado, editors.
+Proceedings of the Portuguese conference on artificial intelligence (EPIA 2007). Associao
+Portuguesa para a Inteligncia Artificial, 1518 Dec 2007, Guimares, Portugal. Springer,
+Berlin Heidelberg, Germany.
+Gurney, K. 2003. An introduction to neural networks. Taylor & Francis, London, England,
+United Kingdom.
+Haykin, S. 1999. Neural networks: a comprehensive foundation. Prentice Hall, Upper Saddle
+River, New Jersey, USA.
+Hoffmann, L. 2009. Multivariate isotonic regression and its algorithms. Thesis, Wichita State
+University, Wichita, Kansas, USA.
+Koza, J.R. 1992. Genetic Programming: on the programming of computers by means of natural
+selection. MIT Press, Cambridge, Massachusetts, USA.
+Koza, J.R. 2010. Human-competitive results produced by genetic programming. Genetic Programming and Evolvable Machines 11(3-4): 251-284. doi: 10.1007/s10710-010-9112-3
+Krawiec, K., and P. Lichocki. 2009. Approximating geometric crossover in semantic space.
+Pages 987-994 in: G. Raidl, F. Rothlauf, G. Squillero, R. Drechsler, T. Stuetzle, M. Birattari,
+C. Bates Congdon, and M. Middendorf, editors. Proceedings of the 11th annual conference on
+genetic and evolutionary computation. Association for Computing Machinery, 812 Jul 2009,
+Montreal, Quebec, Canada.
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 117
+
+Lipsett, M., B. Materna, S.L. Stone, S. Therriault, R. Blaisdell, and J. Cook. 2008. Wildfire
+smoke: a guide for public health officials. California Department of Public Health; US Environmental Protection Agency; Missoula County Health Department; California Office of Environmental Health Hazard Assessment; California Air Resources Board, Sacramento, California, USA.
+Machine Learning Project. 2015. WekaWaikato environment for learning analysis. <http://
+www.cs.waikato.ac.nz/ml/index.html>. Accessed 1 Feb 2015.
+Mangan, R. 2007. Wildland firefighter fatalities in the United States 1990-2006. National Wildfire Coordinating Group, Missoula, Montana, USA.
+Manson, S.M. 2005. Agent-based modeling and genetic programming for modeling land change
+in the southern Yucatn peninsular region of Mexico. Agriculture, Ecosystems & Environment 111(14): 4762. doi: 10.1016/j.agee.2005.04.024
+Mateus, P., and P.M. Fernandes. 2014. Forest fires in Portugal: dynamics, causes and policies.
+Pages 219236 in: F. Reboredo, editor. Forest context and policies in Portugal, present and
+future challenges. World forests, volume 19. Springer International, Berlin Heidelberg, Germany.
+Moraglio, A., K. Krawiec, and C.G. Johnson. 2012. Geometric semantic genetic programming.
+Pages 2131 in: C.A. Coello, V. Cutello, K. Deb, S. Forrest, G. Nicosia, and M. Pavone, editors. Proceedings of the 12th International Conference on Parallel Problem Solving from NaturePPSN XII. 15 Sep 2012, Taormina, Italy. Springer, Berlin Heidelberg, Germany.
+Poli, R., and W.B. Langdon. 1998. Schema theory for genetic programming with one-point
+crossover and point mutation. Evolutionary Computation 6(3): 231252. doi: 10.1162/
+evco.1998.6.3.231
+Poli, R., W.B. Langdon, and N.F. McPhee. 2008. A field guide to genetic programming. <http://
+www.gp-field-guide.org.uk>. Accessed 12 Sep 2014.
+Ranha, M., and P.M. Fernandes. 2002. Using the Canadian Fire Weather Index (FWI) in the
+Natural Park of Montesinho, NE Portugal: calibration and application to fire management.
+Pages 8388 in D.X. Viegas, editor. Proceedings of IV International Conference on Forest
+Fire Research, 2002 Wildland Fire Safety Summit. 1823 Nov 2002, Luso, Coimbra, Portugal. Millpress Science Publishers, Rotterdam, The Netherlands.
+Rothermel, R.C. 1972. A mathematical model for predicting fire spread in wildland fuels. USDA
+Forest Service, Intermountain Research Station, Ogden, Utah, USA.
+Schlkopf, B., and A.J. Smola. 2002. Learning with kernels: support vector machines, regularization, optimization, and beyond. MIT Press, Boston, Massachusetts, USA.
+Taylor, S.W., and M.E. Alexander. 2006. Science, technology, and human factors in fire danger
+rating: the Canadian experience. International Journal of Wildland Fire 15: 121135. doi:
+10.1071/WF05021
+Vanneschi, L., M. Castelli, L. Manzoni, and S. Silva. 2013. A new implementation of geometric
+semantic GP and its application to problems in pharmacokinetics. Pages 205216 in: K.
+Krawiec, A. Moraglio, T. Hu, A.. Etaner-Uyar, and B. Hu, editors. Proceedings of the 16th
+European conference, EuroGP 2013. 35 Apr 2013, Vienna, Austria. Lecture notes in computer science 7831, Springer, Berlin Heidelberg, Germany.
+Vanneschi, L., M. Castelli, and S. Silva. 2014. A survey of semantic methods in genetic programming. Genetic Programming and Evolvable Machines 15(2): 195214. doi: 10.1007/
+s10710-013-9210-0
+
+Fire Ecology Volume 11, Issue 1, 2015
+doi: 10.4996/fireecology.1101106
+
+Castelli et al.: Predicting Burned Areas of Forest Fires
+Page 118
+
+Weisberg, S. 2005. Applied linear regression. John Wiley & Sons, Hoboken, New Jersey, USA.
+doi: 10.1002/0471704091
+Wildland Fire Management Research, Development & Application Organization. 2012. Wildland fire decision support tools. Wildland Fire Management Research, Development & Application Organization, Boise, Idaho, USA.
+
+View publication stats
+
+

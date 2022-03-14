@@ -1,0 +1,1514 @@
+Marine Policy 94 (2018) 119131
+
+Contents lists available at ScienceDirect
+
+Marine Policy
+journal homepage: www.elsevier.com/locate/marpol
+
+Conict analysis and reallocation opportunities in the framework of marine
+spatial planning: A novel, spatially explicit Bayesian belief network
+approach for artisanal shing and aquaculture
+
+T
+
+
+
+Caroline Coccolia, Ibon Galparsoroa, , Arantza Murillasb, Kemal Pnarbaa, Jose A. Fernandesa
+a
+b
+
+AZTI-Tecnalia, Marine Research Division, Herrera Kaia Portualdea z/g, 20110 Pasaia, Spain
+AZTI-Tecnalia, Marine Research Division, Txatxarramendi Ugartea z/g, 48395 Sukarrieta, Spain
+
+A R T I C LE I N FO
+
+A B S T R A C T
+
+Keywords:
+Blue growth
+Maritime activities
+Scenario analysis
+GIS
+
+The competition for marine space is a recognized challenge, and the implementation of new activities, such as
+those emerging from Blue Growth initiatives, may amplify this competition. The marine spatial planning (MSP)
+framework requires decision makers to analyse spatially explicit environmental and socio-economic data to
+determine where user conicts are or might emerge and consider several potential management scenarios. In the
+present research, a spatially explicit Bayesian belief network (BBN) was applied for this purpose. The BBN was
+developed to analyse the potential reallocation of artisanal shing eort to alternative sites due to the introduction of a new, non-take area: an oshore aquaculture site along the Basque continental shelf. The constructed model combined discrete, operational sheries data, continuous environmental data, and expert
+judgment to produce shing activity suitability maps for three dierent mtiers (longlines, nets and traps). The
+BBN was run with various eort reallocation scenarios for each metier, and the best alternative shing locations
+were identied based on environmental suitability, past revenue, and past shing presence. The closure had a
+lesser eect on net and longline activity, displacing 10% and 7% of local shing eort respectively.
+Comparatively, 50% of all local eort by traps took place within the closed grounds, and few alternative sites
+were identied. Nets were found to have the greatest number of alternative shing grounds surrounding the
+aquaculture site. The present research demonstrates how BBNs can support spatially explicit scenario building
+and user-user conict analysis for sustainable and successful ecosystem-based marine spatial planning.
+
+1. Introduction
+1.1. Emerging conicts and marine spatial planning
+Marine Spatial Planning (MSP) provides decision makers a general
+framework for managing activities over time and space. However,
+managers are confronted with the considerable task of designing, selecting and adapting spatial plans that are socially, economically and
+ecologically balanced. In MSP, maritime activities that would traditionally be regulated within independent sectors on a case-by-case basis
+are managed in the context of the entire ecosystem [1], so as to maximize sustainable development and minimize human impacts on placebased resources [2]. In order to develop these plans, decision makers
+rely on tools that allow them not only to centralize and integrate
+multiple types of spatial information [3], but also to analyse potential
+spatial scenarios, and make informed decisions about future resource
+allocation for activities that are likely to conict [4,5].
+
+
+
+Within the framework of MSP, two types of spatial conict are cited:
+user-environment conicts, and user-user conicts [2]. The former
+describes the impact of human activity on the environment, from the
+depletion of natural resources (e.g. overshing) to pollution and the
+destruction of habitats [6]. Comparatively, user-user conicts may arise
+when multiple sectors, such as sheries, tourism and energy, seek to use
+natural resources at the same time and in the same space. As states
+continue to support traditional maritime activities, in addition to developing innovative ways to use marine resources, the competition for
+marine space increases [79]. Coastal regions are particularly sensitive
+to conicts among users because they are highly productive and increasingly exploited, providing more annual value in ecosystem services than the global ocean in roughly one tenth of the area [10,11].
+The European Commission denes Blue Growth as a strategy to
+support novel, sustainable uses of oceanic and coastal resources for new
+jobs and markets, while maintaining healthy marine ecosystems
+[12,13]. However, the European Union aquaculture sector has
+
+Corresponding author at: AZTI-Tecnalia, Marine Research Division, Herrera Kaia Portualdea z/g, 20110 Pasaia, Spain.
+E-mail address: igalparsoro@azti.es (I. Galparsoro).
+
+https://doi.org/10.1016/j.marpol.2018.04.015
+Received 1 March 2018; Received in revised form 10 April 2018; Accepted 11 April 2018
+Available online 14 May 2018
+0308-597X/  2018 Elsevier Ltd. All rights reserved.
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+new aquaculture site. This analysis was undertaken by developing a
+spatially explicit BBN and by using the Basque continental shelf (SE Bay
+of Biscay) as case study. The research team created and employed a
+model that could be used to analyse spatially explicit management
+scenarios based on the fewest number of relevant environmental and
+sheries activity variables. In order to achieve this aim, the following,
+specic objectives were established: (i) collation of available geospatial
+data; (ii) determination of the relevant variables for the model; (iii)
+creation of a conceptual diagram; (iv) implementation of the conceptual
+model in BBN software; (v) denition of scenarios according to present
+and future conditions; and (vi) analysis of the resulting shing activity
+relocation options for the established scenarios.
+
+exhibited unstable growth rates over the past several years compared to
+markets in Asia and South America, and aquaculture products on the
+whole still only account for 26% of EU seafood consumption [14]. This
+limited development may be due in part to site carrying capacity, strong
+market competition from imports, and restrictive administrative processes [1517], but also to the competition for space at the local level
+[18], as may be the case in the Basque Country.
+The Basque Country, like many regions throughout Europe, has
+continued to transform its use of the coastal ocean in recent decades. In
+addition to supporting more traditional sectors, such as commercial
+sheries (purse seine, trawl and artisanal sheries), tourism, and recreation, the Basque Country has committed to a number of Blue
+Growth initiatives, including marine renewable energy production [19]
+and aquaculture [20]. The Basque Government has recognized oshore
+aquaculture as a potential solution for the increasing demand for local
+seafood products and overall resource stagnation [21]. However, due to
+certain restrictions and requirements (e.g. specic ecological, bathymetric and wave energy conditions) [22,23], oshore aquaculture developments may be limited to a few available areas along the coast, and
+such suitable locations may coincide with areas where other activities
+may already be well established. Thus, managers must be able to analyse the compatibility of activities that might conict and consider
+opportunities to optimise the space and resources. By considering both
+traditional and developing sectors in an integrated and spatially explicit
+manner, it is possible to help highlight and resolve disputes and avoid
+economic, social and environmental losses [24,25].
+
+2. Methods
+2.1. Case study area
+The Basque coast (SE Bay of Biscay) is approximately 150 km long,
+stretching from the French border to the province of Cantabria. The
+Basque section of the Cantabrian continental shelf is long and narrow,
+ranging from 7 km wide at Cape Matxitxako to only 20 km wide at the
+mouth of the Oria River [54]. The area has a high degree of geomorphologic diversity, and rocky reefs, sedimentary habitats, and mixed
+rock and sediment seascapes are dominant throughout the study site
+[55].
+2.2. Maritime activities
+
+1.2. Bayesian belief networks as a decision support tool
+There is a diverse array of human activities taking place along the
+narrow Basque continental shelf, which makes the region especially
+prone to present and future spatial conicts [19,5658] (Fig. 1). The
+coast has long hosted more traditional activities, such as the pelagic
+purse seiners, trawlers and artisanal sheries, and recreation. There are
+also two protected areas along the coast, and two larger, proposed
+Marine Protected Areas (MPAs). In addition, new activities have
+emerged alongside these existing activities, including oil and gas development, marine renewable energy development projects (the Biscay
+Marine Energy Platform), and a new oshore aquaculture initiative.
+In 2016, the Basque Government declared a 3 km2 MaritimeTerrestrial Public Domain (MTPD) zone in the littoral area of the
+Basque coast for the exclusive use of oshore aquaculture [59]. The
+area is located less than 1 km o the coast between Lekeitio and Ondarroa municipalities. It overlays soft substrata, and is intended primarily for mussel (Mytilus galloprovincialis) and oyster (Ostrea edulis)
+cultivation. Although commercial-scale aquaculture has not yet been
+implemented in the area, on-site mussel production experiments over
+the past two years have indicated its economic viability. During the
+aquaculture site identication and selection process, artisanal sheries
+were identied as one of the sectors most aected by the potential
+closure of the area.
+The artisanal sheries sector has pronounced socio-economic and
+cultural importance in the region [57,60]. The main objective of this
+study was to provide scenario analyses for potential conict resolution.
+Therefore, a broader denition of artisanal sheries was selected, in
+order to incorporate all vessels that could be aected by the closure of
+grounds for aquaculture development. The denition for artisanal
+sheries used in this study included all local crafts up to 28 m in overall
+length that conduct short shing trips to coastal shing grounds
+[61,62]. According to this denition, the Basque artisanal eet comprises 129 vessels operating from 14 major ports along the Basque
+coast. This eet is heterogeneous, using a diversity of gear and apparatus to land over 80 dierent species over the course of the year
+[56,61]. For this reason, it is useful to distinguish the employed mtier,
+or the type of shing activity, most often characterised by shing gear
+and mesh size, species caught, geographic area and time of the year
+[63,64].
+
+In view of the existing and emerging maritime activities, there is a
+demand for robust approaches that help users create scenarios, generate
+trade-o analysis and generate valuable information that can be used to
+resolve spatial and temporal conicts between sectors. One innovative
+approach for building spatial scenarios is to use Bayesian belief networks (BBN). BBNs are probabilistic models that make use of causal
+reasoning and allow for limited or uncertain data. These models are
+simplied conceptual diagrams of a system, where the relationships
+between variables (nodes) are described graphically by arrows, and
+parameterized by conditional and joint probabilities [26]. In BBNs, the
+probabilities are directly associated to current observations or expert
+based hypotheses, and these can be continuously updated as new data
+becomes available [27]. This modelling approach oers additional
+benets, including its capacity to combine qualitative and quantitative
+information and its applicability in data-poor conditions [28,29].
+Moreover, Bayesian belief networks allow users to explore future scenarios that test original assumptions [30]. This exibility makes BBNs a
+useful tool for decision-makers considering several, potential courses of
+action [31,32].
+In recent years, researchers have used BBNs for a variety of environmental applications [33]. This approach has been applied to
+analyse potential changes in land-use [3438], determine habitat suitability [39,40], provide risk and environmental impact assessments for
+water quality management [41] and inform sheries management decisions [4246]. Despite growing interest, there are still relatively few
+BBN applications developed for environmental management compared
+to other disciplines (e.g. engineering, health sciences) [47], and as such,
+much of their potential in this eld is unexploited. Moreover, according
+to Landuyt et al. [33], only one third of BBNs developed for environmental management purposes were spatially explicit, and the majority
+of these applications were related to land-use management decisions
+[48]. Thus, few of the spatially explicit BBNs have been applied to the
+marine realm [4951], and specically, user-user conicts analysis in
+the context of MSP [52,53].
+Given this context, the objective of this research is to provide information about potential eort reallocation opportunities for artisanal
+sheries when an area is closed to this activity for the development of a
+120
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Fig. 1. Location of the study site in the southeastern Bay of Biscay and in the context of existing and future marine activities along the Basque continental shelf. The
+pilot aquaculture site is located in the rectangular area between the ports of Lekeitio and Ondarroa.
+
+Based on the ndings from the PRESPO and BATEGIN projects
+[61,65], there are three mtiers whose traditional activity could be
+aected by the declared aquaculture site: nets, longlines, and traps.
+Vessels using traps operate very close to the coastline, and their activity
+would be the most directly impacted by the declared aquaculture site.
+Their limited technical capacity further reduces their relocation options. Comparatively, nets and longlines are the most widespread mtiers, operating along much of the Basque continental shelf, as well as
+within the declared site.
+2.3. Development of the Bayesian belief network
+The development and application of the BBN required a series of
+steps [66,67], which are shown in Fig. 2 and described below. There are
+multiple ways to determine the structure of a BBN, often referred to as
+the directed acyclic graph, and parameterize the relationships between
+nodes.
+2.3.1. Step 1. Collation and preparation of geospatial data
+A 1  1 km grid covering the study area was adopted as reference
+for the subsequent analysis and to produce continuous coverage output
+maps. This grid yielded 2355 unique grid cells along the study site.
+Environmental data (e.g. marine habitat, distance variables) and shing
+data were integrated into a single geographic information system (GIS).
+The European Union Nature Information System (EUNIS) benthic
+habitat map was obtained from Galparsoro et al. [68]. The habitat
+classes were grouped into four broader habitat types: rock, sand, coarse
+sediment, and mud (Supplementary Table 1). For each grid cell, primary habitat type was summarized by selecting the habitat with the
+greatest coverage.
+Fishing activity data were obtained from the BATEGIN project database [65]. All shing events from 2010 (14,506) were mapped in
+
+Fig. 2. Flow diagram of the initial Bayesian belief network development process performed in this study. Abbreviations: Bayesian belief network (BBN),
+conditional probability tables (CPT).
+
+Quantum Geographic Information Systems (QGIS) as point vectors with
+the following attributes: vessel ID, mtier, base port, sale port, and
+revenue (rst sale price per kg multiplied by catch biomass in kg) which
+was averaged by grid cell, and shing eort was dened as number of
+121
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+mechanisms, and is widely applied in the literature [33,70,71]. Arrows
+were drawn in the direction of the target nodes in order to facilitate the
+writing of CPTs learned through expert judgment. When developing the
+spatial BBN in Netica, each node referred to a GIS layer or attribute, and
+each ID in the input case le referred to a specic grid cell in the study
+site, so as to create a continuous coverage and spatially explicit output.
+The input case le for the BNN was produced by combining all the
+instances (rows or grid cells) and attributes (columns) into a data matrix using GIS software.
+
+events (typically trips) per grid cell.
+Distance from port and distance from rock were calculated for both
+individual shing events and grids. For the shing events, distance from
+port was calculated as the geodesic distance (the shortest distance between two points) between each vessel's base port and the shing event
+location. For individual grids cells, a Euclidean distance raster was
+calculated in QGIS based on the 14 major ports and the average distance in each cell. Similarly, the average Euclidean distance from rock
+in each grid cell was calculated based on a distance from rock raster
+layer (Supplementary Table 2). A spatial join was performed to obtain
+the distance from rock value at each shing event.
+The declared aquaculture site overlapped fully or partially with 13
+grid cells. These cells were labelled as closed or open depending on
+the scenario analysis that was going to be performed.
+
+2.3.4. Step 4. Discretization of geospatial data
+Prior to training the BBN, continuous data (i.e. distance from port,
+distance from rock, revenue, and eort) were discretized according to
+Jenks natural breaks in R, to maximize variance between bins and
+minimize variance within bins [72], and these bins were used as node
+states in Netica (Supplementary Table 2). The shing eort bins were
+rescaled (03 units) to facilitate redistribution in the reallocation scenarios 1b-c (scenarios described in the following section).
+
+2.3.2. Step 2. Creation of the conceptual diagram
+The model was designed to minimize the number of parameters
+needed for assessing shing ground suitability in order to maximize its
+robustness given the limited environmental data available at the spatial
+resolution (1 km2). The nal conceptual model was designed to predict
+the shing ground suitability of a given grid cell for each mtier based
+on environmental suitability (primary habitat, distance from port and
+distance from rock), past shing eort, and past catch revenue. The
+resulting model would be used to perform scenario analysis by reallocating shing eort from the closed site to alternative grid cells.
+Expert judgement, contributed by local researchers with experience in
+habitat modelling, sheries economics, sheries management and
+Bayesian networks modelling, was used to develop the structure of the
+network. To create the conceptual diagram, the research team brainstormed a list of available predictor attributes that were most relevant
+to the model output and connected these variables to represent all expected relationships using their collective expert judgment.
+
+2.3.5. Step 5. Denition of the conditional probability tables
+Based on the availability of spatial data and to avoid creating an
+overly selective model, the team decided to use a combination of empirical data and expert judgement to inform the CPTs. First, the model
+was used to learn CPTs for the mtier and their environmental predictor
+attributes through a dataset of shing activity events. The research
+team then visualized each of the mtier's environmental preferences
+based on these empirical data. Expert judgement was used to inform the
+remaining CPTs for overall suitability.
+Due to the grid resolution (1 km2), there was a high degree of data
+variability within the grid cells. For example, within a single grid, there
+were tens of events occurring over dierent habitat types. So, although
+point data were dened by a single state of a given parameter, twodimensional spaces, like the grid cells, were dened by one or more
+states of a given parameter. For this reason, the team decided to train
+the environmental attribute CPTs with point data, but run the overall
+model with grid data to produce continuous coverage maps. The BBN
+implemented in Netica is shown in Fig. 3.
+
+2.3.3. Step 3: model implementation in Bayesian belief network software
+The conceptual diagram was converted into a BBN (Fig. 3) using
+Netica 6.03 (Norsys, https://www.norsys.com/netica [69]). Netica
+provides a simple user interface, built-in parameter learning
+
+Fig. 3. Untrained Bayesian belief network (conditional probability tables not displayed) for one of the mtiers, Nets. Nodes in white were trained with empirical data,
+and nodes in grey were trained with expert judgment. An overall suitability is obtained from the target (child) node (Suitability_Nets).
+122
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Fig. 4. The environmental predictor variables in the Bayesian belief network, trained with a) all events data and b) all events data and calibrated to the presence of
+traps.
+
+The total number of shing events (14,506) was used to train the
+CPTs. The modelling software, Netica, uses Bayes Theorem and machine learning algorithms (Norsys) to determine the probabilistic relationships between the shing events and geographic conditions in
+which they took place (i.e. primary habitat, distance from port, distance
+from rock).
+After all shing events were loaded into the model, the BBN was
+calibrated to each mtier by moving the belief-bar, and model users
+visualized the conditional probabilities of each of the environmental
+parameters (Fig. 4). The mtier presence node was used to distinguish
+shing events performed by the mtier of interest and trips performed
+by all other mtiers, in order to train the model for both positive and
+negative ndings.
+A scoring system was implemented to capture the variability of the
+shing activities. The CPTs learned from the empirical data were used
+to inform the scoring of the intermediate, environmental suitability
+node (Supplementary Table 2). Points were assigned to each state of the
+parent node according to their respective conditional probabilities; the
+most probable state received the highest score (3/3), and the least
+probable state received the lowest score (0/3). An average score was
+calculated in R for each unique combination of states (n = 3), and
+suitability categories were assigned to the following bins: no (00.667),
+low (0.6671.667), medium (1.6672.667), high (2.6673), and very
+high (> 3). High scores were associated to the environmental conditions that were associated with the greatest number of shing events by
+a given mtier, and low scores were associated to conditions associated
+with the fewest number of shing events.
+The CPT for the overall suitability node was calculated similarly.
+High scores were assigned to high previous eort and high catch revenue, and low scores to low previous eort and low catch revenue. The
+average score from the environmental suitability, eort, and revenue
+nodes was used to predict the overall suitability class. Finally, the
+model was trained to associate any grid cell classied as closed to the
+
+no suitability state.
+This step was repeated for each of the three mtiers to produce
+distinct, spatially explicit scenarios.
+2.4. Scenario denitions
+The model was run for several scenarios to explore how shing
+grounds suitability might change under new spatial management options. The scenarios were dened as follows:
+Scenario 0 (Baseline): the model was run for all grids in the case
+study, for each of the three mtiers analysed. No grid cells were closed
+to shing activity and thus, no eort was reallocated.
+Scenario 1a: this scenario was dened similarly to Scenario 0, but
+the 13 grid cells overlapped by the aquaculture site were closed, and
+shing eort from those cells was removed (set to zero) and redistributed evenly to all available cells.
+Scenario 1b: the model was run for a subset of grids in the case
+study, for each of the three mtiers analysed. This subset corresponded
+to the activity range of the 6 vessels that shed within the declared
+aquaculture area (Fig. 5). The 13 aquaculture site grid cells were closed,
+and shing eort from those cells was removed and redistributed
+evenly to cells with predicted high environmental suitability and low
+previous shing eort.
+Scenario 1c: this scenario was dened similarly to Scenario 1b, but
+shing eort from the aquaculture site grid cells was removed and
+redistributed evenly to cells with predicted high environmental suitability and high previous shing eort.
+3. Results
+3.1. Characterisation of artisanal shing activity
+Based on the activity records of the 79 artisanal vessels operating in
+123
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Fig. 5. Reduced study area for Scenarios 1b-c, based on the activity range of the six vessels that previously shed within the declared aquaculture site. Only the
+shing events made by these vessels are plotted in the gure.
+
+the majority of medium suitability sites were located in the central belt
+of the continental shelf, between the ports of Bermeo and Getaria. The
+areas suitable for longlines exhibited the greatest spatial dispersion
+along the study area, with high and medium suitable sites speckling the
+narrow, northwestern reaches of the continental shelf near the port of
+Armintza. Suitability for traps was predicted to be low for 66% of the
+study site, but suitability increased in grid cells very close to the coast.
+The model results illustrated that there were highly suitable areas for
+both nets and traps within the aquaculture site. In contrast, the amount
+of grid cells with no suitability was comparable for the three mtiers,
+ranging from 23% to 33%. The majority of unsuitable sites were
+identied as areas far from rocky substrata, in the northeast portion of
+the study site.
+
+the case study area, it was observed that nets were the most abundant
+and spatially widespread mtier, followed by longlines (Fig. 6). There
+were comparatively fewer vessels operating with traps, and their shing
+events occurred close to the coastline and near to their base ports.
+The majority of shing events by netters took place over mud habitats (54%), in areas located on rocks (39%) or less than 250 m from
+rock (27%), and in locations between 2 and 5 km from their base port
+(38%) (Table 1). On the other hand, the majority of longliners shed
+over rocky substrata (56%) and were more likely to seek out shing
+locations farther away (distanced greater than 5 km) from their base
+port. Trap users seemed to be the most restricted to the seaoor type
+over which they undertake their activity. Based on the empirical data,
+75% of the shing events took place over rocky habitats (75%) and 50%
+took place between 0.25 and 1 km from rock. In 32% of the cases, trap
+users were active between 2 and 5 km from port base port.
+Based on the records from 2010, the shing activity taking place
+within the aquaculture site area was performed by just 6 vessels. These
+six vessels are directly aected by the closure, as their shing grounds
+are located within the declared aquaculture site. Four of these vessels
+operated with nets throughout the declared aquaculture site, one vessel
+operated with longlines in a sub-section of the site, and the remaining
+vessel operated with traps within the site and in the immediately surrounding coastal waters. These vessels contributed 3% of the total net
+eort and just over 1% of total longline eort expended along the entire
+Basque coast. In contrast, the single aected vessel operating with traps
+contributed to over 30% of the total eort by traps.
+
+3.3. Scenario 1a: reallocation opportunities for artisanal shing eort
+In this scenario, each mtier's eort in the aquaculture area was
+summed and redistributed evenly to all open cells in the study site. All
+aquaculture site cells were reclassied as closed, and the model was
+trained to recognize these grid cells as unsuitable (Table 2). Given that
+the whole study area comprised 2355 grid cells, the relatively small
+amount of reallocated eort did not change the suitability status of the
+open grid cells for any of the mtiers (i.e. 3% of their total eort, or 35
+units of eort by nets divided evenly among 2355 grid cells).
+3.4. Scenario 1b: eort reallocation for directly aected vessels
+
+3.2. Artisanal shing grounds
+
+For this scenario, the model was run with a subset of grid cells
+corresponding to the shing grounds of directly aected vessels. The six
+vessels that had shed within the aquaculture site operated in 286 of
+the surrounding grid cells. Traps experienced the greatest degree of
+displacement by the closure, as 50% of the vessels eort occurred
+within the closed area. The other mtiers were less aected, as 10% of
+the local eort by nets and 7% of the local eort by longlines took place
+within the closed grounds. The BBN was used to highlight changes in
+local suitability when eort was redistributed to cells with predicted
+high suitability and low previous eort. In this scenario, the closure of
+the aquaculture site resulted in increased suitability for nets in two grid
+cells (Fig. 8). This scenario did not produce any observable changes for
+
+The predicted shing ground suitability for nets, longlines and traps
+is shown in Fig. 7. The predicted suitability for the three mtiers within
+the range of the directly aected vessels is shown in Fig. 8.
+The predicted shing ground suitability based on the baseline scenario mirrored the spatial distribution of mtier activity along the
+Basque coast. The BBN results showed that there is a wide range of
+suitable sites for nets along the continental shelf. Nets were found to
+have the largest percentage of medium and high suitability sites in the
+study area (20%), compared to longlines (8%) and traps (< 1%)
+(Table 2). The suitable areas for nets closely followed the coastline, and
+124
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Fig. 6. Spatial distribution of raw shing events data for the three principle mtiers of the Basque artisanal shing eet: nets (a), longlines (b), and traps (c).
+
+the reallocation of longlines and traps eort led to fewer changes in
+suitability. However, for traps, the site closure and eort reallocation
+highlighted alternative suitable shing grounds in nearby grids to the
+west of the aquaculture site.
+Overall, the BBN results for the limited activity range in Scenario 1c
+showed the most noticeable changes in suitability, whereas the reallocation of a relatively small amount of eort to all potential areas in
+the case study did not produce an observable eect.
+
+the two other mtiers, from which less than 10% of eort was redistributed.
+
+3.5. Scenario 1c: eort reallocation to alternative sites
+Comparatively, when eort was redistributed to cells with predicted
+high environmental suitability and high previous eort, the suitability
+status of the study site changed considerably (Fig. 9). For nets, shing
+ground suitability increased in grid cells near to the coast, to the east
+and west of the closed site, and two cells were reclassied as having
+very high suitability. For this particular mtier, many of the grids that
+had medium suitability in the baseline scenario were reclassied as
+highly suitable in the site closure scenario. As in the previous scenarios,
+
+4. Discussion
+In order to develop marine spatial plans that help reduce conicts
+and optimise the use of available resources, managers must take into
+125
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Table 1
+Results from the trained Bayesian belief network, calibrated for each mtier. Scores were used to inform the conditional probability tables of the environmental
+suitability node.
+Mtier
+
+Primary habitat
+
+(%)
+
+Score
+
+Distance from rock (km)
+
+(%)
+
+Score
+
+Distance from port (km)
+
+(%)
+
+Score
+
+Nets
+
+Mud
+Rock
+Sand
+Coarse sediment
+Rock
+Mud
+Sand
+Coarse Sediment
+Rock
+Mud
+Coarse Sediment
+Sand
+
+54
+36
+6
+4
+56
+33
+7
+4
+75
+11
+8
+5
+
+3
+2
+1
+0
+3
+2
+1
+0
+3
+2
+1
+0
+
+0
+00.25
+0.251
+>0
+0
+0.251
+00.25
+>0
+0.251
+0
+>0
+00.25
+
+39
+27
+25
+9
+51
+26
+14
+10
+51
+23
+20
+6
+
+3
+2
+1
+0
+3
+2
+1
+0
+3
+2
+1
+0
+
+25
+510
+> 10
+02
+510
+> 10
+25
+02
+25
+510
+> 10
+02
+
+38
+32
+22
+8
+43
+25
+22
+10
+32
+27
+22
+19
+
+3
+2
+1
+0
+3
+2
+1
+0
+3
+2
+1
+0
+
+Longlines
+
+Traps
+
+analyse scenarios for artisanal shing eort reallocation at the highest
+spatial resolution permitted by available data. This analysis benetted
+from the capacity of BBNs to combine data-driven methods (i.e. shing
+activity reports and environmental characteristics) with expert knowledge. The current model can be considered as a rst step in creating a
+
+account the spatial and temporal patterns of all relevant maritime activities, as well as the interactions between them [73]. Unfortunately,
+many modelling approaches are generally unable to fully capture these
+complex activity patterns in a spatially explicit manner [53]. In this
+research, a Bayesian belief network was developed to model, map and
+
+Fig. 7. Overall predicted suitability for nets (a), longlines (b) and traps (c), based on the select environmental and shing activity parameters included in the
+Bayesian belief network.
+126
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Fig. 8. Overall suitability for nets in Scenario 0 versus Scenario 1b (reallocation).
+
+overall suitability was assigned to the region along continental shelf
+covered by rocky substrata where few shing events had occurred. The
+modelling approach generated the most informative results for netters,
+for which the greatest amount of shing event data was available, although alternative shing locations for longlines and traps were also
+identied. When eort by nets was reallocated in the scenarios, the
+suitability status of multiple grid cells increased, thereby identifying
+alternative shing sites. In Scenario 1b, when eort was reallocated to
+grids with low previous eort, highly suitable sites were identied
+farther away from the coast to the northeast of the aquaculture site.
+These potential relocation sites match the mtier's identied environmental preferences, but could be relatively unknown to the sherman
+because few vessels have operated there previously. Comparatively, the
+results from Scenario 1c emphasise alternative shing locations that are
+both environmentally suitable and have hosted shing activity in the
+past. In this scenario eight additional grid cells with high and very high
+suitability were identied, but given that the model does not consider
+environmental carrying capacity (i.e. species biomass), it is uncertain
+whether these areas could sustain increased activity.
+Similarly, the model was used to identify a few grid cells west of the
+aquaculture site to which trap eort could be reallocated. Not only
+were traps the most aected by the closure in terms of eort, but also
+the model results showed that there were few grid cells in the surrounding area that were environmentally suitable. The limited relocation options for traps reect both the reduced technical capacity of this
+particular shing activity and the few number of shing event data in
+this region. These results conrm that it may be more dicult to relocate vessels operating with traps, and that mitigating their potential
+losses due to the introduced aquaculture site should be prioritized.
+
+Table 2
+Number of cells assigned to each suitability class in the scenarios. The total
+number of grid cells in Scenarios 01 was 2355. The total number of grid cells
+in Scenarios 1b-c was 286. Numerical results for Scenario 0 and Scenario 1 are
+the same, but both are included for reference.
+Scenario
+
+Class
+
+Nets
+Number of
+cells
+
+%
+
+Longlines
+Number of
+cells
+
+%
+
+Traps
+Number of
+cells
+
+%
+
+Scenario 0
+(baseline)
+
+No
+Low
+Medium
+High
+Very high
+No
+Low
+Medium
+High
+Very high
+No
+Low
+Medium
+High
+Very high
+No
+Low
+Medium
+High
+Very high
+No
+Low
+Medium
+High
+Very high
+
+545
+1354
+394
+62
+0
+545
+1354
+394
+62
+0
+31
+118
+109
+28
+0
+44
+117
+101
+24
+0
+44
+118
+73
+49
+2
+
+23
+57
+17
+3
+0
+23
+57
+17
+3
+0
+11
+41
+38
+10
+0
+15
+41
+35
+8
+0
+15
+41
+26
+17
+1
+
+642
+1513
+152
+48
+0
+642
+1513
+152
+48
+0
+57
+181
+45
+3
+0
+59
+184
+42
+1
+0
+65
+175
+43
+1
+2
+
+27
+64
+6
+2
+0
+27
+64
+6
+2
+0
+20
+63
+16
+1
+0
+21
+64
+15
+0
+0
+23
+61
+15
+0
+1
+
+786
+1554
+11
+4
+0
+786
+1554
+11
+4
+0
+62
+214
+7
+3
+0
+66
+215
+5
+0
+0
+75
+206
+2
+3
+0
+
+33
+66
+0
+0
+0
+33
+66
+0
+0
+0
+22
+75
+2
+1
+0
+23
+75
+2
+0
+0
+26
+72
+1
+1
+0
+
+Scenario 1
+
+Scenario 1b
+(baseline)
+
+Scenario 1b
+
+Scenario 1c
+
+BBN for analysing conict resolution opportunities for marine activities
+and space and resource optimisation under the framework of ecosystem-based marine spatial planning. To the authors knowledge, this is
+the rst application of a spatially explicit BBN that can be used to
+analyse dierent management scenarios for sheries when there is a
+possibility of grounds closure due to an emerging marine activity. This
+particular application is of high relevance for MSP and management
+plans, as artisanal sheries make up 83% of the total EU eets [74] and
+marine aquaculture production is expected to increase.
+For this research, the overall suitability for artisanal sheries was
+dened by past eort, past revenue and environmental suitability, so
+areas with a high degree of previous activity and prot corresponded to
+high overall suitability. Comparatively, in areas that resembled the
+environmental preferences of the mtier but where few shing events
+had taken place were assigned low suitability. This outcome was most
+evident in the baseline scenario (Scenario 0, Fig. 7), Therefore, low
+
+4.1. Model assumptions
+Despite the simplicity of the BBN, several of its parameters and their
+underlying assumptions are in agreement with previous, spatial characterizations of shing activity [75,76]. Suitability was based in part on
+the assumption that high catch per unit eort is equivalent to high
+abundance of species of commercial interest [77]. Although the eort
+and revenue nodes speak to the notion that shing is an economic activity and that shermen are driven by expected prot [78,79], the
+model was designed to give weight to traditional shing grounds over
+environmentally suitable but previously un-visited sites. In Scenario 1c,
+eort was purposefully reallocated to sites that artisanal shermen had
+visited before, which increased the overall suitability of grid cells to the
+west of the aquaculture site from medium to high. Thus, the concept of
+tradition, with respect to traditional shing locations, was incorporated
+implicitly in the model and in the scenarios. Distance from port was
+127
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+Fig. 9. Overall suitability for nets (top), longlines (middle) and traps (bottom) in Scenario 0 versus Scenario 1c.
+
+4.2. Model performance and underlying uncertainties
+
+included explicitly in the model, as a means of linking the user and their
+resource, as well as introducing distance as a proxy for cost [77]. In this
+sense, the choice of shing grounds can depend on a number of additional factors, including expected prot and market demand, season,
+and the shermen's knowledge of habitat distribution [80,81]. Ultimately, there was a trade-o between the number of variables needed
+for a robust and reliable model and the data limitations to create a
+spatially explicit BBNs. Pradhan and Leung [80] highlight that it is most
+important for managers to identify which parameters ultimately trigger
+shers to choose one location over another when developing a particular shery, which is one reason why expert judgment was incorporated into this BBN.
+
+The model produced showed uncertainty in assigning low to
+medium suitability and did not capture extreme values. Stelzemller
+et al. [52] and van Verseveld et al. [71] encountered the same diculties in their BBN applications for analysing marine landscape vulnerability and categorizing hurricane damage to coastal structures,
+respectively. It is likely that much of the uncertainty produced in this
+model is related to the discretization of the data. In the model produced, it was observed that the coarse discretization of the eort data
+greatly impacted the suitability score in the reallocation scenarios. The
+skewness of the available data and the proportion of eort relative to
+the number of available cells diminished the eect of the reallocated
+eort on the overall suitability score. Greenstreet and team [82] used
+
+128
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+scenarios for artisanal sheries, whose traditional grounds may be
+closed for aquaculture development. This analysis was accomplished
+through a novel approach: the creation and application of a spatially
+explicit Bayesian belief network. The results indicated that there are
+opportunities for traditional artisanal shing activities to reallocate
+their eort and thus, coexist with the aquaculture initiative in areas
+immediately surrounding the aquaculture site. The results obtained
+revealed that there is added value in combining empirical data and
+expert knowledge when developing this kind of model, especially in the
+context of reaching marine spatial planning objectives. To our knowledge, the proposed model is still one of the only spatially explicit BBNs
+applied to artisanal sheries and aquaculture in the context of MSP.
+Subsequent research should seek to develop models that incorporate
+additional maritime activities in order to address continued and newly
+emerging user-user conicts and associated environmental eects.
+BBNs can be adapted to explore management scenarios for a range of
+actors and activities, thus proving their usefulness for ecosystem-based
+marine spatial planning implementation.
+
+an alternative modelling approach and ICES data with a lower spatial
+resolution, but also found diculty in redistributing eort eectively,
+observing that shing eort increases in open grids were smaller than
+the eort expended previously in the closed area.
+Aalders and co-workers [83] expressed that the ultimate objective in
+creating a BBN is to train all CPTs with empirical data, as opposed to
+expert judgement. However, in the present research incorporating expert judgement to inform the suitability node was essential because the
+target node needed to convey value. In order to produce the dierent
+scenarios, the shing eort had to be reallocated, and therefore this
+variable could not be used as the target node. For this reason, future
+research eorts should investigate how to adjust the suitability scoring
+system and discretization of the classes in order to best summarize the
+available information.
+Given the current availability of relevant spatial data, structured,
+expert and stakeholder elicitation may be the most appropriate means
+for further development and validation [39,53]. This study relied on a
+small group of experts for the development of the alpha model, but
+other BBN applications have elicited between 3 and 60 experts to discretize nodes and parameterize CPTs [84]. In particular, determining
+node states (bins) has been recognized as a critical part of the elicitation
+process [85]. Once the functional model has been established, its assumptions, parameters and outputs can be more easily assessed and
+edited by additional subject domain experts and relevant stakeholders
+[8688].
+
+Acknowledgements
+This work was supported by the European Commission Erasmus
+Mundus Scholarship for the Marine Environment and Resources (MER)
+MSc (Grant no. 2013-0237); the AquaSpace (Ecosystem Approach to
+making Space for Sustainable Aquaculture) project, funded by the
+European Union under the H2020 Programme (Grant agreement no.
+633476); and the VAPEM project, funded by the Fisheries and
+Aquaculture Directorate of the Basque Government. Kemal Pnarba
+was supported by a Ph.D. grant from AZTI. Jose A. Fernandes received
+funding through the Gipuzkoa Talent Fellowships programme, by the
+Gipuzkoa Provincial Council, Spain. This paper is contribution number
+861 from the Marine Research Division (AZTI).
+
+4.3. Application of Bayesian belief networks in the marine spatial planning
+process
+Some of the principal characteristics and capabilities of Bayesian
+belief networks make them valuable for ecosystem based MSP and integrated management-related applications. BBNs can be used to combine available empirical data with expert knowledge to increase the
+user's understanding of spatial phenomena, as was shown in the present
+research. Moreover, the resulting BBN can be amended and updated.
+The environmental parameters can be retrained with higher resolution
+spatial data, and the model could be updated with additional case les
+from more recent shing activity reports and geodata obtained from
+Automatic Identication Systems (AIS) and Vessel Monitoring Systems
+(VMS) [89], although artisanal shing gears are typically not well
+captured by these technologies. Researchers have used a Bayesian approach to predict sh species richness and abundance hot-spots from
+environmental and remotely sensed data, so this information could be
+used to update the current model and verify potential eort reallocation
+scenarios [90].
+The key contribution of this research is that the produced BBN can
+be used to explore alternative management scenarios for a marine area
+supporting a high density of economic activities. Such scenarios can be
+created and run with modied versions of this BNN. The existing BBN
+could be applied to a large range of economic activities, such as the
+selected aquaculture site, proposed MPAs, or new oshore wind energy
+platforms. The model developed here can also be integrated with other
+BBNs to address marine spatial planning initiatives at a systems-wide
+scale. As this case study illustrates, implementing new objectives in one
+sector may introduce and change conict patterns with another [73].
+Making trade-os explicit through applications like BBNs can improve
+the decision making process and help reduce overall losses for individual sectors [91]. BBNs may be especially useful in integrating
+management domains that primarily rely on expert judgment, as they
+provide a structured and statistically sound format for incorporating
+such information [28].
+
+Appendix A. Supporting information
+Supplementary data associated with this article can be found in the
+online version at http://dx.doi.org/10.1016/j.marpol.2018.04.015.
+References
+[1] S. Katsanevakis, V. Stelzenmller, A. South, T.K. Srensen, P.J.S. Jones, S. Kerr,
+F. Badalamenti, C. Anagnostou, P. Breen, G. Chust, G. DAnna, M. Duijn, T. Filatova,
+F. Fiorentino, H. Hulsman, K. Johnson, A.P. Karageorgis, I. Krncke, S. Mirto,
+C. Pipitone, S. Portelli, W. Qiu, H. Reiss, D. Sakellariou, M. Salomidi, L. van Hoof,
+V. Vassilopoulou, T. Vega Fernndez, S. Vge, A. Weber, A. Zenetos, R. ter Hofstede,
+Ecosystem-based marine spatial management: review of concepts, policies, tools,
+and critical issues, Ocean Coast. Manag. 54 (2011) 807820, http://dx.doi.org/10.
+1016/j.ocecoaman.2011.09.002.
+[2] C. Ehler, F. Douvere, Marine spatial planning: a step-by-step approach toward
+ecosystem-based management, Intergov. Oceanogr. Comm. Man Biosph. Program.
+IOC Man. (2009).
+[3] K.A. Stamoulis, J.M.S. Delevaux, Ocean & coastal management data requirements
+and tools to operationalize marine spatial planning in the United States, Ocean
+Coast. Manag. 116 (2015) 214223, http://dx.doi.org/10.1016/j.ocecoaman.2015.
+07.011.
+[4] V. Stelzenmller, J. Lee, A. South, J. Foden, S.I. Rogers, Practical tools to support
+marine spatial planning: a review and some prototype tools, Mar. Policy 38 (2013)
+214227, http://dx.doi.org/10.1016/j.marpol.2012.05.038.
+[5] K. Pnarba, I. Galparsoro, . Borja, V. Stelzenmller, C.N. Ehler, A. Gimpel,
+Decision support tools in marine spatial planning: present applications, gaps and
+future perspectives, Mar. Policy 83 (2017) 8391, http://dx.doi.org/10.1016/j.
+marpol.2017.05.031.
+[6] F. Douvere, The importance of marine spatial planning in advancing ecosystembased sea use management, Mar. Policy 32 (2008) 762771, http://dx.doi.org/10.
+1016/j.marpol.2008.03.021.
+[7] M.J. Harte, H.V. Campbell, J. Webster, Looking for safe harbour in a Crowded Sea:
+coastal space use conict and marine renewable energy development, in: Shifting
+Shorelines: Adapting to the Future, the 22nd International Conference of The
+Coastal Society, Wilmington, North Carolina, 2010.
+[8] M. Papageorgiou, Coastal and marine tourism: a challenging factor in Marine
+Spatial Planning, Ocean Coast. Manag. 129 (2016) 4448, http://dx.doi.org/10.
+1016/j.ocecoaman.2016.05.006.
+[9] A.I. Lilleb, C. Pita, J. Garcia Rodrigues, S. Ramos, S. Villasante, How can marine
+
+5. Conclusions
+This research helps to resolve a user-user conict along the Basque
+Coast by identifying and analysing potential eort reallocation
+129
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+[10]
+
+[11]
+
+[12]
+
+[13]
+
+[14]
+[15]
+
+[16]
+
+[17]
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+
+[22]
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+
+[27]
+
+[28]
+
+[29]
+
+[30]
+
+[31]
+[32]
+
+[33]
+
+ecosystem services support the Blue Growth agenda? Mar. Policy 81 (2017)
+132142, http://dx.doi.org/10.1016/j.marpol.2017.03.008.
+R. Costanza, R. DArge, R. de Groot, S. Farber, M. Grasso, B. Hannon, K. Limburg,
+S. Naeem, R.V. ONeill, J. Paruelo, R.G. Raskin, P. Sutton, M. van den Belt, The
+value of the world's ecosystem services and natural capital, Nature 387 (1997) 253,
+http://dx.doi.org/10.1038/387253a0.
+R. Costanza, R. de Groot, P. Sutton, S. van der Ploeg, S.J. Anderson, I. Kubiszewski,
+S. Farber, R.K. Turner, Changes in the global value of ecosystem services, Glob.
+Environ. Chang. 26 (2014) 152158, http://dx.doi.org/10.1016/j.gloenvcha.2014.
+04.002.
+EC, Blue Growth opportunities for marine and maritime sustainable growth, COM/
+2012/494 Final, 2012, pp. 112. http://eur-lex.europa.eu/legal-content/EN/
+ALL/?Uri=CELEX%3A52012DC0494.
+EC, Report on the Blue Growth Strategy: Towards more sustainable growth and jobs
+in the blue economy, SWD/2017/128 Final, 2017, pp. 162. https://ec.europa.eu/
+maritimeaairs/sites/maritimeaairs/les/swd-2017-128_en.pdf.
+EC Directorate-General for Maritime Aairs and Fisheries Director General, The EU
+Fish Market, 2017. doi:10.2771/455963.
+A. Lane, C. Hough, J. Bostock, The long-term economic and ecoloic impact of larger
+sustainable aquaculture, Study Eur. Parliam. Dir. Gen. Intern. Policies, Policy Dep.
+B, Struct. Cohes. PoliciesFisheries, 2016. http://www.europarl.europa.eu/
+RegData/etudes/STUD/2014/529084/IPOL_STU(2014)529084_EN.pdf.
+J. Bostock, A. Lane, C. Hough, K. Yamamoto, An assessment of the economic contribution of EU aquaculture production and the inuence of policies for its sustainable development, Aquac. Int. 24 (2016) 699733, http://dx.doi.org/10.1007/
+s10499-016-9992-1.
+. Strand, A. Louro, P.F. Duncan, Chapter 20: European aquaculture, in:
+S.E. Shumway, G.J. Parsons (Eds.), Scallops Biol. Ecol. Aquac. Fish, 3rd ed., Elsevier
+Science, Oxford, 2016, pp. 859890, , http://dx.doi.org/10.1016/B978-0-44462710-0.00020-1.
+J. Hofherr, F. Natale, P. Trujillo, Is lack of space a limiting factor for the development of aquaculture in EU coastal areas? Ocean Coast. Manag. 116 (2015) 2736,
+http://dx.doi.org/10.1016/j.ocecoaman.2015.06.010.
+I. Galparsoro, P. Liria, I. Legorburu, J. Bald, G. Chust, P. Ruiz-Minguela, G. Prez,
+J. Marqus, Y. Torre-Enciso, M. Gonzlez, . Borja, A Marine Spatial Planning
+Approach to Select Suitable Areas for Installing Wave Energy Converters (WECs), on
+the Basque Continental Shelf (Bay of Biscay), Coast. Manag. 40 (2012) 119, http://
+dx.doi.org/10.1080/08920753.2011.637483.
+K. Azpeitia, L. Ferrer, M. Revilla, J. Pagaldai, D. Mendiola, Growth, biochemical
+prole, and fatty acid composition of mussel (Mytilus galloprovincialis Lmk.) cultured in the open ocean of the Bay of Biscay (northern Spain), Aquaculture 454
+(2016) 95108, http://dx.doi.org/10.1016/j.aquaculture.2015.12.022.
+Eusko Jaurlaritza/GobiernoVasco, Akuikulturaren Garapenerako Plan
+Estrategikoa/Plan Estratgico para el Desarrollo de la Acuicultura 20142020,
+2014, pp. 1134. http://www.euskadi.eus/contenidos/proyecto/acuicultura_
+2014_2020/es_def/adjuntos/plan_acuicultura_2014_2020.pdf.
+J. Ryan, Farming the Deep Blue: Oshore Aquaculture the Way of the Future,
+Westport, Ireland, 2004. http://www.bim.ie/media/bim/content/downloads/
+Farming,the,Deep,Blue.pdf.
+H.M. Jansen, S. Van Den Burg, The feasibility of oshore aquaculture and its potential for multi-use in the North Sea, Aquac. Int. 24 (2016) 735756, http://dx.doi.
+org/10.1007/s10499-016-9987-y.
+S.D. Brody, W. Higheld, S. Arlikatti, D.H. Bierling, R.M. Ismailova, L. Lee,
+R. Butzler, Conict on the coast: using geographic information systems to map
+potential environmental disputes in Matagorda Bay, Texas, Environ. Manag. 34
+(2004) 1125, http://dx.doi.org/10.1007/s00267-004-0256-x.
+P. Sanchez-Jerez, I. Karakassis, F. Massa, D. Fezzardi, J. Aguilar-Manjarrez, D. Soto,
+R. Chapela, P. Avila, J.C. Macias, P. Tomassetti, G. Marino, J.A. Borg, V. Franicevic,
+G. Yucel-Gier, I.A. Fleming, X. Biao, H. Nhhala, H. Hamza, A. Forcada, T. Dempster,
+Aquaculture's struggle for space: the need for coastal spatial planning and the potential benets of Allocated Zones for Aquaculture (AZAs) to avoid conict and
+promote sustainability, Aquac. Environ. Interact. 8 (2016) 4154, http://dx.doi.
+org/10.3354/aei00161.
+U.B. Kjrul, A.L. Madsen, Bayesian Networks and Inuence Diagrams: A Guide to
+Construction and Analysis, 2nd ed., Springer-Verlag, New York, 2013, http://dx.
+doi.org/10.1007/978-1-4614-5104-4.
+J. Grover, Strategic Economic Decision-Making: Using Bayesian Belief Networks to
+Solve Complex Problems, Springer, New York, 2013, http://dx.doi.org/10.1007/
+978-81-322-0763-4.
+D. Landuyt, K. Van der Biest, S. Broekx, J. Staes, P. Meire, P.L.M. Goethals, A GIS
+plug-in for Bayesian belief networks: towards a transparent software framework to
+assess and visualise uncertainties in ecosystem service mapping, Environ. Model.
+Softw. 71 (2015) 3038, http://dx.doi.org/10.1016/j.envsoft.2015.05.002.
+S.H. Hamilton, C.A. Pollino, A.J. Jakeman, Habitat suitability modelling of rare
+species using Bayesian networks: model evaluation under limited data, Ecol.
+Modell. 299 (2015) 6478, http://dx.doi.org/10.1016/j.ecolmodel.2014.12.004.
+M. Pascual, E.P. Miana, E. Giacomello, Integrating knowledge on biodiversity and
+ecosystem services: mind-mapping and Bayesian Network modelling, Ecosyst. Serv.
+17 (2016) 112122, http://dx.doi.org/10.1016/j.ecoser.2015.12.004.
+K.B. Korb, A.E. Nicholson, Bayesian Articial Intelligence, 1st ed., Chapman and
+Hall/CRC Press, Boca Raton, Florida, 2004.
+K.F. Robinson, A.K. Fuller, Participatory modeling and structured decision making,
+in: S. Gray, M. Paolisso, R. Jordan, S. Gray (Eds.), Environ. Model. with
+Stakeholders, Springer International Publishing, Cham, Switzerland, 2017, pp.
+83102, , http://dx.doi.org/10.1007/978-3-319-25053-3.
+D. Landuyt, S. Broekx, R. Dhondt, G. Engelen, J. Aertsens, P.L.M. Goethals, A
+
+[34]
+
+[35]
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]
+
+[43]
+
+[44]
+
+[45]
+
+[46]
+
+[47]
+
+[48]
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56]
+
+130
+
+review of Bayesian belief networks in ecosystem service modelling, Environ. Model.
+Softw. 46 (2013) 111, http://dx.doi.org/10.1016/j.envsoft.2013.03.011.
+V. Kocabas, S. Dragicevic, Enhancing a GIS cellular automata model of land use
+change: Bayesian networks, inuence diagrams and causality, Trans. GIS 11 (2007)
+681702, http://dx.doi.org/10.1111/j.1467-9671.2007.01066.x.
+I. Aalders, Modeling land use decision behavior with Bayesian belief networks, Ecol.
+Soc. 13 (2008) 16, http://dx.doi.org/10.5751/ES-02362-130116.
+J.T. McCloskey, R.J. Lilieholm, C. Cronan, Using Bayesian belief networks to
+identify potential compatibilities and conicts between development and landscape
+conservation, Landsc. Urban Plan. 101 (2011) 190203, http://dx.doi.org/10.
+1016/j.landurbplan.2011.02.011.
+C. Krger, T. Lakes, Bayesian belief networks as a versatile method for assessing
+uncertainty in land-change modeling, Int. J. Geogr. Inf. Sci. 29 (2014) 111131,
+http://dx.doi.org/10.1080/13658816.2014.949265.
+E. Celio, A. Grt-Regamey, Understanding farmers' inuence on land-use change
+using a participatory Bayesian network approach in a pre-Alpine region in
+Switzerland, J. Environ. Plan. Manag. (2016) 123, http://dx.doi.org/10.1080/
+09640568.2015.1120713.
+C.S. Smith, A.L. Howes, B. Price, C.A. McAlpine, Using a Bayesian belief network to
+predict suitable habitat of an endangered mammal - the Julia Creek dunnart
+(Sminthopsis douglasi), Biol. Conserv. 139 (2007) 333347, http://dx.doi.org/10.
+1016/j.biocon.2007.06.025.
+S.J. Douglas, A.C. Newton, Evaluation of Bayesian networks for modelling habitat
+suitability and management of a protected area, J. Nat. Conserv. 22 (2014)
+235246, http://dx.doi.org/10.1016/j.jnc.2014.01.004.
+A. Castelletti, R. Soncini-Sessa, Bayesian Networks and participatory modelling in
+water resource management, Environ. Model. Softw. 22 (2007) 10751088, http://
+dx.doi.org/10.1016/j.envsoft.2006.06.003.
+L.R. Little, S. Kuikka, A.E. Punt, F. Pantus, C.R. Davies, B.D. Mapstone, Information
+ow among shing vessels modelled using a Bayesian network, Environ. Model.
+Softw. 19 (2004) 2734, http://dx.doi.org/10.1016/S1364-8152(03)00100-2.
+J. Ruiz, R. Gonzlez-Quirs, L. Prieto, G. Navarro, A. Bayesian, model for anchovy
+(Engraulis encrasicolus): the combined forcing of man and environment, Fish.
+Oceanogr. 18 (2009) 6276, http://dx.doi.org/10.1111/j.1365-2419.2008.
+00497.x.
+L.H.M. Schmitt, C. Brugere, Capturing ecosystem services, stakeholders' preferences
+and trade-os in coastal aquaculture decisions: a Bayesian Belief network application, PLoS One 8 (2013), http://dx.doi.org/10.1371/journal.pone.0075956.
+I. van Putten, A. Lalancette, P. Bayliss, D. Dennis, T. Hutton, A. Norman-Lpez,
+S. Pascoe, E. Plagnyi, T. Skewes, A. Bayesian, model of factors inuencing indigenous participation in the Torres Strait tropical rocklobster shery, Mar. Policy
+37 (2013) 96105, http://dx.doi.org/10.1016/j.marpol.2012.04.001.
+J. Ramos, M. Caetano, A. Himes-Cornell, M.N. dos Santos, Stakeholders' conceptualization of oshore aquaculture and small-scale sheries interactions using a
+Bayesian approach, Ocean Coast. Manag. 138 (2017) 7082, http://dx.doi.org/10.
+1016/j.ocecoaman.2017.01.008.
+P.A. Aguilera, A. Fernndez, R. Fernndez, R. Rum, A. Salmern, Bayesian networks in environmental modelling, Environ. Model. Softw. 26 (2011) 13761388,
+http://dx.doi.org/10.1016/j.envsoft.2011.06.004.
+E. Celio, T. Koellner, A. Grt-Regamey, Modeling land use decisions with Bayesian
+networks: spatially explicit analysis of driving forces on land use change, Environ.
+Model. Softw. 52 (2014) 222233, http://dx.doi.org/10.1016/j.envsoft.2013.10.
+014.
+S. Kininmonth, S. Lemm, C. Malone, T. Hatley, Spatial vulnerability assessment of
+anchor damage within the Great Barrier Reef World Heritage Area, Australia, Ocean
+Coast. Manag. 100 (2014) 2031, http://dx.doi.org/10.1016/j.ocecoaman.2014.
+07.003.
+S.S. Ban, R.L. Pressey, N.A.J. Graham, Assessing the eectiveness of local management of coral reefs using expert opinion and spatial Bayesian modeling, PLoS
+One 10 (2015) 116, http://dx.doi.org/10.1371/journal.pone.0135465.
+V. Stelzenmller, H.O. Fock, A. Gimpel, H. Rambo, R. Diekmann, W.N. Probst,
+U. Callies, F. Bockelmann, H. Neumann, I. Krncke, Quantitative environmental risk
+assessments in the context of marine spatial management: current approaches and
+some perspectives, ICES J. Mar. Sci. 72 (2015) 10221042, http://dx.doi.org/10.
+1093/icesjms/fsu206.
+V. Stelzenmller, J. Lee, E. Garnacho, S.I. Rogers, Assessment of a Bayesian Belief
+Network-GIS framework as a practical tool to support marine planning, Mar. Pollut.
+Bull. 60 (2010) 17431754, http://dx.doi.org/10.1016/j.marpolbul.2010.06.024.
+F. Stephenson, A.C. Mill, C.L. Scott, G.B. Stewart, M.J. Grainger, N.V.C. Polunin,
+C. Fitzsimmons, Socio-economic, technological and environmental drivers of spatiotemporal changes in shing pressure, Mar. Policy 88 (2018) 189203, http://dx.
+doi.org/10.1016/j.marpol.2017.11.029.
+I. Galparsoro, . Borja, I. Legorburu, C. Hernndez, G. Chust, P. Liria, A. Uriarte,
+Morphological characteristics of the Basque continental shelf (Bay of Biscay,
+northern Spain); their implications for Integrated Coastal Zone Management,
+Geomorphology 118 (2010) 314329, http://dx.doi.org/10.1016/j.geomorph.
+2010.01.012.
+I. Galparsoro, D.W. Connor, . Borja, A. Aish, P. Amorim, T. Bajjouk, C. Chambers,
+R. Coggan, G. Dirberg, H. Ellwood, D. Evans, K.L. Goodin, A. Grehan, J. Haldin,
+K. Howell, C. Jenkins, N. Michez, G. Mo, P. Buhl-Mortensen, B. Pearce, J. Populus,
+M. Salomidi, F. Snchez, A. Serrano, E. Shumchenia, F. Tempera, M. Vasquez, Using
+EUNIS habitat classication for benthic mapping in European seas: present concerns
+and future needs, Mar. Pollut. Bull. 64 (2012) 26302638, http://dx.doi.org/10.
+1016/j.marpolbul.2012.10.010.
+L. Arregi, E. Puente, P. Lucio, Y. Sagarminaga, R. Castro, A. Uriarte, Chapter 19
+coastal sheries and demersal estuarine fauna, Elsevier Oceanogr. Ser. 70 (2004)
+
+Marine Policy 94 (2018) 119131
+
+C. Coccoli et al.
+
+493513, http://dx.doi.org/10.1016/S0422-9894(04)80057-6.
+[57] M. Pascual, A. Borja, I. Galparsoro, J. Ruiz, E. Mugerza, I. Quincoces, A. Murillas,
+L. Arregi, Total shing pressure produced by artisanal sheries, from a Marine
+Spatial Planning perspective: a case study from the Basque Country (Bay of Biscay),
+Fish. Res. 147 (2013) 240252, http://dx.doi.org/10.1016/j.shres.2013.06.010.
+[58] L. Buhl-Mortensen, I. Galparsoro, T. Vega Fernndez, K. Johnson, G. DAnna,
+F. Badalamenti, G. Garofalo, J. Carlstrm, J. Piwowarczyk, M. Rabaut,
+J. Vanaverbeke, C. Schipper, J. van Dalfsen, V. Vassilopoulou, Y. Issaris, L. van
+Hoof, E. Pecceu, K. Hostens, M.L. Pace, L. Knittweis, V. Stelzenmller, V. Todorova,
+V. Doncheva, Maritime ecosystem-based management in practice: lessons learned
+from the application of a generic spatial planning framework in Europe, Mar. Policy
+(2015), http://dx.doi.org/10.1016/j.marpol.2016.01.024.
+[59] BOPV No 9 del 15 de enero de 2016, BOPV No 9 del 15 de enero de 2016, Orden de
+8 de enero de 2016, de la Consejera de Desarrollo Econmico y Competitividad, por
+la que se declara y clasica una zona de produccin de moluscos bivalvos por medio
+de cultivos marinos ubicada en el tramo litor, 2016.
+[60] M. Aranda, A. Murillas, Allocation of shing possibilities, incentives and outcomes:
+insights from Basque shermen's organisations in Spain, Mar. Policy 61 (2015)
+171178, http://dx.doi.org/10.1016/j.marpol.2015.08.006.
+[61] A. Murillas, E. Mugerza, L. Arregi, N. Alzorriz, I. Artetxe, PRESPO (Desarrollo
+Sostenible de las Pesqueras Artesanales del Arco Atlntico), 2012.
+[62] A. Murillas-Maza, M. Andrs, Providing incentives for shermen through rightsbased co-management systems. An impact-assessment on Basque sheries, Mar.
+Policy 70 (2016) 128136, http://dx.doi.org/10.1016/j.marpol.2016.04.027.
+[63] EC, Commission decision of 6 November 2008 adopting a multiannual Community
+programme pursuant to CouncilRegulation (EC) No 199/2008 establishing a
+Community Framework for the Collection, Management and Use of Data in the
+Fisheries Sector and Support for Sci, O. J. Eur. Union., 2008.
+[64] ICES, Report of the Study Group for the Development of Fishery-based Forecast.
+ICES CM 2003/ACFM:08 Ref. D., 2003. http://www.ices.dk/sites/pub/
+CMDoccuments/2003/ACFM/ACFM0803.PDF.
+[65] A. Murillas, L. Arregi, E. Mugerza, E. Diaz, E. Andonegi, Y. Sagarminaga, R. Cutin, I.
+Artetxe, BATEGIN - BAses TEcnicas para el aseGuramiento de la sostenIbilidad de la
+pesca costera de Pas Vasco en base a una planicacin Espacial mariNa, 2016.
+[66] B.G. Marcot, J.D. Steventon, G.D. Sutherland, R.K. McCann, Guidelines for developing and updating Bayesian belief networks applied to ecological modeling and
+conservation, Can. J. For. Res. 36 (2006) 30633074, http://dx.doi.org/10.1139/
+x06-135.
+[67] S.H. Chen, C.A. Pollino, Good practice in Bayesian network modelling, Environ.
+Model. Softw. 37 (2012) 134145, http://dx.doi.org/10.1016/j.envsoft.2012.03.
+012.
+[68] I. Galparsoro, J.G. Rodrguez, I. Menchaca, I. Quincoces, J.M. Garmendia, . Borja,
+Benthic habitat mapping on the Basque continental shelf (SE Bay of Biscay) and its
+application to the European Marine Strategy Framework Directive, J. Sea Res. 100
+(2015) 7076, http://dx.doi.org/10.1016/j.seares.2014.09.013.
+[69] Norsys, Netica. Proprietary Bayesian Network modelling software package, (n.d.).
+https://www.norsys.com/netica.html.
+[70] M.E. Kragt, Technical report No. 9 A beginners guide to Bayesian network modelling for integrated catchment, Landsc. Log. (2009) 22 (doi:www.landscapelogic.org.au).
+[71] H.C.W. van Verseveld, A.R. van Dongeren, N.G. Plant, W.S. Jger, C. den Heijer,
+Modelling multi-hazard hurricane damages on an urbanized coast with a Bayesian
+Network approach, Coast. Eng. 103 (2015) 114, http://dx.doi.org/10.1016/j.
+coastaleng.2015.05.006.
+[72] J. Gonzalez-Redin, S. Luque, L. Poggio, R. Smith, A. Gimona, Spatial Bayesian belief
+networks as a planning decision tool for mapping ecosystem services trade-os on
+forested landscapes, Environ. Res. 144 (2016) 1526, http://dx.doi.org/10.1016/j.
+envres.2015.11.009.
+[73] A.O. Tuda, T.F. Stevens, L.D. Rodwell, Resolving coastal conicts using marine
+
+[74]
+
+[75]
+
+[76]
+
+[77]
+
+[78]
+[79]
+
+[80]
+
+[81]
+
+[82]
+
+[83]
+
+[84]
+
+[85]
+[86]
+
+[87]
+
+[88]
+
+[89]
+
+[90]
+
+[91]
+
+131
+
+spatial planning, J. Environ. Manag. 133 (2014) 5968, http://dx.doi.org/10.1016/
+j.jenvman.2013.10.029.
+G. Macfadyen, P. Salz, R. Cappell, Characteristics of Small-Scale Coastal Fisheries in
+Europe. Policy Department B: Structural and Cohesion Policies, European
+Parliament, Brussels, 2011, p. 162.
+E.A. Babcock, E.K. Pikitch, M.K. McAllister, P. Apostolaki, C. Santora, A perspective
+on the use of spatialized indicators for ecosystem-based shery management
+through spatial zoning, ICES J. Mar. Sci. 62 (2005) 469476, http://dx.doi.org/10.
+1016/j.icesjms.2005.01.010.
+A. Forcada, Structure and spatio-temporal dynamics of artisanal sheries around a
+Mediterranean marine protected area, ICES J. Mar. Sci. 67 (2010) 191203, http://
+dx.doi.org/10.1093/icesjms/fsp234.
+T. Hutton, S. Mardle, S. Pascoe, R.A. Clark, Modelling shing location choice within
+mixed sheries: english North Sea beam trawlers in 2000 and 2001, ICES J. Mar.
+Sci. 61 (2004) 14431452, http://dx.doi.org/10.1016/j.icesjms.2004.08.016.
+H.S. Gordon, The economic theory of a common property resource: the shery, J.
+Polit. Econ. 62 (1954) 124142, http://dx.doi.org/10.1086/257497.
+S. Salas, U.R. Sumaila, T. Pitcher, Short-term decisions of small-scale shers selecting alternative target species: a choice model, Can. J. Fish. Aquat. Sci. 61 (2004)
+374383, http://dx.doi.org/10.1139/f04-007.
+N.C. Pradhan, P. Leung, Modeling trip choice behavior of the longline shers in
+Hawaii, Fish. Res. 68 (2004) 209224, http://dx.doi.org/10.1016/j.shres.2003.
+12.006.
+P. Nilsson, F. Ziegler, Spatial distribution of shing eort in relation to seaoor
+habitats in the Kattegat, a GIS analysis, Aquat. Conserv. Mar. Freshw. Ecosyst. 17
+(2007) 421440, http://dx.doi.org/10.1002/aqc.
+S.P.R. Greenstreet, H.M. Fraser, G.J. Piet, Using MPAs to address regional-scale
+ecological objectives in the North Sea: modelling the eects of shing eort displacement, ICES J. Mar. Sci. 66 (2009) 90100, http://dx.doi.org/10.1093/
+icesjms/fsn214.
+I. Aalders, R.L. Hough, W. Towers, Risk of erosion in peat soils - an investigation
+using Bayesian belief networks, Soil Use Manag. 27 (2011) 538549, http://dx.doi.
+org/10.1111/j.1475-2743.2011.00359.x.
+S.S. Ban, R.L. Pressey, N.A.J. Graham, Assessing interactions of multiple stressors
+when data are limited: a Bayesian belief network applied to coral reefs, Glob.
+Environ. Change 27 (2014) 6472, http://dx.doi.org/10.1016/j.gloenvcha.2014.
+04.018.
+P.M. Kuhnert, K.R. Hayes, How believable is your BBN? in: Proc. 18th World
+IMACS, 2009, pp. 1317.
+J. Petts, Barriers to participation and deliberation in risk decisions: evidence from
+waste management, J. Risk Res. 7 (2004) 115133, http://dx.doi.org/10.1080/
+1366987042000158695.
+J. Bromley, Guidelines for the use of Bayesian networks as a participatory tool for
+Water Resource Management, Wallingford, UK, 2005. http://nora.nerc.ac.uk/
+3300/.
+H.J. Henriksen, H.C. Barlebo, Reections on the use of Bayesian belief networks for
+adaptive management, J. Environ. Manag. 88 (2008) 10251036, http://dx.doi.
+org/10.1016/j.jenvman.2007.05.009.
+F. Natale, M. Gibin, A. Alessandrini, M. Vespe, A. Paulrud, Mapping shing eort
+through AIS data, PLoS One 10 (2015) 116, http://dx.doi.org/10.1371/journal.
+pone.0130746.
+V.P. Fonseca, M.G. Pennino, M. Francisco de Nbrega, J.E. Lins Oliveira, L. de
+Figueiredo Mendes, Identifying sh diversity hot-spots in data-poor situations, Mar.
+Environ. Res. (2017) 19, http://dx.doi.org/10.1016/j.marenvres.2017.06.017.
+C. White, B.S. Halpern, C.V. Kappel, Ecosystem service tradeo analysis reveals the
+value of marine spatial planning for multiple ocean uses, Proc. Natl. Acad. Sci. USA
+109 (2012) 46964701, http://dx.doi.org/10.1073/pnas.1114215109/-/
+DCSupplemental.www.pnas.org/cgi//10.1073/pnas.1114215109.
+
+

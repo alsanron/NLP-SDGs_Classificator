@@ -1,0 +1,2331 @@
+J Intell Robot Syst (2017) 87:141168
+DOI 10.1007/s10846-017-0483-z
+
+Survey on Computer Vision for UAVs: Current
+Developments and Trends
+Christoforos Kanellakis  George Nikolakopoulos
+
+Received: 28 April 2016 / Accepted: 15 January 2017 / Published online: 27 January 2017
+ The Author(s) 2017. This article is published with open access at Springerlink.com
+
+Abstract During last decade the scientific research
+on Unmanned Aerial Vehicless (UAVs) increased
+spectacularly and led to the design of multiple types
+of aerial platforms. The major challenge today is
+the development of autonomously operating aerial
+agents capable of completing missions independently
+of human interaction. To this extent, visual sensing techniques have been integrated in the control
+pipeline of the UAVs in order to enhance their navigation and guidance skills. The aim of this article
+is to present a comprehensive literature review on
+vision based applications for UAVs focusing mainly
+on current developments and trends. These applications are sorted in different categories according to
+the research topics among various research groups.
+More specifically vision based position-attitude control, pose estimation and mapping, obstacle detection
+as well as target tracking are the identified components towards autonomous agents. Aerial platforms
+could reach greater level of autonomy by integrating
+all these technologies onboard. Additionally, throughout this article the concept of fusion multiple sensors
+is highlighted, while an overview on the challenges
+
+addressed and future trends in autonomous agent
+development will be also provided.
+Keywords UAVs  SLAM  Visual servoing 
+Obstacle avoidance  Target tracking
+
+1 Introduction
+Unmanned Aerial Vehicles have become a major field
+of research in recent years. Nowadays, more and more
+UAVs are recruited for civilian applications in terms
+of surveillance and infrastructure inspection, thanks
+to their mechanical simplicity, which makes them
+quite powerful and agile. In general, aerial vehicles
+are distinguished for their ability to fly at various
+speeds, to stabilize their position, to hover over a target and to perform manoeuvres in close proximity
+to obstacles, while fixed or loitering over a point of
+interest, and performing flight indoors or outdoors.
+These features make them suitable to replace humans
+in operations where human intervention is dangerous,
+difficult, expensive or exhaustive.
+1.1 Terminology Definitions
+
+C. Kanellakis ()  G. Nikolakopoulos
+Lulea University of Technology, Lulea, Sweden
+e-mail: christoforos.kanellakis@ltu.se
+G. Nikolakopoulos
+e-mail: geonik@ltu.se
+
+This article is reviewing the current State-of-the-Art
+on control, perception and guidance for UAVs and
+thus initially this section enlists some of the most used
+terms in the literature.
+
+142
+
+Unmanned aerial vehicle  Aircraft without a
+human pilot onboard. Control is provided by an
+onboard computer, remote control or combination
+of both.
+Unmanned aircraft system  An unmanned aircraft system is an unmanned aircraft and the equipment necessary for the safe and efficient operation
+of that aircraft. An unmanned aircraft is a component of a UAS. It is defined by statute as an
+aircraft that is operated without the possibility of
+direct human intervention from within or on the
+aircraft [1]
+Micro Aerial Vehicle  A small sized unmanned
+aircraft system running from battery power and
+which can be operated and carried by one person.
+Collision Avoidance  Sensors on the unmanned
+aircraft detect adjacent air users and alert either
+an automated on-board system or the remote pilot
+of their presence and the potential need to take
+avoiding action [2].
+Fail-Safe  A design feature that ensures the system remains safe in the event of a failure and causes
+the system to revert to a state that will not cause a
+mishap [3].
+Autonomous system  Operations of a unmanned
+aerial system wherein the unmanned aerial system
+receives its mission from either the operator who is
+off the unmanned aerial system or another system
+that the unmanned aerial system interacts with and
+accomplishes that mission with or without humanrobot interaction [4].
+Autonomy  A unmanned aerial systems own ability of integrated sensing, perceiving, analyzing,
+communicating, planning, decision-making, and
+acting/executing to achieve its goals as assigned
+by its human operator(s) through designed HumanRobot Interface (HRI) or by another system that
+the unmanned aerial system communicates with.
+UMSs Autonomy is characterized into levels from
+the perspective of Human Independence (HI), the
+inverse of HRI [4].
+Environment  The surroundings of a UAV. The
+environment can be aerial, ground, or maritime. It
+includes generic and natural features, conditions,
+or entities such as weather, climate, ocean, terrain,
+and vegetation as well as man-made objects such
+as buildings, buoys, and vehicles. It can be static
+or dynamic, can be further attributed in terms of its
+complexity, and can be described as friendly/hostile
+
+J Intell Robot Syst (2017) 87:141168
+
+are those that the UAV and the operator are interested in or aware of [4].
+Sensor Fusion  Information processing that deals
+with the acquisition, filtering, correlation, comparison, association, and combination/integration of
+data and information from sensors to support UAV
+objectives of recognition, tracking, situation assessment, sensor management, system control, identity
+estimation, as well as complete and timely assessments of situations and threats and their significance in the context of mission operation. The processes can involve UAV onboard computing sensors, externally provided sensor information, and
+human input. The process is characterized by continuous refinement of its estimates and assessments,
+and by the evaluation of the need for additional
+sources, or modification of the process itself, to
+achieve improved results [4].
+Perception: A UAVs capability to sense and build
+an internal model of the environment within which
+it is operating, and to assign entities, events, and
+situations perceived in the environment to classes.
+The classification (or recognition) process involves
+comparing what it observed with the systems a
+priori knowledge [4].
+Mission  The highest-level task assigned to a
+UAV [4].
+Waypoint  An intermediate location through
+which a UAV must pass, within a given tolerance,
+en route to a given goal location [4].
+1.2 UAV Types
+This massive interest for UAVs has led to the development of various aircraft types in many shapes and sizes
+to operate in different tasks [5]. Within the scope of
+this article 4 categories of UAVs are referred, namely
+single rotor helicopters, multi rotor-crafts, fixed wing
+planes and hybrid combinations. Each of these platforms have their own advantages and disadvantages
+that let the operator decide which will best fit the
+application. The 4 types depicted in Fig. 1 (singe
+rotor: [6], multi-rotor: [7], fixed wing: [8], hybrid: [8])
+are presented briefly below.
+Single rotor  This platform has the main rotor for
+navigation and a tail rotor for controlling the heading. Mostly they can vertically take-off and land
+and do not need airflow over the blades to move
+
+J Intell Robot Syst (2017) 87:141168
+
+143
+
+Fig. 1 Different types of
+Unmanned Aerial Vehicles
+
+forward, but the blades themselves generate the
+required airflow. Piloted helicopters are popular in
+aviation but their unmanned versions are not so
+popular in UAV research community. A single-rotor
+helicopter can be operated by a gas motor for even
+longer endurance compared multi rotors. The main
+advantage is that it can carry heavy payloads (e.g
+sensors, manipulators) in either hovering tasks or
+long endurance flights in large areas outdoors. The
+disadvantages of such platforms are their mechanical complexity, danger from their generally large
+rotor, and cost.
+Multi rotor  This class of UAVs can be divided
+in subclasses depending on the number of rotor
+blades. The most common are considered quadrotor, hexarotor. Additionally tri-copters or octacopters have been developed. Mostly they can vertically take-off and land and do not need airflow over
+the blades to move forward, but the blades themselves generate the required airflow. Multi rotors
+can be operated both indoors and outdoors and are
+fast and agile platforms that perform demanding
+manouevres. They can also hover or move along
+a target in close quarters. The downsides of these
+types are the limited payload capacity and flight
+time. Additionally, the mechanical and electrical
+complexity is generally low with the complex parts
+being abstracted away inside the flight controller
+and the motors electronic speed controllers.
+
+Fixed wing  The basic principle of these UAVs
+consist of a rigid wing with specific airfoil that
+can fly based on the lift generated by the forward
+airspeed (produced by a propeller). The navigation control is succeeded through specific control
+surfaces in the wings knowns as aileron (pitch),
+elevator (roll) and rudder (yaw). The simple structure of such vehicles is the greatest advantage
+from the other types. Their aerodynamics assist in
+longer flight ranges and loitering as well as high
+speed motion. Furthermore, they can carry heavier payloads compared to multi rotors, while the
+drawbacks of these platforms are the need for a runway to takeoff and landing and the fact that they
+need to move constantly preventing hovering tasks.
+The landing is also crucial for safe recovery of the
+vehicle.
+Hybrid  This class is an improved version of fixed
+wing aircrafts. Hybrid vehicles have the ability to
+hover and vertically takeoff and land. This type is
+still under developemnt.
+Overall, rotor crafts are more suitable for applications like infrastructure inspection and maintenance
+due to hover capabilities and their agile maneuvering.
+On the other hand, fixed wing vehicles fit better in
+aerial surveillance and mapping of large areas from
+greater heights. Table 1 provides a brief overview of
+advantages and disadvantages of aerial vehicles.
+
+144
+Table 1 Advantages and
+disadvantages of UAV types
+
+J Intell Robot Syst (2017) 87:141168
+
+Advantages
+
+Disadvantages
+
+Single-Rotor  VTOL flight
+ Hover flight
+ Heavy Payload
+ Long Endurance & Coverage
+Multi-Rotor  VTOL flight
+ Hover flight
+ Maneuverability
+ Indoors/outdoors
+ Small and cluttered areas
+ Simple design
+Fixed-Wing  Long endurance
+ Large coverage
+ Fast flight speed
+ Heavy Payload
+Hybrid
+ Long endurance
+ Large coverage
+ VTOL flight
+
+1.3 UAV Sensing
+Some areas where the UAVs can be widely exploited
+are Search and Rescue, Survey, Security, Monitoring,
+Disaster Management, Crop Management and Communications missions [9, 10]. In the first steps of the
+UAVera, these aircrafts were equipped with exteroceptive and proprioceptive sensors in order to estimate
+their position and orientation in space. The principal sensors used were the Global Positioning System
+(GPS) for the position and the Inertial Navigation
+System (INS), formulated mostly by an three axis
+accelerometer and gyroscope. These sensors, however, have some flaws from their operating principles,
+which affect the performance of the system. On one
+hand, one of the great drawbacks of the GPS, lies
+in the doubtful precision, as it depends on the general number of available satellites [11], whereas on
+the other hand low cost INS suffer from integration drift problems due to propagating bias errors.
+Small errors in calculated acceleration and angular velocity are consecutively integrated into linear
+and quadratic errors in velocity and position respectively [12]. Therefore, elaborate estimation processes
+are essential to guarantee stability of the system.
+The aforementioned navigational equipment, questions the reliability and limit the best possible
+
+ Area coverage
+ More dangerous
+
+ Area coverage
+ Limited payload
+ Short flight time
+
+ Launch-Landing specific space
+ No hover flight
+ Constant forward velocity to fly
+ Under developement
+ Transistion between hovering and forward flight
+
+utilization of an UAV in real life applications. For this
+reason, new ways to estimate and track the position
+and orientation of the UAV were needed. An idealaccurate solution for the calculation of vehicles pose
+would be the fusion of data from multiple collaborative sensors [12]. Nevertheless, multiple sensors could
+be impractical for some types of UAVs like Micro
+Aerial Vehicle (MAV)s due to the limited payload or
+for some sensors that malfunction in specific environments (like GPS in indoor environments). Thus, it
+becomes crucial for the utility provided by UAVs to
+establish a more generic approach for pose estimation,
+being able to be applied on any type of aircraft.
+Nowadays, the evolution in embedded systems and
+the corresponding miniaturization has brought powerful yet low-cost camera modules and Inertial Measurement Unit (IMU)s that could be mounted on UAVs,
+extract useful information on board and feed back the
+necessary data, fused with measurements from inertial
+sensors. Different types of sensors can be employed
+depending on the task. Ultrasonic sensors (Fig. 2a)
+could be directly integrated in obstacle avoidance
+operations, while laser range finders (Fig. 2c) provide range measurements for obstacle detection and
+mapping of 3D environments. Visual stereo (Fig. 2b)
+or monocular camera (Fig. 2d) systems are able to
+provide depth measurements for obstacle avoidance
+
+J Intell Robot Syst (2017) 87:141168
+Fig. 2 Different types of
+sensors used for
+environment perception
+
+and mapping tasks. Additionally, they can be tightly
+coupled with IMUs for visual-inertial ego-motion
+estimation and the raw image stream is also required
+for infrastructure inspection. Some example modular
+vision systems are depicted in Fig. 2 with a) [13],
+b) [14], c) [15], d) [16]. In this survey studies that
+include camera as primary or secondary sensors are
+enlisted. In this manner the UAV will enhance its
+environmental perception, while increasing its overall
+flying and actuating capabilities. The term Computer
+Vision, defines the generic research area where the
+characteristics of the real 3D world are interpreted
+into metric data through the processing of 2D image
+planes. The basic applications of Computer Vision
+include machine inspection, navigation, 3D model
+building and surveillance, as well as interaction with
+the environment. The accomplishment of these applications requires the execution of several algorithms,
+which process 2D images and provide 3D information. Some of these algorithms perform object recognition, object tracking, pose estimation, ego-motion
+estimation, optical flow and scene reconstruction [17].
+Consequently, Computer Vision can have a critical
+contribution in the development of the UAVs and their
+corresponding capabilities.
+
+145
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+1.4 Motivation of this Review
+The aim of this article is to provide an overview of the
+most important efforts in the field of computer vision
+for UAVs, while presenting a rich bibliography in the
+field that could support future reading in this emerging area. An additional goal is to gather a collection
+of pioneering studies that could act as a road-map for
+this broaden research area, towards autonomous aerial
+agents. Since the field of computer vision for UAVs
+is very generic, the depicted work will focus only in
+surveying the areas of: a) flight control or visual servoing, b) visual localization and mapping, and c) target
+tracking and obstacle detection.
+It should be highlighted that this article classified
+the aforementioned categories following the Navigation - Guidance - Control scheme. The big picture is to
+provide a significant insight for the entire autonomous
+system collecting all the pieces together. The concept
+of navigation monitors the motion of the UAV from
+one place to another processing sensor data. Through
+this procedure the UAV can extract essential information for its state (kinematics and dynamics - state
+estimation), build a model of its surroundings (mapping and obstacle detection) and even track sequential
+
+146
+
+J Intell Robot Syst (2017) 87:141168
+
+objects of interest (target tracking) to enhance the
+perception capabilities. Thus, by combining localization and perception capabilities, the robotic platforms
+are enabled for Guidance tasks. In the Guidance system, the platform processes information from perception and localization parts to decide its next move
+according to specified task. In this category trajectory generation and path planning are included for
+motion planning, mission-wise decision making or
+unknown area exploration. Finally, the realization of
+actions derived from Navigation and Guidance tasks is
+performed within the Control section. The controller
+manipulates the inputs to provide the desired output
+enabling actuators for force and torque production to
+
+control the vehicles motion. Generally, different controllers have been proposed to fulfill mission enabled
+requirements (position, attitude, velocity and acceleration control). In the following sections the major
+works that employ visual sensors for each defined category will be presented, while the Navigation, Guidance and Control [18] overview scheme is provided in
+Fig. 3.
+The rest of this article is structured as follows. In
+Section 2 a complete overview of the most important approaches in the field of flight control will be
+presented. Furthermore, in Section 3 a survey on Perception (visual Simultaneous Localization and Mapping (SLAM), Obstacle detection and target tracking)
+
+Fig. 3 Typical overview (variations can apply) of an
+autonomous aerial system including Sensing, Navigation, Guidance and Control parts. In general, various combinations of
+these parts are employed to achieve real-world applications,
+
+depending on the environment, the aerial platform and human
+operator needs. In this figure the image feature parameter space
+along with partial state estimation for Image Based Visual
+Servoing (IBVS) is also highlighted
+
+J Intell Robot Syst (2017) 87:141168
+
+147
+
+Fig. 4 Image Based Visual
+Servoing control structure
+
+and state estimation (visual odometry) for unmanned
+aerial platforms will be further analyzed. Moreover,
+in Section 4, representative research efforts that combine the aforementioned fields with mission planning
+tasks towards visual guidance will be listed. Finally, in
+Section 5 the conclusions will provided, extended with
+a discussion on specific challenges and future trends.
+
+2 Flight Control
+In this section different control schemes and algorithms are described that have been proposed throughout the years for UAvV position, attitude, velocity control. Innititally, Visual servoing schemes are described,
+followed by vision based UAV motion control.
+2.1 Visual Servoing
+The main idea of Visual Servoing is to regulate the
+pose {C,T } (position and orientation) of a robotic
+platform relative to a target, using a set of visual features {f } extracted from the sensors. Visual features,
+in most of the cases, are considered as points but can
+also be parametrised in lines or geometrical shapes
+such as ellipses. More specifically, image processing
+methods are integrated in the control scheme so that
+either the 2D features or the 3D pose measurements
+along with IMU data {zI MU } are fed back in the closed
+loop system.
+
+Fig. 5 Position Based
+Visual Servoing control
+structure
+
+In general, Visual Servoing can be divided into
+three techniques: a) Image Based Visual Servoing
+(IBVS), b) Position Based Visual Servoing (PBVS),
+and c) Hybrid Visual Servoing (IBVS + PBVS),
+depending on the type of the available information
+that the visual system provides to the control law. In
+the IBVS method, the 2D image features are used for
+the calculation of control values, while in the PBVS
+method the 3D pose of a target is utilized [19, 20]. In
+Figs. 4 and 5 the basic structure of the IBVS and the
+PBVS UAVs control schemes are presented, while the
+rest of this Section provides a brief overview of the
+contributions in this field.
+In [21] an adaptive IBVS scheme to control firstly
+the 3D translational motion and secondly the yaw
+angle of a quadrotor with a fixed downward looking
+camera has been presented. This method is based on
+image features, in perspective image space, from an
+object without any prior information of its model. The
+controller followed a backstepping approach and regulated the position using error information on roll and
+pitch angles. In the same way [11] presented an innovative contribution for controlling the 3D position of
+a Vertical Takeoff and Landing Vehicle (VTOL) from
+the 2D projective geometry. More specifically, this
+research aimed to develop a UAV capable of hovering
+over a specified target for inspection tasks, by utilizing
+only image data in the control process. The suggested
+controller was hybrid and combined the advantages
+of PBVS and IBVS techniques, while a significant
+
+148
+
+benefit of this hybrid approach is that it can be also
+operational with 3D objects with unknown geometries. In the approach presented in [22], similarly, the
+aim was to control the position and orientation of
+an aerial platform incorporating image features in the
+control loop. Initially, an IBVS control structure has
+been implemented to provide smooth vertical motion
+and yaw rotation for the UAV observing ground
+landmarks from a fixed down-looking camera. For
+the horizontal motion control, a novel approach has
+been employed by the utilization of a virtual spring.
+The proposed controller only considered the camera,
+the propeller models and the mass of the UAV as
+parameters.
+In [23] two different visual servoing approaches
+have been proposed for the real time navigation of
+a quadrotor across power lines. The first controller
+implemented an enhanced with a Linear Quadratic
+Servo technique IBVS method, while on the contrary, the second controller implemented the Partial
+PBVS method, based on the estimation of the relative
+to power conductors UAVs partial pose. A similar research in [24] presented an IBVS approach for
+linear structure tracking during survey missions and
+automatic landing. In [25], a VTOL platform based
+navigation system, using the IBVS technique has been
+presented. The goal of this research was the control
+of a VTOL UAV to perform close distance manoeuvring and vertical structure inspections in outdoor
+environments based on image features such as lines.
+Likewise, [26] presented a novel approach for Skidto-Turn manoeuvres for a fixed wing UAV, to inspect
+locally a linear infrastructure using an IBVS control.
+This work provided comparison between Skid-to-Turn
+and Bank-to-Turn manoeuvres control performance
+for inspection applications. Moreover, in [27] a control method that was able to stabilize an UAV in
+a circular orbit, centered above a ground target, by
+using only visual and proprioceptive data through an
+IBVS approach has been presented. In this case, the
+fixed wing UAV has been equipped with a gimballed
+camera. Similarly [28] proposed a visual servoing
+control scheme for the stabilization of a quadrotor
+UAV. The presented approach integrated a novel visual
+error that improved the conditioning of the closed
+loop Jacobian matrix in the neighbourhood of the
+desired set point. Another novel approach has been
+presented in [29], where a control scheme utilized
+computer vision for UAV hovering above 2D targets.
+
+J Intell Robot Syst (2017) 87:141168
+
+This method intended to be used for inspection tasks,
+where the UAV is tolerant to small change in its orientation so that it keeps the object inside the cameras
+field of view. The proposed controller was able to integrate the homography matrix from the vision system
+and also to decouple the translation and orientation
+dynamics of the UAV. Some previous and complimentary works in this area have been also presented
+in [3032].
+The collaboration of two quadrotors for visionbased lifting of a specific payload, with unknown position has been presented in [33]. In this approach, the
+UAVs were equipped with downward-looking cameras and utilized the information from the vision system to attach their docking positions on the target. As
+before, in this case the IBVS method has been utilized
+for the visual information and a corresponding sliding
+mode controller has been designed and implemented.
+In [34] a UAV that was controlled solely from
+visual feedback, using the faces of a cuboid as reference, has been presented. In this approach, a camera
+was tracking the UAVs motion and rotation in the
+3D space and calculated its pose. Moreover, in [35] a
+UAV that was able to follow accurately a user-defined
+trajectory, by only using visual information and without the need of an IMU or a GPS has been presented.
+The proposed approach was able to map the error of
+the image features to the error of the UAVs pose in
+the Euclidean space, while in the sequel this error
+was integrated into the closed-loop trajectory tracking
+feedback controller. This alternative visual servoing
+strategy was different from the classical PBVS and
+IBVS techniques.
+In [36] a control algorithm for the autonomous
+landing on a moving platform for a VTOL has been
+presented based the utilization of the IBVS technique. In this case, the platform was tracked from an
+image based visual servoing method, which also generated a velocity reference as an input to an adaptive
+sliding controller. This adaptive control was able to
+compensate the ground effect during the manoeuvre.
+Furthermore [37] also suggested a vision based controlled system for autonomous landing of a small-size
+fixed wing UAV. During the landing phase the IBVS
+provided to the controller the manoeuvring information like the pitch and yaw angles so that the UAV fly
+into a visual marker directly, with the marker recognition to be achieved through colour and moment based
+detection methods.
+
+J Intell Robot Syst (2017) 87:141168
+Table 2 Advantages and
+disadvantages of UAV types
+
+149
+
+Advantages
+
+Disadvantages
+
+IBVS
+
+ Processing 2D feature space
+ Low computational cost
+
+PBVS
+
+ Accurate pose estimation
+ Produce smooth trajectories for the camera
+
+ Additional Sensors (IMU)
+ Accuracy issues
+ Drift errors camera trajectory
+ 3D point space
+ Known 3D target model
+ High computational cost
+
+A navigation system based on a stereo, system
+together with an IMU and using IBVS, has been proposed for a mini UAV in [38]. In this case the position
+and orientation of the UAV were controlled relative to
+a known target, with the vision system to be responsible for the translational control and the IMU for the
+rotational control. The translation and rotation of the
+mini vehicle were decoupled in order to simplify the
+overall model and a saturated PD control has been
+implemented to simplify the modeling. Finally, in [39]
+the combination of a nonlinear controller for a quadrotor UAV, with visual servoing has been investigated
+in order to generate stable and robust trajectories in
+a perturbed environment. This research employed the
+three types of visual servoing 2D, 2 12 D and 3D for an
+accurate comparison and presented the advantages and
+drawbacks respectively.
+The aforementioned studies consist of a big part
+in the ongoing research regarding Visual Servoing for
+UAVs. A brief overview shows that since the control
+scheme of the aerial platforms considers Euclidean
+coordinates PBVS, it is able to produce smooth trajectories of the camera. However, it can not control
+directly the motion of the features and it may lead the
+target outside of the Field of View. On the other hand,
+IBVS controls directly the motion of the features in the
+image plane, while keeping the target inside the Field
+of View and ignoring the Euclidean pose of the platform and producing unpredicted trajectories for the
+UAV with high risks for collisions of the target. Thus
+IBVS is heavily depending on additional sensors such
+as IMUs to improve pose control of the UAV. Regarding computational aspects, IBVS outperforms PBVS
+and requires less processing power. The above comparison is summarized in Table 2. The major tasks of
+IBVS, PBVS and hybrid approaches are enlisted in
+Table 3.
+
+2.2 Vision Based Control
+In this section research on UAV control using visual
+information is described.
+In [40] a real time vision system for aerial agent
+localization and control has been proposed. The rotorcraft was equipped with a downward looking camera. An optic flow algorithm fused with IMU in an
+Extended Kalman Filter (EKF) was integrated with
+the non linear controller to accomplish 3D navigation. Furthermore, [41] proposed a real-time system
+for UAV take off, hovering and landing using ground
+landmarks with two concentric circles. In this case the
+circles were considered as ellipses and their parameters were computed. From the ellipse features, the
+conic section theory and the position in the image, the
+angle of the camera frame with respect to the world
+frame was calculated and then the camera pose was
+estimated. Afterwards a LQR-LTR control method
+was applied to stabilize the vehicle, considering a set
+point and the camera pose known. Moreover, in [42],
+an adaptive controller for UAV autonomous tasks,
+such as hovering at a specific altitude and trajectory
+tracking has been presented. The proposed scheme
+was able to perform vehicle localization and 3D terrain mapping for obstacle detection. The IMU measurements were merged with optic flow information
+Table 3 Advantages and disadvantages of UAV types
+Tasks
+Visual Servoing
+
+ Take off and Landing
+ Obstacle Avoidance
+ Position and Attitude control
+ Stabilization over a target
+ Collaborative Lifting
+
+150
+
+and estimated the aircrafts ego-motion and depth map
+with unknown scale factor. An adaptive observer converted the scaled data into absolute velocity and real
+position from the obstacle and finally the proposed
+controller was able to integrate these measurements
+for autonomous navigation. In [43] a UAV perception
+system for autonomous UAV landing and position estimation has been implemented. The computer vision
+algorithm was utilized during the landing process by
+sending data to a controller for aligning the UAV with
+the pad. On-board the UAV were also mounted a sonar
+and an optic flow sensor for altitude, position and
+velocity control. In [44] a novel strategy for close
+distance to the ground VTOL-UAV manoeuvring like
+hovering around, landing and approaching a target has
+been described. The framework of the time-to-contact
+(tau) theory has been implemented for autonomous
+navigation. A monocular camera and an IMU were
+employed by the developed control law and integrated
+their data through a novel visual parameter estimation filtering system. In [45] a quadrotor helicopter
+capable of both autonomous hovering and navigation
+in unknown environments and object gripping using
+low cost sensors has been presented. The vehicle stabilization was accomplished by a PD controller while
+an attitude estimation filter reduced the noise from
+the sensor measurements. Navigation was succeeded
+by incorporating the position and yaw angle estimations of the visual Simultaneous Localization and
+Mapping algorithm into a nonlinear sigmoid based
+controller. The aerial gripping was accomplished with
+a second infrared camera able to estimate the 3D
+location of an object and send the measurements to
+a third controller. In [46] a real-time vision system
+for UAV automatic landing has been implemented.
+The helipad was detected using an image registration
+algorithm and the direction of the head of the UAV
+was computed with Hough Line Detection and Helen
+Formula. The UAV camera images were binary transformed with an adaptive threshold selection method
+before they are processed for the landing. Another
+approach [47] proposed a vision-based algorithm for
+efficient UAV autonomous landing. Firstly CamShift
+algorithm was applied to detect the helipad region, followed by the SURF algorithm in order to calculate
+the position and the velocity of the UAV. Afterwards
+the combination of the SURF results and the IMU
+data were inserted through a Kalman filter for the
+control of the UAV. In [12] a quadrotor vehicle has
+
+J Intell Robot Syst (2017) 87:141168
+
+been developed towards autonomous take off, navigation and landing. The rotor-craft was equipped with
+a stereo camera and IMU sensors.The measurements
+of these sensors were merged through a Kalman filter in order to remove noise and fix the accuracy of
+the UAV state estimation. The camera ego-motion was
+computed by stereo visual odometry technique.
+
+3 Navigation
+In this section major research in the fields of visual
+localization and mapping, obstacle detection and target tracking is presented.
+3.1 Visual Localization and Mapping
+The scope of localization and mapping for an agent
+is the method to localize itself locally, estimate its
+state and build a 3D model of its surroundings by
+employing among others vision sensors [48]. In Fig. 6,
+some visual mapping examples are depicted such as:
+a) [49], b) [50], c) [51]. In a) dense 3D reconstruction
+from downward looking camera from MAV is demonstrated, while in b) a complete aerial setup towards
+autonomous exploration is presented. The map shown
+in Fig. 6 is an occupancy map. The system relies
+on a stereo camera and a downward looking camera
+for visual inertial odometry and mapping. Similarly,
+in c) another approach for autonomous exploration is
+described, where the system uses a stereo camera and
+an inertial sensor for the pose estimation and mapping. The Figure depicts the image raw streams, the
+occupancy map and the dense pointcloud. The rest
+of this section briefly provides an overview of the
+contributions in this field.
+Towards this direction in [52], a visual pose estimation system from multiple cameras on-board a
+UAV, known as Multi-Camera Parallel Tracking and
+Mapping (PTAM) has been presented. This solution
+was based on the monocular PTAM and was able
+to integrate concepts from the field of multi-camera
+ego-motion estimation. Additionally, in this work a
+novel extrinsic parameter calibration method for nonoverlapping field of view cameras has been proposed.
+The combination of a visual graph-SLAM, with
+a multiplicative EKF for GPS-denied navigation, has
+been presented in [53]. A RGB-D camera, an IMU
+and an altimeter sensor have been mounted on-board
+
+J Intell Robot Syst (2017) 87:141168
+
+151
+
+(a)
+
+(b)
+
+(c)
+
+Fig. 6 Different approaches for agent localization inside their surrounding area and simultaneous 3D representation of the area. The
+map could be represented in pointcloud form (a,c) or occupancy blocks (b,c) to reduce computation demands
+
+the UAV, while the system consisted of two subsystems, one with major priority for the UAV navigation
+and another for the mapping, with the first one being
+responsible for tasks like visual odometry, sensor
+fusion and vehicle control.
+In [54] a semi-direct monocular visual odometry algorithm for UAV state estimation has been
+described. The proposed approach is divided in two
+subsystems regarding motion estimation and mapping.
+The first thread implements a novel pose estimation
+approach consisting of three parts, image alignment
+though minimization of photometric error between
+pixels, 2D feature alignment to refine 2D point coordinates and finally minimization of the reprojection
+error to refine pose and structure for the camera. In the
+second thread a probabilistic depth filter is employed
+for each extracted 2D feature to estimate its 3D position. As a continuation, the authors in [55] proposed
+a system for real time 3D reconstruction and landing spot detection. In this work a monocular approach
+uses only an onboard smartphone processor for semi
+direct visual odometry [54], multi sensor fusion [56]
+and a modified version of Regularized Modular Depth
+
+Estimation (REMODE) [57]. The depth maps are
+merged to build the elevation map in a robot centric
+approach. Afterwards, the map can be used for path
+planning tasks. Specifically, experimental trials were
+performed to demonstrate autonomous landing detecting a safe flat area in the elevation map. Additionally,
+in [49] a system that integrated SVO odometry in
+an aerial platform used for trajectory following and
+dense 3D mapping have been presented. The pose estimations from visual odometry was fused with IMU
+measurements to enhance the state estimation used
+by the controllers to stabilize the vehicle and navigate through the path. It should be highlighted that the
+biases of the IMU where estimated online. The estimated position and orientation were close to ground
+truth values with small deviations.
+In [58] the optimization of both the Scaling Factor and the Membership Function of a Fuzzy Logic
+Controller by Cross-Entropy for effective Fail Safe
+UAV obstacle avoidance has been presented. This control method was able to integrate the measurements
+from a monocular visual SLAM based strategy, fused
+with inertial measurements, while the inertial SLAM
+
+152
+
+computed the information for the navigation of the
+UAV. Furthermore, in [59] a Rao-Blackwell approach
+has been described for the SLAM problem of a small
+UAV. This work proposed a factorization method to
+partition the vehicle model into subspaces and a particle filter method has been incorporated to SLAM. For
+the localization and mapping parts, firstly an EKF has
+been applied to the velocity and attitude estimation
+by fusing the on board sensors, then a Particle Filter estimated the position using landmarks and finally
+a parallel EKFs were processing the landmarks for
+the map. The aircraft was equipped with an IMU, a
+barometer and a monocular camera. The UAVs motion
+has been estimated by a homography measurement
+method and the features were computed by the SIFT
+algorithm [60], while some highly distinguishable
+features have been considered as landmarks.
+In [61] a cooperative laser and visual SLAM
+approach for an UAV that depends solely on a laser, a
+camera and the inertial sensor has been proposed. The
+characteristic of the vision subsystem was the correlation of the detected features with the vehicle state and
+the fact that the detected point database was updated in
+every loop by an EKF. Prior to the update, the image
+features were matched (nearest neighbour [62] and
+Mahalanobis threshold [63]) with their corresponding
+from the database and the new estimations were processed by the filter. The laser subsystem performed
+a Monte Carlo pose search, where the vision data
+have been merged in order to improve point scan and
+matching. The combination of these sensors provided
+updates to the vehicle state and the overall proposed
+scheme resulted in a robust UAV navigation ability in
+GPS denied environments.
+Additionally, in [64] a navigation system that incorporated a camera, a gimballed laser scanner and an
+IMU for the UAV pose estimation and mapping have
+been presented. Furthermore, in the same article a
+method has been presented for the calibration of the
+camera and the laser sensors, while a real time navigation algorithm based on the EKF SLAM technique for
+an octorotor aircraft has been also established.
+In [65] a monocular visual SLAM system for an
+UAV in GPS denied environments has been presented.
+This approach followed an hierarchical structure from
+the observations of the camera module. The motion
+of the vehicle (attitude and velocity) were calculated
+using the homography relation of consecutive frames
+from extracted features by the SIFT descriptor. The
+
+J Intell Robot Syst (2017) 87:141168
+
+measurements of the camera have been coupled with
+IMU data through an EKF and based on these measurements, the velocity and the attitude of the aircraft
+have been estimated. Another EKF has been applied
+for the localization problem of the UAV as well as the
+mapping of the surrounding environment. An inverse
+depth parameterization has been implemented to initialize the 3D position of the features and the usage of
+the Mahalanobis distance and the SIFT descriptor for
+feature matching has enhanced the robustness of this
+proposed scheme.
+In [66] a robust method for accomplishing multi
+UAV cooperative SLAM has been presented. In the
+presented approach, every UAV in the swarm was
+equipped with an IMU and a stereo camera system.
+The SLAM algorithm was operated in each UAV and
+the information was filtered through an H nonlinear
+controller. The system accuracy for both the position
+of the vehicle and the map cartography were depending on feature re-observation, when a UAV observed
+features already registered by another UAV.
+In [67] a visual SLAM based system for ground
+target locking has been proposed, while at the same
+time estimating the UAVs position, despite dubious
+function of the sensor and the 3D model of the target
+was assumed a priori known. The UAV was equipped
+with a camera and a GPS sensor on board and the
+SLAM technique implemented a probabilistic filtering scheme to extract geometric information from the
+image. The GPS data were fused with the geometric
+information and the projected points of the 3D model
+by the utilization of Kalman and unscented Kalman
+filters, in order the system to estimate the vehicles
+pose. The visual information from the camera referred
+to both the target model and non-target region for the
+better accuracy, especially for the case where the GPS
+sensor malfunctioned.
+In [68] a monocular vision based navigation system
+for a VTOL UAV has been proposed, where a modified Parallel Tracking and Multiple Mapping method
+has been utilized for improving the functionality of the
+overall system. The proposed algorithm was able to
+control the UAV position and simultaneously create a
+map. Furthermore, in [69] a particle filter approach for
+the SLAM method has been presented, where an IMU
+and a camera were mounted on-board the RMAX aircraft and fused. The particle filter processed the state
+of the helicopter and a Kalman filter was responsible for building the map. The vision data consisted of
+
+J Intell Robot Syst (2017) 87:141168
+
+Points of Interest (PoIs) or features in the image, by
+the utilization of the Harris corner detector [70]. In the
+presented approach, a linear Gaussian substructure in
+the vehicle dynamics lowered the dimensions of the
+particle filter and decreased the overall computational
+load. This approach included an extra factorization of
+the probability density function, when compared to the
+FastSLAM algorithm [71].
+Furthermore, in [72] and [73] the implementation
+problem of a bearing only SLAM algorithm for high
+speed aerial vehicle, combining inertial and visual
+data based on EKF has been presented.
+In [50] a vision based UAV system for unknown
+environment mapping and exploration using a frontlooking stereo camera and a down-looking optic flow
+camera was presented. This approach aimed to perform pose estimation, autonomous navigation and
+mapping on-board the vehicle.
+The Smartcopter, a low cost and low weight UAV
+for autonomous GPS denied indoor flights, using
+a smart phone for a processing unit was presented
+in [74]. This system was capable of mapping, localization and navigation in unknown 2D environments with
+markers, while a downward looking camera tracked
+natural features on the ground and the UAV was
+performing SLAM.
+Furthermore [75] proposed a vision based SLAM
+algorithm for an UAV navigating in riverine environments. The suggested algorithm integrated the reflection in the water and developed a reflection matching
+approach with a robot-centric mapping strategy. The
+UAV was equipped with multiple sensors (INS, forward facing camera and altimeter) for both navigation
+and state estimation processes.
+In [76], a UAV vision based altitude estimation for
+an UAV was presented. The aircrafts relative altitude
+to a known ground target was computed by combining the given ground target information (length) and
+localization methods. This approach was not strictly
+considering flat ground targets. In [77] a scene change
+detection method was described based on a vision
+sensor for creating a sparse topological map. The
+map contained features of interest from the environment (key locations), where the algorithm was able
+to detect and describe them. The key locations were
+calculated by an optical flow method using a Canny
+edge detector [78]. The estimated flow vectors were
+filtered and smoothened to maintain valid information and afterwards it was decided if the vectors were
+
+153
+
+new observations in order to have the SIFT descriptor,
+based on a bag-of-words approach, to update the map
+database.
+A novel mosaic-based simultaneous localization
+using mosaics as environment representations has
+been presented in [79]. In this scheme, successive
+captured images combining their homography relations were used for estimating the motion of the
+UAV. Simultaneously, a mosaic of the stochastic relations between the images was created to correct the
+accumulated error and update the estimations. The
+application of this novel method results in the creation
+of a network of image relations.
+In [80] a UAV system for the environment exploration and mapping, by fusing ultrasonic and camera
+sensors was developed. In the presented algorithm, the
+2D marker planar data, extracted from the image and
+the depth measurements, from the ultrasonic sensor,
+were merged and computed the UAVs position, while
+other ultrasonic sensors were detecting the obstacles.
+In the sequel, this information was further processed
+in order to build a map of the surrounding area. In the
+presented evaluation scenario, it was assumed that the
+quadrotor was able to move vertically up and down,
+without rotating around its axis. Finally, in [81] a low
+cost quadrotor being capable of visual navigation in
+unstructured environments by using off board processing has been developed. The main components of this
+work has been a SLAM system, an EKF and a PID
+controller. This research approach proposed a novel
+closed-form maximum likelihood estimator to remove
+the measurement noise and recover the absolute scale
+of the visual map.
+In [82] a real time visual - inertial navigation strategy and control of a UAV have been proposed. It has
+also been presented a novel feature database management algorithm for updating the feature list utilizing
+a confidence index. The vision algorithm employed
+Harris corner detector for feature localization and
+then through the feature correspondence method the
+database was being updated. An EKF integrated the
+camera, IMU and sonar measures and estimates the
+vehicles state.
+In [83] a flight control scheme is developed
+for autonomous navigation. Pose estimation (PTAM)
+from visual sensor is fused with IMU data to retrieve
+full state of the platform. A non-linear controller regulates position and attitude of the UAV in a innerloopouterloop structure. A modified SLAM (VSLAM)
+
+154
+
+algorithm is implemented to assist in trajectory tracking for the controller. In [84] a multi camera system for
+visual odometry is demonstrated. The sensors used are
+the ultra wide angle fisheye cameras. This work highlights the advantages of this setup against traditional
+pose estimators. In [85] a monocular visual inertial
+odometry algorithm has been presented. This work
+uses pixel intensity errors of image patches, known
+as direct approach, instead of traditional point feature
+detection. The identified features are parametrized
+by bearing vector and distance parameter. An EKF
+is designed for state estimation, where the intensity
+errors are used in the update step. In this approach
+a full robocentric representation for full filter state
+estimation is followed. Many experimental trials with
+micro aerial vehicles have been performed to demonstrate the peroformance of the algorithm. Similarly
+in [86], a visual inertial integrated system onboard a
+UAV for state estimation and control for agile motion
+has been developed. The odometry algorithm fuses
+data from high frame rate monocular estimator, a
+stereo camera system and a IMU. Experimental results
+are provided using a nonlinear trajectory tracking controller. In [87] a full system for visual inertial state
+estimation has been developed. This work proposed
+novel outlier rejection and monocular pose estimation guaranteeing simple computational cost, suitable
+for online applications.Similarly, in [88] the combination of visual and inertial sensors for state estimation
+has been demonstrated. The core algorithm for sensor
+fusion is an Unscented Kalman Filter acting on the Lie
+group SE(3). The authors extended the applicability of
+the UKF state unscertainty and modelling to cases like
+Lie group that do not belong to Euclidean space.
+In [89] collaborative vision for localization of
+MAVs and mapping using IMU and RGBD sensors
+have been proposed. A monocular visual odometry
+algorithm is used for localization tasks. The depth
+data are processed to solve the scaling issue from
+the monocular odometry. Information from multiple
+agents is transmitted to ground station, where in case
+of sufficient overlaps between agent views the maps
+are merged in global coordinate frame. The developed
+approach provides both sparse and dense mapping.
+In a similar manner, in [90] a fleet of aerial vehicles has been employed to form a collaborative stereo
+camera for localization tasks. The sensors used in the
+proposed scheme are a monocular camera, an IMU
+and a sonar for each agent. Sensor measurements are
+
+J Intell Robot Syst (2017) 87:141168
+
+fused in an EKF for state estimation. Finally, a formation control is developed to maximize the overlapping
+field of view of the vehicles. This work presented
+experimental evaluation.
+Visual Simultaneous Localization and Mapping for
+UAVs is still facing various challenges towards a
+global and efficient solution for large scale and long
+term operations. The fast dynamics of the UAVs pose
+new challenges that should be addressed in order to
+reach stable autonomous flights. Some of the encountered challenges are shown in Table 4:
+3.2 Obstacle Detection
+Obstacle detection and avoidance capabilities of UAVs
+are essential towards autonomous navigation. This
+capability is of paramount importance in classical
+mobile robots, however, this is transformed into a huge
+necessity in the special case of autonomous aerial
+vehicles in order to implement algorithms that generate collision free paths, while significantly increasing
+the UAVs autonomy, especially in missions where
+there is no line of sight. Figure 7 presents visualized
+obstacle free paths a) [50],b) [91] c) [92], d) [93]. In
+this figure different obstacle detection and avoidance
+approaches are presented, where a), b) and c) depict
+identified obstacles in 3D and d) in 2D. Additionally,
+b) and d) demonstrate the trajectory followed to avoid
+objects.
+In [93] a novel stereo vision-based obstacle avoidance technique for MAV tasks was introduced. Two
+stereo camera systems and an IMU were mounted
+on the quadrotor. Initially the stereo rigs were tightly
+hardware synchronized and were designed to build a
+3D global obstacle map of the environment, using 3D
+virtual scans derived from processed range data. The
+second part of this approach consisted of a dynamic
+
+Table 4 Vision based localization and mapping challenges
+Challenges
+Visual localization and
+mapping
+
+ Dependence on illumination
+conditions
+ High processing time for dense
+mapping
+ Occlusion handling
+ Sensitive to fast movements
+ Dynamic environments
+
+J Intell Robot Syst (2017) 87:141168
+
+155
+
+Fig. 7 Various examples for UAV sense and avoid scenarios either in 3D or in 2D. They are applied either indoors or outdoors in
+corridor-like environments or in open spaces with specific obstacles
+
+path planning algorithm called Anytime Dynamic A*,
+which recomputed in every step a suboptimal path to
+the UAVs goal point. This path planner utilized the
+data form the obstacle map and was able to re-plan the
+current path.
+In [94] a monocular based feature estimation algorithm for terrain mapping was presented, which performed obstacle avoidance for UAVs. The proposed
+method utilized an EKF to estimate the location of
+image features in the environment, with the major
+advantage to be the fast depth convergence of estimated feature points, which was succeeded by the
+utilization of inverse depth parameterization. In the
+presented approach, the converged points have been
+stored in an altitude map, which has been also used for
+performing the obstacle avoidance operation.
+In [95] a monocular visual odometry algorithm,
+enhanced by a laser sensor was presented. The algorithm utilized a template matching approach based
+on grey correlation to detect laser spots and a gray
+
+centroid method to estimate the center of the spot.
+Afterwards, the distance from the spot has been computed, using geometry with the assistance of a laser
+sensor. Furthermore, in [96] a vision based obstacle avoidance approach using an optical flow method
+based on Lucas-Kanade gradient has been proposed,
+with the general aim to extract image depth. Apart
+from obstacle localization, this work has also presented an algorithm for the estimation of the obstacles shape. Similarly, in [97] a novel monocular
+motion estimation approach and scene reconstruction
+has been presented. The motion and depth information were recovered by the utilization of a robust
+optical flow measurement and point correspondence
+algorithm from successive images. This approach suggested also a visual steering strategy for obstacle
+avoidance. The proposed scheme utilized the UAV
+motion information and the 3D scene points for
+the collision free navigation, while the steering was
+based on the concept that the vehicle will adjust its
+
+156
+
+direction to the furthest obstacle and will not reconstruct the geometry of the whole environment like
+SLAM techniques.
+In [98], a monocular method for obstacle detection in 3D space by an UAV was proposed. This
+strategy made the vehicle capable of generating the
+3D model of the obstacle from a 2D image analysis.
+The general motivation behind this research was that
+the aircraft, at the moment that detected the obstacle, would start following a circular path around it. In
+every iteration the measured points and the estimated
+points from the database were processed by the Z-test
+correspondence algorithm, in order to find their correspondences. In the sequel, the new measurements
+replaced the previous estimations and so the database
+was updated.
+In [99], the necessity for real-time depth calculation for a UAV for detecting and avoiding obstacles
+using monocular vision was highlighted. This proposal provided a method to obtain 3D information,
+combining Multi-scale-Oriented Patches (MOPS) and
+Scale-Invariant Feature Transform (SIFT). In [100]
+and in [101] a mission scenario was presented, where
+an UAV was capable of firstly exploring an unknown
+local area and afterwards, performing a visual target
+search and tracking, while avoiding obstacles from
+its own constructed maps. This particular task was
+accomplished by fusing measurements from vision
+and laser sensors.
+In [102] the precision of a UAVs classical navigation system GPS and INS was enhanced with the
+utilization of a camera, in order to navigate and detect
+obstacles in the environment. A Kalman filter was utilized to estimate the error in the navigation system
+between the GPS received information and the cameras measurement. Meanwhile, the epipolar geometry
+was applied to the moving camera for the reconstruction of the environment, while this information has
+been utilized for obstacle detection and avoidance.
+The VISual Threat Awareness (VISTA) system,
+for passive stereo image based obstacle detection,
+for UAVs was presented in [103]. The system utilized a block matching for the stereo approach, in
+combinations with an image segmentation algorithm
+based on graph cut for collision detection. In [104],
+a controller to plan a collision free path, when navigating through environment with obstacles, have been
+presented. The proposed controller had a two-layer
+architecture where in the upper layer, a neural network
+
+J Intell Robot Syst (2017) 87:141168
+
+provided the shortest distance paths, whereas in the
+bottom layer, a Model Predictive Controller obtained
+dynamically feasible trajectories, while overall the
+obstacles have been assumed to be cuboids.
+In [105], a bio inspired visual sensor was presented
+for obstacle avoidance and altitude control. The developed insect influenced sensor was based on optic flow
+analysis. This approach proposed a novel specific mirror shaped surface that scaled down the speed of image
+motion and removed the perspective distortion. In this
+approach, the mirror simplified the optic flow computation and also provided a 3D representation of
+the environment. In [106], a technique that combined
+optic flow and stereo vision methods, in order to navigate a UAV through urban canyons was presented. The
+optic flow part of this technique was accomplished
+from a pair of sideways cameras that kept in track
+the vehicle, while the stereo vision information was
+obtained from a forward facing stereo pair and was
+used to avoid obstacles.
+In [107] a visual fuzzy servoing system for obstacle
+avoidance in UAVs was presented by the utilization
+of a front looking camera. The control process was
+performed based on an off-board computational platform and the result has been transmitted to the vehicle
+to correct its route. The obstacle avoidance concept
+was able to firstly track the obstacles and then try
+to keep it to the right or to the left of the image of
+the vehicle, until a specific yaw angle was reached.
+In the presented approach and for the coloured obstacle avoidance, the CamShift algorithm [108] has been
+utilized.
+In [109], both the hardware and software framework for a Hummingbird quadrotor being able to
+hover and avoid obstacles autonomously using visual
+information was presented. The visual information
+was processed successively for the navigation of the
+UAV where firstly the Shi-Tomasi descriptor [110] has
+been applied to find features of interest in the image.
+In the sequel, the Lucas-Kanade optical flow algorithm [111] maintained the features located in consecutive frames and integrated these measurements on
+a EKF for the ego-motion estimation of the camera
+and calculated the pose of the vehicle. Furthermore,
+in this article a fast environmental mapping algorithm based on least square pseudo-intersection has
+been also presented. Finally, this research presented
+a fast and effective novel heuristic algorithm for collision free navigation of the UAV, while in [112]
+
+J Intell Robot Syst (2017) 87:141168
+
+an intuitive collision avoidance controller, combining
+spherical imaging, properties of conical spirals and
+visual predictive control has been proposed, being able
+to control the navigation of the UAV around the object
+and along a conical spiral trajectory.
+3.3 Aerial Target Tracking
+In this section object tracking approaches for UAVs
+are highlighted. In short, object tracking can be
+divided into object detection and object following
+strategies using image sequences. The visual sensor is
+used to estimate the relative position and translational
+velocity between the UAV and the object. Moreover,
+the visual information along with data from other sensors is used as an input to the designed controller of the
+UAV, in order to track the target. The interest for this
+area is augmenting as this technology can be used for
+airborne surveillance, search and rescue missions or
+even navigation tasks. In Fig. 8 three target following
+examples are depicted as it follows: a) [113], b) [114],
+c) [115]. In this Figure downward looking cameras
+onboard aerial vehicle are used for target detection
+and tracking. This approach is applicable in surveillance tasks, rescue missions and general monitoring
+operations. The target is highlighted distinctively in
+each frame. The rest of this section briefly provides an
+overview of the contributions in this field.
+
+Fig. 8 Various aerial target
+tracking approaches using
+downward looking cameras.
+In each case the object of
+interest is highlighted
+distinctively
+
+157
+
+In [116] a low cost UAV for land-mine detection
+has been developed. The vision algorithm performed
+noise filtering using morphological operators and feature extraction with a template matching method. The
+classification process decided whether the detected
+target was object of interest or not.
+In [117] a fast GPU basedb circular marker detection process used for UAVs picking ground objects,
+in real time, has been suggested. The Randomized
+Hough Transform (RHT) was used to detect circles in
+an image frame with low computation time, where the
+RHT was executed in the GPU aiming for increased
+detection speed.
+In [113] an emergency Inertial-Vision navigation
+system dealing with GPS-denied environments has
+been proposed. Whenever a UAV was losing its GPS
+signal during the flight the designed navigation system
+performed real-time visual target tracking and relative
+navigation. In this manner, a fixed wing unmanned
+aerial vehicle was able to hover over a ground landmark with unknown position. The object tracking task
+was fulfilled by a kernel based mean-shift algorithm.
+Thereafter, the visual data were merged with the measured data from the inertial sensor through an EKF
+for the UAV state estimation. This approach took into
+account the delay that the image processing introduced to the visual measurements for the navigation
+controller.
+
+(a)
+
+(b)
+
+(c)
+
+158
+
+Moreover, in [118] a quadrotor visual tracking system has been suggested. The computer vision part
+implemented a pattern recognition algorithm for the
+estimation of the position and the orientation of the
+target and was sending this information to the quadrotor controller. In the same way [119] presented a mini
+UAV that was capable to localize and robustly follow a target utilizing visual information. The proposed
+method implemented a multi part tracker consisting of
+the visual system and the UAV control law. A color
+based algorithm detected the object which was then
+tracked through particle filtering. In the sequel, the
+controller used the estimation of the relative 2D position and orientation between the UAV and the target
+from the visual tracker. Regarding the control of the
+UAV translation a hierarchical scheme with PI and
+P controllers have been employed, while for the yaw
+angle a P controller has been designed. Similarly [120]
+combined visual attention model and EKF for efficient
+ground object detection and tracking. In this research,
+three visual saliency maps, the local, the global and
+the rarity saliency map, were computed. These three
+matrices created the intensity feature map which contained the detected object. The visual measurements
+were used by the Kalman filter to estimate the objects
+state. In [121] a UAV visual ground target tracking
+which can be used in GPS-denied environments has
+been proposed. This system combined the camera and
+IMU on-board sensors for the image processing tasks
+and the navigation control of the UAV. Shortly the
+visual target tracker detected the 2D position of an
+object in an image and afterwards an optical flow vector was calculated. Finally an EKF has been designed
+to estimate the position and velocity for both the target
+and the UAV. The onera ressac helicopter was used as
+testbed.
+Towards aerial surveillance, [122] suggested a conceptual framework for dynamic detection of moving
+targets (human, vehicles) from a monocular, moving UAV. This method combined frame difference
+with segmentation algorithms into aerial images. Correspondingly, [123] presented an approach utilizing
+optical and thermal cameras. Various separate cascaded Haar classifiers were applied to the optical
+image, for the vehicle detection part. The detections
+that match for every classifier were merged to form
+the correct estimation. When the vehicle was detected
+in the optical image, the thermal image tried also to
+detect the vehicle and verify the result geometrically.
+
+J Intell Robot Syst (2017) 87:141168
+
+Regarding the people detection part, the thermal
+image was processed with various cascaded Haar classifiers whilst simultaneously contours were extracted
+from the optical image. In addition, in [124] a moving target tracking control method for a UAV has been
+proposed. It has been based on active vision concept
+where the image sensor altered its location and orientation in order to obtain visual information from the
+object via a servo control scheme. For this purpose
+two controllers for the UAV flight task have been suggested, either a H2 /H robust controller or a PID/H
+controller. Apart from the flight controller another
+PID controller performed the tracking task, which was
+based on disturbance observer so that it compensated
+the introduced disturbance from the UAV movements.
+Another research, [125], presented a novel movement
+detection algorithm for UAV surveillance, based on
+dense optical flow. Additoinally, this research developed a new method for rejecting outliers in matching
+process where the movement was determined by local
+adaptive threshold strategy.
+In [126] an object tracking system for UAV
+mounted with a catadioptric and moving Pan Tilt
+Zoom camera has been proposed where the adaptive
+background subtraction algorithm has been used to
+detect the moving object. In this case, a novel method
+utilized data from both cameras and estimated the
+position of the UAV relative to the target.
+In [114] the development of a low cost and light
+weight vision processing platform on-board a lowaltitude UAV for real-time object identification and
+tracking has been suggested. The aerial image was
+converted to HSV color space, then, using various
+threshold values for the different colors the image
+became binary. Afterwards, an edge detection algorithm
+was used and finally some geometrical operations and
+filters were applied to enhance the result. The objects
+position was calculated through convolution.
+In [127] the concept for boundary extraction of land
+fields has been presented. This contribution implemented two separate methods for UAV following
+elongated objects. The first hybrid method combined
+line detection and color texture algorithms was processed by a ground control station. The latter consisted
+of a window color based segmentation method which
+was able to detect land fields in various lightning
+conditions in real time.
+In [128] a novel grid based non linear Bayesian
+method for target visual tracking from a UAV has been
+
+J Intell Robot Syst (2017) 87:141168
+
+proposed, where the particular approach developed a
+target motion model used for target movement prediction. Therefore samples containing candidates for the
+predicted position of the object were generated, then,
+a radial edge detection algorithm was used for all the
+available samples to detect edge points around them.
+Afterwards the weights of each sample were computed
+by the feature information. The system performed well
+even in cluttered environments and occlusions.
+In [129] a vision based system for street detection
+by a low-altitude flying UAV has been presented. The
+street identification was processed by a Bayes classifier to differentiate between street and background
+pixels. The street classifier updated its parameters
+from a recursive Bayesian process. When the street
+was identified an edge detection algorithm computed
+every object inside it and estimated a color profile.
+This profile was incorporated to the classifier in order
+to improve the parameters for street detection.
+In [130] an object tracking and following method
+for a UAV has been presented. The two basic components of this approach are an object tracker for
+the vision part and an Image Based Visual Servoing
+controller for the target following part.
+In [131] a visual neuro-fuzzy motion control
+scheme for a non-linear tracking task and gimbal
+movement has been designed. The cameras pan and
+tilt motions were controlled by a neuro-fuzzy system based on Radial Basis Function Network. The
+controller estimated the velocity and position commands that were needed in order to actuate the gimbal
+(pan and tilt motion), using measurements from object
+detection algorithm. In this manner the moving object
+was always centered in the image frame. It has also
+been presented a learning algorithm using gradient
+descent method to train the network.
+In [132] UAV object tracking based on feature
+detection and tracking algorithms has been implemented. The proposed method has been intended for
+real-time UAV control. SIFT algorithm, projective
+transformation and RANSAC algorithm have been
+used for the object detection and tracking. The result
+of the visual system was used as reference to flight
+controller for the UAV navigation. The COLIBRI
+UAV platform was used is this research. A real time
+vision system for autonomous cargo transfer between
+two platforms by a UAV has been developed in [133].
+The vision system consisted of a camera and was
+mounted on a pan-tilt mechanism to be parallel with
+
+159
+
+ground. In addition it implemented ellipse detection,
+ellipse tracking (based on CAMShift) and singlecircle-based position estimation algorithms. The latter
+was used to estimate the relative position of a detected
+circle from its projection on image plane.
+In [134] the coordinated vision based target tracking from a fleet of fixed wing UAVs has been examined. The main contribution of this work consists of
+the formulation of control algorithms that coordinate
+the motion of multiple agents for surveillance tasks. In
+this case, the heading angular rate is used as an input
+to the control scheme, while the motion is regulated
+by varying the ground speed of each vehicle. In [135]
+a landing system for a aerial platform based on vision
+has been suggested. The landing spot visualizes a
+target with specific shape. The onboard visual sensor performs edge detection using line segmentation,
+feature point mapping and clustering. Afterwards, filtering is applied to recognize the landing spot target.
+The relative pose of the vehicle with the detected
+target is estimated using Kalman Filtering. Finally,
+the acquired data are used for the position-attitude
+controller of the aerial platform to perform landing.
+In [136] a visual algorithm for long term object following has been proposed. This work is divided in
+three parts, the Global Matching and Local Tracking, the Local Geometric Filter (LGF), and the Local
+outlier factor (LOF). GMLT uses FAST feature detection
+for global matching and LK optical flow for local feature
+tracking. LGF and LOF are implemented to remove
+outliers from global and local feature correspondences
+and provide a reliable detection of the object.
+
+4 Guidance
+This section presents a collection studies towards
+autonomous exploration for UAVs combining methods mentioned in previous sections. Elaborate control
+laws employed to adjust the position and attitude
+of the vehicle combining information from computer vision, image processing, path planning or other
+research fields. This topic is broad and contains
+many strategies that approach the problem from various aspects. Coordinating sensors with controllers
+on UAVs can be used as a basis for other sophisticated applications and determine their performance.
+The rest of this section provides a brief overview of
+the contributions in this field.
+
+160
+
+In [86] the authors introduced a coupled state estimator for a quadrotor using solely cameras and an
+IMU. The architecture of the proposed system used
+methods from stereo and monocular vision for pose
+estimation and scale recovery, whereas this information is afterwards fused in an Unscented Kalman filter
+with IMU measurements. The processed estimated
+states are then distributed for trajectory planning, UAV
+control and mapping.
+In [92] a sophisticated testbed to examine vision
+based navigation in indoor and outdoor cluttered environments has been developed. The vehicle is equipped
+with stereo camera, an IMU, two processors and an
+FPGA board. Moreover, the cameras use stereo odometry for ego-motion estimation, which is fused in
+an EKF with IMU measurements for mapping and
+localization purposes. It has been also developed an
+obstacle-free path planning routine so that the UAV
+is able to move between waypoints in the map. Similarly, in [137] an unmanned aircraft system towards
+autonomous navigation based on laser and stereo
+vision odometry has been developed. The vehicle was
+designed to operate in search and rescue missions in
+unknown indoor or outdoor environments. The system
+components consisted of three sections, the perception, the action and the cognition layer. During the
+perception part the visual and laser measurements
+were merged with the IMU data for the UAVs state
+estimation. This layer also performed object detection
+task. The action layer consisted of the flight controller which utilized the estimated pose of the vehicle.
+Lastly, during the cognition phase path planning for
+the autonomous navigation were employed. Additionally, in [138] SIFT feature descriptor passed data to the
+homography algorithm for motion estimation. Then,
+the measurements were fused with inertial information
+by an EKF. It has been also described a delay based
+measurement update method to pass the homography
+data to the Kalman filter without any state augmentation. Another similar approach [139] also proposed
+a vision-aided inertial navigation system for small
+UAV based on homography. The data from the IMU,
+the camera, the magnetometer and the altimeter were
+fused through an EKF using a novel approach and then
+were utilized by the UAV control for hovering and
+navigation.
+In [140] a complete solution towards UAV
+autonomous navigation with flight endurance has been
+
+J Intell Robot Syst (2017) 87:141168
+
+presented. Moreover this vehicle was able to take-off
+and land either on the ground or on a designed charging platform. These tasks were performed by computer vision landing and navigation algorithms and
+UAV control scheme, using a camera and an ultrasonic
+sensor. The landing algorithm implemented Ellipses
+tracking while in the navigation algorithm optical flow
+algorithm was utilized. In [141] a road following system for a monocular UAV has been proposed. The
+vehicle was equipped with a camera, an IMU and an
+ultrasonic scanner. Moreover, it was able to measure
+its position, orientation in relation to the road that had
+to follow without any prior information. This method
+implemented algorithms to deal with situations where
+the target road was occluded, switching to inertial sensors for position data. It has also been developed a
+switching controller to stabilize the lateral position of
+the vehicle for both the detected and occluded road
+cases. In [142] a robust vision terrain referenced navigation method for UAV position estimation has been
+proposed, combining visual odometry by homography with point-mass filter based navigation algorithm.
+The data used in the process were obtained from a
+monocular camera, a radio altimeter and a terrain referenced elevation map. In the same track in [143] a
+technique for UAV pose estimation through template
+based registration has been suggested, using a set of
+georeference images. The UAV captured image was
+processed using a similarity function, with a reference
+template. This approach utilized Mutual Information
+for similarity function.
+In [144] a combination of a stereo system with a
+IMU for UAV power line inspection tasks has been
+suggested. The aircraft navigated in close proximity to the target during the inspection. This proposal
+performed UAV pose estimation and environment
+mapping, by merging visual odometry with inertial
+navigation through an EKF. In [145] a vision system
+for UAV autonomous navigation using as reference
+the distance between the vehicle and a wall has been
+developed, utilizing a laser and camera perception
+system. The sensors extracted 3D data and provided
+them to control law for the autonomous navigation.
+This approach offered the novelty of alternative sensor
+usage and combination in order to trespass the payload
+limitations of the mini scale UAV. In [146] an on-board
+vision FPGA-based module has been designed with
+potential application for real time UAV hovering. The
+
+J Intell Robot Syst (2017) 87:141168
+
+sensor implemented various image processing algorithms like Harris detector, template matching image
+correction and an EKF to extract all the required
+information for the stabilization control. It has been
+specifically destined for mini unmanned aircrafts with
+limited resources, size and payload. Similarly in [147]
+a system for UAV stabilization over a planar ground
+target has been presented. This approach tackled the
+problem of time delay when data are fused in Kalman
+filter from different sensors. In [148] the receding
+EKF horizon planning algorithm for UAV navigation
+in cluttered environments has been suggested. In this
+approach, the data from the camera and the IMU were
+processed by an Unscented Kalman filter, while the
+estimated states from the filter were integrated to the
+receding horizon control and the flight controller. This
+research combines the horizon planning with SLAM
+for navigation and obstacle avoidance.
+In [149] a path planning algorithm for autonomous
+exploration in bounded unknown environments has
+been presented. The core of this work is based on a
+receding horizon scheme. The views are sampled as
+nodes at random tree and according to the amount of
+unmapped space the next best viewpoint is selected.
+Additionally, visual sensors are employed to provide
+information on the explored area. This algorithm is
+experimentally evaluated on a hexacopter. In [150] a
+complete aerial platform setup has been developed for
+river mapping. The proposed work employs a stereo
+camera and a laser scanner for the mapping, obstacle
+detection and state estimation. Two exploration algorithms have been tested, a follow the river in stable
+flight modification of Sparse Tangential Network, and
+secondly maximize the river length that is covered during mission with experimental evaluations. In [151]
+coverage algorithm for ground areas from fixed wing
+UAVs has been proposed. The novelty of this work
+stands in the consideration of practical problems in the
+coverage mission. More specifically, the size of the
+UAV deployed team is a function of the size and shape
+of the area as well as the flight time of the platform.
+The developed algorithm consists of two parts, modelling the area coordinates in a graph in a way that a
+single agent covers the area in a minimum time and
+secondly an optimization step is performed to define
+the routes for the team of aerial platforms for the coverage. In [152] an aerial platform with localization,
+mapping and path planning capabilities in 3D has been
+
+161
+
+developed. This approach is based on vision and IMU
+sensors. Visual inertial odometry is performed for
+local consistency of the platform movement according
+to defined task on high level from the operator. Sparse
+pose graph optimization and re-localization of landmarks are implemented to correct the drift in odometry
+estimates. The optimized poses are combined with
+stereo vision data to build a global occupancy map
+that is used also for the global planner to calculate
+3D dynamic paths based on the detected obstacles.
+The experimental trials were performed in unknown
+environments with solely onboard processing.
+
+5 Discussion
+5.1 Challenges
+This article provided an overview of the advances in
+vision based navigation, perception and control for
+unmanned aerial systems, where the major contributions in each category were enlisted. It is obvious
+that integrating visual sensors in the UAV ecosystem is a research field that attracts huge resources,
+but still lacks of solid experimental evaluation. For
+various reasons aerial vehicles can be considered as
+a challenging testbed for computer vision applications compared to conventional robots. The dimensions of the aircrafts state is usually larger from
+the ones of a mobile robot, while the image processing algorithms have to provide visual information
+robustly in real time and should be able to compensate for difficulties like rough changes in the image
+sequence and 3D information changes in visual servoing applications. Despite the fact that the computer
+vision society has developed elaborate SLAM algorithms for visual applications, the majority of them,
+cannot be utilized for UAVs directly due to limitations posed by their architecture and their processing
+power. More specifically aircrafts have a maximum
+limit in generating thrust in order to remain airborne,
+which restricts the available payload for sensing and
+computing power. The fast dynamics of aerial platforms demand minimum delays and noise compensation in state computations in order to avoid instabilities. Furthermore, it should be noted that unlike
+the case of ground vehicles, UAVs cannot just stop
+operating when there is great uncertainty in the state
+
+162
+
+estimation, a fact that could generate incoherent control commands to the aerial vehicle and make it
+unstable. In case that the computational power is not
+enough to update the velocity and attitude in time
+or there is a hardware-mechanical failure, the UAV
+could have unpredictable behaviour, increase/decrease
+speed, oscillate and eventually crash. Computer vision
+algorithms should be able to respond very quickly to
+scene changes (dynamic scenery), a consequence from
+UAVs native ability to operate in various altitudes and
+orientations, which results in sudden appearance and
+disappearance of obstacles and targets. An important
+assumption that the majority of the presented contributions consider, is the fact that the vehicles fly
+in low speeds in order to compensate the fast scene
+alterations. In other words, dynamic scenery poses a
+significant problem to overcome. Another challenge in
+SLAM frameworks that should be taken into account
+is the fact that comparing to ground vehicles, aerial
+platforms cover large areas, meaning that they build
+huge maps that contain more information. Object
+tracking methods should be robust against occlusions,
+image noise, vehicle disturbances and illumination
+variations while pursuing the target. As long as the
+target remains inside the field of view but it is either
+occluded from another object or is not clearly visible
+from the sensor, is crucial for the tracker to keep operating, to estimate the targets trajectory, recover the
+process and function in harmony with the UAV controllers. Therefore the need for further, highly sophisticated and robust control schemes exists, to optimally
+close the loop using visual information.
+Nowadays, the integration of computer vision
+applications on UAVs has past its infancy and without
+any doubt there have been made huge steps towards
+understanding and approaching autonomous aircrafts.
+The subject of UAVs control is a well studied field,
+since various position, attitude, and rate controllers
+have been already proposed, while currently there is a
+significantly large focus of the research community on
+this topic. Thus, it is important to establish a reliable
+link between vision algorithms and control theory to
+reach greater levels of autonomy. The research work
+presented in this review, indicates that some techniques
+are experimentally proved but many of visual servoing,
+SLAM and object tracking strategies for autonomous
+UAVs are not yet fully integrated in their navigation
+controllers, since the presented approaches either work
+under some assumptions in simple experimental tests
+
+J Intell Robot Syst (2017) 87:141168
+
+and system simplifications or remain in the simulation stage. In addition, their performance is constantly
+evaluated and improved so more and more approaches
+are introduced. Therefore, seminal engineering work
+is essential to take the current state of the art a step
+further and evaluate their performance in actual flight
+tests. Another finding from this survey is the fact that
+most experimental trials, reported in the presented literature, were performed on unmanned vehicles with
+an increased payload for sensory systems and onboard
+processing units. Nonetheless, it is clear that current
+research is focused on miniature aerial vehicles that
+can operate indoors, outdoors and target infrastructure
+inspection and maintenance using their agile maneuvering capabilities. Finally, it should be highlighted
+that it was not feasible to perform adequate comparison on the presented algorithms due to the lack
+of proper benchmarking tools and metrics for navigation and guidance topics [18]. Many approaches
+are application driven and their characteristics and
+needs differ. Therefore a common basis should be
+established within research community.
+5.2 Camera Sensors
+This review article is focused on research work
+towards vision based autonomous aerial vehicles.
+Therefore an important factor that should be considered is the visual system used in individual papers.
+Throughout the review process 3 visual sensor types
+have mainly been distinguished. A BlueFox monocular camera from MatrixVision, the VI sensor stereo
+camera from Skybotix and Asus Xtion Pro a RGBD sensor. The aforementioned sensors cover a great
+range of applications depending on the individual
+requirements. Regarding the utilized hardware, this
+survey will not provide more information, since in the
+most of the referenced articles, the results are being
+discussed in relation to the hardware utilized.
+5.3 Future Trends
+UAVs possess some powerful characteristics, which
+in the near future potentially could turn them into
+the pioneering elements in many applications. Characteristics like the versatile movement, combined with
+special features, like the lightweight chassis and the
+onboard sensors could open a world of possibilities
+and these are the reasons why UAVs have gained
+
+J Intell Robot Syst (2017) 87:141168
+
+so much attention in research. Nowadays, the scientific community is focused in finding more efficient
+schemes for using visual servoing techniques, develop
+SLAM algorithms for online - accurate localization
+and detailed dense 3D reconstruction, propose novel
+path planning methods for obstacle free navigation
+and integrate aerial trackers, for real scenario indoors
+and outdoors applications. Moreover, nowadays many
+resources are distributed in visual-inertial state estimation to combine advantages from both research areas.
+The evolution of processing power on board aerial
+agents will open new horizons in the field and define
+reliable visual-inertial state estimation as the standard
+procedure and the basic element of every agent. Additionally, elaborate schemes for online mapping will be
+studied and refined for dynamic environments. Moreover, there is ongoing research on equipping UAVs
+with robotic arms/tools in order to extend their capabilities in aerial manipulation for various tasks like
+maintenance. The upcoming trends will examine floating base manipulators towards task completion in
+either single or collaborative manner. Operating an
+aerial vehicle with a manipulator is not a straightforward process and many challenges exist, like the
+compensation for the varying Center Of Gravity and
+the external disturbances from the interaction, capabilities that are posing demanding vision based tasks
+and that are expected to revolutionize the current utilization of UAVs. Finally, there is also great interest
+in cooperative operation of multiple aerial platforms
+and mostly for distributed solutions were the agents
+act individually exchanging information among them
+to fulfill specific constraints. Aerial robotic swarms
+is the future for many applications such as inspection, search and rescue missions as well as farming,
+transportation and mining processes.
+
+List of Acronyms
+UAV
+EKF
+GPS
+INS
+IMU
+IBVS
+PBVS
+VTOL
+SLAM
+
+Unmanned Aerial Vehicles
+Extended Kalman Filter
+Global Positioning System
+Inertial Navigation System
+Inertial Measurement Unit
+Image Based Visual Servoing
+Position Based Visual Servoing
+Vertical Takeoff and Landing Vehicle
+Simultaneous Localization and Mapping
+
+163
+
+PTAM Parallel Tracking and Mapping
+MAV Micro Aerial Vehicle
+Acknowledgments This work has received funding from the
+European Unions Horizon 2020 Research and Innovation Programme under the Grant Agreement No.644128, AEROWORKS.
+Open Access This article is distributed under the terms of the
+Creative Commons Attribution 4.0 International License (http://
+creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium,
+provided you give appropriate credit to the original author(s)
+and the source, provide a link to the Creative Commons license,
+and indicate if changes were made.
+
+References
+1. U.S Department of Transportation: Federal Aviation
+Administration. https://www.faa.gov/uas/faqs/
+2. U.K Ministry of Defence: Unmanned Aircraft Systems:
+Terminology, Definitions and Classification
+3. U.S. Department of Defense: Standard practice for system
+safety. MIL-STD-882D (2000)
+4. Huang, H.-M.: Autonomy levels for unmanned systems
+(ALFUS) framework, volume I: Terminology, Version 2.0
+(2008)
+5. Valavanis, K.P.: Advances in Unmanned Aerial Vehicles:
+State of the Art and the Road to Autonomy, vol. 33.
+Springer Science & Business Media (2008)
+6. YAMAHA: RMAX. http://rmax.yamaha-motor.com.au/
+features/
+7. Ascending Technologies: AscTec NEO. http://www.
+asctec.de/en/uav-uas-drones-rpas-roav/asctec-firefly/
+8. ShadowAir: Super Bat ShadowAir. http://www.shadowair.
+com
+9. Association Unmanned Aerial Vehicle Systems: Civil
+and Commercial UAS Applications. https://www.uavs.
+org/commercial
+10. Mejias, L., Correa, J.F., Mondragon, I., Campoy, P.: Colibri: A vision-guided uav for surveillance and visual
+inspection (2007)
+11. Araar, O., Aouf, N.: A new hybrid approach for the
+visual servoing of vtol uavs from unknown geometries.
+In: IEEE 22nd Mediterranean Conference of Control and
+Automation (MED), pp. 14251432. IEEE (2014)
+12. Carrillo, L.R.G., Lopez, A.E.D., Lozano, R., Pegard, C.:
+Combining stereo vision and inertial navigation system for
+a quad-rotor uav. J. Intelli. Robot. Syst. 65(1-4), 373387
+(2012)
+13. Max Botix: XL-MaxSonar-EZ4 Ultrasonic Sensor. http://
+www.maxbotix.com
+14. SkyBotix AG: VI sensor. http://www.skybotix.com/
+15. TeraRanger: TeraRanger Rotating Lidar. http://www.
+teraranger.com/products/teraranger-lidar/
+16. Matrix Vision: mvBlueFOX3 Camera. https://www.matrixvision.com/USB3-vision-camera-mvbluefox3.html
+17. Szeliski, R.: Computer Vision: Algorithms and Applications. Springer Science & Business Media (2010)
+
+164
+18. Kendoul, F.: Survey of advances in guidance, navigation, and control of unmanned rotorcraft systems. J. Field
+Robot. 29(2), 315378 (2012)
+19. Hutchinson, S., Hager, G.D., Corke, P.I.: A tutorial on
+visual servo control. IEEE Trans. Robot. Autom. 12(5),
+651670 (1996)
+20. Corke, P.: Robotics, Vision and Control: Fundamental
+Algorithms in MATLAB, vol. 73. Springer Science &
+Business Media (2011)
+21. Asl, H.J., Oriolo, G., Bolandi, H.: An adaptive scheme
+for image-based visual servoing of an underactuated uav.
+IEEE Trans. Robot. Autom. 29(1) (2014)
+22. Ozawa, R., Chaumette, F.: Dynamic visual servoing with
+image moments for a quadrotor using a virtual spring
+approach. In: IEEE International Conference on Robotics
+and Automation (ICRA), pp. 56705676. IEEE (2011)
+23. Araar, O., Aouf, N.: Visual servoing of a quadrotor uav
+for autonomous power lines inspection. In: 22nd Mediterranean Conference of Control and Automation (MED), pp.
+14181424. IEEE (2014)
+24. Azinheira, J.R., Rives, P.: Image-based visual servoing for
+vanishing features and ground lines tracking: Application
+to a uav automatic landing. Int. J. Optomechatron. 2(3),
+275295 (2008)
+25. Sa, I., Hrabar, S., Corke, P.: Inspection of pole-like structures using a vision-controlled vtol uav and shared autonomy. In: IEEE/RSJ International Conference on Intelligent
+Robots and Systems (IROS), pp. 48194826. IEEE (2014)
+26. Mills, S.J., Ford, J.J., Mejas, L.: Vision based control
+for fixed wing uavs inspecting locally linear infrastructure using skid-to-turn maneuvers. J. Intell. Robot. Syst.
+61(14), 2942 (2011)
+27. Peliti, P., Rosa, L., Oriolo, G., Vendittelli, M.: Visionbased loitering over a target for a fixed-wing uav. In:
+Proceedings of the 10th International IFAC Symposium
+on Robot Control (2012)
+28. Guenard, N., Hamel, T., Mahony, R.: A practical visual
+servo control for an unmanned aerial vehicle. IEEE Trans.
+Robot. 24(2), 331340 (2008)
+29. Metni, N., Hamel, T.: A uav for bridge inspection: Visual
+servoing control law with orientation limits. Autom. Construct. 17(1), 310 (2007)
+30. Hamel, T., Mahony, R.: Image based visual servo control
+for a class of aerial robotic systems. Automatica 43(11),
+19751983 (2007)
+31. Chriette, A.: An analysis of the zero-dynamics for visual
+servo control of a ducted fan uav. In: IEEE International
+Conference on Robotics and Automation (ICRA), pp.
+25152520. IEEE (2006)
+32. Le Bras, F., Mahony, R., Hamel, T., Binetti, P.: Adaptive
+filtering and image based visual servo control of a ducted
+fan flying robot. In: 45th IEEE Conference on Decision
+and Control, pp. 17511757. IEEE (2006)
+33. Kim, S., Choi, S., Lee, H., Kim, H.J.: Vision-based collaborative lifting using quadrotor uavs. In: 14th International Conference on Control, Automation and Systems
+(ICCAS), pp. 11691174. IEEE (2014)
+34. Barajas, M., Davalos-Viveros, J.P., Garcia-Lumbreras, S.,
+Gordillo, J.L.: Visual servoing of uav using cuboid model
+with simultaneous tracking of multiple planar faces. In:
+
+J Intell Robot Syst (2017) 87:141168
+
+35.
+
+36.
+
+37.
+
+38.
+
+39.
+
+40.
+
+41.
+
+42.
+
+43.
+
+44.
+
+45.
+
+46.
+
+47.
+
+48.
+
+49.
+
+IEEE/RSJ International Conference on Intelligent Robots
+and Systems (IROS), pp. 596601. IEEE (2013)
+Fahimi, F., Thakur, K.: An alternative closed-loop visionbased control approach for unmanned aircraft systems
+with application to a quadrotor. In: International Conference on Unmanned Aircraft Systems (ICUAS), pp.
+353358. IEEE (2013)
+Lee, D., Ryan, T., Kim, H.J.: Autonomous landing of a
+vtol uav on a moving platform using image-based visual
+servoing. In: IEEE International Conference on Robotics
+and Automation (ICRA), pp. 971976. IEEE (2012)
+Huh, S., Shim, D.H.: A vision-based automatic landing
+method for fixed-wing uavs. J. Intell. Robot. Syst. 57(1
+4), 217231 (2010)
+Salazar, S., Romero, H., Gomez, J., Lozano, R.: Realtime stereo visual servoing control of an uav having
+eight-rotors. In: 6th International Conference on Electrical
+Engineering, Computing Science and Automatic Control
+(CCE), pp. 111. IEEE (2009)
+Dib, A., Zaidi, N., Siguerdidjane, H.: Robust control and
+visual servoing of an uav. In: 17th IFAC World Congress
+2008, pp. CDROM (2008)
+Kendoul, F., Fantoni, I., Nonami, K.: Optic flow-based
+vision system for autonomous 3d localization and control of small aerial vehicles. Robot. Autonom. Syst. 57(6),
+591602 (2009)
+Eberli, D., Scaramuzza, D., Weiss, S., Siegwart, R.: Vision
+based position control for mavs using one single circular
+landmark. J. Intell. Robot. Syst. 61(14), 495512 (2011)
+Kendoul, F., Fantoni, I., Lozano, R.: Adaptive visionbased controller for small rotorcraft uavs control and guidance. In: Proceedings of the 17th IFAC world congress,
+pp. 611 (2008)
+Lange, S., Sunderhauf, N., Protzel, P.: A vision based
+onboard approach for landing and position control of an
+autonomous multirotor uav in gps-denied environments.
+In: International Conference on Advanced Robotics, 2009.
+ICAR 2009, pp. 16. IEEE (2009)
+Alkowatly, M.T., Becerra, V.M., Holderbaum, W.: Bioinspired autonomous visual vertical control of a quadrotor
+unmanned aerial vehicle. J. Guid. Control Dyn., 114
+(2014)
+Ghadiok, V., Goldin, J., Ren, W.: On the design and development of attitude stabilization, vision-based navigation,
+and aerial gripping for a low-cost quadrotor. Autonom.
+Robots 33(12), 4168 (2012)
+Fucen, Z., Haiqing, S., Hong, W.: The object recognition and adaptive threshold selection in the vision system
+for landing an unmanned aerial vehicle. In: International
+Conference on Information and Automation (ICIA), pp.
+117122. IEEE (2009)
+Zhao, Y., Pei, H.: An improved vision-based algorithm
+for unmanned aerial vehicles autonomous landing. Phys.
+Proced. 33, 935941 (2012)
+Artieda, J., Sebastian, J.M., Campoy, P., Correa, J.F.,
+Mondragon, I.F., Martnez, C., Olivares, M.: Visual 3-d
+slam from uavs. J. Intell. Robot. Syst. 55(45), 299321
+(2009)
+Faessler, M., Fontana, F., Forster, C., Mueggler, E.,
+Pizzoli, M., Scaramuzza, D.: Autonomous, vision-based
+
+J Intell Robot Syst (2017) 87:141168
+
+50.
+
+51.
+
+52.
+
+53.
+
+54.
+
+55.
+
+56.
+
+57.
+
+58.
+
+59.
+
+60.
+
+61.
+
+62.
+63.
+64.
+
+flight and live dense 3d mapping with a quadrotor micro
+aerial vehicle. J. Field Robot. (2015)
+Fraundorfer, F., Heng, L., Honegger, D., Lee, G.H.,
+Meier, L., Tanskanen, P., Pollefeys, M.: Vision-based
+autonomous mapping and exploration using a quadrotor
+mav. In: IEEE/RSJ International Conference on Intelligent
+Robots and Systems (IROS), pp. 45574564. IEEE (2012)
+Schmid, K., Lutz, P., Tomic, T., Mair, E., Hirschmuller,
+H.: Autonomous vision-based micro air vehicle for indoor
+and outdoor navigation. J. Field Robot. 31(4), 537570
+(2014)
+Harmat, A., Trentini, M., Sharf, I.: Multi-camera tracking
+and mapping for unmanned aerial vehicles in unstructured
+environments. J. Intell. Robot. Syst., 127 (2014)
+Leishman, R.C., McLain, T.W., Beard, R.W.: Relative
+navigation approach for vision-based aerial gps-denied
+navigation. J. Intell. Robot. Syst. 74(12), 97111 (2014)
+Forster, C., Pizzoli, M., Scaramuzza, D.: Svo: Fast semidirect monocular visual odometry. In: 2014 IEEE International Conference on Robotics and Automation (ICRA),
+pp. 1522. IEEE (2014)
+Forster, C., Faessler, M., Fontana, F., Werlberger, M.,
+Scaramuzza, D.: Continuous on-board monocular-visionbased elevation mapping applied to autonomous landing
+of micro aerial vehicles. In: 2015 IEEE International
+Conference on Robotics and Automation (ICRA), pp.
+111118. IEEE (2015)
+Lynen, S., Achtelik, M.W., Weiss, S., Chli, M., Siegwart,
+R.: A robust and modular multi-sensor fusion approach
+applied to mav navigation. In: 2013 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp.
+39233929. IEEE (2013)
+Pizzoli, M., Forster, C., Scaramuzza, D.: Remode: Probabilistic, monocular dense reconstruction in real time.
+In: 2014 IEEE International Conference on Robotics and
+Automation (ICRA), pp. 26092616. IEEE (2014)
+Fu, C., Olivares-Mendez, M.A., Suarez-Fernandez, R.,
+Campoy, P.: Monocular visual-inertial slam-based collision avoidance strategy for fail-safe uav using fuzzy logic
+controllers. J. Intell. Robot. Syst. 73(14), 513533 (2014)
+Wang, T., Wang, C., Liang, J., Zhang, Y.: Raoblackwellized visual slam for small uavs with vehicle
+model partition. Indus. Robot: Int. J. 41(3), 266274
+(2014)
+Lowe, D.G.: Distinctive image features from scaleinvariant keypoints. Int. J. Comput. Vis. 60(2), 91110
+(2004)
+Magree, D., Johnson, E.N.: Combined laser and visionaided inertial navigation for an indoor unmanned aerial
+vehicle. In: American Control Conference (ACC), pp.
+19001905. IEEE (2014)
+Cover, T., Hart, P.: Nearest neighbor pattern classification.
+IEEE Trans. Inf. Theory 13(1), 2127 (1967)
+Mahalanobis, P.C.: On the generalised distance in statistics 2(1), 4955 (1936)
+Huh, S., Shim, D.H., Kim, J.: Integrated navigation system
+using camera and gimbaled laser scanner for indoor and
+outdoor autonomous flight of uavs. In: IEEE/RSJ International Conference on Intelligent Robots and Systems
+(IROS), pp. 31583163. IEEE (2013)
+
+165
+65. Wang, C.L., Wang, T.M., Liang, J.H., Zhang, Y.C., Zhou,
+Y.: Bearing-only visual slam for small unmanned aerial
+vehicles in gps-denied environments. Int. J. Autom. Comput. 10(5), 387396 (2013)
+66. Nemra, A., Aouf, N.: Robust cooperative uav visual slam.
+In: IEEE 9th International Conference on Cybernetic
+Intelligent Systems (CIS), pp. 16. IEEE (2010)
+67. Min, J., Jeong, Y., Kweon, I.S.: Robust visual lock-on
+and simultaneous localization for an unmanned aerial
+vehicle. In: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 93100. IEEE
+(2010)
+68. Jama, M., Schinstock, D.: Parallel tracking and mapping
+for controlling vtol airframe. J. Control Sci. Eng. 2011, 26
+(2011)
+69. Tornqvist, D., Schon, T.B., Karlsson, R., Gustafsson, F.:
+Particle filter slam with high dimensional vehicle model.
+J. Intell. Robot. Syst 55(45), 249266 (2009)
+70. Harris, C., Stephens, M.: A combined corner and edge
+detector. In: Alvey vision conference, vol. 15, p. 50.
+Manchester (1988)
+71. Montemerlo, M., Thrun, S., Koller, D., Wegbreit, B., et al.:
+Fastslam: A factored solution to the simultaneous localization and mapping problem. In: AAAI/IAAI, pp. 593598
+(2002)
+72. Bryson, M., Sukkarieh, S.: Building a robust implementation of bearing-only inertial slam for a uav. J. Field Robot.
+24(12), 113143 (2007)
+73. Kim, J., Sukkarieh, S.: Real-time implementation of airborne inertial-slam. Robot. Autonom. Syst. 55(1), 6271
+(2007)
+74. Liming Luke Chen, D.R.M., Dr Matthias Steinbauer, P.,
+Mossel, A., Leichtfried, M., Kaltenriner, C., Kaufmann,
+H.: Smartcopter: Enabling autonomous flight in indoor
+environments with a smartphone as on-board processing
+unit. Int. J. Pervas. Comput. Commun. 10(1), 92114
+(2014)
+75. Yang, J., Dani, A., Chung, S.J., Hutchinson, S.: Inertialaided vision-based localization and mapping in a riverine environment with reflection measurements. In: AIAA
+Guidance, Navigation, and Control Conference. Boston
+(2013)
+76. Zhang, R., Liu, H.H.: Vision-based relative altitude estimation of small unmanned aerial vehicles in target localization. In: American Control Conference (ACC), 2011,
+pp. 46224627. IEEE (2011)
+77. Nourani-Vatani, N., Pradalier, C.: Scene change detection
+for vision-based topological mapping and localization. In:
+IEEE/RSJ International Conference on Intelligent Robots
+and Systems (IROS), pp. 37923797. IEEE (2010)
+78. Canny, J.: A computational approach to edge detection.
+Trans. Pattern Anal. Mach. Intell. 6, 679698 (1986)
+79. Caballero, F., Merino, L., Ferruz, J., Ollero, A.:
+Unmanned aerial vehicle localization based on monocular vision and online mosaicking. J. Intell. Robot. Syst.
+55(45), 323343 (2009)
+80. Lee, S.J., Kim, J.H.: Development of a quadrocoptor
+robot with vision and ultrasonic sensors for distance sensing and mapping. In: Robot Intelligence Technology and
+Applications 2012, pp. 477484. Springer (2013)
+
+166
+81. Engel, J., Sturm, J., Cremers, D.: Scale-aware navigation of a low-cost quadrocopter with a monocular camera.
+Robot. Autonom. Syst. 62(11), 16461656 (2014)
+82. Chowdhary, G., Johnson, E.N., Magree, D., Wu, A.,
+Shein, A.: Gps-denied indoor and outdoor monocular
+vision aided navigation and control of unmanned aircraft.
+J. Field Robot. 30(3), 415438 (2013)
+83. Zhang, X., Xian, B., Zhao, B., Zhang, Y.: Autonomous
+flight control of a nano quadrotor helicopter in a gpsdenied environment using on-board vision. IEEE Trans.
+Ind. Electron. 62(10), 63926403 (2015)
+84. Harmat, A., Trentini, M., Sharf, I.: Multi-camera tracking
+and mapping for unmanned aerial vehicles in unstructured environments. J. Intell. Robot. Syst. 78(2), 291317
+(2015)
+85. Bloesch, M., Omari, S., Hutter, M., Siegwart, R.: Robust
+visual inertial odometry using a direct ekf-based approach.
+In: IEEE/RSJ International Conference on Intelligent
+Robots and Systems (IROS), 2015, pp. 298304. IEEE
+(2015)
+86. Shen, S., Mulgaonkar, Y., Michael, N., Kumar, V.: Visionbased state estimation for autonomous rotorcraft mavs
+in complex environments. In: 2013 IEEE International
+Conference on Robotics and Automation (ICRA), pp.
+17581764. IEEE (2013)
+87. Troiani, C., Martinelli, A., Laugier, C., Scaramuzza,
+D.: Low computational-complexity algorithms for visionaided inertial navigation of micro aerial vehicles. Robot.
+Autonom. Syst. 69, 8097 (2015)
+88. Loianno, G., Watterson, M., Kumar, V.: Visual inertial
+odometry for quadrotors on se (3). In: 2016 IEEE International Conference on Robotics and Automation (ICRA),
+pp. 15441551. IEEE (2016)
+89. Loianno, G., Thomas, J., Kumar, V.: Cooperative localization and mapping of mavs using rgb-d sensors. In:
+2015 IEEE International Conference on Robotics and
+Automation (ICRA), pp. 40214028. IEEE (2015)
+90. Piasco, N., Marzat, J., Sanfourche, M.: Collaborative
+localization and formation flying using distributed stereovision. In: IEEE International Conference on Robotics and
+Automation. Stockholm (2016)
+91. Nieuwenhuisen, M., Droeschel, D., Beul, M., Behnke,
+S.: Obstacle detection and navigation planning for
+autonomous micro aerial vehicles. In: International Conference on Unmanned Aircraft Systems (ICUAS), pp.
+10401047. IEEE (2014)
+92. Schmid, K., Tomic, T., Ruess, F., Hirschmuller, H., Suppa,
+M.: Stereo vision based indoor/outdoor navigation for
+flying robots. In: IEEE/RSJ International Conference on
+Intelligent Robots and Systems (IROS), pp. 39553962.
+IEEE (2013)
+93. Heng, L., Meier, L., Tanskanen, P., Fraundorfer, F.,
+Pollefeys, M.: Autonomous obstacle avoidance and
+maneuvering on a vision-guided mav using on-board processing. In: IEEE international conference on Robotics
+and automation (ICRA), pp. 24722477. IEEE (2011)
+94. Magree, D., Mooney, J.G., Johnson, E.N.: Monocular
+visual mapping for obstacle avoidance on uavs. J. Intell.
+Robot. Syst. 74(12), 1726 (2014)
+95. Xiaoyi, D., Qinhua, Z.: Research on laser-assisted odometry of indoor uav with monocular vision. In: 3rd
+
+J Intell Robot Syst (2017) 87:141168
+
+96.
+
+97.
+
+98.
+
+99.
+
+100.
+101.
+
+102.
+
+103.
+
+104.
+
+105.
+
+106.
+
+107.
+
+108.
+109.
+
+110.
+
+Annual International Conference on Cyber Technology in
+Automation, Control and Intelligent Systems (CYBER),
+pp. 165169. IEEE (2013)
+Gosiewski, Z., Ciesluk, J., Ambroziak, L.: Vision-based
+obstacle avoidance for unmanned aerial vehicles. In: 4th
+International Congress on Image and Signal Processing
+(CISP), vol. 4, pp. 20202025. IEEE (2011)
+Yuan, C., Recktenwald, F., Mallot, H.A.: Visual steering of
+uav in unknown environments. In: IEEE/RSJ International
+Conference on Intelligent Robots and Systems (IROS), pp.
+39063911. IEEE (2009)
+Shah, S.I.A., Johnson, E.N.: 3d obstacle detection using a
+single camera. In: AIAA guidance, navigation, and control
+conference (AIAA), vol. 5678 (2009)
+Lee, J.O., Lee, K.H., Park, S.H., Im, S.G., Park, J.: Obstacle avoidance for small uavs using monocular vision.
+Aircraft Eng. Aeros. Technol. 83(6), 397406 (2011)
+Watanabe, Y., Fabiani, P., Le Besnerais, G.: Towards a uav
+visual air-to-ground target tracking in an urban environment
+Watanabe, Y., Lesire, C., Piquereau, A., Fabiani, P.,
+Sanfourche, M., Le Besnerais, G.: The onera ressac
+unmanned autonomous helicopter: Visual air-to-ground target tracking in an urban environment. In: American Helicopter Society 66th Annual Forum (AHS 2010) (2010)
+Jian, L., Xiao-min, L.: Vision-based navigation and obstacle detection for uav. In: International Conference on
+Electronics, Communications and Control (ICECC), pp.
+17711774. IEEE (2011)
+Byrne, J., Cosgrove, M., Mehra, R.: Stereo based obstacle
+detection for an unmanned air vehicle. In: IEEE International Conference on Robotics and Automation (ICRA),
+pp. 28302835. IEEE (2006)
+Yadav, V., Wang, X., Balakrishnan, S.: Neural network
+approach for obstacle avoidance in 3-d environments for
+uavs. In: American Control Conference, pp. 6pp. IEEE
+(2006)
+Srinivasan, M.V., Thurrowgood, S., Soccol, D.: An optical system for guidance of terrain following in uavs.
+In: International Conference on Video and Signal Based
+Surveillance (AVSS), pp. 5151. IEEE (2006)
+Hrabar, S., Sukhatme, G., Corke, P., Usher, K., Roberts,
+J.: Combined optic-flow and stereo-based navigation of
+urban canyons for a uav. In: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp.
+33093316. IEEE (2005)
+Olivares-Mendez, M.A., Mejias, L., Campoy, P., MelladoBataller, I.: Quadcopter see and avoid using a fuzzy controller. In: Proceedings of the 10th International FLINS
+Conference on Uncertainty Modeling in Knowledge Engineering and Decision Making (FLINS 2012). World Scientific (2012)
+Mohammed, A.D., Morris, T.: An improved camshift
+algorithm for object detection and extraction
+Ahrens, S., Levine, D., Andrews, G., How, J.P.: Visionbased guidance and control of a hovering vehicle in
+unknown, gps-denied environments. In: International
+Conference on Robotics and Automation (ICRA), pp.
+26432648. IEEE (2009)
+Shi, J., Tomasi, C.: Good features to track. In: Computer Society Conference on Computer Vision and Pattern
+Recognition (CVPR), pp. 593600. IEEE (1994)
+
+J Intell Robot Syst (2017) 87:141168
+111. Lucas, B.D., Kanade, T., et al.: An iterative image registration technique with an application to stereo vision. In:
+IJCAI, vol. 81, pp. 674679 (1981)
+112. Mcfadyen, A., Mejias, L., Corke, P., Pradalier, C.: Aircraft
+collision avoidance using spherical visual predictive control and single point features. In: IEEE/RSJ International
+Conference on Intelligent Robots and Systems (IROS), pp.
+5056. IEEE (2013)
+113. Kim, Y., Jung, W., Bang, H.: Visual target tracking and
+relative navigation for unmanned aerial vehicles in a gpsdenied environment. Int. J. Aeronaut. Space Sci. 15(3),
+258266 (2014)
+114. Price, A., Pyke, J., Ashiri, D., Cornall, T.: Real time
+object detection for an unmanned aerial vehicle using an fpga
+based vision system. In: International Conference on Robotics
+and Automation (ICRA), pp. 28542859. IEEE (2006)
+115. Jeon, B., Baek, K., Kim, C., Bang, H.: Mode changing
+tracker for ground target tracking on aerial images from
+unmanned aerial vehicles (iccas 2013). In: 13th International Conference on Control, Automation and Systems
+(ICCAS), pp. 18491853. IEEE (2013)
+116. Rodriguez, J., Castiblanco, C., Mondragon, I., Colorado,
+J.: Low-cost quadrotor applied for visual detection of
+landmine-like objects. In: International Conference on
+Unmanned Aircraft Systems (ICUAS), pp. 8388. IEEE
+(2014)
+117. Gu, A., Xu, J.: Vision based ground marker fast detection for small robotic uav. In: 5th IEEE International
+Conference on Software Engineering and Service Science
+(ICSESS), pp. 975978. IEEE (2014)
+118. Zou, J.T., Tseng, Y.C.: Visual track system applied
+in quadrotor aerial robot. In: 2012 Third International
+Conference on Digital Manufacturing and Automation
+(ICDMA), pp. 10251028. IEEE (2012)
+119. Teuliere, C., Eck, L., Marchand, E.: Chasing a moving
+target from a flying uav. In: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp.
+49294934. IEEE (2011)
+120. Zhou, J.: Ekf based object detect and tracking for uav by
+using visual-attention-model. In: International Conference
+on Progress in Informatics and Computing (PIC), pp. 168
+172. IEEE (2014)
+121. Watanabe, Y., Fabiani, P., Le Besnerais, G.: Simultaneous visual target tracking and navigation in a gps-denied
+environment. In: International Conference on Advanced
+Robotics (ICAR), pp. 16. IEEE (2009)
+122. Saif, A.S., Prabuwono, A.S., Mahayuddin, Z.R.: Real time
+vision based object detection from uav aerial images: A
+conceptual framework. In: Intelligent Robotics Systems:
+Inspiring the NEXT, pp. 265274. Springer (2013)
+123. Gaszczak, A., Breckon, T.P., Han, J.: Real-time people
+and vehicle detection from uav imagery. In: IS&T/SPIE
+Electronic Imaging, pp. 78,780B78,780B. International
+Society for Optics and Photonics (2011)
+124. Li, Z., Ding, J.: Ground moving target tracking control
+system design for uav surveillance. In: IEEE International
+Conference on Automation and Logistics, pp. 14581463.
+IEEE (2007)
+125. Maier, J., Humenberger, M.: Movement detection based
+on dense optical flow for unmanned aerial vehicles. Int. J.
+Adv. Robot. Syst. 10, 111 (2013)
+
+167
+126. Tarhan, M., Altug, E.: A catadioptric and pan-tilt-zoom
+camera pair object tracking system for uavs. J. Intell.
+Robot. Syst. 61(14), 119134 (2011)
+127. Majidi, B., Bab-Hadiashar, A.: Aerial tracking of elongated objects in rural environments. Mach. Vis. Appl.
+20(1), 2334 (2009)
+128. Liu, X., Lin, Z., Acton, S.T.: A grid-based bayesian
+approach to robust visual tracking. Digit. Signal Process.
+22(1), 5465 (2012)
+129. Candamo, J., Kasturi, R., Goldgof, D.: Using color profiles for street detection in low-altitude uav video. In: SPIE
+Defense, Security, and Sensing, pp. 73,070O73,070O.
+International Society for Optics and Photonics (2009)
+130. Pestana, J., Sanchez-Lopez, J.L., Saripalli, S., Campoy,
+P.: Computer vision based general object following for
+gps-denied multirotor unmanned vehicles. In: American Control Conference (ACC), pp. 18861891. IEEE
+(2014)
+131. Qadir, A., Semke, W., Neubert, J.: Vision based neurofuzzy controller for a two axes gimbal system with small
+uav. J. Intell. Robot. Syst. 74(34), 10291047 (2014)
+132. Mondragon, I.F., Campoy, P., Correa, J.F., Mejias, L.:
+Visual model feature tracking for uav control. In: IEEE
+International Symposium on Intelligent Signal Processing
+(WISP), pp. 16. IEEE (2007)
+133. Zhao, S., Hu, Z., Yin, M., Ang, K.Z., Liu, P., Wang, F.,
+Dong, X., Lin, F., Chen, B.M., Lee, T.H.: A robust realtime vision system for autonomous cargo transfer by an
+unmanned helicopter. IEEE Trans. Ind. Electron. 62(2)
+(2015)
+134. Cichella, V., Kaminer, I., Dobrokhodov, V., Hovakimyan,
+N.: Coordinated vision-based tracking for multiple uavs.
+In: IEEE/RSJ International Conference on Intelligent
+Robots and Systems (IROS), 2015, pp. 656661. IEEE
+(2015)
+135. Lin, S., Garratt, M.A., Lambert, A.J.: Monocular visionbased real-time target recognition and tracking for
+autonomously landing an uav in a cluttered shipboard
+environment. Autonom Robots, 121 (2016)
+136. Fu, C., Duan, R., Kircali, D., Kayacan, E.: Onboard robust
+visual tracking for uavs using a reliable global-local object
+model. Sensors 16(9), 1406 (2016)
+137. Tomic, T., Schmid, K., Lutz, P., Domel, A., Kassecker,
+M., Mair, E., Grixa, I.L., Ruess, F., Suppa, M., Burschka,
+D.: Toward a fully autonomous uav: Research platform for
+indoor and outdoor urban search and rescue. IEEE Robot.
+Autom. Mag. 19(3), 4656 (2012)
+138. Wang, T., Wang, C., Liang, J., Chen, Y., Zhang, Y.:
+Vision-aided inertial navigation for small unmanned aerial
+vehicles in gps-denied environments. Int. J. Adv. Robot.
+Syst. (2013)
+139. Zhao, S., Lin, F., Peng, K., Chen, B.M., Lee, T.H.:
+Homography-based vision-aided inertial navigation of
+uavs in unknown environments. In: AIAA Guidance, Navigation, and Control Conference (2012)
+140. Cocchioni, F., Mancini, A., Longhi, S.: Autonomous navigation, landing and recharge of a quadrotor using artificial vision. In: International Conference on Unmanned
+Aircraft Systems (ICUAS), pp. 418429. IEEE (2014)
+141. Carrillo, L.R.G., Flores Colunga, G., Sanahuja, G.,
+Lozano, R.: Quad rotorcraft switching control: An
+
+168
+
+142.
+
+143.
+
+144.
+
+145.
+
+146.
+
+147.
+
+148.
+
+149.
+
+150.
+
+151.
+
+152.
+
+J Intell Robot Syst (2017) 87:141168
+application for the task of path following. IEEE Trans.
+Control Syst. Technol. 22(4), 12551267 (2014)
+Lee, D., Kim, Y., Bang, H.: Vision-aided terrain referenced navigation for unmanned aerial vehicles using
+ground features. Proc. Inst. Mech. Eng. Part G: J. Aeros.
+Eng. 228(13), 23992413 (2014)
+Yol, A., Delabarre, B., Dame, A., Dartois, J.E., Marchand,
+E.: Vision-based absolute localization for unmanned aerial
+vehicles. In: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 34293434. IEEE
+(2014)
+Tardif, J.P., George, M., Laverne, M., Kelly, A., Stentz, A.:
+Vision-aided inertial navigation for power line inspection.
+In: 1st International Conference on Applied Robotics for
+the Power Industry (CARPI), pp. 16 (2010)
+Sanahuja, G., Castillo, P.: Embedded laser vision system
+for indoor aerial autonomous navigation. J. Int. Robot.
+Syst. 69(14), 447457 (2013)
+Tippetts, B.J., Lee, D.J., Fowers, S.G., Archibald, J.K.:
+Real-time vision sensor for an autonomous hovering
+micro unmanned aerial vehicle. J. Aeros. Comput. Inf.
+Commun. 6(10), 570584 (2009)
+Bosnak, M., Matko, D., Blazic, S.: Quadrocopter hovering using position-estimation information from inertial
+sensors and a high-delay video system. J. Intell. Robot.
+Syst. 67(1), 4360 (2012)
+Frew, E.W., Langelaan, J., Stachura, M.: Adaptive planning horizon based on information velocity for visionbased navigation. In: AIAA Guidance, Navigation and
+Controls Conference (2007)
+Bircher, A., Kamel, M., Alexis, K., Oleynikova, H.,
+Siegwart, R.: Receding horizon next-best-view??? planner
+for 3d exploration. In: 2016 IEEE International Conference on Robotics and Automation (ICRA), pp. 1462
+1468. IEEE (2016)
+Nuske, S., Choudhury, S., Jain, S., Chambers, A., Yoder,
+L., Scherer, S., Chamberlain, L., Cover, H., Singh, S.:
+Autonomous exploration and motion planning for an
+unmanned aerial vehicle navigating rivers. J. Field Robot.
+32(8), 11411162 (2015)
+Avellar, G.S., Pereira, G.A., Pimenta, L.C., Iscold, P.:
+Multi-uav routing for area coverage and remote sensing with
+minimum time. Sensors 15(11), 27,78327,803 (2015)
+Burri, M., Oleynikova, H., Achtelik, M.W., Siegwart,
+R.: Real-time visual-inertial mapping, re-localization and
+
+planning onboard mavs in unknown environments. In:
+IEEE/RSJ International Conference on Intelligent Robots
+and Systems (IROS), 2015, pp. 18721878. IEEE (2015)
+Christoforos Kanellakis is currently pursuing his Ph.D degree
+within the Control Engineering Group, Department of Computer Science, Electrical and Space Engineering, Lulea University of Technology (LTU), Lulea, Sweden. He received his
+Diploma from the Electrical & Computer Engineering Department of the University of Patras (UPAT), Greece in 2015. He
+currently works in the field of robotics, focusing on the combination of control and vision to enable robots perceive and
+interact with the environment.
+George Nikolakopoulos is Professor on Robotics and Automation at the Department of Computer Science, Electrical and
+Space Engineering at Lulea University of Technology, Lulea,
+Sweden. His work is focusing in the area of Robotics, Control Applications, while he has a significantly large experience
+in Creating and Managing European and National Research
+Projects. In the past he has been working as project manager and principal investigator in Several R&D&I projects
+funded by the EU, ESA, Swedish and the Greek National
+Ministry of Research. George is the coordinator of H2020ICT AEROWORKS project in the field of Aerial Collaborative
+UAVs and H2020-SPIRE project DISIRE in the field of Integrated Process Control. In 2013 he has established the bigger
+outdoors motion capture system in Sweden and most probably
+in Europe as part of the FROST Field Robotics Lab at Lulea
+University of Technology. In 2014, he has been nominated
+as LTUs Wallenberg candidate, one out of three nominations
+from the university and 16 in total engineering nominations in
+Sweden. In year 2003, George has received the Information
+Societies Technologies (IST) Prize Award for the best paper
+that Promotes the scopes of the European IST (currently known
+as ICT) sector. His publications in the field of UAVs have
+received top recognition from the related scientific community,
+while have been several times listed in the TOP 25 most popular publications in Control Engineering Practice from Elsevier.
+In 2014 he has received the 2014 Premium Award for Best
+Paper in IET Control Theory and Applications, Elsevier for the
+research work in the area of UAVs, His published scientific
+work includes more than 150 published International Journals
+and Conferences in the fields of his interest.
+
+

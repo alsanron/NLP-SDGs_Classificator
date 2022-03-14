@@ -1,0 +1,691 @@
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+
+Digital Banking Manifesto:
+The End of Banks?
+Alex Lipton, David Shrier, Alex Pentland
+Connection Science & Engineering
+Massachusetts Institute of Technology
+connection.mit.edu
+
+2
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+This paper is part of our financial technology innovation series:
+ Blockchain & Financial Services
+- 5th Horizon of Networked Innovation
+- Transactions, Markets & Marketplaces
+- Infrastructure (Identity, Data Security)
+ Mobile Money & Payments
+ Prediction Markets
+ Policy & Financial Technology
+ Digital Banking Manifesto
+
+Disclaimer
+The Massachusetts Institute of Technology may have financial or other relationships with one or more entities described in this
+document. No endorsement, implied or explicit, is intended by discussing any of the organizations or individuals mentioned
+herein, and is expressly disclaimed.
+
+ 2016 ALL RIGHTS RESERVED.
+
+3
+
+I.
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+Introduction
+
+"Banks are trying to be cool and hip and build super cool digital front ends... But its like
+putting lipstick on a pig - ultimately its still a pig and the new front end is still running into an
+awful digital back end."
+Mark Mullen, Chief Executive Atom, Durham, UK
+
+We are entering a new era of innovation that will reshape consumers relationships
+with their banks. In order to understand how banking will evolve in the digital age, it is
+important to understand its basic premise. While reasonable people can disagree about
+nuances, at heart, the art of banking is one of skillful record keeping in the double-entry
+general ledger. At micro level, banks can be thought of as dividend producing machines
+seeking deposits and issuing loans. At macro level, they are creators of credit money.1
+The main determinants of their quality and reliability are the amount of capital and the
+level of liquidity (essentially central bank money) they keep. In general, a bank would
+like to maintain the right levels of both  if it has too little, it becomes fragile, if it has
+too much, it becomes unprofitable and hence unable to fulfill its purpose of paying
+dividends. Some of the loans issued by the bank will be repaid as expected, and some
+will default. In general, when loans are repaid, the banks capital grows and when they
+default, the capital diminishes. If the banks capital falls below a certain fraction of its
+risk-weighted assets, the bank defaults. Good bankers differ from bad ones by their
+ability to attract a large pool of reliable borrowers, so that default levels stay close to
+their expected values. (Some defaults are inevitable and are accounted for by charging
+interest.) At the same time, good bankers need to attract long-term depositors and
+serve them well, so that depositors do not suddenly withdraw their deposits. If the latter
+were to happen, the bank can exhaust its liquid reserves and default through a different
+route. In principle, if its less liquid assets are sound, the central bank, which is called
+the lender of last resort for a reason, can come to the rescue and provide additional
+liquidity.
+
+ 2016 ALL RIGHTS RESERVED.
+
+4
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+It is clear from the above description that banking activity is mostly technological and
+mathematical in nature. Hence, it is well suited to be digitized, yet the prevalence of
+legacy systems and legacy culture inhibits banks from embracing innovation as much as
+they should in order to survive and thrive in the digital economy of the 21 century. The
+root causes of banking malaise should be obvious  old-fashioned banks are far behind
+the latest technological breakthroughs; they also have a poor handle of the risks on their
+books. While major industries, including retail, travel, communications, and mass media
+have undergone revolutionary changes in their business models in the last thirty years
+or so, banking remained static at its core, living on its past glories and ignoring the winds
+of changes. Existing banks suffer from numerous drawbacks, because competition
+among them is relatively weak. Moreover, their customers are generally not happy with
+the level of customer service they receive, besides, they are exposed to the risk of losing
+their deposits (above and beyond the regulatory guaranteed minimum) in the case of
+their banks default. Zero or negative deposit rates, which became prevalent in most
+developed countries in recent years, make keeping money in the bank both risky and
+unprofitable. Yet, at present, customers do not have viable alternatives.
+In addition, there are whole strata of people and SME, especially in developing countries,
+who are either underbanked or unbanked, due to the fact that traditional banking
+methods are not flexible enough either to solve the know your customer (KYC) problem
+for them or to assess their credit worthiness.
+Thanks to new developments in data technology and in mobile telecommunications
+adoption, we see the potential rise of a third wave of innovation in banking. We will
+outline in this paper the key features, benefits, and strategic imperative of the Digital
+Bank of the Future (DBF).
+To understand the opportunity that is promulgating this third wave, we define the first
+two waves of digital innovation in banking:
+First wave companies: the incrementalists
+Digital technologies have been entering the banking industry for years. However, they
+have been added incrementally to existing operations, either as an overlay or a minor
+extension. We term these the incrementalists or First Wave companies.
+
+ 2016 ALL RIGHTS RESERVED.
+
+5
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+In the mid 1970s, Citi began experimenting with the automated teller machine
+(ATM). Former MIT Chairman John Reed led the development of Citis efforts in this
+area, revolutionizing retail banking. The ATM story is a landmark study in corporate
+innovation. The concept was simple: deploy machines that could process transactions
+such as cash withdrawals and check deposits. What was revolutionary was what
+followed: banks historically had been open with limited daytime hours, say 9am 
+3pm, which was inconvenient for people who had a job. However, in the 1950s, most
+householders in the U.S. had a single earner, and the stay-at-home-wife was able to
+handle banking needs during the day. Mapping to a behavior change in society, as more
+and more women entered the workforce, the U.S. saw a rise in two-income households,
+which in turn led to a diminution in the ability of people to take advantage of daytime
+banking services. Thanks to computerized banking, executives could see exactly when
+people most needed to use banking services. Evening utilization of ATMs surged. Banks,
+in turn, then began extending their hours into the evening to accommodate the working
+professional. By 2014, there were 524,000 tellers in the U.S.2, up from 484,000 in 19853.
+Online banking, likewise, was piloted in the 1980s by Citi, Chemical Bank, through
+Minitel (France), and Prestel (UK), but didnt really take off until the 1990s in conjunction
+with soaring internet usage. Simple, browser-based tools gave consumers access
+to a number of key banking transactions such as money transfer, bank statements,
+and electronic bill payment. While the incumbent commercial banks initially were the
+purveyors of online banking, the rise of the internet also saw the rise of the internet
+bank  most prominently NetBank in 1996.
+Second wave companies: digital hybrids
+We term the Second Wave companies like NetBank to be Digital Hybrids. Frequently
+taking advantage of front end systems to better market and connect with consumers,
+they remain shackled by legacy back and middle office infrastructure, risk modeling
+systems, and sometimes labor models. Often these hybrid banks will have an
+incumbent bank as their backend.
+For example, Simple Bank was founded in 2009 with a number of innovations to
+streamline account management and costs, but uses The Bancorp as its backend.
+Other emergent hybrid banks such as Fidor Bank (Germany), Atom Bank (UK), LHV Pank
+(Estonia), and DBS Digibank (Singapore) enjoy purpose-built IT infrastructure that is 6080% less expensive to build, and 30-50% less expensive to maintain, than legacy banks.
+Headcount is considerably lower, about 10-15% the levels of a traditional bank.
+
+ 2016 ALL RIGHTS RESERVED.
+
+6
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+However, these digital hybrids still use centralized databases, cloud based storage and
+primitive user data protocols. They represent a bridge solution between the Main Street
+bank of yesterday and the fully digital bank of the future.
+Third wave companies: digital natives
+A new set of technologies is emerging that permit close integration with consumers
+lives, promise access to the 2.5 billion unbanked or underbanked consumers globally4,
+and greater financial flexibility to 45+ million underbanked Small & Medium-sized
+Enterprises (SMEs) around the world5.
+DBF will take advantage of these technologies and be designed around the needs of
+digital natives, the 50 and under crowd that grew up with computers as a daily part of
+their lives. For the millennials, a mobile-first strategy will drive ease of access and rapid
+adoption through seamless integration with their lives.
+Taking a breakthrough approach to data security, DBF will eschew a central data
+repository, easily attacked, in favor of a secure, encrypted, distributed data system.
+Personal data stores not only permit better digital walleting, but also greater security
+around personal biometric data which is integral to the digital banks security protocols.
+The new technology paradigm begs the question: what role do banks truly have in the
+new world? Have we reached the end of banks in the way we know them? Is it possible
+that fractional banking is on its last legs and the introduction of government issued
+digital cash which can be stored in a digital wallet outside the banking system will put
+the last nail in its coffin?
+We will now look at the key requirements for a digital bank from three perspectives:
+customer, investor, and the bank itself.
+
+ 2016 ALL RIGHTS RESERVED.
+
+7
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+II.	Key Requirements for a Digital Bank 
+Customers Perspective
+
+At a minimum, on the retail side, DBF should be able to do the following:
+
+
+Holistic & Customizable Experience Provide a holistic, interactive, and intuitive
+overview of the customers money and, more broadly, their financial life, including
+information on their current account and deposit balances, transactions, outstanding
+loans, recurring payments, pension contributions and accumulation as well as
+securities accounts. Tailor its services for different customer segments such as small
+and informal merchants, mass affluent, youth market, international travelers, or lowincome customers. Offer a trusted and relatively inexpensive source of credit for its
+customers;
+
+ 2016 ALL RIGHTS RESERVED.
+
+8
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+
+
+End-to-End Digital Provide a holistic fully digital experience for customers, including,
+paperless application and passing of the KYC (Know Your Client) process. Also
+provide an interactive and intuitive digital financial planner to organize customers
+financial life and optimize their resources: immediate cash flow requirements,
+savings, including tools for automatic savings, medical expenses, education,
+retirement, including robo-advisory with services previously accessible by high
+end investors only, investments, including tools for trading securities. Empower
+customers to electronically apply for mortgage or loan, competitive insurance
+contracts for home, liability, medical and travel insurance, with credit checking
+procedures expanded to social media. Provide reporting documentation related to
+bank activity, including tax statements, etc. Provide access to Personal Data Store
+(PDS);
+
+
+
+Mobile First Enable natively driven mobile e-payment solutions, including domestic
+and international payments and remittances, automatic bill payments, and peerto-peer (P2P) payments and money transfers. Rather than having mobile as an
+afterthought or an added capability, everything changes if you start with mobile
+and build out from there  not just UX but fundamental infrastructure and credit
+analytics;
+
+
+
+Foreign Exchange Deliver seamless and inexpensive foreign exchange services,
+including protection against exchange rate fluctuations by providing multi-currency
+accounts. Potentially, a full range of instruments for hedging against foreign
+exchange risk, including forward contracts, spot contracts, swaps, and exchange
+traded options can be offered;
+
+
+
+Biometrics Offer biometric technology such as face and voice biometrics, already
+actively used at airports and international border controls, as core credentials
+for customers with preference for biometrics to PIN or password as a way of
+authentication for logging in. Behavioral biometric, which is being developed at the
+moment, is a promising venue for achieving an extra degree of protection;
+
+
+
+E-Credit Card Implement bank e-credit card based on customers own preferences
+with pre-set limits and permitted transactions, consumption-related patterns, and a
+comprehensive digital wallet and PDS, which includes, at the minimum, electronic ID,
+e-card for secure online purchases, and tools to view, pay, organize, analyze, archive
+e-bills, and generate relevant tax documents;
+
+
+
+Access to P2P World Provide access to crowd-everything including P2P payment
+and lending opportunities.
+
+ 2016 ALL RIGHTS RESERVED.
+
+9
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+III.	Key Requirements for a Digital Bank 
+Investor Perspective
+
+Digital bank is an exciting investment opportunity and inevitable business step because
+legacy banks are no longer able to adequately service their customers' needs in the
+digital age. Customer requirements simply cannot be met by traditional banks unable
+to catch up with the digital revolution. With neither real estate overhead, nor massive
+maintenance spending on legacy IT systems, digital banks expect to grow multibillion
+dollar balance sheets in several years of operations with the fraction of full time staff
+compared to traditional banks. For instance, Atom Bank in the UK intends to grow into
+a 5 billion balance sheet business in five years with just 340 full time staff, while legacy
+bank Metro has that size balance sheet with 2,200 people. It is clear, however, that the
+majority of digital banks' staff will be engineers and data scientists, although, as always,
+the role of sales and marketing should not be underestimated.
+
+ 2016 ALL RIGHTS RESERVED.
+
+10
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+Monetization and capturing value
+Compared to legacy banks, digital banks can generate value in numerous ways:
+
+
+Digital Payments Digital payments form the core of monetization. They include
+mobile and online payments, both domestic and foreign, as well as mobile P2P
+interactions. Digital payments enable banks to boost fees and interest income and
+reach a broader set of customers with more diverse services; they are done more
+cost effectively than by incumbent banks, allowing market share gains through
+competitive pricing and/or accessing 2.5bn unbanked & underbanked;
+
+
+
+Digital wallet Digital wallet is essential for digital commerce and ecosystems built
+on value-added services. In addition, it optimizes transaction costs for customers
+and funding costs for banking operations;
+
+
+
+Digital Sales & Banking Products Artificial intelligence (AI) assisted sales of banking
+products, such as deposits, loans, and mortgages are conducted through direct
+channels, including social media. That is in line with shifting consumer preferences
+and behavior trends in e-commerce, especially directed at Generation Y and techsavvy customers;
+
+
+
+Multichanneling An integrated and seamless multichannel approach to sales
+increases the banks share of customers wallet, boosts customer loyalty, thereby
+making a significant difference in customer adoption rates;
+
+
+
+Digital Financial Planner & Roboadvisory AI-based digital financial planner
+manages monthly income, recurring payments, savings and investments, increasing
+interaction between the digital bank and customers. The bank acts as a trusted
+shepherd defining customer life-cycle financial needs. Logical continuation of the
+circle of trust between the digital bank and customers, where customers rely on the
+Roboadvisory services to optimize investment portfolios based on individual goals
+and preferences, regularly adjust them and record incremental results and properly
+allocate resources for each phase of the customers voyage towards all things digital;
+
+
+
+Smart Big Data Advanced analytics allows the digital bank to transform its data into
+more personalized client service aimed at data monetization;
+
+
+
+SME Upside AI- and big-data based credit models enabling risk-managed provisioning
+of credit access to SMEs, banking the 45 million underbanked SMEs globally. By
+2018, banks in Scandinavia, the United Kingdom, and Western Europe are forecast
+to have half or more of new inflow revenue coming from digital related activities in
+most products, such as savings and term deposits, and bank services to SMEs6.
+ 2016 ALL RIGHTS RESERVED.
+
+11
+
+IV.
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+Key Requirements for a Digital Bank  Banks Perspective
+
+"Banks are mired in the legacy of old IT systems that are bad... The first automated
+banking system was introduced by Coutts in 1967. The joke is that they are still running
+on it today. The only saving grace is that banks are not unique in this respect. For
+instance, as was revealed by a recent government report, the US nuclear weapons force
+still relies on a 1970s-era computer system and 8-inch floppy disks.
+
+By its very nature, a digital bank has to be a cross between a Fintech company and
+a bank. While a digital bank, similarly to a conventional one, can be organized into
+five divisions: Retail Banking, Private and Business Banking, Analytics and IT, Finance
+Management and Operations, and Risk Management, the relative importance of these
+departments is not the same. Moreover, the relationship map between various divisions
+is different in digital and legacy banking, with analytics and IT being the cornerstone of
+the digital banking edifice. In general, success and failure of a bank is measurable by
+technologies and analytical methods adopted rather than by its product line.
+
+ 2016 ALL RIGHTS RESERVED.
+
+12
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+
+
+Novel IT Infrastructure Building a digital bank from scratch enables to create a
+flexible IT infrastructure, which provides state of the art risk management, helps to
+optimize the banks balance sheet to achieve return on capital significantly higher
+than return of the incumbents, and guarantees compliance with constantly changing
+banking regulations in real time, which is achieved via building modern RegTech
+capabilities.
+
+
+
+Database Design The bank IT is based on the state-of-the-art database technology,
+which can cope with the exponential growth in data, new internet technologies and
+analysis methods. This technology is expected to be based on distributed ledger
+framework.
+
+
+
+Advanced Data Analytics Since banks own rich reserves of raw behavioral
+data, which can provide valuable insights into future customer choices, the value
+proposition offered by digital banking can be extended. Following the example of
+Internet powerhouses, such as Google, Amazon, Alibaba, and Facebook, the bank
+should consolidate data across deposits, consumer finance, and other transaction
+accounts for a unified view of customer activities. For instance, customers instore payments are far more accurate than conventional profile data (for example,
+age, income, geography) in predicting their future financial activities and credit
+worthiness; their geospatial mobility among stores providing extra improvements.
+In addition, using customer data, digital banks can create offerings ranging from
+payment solutions and information services, savings and deposit-taking right
+through to online banking, advisory services, and simple financing. It is imperative
+to be able to evaluate collected customer transactions in real time and connect
+them for prediction of future customer behavior using deep learning and other
+probabilistic algorithms. It is important to build in safeguards of customer privacy in
+accordance with their preferences and legal requirements.
+
+
+
+Artificial Intelligence Autonomous selection of best methodology when presented
+with arbitrary data enables banks to dynamically adopt to novel information and
+build a full financial profile of its customers, including credit worthiness, debt
+capacity, and risk appetite for financial planning. In addition, AI can rapidly adapt to
+customer needs and present the best offers at the right time, changing dynamically
+as the customer evolves. A smart bank can more rapidly capitalize on shifts in a
+customers life cycle and assist them in achieving their financial goals.
+
+ 2016 ALL RIGHTS RESERVED.
+
+13
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+
+
+Full-Stack Business Model The full-stack business model is crucial to the total client
+experience. This approach facilitates the bank's compliance with the regulatory
+framework, which enforces money laundering and fraud prevention and guarantees
+customers protection. In general, intelligent fraud detection and remediation
+systems can function in a far more superior fashion than conventional methods.
+
+
+
+Security and Discretion If implemented correctly, bulletproof security and customer
+protection is the area of a great competitive advantage for digital banks compared
+to other financial service providers. These features are embedded in a secure IT
+architecture from the onset and preclude both data misuse and data sales to third
+parties. They naturally include implementation of new cryptographically secured
+distributed data management 7.
+
+ 2016 ALL RIGHTS RESERVED.
+
+14
+
+V.
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+Digital Customer Segment
+
+Digital banks have several natural constituencies in both developed and, especially,
+developing economies 8:
+ Professional consumers with at least an undergraduate college education;
+ Digitally educated middle upper-mass and mass-affluent professional and managerial
+consumers;
+ Digitally savvy Gen Y (students and young professionals in their 20s to 30s) digitalbanking natives, who are exceedingly digitally savvy. They will form the foundation of
+the customer base for the digital bank;
+ SMEs that go mainstream using a digital banking platform designed for their needs;
+potentially banking 45 million underbanked or unbanked SMEs globally 9.
+
+ 2016 ALL RIGHTS RESERVED.
+
+15
+
+VI.
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+Unleashing Digital Currency
+
+Digital banking of the future is unimaginable without using digital currency 10. Currently,
+both central and private banks are actively pursuing creation of digital currencies. Some
+considerations for this dimension:
+ N
+ on-Bank Digital Currencies While the best known digital currency is Bitcoin, its not
+suited for high volume transactions because of its low transactions per second (TPS)
+capacity. It is likely that other digital currencies based on consensus achievable by
+means other than proof-of-work will be used in digital banking. One should not forget
+that Bitcoin is not the first digital currency to emerge, nor is it going to be the last. In
+fact, it is possible that digital cash invented by David Chaum more than thirty years
+ago can see a comeback at the next level of efficiency.
+ C
+ entral Bank Digital Currencies Several central banks are investigating whether a
+state-backed digital currency could reduce capital outflow, money laundering and tax
+evasion, and make economic activity more transparent and efficient. For instance,
+PBOC, BoE and Bank of Russia are all actively looking in this direction. In this scenario,
+the free (or very inexpensive) deposits that commercial banks have been benefiting
+from will evaporate.
+ P
+ rivate Bank Digital Currencies The idea of banks issuing their own currency is very
+old. For instance, dozens of banks in the United States were doing so in the nineteenth
+century. Advances in digitization made this idea viable again. For example, Bank of
+Tokyo Mitsubishi UFJ (MUFJ) is developing its own digital currency, MUFG coin, and
+the corresponding smartphone application prototype to authenticate digital tokens
+on a P2P platform. The bank expects to rein in financial transactional costs, including
+cheaper international remittance and money transfers. Moreover, in the future the
+bank might potentially issue its digital currency to customers.11
+ D
+ istributed Ledger Using distributed ledger reduces financial transaction costs,
+improves resilience of the system as a whole, and mitigates operational risks. Without
+doubt, distributed ledger will become intertwined with operational procedures of a
+digital bank and its interactions with other digital, legacy and central banks.
+
+ 2016 ALL RIGHTS RESERVED.
+
+16
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+VII. Ecosystem
+It is natural to expect that a well-designed digital bank will become the corner stone of a
+much bigger financial ecosystem. As important constituent parts of such an ecosystem,
+one can think of such digital service providers as insurers, brokers, wealth managers,
+robo-advisors, credit card issuers, cross-border payment providers, currency exchanges,
+P2P lenders, etc. The ability of these companies to satisfy the financial needs of their
+clients will be greatly enhanced by their access to a wider financial system through the
+digital bank. At the same, the bank will benefit by getting additional information about
+their customers demands and habits, thus closing the information feedback loop 12.
+Moreover, digital cash issued by the bank can serve as a lubricant allowing the wheels
+of commerce to spin faster and much more efficiently than is currently possible. It is
+possible to imagine a digital bank of the future in the center of the internet of things
+(IoT), which can be thought of as the bank of things (BoT). For instance, if a banks
+client house informs him or her that the roof needs repairs, the bank can immediately
+recommend several contractors, organize bids, help the client to choose the most
+suitable one, and arrange financing. Thus, in addition to financial businesses, a digital
+bank of the future can incorporate into its ecosystem various non-financial actors. All
+these developments will enhance social utility of the bank and its appreciation by the
+public while, at the same time, increasing its profitability. Banks have to keep in mind
+that there is no time to lose, because the competition for their customers' digital wallet
+from current digital champions, such as Google, Amazon, Facebook and Alibaba, will be
+fierce.
+
+ 2016 ALL RIGHTS RESERVED.
+
+17
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+VIII. Beyond Banks
+The unsatisfactory state of affairs with existing banks opens a unique opportunity for
+building a digital bank from scratch. Such a bank will fulfill its mission by utilizing the
+most advanced technologies, including cryptography and distributed ledger techniques,
+artificial intelligence, big data, and deep learning. From the very beginning, it will be
+based on balance sheet optimization, deployment of digital distributed ledger-inspired
+infrastructure, and comprehensive automation and digitization of the middle and back
+office, as well as a heightened security employing the most advanced cryptographic
+techniques throughout the entire organization. By design, this bank will be highly
+efficient, profitable and agile. In addition, its infrastructure will be flexible enough to
+handle both private digital currencies (such as Bitcoin) and potential government issued
+currencies (such as Britcoin). If so desired, this bank will be capable of issuing its own
+digital currency. The bank will liberally apply artificial intelligence and big data analytics
+for creating unparalleled customer experience, automating personal and SME credit
+issuance, and improving risk management. By design, such a bank will be valued by
+investors, customers, and regulators alike.
+And yet, by building a bank, are we trapped in the old paradigm?
+If you look at WeChat or Sesame, you will see what is scaring the C-level of even leading
+edge companies like Facebook and Google, to say nothing of the fright induced at
+leading telecommunications companies. Perhaps surprisingly, many legacy banks seem
+to be more sanguine. WeChat is redefining what financial services means in relation to
+the broader suite of consumer services individuals engage with.
+The key is having customer-centric data across all areas of life, held in standard format
+with standard APIs that work across all the entire digital ecosystem and not just its
+financial services or products corner (like a universal PDS, but customers don't own or
+manage it; they do). Using this central, panoptic data, WeChat can integrate services
+from the whole range of life opportunities (entertainment, work, finance, family, etc.) in
+a seamless and consistent manner.
+What this gives customers is fully integrated payments, credit and banking, unbelievable
+advising capability and amazing KYC and AML, all in a form that is completely
+transparent. Consumers dont need to know that payments are different from credit or
+from banking or from shopping in general. Users just wander around online and inperson, finding interesting things and buy, sell and trade seamlessly. WeChat or Sesame
+is also integrating health, lifestyle and employment services with money services completely transparently; no separate apps of web pages. You can just take care of what
+you need to live a better life. However, this is conditional on consumers ability to secure
+credit as necessary. Given the rather uncertain and limited capacity of P2P networks to
+provide credit, digital banks have to come to the rescue.
+ 2016 ALL RIGHTS RESERVED.
+
+18
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+A similar future is unfolding for SMEs: customers are shepherded to buy and money
+flow issues like credit, payments, KYC and AML go away virtually completely. WeChat
+reportedly reached over one million SMEs integrated into their services in the first few
+months of operations.
+Is there a future that is NO banking versus digital banking? Instead, banking functions
+are just integrated invisibly everywhere. Several immediate challenges come to mind
+with this model:
+ Due to the special and unique role of banks in credit money creation, non-bank actors
+simply do not have necessary capacity to satisfy the financial needs of their customers;
+ There are numerous constraints around offering banking services that may be too
+limiting for companies in western Europe and the US. If China begins to adopt more
+restrictive financial regulations to better protect consumers, they too will create a less
+hospitable business environment for these kinds of services.
+ Will WeChat (or the next WeChat) want to take its high flying tech company stock
+market multiple, and burden it with a financial services discount 13? The more
+successful it gets at financial services, the more acute this question becomes.
+However, if financialization of a tech company is done in a deliberate and measured
+way, it can actually increase the shareholder value.
+Despite these challenges, is there a model that we could call invisible banking that
+integrates into our daily lives without friction? The answer is yes and no  the legacy
+banking model will unquestionably disappear over time, but in the transition period,
+digital banks will have a role in daily life for the foreseeable future as transaction
+lubricants and enablers.
+
+ 2016 ALL RIGHTS RESERVED.
+
+THE FINANCIAL WORLD
+IS FOCUSED ON FINTECH.
+ARE YOU?
+If you dont want to get left behind, consider updating your
+expertise and upskilling yourself with this 12-week online
+certificate course from MIT.
+
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+
+Fintech certificate course: Future Commerce
+Presented in collaboration with leaders in online education, GetSmarter.
+
+DOWNLOAD COURSE INFO PACK
+getsmarter.mit.edu
+
+You need to understand what's going on in this
+highly chaotic environment. And we can help.
+DAVE SHRIER - MANAGING DIRECTOR, MIT CONNECTION SCIENCE; LEAD INSTRUCTOR
+
+ 2016 ALL RIGHTS RESERVED.
+
+Massachusetts Institute of Technology | School of Architecture + Planning
+
+PAGE 19
+
+20
+
+DIGITAL BANKING MANIFESTO: THE END OF BANKS?
+
+REFERENCES
+1
+
+ . Lipton (2016), Modern monetary circuit theory IJTAF. This paper provides detail explanation of how money is created
+A
+and destroyed by the banking system as a whole and by individual banks. It also shows that individual banks become
+naturally interconnected in the process.
+
+2
+
+ ureau of Labor Statistics (2015), "Occupational Outlook Handbook" http://www.bls.gov/ooh/office-and-administrativeB
+support/tellers.htm
+
+3
+
+ . Florian (2004), "The Money Machines The humble ATM revolutionized the way we deal with money and turned global
+E
+commerce into a 24/7 affair. You can thank a Texan named Don Wetzel--and the blizzard of 1978" http://archive.fortune.
+com/magazines/fortune/fortune_archive/2004/07/26/377172/index.htm
+
+4
+
+ haia I, Goland T, Schiff R (2010) Counting the Worlds Unbanked http://www.mckinsey.com/industries/financialC
+services/our-insights/counting-the-worlds-unbanked
+
+5
+
+IFC Advisory Services (2011) Access To Credit Among Micro, Small, And Medium Enterprises http://www.ifc.org/wps/
+wcm/connect/1f2c968041689903950bb79e78015671/AccessCreditMSME-Brochure-Final.pdf?MOD=AJPERES
+
+6
+
+H. Broeders and S. Khanna (2015), Strategic choices for banks in the digital age, McKinsey & Company
+
+7
+
+ . Prisco (2015) " Enigma, MIT Media Labs Blockchain-based Encrypted Data Marketplace, to Launch Beta" https://
+G
+bitcoinmagazine.com/articles/enigma-mit-media-lab-s-blockchain-based-encrypted-data-marketplace-to-launchbeta-1450810499
+
+8
+
+ or example, in Asia the number of potential digital-banking consumers could be as high as 1.7 billion by 2020, see J.
+F
+Chen, V. HV, K. Lam (2015), How to prepare for Asias digital-banking boom, McKinsey & Company
+
+9 D. Shrier, J. Larossi, D. Sharma and A. Pentland (2016) "Blockchain & Transactions, Markets and Marketplaces" http://
+resources.getsmarter.ac/other/the-mit-report-on-blockchain-part-2/
+10 D. Shrier, G. Canale and A. Pentland (2016) "Mobile Money & Payments: Technology Trends" http://resources.
+getsmarter.ac/other/mobile-money-payments-technology-trends-an-mit-white-paper/
+11
+
+ . Das (2016) "Japanese Banking Giant Reveals Plans for a Digital Currency" https://www.cryptocoinsnews.com/
+S
+japanese-banking-giant-reveals-plans-for-a-digital-currency/
+
+12
+
+It is necessary to provide customers with proper privacy safeguards.
+
+13
+
+It is possible that both tech premium and financial discount are temporary in nature.
+
+ 2016 ALL RIGHTS RESERVED.
+
+

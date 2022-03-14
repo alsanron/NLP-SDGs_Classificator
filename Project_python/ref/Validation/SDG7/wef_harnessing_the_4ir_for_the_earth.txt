@@ -1,0 +1,1519 @@
+Fourth Industrial Revolution for the Earth Series
+
+Harnessing the Fourth
+Industrial Revolution
+for the Earth
+In collaboration with PwC and Stanford Woods Institute for the Environment
+November 2017
+
+Harnessing the Fourth Industrial Revolution for the Earth is
+published by the World Economic Forums System Initiative
+on Shaping the Future of Environment and Natural Resource
+Security in partnership with PwC and the Stanford Woods
+Institute for the Environment. It was made possible with
+funding from the MAVA Foundation.
+About The Fourth Industrial Revolution for the Earth
+series
+The Fourth Industrial Revolution for the Earth is a
+publication series highlighting opportunities to solve
+the worlds most pressing environmental challenges by
+harnessing technological innovations supported by new and
+effective approaches to governance, financing and multistakeholder collaboration.
+About the World Economic Forum
+The World Economic Forum is an independent international
+organization committed to improving the state of the world
+by engaging business, political, academic and other leaders
+of society to shape global, regional and industry agendas.
+World Economic Forum
+91-93 route de la Capite
+CH-1223 Cologny/Geneva
+Switzerland
+
+World Economic Forum
+ 2017  All rights reserved.
+No part of this publication may be reproduced or
+Transmitted in any form or by any means, including
+Photocopying and recording, or by any information Storage
+and retrieval system.
+REF 211117 - case 00035532
+
+Contents
+
+About The Fourth Industrial
+Revolution for the Earth initiative
+
+4
+
+Foreword
+
+5
+
+Humanitys current challenge
+
+The World Economic Forum, with support from the MAVA Foundation, is
+providing its global platform for public-private cooperation and its Center
+for the Fourth Industrial Revolution in San Francisco to advance a major
+initiative  The Fourth Industrial Revolution for the Earth.
+
+5
+
+A planet under stress
+
+6
+
+Facing the future
+
+7
+
+In search of new
+approaches
+
+8
+
+The Fourth Industrial Revolution
+
+10
+
+A revolution for the environment
+10
+
+In transport
+
+10
+
+Through connected
+products and services
+
+10
+
+In product traceability
+
+10
+
+On the blockchain
+
+11
+
+In monitoring greenhouse
+gas emissions
+
+11
+
+In understanding the
+value of our biodiverse
+inheritance
+
+12
+
+Risks as well as opportunities
+
+13
+
+Building the right enabling
+environment is critical
+
+14
+
+Acknowledgements
+
+15
+
+Annex I  Fourth Industrial
+Revolution technology clusters
+most relevant for environmental
+applications
+
+16
+
+Annex II  The Fourth Industrial
+Revolution for the Earth
+initiative
+
+17
+
+Endnotes
+
+This initiative will enable leading environment experts and technology
+innovators  drawn from across governments, international organizations,
+civil society, business, research, science and start-up communities
+ to form unique partnerships that identify, co-design and test policy
+innovations and technology applications for improving the worlds
+environment and addressing natural resource security. The project will
+shape an agenda for how companies, governments and international
+institutions better understand and manage nature and the worlds natural
+resources, making use of the latest science and technology for the benefit
+of all.
+The initiative is in collaboration with PwC as official project adviser and
+Stanford University Woods Institute for the Environment as knowledge
+partner. It also works closely with leading issue experts and industry
+innovators from around the world, convened through the Forums System
+Initiative and Global Future Council on Environment and Natural Resource
+Security.
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+3
+
+Foreword
+
+Dominic Waughray
+Head of PublicPrivate Partnership
+and Member of
+the Executive
+Committee, World
+Economic Forum
+
+Celine Herweijer
+Partner, Innovation
+and Sustainability,
+PwC UK
+
+Jim Leape
+William and Eva
+Price Senior Fellow,
+Co-Director, Center
+for Ocean Solutions,
+Stanford University
+
+Just one of todays standard tablet devices possesses the equivalent processing power of more than
+5,000 desktop computers from the mid-1980s, the height of the NASA Space Shuttle programme.
+Storing 1GB of data in 1997 would have cost you more than $10,000 a year; today it costs you
+approximately $0.03. In 2001, the first human genome was sequenced. It took more than a decade
+and cost $2.7 billion. Today, a genome can be sequenced in a few hours and for less than a
+thousand dollars.1 The first App appeared in 2008 when Apple founder, Steve Jobs, enabled outside
+developers to create applications for the iPhone. Today, not even a decade later, the app economy is
+worth $1.3 trillion, more than the total revenue for the global pharmaceutical market. WhatsApp, which
+was created in 2009, sends 55 billion messages a day.2 News about everything from celebrity gossip
+to bad air quality now travels fast, and globally.
+The Forum has termed this period of accelerating innovation in science and technology  the
+transformative change in data and technology capabilities combined with a merging of digital, physical
+and biological realms  and its impact on society as the Fourth Industrial Revolution. It is not only
+transforming social networks and scientific research, it is also radically reshaping the agenda for
+industries, governments and the international community.
+In the same way that the Fourth Industrial Revolution is reshaping healthcare, mobility and education
+systems worldwide, it can reshape how the environmental community and its related institutions
+work. Scientists tell us we are facing more, and more urgent, global environmental challenges than
+ever before. This is despite all the international environmental agreements that have been established
+since the 1970s. Environmental professionals are aware they cannot be complacent. The policybased and institutional approaches that worked 40 years ago are necessary, but no longer appear
+sufficient on their own to manage our growing environmental challenges. While their goals and targets
+are often sound, their ability to deliver the environmental outcomes required needs to be augmented.
+As a result, there is increasing interest, and great potential, in exploring how the science, data and
+technology innovations driving the Fourth Industrial Revolution could also be applied to improving
+environmental and natural resource management arrangements. This includes through technology
+and systems innovations that we might not yet even be able to imagine. If technology is starting to
+transform how we look after our health, surely it can also be harnessed to help transform how we
+look after our environment. For example, where is the wearable tech for measuring not only a persons
+heart rate, but also the quality of the air they breathe?
+There is also a growing realization that these rapid advances in science and technology could also
+have unintended negative consequences on nature and people, which will need to be recognized,
+managed and avoided. With new technology comes the need for improved and more agile
+governance. For the Fourth Industrial Revolution to be the first fully sustainable industrial revolution,
+an effective enabling environment (approaches that help governments create smart safeguards,
+protocols, policies, and effective oversight and recourse mechanisms) needs to be put in place to
+avoid any unintended consequences and to ensure that society and nature benefit from this revolution.
+For example, if there were wearable sensors to measure the quality of the air people breathe, then
+who would control access to the data that was collected and how would it be used?
+Governments, civil society and industry have important roles to play to help answer these questions,
+and develop principles and usage guidelines. A means of bringing stakeholders together to
+co-develop ways that make the most of these science and technology developments is needed.
+These will need to help us better understand and manage nature and our environment and avoid
+creating negative or unforeseen outcomes. This focus on developing policy principles must run
+alongside, and interact with, any acceleration programmes that promote the innovation and wider
+deployment of science and technology for environmental management.
+This is the heart of the challenge. In practical terms, how can the environmental sector be helped to
+harness the science and technology revolution that is reshaping our wider economy and society so
+that current arrangements can be enhanced to better manage the environmental systems that sustain
+planet earth, given the increasing pressure nature faces from human activity? At the same time, how
+can policy principles and protocols be developed for use across the environmental sector so that risks
+from these new technologies to individuals, society or the environment itself are minimized and the
+opportunities maximized.
+
+4
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+Humanitys current challenge
+
+The great acceleration in human activity, particularly during
+the 20th century, has delivered exponential economic
+growth. Real output grew five-fold in the four centuries
+to 1900, before accelerating more than 20-fold in the
+20th century.3 The last 60 years, and the last 25 years in
+particular, have witnessed a further acceleration in human
+economic activity. Projections suggest that global economic
+growth will average approximately 3% per annum in coming
+decades. Although some economic commentators view this
+as a slow growth world, this would still create a 20-fold
+increase in the human economic footprint by the end of the
+21st century, while a 4% growth rate would yield a 50-fold
+increase.4
+Previous economic growth has delivered impressive
+improvements in human welfare. For example, since 1990
+the world has reduced the number of people living on less
+than $1.25 a day by one-half5, and witnessed approximately
+700 million more people move into the rapidly expanding
+global middle classes.6 The world is on track to meet the
+(Organisation for Economic Co-operation and Development)
+OECDs 2010 forecast that the global middle class could
+double by 2020 and triple by 2030.7
+Human success in reducing global poverty levels and
+expanding the middle class since the early 1990s has
+also spurred a wider economic power shift in the global
+economy.8 Emerging economies now account for more
+than 40% of global GDP, doubling their share since 1990.
+Analysts forecast that the emerging middle-income
+economies and their rising middle classes could account for
+close to 60% of global GDP by 20509; and more specifically,
+that almost one-half the worlds GDP growth to 2025 will
+come from 440 cities in emerging markets  cities such as
+Kumasi (Ghana), Porto Alegre (Brazil) and Tianjin (China).10
+
+A planet under stress
+From an anthropocentric perspective, the last century
+(particularly the last few decades) of human existence
+has marked a very successful period for population and
+economic growth.15 The recent past in particular, is a history
+of markets working, as technologies have driven progress
+and real commodity prices have fallen, despite a 20-fold
+increase in demand of some resources.16 Based on the
+human experience to date, no one seems to seriously doubt
+the ingenuity of humans to meet the growth challenges
+being forecast to 2030 and beyond. A world of continued
+economic growth at levels of approximately 3% seems
+achievable, if not a little lacking in ambition.
+Yet, from an Earth systems perspective, the human success
+story is not so positive.
+Underpinning these extraordinary human advances has
+been the consistently steady state of the Earths global
+environmental systems provided by the so called Holocene
+equilibrium. Global patterns of temperature, precipitation,
+seasonality, and the overall health of our atmosphere,
+cryosphere, hydrosphere and biosphere, have remained
+predictable for much of the last 10,000 years. During this
+period, they have functioned within a Goldilocks zone
+ not too hot and not too cold  for humans.17 This has
+provided a bio-physical environment conducive for humanity
+to flourish. In the success story to date of human economic
+history, the stability of global environmental systems has
+been taken for granted, as if they will never, and can never,
+be changed.18
+
+Many argue that rapid urbanization has been the key to
+this economic success story. The speed and scale of
+the shift in human existence from rural to urban living for
+todays millennial generation is extraordinary.11 In 1990,
+approximately 2 billion people lived in an urban environment;
+by 2014 this figure had almost doubled. By 2030, this
+figure is forecast to be 5 billion.12 Today, there are 1,040
+cities worldwide with more than 500,000 inhabitants, and
+37 mega-cities with more than 10 million inhabitants.13 The
+extraordinary difference in how most humans experience
+their existence today, compared to even 1990 is profound,
+especially when we consider that more than 40% of the
+worlds population is under 25.14
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+5
+
+Yet, the footprint of human impact on the Earths global
+systems (particularly since the great acceleration of the
+last 40 years) has generated much scientific concern.
+Advances in recent decades in scientific monitoring and
+data collection, processing and modelling has enabled
+scientists to better assess and forecast the impact of human
+development on environmental systems.19
+The findings are worrying. As a result of the historical,
+cumulative human footprint, many scientists research
+suggests that the Earth could be entering a period of
+unprecedented environmental systems change.20
+
+
+
+
+
+
+
+
+
+
+
+
+
+Greenhouse gases. Todays greenhouse gas levels
+may not have been seen for at least 3 million years.21
+Biodiversity. The Earth is rapidly losing its biodiversity
+at mass extinction rates, such that 70% of its genetic
+biodiversity has become extinct.22
+Deforestation. Current deforestation rates in the
+Amazon Basin could lead to an 8% drop in regional
+rainfall by 2050, triggering a shift to a savannah state,
+with wider consequences for the Earths atmospheric
+circulatory systems.23
+Oceans. The chemistry of the oceans is changing
+faster than at any point in perhaps 300 million years
+because of the annual absorption of approximately
+33% of anthropocentric greenhouse gas pollution.24
+The resulting acidification and rising temperatures of the
+ocean is having an unprecedented impact on corals and
+fish stocks.25
+Ice fields. Polar and glacial ice fields are retreating at
+an alarming rate with potentially calamitous knock-on
+effects for the wider water and climate systems.26 The
+Arctic is now the fastest-warming region on the planet
+and the resultant warmer air and water at the North
+Pole is disturbing the predictability of the Gulf and the
+Jet streams,27 which help to regulate the Earths climatic
+circulatory system.
+Nitrogen cycle. We are suffering from arguably the
+largest and most rapid impact on the nitrogen cycle
+for some 2.5 billion years, as widespread nitrogen and
+phosphate pollution from poorly applied fertilizer has
+washed into seas. This has affected fish stocks and
+created so-called dead zones in 10% of the worlds
+oceans.28
+Water cycle. The global water cycle is facing
+similarly severe impacts through over abstraction and
+uncontrolled pollution, with related analysis suggesting
+that the world may face a 40% shortfall in the freshwater
+needed to support the global economy by 2030.29
+
+These are wide-ranging and serious impacts on the Earths
+systems resulting from human activity. Scientists are also
+concerned that these impacts might even interconnect to
+trigger cascading negative feedback loops, which could
+flip the Earth system into a wholly new state. This would
+likely be a period of environmental disequilibrium, something
+far from the Goldilocks conditions that the Holocene has
+provided for human activity to flourish over the last 10,000
+years. The Forums 2017 Global Risks Report reflects these
+concerns.30
+6
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+Facing the future
+Against this disturbing environmental backdrop, todays
+politicians and decision-makers are facing very real social
+and economic pressures. As the world rapidly urbanizes,
+more people than ever are demanding secure, safe and
+affordable supplies of food and energy, personal mobility
+and decent jobs.
+The United Nations Food and Agriculture Organization (FAO)
+has estimated that global demand for food will increase
+60% between 2006 and 2050.31 This will require the worlds
+farmers to produce more food in the next 40 years than
+they have done in the last 10,000 years.32 The International
+Energy Agency (IEA) forecasts an increase in global energy
+consumption of approximately 30% by 204033, with a 71%
+increase in non-OECD economies.34 This will lead to a
+34% rise in global energy-related CO2 emissions by 2040
+compared to 2012.35 Meanwhile, the OECDs International
+Transport Forum forecasts that there will be approximately
+2.5 billion cars on the road by 2050, up from just over 1
+billion today.36 Aircraft manufacturer, Boeing, estimates that
+global demand for commercial airliners will reach almost
+40,000 in the next two decades,37 which is double todays
+total fleet.
+
+In search of a new approach
+The standard international model used in the past 40 years
+to address our environmental problems has focused on
+the power of national governments to deliver outcomes,
+supported by international processes. For example, the
+use of international conventions or frameworks either for
+protection of areas on land and at sea, or to phase out
+dumping and pollution. These have been negotiated and
+agreed among the governments, while leeway has been
+given at the national level on how each nation might honour
+the particular framework. Typically, specialized public
+funds and (often time-bound) protocols and targets, with
+corresponding national voluntary plans, have augmented
+these global conventions. There have been some notable
+successes with this model, e.g. the Montreal Protocol
+for ozone depleting substances agreed in 1987, recently
+revised to also include HFCs.38
+Arguably, however, and despite best efforts, in the
+aggregate the environmental indicators of planetary health
+have not improved. Things may be less bad than they
+would have been without these various international efforts
+since the 1970s, but the situation has still deteriorated, and
+potentially, there is worse to come.
+
+It could be argued that these models for fixing global
+environmental challenges may have a few design
+weaknesses when considered in the context of the mid21st century. To date, it has generally been officials in the
+international environmental community who have designed
+and negotiated international environmental conventions
+and agreements. They have attempted to reactively try to
+protect different parts of the global environment against the
+effects of economic activity (pollution, degradation etc).39
+As a result, they have tended towards the development
+of expert and technical protocols (e.g. tackling hazardous
+waste, mercury pollution and soil degradation) rather than
+presenting themselves as platforms for action. Such
+platforms could encourage a broader base of stakeholders
+(private-sector, city leaders, investors, civil society etc)
+to proactively try to transform those industrial or urban
+systems that are creating pressure on the environment in
+the first place. By effectively ghettoizing approaches for
+environmental management within the official environmental
+community, there has been limited engagement opportunity
+for a broader group of stakeholders to partner in problem
+solving. This model has arguably had the unintended
+consequence of limiting innovation.40 This poses some
+difficult questions, especially as the scale and complexity of
+global environmental challenges seem to be getting worse
+and becoming more urgent to resolve.
+Albert Einstein said: The definition of insanity is doing the
+same thing over and over again and expecting different
+results. History would suggest that there will be insufficient
+improvement in the global environment system if the
+international environmental community only promotes more
+of the same kinds of management models into the mid-21st
+century. In addition to current strategies, what new forces
+can also be harnessed to accelerate innovation and increase
+the scale of action under way? What new models can also
+be deployed to help fix environmental challenges? How can
+these innovations be put-to-work in ways that complement
+and strengthen existing international environmental
+processes, goals and targets to reinvigorate (rather than
+ignore or restart) the global environmental agenda as a
+curator and driver of innovation?41
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+7
+
+The Fourth Industrial Revolution
+
+The shift in economic power and acceleration in middle
+class growth, consumer demand and urbanization in recent
+decades has coincided with extraordinary progress in
+communications and technology. This has enabled societies
+to become more connected and have more data available
+to a degree impossible to conceive even just 25 years
+ago at the time of the first Earth Summit. Sir Tim Berners
+Lee created the first web server and browser in 1990 and
+email barely existed in 1992.42 Now 46% of the worlds
+population uses the internet and approximately 269 billion
+emails are sent daily.43 In 2000, just 12% of the worlds
+population had a cell phone subscription;44 by 2015 it was
+63%.45 The rise of the smartphone means that mobile
+internet traffic is accelerating at more than 60% per year;46
+an astonishing growth rate when one considers exponential
+trends. To this end, the smartphone has become
+essential; in 2016 approximately 3.8 billion people had a
+smartphone subscription, a figure that is projected to rise to
+approximately 6 billion by 2021,47 with 90% of the growth
+coming from emerging regions.48 A total of 87% of US
+millennials say that the smartphone now never leaves their
+side and 44% use their camera or video function daily.49
+As technologies like smartphones are also becoming
+increasingly powerful, common and connected, the merging
+of digital, physical and biological realms is accelerating. For
+example, wearable wellness technologies, which can help
+monitor vital health and fitness signs, connect the wearer
+with their doctor 24/7, and provide clouds of valuable
+public health data for officials to monitor, process and run
+predictive algorithms on, all at once.
+
+8
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+The Forum terms this explosion in access to a ubiquitous
+and mobile internet, by smaller and more powerful sensors
+that are becoming ever cheaper, and characterized by
+artificial intelligence and machine learning as the Fourth
+Industrial Revolution. Its potential to radically transform the
+management of our environmental surroundings appears
+boundless. For example, what if wearable technologies
+could also monitor the quality of the air the wearer breathes,
+or the quality of the water they are drinking, as well as the
+rate of their heart?
+Over and above the expansion of such personal data
+gathering and  when scaled up  new networks and
+movements that can leverage ever more powerful digital
+platforms for social connectivity and environmental
+information sharing, the internet of things (IoT) also offers
+great potential for innovation in environmental management.
+There are already approximately 8.3 billion connected
+industrial devices covering products from cars, homes,
+appliances and industrial equipment. Analysts suggest this
+will reach more than 20 billion by 2020.50 When combined
+with rapid advances in data processing and technology
+innovation, IoT could help drive countless localized
+initiatives. These could include smart street lighting and
+energy efficient buildings,51 or even real-time city-wide
+urban dashboards of interconnected environmental
+information across buildings, transport systems and industry
+enabling optimized energy, emissions and environmental
+footprint management.
+
+The Fourth Industrial Revolution also encompasses specific
+clusters of transformative technologies such as artificial
+intelligence (AI), robotics, additive manufacturing (or 3D
+printing), neurotechnologies, drones and autonomous
+vehicles, biotechnologies, virtual and augmented reality, and
+blockchain, along with technologies and capabilities that
+havent yet been created. All of these could offer profound
+implications for innovative approaches to managing
+environmental footprints. (A list of current Fourth Industrial
+Revolution technology clusters most applicable for the
+environment can be found in Annex I.)
+The Fourth Industrial Revolution is, however, about more
+than just identifying technology game-changers. It also
+encapsulates the need for society to recognize and manage
+the systems change that these technologies create. For
+example, the arrival of the Spinning Jenny in 19th century
+Britain not only revolutionized cloth manufacturing, but also
+drove demand for child labour. Children were employed
+to climb underneath the machines to fix difficult-to-access
+parts when the loom broke. This prompted a revolution
+in child labour laws and child protection legislation and
+ultimately the right to childhood education, exemplifying a
+wider societal systems change prompted by technology.
+
+governments and the markets should have in place. These
+will include policies to minimize the risks and maximize the
+opportunities to society of the technology transformation.
+This is particularly important for societys poorest
+and weakest, who will require policies to support the
+transformation in jobs or to ensure access to information.
+It is also pertinent for protecting and managing the health
+of the environment, which is a public good upon which
+everyone depends. For example, if wearable technologies
+start to capture personal data on exposure to air and water
+quality levels, then questions will arise as to who should own
+this aggregate personal information, who should be able to
+access it and how might society best use it?
+The challenge is to find the balance between exploring
+the innovations that technology offers for improving the
+environment, while developing ways and means to ensure
+that risks are minimized and opportunities are maximized.
+The next section looks at these issues in greater depth.
+
+The Fourth Industrial Revolution is also providing an
+opportunity  and a need  to pre-emptively rethink
+governance structures and to innovate to ensure they
+are updated and purpose-built for the 21st century,
+comprising the policies and protocols that societies feel their
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+9
+
+A revolution for the environment
+
+The potential to harness the Fourth Industrial Revolution to
+help transform how humanity manages its environmental
+footprint and, more fundamentally, to re-imagine how
+human and economic systems might interact with the
+natural world (e.g. through cities, transport and energy
+networks, production and consumption systems, financial
+markets and agricultural and industrial value chains) appears
+potentially boundless. In exploring this transformation,
+however, the debate needs to focus not just on
+technological applications, but also on reshaping mindsets,
+incentives, policies and institutions. This will be critical to
+building inclusive, sustainable, resilient and ethical systems.
+The following illustrations offer a glimpse of the breakthrough
+transformations that are becoming available.
+
+roads each day. In 2016, it is estimated that this avoided
+Greenhouse Gas (GHG) emissions of 1.4 million tonnes
+of CO2, along with providing the associated benefits of
+reduced air and Hydrofluorocarbon (HFC) pollution from
+vehicle air conditioners. Today, there are 200,000 electric
+cars in Didis fleet and this is set to rise to 1 million within
+the decade.54 New public-private platforms are under
+development to help cities in China share information locally
+and globally about: how to enable car sharing to reduce
+pollution; how to redesign city streets to enable these
+innovations; and how to work with the car and truck industry
+to accelerate production of electric vehicles designed for
+passenger sharing/optimal logistics delivery and ready for
+autonomous driving.
+
+In transport
+
+In product traceability
+
+Advanced materials are close to enabling breakthroughs
+in battery design and production, which could create
+inexpensive, quick-charging and energy dense batteries that
+would outperform internal combustion engines. The growing
+market for electric cars is forecast to displace oil demand
+by approximately 2 million barrels per day by 2025, rising
+to 16 million by 2040. An oversupply of 2 million barrels
+per day was attributed as triggering the major oil industry
+downturn experienced during the last three years, which has
+been described as the biggest in a generation.52 Meanwhile,
+commentators have described moves to produce
+autonomous vehicles as the new arms race.53 There is a
+risk that technology, data, expertise and decision-making
+will become concentrated in the hands of a relatively small
+set of market leaders. Technology companies have become
+direct competitors of traditional automotive companies, and
+its the mobility services software, not the hardware, where
+competition is most fierce. This creates a new governance
+challenge, which spans multiple industry sectors and
+technology sets and requires cooperation between the
+public and private sectors.
+
+Geospatial data monitoring platforms such as the Global
+Forest Watch, Global Fishing Watch and Eyes on the Sea
+utilize advanced sensors and satellite imagery, combined
+with big data analytics, to enable anyone with a smartphone
+to track and monitor activity within important environmental
+systems. These are just the first releases  future iterations
+could leverage AI, such as machine learning to forecast
+where illegal fishing or logging is likely to occur. When
+complemented by other Fourth Industrial Revolution
+innovations, such as the ability to rapidly undertake DNA
+sequencing of seafood products and bilge water from ships,
+there is the potential to create greater transparency and
+accountability from ocean to plate, giving consumers and
+regulators confidence in the sustainability and legality of
+products.
+
+Through connected products and
+services
+The rapidly growing IoT network and capabilities hold
+great promise. In China, the digital car-ride company, Didi,
+receives more than 20 million orders daily, twice the number
+of rides of all other markets in the world. Didi operates in
+400 cities across China, engaging 17.5 million drivers, and
+car-pools approximately 2 million passengers daily. This
+pooling is taking approximately 1 million vehicles off the
+10
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+These platforms will generate, but also rely on, a wealth of
+data gathered from multiple sources, potentially including
+satellites, ships, ocean drones and DNA sequencing. As
+part of this project, dialogue is already under way to explore
+how alliances among data providers and data processors
+can help them to better apply their collective efforts to the
+challenge of environmental management.
+
+On the blockchain
+The potential of blockchain provides another good
+example of what might be possible in terms of a wholesale
+transformation in our approach to global environmental
+commons management. Blockchain is a distributed ledger,
+utilizing a secure protocol where a network of computers
+can collectively verify a transaction before it can be recorded
+and approved. It enables people who do not know each
+
+other to collaborate without having to go through a neutral
+central authority. It offers its users a shared, programmable,
+secure and trusted ledger, which no single user controls
+but which can be inspected by everyone. Blockchain was
+the enabling technology for bitcoin. However, its potential
+applicability for widespread use in other areas is just starting
+to be realized. The Government of Sweden is already
+exploring the potential of blockchain to help with land rights
+management,55 while entrepreneurs are exploring similar
+applications in Ghana, Georgia and Honduras.
+Could a distributed ledger like blockchain play a role in
+managing global greenhouse gas emissions? By 2030,
+when most of the worlds households will have a least
+one 3G cell phone and the global emissions trajectory
+is expected to have stabilized, perhaps there could be
+a worldwide blockchain for mobile carbon trading. The
+technology would ensure a transparent system where
+algorithms were used to assign every person on the planet
+a science-based carbon budget, which people could
+then trade. Such a system could potentially spur the next
+generation of a global climate framework, removing the
+political and institutional challenges that governments and
+international regimes, frameworks and systems currently
+face.56 It would also facilitate market-driven financial
+flows to people in poorer nations who typically produce
+fewer greenhouse emissions. Perhaps a blockchain-style
+distributed ledger could also be used for managing water
+allocations and deforestation.
+
+In monitoring greenhouse gas
+emissions
+Rapid advances in satellites, drones and advanced sensors
+ augmented by smart algorithms or AI technology  could
+provide a real-time flow of data on GHG emissions, which
+would then be relayed across the cloud to be tracked by
+anyone from government officials to schoolchildren. This
+would greatly improve the transparency of Monitoring,
+Reporting and Verification (MRV) data, which is crucial for
+the accountability and efficacy of global climate agreements.
+The political implications could be transformative, as
+could be similar real-time satellite and drone monitoring
+of industrial GHG emissions for investors, insurers and
+regulators. No longer would disclosure regimes rely on
+companies choosing when and how to report. Instead, the
+information would be available, possibly in the blockchain,
+for all to see and to act upon.
+
+In understanding the value of our
+biodiverse inheritance
+An unprecedented acceleration in science and technology
+innovation is now helping researchers to map, sequence
+and replicate biology on Earth in new ways. This uncharted
+period of analysis may change societys perception of nature
+from a commodity to be exploited to a unique endowment
+that contains wholly new levels of value for society in the
+future. For example, studies within the Amazon of the ant,
+Eciton burchelli, using computational chemistry and AI
+have identified that the species uses swarm intelligence to
+ensure their worker ant army (numbering in the hundreds
+of thousands) avoids traffic congestion. This is inspiring the
+development in AI algorithms of autonomous, shared and
+electric power transport systems.
+The Earth Bio-Genome Project (EBP) aims to sequence
+all the plants, animals and single-celled organisms (the
+eukaryotic species) on Earth within 10 years, to help us
+unlock the vast potential of our biodiversity inheritance. The
+EBP will rely on innovative, multi-stakeholder collaborations
+drawing on the science, research and ethics community,
+governments and the private-sector. The EBP has the
+potential to help redraw several components of the
+Convention on Biodiversity by the COP in 2020, when
+new targets need to be agreed. The Amazon Third Way
+initiative is a project working in partnership with the Earth
+Bio-Genome project to map the DNA of the Amazon Basin
+(creating an Amazon Bank of Codes) to help create a proof
+of concept for the wider EBG methodology. The Amazon
+Bank of Codes will be an open, global digital platform,
+which registers and maps the genetic sequences of Amazon
+biodiversity. It will also register biological and biomimetic
+IP assets on blockchain, providing a regulatory platform to
+help implement the fair sharing of benefits as intended by
+the 2017 Nagoya Protocol, which governs access to genetic
+resources.
+These are just a few examples of the ways Fourth Industrial
+Revolution innovations in science and technologies could be
+applied to transform current approaches to environmental
+issues. Much more work is needed to explore and refine the
+possibilities. Further help will also be required to scale those
+applications that are already available.
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+11
+
+Risks as well as opportunities
+
+For all the potential of the Fourth Industrial Revolution, it also
+poses many and various risks.
+A widespread digital revolution in the global environment
+seems just around the corner57 and data will be an
+increasingly prized asset, but there are important questions
+to be resolved about who owns and has access to which
+pieces of data. If environmental data becomes proprietary
+(either by design or default) this could limit access for those
+wishing to develop applications for the public good (whether
+for profit or not-for-profit). Disconnected platforms and
+competing networks of data provision may also emerge,
+each using their own data protocols and standards. To
+ensure data can be accessed and utilized effectively for
+innovative environmental applications, it will be important to
+ensure interoperability. Common protocols and standards
+may need to be created. New market and finance models
+may also be required, along with new or augmented roles
+for international environmental organizations. Could such
+organizations become the curators of global environmental
+information? If so, how will this work? How can they change
+their culture to attract the public- and private-technology
+talent they will need to keep abreast of the latest technology
+developments, remain cyber secure, and curate global
+platforms of environmental data? How will they avoid being
+seen as monopolies holding our earth system data for their
+own purposes, rather than being platforms for promoting
+widespread and open innovation? These big questions will
+need addressing.
+
+12
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+Many of the Fourth Industrial Revolution innovations that
+hold great promise for disrupting how we manage the
+global environmental commons may also pose great
+risks, particularly if not implemented with the support of
+appropriate governance systems. For example, rich new
+streams of information about ocean conditions and fish
+stocks can help improve the sustainable management of
+ocean resources, in line with the Sustainable Development
+Goals (SDGs). This same data could also radically improve
+the transparency and traceability of legally fished seafood
+products, providing new tools in the fight against illegal
+fishing, which represents an annual theft of $23 billion.58
+However, if an international organization that hosted this
+data was hacked, these same data innovations could enable
+even more intensive illegal fishing by helping unregistered
+and unreported boats to find prime target stocks and
+escape enforcement. Similarly, tech-savvy poachers could
+access new sources of data on the location and habitats
+of protected species; on land, some poachers are already
+using geo-tagged photos posted on social media sites by
+tourists to locate endangered animals.59
+
+Building the right enabling
+environment is critical
+
+Realizing the opportunities available while also effectively
+managing potential risks will not happen automatically.
+Proactive, collaborative processes with policy-makers,
+scientists, civil society and technology champions will be
+required so that commonly agreed policies and protocols
+are developed and trialled concurrent to the acceleration
+and adoption of new technologies for environmental
+management and improvement.
+
+The speed of innovation in the Fourth Industrial Revolution
+means these partnerships and platforms to develop
+protocols and governance systems need to be developed
+early. This needs to take place in conjunction with the
+development of the technologies themselves, rather than
+as a reactive afterthought. Partnerships and platforms also
+need to remain agile, and able to adapt and change policies
+and protocols as nimbly as the technology itself evolves.
+
+The following kinds of collaborations will be particularly
+important:
+
+There is a unique opportunity to harness the Fourth
+Industrial Revolution, and the societal shifts it triggers,
+to help reimagine the models for how we manage our
+shared global environment and natural resources. If we
+get the design of both the technology applications and the
+enabling environment right, there is huge potential for
+a revolution in managing our environmental future. It will,
+however, require a significant effort in public-private and civil
+society collaboration, and it will redraw many of the current
+issue and institutional boundaries of who feels responsible
+for what, in todays global environment community. It will
+also require the environmental community to open up and
+engage many different actors into a multistakeholder agenda
+to help manage our global environmental commons. This
+may be challenging, but given the pressure the Earths
+systems are under, the global community cannot afford not
+to try.
+
+
+
+
+
+
+
+Dialogues and partnerships that bring
+technology developers and providers together
+with environmental experts to co-develop these
+innovations and to ensure they are developed for the
+public good, while minimizing risks of unintended
+environmental consequences.
+Innovative investment platforms, financing
+structures, and business models that can accelerate
+the scaling of promising environmental innovations,
+regardless of whether they have a clear commercial
+proposition or are less profitable public good
+applications.
+Partnerships with governments and international
+institutions to enable the development of common
+and agile governance systems, including the
+championing of common policy principles for managing
+new technologies (e.g. those recently developed for
+the G20), and the development of specific policy
+frameworks and protocols, transparency mechanisms,
+and equity related checks and balances for particular
+use case examples.
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+13
+
+Acknowledgements
+
+The World Economic Forum would like to acknowledge
+the valuable contributions of the following people in the
+development of this document:
+Advisory Group
+Celine Herweijer
+Steve Howard
+Jim Leape
+Usha Rao-Monari
+Global Future Council on Shaping the Future of
+Environment and Natural Resource Security
+Usha Rao-Monari
+Steve Howard
+Seema Arora
+Giulio Boccaletti
+Fred Boltz
+Juan Carlos Castilla-Rubio
+Shannon M. Dosemagen
+Patricia Dwyer
+Fang Li
+Chris Field
+J. Carl Ganter
+Celine Herweijer
+Jennifer Holmgren
+Arthur Huang
+Glenn Hurowitz
+Peter Lacy
+Jim Leape
+William McDonough
+Pan Jiahua
+Yoshiko Shirokizawa
+Santiago Siri
+Sheila Sri Prakash
+Francisco Surez Hernndez
+Changhua Wu
+Thani Al Zeyoudi
+
+Project Team
+Benjamin Combes
+Gaia Felber
+Sarah Franklin
+Jerica Lee
+Victoria Lee
+Jahda Swanborough
+As well as to the lead author of this report, Dominic
+Waughray, Head of Public-Private Partnership, Member of
+the Executive Committee, World Economic Forum
+Contact
+For questions about the Fourth Industrial Revolution for the
+Earth series of publications, contact:
+Jahda Swanborough, Lead, Environmental Initiatives, World
+Economic Forum: jahda.swanborough@weforum.org (series
+lead)
+For questions about the Fourth Industrial Revolution for the
+Earth initiative, contact:
+Gaia Felber, Project Specialist, Environmental Initiatives,
+World Economic Forum: gaia.felber@weforum.org (Geneva)
+Victoria Lee, Project Lead, New Vision for the Ocean, World
+Economic Forum: victoria.lee@weforum.org (San Francisco)
+About the Fourth Industrial Revolution for the Earth
+Initiative
+The World Economic Forum is collaborating with PwC (as
+official project adviser) and the Stanford Woods Institute for
+the Environment on a major global initiative on the Fourth
+Industrial Revolution for the Earth. Working closely with
+leading issue experts and industry innovators convened
+through the World Economic Forums Global Future Council
+on the Environment and Natural Resource Security, and with
+support from the MAVA Foundation, this initiative combines
+the platforms, networks and convening power of the Forum
+and its new Center for the Fourth Industrial Revolution in
+San Francisco. It also brings Stanford Universitys cutting
+edge research departments and connections with the
+Silicon Valley technology community together with the global
+insight and strategic analysis on business, investment and
+public-sector issues that PwC offers. Together with other
+interested stakeholders, this unique partnership is exploring
+how Fourth Industrial Revolution innovations could help
+drive a systems transformation across the environment and
+natural resource security agenda.
+
+Annex I
+List and description of Fourth Industrial
+Revolution technology clusters most
+relevant for environmental applications
+
+Fourth Industrial Revolution technology clusters
+The following descriptions60 are provided as background
+and are not intended to be exhaustive.
+
+
+3D Printing. Additive manufacturing techniques used
+to create three-dimensional objects based on printing
+successive layers of materials.
+
+
+
+Advanced Materials (including nanomaterials). A
+set of nanotechnologies and other material science
+technologies, which can produce materials with
+significantly improved or completely new functionality,
+including lighter weight, stronger, more conductive
+materials, higher electrical storage (e.g. nanomaterials,
+biological materials or hybrids).
+
+
+
+Artificial Intelligence. Computer science learning
+algorithms capable of performing tasks that normally
+require human intelligence and beyond (e.g. visual
+perception, speech recognition and decision-making).
+
+
+
+Robotics. Electro-mechanical, biological and hybrid
+machines enabled by AI that automate, augment or
+assist human activities, autonomously or according to
+set instructions.
+
+
+
+Drones & autonomous vehicles. Enabled by robots,
+autonomous vehicles can operate and navigate with
+little or no human control. Drones fly or move in water
+without a pilot and can operate autonomously or be
+controlled remotely.
+
+
+
+Biotechnologies. Encompassing bioengineering,
+biomedical engineering, genomics, gene editing, and
+proteomics, biomimicry, and synthetic biology this
+technology set has applications in areas like energy,
+material, chemical, pharmaceutical, agricultural and
+medical industries.
+
+
+
+
+
+Energy capture, storage, and transmission. New
+energy technologies range from advanced battery
+technologies through to intelligent virtual grids, organic
+solar cells, spray-on solar, liquid biofuels for electricity
+generation and transport, and nuclear fusion.
+Blockchain (and distributed ledger). Distributed
+electronic ledger that uses cryptographic software
+algorithms to record and confirm immutable
+transactions and/or assets with reliability and anonymity.
+
+It has no central authority and allows for automated
+contracts that relate to those assets and transactions
+(smart contracts).
+
+
+Geo-engineering. Large-scale, deliberate interventions
+in the Earths natural systems to, for example, shift
+rainfall patterns, create artificial sunshine or alter
+biospheres.
+
+
+
+Internet of things. A network of advanced sensors and
+actuators in land, air, oceans and space embedded with
+software, network connectivity and computer capability,
+which can collect and exchange data over the internet
+and enable automated solutions to multiple problem
+sets.
+
+
+
+Neurotechnologies. Technologies that enable humans
+to influence consciousness and thought through
+decoding what they are thinking in fine levels of detail
+through new chemicals that influence brains for
+enhanced functionality and enable interaction with the
+world in new ways.
+
+
+
+New computing technologies. This includes
+technologies such as quantum computing, DNAbased solid state hard drives and the combining of
+Third Industrial Revolution technologies (e.g. big data,
+cloud) with the other technologies (e.g. IoT, advanced
+sensor platforms). Quantum computers make direct
+use of quantum-mechanical phenomena such as
+entanglement to perform large-scale computation
+of a particular class of currently impossible tasks by
+traditional computing approaches.
+
+
+
+Advanced sensor platforms (including satellites).
+Advanced fixed and mobile physical, chemical and
+biological sensors for direct and indirect (remote
+sensing) of myriad environmental, natural resource
+and biological asset variables from fixed locations or
+in autonomous or semi-autonomous vehicles in land,
+machines, air, oceans and space.
+
+
+
+Virtual, augmented and mixed reality. Computergenerated simulation of a three-dimensional space
+overlaid to the physical world (AR) or a complete
+environment (VR).
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+15
+
+Annex II
+The Fourth Industrial Revolution for the
+Earth initiative
+
+The Fourth Industrial Revolution for the Earth initiative is
+designed to raise awareness and accelerate progress
+across this agenda for the benefit of society. In the first
+phase of the project, specific environmental focus areas will
+be considered in depth, exploring in detail how to harness
+Fourth Industrial Revolution innovations to better manage
+the worlds most pressing environmental challenges. Initial
+focus areas will include:
+
+
+
+
+
+
+
+
+Air pollution
+Biodiversity
+Cities
+Climate change and greenhouse gas monitoring
+Food systems
+Oceans
+Water resources and sanitation
+
+Working from these thematic areas the Forum, supported
+by Stanford University and PwC (as project adviser), and
+advised by the members of the Global Future Councils on
+the Future of Environment and Natural Resource Security
+and specific Fourth Industrial Revolution clusters, will seek
+to leverage their various networks and platforms to:
+
+
+
+
+
+
+
+
+Develop a set of insight papers, taking a deep dive
+into the possibilities of the Fourth Industrial Revolution
+and each of these issues.
+Build new networks of practitioners and support
+them to co-design and innovate for action on the
+environment in each of these issue areas, leveraging
+the latest technologies and research that the Fourth
+Industrial Revolution offers.
+Design a public-private accelerator for action,
+enabling both government, foundational, research,
+organization and commercial funds to be pooled and
+deployed into scaling innovative Fourth Industrial
+Revolution solutions for the environment.
+Help government stakeholders to develop and trial
+the requisite policy protocols that will help Fourth
+Industrial Revolution solutions for the environment take
+hold and develop.
+
+The Fourth Industrial Revolution for the Earth initiative will be
+driven jointly out of the World Economic Forum Center for
+the Fourth Industrial Revolution in San Francisco and other
+Forum offices in New York, Geneva and Beijing.
+16
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+Endnotes
+
+1
+
+National Human Genome Research Institute, The Cost of Sequencing a Human Genome, accessed November 2017, https://www.genome.gov/27565109/the-cost-of-sequencing-a-human-genome/
+
+15
+
+Whatsapp, Connecting One Billion Users Every Day, July 2017,
+available at https://blog.whatsapp.com/10000631/Connecting-OneBillion-Users-Every-Day
+
+16
+
+2
+
+Krausmann et al., May 2009, Growth in Global Materials use, GDP,
+and population during the 20th century. Accessible at: http://isites.
+harvard.edu/fs/docs/icb.topic661271.files/EE-Krausmann_etal_
+MatsGDPPop_20thC- 2009.pdf.
+3
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+McKinsey, November 2011, Resource Revolution: Meeting the
+worlds energy, materials, food, and water needs, accessible at:
+http://www.mckinsey.com/~/media/mckinsey/business%20functions/
+sustainability%20and%20resource%20produ ctivity/our%20insights/
+resource%20revolution/mgi_resource_revolution_full_report.ashx
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+17
+
+4
+
+Millennium Development Goals 2015 Report, available at: http://www.
+un.org/millenniumgoals/2015_MDG_Report/pdf/MDG%202015%20
+rev%20(July%201).pdf.
+5
+
+International Institute for Applied Systems Analysis, Global Commons
+in the Anthropocene: World Development on a Stable and Resilient
+Planet, October 2016, available at: https://globalcommons.earth/sites/
+default/files/pdfs/global_commons_in_the_anthropocene_iiasa_wp-16019.pdf
+18
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+19
+
+The middle class is defined by the OECD as households having between $10 and $100 purchasing power parity per capita per day.
+6
+
+Kharas, January 2010, The Emerging Middle Class in Developing
+Countries. Accessible at: https://www.oecd.org/dev/44457738.pdf.
+7
+
+20
+
+Ibid.
+
+CO2 concentrations have now passed 403ppm, while the Holocene
+baseline was 280ppm, according to the World Meteorological Organisation, https://public.wmo.int/en/media/press-release/greenhousegas-concentrations-surge-new-record,
+21
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+8
+
+Wilson and Purushothaman, October 2003, Dreaming with BRICs:
+The Path to 2050. Accessible at: http://www.goldmansachs.com/ourthinking/archive/archive-pdfs/brics-dream.pdf
+9
+
+WWF, Living Planet Report 2016, 2016, http://awsassets.panda.org/
+downloads/lpr_2016_full_report_low_res.pdf
+22
+
+Zemp, D. C., et al., Deforestation effects on Amazon forest resilience, Geophysical Research Letters, June 2017, available at http://
+onlinelibrary.wiley.com/doi/10.1002/2017GL072955/abstract
+23
+
+McKinsey & Co, Urban worlds: Cities and the rise of the consuming class, June 2012, available at: file:///C:/Users/jsw/Downloads/
+MGI_Urban_world_Rise_of_the_consuming_class_Full_report.pdf
+10
+
+International Institute for Applied Systems Analysis, Stockholm
+Resilience Centre and Stockholm University, Global Commons in the
+Anthropocene: World Development on a Stable and Resilient Planet,
+October 2016, https://www.iucn.org/sites/dev/files/globalcommonsanthropocene2016.pdf (draft paper)
+24
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+11
+
+United nations, Department of Economic and Social Affairs, Population Division, World Urbanization Prospects: The 2014 Revision, 2015,
+available at https://esa.un.org/unpd/wup/Publications/Files/WUP2014Report.pdf
+12
+
+Demographia, World Urban Areas 13th Annual Edition: 2017:04, April
+2017, available at http://demographia.com/db-worldua.pdf
+13
+
+Department of Economic and Social Affairs Population Division,
+World Population Prospects: Key Findings & Advance Tables  2017
+Revision, 2017, available at https://esa.un.org/unpd/wpp/Publications/
+Files/WPP2017_KeyFindings.pdf
+14
+
+Arc Centre of Excellence for Coral Reef Studies, James Cook University, Scientists assess bleaching damage on Great Barrier Reef [Media
+Release], 26 October 2016, https://www.coralcoe.org.au/mediareleases/scientists-assess-bleaching-damage-on-great-barrier-reef.
+25
+
+NSIDC, Sluggish ice growth in the Arctic, November 2016, http://
+nsidc.org/arcticseaicenews/2016/11/sluggish-ice-growth-in-the-arctic.
+26
+
+Vidal, John, Extraordinarily hot Arctic temperatures alarm scientists, The Guardian, 22 November 2016, https://www.theguardian.
+com/environment/2016/nov/22/extraordinarily-hot-arctic-temperatures-alarm-scientists.
+27
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+17
+
+Zielinski, Sarah, Ocean Dead Zones Are Getting Worse Globally Due
+to Climate Change, Smithsonian.com, 10 November 2014, available
+at http://www.smithsonianmag.com/science-nature/ocean-deadzones-are-getting-worse-globally-due-climate-change-180953282.
+28
+
+United Nations: World Water Assessment Programme, World Water
+Development Report 2015, March 2015, available at http://www.unwater.org/publication_categories/world-water-development-report/
+29
+
+GSMA, The Mobile Economy, 2016, available at https://www.gsma.
+com/mobileeconomy/archive/GSMA_ME_2016.pdf
+45
+
+Cisco, Cisco Visual networking Index: Global Mobile Data Traffic
+Forecast update, 2016-2021 White Paper, March 2017, available at:
+https://www.cisco.com/c/en/us/solutions/collateral/service-provider/
+visual-networking-index-vni/mobile-white-paper-c11-520862.html
+46
+
+Ericsson, Ericsson Mobility Report 2017, June 2017, available at
+https://www.ericsson.com/en/mobility-report
+47
+
+World Economic Forum, The Global Risks Report 2017, January
+2017, available at http://www3.weforum.org/docs/GRR17_Report_
+web.pdf
+30
+
+FAO, FAO Statistical Yearbook 2013, 2013, available at http://www.
+fao.org/docrep/018/i3107e/i3107e00.htm
+
+GSMA, The Mobile Economy, 2016, available at https://www.gsma.
+com/mobileeconomy/archive/GSMA_ME_2016.pdf
+48
+
+31
+
+The Economist, Barbarians at the farm gate, December 2014,
+available at https://www.economist.com/news/finance-andeconomics/21637379-hardy-investors-are-seeking-way-grow-theirmoney-barbarians-farm-gate
+
+Meeker, M, Internet Trends 2017, May 2015, available at http://
+www.kpcb.com/blog/2015-internet-trends
+49
+
+32
+
+International Energy Agency, World Energy Outlook 2016, November
+2016, available at: https://www.iea.org/weo/
+33
+
+In 2012 non-OECD country (emerging economy) energy consumption was 57% of the world total and will be almost 66% by 2040.
+
+Gartner, Gartner Says 8.4 billion connected things will be in Use in
+2017, Up 31 percent from 2016, February 2017, available at https://
+www.gartner.com/newsroom/id/3598917
+50
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+51
+
+34
+
+Under the IEA 2016 Reference case scenario, global energy sector
+emissions rise from 32.2 billion metric tons in 2012 to 35.6 billion metric tons in 2020 and to 43.2 billion metric tons in 2040.
+35
+
+Grantham institute, Imperial College London and the Carbon Tracker
+initiative, Expect the Unexpected: The Disruptive Power of Low-carbon
+Technology, February 2017, available at https://www.bloomberg.
+com/news/articles/2017-02-02/electric-cars-could-cause-oil-marketdisruption-on-par-with-opec
+52
+
+Reuters, RPT-Self-driving arms race complicates supplier alliances,
+http://www.reuters.com/article/autos-selfdriving-suppliers-idUSL1N1HK206
+
+36
+
+ITF, ITF Transport Outlook 2017, 2017, available at http://www.oecd.
+org/about/publishing/itf-transport-outlook-2017-9789282108000-en.
+htm
+
+53
+
+Boeing, Current Market Outlook 2016-2035, 2016, available at
+http://www.boeing.com/resources/boeingdotcom/commercial/aboutour-market/assets/downloads/cmo_print_2016_final_updated.pdf
+
+54
+
+37
+
+Further information on the Montreal Protocol is available at http://
+ozone.unep.org/en/treaties-and-decisions/montreal-protocol-substances-deplete-ozone-layer
+38
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+39
+
+Arguably, the exceptions that potentially prove this rule have been
+the public-private orientation of the Montreal Protocol since 1987 to
+help promote industry wide innovation; and the more recent action
+agenda on Climate Change that the Governments of Peru and France
+with the support of the UNFCCC promoted to help muster a wave of
+innovation and complementary actions from more than just national
+governments alone, to help support and shape the Paris Agreement on
+Climate Change and its delivery through to 2020.
+
+Figures supplied by Didi Chuxing
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+55
+
+56
+
+Ibid.
+
+57
+
+Ibid.
+
+Agnew, D. et al., Estimating the Worldwide Extent of Illegal Fishing,
+PLOS, February 2009, https://doi.org/10.1371/journal.pone.0004570
+58
+
+40
+
+Drawn from discussions at, and briefings prepared for, the International Dialogue on the Global Commons held in Washington DC (USA),
+October 2016.
+41
+
+Degnarain, N. et al, A New Vision for the Ocean: Oceans Systems
+Leadership and the Fourth Industrial Revolution, June 2017, available
+at: http://www3.weforum.org/docs/Media/VfOceanDA.pdf
+42
+
+The Radicati Group, Email statistics Report, 2017-2021, February
+2017, Executive summary available at http://www.radicati.com/wp/
+wp-content/uploads/2017/01/Email-Statistics-Report-2017-2021-Executive-Summary.pdf
+43
+
+Extracted from the World Bank Databank, Mobile cellular subscriptions (per 100 people) accessed at https://data.worldbank.org/indicator/IT.CEL.SETS
+44
+
+18
+
+Harnessing the Fourth Industrial Revolution for the Earth
+
+Gollan, D., Stop The Poachers: How To Practice Safe Social Media
+On Safari, Forbes, August 2016, https://www.forbes.com/sites/douggollan/2016/08/12/stop-the-poachers-how-to-practice-safe-socialmedia-on-safari/.
+59
+
+Descriptions are provided in the context of the Fourth Industrial
+Revolution for the Earth initiative and were compiled by project partners from commonly available sources.
+60
+
+The World Economic Forum,
+committed to improving
+the state of the world, is the
+International Organization for
+Public-Private Cooperation.
+The Forum engages the
+foremost political, business
+and other leaders of society
+to shape global, regional
+and industry agendas.
+
+World Economic Forum
+9193 route de la Capite
+CH-1223 Cologny/Geneva
+Switzerland
+Tel.: +41 (0) 22 869 1212
+Fax: +41 (0) 22 786 2744
+contact@weforum.org
+www.weforum.org
+
+

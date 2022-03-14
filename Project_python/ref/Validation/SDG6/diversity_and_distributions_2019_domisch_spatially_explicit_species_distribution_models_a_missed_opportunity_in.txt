@@ -1,0 +1,1997 @@
+Received: 19 April 2018
+
+|
+
+Revised: 2 November 2018
+
+|
+
+Accepted: 6 December 2018
+
+DOI: 10.1111/ddi.12891
+
+BIODIVERSITY RESEARCH
+
+Spatially explicit species distribution models: A missed
+opportunity in conservation planning?
+Sami Domisch1
+
+| Martin Friedrichs1,2
+
+Annett Wetzig1 | Sonja C. Jhnig1
+1
+LeibnizInstitute of Freshwater Ecology and
+Inland Fisheries, Berlin, Germany
+2
+Department of Biology, Freie Universitt
+Berlin, Berlin, Germany
+3
+
+Institute of Hydrobiology and Aquatic
+Ecosystem Management, University of
+Natural Resources and Life Sciences, Vienna,
+Austria
+
+4
+
+Department of Zoology, University of
+Otago, Dunedin, New Zealand
+5
+
+BC3  Basque Centre for Climate Change,
+Leioa, Spain
+Correspondence
+Sami Domisch, LeibnizInstitute of
+Freshwater Ecology and Inland Fisheries,
+Berlin, Germany.
+Email: domisch@igb-berlin.de
+Funding information
+German Federal Ministry of Education
+and Research, Grant/Award Number: 01
+LN1320A; H2020 Marie SkodowskaCurie
+Actions, Grant/Award Number: 748625;
+European Union's Horizon 2020 research
+and innovation programme, Grant/Award
+Number: 642317
+Editor: Gwen Iacona
+
+| Thomas Hein3
+
+| Florian Borgwardt3
+
+|
+
+| Simone D. Langhans1,4,5
+
+Abstract
+Aim: Systematic conservation planning is vital for allocating protected areas given
+the spatial distribution of conservation features, such as species. Due to incomplete
+species inventories, species distribution models (SDMs) are often used for predicting
+species habitat suitability and species probability of occurrence. Currently, SDMs
+mostly ignore spatial dependencies in species and predictor data. Here, we provide a
+comparative evaluation of how accounting for spatial dependencies, that is, autocor
+relation, affects the delineation of optimized protected areas.
+Location: Southeast Australia, Southeast U.S. Continental Shelf, Danube River Basin.
+Methods: We employ Bayesian spatially explicit and nonspatial SDMs for terrestrial,
+marine and freshwater species, using realmspecific planning unit shapes (grid, hexa
+gon and subcatchment, respectively). We then apply the software gurobi to optimize
+conservation plans based on species targets derived from spatial and nonspatial
+SDMs (10%50% each to analyse sensitivity), and compare the delineation of the
+plans.
+Results: Across realms and irrespective of the planning unit shape, spatially explicit
+SDMs (a) produce on average more accurate predictions in terms of AUC, TSS, sensi
+tivity and specificity, along with a higher species detection probability. All spatial
+optimizations meet the species conservation targets. Spatial conservation plans that
+use predictions from spatially explicit SDMs (b) are spatially substantially different
+compared to those that use nonspatial SDM predictions, but (c) encompass a similar
+amount of planning units. The overlap in the selection of planning units is smallest for
+conservation plans based on the lowest targets and vice versa.
+Main conclusions: Species distribution models are core tools in conservation plan
+ning. Not surprisingly, accounting for the spatial characteristics in SDMs has drastic
+impacts on the delineation of optimized conservation plans. We therefore encourage
+practitioners to consider spatial dependencies in conservation features to improve
+the spatial representation of future protected areas.
+KEYWORDS
+
+Bayesian hierarchical modelling, connectivity, gurobi, integer linear programming, spatial
+autocorrelation, spatial unit
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium,
+provided the original work is properly cited.
+ 2019 The Authors. Diversity and Distributions Published by John Wiley & Sons Ltd
+758
+
+|
+
+wileyonlinelibrary.com/journal/ddi
+	
+
+Diversity and Distributions. 2019;25:758769.
+
+|
+
+DOMISCH et al.
+
+1 | I NTRO D U C TI O N
+
+759
+
+Species distribution models are considered useful in conserva
+tion planning when used within a structured and transparent deci
+
+In the light of the ongoing decline in global biodiversity (Pimm et al.,
+
+sionmaking process (Guisan et al., 2013). In reality, however, most
+
+2014), the implementation of protected areas in the terrestrial, ma
+
+conservation plans are still based on species surrogates such as
+
+rine and freshwater realms is yet the most widely used conservation
+
+habitat maps, expertderived species distributions, or connectivity
+
+approach to reduce the loss of biodiversity. Consequently, how to
+
+surfaces (Tulloch et al., 2016). As reviewed by Tulloch et al. (2016),
+
+delineate protected areas so that they produce optimal outcomes for
+
+SDMs are not yet widely used in conservation planning because of
+
+the targeted conservation features in a costeffective way has been
+
+several constraints: (a) poor availability of species occurrence data
+
+widely covered in the systematic conservation planning literature
+
+and (b) respective predictor data, (c) uncertainties associated with
+
+(Barnes, Glew, Wyborn, & Craigie, 2018; Margules & Pressey, 2000).
+
+the data and (d) the wish to understand processes rather than pat
+
+In the past, conservation goals mainly reflected habitat or species
+
+terns, requiring alternative and additional data. Here, (ac) are clearly
+
+representation. Only recently the focus has shifted towards consid
+
+methodological issues that need to be assessed with care, while (e)
+
+ering environmental and ecological processes, which are essential for
+
+goes beyond the expectations towards SDMs, since per definition,
+
+securing species persistence (e.g., Klein et al., 2009). Such processes
+
+they do not deliver information on processes. Hence, it is key to dis
+
+shape the distribution and abundance of species (Pressey, Cabeza,
+
+tinguish between constraints that can be tackled (Dormann, 2007;
+
+Watts, Cowling, & Wilson, 2007) with connectivity playing a para
+
+Fourcade, Besnard, & Secondi, 2018; Pearson & Dawson, 2003),
+
+mount and distinct role in terrestrial (Lockwood, 2010), marine (Carr
+
+and those that are beyond the actual purpose of SDMs (Arajo &
+
+et al., 2003), and freshwater ecosystems (Hermoso, Filipe, Segurado,
+
+Peterson, 2012).
+
+& Beja, 2018). Incorporating spatial connectivity in the planning pro
+
+Species distribution models require rigorous testing for meth
+
+cess has, therefore, important implications for designing protected
+
+odological issues and statistical shortcomings (Record, Fitzpatrick,
+
+areas (Daigle et al., 2018; van Teeffelen, Cabeza, & Moilanen, 2006;
+
+Finley, Veloz, & Ellison, 2013; Tulloch et al., 2016). Given that spatial
+
+Weeks, 2017). This fact is also reflected in the software that is used
+
+conservation plans incorporate spatial information among planning
+
+in conservation planning, such as marxan (Ball, Possingham, & Watts,
+
+units, it is obvious that SDMs that yield the conservation feature
+
+2009) or
+
+(Lehtomki & Moilanen, 2013). All of them base,
+
+data should make use of the same information. However, the few
+
+among other parameters, the selection of potential planning units on
+
+studies that modelled and used species distributions for conserva
+
+algorithms that account for their spatial connectivity.
+
+tion planning are typically not accounting for such spatial depen
+
+zonation
+
+When accounting for spatial connectivity, conservation plans
+
+dencies (e.g., in the terrestrial (Rondinini et al., 2011), freshwater
+
+inherently build the protected areas based on the spatial dependen
+
+(Esselman & Allan, 2011) and marine realms (McGowan et al., 2013),
+
+cies in the planning units as well. For example, it is vital to account
+
+but see White, Schroeger, Drake, and Edwards (2014)). The disad
+
+for the spatial structure of the environment around a given planning
+
+vantage of such spatially implicit SDMs (hereafter referred to as
+
+unit for assessing its importance as part of a protected area (Daigle
+
+nonspatial SDMs) is that they do not account for spatial depen
+
+et al., 2018; Weeks, 2017). However, this key characteristic of spatial
+
+dence or irregular sampling intensity (e.g., Latimer, Wu, Gelfand, &
+
+dependency is rarely applied in the underlying conservation features
+
+Silander, 2006), and frequently violate the assumption of indepen
+
+themselves, which provide the basis for the conservation planning.
+
+dent samples and spatial units (Araujo, Pearson, Thuiller, & Erhard,
+
+The most widely used conservation feature in conservation plan
+
+2005; Hampe, 2004). Assuming independence of spatial units means
+
+ning is the geographical distribution of multiple species, as species
+
+that the model is not aware of the predicted habitat suitability of a
+
+distributions are often best known compared to other biodiversity
+
+given species in neighbouring planning units. In contrast, the opti
+
+facets (such as functional or phylogenetic characteristics of spe
+
+mization of the spatial conservation plan, that is, the selection of
+
+cies; McGill, Dornelas, Gotelli, & Magurran, 2015). However, species
+
+planning units, does account for the spatial relation among them,
+
+point occurrence data alone are not useful in systematic conserva
+
+favouring neighbouring ones over those that are far apart.
+
+tion planning, which requires rangewide and seamless data of the
+
+In contrast, spatially explicit SDMs (spatial SDMs) account
+
+targeted conservation features (Tulloch et al., 2016). This is likely
+
+for the proximity and mobility (i.e., connectivity) in species popula
+
+one of the major challenges for conservation plannersto overcome
+
+tions. Hence, they provide more powerful inference about species
+
+the Wallacean shortfall, that is, to know the full geographical distri
+
+distributions and niche relations (Latimer et al., 2006; De Marco,
+
+bution of species (Bini, DinizFilho, Rangel, Bastos, & Pinto, 2006;
+
+DinizFilho, & Bini, 2008). Incorporating the assumption of spatial
+
+Meyer, Weigelt, & Kreft, 2016).
+
+dependencies in the data has, therefore, the potential to provide
+
+Currently, species distribution models (SDMs) are the main tools
+
+more robust SDM predictions (Guisan & Thuiller, 2005; Record et al.,
+
+used to produce such rangewide species distribution data (Guisan &
+
+2013). Most importantly from a conservation planning perspective,
+
+Thuiller, 2005). SDMs assess habitat preferences in an environmen
+
+spatial SDMs make use of the spatial information and dependen
+
+tal envelope given the species occurrences and the environmental
+
+cies of the species and environment in the planning units. Habitat
+
+predictors at the respective locations, and project a probabilistic
+
+suitability predictions from spatial SDMs are generally more con
+
+habitat suitability index across the study area (Elith & Leathwick,
+
+tiguous (Domisch, Wilson, & Jetz, 2016) and less patchy than those
+
+2009).
+
+derived from nonspatial SDMs. The question remains, whether such
+
+760
+
+|
+
+DOMISCH et al.
+
+contiguous predictions have the potential to maximize the manage
+
+species protection itself and produces unnecessary costs, that is, for
+
+ment efficiency of spatial plans.
+
+establishing protected areas in erroneous locations where the target
+
+Species distribution models can be made spatially explicit in nu
+
+species do not actually occur.
+
+merous ways (see Dormann, 2007, for a review of various methods).
+
+Here, we analyse whether accounting for spatial dependencies
+
+Spatial aspects are included in the SDM given the spatial autocor
+
+in both steps, the spatial prioritization process and in the underlying
+
+relation of species distributions (Besag, 1974; Record et al., 2013).
+
+conservation features (here: species), influences the arrangement of
+
+Spatial autocorrelation is a common phenomenon in ecology, as
+
+potential protected areas. Using species survey data, we build non
+
+nearby locations (given species occurrences and environmental pre
+
+spatial and spatial SDMs and compare the resulting mapped spatial
+
+dictors) tend to be more similar compared to those located farther
+
+conservation plans across a range of conservation targets, that is,
+
+apart (Legendre, 1993; Record et al., 2013). One possible method to
+
+proportions of potential species distribution areas. We hypothesize
+
+add the spatial dimension in SDMs can be, for instance, through spa
+
+that (a) spatial SDMs would outperform nonspatial SDMs in terms
+
+tial random effects (Dormann, 2007). Spatial random effects can be
+
+of model evaluation scores, since spatial SDMs account for the in
+
+computationally demanding. However, their use may be warranted
+
+fluence of proximity in species populations; (b) this effect cascades
+
+or even requiredwhen the task is to limit the false positive and false
+
+through to the spatial conservation plans, and that those derived
+
+negative predictions of probability of occurrence within a spatial unit
+
+from spatial SDMs would differ significantly from the ones based on
+
+(Record et al., 2013). Limiting false positive/negative predictions is
+
+nonspatial SDMs. We test these hypotheses in three case studies
+
+crucial in conservation planning, since the over or underestimation
+
+covering terrestrial, marine and the freshwater realms. We do so,
+
+of suitable habitats (and therefore species occurrences) impacts
+
+because protected areas in each realm are typically planned using
+
+(a)
+
+36
+
+30.0
+
+(b)
+
+34
+
+32
+32.5
+
+30
+
+35.0
+28
+
+37.5
+
+26
+148
+
+150
+
+152
+
+80
+
+78
+
+76
+
+50 (c)
+
+48
+
+46
+
+44
+
+42
+10
+
+15
+
+20
+
+25
+
+30
+
+F I G U R E 1 Spatial arrangement of
+potential protected areas derived from
+nonspatial and spatial SDMs, as well as
+their overlap in the terrestrial (a), marine
+(b) and freshwater realms (c), each using
+a specific planning unit shape (grids,
+hexagons, subcatchments). Spatial plans
+were defined for a 20% conservation
+target within a 10% gap to optimality.
+The inset shows the location of the study
+areas in Australia, US East Coast and
+the Danube river basin. See Supporting
+Information Figures S3S5 for maps
+showing a wider range of conservation
+targets
+
+|
+
+DOMISCH et al.
+
+761
+
+different shapes of spatial units (grids, hexagons and subcatchments,
+
+The freshwater case study (Figure 1c) was based on detec
+
+respectively), and the planning unit shape has shown to impact the
+
+tion/nondetection data of 85 fish species across the Danube
+
+spatial pattern and effectiveness of protected areas (Nhancale &
+
+river basin. Fish survey data were derived from the EFI+ and the
+
+Smith, 2011).
+
+BioFresh project databases, sampled during 19552007 (Schinegger,
+Pletterbauer, Melcher, & Schmutz, 2016; Zupancic, 2015). We used
+the HydroBASIN dataset (Lehner & Grill, 2013) and selected all level
+
+2 | M E TH O DS
+
+12 subcatchments draining into the Black Sea, comprising of 7,376
+subcatchments with an average size of 108 km2. We then extracted
+
+2.1 | General workflow of the analysis
+
+climatic (Hijmans, Cameron, Parra, Jones, & Jarvis, 2005), topo
+
+Our aim is to test whether, and if so, how the addition of spatial in
+
+graphic (Amatulli et al., 2018) and land cover variables (Tuanmu &
+
+formation in the SDMs leads to different species habitat suitability
+
+Jetz, 2014, all at ~1 km spatial grain), as well as the number of dams
+
+predictions, and hence to different spatial conservation plans. The
+
+(Lehner et al., 2011) for each subcatchment, the latter representing
+
+analysis is divided into five stages: (a) preparing the data and aggre
+
+a proxy for human impact besides land use.
+
+gating it into spatial units; (b) testing the degree of spatial autocor
+
+Species data, including species detections, nondetections and
+
+relation in the species data to see whether adding spatial random
+
+sampling dates, were aggregated to the planning units. Within
+
+effects in the SDMs is warranted; (c) running two SDMs for each
+
+each planning unit, environmental data were aggregated using var
+
+species, one that does not use the spatial information (nonspatial
+
+ious techniques (e.g., average, standard deviation; see Supporting
+
+SDM) and another one that takes advantages of the spatial informa
+
+Information Table S1). In the freshwater realm, we summed the
+
+tion via the spatial random effects (spatial SDM); (d) using the out
+
+precipitation across each subcatchment and routed the upstream
+
+puts from the spatial and the nonspatial SDMs as separate inputs
+
+accumulated precipitation along the hydrography to mimic runoff
+
+to calculate spatially optimized conservation plans with varying con
+
+(Domisch, Amatulli, & Jetz, 2015).
+
+servation targets; and, finally, (e) comparing the spatial conservation
+
+From a large set of layers per case study, we selected those that
+
+plans derived from the nonspatial and the spatial SDMs. As the non
+
+are meaningful from an ecological perspective to describe the distri
+
+spatial and spatial SDMs are, except for the spatial random effects,
+
+bution of the species. The decision regarding the choice of predic
+
+identical, this allows us to single out the effect that the spatial infor
+
+tors was based on a mixture of expert knowledge, data availability
+
+mation in SDMs has on the subsequent spatial conservation plans.
+
+and on preliminary model runs: For each realm, we did multiple pre
+liminary model runs where we tested which set of predictors yields
+the highest model evaluation scores. Hence, we aimed to get the
+
+2.2 | Study areas and species data
+
+bestpossible model predictions for each realm. The set of predictors
+
+The terrestrial case study (Figure 1a) comprised survey data of 33
+
+among realms is different as each realm needs to take realmspecific
+
+Eucalyptus species in Eastern Australia derived from Fithian, Elith,
+
+characteristics into account. Highly intercorrelated environmental
+
+Hastie, and Keith (2015). This dataset encompasses species detec
+
+predictors were omitted (i.e., where Pearson's correlation tests be
+
+tions/nondetections sampled annually from 1970 to 2013 as well
+
+tween different predictors yielded a correlation coefficient >0.7 or
+
+as environmental data covering climate and topography and deriva
+
+<0.7) (Dormann et al., 2013, see Supporting Information Figure S1
+
+tives thereof (Fithian et al. 2015). Environmental data layers were
+
+for all predictors used). All (continuous) predictors were centred (so
+
+resampled from the original 250m spatial resolution by factor 20 to
+
+all predictors have a mean of 0) and scaled by dividing by their stan
+
+obtain a grid with the individual squares sizing 0.05 (approximately
+
+dard deviations. The final number of predictors was 13, 11 and 8 for
+
+2
+
+25 km ), using the
+
+raster
+
+package in R (Hijmans & van Etten, 2018;
+
+SDMs in the terrestrial, marine and freshwater realms, respectively.
+
+RCoreTeam, 2018). This yielded 7,763 grid cells that were used for
+all subsequent analyses.
+The marine case study (Figure 1b) consisted of monitoring data
+
+2.3 | Defining spatial connectivity
+
+of 53 reef fish species in the Southeast U.S. Continental Shelf re
+
+Regarding spatial SDMs, the connectivity among planning units for
+
+gion. Fish detections and nondetections were derived from the
+
+the terrestrial and marine realms was computed from a polygon
+
+Southeast Reef Fish Survey (SERFS) that was conducted annually
+
+shapefile using the Rpackage spdep (using the queen's move; Bivand,
+
+from 1990 to 2013 (Bacheler et al., 2014; SEAMAPSA, 2017).
+
+Hauke, & Kossowski, 2013; Bivand & Piras, 2015). This procedure
+
+Environmental data on ocean topography, currents, nutrients and
+
+identifies all firstorder neighbours of each focal planning unit, that
+
+light were obtained from the BioOracle (approx. 9 km spatial
+
+is, those planning units that are directly adjacent and connected.
+
+grain at the Equator, Tyberghein et al., 2012; Assis et al., 2018)
+
+In the freshwater realm, it is crucial to account for the longitudinal
+
+and MARSPEC datasets (approx. 1 km, Sbrocco & Barber, 2013).
+
+connectivity among planning units (Abell, Allan, & Lehner, 2007;
+
+All environmental data were harmonized to 7,123 hexagonal grids
+
+Hermoso, Linke, Prenda, & Possingham, 2011). Hence, the spatial
+
+of approx. 19 km2, and the species data were summarized for each
+
+connectivity was defined as all upstream subcatchments connected
+
+hexagonal grid cell (created using the Rpackage
+
+within a 100 km (asthefishswims) distance of a given subcatch
+
+sp;
+
+Pebesma &
+
+Bivand, 2005; Bivand, Pebesma, & GomezRubio, 2013).
+
+ment. This distance was chosen as a tradeoff between hydrological
+
+|
+
+762
+
+DOMISCH et al.
+
+connectivity (which can exceed 100 km) and the computational
+
+variability in suitability that is not explained by the environmental
+
+demand and time for calculating SDMs and spatial plans. Note that
+
+variables:
+
+with this information, full connectivity matrices (rangewide and up/
+downstream) are built within SDMs and the spatial prioritization. In
+other words, each planning unit knows which planning units are
+connected to it.
+
+(4)
+
+where i is the mean of i in the neighbourhood of i, V is the variance
+of the spatial random effects, and ni is the number of neighbours
+for the planning unit i (see also Latimer et al., 2006, for the formal
+
+2.4 | Detecting spatial autocorrelation
+
+description of the iCAR). Thus, we assume that in addition to the
+
+We first assessed the degree of spatial autocorrelation in species
+occurrences among planning units (where occurrences were aggre
+gated within planning units). Here, we used the Monte Carlo simu
+lation method and calculated Moran's I and the associated pvalue
+for each species (at  = 0.05), using the Rpackage
+
+spdep
+
+(with 999
+
+permutations). Spatial weights were kept identical to the connectiv
+ity definition of planning unit above, specifying proportional weights
+to the connected planning unit (row standardization).
+
+shortcomings in SDMs that could be ported to the spatial prioritization.
+Hence, we refrained from artificial pseudoabsences to draw species
+nondetections, but used survey data with repeated visits to account
+for the detection probability of species at given sites. Specifically, we
+ran zeroinflated binomial SDMs in a Bayesian framework using the
+Rpackage (Vieilledent et al., 2014) with hSDM.ZIB and hSDM.
+
+ZIB.iCAR functions for the nonspatial and spatial SDMs, respectively.
+These functions integrate two processes, a Bernoulli suitability and a
+Binomial observability process, into a hierarchical zeroinflated bino
+mial model. The Bernoulli suitability process uses species point records
+and environmental predictors as the response and explanatory vari
+ables, respectively (Vieilledent et al., 2014):
+(1)
+
+(2)
+
+where zi is a random variable describing the binary habitat suitabil
+ity at planning unit i, which follows a Bernoulli distribution of pa
+rameter  i; that is, the probability that the habitat is suitable in the
+planning unit i.  i is expressed as a linear model combining the matrix
+of environmental predictors Xi and parameters  using a logit link
+function.
+In the spatial models, Equation 2 is extended by an intrinsic con
+ditional autoregressive model (iCAR) in the suitability process:
+logit (i ) = Xi  + i
+
+of the neighbouring planning unit (Vieilledent et al., 2014). A plan
+ning unit with poor environmental conditions next to planning
+units with good environmental conditions will result in higher es
+timated suitability, than if its neighbours also show poor environ
+mental conditions (Domisch et al., 2016).
+Regarding the observability process, we counted the number
+
+planning unit was visited. The model then estimates the probabil
+
+of species in each realm. Our aim was to minimize the methodological
+
+logit (i ) = Xi 
+
+occurrence probabilities also depend on the occurrence probabilities
+
+the surveys over time, yielding the information on how often each
+
+We ran Bayesian occupancy models for predicting the habitat suitability
+
+zi  Bernoulli(i )
+
+environmental characteristics within the planning units, the species
+
+of repeat surveys within each planning unit; that is, we aggregated
+
+2.5 | Species distribution modelling
+
+hsdm
+
+i  Normal( V ni )
+
+ity of observation given the species presence in a planning unit,
+where we assume that, if the species was observed at least once
+during multiple visits in a given planning unit, the habitat is suitable
+and the absence of the species during other visits in the planning
+unit is due to imperfect detection. For instance, a given species
+was observed once in planning units A and B. Planning unit A was
+visited once, yielding a detection probability of 1, whereas B was
+visited 10 times (yielding a detection probability of 1/10 = 0.1).
+In combination with the suitability process (i.e., environmental
+conditions) and the spatial autocorrelation (i.e., the spatial neigh
+bourhood information), the observability information yields more
+robust estimates in unsampled locations, that is, whether a species
+actually occurs there but was not detected, or if it is actually not
+present (and hence not detected). The probability of observing the
+species ( ) was specified as:
+yi  Binomial(zi  i ti )
+
+(5)
+
+logit(i ) = 0
+
+(6)
+
+where y i is a vector of the total number of observed presences in
+planning unit i. zi is the binary habitat suitability in planning unit i from
+the suitability process (Equation 1), and ti denotes the total number
+of visits within the planning unit i, including the nondetections as
+described above. yi follows a binomial distribution of the combina
+tion of the habitat suitability zi at planning unit i and the parameters
+i and ti. In other words, i is the probability of observing a species in
+a location, if it was actually present. We estimate only the intercept
+
+(3)
+
+( 0) using a logit link function and assume a spatially constant detec
+tion probability (due to the relatively small occurrence datasets and
+
+where i is the spatial random effect of the planning unit i. i ac
+counts for the spatial autocorrelation of the presence probabilities
+
+limited spatial replication needed to understand the role of covari
+ates in variable detection probabilities).
+
+|
+
+DOMISCH et al.
+
+We ran three Markov chain Monte Carlo (MCMC) simulations
+
+763
+
+aggregation and patchiness of spatial plans. For the BLM cali
+
+with 200,000 iterations each, a burnin phase of 50,000 iterations
+
+bration, we used the software
+
+and a thinning interval of 10. Model convergence was assessed by
+
+within the Rpackage
+
+the multivariate potential scale reduction factor (MPSRF; Brooks
+
+ated all necessary input files in base R, except the input.dat file,
+
+& Gelman, 1998). For the suitability process, we used the coeffi
+
+where for convenience, we used the
+
+cients from an initial, nonspatial generalized linear model (GLM)
+
+calibrated the BLM following the recommendations by Ardron,
+
+as initial values, and both suitability and observability processes
+
+Possingham, and Klein (2008). First, we ran
+
+used uninformative priors centred at zero with a fixed large vari
+
+species penalty factor of 10, and BLM values set to 0, 0.00001,
+
+ance of 100 (Domisch et al., 2016). The prior distribution for the
+
+0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1,000, 10,000, 100,000 to
+
+variance of the spatial random effects followed a uniform distri
+
+approximate the range of the optimal BLM value. We plotted the
+
+bution, that is, a flat prior where the upper bound of the variance
+
+connectivity against the BLM (Supporting Information Figure S6)
+
+is set to 10.
+
+and identified the elbow, that is, the point from where an increase
+
+marxan
+
+marxan
+
+v.2.43v (Ball et al., 2009)
+
+(Hanson & Watts, 2015). We cre
+marxan
+
+Rpackage. We then
+marxan
+
+with a fixed
+
+Species data were split into training (70%) and validation (30%)
+
+in the compactness (higher BLM values) has no major effect on the
+
+sets, and model performance for each species was evaluated using
+
+connectivity in spatial plans anymore. Similarly, we also mapped
+
+the area under curve (AUC), true skill statistic (TSS), sensitivity and
+
+the spatial plans to visually confirm the increasing compactness
+
+specificity (true positive and negative predictions, respectively) and
+
+derived from increasing BLM values. In a second step, we repeated
+
+the deviance information criterion (DIC). Note that the nonspatial
+
+the previous analyses and maps with setting the BLM ranging
+
+SDMs did not have any predefined spatial configuration during the
+
+within the approximate BLM value (e.g., between 10 and 100).
+
+SDM calibration and prediction; that is, each planning unit was con
+
+Again, we ran sensitivity runs within increments of 10 and identi
+
+sidered independent of each other in the SDMs, while all other data
+
+fied the BLM to 35, 20, 0.15 for the terrestrial, marine and fresh
+
+were kept constant (i.e., identical random seed in the SDMs, and
+
+water realms, respectively (Supporting Information Figure S6).
+
+identical predictors and species data including the subsets for val
+idation). The spatial prioritization was undertaken using the realm
+
+We then used the
+
+gurobi
+
+optimizer
+
+7.5 software (Gurobi
+
+Optimization, 2017) to find optimal conservation planning solutions
+
+specific spatial connectivity as described above, for predictions
+
+based on integer linear programming (ILP) within the Rpackage pri-
+
+derived from both nonspatial and spatial SDMs.
+
+oritizr
+
+(Hanson et al., 2017). ILP has shown to outcompete tradi
+
+tional simulated annealing tools (e.g., Marxan, Ball et al., 2009) in
+
+2.6 | Spatial prioritization
+
+terms of time and accuracy (Beyer, Dujardin, Watts, & Possingham,
+2016), using the same input files as
+
+marxan.
+
+We varied the conser
+
+We transformed the predictive posterior mean probability maps from
+
+vation target for all species in the spatial plans, ranging from 10% to
+
+SDMs into a semibinary scheme using TSS as a threshold (Allouche,
+
+50% in 5% increments. For instance, a conservation target of 20%
+
+Tsoar, & Kadmon, 2006), where all values below the threshold were
+
+means that for each species 20% of its suitable habitat (as given by
+
+converted to zero and values above the threshold retained their
+
+the SDM predictions) are required in this specific spatial plan.
+
+original values. This overcomes the problem of inflating the spatial
+
+For each run, we allowed a 10% gap to optimality in the spatial
+
+prioritization with many planning units having low probabilities of
+
+plans (as tradeoff between optimality, and the time the optimizer
+
+occurrence (e.g., 10 planning units with probabilistic values of 0.1
+
+takes to converge). To rule out the effect of the planning unit itself
+
+would equal one planning unit having a value of 1). Simultaneously,
+
+(cost, i.e., area of the planning unit), we set a constant value of 1 as the
+
+this procedure retained the information of varying probabilities of
+
+cost of each planning unit. Likewise, we set no weights for single spe
+
+occurrence (as recommended by Tulloch et al., 2016) above a cer
+
+cies. This means that only the conservation features, that is, the prob
+
+tain level of confidence as given by TSS (i.e., within the range of the
+
+abilistic information on species habitat suitability and the connectivity
+
+predicted presence of a species). We refrained from lockingin
+
+penalty (set by the BLM), were decisive to the objective function that
+
+any current, already established protected areas as this would have
+
+was set to minimize the total number of planning units to be part of
+
+decreased the flexibility in selecting protected areas given only the
+
+the selected spatial plan (Game & Grantham, 2008). Note that op
+
+conservation features, which was the aim of this study.
+To create the boundary files (describing the spatial connectivity)
+
+posed to, for example,
+
+marxan, gurobi
+
+provides one optimal solution
+
+and hence requires that all species meet the conservation target.
+
+for the terrestrial and marine case studies, we used the QMarxan
+toolbox in QGIS (QGISDevelopmentTeam, 2017). For the fresh
+water realm, we applied an inversedistance connectivity penalty,
+
+2.7 | Statistical analyses
+
+where subcatchments located closer to a given focal planning unit
+
+For each realm and model type, we compared model accuracy
+
+would get a higher penalty if not chosen as part of the protected
+
+given the model evaluation scores, the estimated detection prob
+
+area (opposed to those planning units located more distant, as pro
+
+ability, the range size estimates of model outputs considering all
+
+posed by Hermoso et al. 2011).
+
+planning units that had a probability value above the threshold
+
+We first calibrated the boundary length modifier (BLM) for
+
+(equal to binary predictions), and the summed probability of habi
+
+our analyses. The BLM is dimensionless and balances the spatial
+
+tat suitability across all species within each planning unit as a
+
+764
+
+|
+
+DOMISCH et al.
+
+proxy for species richness (Mateo, Felicsimo, Pottier, Guisan, &
+
+the counterparts (Figure 2). DIC was on average lower for the spa
+
+Muoz, 2012). For each conservation target run (10%50%) de
+
+tial SDMs in the terrestrial and freshwater realm, but higher in the
+
+rived from spatial and nonspatial SDMs, we (a) assessed whether
+
+marine realm (marine nonspatial vs. spatial SDMs; DIC: 515  485
+
+species were covered by the spatial plans, (b) counted the relative
+
+vs. 534  596, mean  SD). All chains of the SDMs converged suc
+
+number of planning units needed to fulfil the given target of the
+
+cessfully yielding a MPSRF value of 0.999. The detection probability
+
+spatial plan and (c) compared the spatial overlap of spatial plans
+
+across realms was on average consistently higher in the spatial than
+
+by assessing the percentage of overlapping spatial units.
+
+in the nonspatial SDMs (Figure 2f,l,r).
+
+3 | R E S U LT S
+
+3.3 | Range size estimates
+Spatial SDMs yielded generally more compact and less dispersed
+
+3.1 | Spatial autocorrelation
+
+habitat suitability estimates (see exemplary maps in Supporting
+
+Across the terrestrial, marine and freshwater realms, all but
+
+Information Figure S1), and this effect is also mirrored in the range
+
+three of the 171 modelled species showed a significantly positive
+
+size estimates. Range size estimates derived from spatial SDMs were
+
+spatial autocorrelation ( > 0.05 for the freshwater fish species
+
+significantly lower in the freshwater and terrestrial realms than in
+
+Whiteeye bream [Ballerus sapa], sunbleak [Leucaspius deline-
+
+the nonspatial models. This means that the predictions derived from
+
+ates] and brown trout [Salmo trutta lacustris], see Supporting
+
+spatial SDMs were more restrictive and species' suitable habitats
+
+Information Table S2). Species occurrences across planning
+
+were predicted to occur in less planning units than in the nonspa
+
+units were hence nonrandomly distributed, warranting the use
+
+tial SDMs (see exemplary maps in Supporting Information Figure S1;
+
+of spatial random effects within SDMs to account for spatial
+
+nonspatial vs. spatial SDMs in the terrestrial realm: 1,278  750 vs.
+
+autocorrelation.
+
+1,057  690 planning units, paired ttest: t = 2.95, df = 32, p = 0.006;
+freshwater: 2,874  1,491 and 2,532  1,409 planning units,
+mean  SD, paired ttest: t = 2.0493, df = 84, p = 0.044). In the marine
+
+3.2 | Model performance
+
+realm, no significant difference in range size estimates was observed
+
+The SDM performance indicators AUC, TSS, sensitivity and specific
+
+(nonspatial vs. spatial SDMs: 2,698  1,564 and 2,628  1,500 plan
+
+ity were on average consistently higher for the spatial SDMs than for
+
+ning units, paired ttest: t = 0.783, df = 52, p = 0.436).
+
+(a)
+
+(b)
+
+(g)
+
+(h)
+
+(m)
+
+(n)
+
+(c)
+
+(i)
+
+(o)
+
+(d)
+
+(e)
+
+(f)
+
+(j)
+
+(k)
+
+(l)
+
+(p)
+
+(q)
+
+(r)
+
+F I G U R E 2 Model evaluation scores representing AUC, TSS, sensitivity, specificity and DIC, as well as the estimated detection probability,
+summarized across 33 terrestrial (af), 53 marine (gl) and 85 freshwater species (mr) derived from nonspatial (blue) and spatial SDMs
+(green). Bars represent median values and boxes the 1st and 3rd quartiles, respectively
+
+|
+
+DOMISCH et al.
+
+50
+
+(a)
+
+50
+
+40
+
+765
+
+(b)
+
+40
+
+30
+
+30
+
+20
+
+20
+
+10
+
+10
+
+0
+
+0
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+40
+
+45
+
+50
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+40
+
+45
+
+50
+
+F I G U R E 3 (a) Spatial overlap in potential protected areas based on spatial and nonspatial SDMs, along a conservation target of 10%
+50% in the terrestrial, marine and freshwater realm. Please see Supporting Information Figures S3S5 for the mapped spatial plans of each
+conservation target. (b) Relative number of planning units required for reaching the solution in spatial plans for the different realms with
+conservation targets ranging from 10%50% in the terrestrial, marine and freshwater realms. Points and triangles along solid and dotted
+lines represent spatial plans derived from nonspatial and spatial SDMs, respectively
+
+3.4 | Summed probabilities of habitat suitability
+
+4 | D I S CU S S I O N
+
+Across realms, spatial SDMs produced on average a lower summed
+
+Incorporating connectivity has been successfully adopted in sys
+
+habitat suitability across planning units (i.e., a proxy for species
+
+tematic conservation planning for building species migration and
+
+richness), than predicted by nonspatial SDMs (nonspatial vs. spa
+
+movement corridors (Margules & Pressey, 2000). Yet, this concept
+
+tial SDMs in the terrestrial realm: 3.00  1.28 vs. 2.37  1.00 plan
+
+has been largely neglected in the underlying conservation features
+
+ning units, paired ttest: t = 61.845, df = 7,762, p < 0.001; marine:
+
+(e.g., species) that are used in the spatial planning. Our study pro
+
+12.27  3.01 vs. 11.79  2.97 planning units, mean  SD, paired
+
+vides a nonexhaustive comparison, shedding light on the effects of
+
+ttest: t = 28.458, df = 7,122, p < 0.001; freshwater: 21.36  11.91
+
+nonspatial versus spatially explicit conservation features in system
+
+vs. 16.50  9.48 planning units, paired ttest: t = 46.057, df = 7,375,
+
+atic conservation planning. We show that (a) spatially explicit pre
+
+p < 0.001). See Supporting Information Figure S2 for a spatial rep
+
+dictions of species probabilistic habitat suitability outperform those
+
+resentation of the differences in summed probabilities among non
+
+derived from nonspatial SDMs across the three realms, each with a
+
+spatial and spatial SDMs.
+
+specific landscape configuration and consequently distinct species
+dispersal and connectivity characteristics. Moreover, (b) spatially
+
+3.5 | Spatial similarity of spatial plans
+
+explicit predictions provide lower range size estimates, indicating
+
+All species targets across SDM types and spatial conservation
+
+into the conservation planning as (c) the spatial arrangement of spa
+
+plans were met in all spatial prioritization runs (data shown in the
+
+tial conservation plans differs fundamentally between those derived
+
+Pangaea repository). The degree of spatial overlap of potential pro
+
+from nonspatial and spatial model predictions. Simultaneously, (d)
+
+tected areas derived from spatial and nonspatial SDMs was target
+
+both spatial and nonspatial approaches require a similar number of
+
+dependent. The overlap was lowest for the smallest conservation
+
+planning units for delineating potential protected areas.
+
+less dispersed habitat suitability predictions. This effect cascades
+
+target (10%) with the per cent overlap ranging from 1% to 2%, and
+
+Spatial SDMs yielded habitat suitability predictions that were
+
+increased up to a maximum of 30% to 39% for a conservation tar
+
+on average more accurate given their better model performance
+
+get of 50% (Figure 3a, and Supporting Information Figures S3S5).
+
+(Figure 2), than those derived from nonspatial SDMs. This pattern
+
+The number of required planning units increased linearly with in
+
+is in line with previous findings from Record et al. (2013) due to three
+
+creasing conservation targets: the higher the conservation target,
+
+wellknown factors (reviewed by Dormann, 2007): (a) distancerelated
+
+the higher the required amount of planning units to meet the given
+
+dispersal or species interactions, (b) nonlinear speciesenvironment
+
+target (Figure 3a).
+
+relationships and (c) spatially structured environmental predictors
+
+The relative difference in the number of planning units needed
+
+causing spatial structuring in the response, that is, the modelled spe
+
+for a given solution between spatial and nonspatial SDMs was
+
+cies habitat suitability (Besag, 1974). In addition, Crase, Liedloff, Vesk,
+
+within a margin of 5% (Figure 3b). No significant differences in the
+
+Fukuda, and Wintle (2014) showed that if such induced spatial auto
+
+number of planning units between spatial and nonspatial models
+
+correlation in species distributions is not accounted for, model predic
+
+across conservation targets could be observed.
+
+tions are likely to remain inaccurate. Contrary to Thibaud, Petitpierre,
+
+766
+
+|
+
+DOMISCH et al.
+
+Broennimann, Davison, and Guisan (2014), who found that spatial
+
+computational reasons, we only extracted the mean posterior prob
+
+autocorrelation itself has only a minor relative effect on model pre
+
+ability of SDMs). In other words, species and environmental data, as
+
+diction accuracy (compared to the choice of predictors, sample sizes,
+
+well as the aggregation of data into planning units, potentially lead
+
+sampling designs and modelling technique), our analyses reveal that
+
+to a certain level of uncertainty in the habitat suitability predictions
+
+accounting for spatial autocorrelation leads to a substantial improve
+
+in our study (Beale & Lennon, 2012). Hence, spatial plans should be
+
+ment of model outputs (given that all other data were kept constant).
+
+given flexibility to accommodate such uncertainties in terms of the
+
+This effect cascades into the resulting spatial plans: Those derived
+
+selection of spatial units during the spatial prioritization.
+
+from spatial SDM predictions are likely to provide a better representa
+
+We singled out the effect of spatial autocorrelation in conserva
+
+tion of areas needed to potentially protect, than spatial conservation
+
+tion features to explore the effect of the connectivity among planning
+
+plans derived from nonspatial SDM predictions. In addition, spatial
+
+units on the subsequent spatial conservation planning. We encourage
+
+SDMs yielded, on average, a slightly higher detection probability and
+
+future studies to further explore these effects using realworld ex
+
+thus reduced the potential false absences caused by the imperfect
+
+ercises, where the current and already established protected areas
+
+detection of species (MacKenzie et al., 2017). Reducing the risk of
+
+could be lockedin during the spatial prioritization along with various
+
+overlooking species is therefore crucial for an effective conservation
+
+costs for the planning units. This would decrease the flexibility in the
+
+planning (Petitot, Manceau, Geniez, & Besnard, 2014).
+
+selection of protected areas, and given the low overlap between non
+
+We found only a minor overlap of potential protected areas based
+
+spatial and spatial conservation features, the impact on the outcome
+
+on spatial and nonspatial SDMs for the commonly applied conservation
+
+remains to be seen. Similarly, the degree of fragmentation (Cabeza,
+
+targets of 10%20% (e.g., the global target of 17% set by the Convention
+
+2003) and the minimum patch size depend on the available area and
+
+on Biological Diversity, CBD, 2010; Veach, Minin, Pouzols, & Moilanen,
+
+financial resources (as a large amount of small patches are more ex
+
+2017). Interestingly, spatial plans, regardless of the modelling approach,
+
+pensive to manage (Smith, Minin, Linke, Segan, & Possingham, 2010)).
+
+required a similar amount of planning units. On average, spatial SDMs
+
+Likewise, the implementation of various cost measures, such as area,
+
+predicted a lower range size per species and, therefore, a lower number
+
+land price or human influence, could be added in the analysesa topic
+
+of species predicted to have a suitable habitat per planning unit. Hence,
+
+that was however beyond the scope of our study. Hence, testing spa
+
+spatial plans using predictions from spatial SDMs requirerelatively
+
+tial plans and with these additions and interactions has the potential
+
+speakingmore planning units (e.g., assuming that nonspatial and spa
+
+to further reveal differences stemming from nonspatial and spatially
+
+tial SDMs would predict a suitable habitat of a species into 100 and 90
+
+explicit modelled conservation features. In our study, the species
+
+planning units, respectively, the spatial plans should cover theoretically
+
+data were contingent on publicly available survey data across the
+
+20 and 18 planning units given a target of 20%). This is likely to derive
+
+three realms, and hence, the species can be considered generalist
+
+due to the, on average, lower summed probability of suitable habitats
+
+species. Rare species are considered particularly important for spa
+
+per planning unit in spatial SDM predictions (i.e., species richness sensu
+
+tial planning; however, such data were not publicly available for our
+
+Mateo et al., 2012). Consequently, the optimizer (gurobi, in our case)
+
+study. It remains therefore to be seen whether SDMs of rare species
+
+had to choose from a smaller pool of available planning units. Hence,
+
+would yield similar differences in spatial plans as shown in our study.
+
+the optimizer is forced to seek additional planning units that lead to a
+
+We note that by accounting for species observability by employ
+
+remarkably different spatial arrangement of spatial conservation plans
+
+ing a hierarchical SDM, we aimed to limit the shortcomings of SDMs
+
+(Figures 1 and 3a). While we did not explicitly test for differences among
+
+that else do not account for the fact that species might be over
+
+realms, this pattern was similar across different landscape configura
+
+looked during the sampling. Regarding the addition of the spatial
+
+tions and planning unit shapes. Broadening the perspective, nonspatial
+
+information in SDMs, we want to highlight that instead of running hi
+
+SDMs tend to create artificial species hot spots by predicting a higher
+
+erarchical Bayesian models, other SDM techniques could be equally
+
+species richness per planning unit, and the derived spatial plans would
+
+used, such as Generalized Linear Mixed Models using spatial random
+
+take advantage of the umbrella effect, that is, where the conservation
+
+effects, or other SDMs algorithms that use spatial eigenvectors as a
+
+of a species confers protection to a larger number of cooccurring spe
+
+covariate containing information about the spatial structure in the
+
+cies (Roberge & Angelstam, 2004). In our study, however, this pattern
+
+study area (see Dormann, 2007, for a review on various methods).
+
+does not depict the bestpossible outcome given the lower model eval
+uation scores. In turn, spatially explicit SDMs have the potential, though
+not reducing the quantity of protected areas, to increase their quality
+
+5 | CO N C LU S I O N S
+
+(Barnes et al., 2018).
+We acknowledge that a 10% gap to optimality, as we used it here,
+
+Employing SDMs that account for spatial dependencies in conserva
+
+can introduce noise in the spatial arrangement of potential protected
+
+tion features provide a promising way forward to increase the quality
+
+areas (e.g., Figure 3a). Even with this noise, however, differences in
+
+of protected areas, however without increasing the area (and possibly
+
+spatial plans were distinct in our study. While a more stringent gap
+
+costs) needed. They yield fundamentally different spatial conserva
+
+(e.g., 0.5%, Beyer et al., 2016) could yield more accurate spatial plans,
+
+tion plans given more accurate species habitat suitability predictions,
+
+we intended to balance uncertainties in the spatial plans with those
+
+compared to SDMs that ignore such spatial dependencies. This high
+
+most probably apparent in the underlying data (note that due to
+
+lights the importance of using bestpossible modelling practices sensu
+
+|
+
+DOMISCH et al.
+
+Dormann (2007) and Guisan et al. (2013), which is needed for a wider
+acceptance of SDMs in systematic conservation planning (Tulloch et al.,
+2016). Hence, we encourage modellers and practitioners to carefully
+assess the possibilities in adding spatial SDMs to their systematic con
+servation planning to derive sufficient options for choosing the optimal
+spatial arrangement of protected areas.
+
+AC K N OW L E D G E M E N T S
+We wish to thank the following data providers for making their data
+available: the Flora Survey Module of the Atlas of NSW Wildlife by the
+Office of Environment and Heritage (OEH), the Southeast Reef Fish
+Survey (SERFS) comprising data from the Marine Resources Monitoring
+Assessment and Prediction program (MARMAP), the Southeast Area
+Monitoring and Assessment Program, the South Atlantic (SEAMAPSA)
+and the Southeast Fisheries Independent Survey (SEFIS), as well as the
+EFI+ and BioFresh consortia. This study was funded by the European
+Unions Horizon 2020 research and innovation programme under grant
+agreement No. 642317. SDL has received funding from the European
+Unions Horizon 2020 research and innovation programme under the
+Marie SkodowskaCurie grant agreement No. 748625, and SCJ from
+the German Federal Ministry of Education and Research (BMBF) for
+the GLANCE project (Global Change Effects in River Ecosystems; 01
+LN1320A). We wish to thank Gwen Iacona and two anonymous referees
+for their constructive comments on an earlier version of the manuscript.
+
+C O N FL I C T O F I N T E R E S T
+The authors declare no competing financial interests.
+
+DATA ACC E S S I B I L I T Y
+All results supporting the study are available at https://doi.pangaea.
+de/10.1594/PANGAEA.889033 (all model predictions, model evalu
+ation scores and spatial conservation plans) for each realm. All en
+vironmental data used for modelling are available in the following
+repositories for download: www.worldclim.org, www.earthenv.org,
+http://sedac.ciesin.columbia.edu/data/set/grand-v1-dams-rev01,
+www.bio-oracle.org, www.marspec.org, and Supporting Information
+of Fithian et al. (2015). Species data are available for download in
+the following repositories: Supporting Information of Fithian et al.
+(2015), http://sero.nmfs.noaa.gov/sustainable_fisheries/caribbean/
+fish_indep_wkshp/surveys/sefis/, and www.freshwaterplatform.eu.
+
+ORCID
+https://orcid.org/0000-0002-8127-9335
+
+Sami Domisch
+
+https://orcid.org/0000-0003-0644-7869
+
+Martin Friedrichs
+Thomas Hein
+
+https://orcid.org/0000-0002-7767-4607
+https://orcid.org/0000-0002-8974-7834
+
+Florian Borgwardt
+Sonja C. Jhnig
+
+https://orcid.org/0000-0002-6349-9561
+
+Simone D. Langhans
+
+https://orcid.org/0000-0001-9581-3183
+
+767
+
+REFERENCES
+Abell, R., Allan, J. D., & Lehner, B. (2007). Unlocking the potential of pro
+tected areas for freshwaters. Biological Conservation, 134, 4863.
+https://doi.org/10.1016/j.biocon.2006.08.017
+Allouche, O., Tsoar, A., & Kadmon, R. (2006). Assessing the accuracy
+of species distribution models: Prevalence, kappa and the true skill
+statistic (TSS). Journal of Applied Ecology, 43, 12231232. https://doi.
+org/10.1111/j.1365-2664.2006.01214.x
+Amatulli, G., Domisch, S., Tuanmu, M. N., Parmentier, B., Ranipeta, A.,
+Malczyk, J., & Jetz, W. (2018). A suite of global, crossscale topo
+graphic variables for environmental and biodiversity modeling.
+Scientific Data, 5, 180040. https://doi.org/10.1038/sdata.2018.40
+Araujo, M. B., Pearson, R. G., Thuiller, W., & Erhard, M. (2005).
+Validation of speciesclimate impact models under climate
+change. Global Change Biology, 11, 15041513. https://doi.
+org/10.1111/j.1365-2486.2005.01000.x
+Arajo, M. B., & Peterson, A. T. (2012). Uses and misuses of biocli
+matic envelope modeling. Ecology, 93, 15271539. https://doi.
+org/10.1890/11-1930.1
+Ardron, J. A., Possingham, H. P., & Klein, C. J. (2008). Marxan good practices handbook. Vancouver, BC: Pacific Marine Analysis and Research
+Association.
+Assis, J., Tyberghein, L., Bosch, S., Verbruggen, H., Serro, E. A., & De
+Clerck, O. (2018). BioORACLE v2. 0: Extending marine data layers
+for bioclimatic modelling. Global Ecology and Biogeography, 27, 277
+284. https://doi.org/10.1111/geb.12693
+Bacheler, N. M., Berrane, D. J., Mitchell, W. A., Schobernd, C. M.,
+Schobernd, Z. H., Teer, B. Z., & Ballenger, J. C. (2014). Environmental
+conditions and habitat characteristics influence trap and video de
+tection probabilities for reef fish species. Marine Ecology Progress
+Series, 517, 114. https://doi.org/10.3354/meps11094
+Ball, I. R., Possingham, H. P., & Watts, M. (2009). Marxan and relatives:
+Software for spatial conservation prioritisation. In A. Moilanen, K. A.
+Wilson & H. P. Possingham (Eds.), Spatial conservation prioritisation:
+Quantitative methods and computational tools (pp. 185195). Oxford:
+Oxford University Press.
+Barnes, M., Glew, L., Wyborn, C., & Craigie, I. D. (2018). Prevent
+perverse outcomes from global protected area policy. Nature
+Ecology and Evolution, 2, 759762. https://doi.org/10.1038/
+s41559-018-0501-y
+Beale, C. M., & Lennon, J. J. (2012). Incorporating uncertainty in pre
+dictive species distribution modelling. Philosophical Transactions of
+the Royal Society of London. Series B, Biological Sciences, 367, 247258.
+https://doi.org/10.1098/rstb.2011.0178
+Besag, J. (1974). Spatial interaction and the statistical analysis of lattice
+systems. Journal of the Royal Statistical Society, 36, 192236. https://
+doi.org/10.1111/j.2517-6161.1974.tb00999.x
+Beyer, H. L., Dujardin, Y., Watts, M. E., & Possingham, H. P. (2016).
+Solving conservation planning problems with integer linear program
+ming. Ecological Modelling, 328, 1422. https://doi.org/10.1016/j.
+ecolmodel.2016.02.005
+Bini, L. M., DinizFilho, J. A. F., Rangel, T. F. L. V. B., Bastos, R. P., &
+Pinto, M. P. (2006). Challenging wallacean and linnean shortfalls:
+Knowledge gradients and conservation planning in a biodiver
+sity hotspot. Diversity and Distributions, 12, 475482. https://doi.
+org/10.1111/j.1366-9516.2006.00286.x
+Bivand, R., Hauke, J., & Kossowski, T. (2013). Computing the jacobian in
+gaussian spatial autoregressive models: An illustrated comparison of
+available methods. Geographical Analysis, 45, 150179.
+Bivand, R. S., Pebesma, E., & GomezRubio, V. (2013). Applied spatial data
+analysis with R (2nd ed.). New York, NY: Springer.
+Bivand, R., & Piras, G. (2015). Comparing implementations of estimation
+methods for spatial econometrics. Journal of the American Statistical
+Association, 63, 136. https://doi.org/10.18637/jss.v063.i18
+
+768
+
+|
+
+Brooks, S. P., & Gelman, A. (1998). General methods for monitoring
+convergence of iterative simulations. Journal of Computational and
+Graphical Statistics, 7, 434455.
+Cabeza, M. (2003). Habitat loss and connectivity of reserve networks
+in probability approaches to reserve design. Ecology Letters, 6, 665
+672. https://doi.org/10.1046/j.1461-0248.2003.00475.x
+Carr, M. H., Neigel, J. E., Estes, J. A., Andelman, S., Warner, R.
+R., & Largier, J. L. (2003). Comparing marine and terres
+trial ecosystems: Implications for the design of coastal ma
+rine reserves. Ecological Applications, 13, S90S107. https://doi.
+org/10.1890/1051-0761(2003)013[0090:CMATEI]2.0.CO;2
+CBD (2010). Report of the tenth meeting of the conference of the parties
+to the convention on biological diversity. In: The tenth meeting of the
+Conference of the Parties to the Convention on Biological Diversity,
+Nagoya, Japan, NEP/CBD/COP/10/27. Retrieved from https://www.
+cbd.int/cop10/doc.
+Crase, B., Liedloff, A., Vesk, P. A., Fukuda, Y., & Wintle, B. A. (2014).
+Incorporating spatial autocorrelation into species distribution mod
+els alters forecasts of climatemediated range shifts. Global Change
+Biology, 20, 25662579. https://doi.org/10.1111/gcb.12598
+Daigle, R. M., Metaxas, A., Balbar, A., McGowan, J., Treml, E. A., Kuempel,
+C. D.,  Beger, M. (2018). Operationalizing ecological connectivity in
+spatial conservation planning with Marxan Connect. Biorxiv. https://
+doi.org/10.1101/315424
+De Marco, P., DinizFilho, J. A. F., & Bini, L. M. (2008). Spatial analysis
+improves species distribution modelling during range expansion.
+Biology Letters, 4, 577580. https://doi.org/10.1098/rsbl.2008.0210
+Domisch, S., Amatulli, G., & Jetz, W. (2015). Nearglobal freshwaterspe
+cific environmental variables for biodiversity analyses in 1 km reso
+lution. Scientific Data, 2, 150073.
+Domisch, S., Wilson, A. M., & Jetz, W. (2016). Modelbased integration of
+observed and expertbased information for assessing the geographic
+and environmental distribution of freshwater species. Ecography, 39,
+10781088. https://doi.org/10.1111/ecog.01925
+Dormann, C. F. (2007). Effects of incorporating spatial autocorrelation into
+the analysis of species distribution data. Global Ecology and Biogeography,
+16, 129138. https://doi.org/10.1111/j.1466-8238.2006.00279.x
+Dormann, C. F., Elith, J., Bacher, S., Buchmann, C., Carl, G., Carr, G., 
+Leito, P. J., (2013). Collinearity: A review of methods to deal with it
+and a simulation study evaluating their performance. Ecography, 36,
+2746. https://doi.org/10.1111/j.1600-0587.2012.07348.x
+Elith, J., & Leathwick, J. R. (2009). Species distribution models: Ecological
+explanation and prediction across space and time. Annual Review
+of Ecology, Evolution, and Systematics, 40, 677697. https://doi.
+org/10.1146/annurev.ecolsys.110308.120159
+Esselman, P. C., & Allan, J. (2011). Application of species distribution mod
+els and conservation planning software to the design of a reserve net
+work for the riverine fishes of northeastern Mesoamerica. Freshwater
+Biology, 56, 7188. https://doi.org/10.1111/j.1365-2427.2010.02417.x
+Fithian, W., Elith, J., Hastie, T., & Keith, D. A. (2015). Bias correction
+in species distribution models: Pooling survey and collection data
+for multiple species. Methods in Ecology and Evolution, 6, 424438.
+https://doi.org/10.1111/2041-210X.12242
+Fourcade, Y., Besnard, A. G., & Secondi, J. (2018). Paintings predict the
+distribution of species, or the challenge of selecting environmental
+predictors and evaluation statistics. Global Ecology and Biogeography,
+27, 245256. https://doi.org/10.1111/geb.12684
+Game, E., & Grantham, H. (2008). Marxan user manual: For Marxan version
+1.8.10. St. Lucia, Qld, Australia, Vancouver, BC, Canada: University of
+Queensland, Pacific Marine Analysis and Research Association.
+Guisan, A., & Thuiller, W. (2005). Predicting species distribution: Offering
+more than simple habitat models. Ecology Letters, 8, 9931009.
+https://doi.org/10.1111/j.1461-0248.2005.00792.x
+Guisan, A., Tingley, R., Baumgartner, J. B., NaujokaitisLewis, I., Sutcliffe,
+P. R., Tulloch, A. I.,  Buckley, Y. M. (2013). Predicting species
+
+DOMISCH et al.
+
+distributions for conservation decisions. Ecology Letters, 16, 1424
+1435. https://doi.org/10.1111/ele.12189
+Gurobi Optimization, I. (2017). Gurobi optimizer reference manual.
+Retrieved from http://www.gurobi.com.
+Hampe, A. (2004). Bioclimate envelope models: What they detect and
+what they hide. Global Ecology and Biogeography, 13, 469471.
+https://doi.org/10.1111/j.1466-822X.2004.00090.x
+Hanson, J., & Watts, M. (2015). Marxan: decision support tools for reserve
+selection in R using Marxan. R package version 1.0. 1.
+Hanson, J., Schuster, R., Morrell, N., StrimasMackey, M., Watts, M.,
+Arcese, P., Possingham, H. P. (2017). prioritizr: Systematic conser
+vation prioritization in R. R package version 3.0.1.1.
+Hermoso, V., Filipe, A. F., Segurado, P., & Beja, P. (2018). Freshwater con
+servation in a fragmented world: Dealing with barriers in a system
+atic planning framework. Aquatic Conservation: Marine and Freshwater
+Ecosystems, 28, 1725. https://doi.org/10.1002/aqc.2826
+Hermoso, V., Linke, S., Prenda, J., & Possingham, H. (2011). Addressing
+longitudinal connectivity in the systematic conservation plan
+ning of fresh waters. Freshwater Biology, 56, 5770. https://doi.
+org/10.1111/j.1365-2427.2009.02390.x
+Hijmans, R. J., Cameron, S. E., Parra, J. L., Jones, P. G., & Jarvis, A. (2005).
+Very high resolution interpolated climate surfaces for global land
+areas. International Journal of Climatology, 25, 19651978. https://
+doi.org/10.1002/joc.1276
+Hijmans, R. J., & van Etten, J. (2018). raster: Geographic data analysis and
+modeling. R package version, 2.
+Klein, C., Wilson, K., Watts, M., Stein, J., Berry, S., Carwardine, J., 
+Possingham, H. (2009). Incorporating ecological and evolutionary
+processes into continental scale conservation planning. Ecological
+Applications, 19, 206217. https://doi.org/10.1890/07-1684.1
+Latimer, A. M., Wu, S., Gelfand, A. E., & Silander, J. A. (2006). Building
+statistical models to analyze species distributions. Ecological
+Applications, 16, 3350. https://doi.org/10.1890/04-0609
+Legendre, P. (1993). Spatial autocorrelation: Trouble or new paradigm?
+Ecology, 74, 16591673.
+Lehner, B., & Grill, G. (2013). Global river hydrography and network rout
+ing: Baseline data and new approaches to study the worlds large
+river systems. Hydrological Processes, 27, 21712186.
+Lehner, B., Liermann, C. R., Revenga, C., Vrsmarty, C., Fekete, B., Crouzet,
+P.,  Wisser, D. (2011). Highresolution mapping of the worlds reservoirs
+and dams for sustainable riverflow management. Frontiers in Ecology
+and the Environment, 9, 494502. https://doi.org/10.1890/100125
+Lehtomki, J., & Moilanen, A. (2013). Methods and workflow for spatial
+conservation prioritization using Zonation. Environmental Modelling and
+Software, 47, 128137. https://doi.org/10.1016/j.envsoft.2013.05.001
+Lockwood, M. (2010). Good governance for terrestrial protected areas:
+A framework, principles and performance outcomes. Journal of
+Environmental Management, 91, 754766. https://doi.org/10.1016/j.
+jenvman.2009.10.005
+MacKenzie, D. I., Nichols, J. D., Royle, J. A., Pollock, K. H., Bailey, L., &
+Hines, J. E. (2017). Occupancy estimation and modeling: Inferring patterns and dynamics of species occurrence. Academic Press: Elsevier.
+Margules, C. R., & Pressey, R. L. (2000). Systematic conservation plan
+ning. Nature, 405, 243253. https://doi.org/10.1038/35012251
+Mateo, R. G., Felicsimo, . M., Pottier, J., Guisan, A., & Muoz, J. (2012).
+Do stacked species distribution models reflect altitudinal diversity
+patterns? PLoS ONE, 7, e32586.
+McGill, B. J., Dornelas, M., Gotelli, N. J., & Magurran, A. E. (2015). Fifteen
+forms of biodiversity trend in the anthropocene. Trends in Ecology and
+Evolution, 30, 104113. https://doi.org/10.1016/j.tree.2014.11.006
+McGowan, J., Hines, E., Elliott, M., Howar, J., Dransfield, A., Nur, N.,
+& Jahncke, J. (2013). Using seabird habitat modeling to inform
+marine spatial planning in central Californias National Marine
+Sanctuaries. PLoS ONE, 8, e71406. https://doi.org/10.1371/jour
+nal.pone.0071406
+
+|
+
+DOMISCH et al.
+
+Meyer, C., Weigelt, P., & Kreft, H. (2016). Multidimensional biases, gaps
+and uncertainties in global plant occurrence information. Ecology
+Letters, 19, 9921006. https://doi.org/10.1111/ele.12624
+Nhancale, B. A., & Smith, R. J. (2011). The influence of planning unit char
+acteristics on the efficiency and spatial pattern of systematic con
+servation planning assessments. Biodiversity and Conservation, 20,
+18211835. https://doi.org/10.1007/s10531-011-0063-7
+Pearson, R. G., & Dawson, T. P. (2003). Predicting the impacts of climate
+change on the distribution of species: Are bioclimate envelope mod
+els useful? Global Ecology and Biogeography, 12, 361371.
+Pebesma, E. J., & Bivand, R. S. (2005). Classes and methods for spatial
+data in R. R News, 5, 913.
+Petitot, M., Manceau, N., Geniez, P., & Besnard, A. (2014). Optimizing
+occupancy surveys by maximizing detection probability: Application
+to amphibian monitoring in the mediterranean region. Ecology and
+Evolution, 4, 35383549. https://doi.org/10.1002/ece3.1207
+Pimm, S. L., Jenkins, C. N., Abell, R., Brooks, T. M., Gittleman, J. L.,
+Joppa, L. N.,  Sexton, J. O. (2014). The biodiversity of species and
+their rates of extinction, distribution, and protection. Science, 344,
+1246752. https://doi.org/10.1126/science.1246752
+Pressey, R. L., Cabeza, M., Watts, M. E., Cowling, R. M., & Wilson, K.
+A. (2007). Conservation planning in a changing world. Trends in
+Ecology and Evolution, 22, 583592. https://doi.org/10.1016/j.
+tree.2007.10.001
+QGISDevelopmentTeam. (2017). QGIS Geographic Information System.
+Open Source Geospatial Foundation Project. Retrieved fromhttps://
+www.qgis.org.
+RCoreTeam. (2018). R: A language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing.
+Record, S., Fitzpatrick, M. C., Finley, A. O., Veloz, S., & Ellison, A. M.
+(2013). Should species distribution models account for spatial auto
+correlation? A test of model projections across eight millennia of cli
+mate change. Global Ecology and Biogeography, 22, 760771. https://
+doi.org/10.1111/geb.12017
+Roberge, J. M., & Angelstam, P. (2004). Usefulness of the umbrella spe
+cies concept as a conservation tool. Conservation Biology, 18, 7685.
+https://doi.org/10.1111/j.1523-1739.2004.00450.x
+Rondinini, C., Di Marco, M., Chiozza, F., Santulli, G., Baisero, D., Visconti,
+P.,  Boitani, L. (2011). Global habitat suitability models of terres
+trial mammals. Philosophical Transactions of the Royal Society of
+London. Series B, Biological Sciences, 366, 26332641. https://doi.
+org/10.1098/rstb.2011.0113
+Sbrocco, E. J., & Barber, P. H. (2013). Marspec: Ocean climate lay
+ers for marine spatial ecology. Ecology, 94, 979979. https://doi.
+org/10.1890/12-1358.1
+Schinegger, R., Pletterbauer, F., Melcher, A., & Schmutz, S. (2016).
+Metadata describing the European Fish Index Plus (EFI+) database.
+Freshwater Metadata Journal, 17, 112. https://doi.org/10.15504/
+fmj.2016.17
+SEAMAPSA. (2017). SEAMAPSA Data Management Work Group.
+SEAMAPSA online database. Retrieved from http://www.dnr.
+sc.gov/SEAMAP/data.html.
+Smith, R. J., Di Minin, E., Linke, S., Segan, D. B., & Possingham, H. P. (2010).
+An approach for ensuring minimum protected area size in system
+atic conservation planning. Biological Conservation, 143, 25252531.
+https://doi.org/10.1016/j.biocon.2010.06.019
+Thibaud, E., Petitpierre, B., Broennimann, O., Davison, A. C., & Guisan,
+A. (2014). Measuring the relative effect of factors affecting species
+distribution model predictions. Methods in Ecology and Evolution, 5,
+947955. https://doi.org/10.1111/2041-210X.12203
+Tuanmu, M. N., & Jetz, W. (2014). A global 1km consensus landcover
+product for biodiversity and ecosystem modelling. Global Ecology and
+Biogeography, 23, 10311045. https://doi.org/10.1111/geb.12182
+Tulloch, A. I., Sutcliffe, P., NaujokaitisLewis, I., Tingley, R., Brotons, L.,
+Ferraz, K. M. P.,  Rhodes, J. R. (2016). Conservation planners tend to
+
+769
+
+ignore improved accuracy of modelled species distributions to focus
+on multiple threats and ecological processes. Biological Conservation,
+199, 157171. https://doi.org/10.1016/j.biocon.2016.04.023
+Tyberghein, L., Verbruggen, H., Pauly, K., Troupin, C., Mineur, F., & De
+Clerck, O. (2012). Biooracle: A global environmental dataset for ma
+rine species distribution modelling. Global Ecology and Biogeography,
+21, 272281. https://doi.org/10.1111/j.1466-8238.2011.00656.x
+van Teeffelen, A. J., Cabeza, M., & Moilanen, A. (2006). Connectivity,
+probabilities and persistence: Comparing reserve selection strat
+egies. Biodiversity & Conservation, 15, 899919. https://doi.
+org/10.1007/s10531-004-2933-8
+Veach, V., Di Minin, E., Pouzols, F. M., & Moilanen, A. (2017). Species
+richness as criterion for global conservation area placement leads to
+large losses in coverage of biodiversity. Diversity and Distributions, 23,
+715726. https://doi.org/10.1111/ddi.12571
+Vieilledent, G., Latimer, A., Gelfand, A., Merow, C., Wilson, A., Mortier,
+F., & Silander, J. Jr (2014). hsdm: Hierarchical bayesian species distri
+bution models. R package version, 1.
+Weeks, R. (2017). Incorporating seascape connectivity in conservation
+prioritisation. PLoS ONE, 12, e0182396. https://doi.org/10.1371/
+journal.pone.0182396
+White, J. W., Schroeger, J., Drake, P. T., & Edwards, C. A. (2014). The
+value of larval connectivity information in the static optimization of
+marine reserve design. Conservation Letters, 7, 533544. https://doi.
+org/10.1111/conl.12097
+Zupancic, P. (2015). BioFresh (data publisher) and Primoz Zupancic (data
+provider). Distribution data of Western Balkan freshwater fish mo
+bilised through BioFresh. Retrieved from http://data.freshwaterbio
+diversity.eu.
+
+B I O S K E TC H
+Sami Domisch is an aquatic ecologist who is interested in fresh
+water biodiversity and biogeography. His research is based on
+spatial freshwater biodiversity science and biodiversity informat
+ics, and how these tools can be further developed to yield robust
+estimates regarding freshwater biodiversity and conservation
+planning. The authors consist of a multidisciplinary team with a
+wide range of research interests, such as freshwater biodiversity,
+spatial modelling, river restoration, floodplain ecology and sys
+tematic conservation planning.
+Author contributions: SD, MF, SCJ and SDL designed the study;
+SD performed the modelling and spatial prioritization; and SD,
+MF and SDL analysed output data. TH, FP and AW collected and
+prepared data. SD, MF and SDL wrote the first draft of the manu
+script, and all authors contributed substantially to revisions.
+
+S U P P O R T I N G I N FO R M AT I O N
+Additional supporting information may be found online in the
+Supporting Information section at the end of the article.
+
+How to cite this article: Domisch S, Friedrichs M, Hein T, et
+al. Spatially explicit species distribution models: A missed
+opportunity in conservation planning? Divers Distrib.
+2019;25:758769. https://doi.org/10.1111/ddi.12891
+
+

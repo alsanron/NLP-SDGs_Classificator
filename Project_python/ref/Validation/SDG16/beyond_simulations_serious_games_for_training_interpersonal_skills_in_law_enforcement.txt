@@ -1,0 +1,455 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/267151803
+
+Beyond Simulations: Serious Games for Training Interpersonal Skills in Law
+Enforcement
+Conference Paper  September 2014
+DOI: 10.13140/2.1.4209.9201
+
+CITATIONS
+
+READS
+
+9
+
+166
+
+4 authors:
+Jeroen M. Linssen
+
+Mariet Theune
+
+Saxion University of Applied Sciences
+
+University of Twente
+
+26 PUBLICATIONS 135 CITATIONS
+
+169 PUBLICATIONS 1,974 CITATIONS
+
+SEE PROFILE
+
+SEE PROFILE
+
+Merijn Bruijnes
+
+Thomas De Groot
+
+Delft University of Technology
+
+University of Twente
+
+29 PUBLICATIONS 185 CITATIONS
+
+14 PUBLICATIONS 35 CITATIONS
+
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+H2020: Council of Coaches View project
+
+Tasty Bits and Bytes View project
+
+All content following this page was uploaded by Jeroen M. Linssen on 21 October 2014.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Beyond Simulations: Serious Games for Training
+Interpersonal Skills in Law Enforcement
+Jeroen Linssen, Mariet Theune
+and Merijn Bruijnes
+Department of Human Media Interaction
+University of Twente
+Enschede, The Netherlands
+Email: j.m.linssen@utwente.nl
+
+AbstractSerious games can be used to improve peoples social
+awareness by letting them experience difficult social situations
+and learn from these experiences. However, we assert that,
+when moving beyond the strict realism that social simulations
+offer, techniques from role play may be used that offer more
+possibilities for feedback and reflection. We discuss the design
+of two such serious games for interpersonal skills training in
+the domain of law enforcement. These games feature intelligent
+virtual agents with which trainees have to interact across different
+scenarios to improve their social awareness. By interacting with
+the virtual agents, trainees experience how their behaviour
+influences the course of the intervention and its outcomes. We
+discuss how we intend to improve the learning experience in these
+serious games by including meta-techniques from role play. We
+close by describing the current and future implementations of
+our serious games.
+Index TermsSocial simulation, serious games, role playing
+games, meta-techniques.
+
+I. I NTRODUCTION
+In both interviews and street interventions, police officers
+strive to get witnesses, suspects and civilians to cooperate.
+Regrettably, people are not always open to this. Therefore,
+police officers are taught how to get them to assume a more
+receptive stance. Our long-term goal is the development of
+serious game prototypes in collaboration with the Dutch police
+so that these games assist in the training curriculum of police
+trainees by letting them practice with such interactions. The
+first of these is POINTER (POlice INTERview game), in which
+trainees train their interviewing skills with crime suspects;
+the second is LOITER (LOItering Teenagers, an Emergent
+Role-play), which lets trainees enact street interventions with
+loitering juveniles.
+In this paper, we describe the status quo of our research
+efforts toward these serious games. Of prime importance to
+the attainment of social awareness is insight into the thought
+processes that drive people. Therefore, we are building a
+cognitive model based on a corpus of police interviews to
+determine the factors underlying peoples behaviour (described
+in Section III). We use this model to inform the behaviour of
+the virtual agents that enact the roles of suspects and juveniles
+in our games. In Section IV, we discuss the relations between
+social simulations and serious games. We explain how we
+
+Thomas de Groot
+T-Xchange
+Enschede, The Netherlands
+Email: thomas.degroot@txchange.nl
+
+sacrifice the realism usually found in social simulations in the
+design of POINTER and LOITER to provide more explicit
+feedback and moments of reflection. We elaborate on the
+work involved in implementing these games in more detail in
+Section V. We wrap up by discussing future research directions
+in Section VI.
+II. R ELATED W ORK
+There are several research projects in which social interaction between human and virtual agents has been researched
+for educational purposes and serious games. The negotiation
+training systems of [1] revolve around US military training
+for peace missions in the Middle-East. Their Stability and
+Support Operations system features extensive modelling of the
+emotions of virtual characters, letting them appraise and cope
+with user actions. An application called FearNot! was designed
+as a virtual drama for anti-bullying education [2]. This system
+is also based on virtual characters that can appraise and cope
+with user actions, but adopts an unscripted emergent narrative
+approach to let users have freedom of choice. Focusing on bad
+news conversations between employees and managers, the
+serious game deLearyous models the interpersonal relations
+between the two interaction parties [3]. In deLearyous, virtual
+characters base their behaviour on their attitude towards the
+user. As a result, users (the managers) are required to learn
+how to behave to not let the virtual employees erupt in tears or
+anger. JUST-TALK is a prototype training application designed
+to help police officers interact with mentally ill people [4].
+As in the previous systems, the focus of JUST-TALK is on
+the realism of the simulation. Unlike our games, the above
+systems do not directly address the importance of feedback
+and moments of reflection to stimulate learning.
+III. T OWARDS A C OGNITIVE M ODEL FOR S OCIAL
+I NTERACTION
+We strive to use theories and concepts from social psychology to inform the behaviour of our agents in order to create a
+cognitive model that is both believable and explainable. Using
+a data-driven approach, we have investigated which theories
+and concepts are relevant to describe the interaction in a police
+interview [5]. Using an annotated corpus of enacted police
+
+interviews (from actual police training) we were able to link
+theories and concepts to the observed interactions. We found
+that we could describe the majority of the interactions between
+police officers and suspects in concepts from three theories,
+namely those of interpersonal stance, face, and rapport [6]
+[8]. The theory of interpersonal stance describes how people
+assume a certain stance toward the other when they interact.
+Leary uses the orthogonal dimensions of dominance and
+togetherness to explain how different combinations of these
+dimensions lead to stances and how people are influenced by
+stances of others [6]. The notion of face boils down to the
+needs for approval and autonomy a person has. For example,
+when a suspect is questioned about his whereabouts on a
+particular day, this may be unwelcome to the suspect, because
+he feels that his freedom is being restricted by the police
+officer [7]. Rapport revolves around the bond two people share:
+when they are attentive and coordinated to each other, they
+will feel as if they are in sync [8]. To be able to describe
+all interactions in the corpus, we used the meta-concepts of
+information and strategy to cover actions related to lying or
+withholding information, and using explicit strategies.
+Currently, we are building and evaluating a computational
+model that relates the mentioned theories to each other.
+We carried out an evaluation experiment in which we let
+participants interact with our model in an abstract way. We
+explained that they would interact with one of three virtual
+suspect personas of which we gave descriptions, and that their
+goal was to discover which of the three suspects communicated
+with them. They were able to interact with a virtual suspect in
+a turn-based fashion. First, participants indicated what kind
+of utterance they wished to perform by setting parameters
+related to the theories such as stance, rapport, and type of
+question. Then, we let the model interpret this combination of
+parameters by calculating how that utterance would influence
+the mental state of the persona. This persona subsequently
+responded with a set of parameters at the same level of abstraction as the input of the participants. Then, the participants had
+to interpret these parameters and create a new utterance based
+on this interpretation. This continued until the participants
+wished to guess which persona they were interacting with.
+Preliminary results indicate that the majority of participants
+correctly determined their interaction partners.
+IV. D ESIGN P OSSIBILITIES FOR S ERIOUS G AMES
+Social simulations try to offer strict representations of
+situations they are intended to model. In their current training
+curriculum, police trainees practice with professional actors
+to simulate and experience possible scenarios. We regard such
+simulations as a form of role play and see several possibilities
+for the design of serious games based on role playing games.
+We believe that the design of serious games only depends to
+certain degree on the domain for which they are intended. The
+learning goals are the most important factor when designing
+serious games and must first be determined. In our case,
+the overarching learning goal is that police officers should
+have social awareness: they should be able to explain how
+
+their behaviour influences that of others and vice versa. The
+computational model we described in the previous section
+should help trainees understand why people behave as they do.
+It is through our serious games that trainees then learn how this
+model functions. Ultimately, in order to secure and strengthen
+the knowledge they have gained from an experience with a
+simulation or a game, it is vital that trainees reflect on their
+behaviour [9]. Of course, experiential learning can be achieved
+in simulations, yet simulations by themselves lack methods
+for explicit feedback and reflection. Police officers in training
+already use after-action-reviews to discuss how interactions
+played out, but for our serious game we plan to take the idea
+of role play a step further.
+A. Beyond Simulation, Towards Learning
+We assert that the extent to which a serious game reflects
+the situations from the domain can be varied. In other words,
+the realisation of the role play can be more loose or imaginary
+than strict as in a simulation [10]. This means that the created
+scenarios may be less realisticeven metaphoric. Nonetheless,
+the important point is that the model underlying the interaction
+with the game should remain the same. Tipping the scales
+towards either fantasy or realism in the design of serious games
+has advantages as well as drawbacks in both cases. These
+advantages and drawbacks relate to the capability to reflect
+on the experience and possible inhibition in the behaviour
+of players. To let players reflect on what has happened in
+the game, they need to transfer the knowledge gained from
+their experience to knowledge related to the real world. When
+opting for realism in a serious game, the gap that needs to
+be bridged between the simulated world and the real world
+to transfer the attained knowledge is smaller than when the
+simulated world less closely represents the real world. On
+the other hand, this distance from the real world is at the
+same time an advantage of less realistic scenarios. This is the
+case because players are more free to do what they want
+not because of the possibly larger amount of actions they can
+perform in the game, but because they may be less inhibited
+by the design of the system. For example, when police trainees
+practice using a strict simulation, as in the enacted interviews
+from the previous section, they will feel the need to do
+everything correctly. Serious games allow for experimentation
+as they may put less pressure to perform on the trainees. The
+crux lies in the actual design of serious games so that they
+still provide a challenge and convey their learning goals. To
+assist us in the design process, we have created a hierarchy
+of learning goals that our games should support [11], based
+on Blooms revised Taxonomy of Learning Objectives [12].
+Below, we explain how we intend to use two techniques to
+support the attainment of these learning goals in our serious
+games.
+B. Techniques for Improving Learning in Serious Games
+In our serious games, we do not opt for maximum realism
+or fantasy, but for a balance between the two. To do so,
+we take inspiration from techniques used in improvisational
+
+theatre (improv) and live action role play (larp) [10], [13].
+This is not merely an attempt to gamify a social simulation
+by adding some simple game mechanics to the whole. Instead,
+we combine techniques from various fields together during the
+design process of POINTER and LOITER, with feedback from
+the Dutch police.
+We take the point of view that when a simulation or role
+play is carried out, the people involved in these events have
+two different roles: that of the actor, who has knowledge
+about the simulation, and that of the character, who is being
+simulated by the actor. Both in improv and role plays, this
+distinction between in-character (IC) and out-of-character
+(OOC) roles can be utilized by the players. For example, a
+player may know, OOC, that another character has deceived
+his characterbut this players character may not know. The
+player can then use this OOC knowledge to steer the play IC
+in a certain direction.
+In the design of our serious games, we expand the distinction between in-character and out-of-character by looking at so-called meta-techniques used in larp [11]. These
+are techniques with which players can communicate OOC
+informationinformation that would normally not be available to them IC. Effectively, these techniques impinge upon
+the otherwise simulated nature of larp as they can not take
+place in-character. An examples of such a meta-technique is
+the inner voice, which lets players speak out their IC thoughts
+so that the other players get insight into how these players feel.
+Act breaks can serve as intermissions during a larp in which
+the IC play is paused and the players discuss OOC what has
+happened and what may happen in the play. With the help of
+such meta-techniques, players of a larp can deepen a larp by
+exploring the feelings and motivations of their characters.
+As explained above, reflection and feedback on their actions
+constitute a large part of the learning process for trainees.
+Therefore, when police trainees practice their skills with actors, their experience is evaluated during an after-action review.
+We choose a similar approach in our serious games by implementing meta-techniques that offer moments for reflection
+and feedback during gameplay. In our games, when players
+interact with virtual characters, we will enable these characters
+to express their thoughts to players in the form of comic-like
+thought bubbles, alike to the inner voice technique. Such
+information would assist players in determining the attitude
+and feelings of characters as a supplement to the signals
+they read from the nonverbal behaviour and utterances of
+characters. We are also exploring how act breaks can be
+implemented. For example, at set points during gameplay,
+the interaction can be paused to give players and characters
+the opportunity to ask each other questions. These questions
+include asking the reasons for certain actions or inquiring
+about the feelings of either the characters or players at specific
+points in the interaction.
+Key in implementing these techniques is the decision when
+they should be used. As in all games, there needs to be a
+balance between the challenge of the game and the skill level
+of the player. Therefore, we propose to monitor the progress
+
+of players during the game and provide them with help in
+the form of the above meta-techniques when they seem not
+to be up to the challenge. For example, when players keep
+acting aggressively in an interaction with the effect being that
+a virtual character does not cooperate, this character may use
+a thought bubble to give feedback on why the interaction
+is unsuccessful. Alternatively, an act break may be used to
+have a more in-depth discussion as to what went wrong. Both
+techniques may also be used together to reinforce each other.
+For example, if a character shows a thought bubble during
+gameplay to provide feedback, it can explain its thoughts in
+more detail during a subsequent act break.
+Aside from providing feedback and reflection, we are investigating ways to let the virtual characters adapt their behaviour
+to help players achieve their learning goals. This adaptation
+reflects the methods used in improv and role play as well:
+the virtual characters are able to adapt their behaviour to
+the learning goals of players. For example, if it turns out
+that a player has difficulties to negotiate with withdrawn
+people, the virtual characters can choose to behave more
+withdrawn, providing the player with the possibility to gain
+more experience with such interactions.
+V. I MPLEMENTATIONS
+As said above, we are designing two serious game prototypes: POINTER for interview training and LOITER for
+street intervention training for police officers. Until now, we
+have largely focused on the conceptual and technical aspects
+underlying these systems. Currently, we are exploring how
+to implement our games. The balance between realism and
+fantasy plays an important role in visualising the interactions.
+We do not choose a highly realistic appearance for our
+games, as this will stand at odds with the meta-techniques
+we wish to use. Additionally, it may evoke false expectations
+when players expect behaviour from very realistic looking
+characters that may be more complex than our cognitive model
+supports. Therefore, we opt to keep things simple in terms of
+graphical quality, but we do investigate the effects of different
+types of visualisations. Using AGENT, the Awareness Game
+Environment for Natural Training [14], we are able to let
+players play the same scenario with different user interfaces.
+The two types of interfaces we are developing have different
+fidelities. One is a 2D visualisation with a comic-like style
+and interaction through button commands, see Fig. 1. The
+other is a 3D visualisation with higher fidelity, see Fig 2. In
+an improved version, this visualisation will offer multi-modal
+input to attempt to stimulate the feeling of presence in the
+virtual world. While providing a more realistic environment in
+terms of graphical quality, the 3D environment is not intended
+to feature strictly realistic character behaviour.
+To experiment with different game mechanics and concepts
+that we can incorporate in POINTER and LOITER, a board
+game called Sequacious was created, see Fig. 3. This was
+done to give an indication that a very playful system can
+already give rise to reflection and can be used to improve the
+players awareness of social interaction. In this game, players
+
+Fig. 1.
+
+The prototype 2D environment for LOITER.
+
+Fig. 3. The board game Sequacious with a juvenile pawn on the far left and
+a police pawn next to it.
+
+cognitive model we have created by letting players provide
+feedback on the virtual characters in the system themselves.
+Lastly, we hope to encourage other researchers to look beyond
+simulations by investigating other ways to design educational
+systems, such as serious games and techniques from the arts.
+ACKNOWLEDGEMENTS
+Fig. 2.
+
+A prototype 3D environment for LOITER.
+
+(police officers in training) can experience and experiment
+with different ways of interacting with loitering juveniles. This
+can be done through letting them assume either of two roles
+in the game: the role that they normally play, namely that of
+a police officer, or the role of the group of juveniles. The
+game is played on a gridded board with the juveniles trying
+to form groups and grow in numbers and the police officer
+having the goal of keeping the groups of loitering juveniles
+as small as possible by dispersing the juveniles and stopping
+them from taking over control of the board. Together with
+more game mechanics that are related to the needs of both
+parties, Sequacious lets players explore this conflict. After play
+sessions, we observed that players were enthusiastic about the
+game and discussed tactics for winning the game by either
+side and how the gameplay could relate to the real world.
+VI. C ONCLUSIONS AND F UTURE W ORK
+The approach we take in designing POINTER and LOITER,
+our serious games for interpersonal skills training in the
+domain of law enforcement, expands the possibilities of social
+simulation by infusing it with techniques from the fields of
+improv and role play. Our next step is to implement and
+evaluate our ideas in more detail. The serious games will
+not replace the teachers of the Dutch police, but serve as
+addenda to the training curriculum. Through evaluation and
+further cooperation with the Dutch police, we seek to fit
+our games in their curriculum and find the correct balance
+between fantasy and realism so that they will be accepted by
+the trainees. Additionally, we wish to iteratively improve the
+
+View publication stats
+
+This publication was supported by the Dutch national program COMMIT.
+R EFERENCES
+[1] W. Swartout, Lessons learned from virtual humans, AI Mag., vol. 31,
+no. 1, pp. 920, 2010.
+[2] R. Aylett, S. Louchart, J. Dias, A. Paiva, and M. Vala, FearNot! An
+experiment in emergent narrative, in Proc. of IVA, 2005, pp. 305316.
+[3] F. Vaassen and J. Wauters, deLearyous: Training interpersonal communication skills using unconstrained text input, in Proc. of ECGBL,
+2012, pp. 505513.
+[4] R. C. Hubal, G. A. Frank, and C. I. Guinn, Lessons learned in modeling
+schizophrenic and depressed responsive virtual humans for training, in
+Proc. of IUI, 2003, pp. 8592.
+[5] M. Bruijnes, J. M. Linssen, H. J. A. op den Akker, M. Theune,
+S. Wapperom, C. Broekema, and D. K. J. Heylen, Social Behaviour in
+Police Interviews: Relating Data to Theories. Berlin: Springer, 2014.
+[6] T. Leary, Interpersonal diagnosis of personality: Functional theory and
+methodology for personality evaluation. New York, NY: Ronald Press,
+1957.
+[7] E. Goffman, Interaction ritual: Essays in face to face behavior.
+Chicago, IL: Aldine Transaction, 2005.
+[8] L. Tickle-Degnen and R. Rosenthal, The nature of rapport and its
+nonverbal correlates, Psychol. Inq., vol. 1, no. 4, pp. 285293, 1990.
+[9] M. Koops and M. Hoevenaar, Conceptual change during a serious
+game: Using a Lemniscate model to compare strategies in a physics
+game, Simulation & Gaming, vol. 44, no. 4, pp. 544561, 2013.
+[10] D. Richards and N. Szilas, Challenging reality using techniques from
+interactive drama to support social simulations in virtual worlds, in
+Proc. of IE, 2012.
+[11] J. M. Linssen and M. Theune, Meta-techniques for a social awareness
+learning game, in Proc. of ECGBL, In press.
+[12] D. R. Krathwohl, A revision of Blooms taxonomy: An overview,
+Theory into Practice, vol. 41, no. 4, pp. 212218, 2002.
+[13] B. Medler and B. Magerko, The implications of improvisational acting
+and role-playing on design methodologies, in Proc. of SIGCHI, 2010,
+pp. 483492.
+[14] J. M. Linssen and T. F. de Groot, Agent: Awareness Game Environment
+for Natural Training, in Proc. of FDG, 2013, pp. 433434.
+
+

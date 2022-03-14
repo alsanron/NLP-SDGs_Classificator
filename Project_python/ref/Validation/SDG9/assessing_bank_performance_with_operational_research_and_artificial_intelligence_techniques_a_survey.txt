@@ -1,0 +1,4708 @@
+Assessing Bank Performance with Operational
+Research and
+Artificial Intelligence Techniques: A Survey
+Meryem Duygun-Fethi (School of Management,
+University of Leicester)
+Fotios Pasiouras (School of Management, University of Bath)
+
+University of Bath
+School of Management, Working Paper Series
+2009.02
+
+This working paper is produced for discussion purposes only. The
+papers are expected to be published in due course, in revised form
+and should not be quoted without the authors permission.
+
+Electronic copy available at: http://ssrn.com/abstract=1350544
+
+University of Bath School of Management
+Working Paper Series
+School of Management
+Claverton Down
+Bath
+BA2 7AY
+United Kingdom
+Tel: +44 1225 826742
+Fax: +44 1225 826473
+http://www.bath.ac.uk/management/research/papers.htm
+
+2009
+2009.01
+
+2009.02
+
+Androniki
+Apostolakou &
+Gregory Jackson
+
+Corporate Social Responsibility in Western
+Europe: An Institutional Mirror or Substitute?
+
+Meryem DuygunFethi & Fotios
+Pasiouras
+
+Assessing Bank Performance with Operational
+Research and Artificial Intelligence Techniques:
+A Survey
+
+2
+Electronic copy available at: http://ssrn.com/abstract=1350544
+
+Assessing Bank Performance with Operational Research
+and Artificial Intelligence Techniques: A Survey
+Meryem Duygun-Fethi1*, Fotios Pasiouras2
+1
+
+School of Management, University of Leicester, UK
+2
+School of Management, University of Bath, UK
+
+Abstract
+This paper presents a comprehensive review of 179 studies which employ operational
+research (O.R.) and Artificial Intelligence (A.I.) techniques in the assessment of bank
+performance. We first discuss numerous applications of data envelopment analysis
+which is the most widely applied O.R. technique in the field. Then we discuss
+applications of other techniques such as neural networks, support vector machines,
+and multicriteria decision aid that have also been used in recent years, in bank failure
+prediction studies and the assessment of bank creditworthiness and underperformance.
+
+Keywords: Artificial Intelligence, Banks, Data Envelopment Analysis, Operational
+Research, Literature review
+
+*
+
+ Copyright: The Authors, 2009. Author for correspondence. Tel: +44 (0) 116 252 5328; Fax: + 44
+(0) 116 252 5515; Emails: m.fethi@le.ac.uk (M. Duygun-Fethi), f.pasiouras@bath.ac.uk (F. Pasiouras).
+
+3
+
+1. Introduction
+Banks play a central role in the economy. They keep the savings of the public and
+finance the development of business and trade. Furthermore, numerous studies argue
+that the efficiency of financial intermediation affects economic growth while others
+indicate that bank insolvencies can result in systemic crises which have adverse
+consequences for the economy as a whole.1
+Thus, the performance of banks has been an issue of major interest for various
+stakeholders such as depositors, regulators, customers, and investors. While bank
+performance has been traditionally evaluated on the basis of financial ratios, advances
+in operational research (O.R.) and artificial intelligence (A.I.) have resulted in a shift
+towards the use of such state-of-the-art techniques. Of course, this is not surprising,
+since O.R. has been extensively applied to finance during the last half century (Board
+et al., 2003). This paper presents a comprehensive review of the use of OR and AI
+techniques in the assessment of bank performance.
+The rest of the paper is structured as follows. Section 2 positions the survey
+within the existing literature and discusses our framework. Section 3 discusses
+applications of data envelopment analysis (DEA) in the estimation of bank efficiency
+and productivity growth. Section 4 presents applications of other O.R. and A.I.
+techniques in the prediction of bank failure and the assessment of bank
+creditworthiness and underperformance. Section 5 summarizes our conclusions.
+
+2. Scopus and framework
+There are several interesting reviews that are related to our survey. For example,
+Cook and Seiford (2009) review the methodological developments of DEA over the
+last thirty years. However, they do not discuss applications of DEA. Zhou and Poh
+(2008) provide a recent survey of DEA applications but they focus on energy and
+environmental studies. Dimitras et al. (1996) discuss applications of various
+techniques in the prediction of business failures but they focus on industrial firms.
+Smith and Gupta (2000) provide a discussion of the application of neural networks in
+business problems. Board et al. (2003) survey O.R. applications in the financial
+markets. Thus, the above surveys are either quite general or they do not focus on
+applications in banking.
+1
+
+See Levine (2005) for a discussion of the theoretical and empirical discussion of the literature on
+finance and growth. See Caprio and Klingebiel (2003) for banking crises and the associated costs.
+
+4
+
+Berger and Humphrey (1997) review studies that examine the efficiency of
+financial institutions. However, their coverage is limited to efficient frontier
+techniques (e.g. DEA, stochastic frontier analysis). Furthermore, the survey is now
+more than ten years old and since that time, numerous papers have been published.
+Berger (2007) discusses more recent applications of frontier techniques but his survey
+focuses only on studies that provide international comparisons of bank efficiency.
+Finally, Ravi Kumar and Ravi (2008) discuss applications of statistical and A.I.
+techniques in bankruptcy prediction. The applications that they survey were published
+until 2005, and although a few of them focus on the banking sector most of the studies
+deal with non-financial firms.
+We differentiate our review from the above surveys by discussing applications
+of O.R. and A.I. techniques over the period 1998-2008 while focusing on bank
+performance.2 We searched for papers in Scopus, which is considered to be one of the
+largest abstract and citation databases. We consider only journal articles and we do
+not include working papers, monographs, dissertations, or other publication outcomes.
+Furthermore, our search is limited to articles written in English. We use a
+combination of various keywords such as bank efficiency, bank and data
+envelopment analysis, bank performance, bank and neural networks, bank and
+artificial intelligence, bank and operational (or operations) research. A few
+additional studies were identified from cross-referencing and were manually
+collected.
+We reviewed a total of 179 studies. DEA is by far the most commonly used
+O.R./A.I. technique in assessing bank performance and we identified 136 studies that
+use DEA-like techniques to estimate various measures of bank efficiency and
+productivity growth, and 28 studies that provide similar estimates at the branch level.3
+We also identified 15 studies that use classification techniques such as neural
+networks, support vector machines, multicriteria decision aid, decision trees, nearest
+neighbours to predict bank failure or assess bank creditworthiness, and bank
+underperformance. These studies were published in a total of 67 journals, however,
+around 56% of them appeared in just eleven journals. As shown in Table 1, the most
+2
+
+Some of the studies were still in press at the time of the writing of this review, but we included them
+in our discussion as they were already publicly available since 2008 (i.e. 2008 DOI).
+3
+Our survey focuses on studies that examine banking institutions as a whole; however, we also discuss
+studies on branch efficiency in section 3.2.7 as one could argue that the efficiency of individual
+branches can influence the performance of banks as a whole.
+
+5
+
+frequent sources of publication are the European Journal of Operational Research
+(18) and the Journal of Banking and Finance (15), followed by Applied Financial
+Economics (13), Applied Economics (9), Expert Systems with Applications (9), and
+the Journal of Productivity Analysis (9). In the sections that follow we discuss various
+issues surrounding these studies, while additional information is available in
+Appendices I to III.
+
+[Insert Table 1 Around Here]
+
+3. DEA and bank-efficiency
+DEA is a mathematical programming technique for the development of production
+frontiers and the measurement of efficiency relative to these frontiers (Charnes et al.,
+1978). The best-practice production frontier for a sample of banks is constructed
+through a piecewise linear combination of actual input-output correspondence set that
+envelops the input-output correspondence of all banks in the sample (Thanassoulis,
+2001). Each bank is assigned an efficiency score between 0 and 1. The scores are only
+relative to the banks in the sample, with higher scores indicating a more efficient
+bank.
+One of the well-known advantages of DEA is that it works relatively well with
+small samples. Other advantages of DEA are that it does not require any assumptions
+to be made about the distribution of inefficiency and it does not require a particular
+functional form on the data in determining the most efficiency banks. However, DEA
+is also subject to few limitations. Two of the best known shortcomings are that DEA
+assumes data to be free of measurement error, and that it is sensitive to outliers. Coelli
+et al. (2005) also point out that: (i) having few observations and many inputs and/or
+outputs will result in many firms appearing on the DEA frontier, (ii) treating
+inputs/outputs as homogenous commodities when they are heterogeneous may bias
+the results, (iii) not accounting for differences in the environment may give
+misleading results, (iv) standard DEA does not control for multi-period optimization
+or risk managerial decision making.
+Our survey shows that recent DEA studies have examined almost all the
+banking sectors around the world. A few recent studies provide cross-country
+evidence. Most of them examine banks from the large EU banking sectors (Pastor,
+2002; Casu and Molyneux, 2003; Beccalli et al., 2006). Lozano-Vivas et al. (2002)
+6
+
+examine ten EU countries, Bergendahl (1998) focuses on Nordic countries, while
+Pasiouras (2008a) examines an international dataset.
+
+3.1. Methodological issues
+3.1.1. Efficiency measures
+Most of the studies focus on the technical efficiency of banks (e.g. Lozano-Vivas et
+al., 2002; Drake et al., 2006; Pasiouras, 2008a,b). This efficiency measure indicates
+whether a bank uses the minimum quantity of inputs to produce a given quantity of
+outputs or maximizes the output quantity given a certain quantity of inputs.
+However, when price data for the inputs and/or outputs are available one can
+also estimate cost and/or profit efficiency measures.4 Cost efficiency is the product of
+technical efficiency and allocative efficiency. The latter refers to the ability of a bank
+to use the optimum mix of inputs given their respective prices. Consequently, cost
+efficiency shows the ability of a bank to provide services without wasting resources as
+a result of technical or allocative inefficiency. Appendix I shows that around 35
+studies present measures of DEA cost efficiency (e.g. Tortosa-Ausina, 2002a,b,c; Isik
+and Hassan, 2002, 2003a).
+Pastor and Serrano (2006) propose the decomposition of cost inefficiency into
+composition inefficiency and intra-specialisation inefficiency. The first component
+indicates the part of inefficiency due to the composition of specialisations of the
+banks in each banking sector. The second component reveals the inefficient use of
+resources within each of the specialisation selected. Prior (2003) also deviates from
+the above studies by calculating measures of short and long-run cost inefficiency as
+well as capacity inefficiency for Spanish banks. The first refers to the case that a
+subset of inputs are fixed and impossible to modify in the short-run. Long-run
+inefficiency estimates are obtained under the assumption that inputs are variable and
+under the control of the company. Finally, capacity inefficiency, obtained by the ratio
+of long-run to short-run inefficiency, refers to excess in costs as a result of
+inappropriate level in fixed inputs. Similar concepts along with an application in the
+Indian banking sector are discussed in Sahoo and Tone (2008).
+4
+
+One can also estimate revenue efficiency which is similar to profit efficiency. In both cases, both
+inputs and output prices are required. The difference is that in the former measure the aim is to
+maximize revenues rather than profits (i.e. revenues minus costs). We are no aware of DEA studies
+focusing on revenue efficiency so we do not discuss this issue further. Readers interesting in revenue
+efficiency could see Coelli et al. (2005) for further details.
+
+7
+
+Estimations of profit efficiency with DEA are rather limited in the literature.
+One potential reason is the difficulty in collecting reliable and transparent information
+for output prices. Furthermore, the decomposition of profit efficiency into technical
+and allocative efficiency is not straightforward (Coelli et al., 2005). Fare et al. (2004)
+propose the solution of two sets of linear programmes. In the first, a profit maximising
+DEA is solved to measure profit efficiency. In the second DEA problem, technical
+efficiency is measured on the basis of a directional distance function that allows the
+simultaneous adjustment of inputs and outputs. Kirkwood and Nahm (2006) also
+estimate profit efficiency, although they use input prices only. Therefore, in a sense
+they calculate a measure of efficiency that is similar to Berger and Mesters (1997)
+alternative profit efficiency which is commonly used in the stochastic frontier
+analysis literature. The studies of Maudos and Pastor (2003) and Ariff and Can (2008)
+provide estimates of both standard and alternative profit efficiency.
+Finally, around 30% of the studies obtain estimates of total factor productivity
+(TFP) growth (e.g. Sathye, 2002; Casu et al., 2004).5 This measure is usually
+decomposed further into technological change (i.e. shift in the best practice frontier)
+and technical efficiency change. Furthermore, in most cases, technical efficiency
+change is disaggregated into pure technical efficiency change and scale efficiency
+change under the variable returns to scale assumption discussed below.
+
+3.1.2. Constant vs Variable Returns to scale
+DEA can be implemented by assuming either constant returns to scale (CRS) or
+variable returns to scale (VRS). In their seminal study, Charnes et al. (1978) proposed
+a model that had an input orientation and assumed CRS. This model returns a score
+that indicates the overall technical efficiency (OTE) of each bank. Banker et al.
+(1984) suggested the use of variable returns to scale (VRS) that decomposes OTE into
+product of two components, pure technical efficiency (PTE) and scale efficiency (SE).
+The former relates to the ability of managers to utilize firms given resources, while
+the latter refers to exploiting scale economies by operating at a point where the
+production frontier exhibits CRS.
+
+5
+
+Almost all the studies use the DEA-like Malmquist index. Zen and Baldan (2008) use the Luenberger
+Indicator that is a generalization of the Malmquist Index.
+
+8
+
+In most of the recent papers, DEA models are estimated using the assumption
+of VRS, while arguing that CRS is only appropriate when all firms are operating at an
+optimal scale.6 Nevertheless, other studies argue in favour of CRS rather than VRS.
+For example, Noulas (1997) points out that the assumption of CRS allows the
+comparison between small and large banks. He claims that in a sample where a few
+large banks are present, the use of VRS framework raises the possibility that these
+large banks will appear as being efficient for the simple reason that there are no truly
+efficient banks (Berg et al., 1991). Avkiran (1999) also mentions that under VRS each
+unit is compared only against other units of similar size, instead of against all units.
+Hence, the assumption of VRS may be more suitable for large samples. Soteriou and
+Zenios (1999a) argue that caution is necessary when using the VRS formulation. First,
+because the model orientation (i.e. input minimization or output maximization)
+becomes important. Second, because the use of the weights restriction in the VRS
+assessment may lead to some other problematic results (Allen, 1997). Consequently,
+many studies report the results obtained under both CRS and VRS assumptions (e.g.
+Canhoto and Dermine, 2003; Casu and Molyneux, 2003).
+
+3.1.3. Output-input orientation
+Technical Efficiency can be estimated under either an input-oriented or outputoriented approach.7 As Coelli et al. (2005) point out, the input-oriented technical
+efficiency measures address the question: By how much can input quantities be
+proportionally reduced without changing the output quantities produced? (p. 137).
+In contrast, the output-oriented measures of technical efficiency address the question:
+By how much can output quantities be proportionally expanded without altering the
+input quantities used? (p. 137).
+By far, studies in banking obtain efficiency estimates under the input-oriented
+approach.8 This is most likely due to the assumption that bank managers have higher
+
+6
+
+Reasons that may not allow a firm to operate at optimal scale include among others imperfect
+competition, government regulations, constrains on finance, etc. (Coelli et al., 2005).
+7
+If price data are available, then under the under cost minimization objective (i.e. cost efficiency) one
+obtains input-oriented measures of technical efficiency and input-mix allocate efficiency. Revenue
+maximization (i.e. revenue efficiency), results is output-oriented technical efficiency and output-mix
+allocative efficiency measures. In the case of profit maximization (profit efficiency), technical
+efficiency can be obtained under either the input or output-oriented assumption (Coelli et al., 2005)
+8
+Additional information is available in Appendix I. In contrast to efficiency estimates, productivity
+measures are in several cases obtained using an output-oriented Malmquist index. However, as
+discussed in Coelli et al. (2005, p. 80), although the values of the components, and consequently their
+
+9
+
+control over inputs (e.g. personnel, expenses) rather than outputs (e.g. loans, income,
+etc). However, there are also some studies that adopt the output-oriented approach
+(e.g. Ataullah et al., 2004; Ataullah and Le, 2006) or report the results from both (e.g.
+Casu and Molyneux, 2003; Beccalli et al., 2006). It should be mentioned that the
+input-oriented and output-oriented measures always provide the same value under
+CRS but they are unequal when VRS is assumed. However, Coelli et al. (2005)
+mention that since linear programming does not suffer from statistical problems the
+choice of an appropriate orientation is not as important as in the case of econometric
+approaches. Furthermore, in many instances, the choice of orientation has only a
+minor influence upon the scores obtained (Coelli and Perelman, 1996).
+
+3.1.4. Selection of Inputs and Outputs
+There is an on-going discussion in the banking literature regarding the proper
+definition of inputs and outputs. In the words of Bergendahl (1998): There have been
+almost as many assumptions of inputs and outputs as there have been applications of
+DEA (p. 235).
+Berger and Humphrey (1997) identify two main approaches for the selection
+of inputs and outputs. These are the production approach and the intermediation
+approach. The first assumes that banks produce loans and deposits account services,
+using labour and capital as inputs, and that the number and type of transactions or
+documents processed measure outputs. The second approach perceives banks as
+financial intermediaries between savers and investors. Berger and Humphrey (1997)
+argue that neither of these two approaches is perfect because they cannot fully capture
+the dual role of financial institutions as providers of transactions/document processing
+services and also being financial intermediaries. They point out that the production
+approach may be somewhat better for evaluating the efficiencies of bank branches and
+the intermediation approach may be more appropriate for evaluating financial
+institutions as a whole. Furthermore, there are difficulties in collecting the detailed
+transaction flow information required in the production approach. As a result, the
+intermediation approach is the one favoured in the literature.
+However, there is a controversy even within this approach concerning the role
+of deposits (Berger and Humphrey, 1997). Consequently, some studies use only
+contribution to overall productivity change may differ, the overall TFP change measure will be the
+same regardless of the orientation (i.e. input or output) that is imposed.
+
+10
+
+earning assets as outputs, a selection that is in line with the asset approach of Sealey
+and Lindley (1977) while others consider deposits as an additional output, a selection
+that is more closely related to the so-called value-added approach. We find around
+eighty applications in bank efficiency where the monetary value of deposits is part of
+the input vector and twenty applications where deposits are part of the output vector.9
+Around thirty studies use interest expenses as an input without using the stock of
+deposits (e.g. Sathey, 2002; Weill, 2004). In another eight applications, the stock of
+deposits is used as an output and the interest expense paid on deposits constitutes an
+input (e.g. Maudos et al., 2002; Saha and Ravisankar, 2000; Chen et al., 2005).
+Furthermore, around five studies use time deposits and saving deposits as input and
+demand deposits as output (e.g. Bauer et al., 1998; Gilbert and Wilson, 1998; Sathye,
+2001). Finally, in a few applications the deposits are included as both an input and an
+output (e.g. Tortosa-Ausina, 2002a).
+More recently, some studies have adopted another variation of the
+intermediation approach. This is the so-called profit-oriented (or operating) approach
+which defines revenue components (e.g. interest income, non-interest income, etc.) as
+outputs and cost components (e.g. personnel expenses, interest expenses, etc.) as
+inputs.10 Drake et al. (2006) mention that from the perspective of an input-oriented
+DEA relative efficiency analysis, the more efficient units will be better at minimizing
+the various costs incurred in generating the various revenue streams and,
+consequently, better at maximizing profits (p. 1451). They also argue that this
+approach can be more appropriate in capturing the diversity of strategic responses by
+financial firms in the face of dynamic changes in competitive and environmental
+conditions. Furthermore, Luo (2003) calculates a measure of marketability
+efficiency in an attempt to capture the value of the bank in the stock market. In this
+case, revenue and profits are considered inputs whereas market value, earnings per
+share, and stock price are outputs.
+As discussed before, with the exception of deposits there is a general
+agreement about the main categories of inputs and outputs, however, this does not
+9
+
+This discussion refers to banks as a whole and not branches. The number of applications does not
+match the number of studies as in several cases there are numerous models developed in each study.
+Furthermore, in some cases deposits or non interest expenses are not considered in the analysis. In one
+case (Prior, 2003), the output was the number of current and saving accounts rather than the monetary
+value of deposits (i.e. stock).
+10
+See Chu and Lim (1998), Avkiran (1999), Sturm and Williams (2004), Das and Ghosh (2006), Drake
+et al. (2006), Ataullah and Le (2006), Pasiouras (2008b), Pasiouras et al. (2008).
+
+11
+
+necessarily imply that there is consistency with respect to the specific inputs/outputs
+used in various studies. For instance, the traditional inputs are fixed assets,
+personnel11, and in many cases deposits (e.g. Isik and Hassan, 2002; Maudos and
+Pastor, 2003; Casu and Girardone, 2004; Havrylchyk, 2006). However, some studies
+use branches (e.g. Chen, 2001), loan loss provisions (e.g. Drake, 2001; Drake et al.,
+2006; Pasiouras, 2008b) and equity (e.g. Chu and Lim, 1998; Mukherjee et al., 2001;
+Sturm and Williams, 2004; Pasiouras, 2008a) as additional or alternative inputs. Chen
+(2001) disaggregates deposits into current deposits and time deposits, while Das and
+Ghosh (2006) use demand, savings and fixed deposits. Casu and Girardone (2006)
+and Beccalli et al. (2006) use total costs as a single input while Casu and Molyneux
+(2003) use two inputs namely total costs, and total deposits (i.e. customers and short
+term funding).
+Several studies use two outputs, usually, loans and other earning assets (e.g.
+Casu and Molyneux, 2003; Casu and Girardone, 2004; 2006).12 However, some
+studies disaggregate loans into various categories such as housing loans, and other
+loans (e.g. Sturm and Williams, 2004), real estate loans, commercial loans and
+personal loans (e.g. Mukherjee et al., 2001; Fare et al., 2004) or short-term and longterm loans (Isik and Hassan, 2002). Others disaggregate other earning assets into
+investments and liquid assets (Tsionas et al., 2003) or investment in government
+securities and investments in public and private enterprises (e.g. Chen, 2001).
+Canhoto and Dermine (2003) use the number of branches as an additional output
+under the assumption that it represents an additional value for retail customers.
+Finally, recent studies include non-interest income or off-balance-sheet items as
+additional outputs (e.g. Isik and Hassan, 2002, 2003a; Sturm and Williams, 2004;
+Tortosa-Ausina, 2003, Havrylchyk, 2006; Pasiouras, 2008b).13
+Finally, Halkos and Salamouris (2004) propose an approach that deviates from
+the above literature. They use an output vector that consists of five financial ratios and
+no inputs. Their underlying hypothesis is that inputs are considered similar and equal
+11
+
+Some studies use the number of personnel (e.g. Drake, 1999; Sathye, 2001; Maudos and Pastor,
+2003; Pasiouras, 2008b). However, due to data unavailability others rely on personnel expenses (e.g.
+Bergendahl, 1998; Tortosa-Ausina, 2002; Lozano-Vivas et al., 2002; Drake et al., 2006).
+12
+Other earning assets normally include various items such as government securities, investment
+securities, trading securities, other securities, equity investments, and other investments.
+13
+Isik and Hassan (2003a) mention among others that ignoring such non-traditional outputs may
+penalize banks that are heavily involved in these activities. The reason is that while the resources used
+to produce these non-traditional outputs are part of the input vector, the outputs generated using these
+inputs are not included in the output vector.
+
+12
+
+for all banks as they operate in the same markets for money and service. The
+comparison with standard DEA models developed under either CRS or VRS
+assumptions shows that the DEA ratio model has the highest discrimination power.
+
+3.1.5. Adjusting for the environment
+Coelli et al. (2005) discuss four approaches that can be used to incorporate
+environmental variables in DEA applications.14 The first method, by Banker and
+Morey (1986), requires the environmental variables to be ordered from the least to the
+most harmful ones for efficiency. Then, the efficiency of a given firm is compared
+with those firms in the sample that have a value of the environmental variable which
+is less than or equal to the given firm. This ensures that banks are not compared with
+peers operating in a more favourable environment. The second method, by Charnes et
+al. (1981), requires the investigator to: (i) divide the sample into sub-samples and
+solve DEA problems for each sub-sample, (ii) project all observed data points into
+their prospective frontiers, and (iii) solve a single DEA using the projected points and
+assess any difference in the mean efficiency of the two sub-samples. According to
+Coelli et al. (2005) the following two problems are common in both methods: (i) by
+splitting up the sample they reduce the comparison set, and (ii) only one
+environmental variable can be considered in each case thereby limiting the scope of
+the analysis.
+Under the third method, the environmental variables are included directly into
+the DEA problem as non-discretionary inputs (if it is believed to have a positive effect
+on efficiency) or outputs (if they have a negative effect on efficiency). The
+disadvantage of this approach is that one must know a priori the direction of the
+influence, a shortcoming that is also applicable in the case of the first method.
+Alternatively, the environmental variables can be included as non-discretionary
+neutral variables using an equality form. The shortcoming of this approach is that it
+can reduce the reference set for each firm. Recent applications of the above
+approaches in banking can be found in Pastor (1999) and Lozano-Vivas et al. (2001,
+2002).
+
+14
+
+According to Coelli et al. (2005) environmental variables can include ownership differences, location
+characteristics, labour union power and government regulations and in a sense any factors that can
+influence the efficiency of the firm without being traditional inputs or under the control of managers.
+
+13
+
+The fourth method that is discussed in Coelli et al. (2005) is the two-stage
+approach. This involves a DEA problem with traditional inputs and outputs in the first
+stage. In the second stage, the efficiency scores obtained are regressed on the
+environmental variables. While this approach has been frequently used in the banking
+literature with numerous applications, it fails to adjust the efficiency measures.
+Therefore, it is more suitable when the objective is to examine the correlations of
+efficiency with various factors (see Section 3.2.1.) rather than provide the basis for
+absolute comparisons across different environments.
+Finally, Pastor (2002) and Drake et al. (2006) adjust the bank efficiency scores
+for risk and external environmental factors respectively, using a multi-stage DEA (see
+Fried et al, 1999, 2002). In this case, the application starts with the estimation of a
+DEA model with traditional inputs and outputs. Then, using the slacks from the DEA
+model they quantify the effect of the operating environment, and adjust the initial
+dataset inputs and/or outputs. Finally, they re-run the initial DEA model using the
+adjusted data.
+
+3.2. Topics of interest
+3.2.1. Determinants of efficiency
+Several studies attempt to investigate the factors that influence the efficiency of
+banks. Some studies examine only bank-specific factors and others examine both
+bank-specific attributes and environmental determinants.
+Commonly found bank-specific factors are size, profitability, capitalisation,
+loans to assets (Casu and Molyneux, 2003; Casu and Girardone, 2004; Ataullah and
+Le, 2006; Ariff and Can, 2008). Isik and Hassan (2003a) examine additional
+characteristics such as the educational profile of bank personnel and CEO-Chairman
+affiliation. Some studies examine whether age is related to efficiency (e.g. Isik and
+Hassan, 2003a; Canhoto and Dermine, 2003; Isik, 2008). Furthermore, Isik and
+Hassan (2002), Casu and Girardone (2004) and Pasiouras (2008b) examine the
+international presence of Turkish, Italian, and Greek banks, respectively.
+Country-specific factors include market concentration, presence of foreign
+banks, ratio of private investments to GDP, fiscal deficits to GDP, GDP growth,
+(Hauner, 2005; Ataullah and Le, 2006). More recently, Pasiouras (2008a) examined
+the relationship between technical efficiency and regulations related to capital
+
+14
+
+adequacy, private monitoring, banks activities, deposit insurance schemes,
+supervisory power and bank entry into the industry.
+These studies use the two-stage approach discussed above. First, they use
+DEA to obtain efficiency estimates. Then, in a second stage, the DEA scores are
+regressed on a number of explanatory variables using Tobit (e.g. Hauner, 2005), OLS
+(Ataullah and Le, 2006), GMM (Ataullah and Le, 2006), or GLS (Isik and Hassan,
+2003a) regression. The rationale to use Tobit lies on the fact that the efficiency scores
+are bounded between 0 and 1, and hence non-censored estimates will be biased.
+Ataullah and Le (2006) among others, mention that it is not necessary to use Tobit as
+long as the efficiency scores can be transformed by taking the natural logarithm of
+[efficiency score / (1-efficiency score)].
+Whether or not censored regression is used, the most important argument
+comes from Simar and Wilson (2007) who pont out that the covariates in the secondstep regression are obviously correlated with the one side error terms from the firststep as otherwise there would be no need for the second step-regression. Furthermore,
+the covariates in the second-step are likely to be (highly) correlated with the
+covariates in the first-step. This means that the errors and the covariates in the firststep cannot be independent. Thus, Simar and Wilson conclude that the likelihood that
+is maximized is not the correct one, unless one takes account of the correlation
+structure. Casu and Molyneux (2003) present an early attempt to account for the
+problems that can emerge in the two-stage DEA method using a bootstrap approach.
+However, Simar and Wilson (2007) mention that the simple bootstrap is not enough to
+overcome the drawbacks pointed out above. They propose an algorithm that uses a
+double bootstrap procedure, and they present an application to U.S. banks. Brissimis
+et al. (2008) adopt this approach to examine the determinants of efficiency in the new
+EU banking sectors.
+
+3.2.2. Stock returns and efficiency
+Following the work of Ball and Brown (1968) the relationship between stock returns
+and publicly available information has attracted considerable attention in the
+accounting and finance literature. Whilst most of the studies examine whether
+earnings reflect some of the information in stock prices, recent research has, however,
+shifted towards the use of additional data such as accruals, revenues, economic value
+added and efficiency to understand how they affect stock prices and returns. DEA
+15
+
+applications that were published over the period of our survey and investigate the
+relationship between bank efficiency and stock returns examine Australia (Kirkwood
+and Nahm, 2006), Greece (Pasiouras et al., 2008), Malaysia (Sufian and Majid, 2006),
+Singapore (Chu and Lim, 1998; Sufian and Majid, 2007), Turkey (Erdem and Erdem,
+2008), and Spain (Guzman et al., 2008). Furthermore, in a cross-country setting,
+Beccalli et al. (2006) provide evidence from France, Germany, Italy, Spain, UK, that
+is, the five principal EU banking sectors. In most cases, the results of these studies
+indicate a positive relationship between stock returns and efficiency changes.
+Furthermore, Becalli et al. (2006) reveal that the explanatory power of the model with
+DEA scores is higher than that of a model that uses the return on equity (ROE) as a
+measure of performance.
+
+3.2.3. Bank ownership
+A number of studies compare the efficiency of banks across different ownership
+types. One approach used in the literature is to split the sample and compare the
+means of the different ownership groups. Another approach is to incorporate dummy
+variables in a second stage analysis as the one described in Section 3.2.1.
+Some studies compare domestic and foreign banks. Havrylchyk (2006) finds
+that greenfield banks are more efficient than domestic banks in Poland, whereas
+foreign banks that acquired domestic ones have not successfully increased their
+efficiency. Sturm and Williams (2004) report that foreign banks in Australia are more
+efficient than domestic ones. Isik and Hassan (2003a) find that foreign banks are more
+efficient than private domestic Turkish banks while Isik (2008) reports similar results
+for TFP growth estimates. However, Ataullah and Le (2004) find that prior to the
+financial liberalization of 1991-1992, foreign banks where less efficient than domestic
+ones in India and Pakistan; nevertheless, the opposite picture emerged after this
+period.
+Other studies examine the efficiency of state-owned banks. Many of them find
+that state-owned banks are less efficient than other banks. For instance, GarciaCestona and Surroca (2008) find that Spanish banks controlled by insiders (i.e.
+managers and workers) are more efficient than the ones controlled by public
+administrations. Ariff and Can (2008) find that joint-stock banks in China are more
+cost- and profit-efficient than state-owned banks. Chen (1998) in Taiwan, and Mercan
+et al. (2003) in Turkey also report that the efficiency of privately-owned banks is
+16
+
+higher than that of state-owned banks. Similarly, Isik (2008) focuses on TFP growth
+and finds that the growth of private banks is more than double that of state banks. In
+contrast, other studies report that the efficiency of private banks is lower than that of
+state-owned banks in Turkey (Isik and Hassan, 2003a), India (Sathye, 2003), and
+Austria and Germany (Hauner, 2005).
+
+3.2.4. Corporate events and efficiency
+Another part of the literature relates DEA efficiency estimates to corporate events
+such as mergers and acquisitions and/or bankruptcy. Some of the studies compare the
+efficiency of acquirers and their targets and examine whether mergers improve
+efficiency. Avkiran (1999) reports that acquiring banks are more efficient than
+acquired Australian banks. However, the results of this study also indicate that
+acquiring banks do not always maintain their pre-merger efficiency and there is mixed
+evidence on the extent to which the benefits of efficiency are passed to the public. The
+results of Al-Sharkhas et al. (2008) indicate that merged U.S. banks are on average
+more technically efficient and that they experience higher productivity growth than
+non-merged banks. Hahn (2007a) finds evidence that Austrian banks, which engaged
+in domestic merger deals, achieved a higher productive efficiency level than banks
+which did not participate in such deals. The results also show that merger gains
+remain significant over a longer period of time (more than five years) but there is
+slight tendency to level off. Sherman and Rupert (2006) also focus on the efficiency
+gains from bank mergers but they concentrate on the branch rather than the banklevel. They find that there are opportunities to reduce operating costs. Such benefits,
+however, are not realised until four years after the merger.
+Kohers et al. (2000) follow a different approach to test whether X-efficiencies
+influence the markets assessment of bank mergers. They find that that the abnormal
+returns of bidders around the announcement period were associated with both the
+target banks profit efficiency and cost efficiency as well as the difference between
+the average peer cost efficiency score and the corresponding targets cost.15 Wheelock
+and Wilson (2000) also relate efficiency with bank acquisitions. However, in their
+15
+
+Only cost efficiency was estimated with DEA in this study. Profit efficiency was estimated using
+stochastic frontier analysis. As in previous studies, Kohers et al. (2000) also provide comparisons of
+efficiency across different groups. They find that acquiring U.S. bank holding companies (BHCs) are
+less cost-efficient compared to their targets. Also industry peers operate with greater cost efficiencies
+that then bidder and target BHCs.
+
+17
+
+case DEA efficiency scores are used as an input in hazard models that capture the
+acquisition and failure likelihood. They find that inefficiency increases the risk of
+failure while reducing the probability of a U.S. banks being acquired. Using a sample
+of 245 U.S. banks, Luo (2003) also reports that overall technical efficiency can be
+useful in predicting bank failures.
+
+3.2.5. Regulatory reform/liberalization and efficiency
+A number of studies examine the impact of regulatory reform and liberalization
+initiatives on bank efficiency and productivity. The studies that we review seem to
+indicate a positive relationship in most countries including India and Pakistan
+(Ataullah et al., 2004), Australia (Avkiran, 1999; Sturn and Williams, 2004), US
+(Mukherjee et al., 2001), China (Chen et al., 2005), Greece (Tsionas et al., 2003;
+Rezitis, 2006), Taiwan (Wang and Huang, 2007), Korea (Gilbert and Wilson, 1998),
+Turkey (Isik and Hassan, 2003b), and the new EU countries (Brissimis et al., 2008).
+However, Hauner (2005) finds no evidence that productivity is related to deregulation
+in Germany and Austria, while Sathye (2002) argues that there can be a limit of
+deregulation after which no further productivity gains could be possible due to
+deregulation.
+Some other interesting observations can be summarized as follows. The
+banking sector reform in the newly acceded EU countries had a positive impact on
+bank efficiency, while the effect of reform on TFP growth was significantly only
+toward the end of the reform process (Brissimis et al., 2008). The implementation of
+financial liberalization programmes may enable foreign banks to overcome the
+liability of foreignness and enhance their resource utilization (Ataullah and Le,
+2004). The impact of deregulation will not necessarily be the same across different
+bank ownerships such as state, domestic, foreign (Isik and Hassan, 2003b).
+
+3.2.6. Comparison of frontier techniques
+A few studies compare alternative frontier techniques over the period of our
+survey. Bauer et al. (1998) use a sample of US banks to compare DEA, SFA, TFA
+(thick frontier approach), and DFA (distribution-free approach) over six consistency
+criteria. They find that DEA yields much lower average efficiencies, ranks the banks
+differently, and identifies the best and worst banks differently from parametric
+methods. Furthermore, compared to DEA the parametric measures were more highly
+18
+
+correlated with the traditional (non-frontier) performance measures. Huang and Wang
+(2002) provide another comparison of SFA, DFA and DEA using data from
+Taiwanese banks. They also argue that the choice of the frontier approach can result
+in different conclusions. Weill (2004) provides more recent evidence using a sample
+from five European countries. However, this cross-country setting does not alter the
+main conclusion of lack of robustness across different approaches, confirming the
+results of the previous two studies. Delis et al. (2008) provide further support to these
+findings using a dataset of Greek banks. The study of Beccalli et al. (2006) also
+provides useful insights for the differences of SFA and DEA. While this study does
+not focus on the comparison between these two methods, it finds that while changes
+in the stock prices of banks reflect percentage changes in DEA cost efficiency scores,
+this trend is less clear with SFA efficiency estimates. In contrast, Fiordelisi (2008)
+reports that SFA cost efficiency estimates explain better the variations in shareholder
+value creation than those derived from DEA.
+Casu et al. (2004) compare productivity growth estimates obtained through
+parametric and non-parametric approaches. Their study seems to indicate that in this
+case the differences are not as large as in the efficiency studies. They conclude that
+although the alternative methodologies produce, in some cases, opposing findings, as
+for the sources of productivity for individual years, in general they do not yield
+noticeably different results in terms of identifying the components of the productivity
+growth of EU banks during the period of their study.
+
+3.2.7. Efficiency of bank branches
+While most of the above studies focus on the efficiency of banking institutions as a
+whole, a related strand of the literature examines the efficiency of bank branches.16 In
+general, branches are predominantly regarded as production units (see Camanho and
+Dyson (1999, 2005, 2006), Zenios et al. (1999), Soteriou and Zenios (1999b), Golany
+and Storbeck (1999), Athanassopoulos and Giokas (2000) and Hartman et al. (2001))
+where output is measured by the number of various accounts and/or transactions as
+contrast to the intermediation approach employed by Portela and Thanassoulis (2005,
+2007), Portela et al. (2003), Giokas (2008a) where branches are seen as
+intermediaries, and thus outputs are measured in monetary terms.
+
+16
+
+See Appendix II for information on branch efficiency studies.
+
+19
+
+There are studies which consider the changing role of bank branches from a
+predominantly transaction-based one to a sales-oriented role. Cook et al. (2000) and
+Cook and Hababou (2001) distinguish sales and services (transactions) functions of
+bank branches in a Canadian Bank where inputs are usually shared between these two
+functions. To model the shared resources, Cook et al. (2000) extend the usual
+methodology to develop a model which incorporates the best resource split and
+optimises the aggregate efficiency score. Further, Cook and Hababou (2001) model
+the shared resources concept by adopting the Additive DEA model. In a recent novel
+application, Portela and Thannasoulis (2007) assess the branches of a Portuguese bank
+in terms of their performance in their new roles by specifying efficiency measures
+which consider sales, transactional activities as well as bank branch profit efficiency.
+Service quality is also a significant dimension of bank branches performance.
+Two different ways are developed in empirical applications to consider service
+quality. For instance, Soteriou and Zenios (1999b), Golany and Storbeck (1999);
+Athanassopoulos and Giokas (2000) include quality variables in efficiency analysis
+whereas Portela and Thannasoulis (2007) use a post-hoc analysis to compare service
+quality index with efficiency measures. They find that service quality is positively
+related with operational and profit efficiency.
+The diversity of environments in which the branches are operating is also
+considered in the literature. Paradi and Schaffnit (2004) considered the role of the
+environmental parameters that are outside the management control in the commercial
+branches of a large Canadian bank and incorporated risk and economic growth rate of
+the region, as two non-discretionary factors. On the other hand, Camanho and Dyson
+(2006) assess the impact of environmental factors and regional managerial policies on
+branches productivity through the construction of an index that reflects the relative
+performance of bank branches operating in four different regions in Portugal. Das et
+al (2007) introduce the concept of spatial efficiency for each region relative to the
+nation and thus, measure the effects of differences in the regional characteristics on
+the efficiency of bank branches across four metropolitan regions in India.
+Some interesting observations can be summarised as follows. In general, the
+existing studies of bank branch efficiency use data on a small number of branches of
+non-US banks and mostly employ DEA. There are studies however, which evaluate
+bank branch performance with DEA and compare the results with other
+methodologies, i.e. FDH (Portela et al. 2003), Malmquist indices (Camanho and
+20
+
+Dyson, 2006), log-linear frontier method (Giokas 2008b), ABC Plus (Kantor and
+Maital, 1999), OCRA (Parkan and Wu, 1999), Neural Network Model (Wu et al.
+2006), Quasi-concave DEA, FDH, and Parametric Frontier models (Dekker and Post,
+2001). Most of the studies which were reviewed use technical and operational
+efficiencies as estimated measures. Recent studies examine the allocative profit
+efficiency (see Portela and Thanassoulis, 2005, 2008), and cost efficiency (Camanho
+and Dyson, 2005, 2008) aspects of bank branches.
+
+4. Other O.R. and A.I. techniques and bank performance
+In this section, we review 15 recent studies that develop classification models used in
+the prediction of bank failure (9), bank underperformance (2), and credit ratings (4).
+Canbas et al. (2005) point out that the study of bank failure is important for at least
+two reasons. First, an understanding of the reasons beyond the failure allows
+regulatory authorities to manage and supervise banks more efficiently. Second, the
+ability to differentiate between healthy and troubled banks can reduce the expected
+cost of bank failure, either by taking actions to prevent failure or by minimizing the
+costs to the public (Thomson, 1991). As discussed in Gaganis et al. (2006) while
+many of the failure prediction models achieve very promising classification
+accuracies, one common drawback is that they concentrate on the assignment of
+banks in two groups, failed and non-failed. However, the classification of banks as
+bad or good reduces the usefulness of the model. Obviously, the classification
+into more groups relates to another strand of the literature that deals with credit risk
+modelling and attempts to replicate the ratings assigned by the credit agencies. In the
+following sub-sections, we provide a brief description of the methodologies, the
+employed variables, and the classification results.17 A summary of the main
+characteristics of these studies is available in Appendix III.
+
+4.1. Methodologies
+Neural network (NN) modelling is an intelligence technique that follows a
+process similar to the human brain. As in other classification models, the parameters
+of a NN model need to be estimated before the network can be used for prediction
+purposes. There are numerous NN architectures, learning methods, and parameters.
+17
+
+To conserve space we keep our discussion on methodologies short. Detailed information is available
+in the corresponding applications and/or devoted textbooks.
+
+21
+
+Generally speaking, NN architectures can be either feedback or feedforward. In a
+feedback network, nodes can receive inputs from nodes in any other layer in the
+network, whereas in a feedforward network inputs are only received from previous
+layers. The multi-layer preceptor (MLP-NN), competitive learning neural networks
+(CL-NN), self-organizing map neural networks (SOM-NN), back-propagation neural
+networks (BP-NN), and probabilistic neural networks (PNN) are alternative
+approaches employed in the studies under review (e.g. Chen and Shih, 2006;
+Boyacioglu et al, 2008).
+The approach of Support Vector Machines (SVMs), used in Boyacioglu et al.
+(2008), Chen and Shih (2006) and Huang et al. (2004), was introduced by Vapnik
+(1995). It is based on the Structural Risk Minimization (SRM) principle from
+computational learning theory. This seeks to minimise an upper bound of the
+generalisation error rather than minimise the training error. SVMs use a linear
+structure to implement nonlinear class boundaries through extremely non-linear
+mapping of the input vectors into the high-dimensional space. If the data are linearly
+separated, SVM uses a special kind of linear model, the optimal separating
+hyperplane, that provides the maximum separation between the classes. The training
+points that are closest to the maximum margin hyperplane are called support vectors.
+All other training examples are irrelevant for determining the binary class boundaries.
+From the implementation point of view, Vapnik (1995) showed how training a SVM
+and finding the parameters leads to a quadratic optimisation problem with bound
+constraints and one linear equality constraint. This means that the solution of SVMs is
+unique, optimal and absent from local minima (Tay and Cao, 2001).
+Nearest Neighbours is a non-parametric estimation method that has been
+applied in various problems in finance. The nearest neighbour rule classifies an object
+(i.e. bank) to the class of its nearest neighbour in the measurement space using some
+kind of distance measure like the local metrics, the global metrics, the Mahalanobis or
+the Euclidean distance. The modification of the nearest neighbour rule, the k-nearest
+neighbour (k-NN) method that is employed in Zhao et al. (2008), classifies an object
+(i.e. bank) to the class (i.e. failed or non-failed) more heavily represented among its knearest neighbours.
+In the case of decision trees that originate from machine learning, instead of
+developing classification functions or network architectures, a binary decision tree is
+developed. This can be accomplished through a set of if-then split conditions that lead
+22
+
+to the accurate classification of cases (e.g. banks). Commonly used algorithms are
+CART (e.g. Ravi et al., 2008), and C4.5 (e.g. Zhao et al., 2008).
+The UTilits Additives DIScriminantes (UTADIS) multicriteria decision aid
+(MCDA) method, used in Gaganis et al. (2006), employs the framework of preference
+disaggregation analysis for the development of an additive utility function that is used
+to score the firms and decide upon their classification. The estimation of the additive
+utility model is performed through mathematical programming techniques.
+The Multi-Group Hierarchical Discrimination (MHDIS) method, used in
+Pasiouras et al. (2007), is another MCDA approach that uses utility functions for
+discrimination purposes. MHDIS distinguishes the groups progressively, starting by
+discriminating the first group from all the others, and then proceeds to the
+discrimination between the alternatives belonging to the other groups. To accomplish
+this task, instead of developing a single additive utility function that describes all
+alternatives (as in UTADIS), two additive utility functions are developed in each one
+of the n-1 steps, where n is the number of groups. At each stage of the hierarchical
+discrimination procedure, two linear, and a mixed-integer, programming problems are
+solved to estimate the utility thresholds and the two additive utility functions in order
+to minimise the classification error.
+As discussed in Kolari et al. (2002) and Lanine and Vander Vennet (2006)
+trait recognition is another non-parametric approach, under which individual traits are
+initially developed from different segments of the distribution of each variable and the
+interactions of these segments with one or more other variables segmented
+distributions. When all possible traits of the variables are tabulated for all banks, trait
+recognition uses a search routine to cull traits that do not discriminate between failed
+and non-failed banks. Trait recognition uses two sets of discriminators, the safe traits
+(associated with non-failed banks) and the unsafe traits (failed banks), known as
+features. Then these features are used to vote on each bank and classify it as failed or
+non-failed. Lanine and Vander Vennet (2006) argue that the general rule of
+classifying safe and unsafe cells and assigning default probabilities works poorly
+when the number of banks falling into mixed cells is high. To avoid this problem they
+suggest a formula to compute the probability of default directly without preliminary
+classification of cells as safe or unsafe.
+Some researchers use soft computing approaches with the aim of synthesizing
+the human ability to tolerate and process uncertain, imprecise and incomplete
+23
+
+information during the decision-making (Tung et al., 2004). Soft computing usually
+integrates various techniques that may originate from different disciplines such as
+fuzzy logic18, neural networks, machine learning, etc. in various combinations that
+will allow the researcher to exploit the strengths of individual techniques (Ravi
+Kumar and Ravi, 2008). A popular approach is the integration of neural network and
+fuzzy sets to develop a neural fuzzy network. For example, Tung et al. (2004) propose
+a Generic Self-organizing Fuzzy Neural Network (GenSoFNN) based on the
+compositional rule of inference (CRI) to predict bank failure.
+Multiple discriminant analysis (MDA) and logistic regression analysis (LRA)
+are two traditional techniques that are commonly used as benchmarks in classification
+studies (e.g. Swicegood and Clark, 2001; Pasiouras et al., 2007; Kosmidou and
+Zopounidis, 2008). In contrast, Tung et al. (2004) benchmark their models against
+Cox regression which estimates the dependence of the risk of failure on banks
+characteristics and of the evolution of that risk over time.
+
+4.2. Variables
+In most of the cases, the variables are selected on the basis of the CAMEL model and
+include measures for Capital strength, Asset quality, Earnings, and Liquidity.19 The
+number of variables differs significantly among studies. Some researchers start from a
+large list of variables and then use statistical screening (e.g. Kruskal-Wallis) or
+dimension reduction (e.g. factor analysis) to end up with a reduced set of variables. In
+addition to the financial variables, some studies include additional characteristics
+related to ownership (e.g. % of shares held by the government), market information
+(e.g. stock price in previous year), auditing, and country (e.g. Heritage index).
+
+4.3. Classification results
+Many of the studies in Appendix III report quite satisfactory classification accuracies,
+and in several cases, the proposed O.R. and A.I. methods outperform the traditional
+techniques (i.e. MDA, LRA, Cox regression). Furthermore, the studies that focus on
+bankruptcy prediction, in general, perform more accurately than those that deal with
+18
+
+The theory of fuzzy sets, proposed by Zadeh (1965) provides a mathematical approach to emulate
+human cognitive process. The fuzzy set theory aims to classify subjective reasoning and assign degrees
+of possibilities in reaching conclusions. Fuzzy logic can also be used to obtain fuzzy if-then rules.
+19
+M in CAMEL refers to management quality, and it is rarely used in empirical studies due to
+difficulties in assessing management quality.
+
+24
+
+credit ratings. However, this is not surprising for two reasons. First, while classifying
+the banks in more groups is more informative, it becomes more difficult to
+discriminate among groups in the intermediate categories. Second, credit ratings may
+incorporate additional qualitative information and human judgment that cannot be
+captured by the conventional variables used in most studies.
+In any case, comparisons across different studies should be treated with
+extreme caution. One reason is that different studies make different assumptions about
+the prior probabilities of group membership as well as misclassification costs. A
+second reason is that different studies use different approaches to validate the
+developed models. For instance, some researchers simply split the total sample in
+training and holdout datasets without accounting for the stability of models over time;
+others use resampling techniques (e.g. k-fold cross-validation), and others use a
+holdout sample from a future period. However, it should kept in mind that
+classification ability is likely to overstate predictive ability. Thus, a superior approach
+would require that the model be validated against a future period, as this approach
+more closely reflects a real world setting.
+
+5. Concluding remarks
+We have presented a comprehensive review of applications of operational research
+and artificial intelligence techniques in the assessment of bank performance, by
+discussing a total of 179 studies published between 1998 and 2008. We have
+classified the studies in two main categories.
+The first uses DEA and the DEA-like Malmquist index to estimate the
+efficiency and productivity growth of banks and bank branches. We have discussed
+various methodological issues such as the estimated measures of efficiency, the
+underlying assumptions of the estimated models, and the selection of inputs and
+outputs. We also discussed the main topics of interest including the relationship
+between ownership and efficiency, stock returns and efficiency, the determinants of
+efficiency, the efficiency of bank branches, amongst others. Three of the main
+conclusions are that: (i) profit efficiency and capacity efficiency have received quite
+limited attention in DEA studies in banking (ii) most studies that use a two-stage DEA
+do not employ appropriate bootstrapping techniques, and their results may be biased
+(iii) there is much diversity among studies with respect to the selection of input and
+25
+
+outputs. As in the case banks as a whole, cost and profit efficiency has received
+considerably less attention in branch efficiency studies. Furthermore, an area of
+research deserving attention would be the estimation of bank branches efficiency over
+successive time periods.
+Studies falling into the second category, attempt to develop classification
+models to predict failure, the credit ratings of banks, and identify underperformers.
+We have found both country-specific and cross-country studies and applications of
+techniques that originate from various disciplines. Most of the studies rely heavily on
+financial information although in some cases non-financial variables are also used.
+Given the differences in the approaches employed to validate the models,
+comparisons of classification accuracies across studies should be treated with caution.
+We find only a few studies that propose the combination of the predictions of
+individual models into integrated meta-classifiers, and we believe that this is an area
+of research that is worthy of further attention.
+
+References
+Akhtar, M.H., (2002), X-efficiency analysis of commercial banks in Pakistan: a
+preliminary investigation, Pakistan Development Review, 41, 4, 567-580.
+Alam P., Booth D., Lee K., Thordarson T., (2000), The use of fuzzy clustering
+algorithm and self-organizing neural networks for identifying potentially failing
+banks: an experimental study, Expert Systems with Applications 18 (2000) 185
+199.
+Allen R (1997) Incorporating value judgements in data envelopment analysis. PhD
+Dissertation, Warwick Business School, University of Warwick, UK.
+Al-Sharkas A.A., Hassan M.K., Lawrence S., (2008), The Impact of Mergers and
+Acquisitions on the Efficiency of the US Banking Industry: Further Evidence,
+Journal of Business Finance and Accounting, 35, 50-70.
+Ariff M., Can L., (2008), Cost and profit efficiency of Chinese banks: A nonparametric analysis, China Economic Review, 19, 260-273.
+Asmild M., Paradi J.C., Aggarwall V., Schaffnit C., (2004), Combining DEA
+Window Analyis with the Malmquist Index Approach in a Study of the
+Canadian Banking Industry, Journal of Productivity Analysis, 21, 67-89.
+
+26
+
+Ataullah A., Cockerill T., Le H., (2004), Financial liberalization and bank efficiency:
+a comparative analysis of India and Pakistan, Applied Economics, 36, 19151924.
+Ataullah A., Le H., (2004), Financial repression and liability of foreignness in
+developing countries, Applied Economics Letters, 11, 545-549.
+Ataullah A., Le H., (2006), Economic reforms and bank efficiency in developing
+countries: the case of the Indian banking industry, Applied Financial
+Economics, 16, 653-663.
+Athanassopoulos, A.D., Giokas, D. (2000), The use of data envelopment analysis in
+banking institutions: evidence from the commercial bank of Greece, Interfaces,
+30, 2, 81-95.
+Avkiran N.K., (1999), The evidence on efficiency gains: The role of mergers and the
+benefits to the public, Journal of Banking and Finance, 23, 991-1013.
+Aysan A.F., Ceyhan S.P., (2008), What determines the banking sector performance in
+globalized financial markets? The case of Turkey, Physica A, 387, 1593-1602.
+Bala K., Cook W.D., (2003), Performance measurement with classification
+information: an enhanced additive DEA model, Omega, 31, 439-450.
+Ball R., Brown P., (1968), An Empirical Evaluation of Accounting Income Numbers,
+Journal of Accounting Research, 6, 159-178.
+Banker R.D., Morey R.C., (1986), Efficiency Analysis for Exogenously Fixed Inputs
+and Outputs, Operations Research, 34, 513-521.
+Banker R.D., Morey R.C., (1986), Efficiency Analysis for Exogenously Fixed Inputs
+and outputs, Operations Research, 34, 513-521.
+Barr, R.S., (2002), Evaluating the productive efficiency and performance of U.S.
+commercial banks, Managerial Finance, 28, 8, 3-25.
+Bauer P.W., Berger A.N., Ferrier G.D., Humphrey D.B., (1998), Consistency
+Conditions for Regulatory Analysis of Financial Institutions: A Comparison of
+Frontier Efficiency Methods, Journal of Economics and Business, 50, 85-114.
+Beccalli E., Casu B., Girardone C., (2006), Efficiency and Stock Performance in
+European Banking, Journal of Business Finance and Accounting, 33, 245- 262.
+Berg, S., Forsund, F., Jansen, E., 1991, Malmquist indices of productivity growth
+during the deregulation of Norwegian banking, 1980-89. Scandinavian Journal of
+Economics 94, 211-228.
+
+27
+
+Bergendahl G., (1998), DEA and benchmarks  an application to Nordic banks,
+Annals of Operations Research, 82, 233-249.
+Bergendahl G., Lindblom T., (2008), Evaluating the performance of Swedish savings
+banks according to service efficiency, European Journal of Operational
+Research, 185, 1663-1673.
+Berger A.N., (2007), International Comparisons of Banking Efficiency, Financial
+Markets, Institutions & Instruments, 16, 119- 144.
+Berger A.N., Humphrey D.B., (1997), Efficiency of financial institutions: International
+survey and directions for future research, European Journal of Operational
+Research, 98,175-212.
+Berger A.N., Mester L.J., (1997), Inside the black box: What explains differences in the
+efficiencies of financial institutions?, Journal of Banking and Finance, 21, 895947.
+Board J., Sutcliffe C., Ziemba W.T., (2003), Applying Operations Research
+Techniques to Financial Markets, INTERFACES, 33, 12-24.
+Boyacioglu M.A., Kara Y., Baykan OmK., (2008), Predicting bank financial failures
+using neural networks, support vector machines and multivariate statistical
+methods: A comparative analysis in the sample of savings deposit insurance fund
+(SDIF) transferred banks in Turkey, Expert Systems with Applications,
+doi:10.1016/j.eswa.2008.01.003
+Brissimis S.N., Delis M.D., Papanikolaou N.I., (2008), Exploring the nexus between
+banking sector reform and performance: Evidence from newly acceded EU
+countries, Journal of Banking and Finance, 32, 2674-2683.
+Camanho A.S., Dyson R.G., (1999), Efficiency, size, benchmarks and targets for bank
+branches: An application of data envelopment analysis, Journal of the
+Operational Research Society, 50, 9, 903-915.
+Camanho A.S., Dyson R.G., (2005), Cost efficiency measurement with price
+uncertainty: a DEA application to bank branch assessments, European Journal of
+Operational Research, 161, 432-446.
+Camanho A.S., Dyson R.G., (2006), Data envelopment analysis and Malmquist
+indices for measuring performance, Journal of Productivity Analysis, 26, 35-49.
+Camanho A.S., Dyson R.G., (2008), A generalisation of the Farrell cost efficiency
+measure applicable to non-fully competitive settings, Omega, 36, 147-162.
+
+28
+
+Canbas S, Cabuk A, Kilic SB., (2005), Prediction of commercial bank failure via
+multivariate statistical analysis of financial structures: the Turkish case. European
+Journal of Operational Research, 166, 528546.
+Canhoto A., Dermine J., (2003), A note on banking efficiency in Portugal, New vs.
+Old banks, Journal of Banking and Finance, 27, 2087-2098.
+Caprio G., Klingebiel D., (2003), Episodes of Systemic and Borderline Financial
+Crises, World Bank, January, Available at: http://go.worldbank.org/5DYGICS7B0
+Casu B., Girardone C., (2004), Financial conglomeration: efficiency, productivity and
+strategic drive, Applied Financial Economics, 14, 687-696
+Casu B., Girardone C., (2005), An analysis of the relevance of off-balance sheet items
+in explaining productivity change in European banking, Applied Financial
+Economics, 15, 1053-1061.
+Casu B., Girardone C., (2006), Bank competition, concentration and efficiency in the
+single European Market, The Manchester School, 74, 441-468.
+Casu B., Girardone C., Molyneux P., (2004), Productivity change in European
+banking: A comparison of parametric and non-parametric approaches, Journal of
+Banking and Finance, 28, 2521-2540.
+Casu B., Molyneux P., (2003), A comparative study of efficiency in European
+banking, Applied Economics, 35, 1865-1876.
+Chang T-C., Chiu, Y-H., (2006), Affecting factors on risk-adjusted efficiency in
+Taiwans banking industry, Contemporary Economic Policy, 24, 4, 634-648.
+Charnes A., Cooper W.W., Rhodes E., (1978), Evaluating Program and Managerial
+Efficiency: An Application of Data Envelopment Analysis to Program Follow
+Through, Management Science, 27, 668-697.
+Charnes A., Cooper W.W., Rhodes E., (1981), Evaluating Program and Managerial
+Efficiency: An Application of Data Envelopment Analysis to Program Follow
+Through, Management Science, 27, 668-697.
+Chen T-Y., (1998), A study of bank efficiency and ownership in Taiwan, Applied
+Economics Letters, 5, 613-616.
+Chen T-Y., (2001), An estimation of X-inefficiency in Taiwans banks, Applied
+Financial Economics, 11, 237-242.
+Chen T-Y., (2002a), Measuring firm performance with DEA and prior information in
+Taiwans banks, Applied Economics Letters, 9, 201-204.
+
+29
+
+Chen W-H., Shih J-Y., (2006), A study of Taiwans issuer credit rating systems using
+support vector machines, Expert Systems with Applications, 30, 427435
+Chen X., Skully M., Brown K., (2005), Banking efficiency in China: Application of
+DEA to pre- and post-deregulation eras: 1993-2000.
+Chen, C-W., Liou, T-S., Wu, Y-S. (2004), The performance measurement of local
+banks in the era of the financial liberalization on Taiwan, Information and
+Management Sciences, 15, 4, 89-104.
+Chen, T-Y., (2002b), A comparison of chance-constrained DEA and stochastic
+frontier analysis: bank efficiency in Taiwan, Journal of the Operations Research
+Society, 53, 5, 492-500.
+Chen, T-Y., (2004), A study of cost efficiency and privatisation in Taiwans banks:
+the impact of the Asian financial crisis, Service Industries Journal, 24, 5, 137151.
+Chen, T-Y., Yeh, T-L., (2000), A measurement of bank efficiency, ownership and
+productivity changes in Taiwan, Service Industries Journal, 20, 1, 95-109.
+Chiu, Y-H., Jan, C., Shen, D-B., Wang, P-C., (2008), Efficiency and capital adequacy
+in Taiwan banking: BCC and super-DEA estimation, Service Industries Journal,
+28, 4, 479-496.
+Chu S.F., Lim G.H., (1998), Share performance and profit efficiency of banks in an
+oligopolistic market: evidence from Singapore, Journal of Multinational
+Financial Management, 8, 155-168.
+Coelli, T.J., Perelman, S.A (1996) Comparison of Parametric and Non-parametric
+Distance Functions: With Application to European Railways, CREPP Discussion
+Paper no 1996/11, University of Liege, Liege.
+Coelli, T.J., Prasada Rao, D.S., ODonnell, C.J., Battese, G.E., 2005. An Introduction to
+Efficiency and Productivity Analysis. 2nd Ed., Springer: USA.
+Cook W.D., Seiford L.M., (2009), Data envelopment analysis (DEA)  Thirty years
+on, European Journal of Operational Research, 192, 1-17.
+Cook W.D., Seiford L.M., Zhu J., (2004), Models for performance benchmarking:
+measuring the effect of e-business activities on banking performance, Omega,
+32, 313-322.
+Cook, W.D., Hababou, M., (2001), Sales performance measurement in bank branches,
+Omega, 29, 299-307.
+
+30
+
+Cook, W.D., Hababou, M., Liang, L., (2005), Financial liberalization and efficiency
+in Tunisian banking industry: DEA test, International Journal of Information
+Technology & Decision Making, 4, 3, 455-475.
+Cook, W.D., Hababou, M., Tuenter, H.J.H, (2000), Multicomponent efficiency
+measurement and shared inputs in Data Envelopment Analysis: an application to
+sales and service performance in bank branches, Journal of Productivity
+Analysis, 14, 209-224.
+Damar H.E., (2006), The effects of shared ATM networks on the efficiency of
+Turkish banks, Applied Economics, 38, 683-697.
+Das A., Ghosh S., (2006), Financial deregulation and efficiency: An empirical analyis
+of Indian banks during the post reform period, Review of Financial Economics,
+15, 193-221.
+Das, A., Ray, S.C., Nag, A., (2007), Labour-use efficiency in Indian banking: a
+branch-level analysis, Omega, doi:10.1016/j.omega.2007.05.002.
+Debasish, S.S., Mishra, B., (2007), Performance Evaluation of Indian Banks-A Study
+using Data Envelopment Analysis, European Journal of Economics, Finance and
+Administrative Sciences,9, 86-94
+Dekker, D., Post, T., (2001), A quasi-concave DEA model with an application for
+bank branch performance evaluation, European Journal of Operational
+Research, 132, 296-311.
+Delis M.D., Koutsomanoli-Fillipaki K., Staikouras C.K., Gerogiannaki K., (2008),
+Evaluating cost and profit efficiency: a comparison of parametric and
+nonparametric
+
+methodologies,
+
+Applied
+
+Financial
+
+Economics,
+
+doi:
+
+10.1080/09603100801935370.
+Devaney M., Weber W.L., (2000), Productivity growth, market structure, and
+technological change: evidence from the rural banking sector, Applied Financial
+Economics, 10, 587-595.
+Dimitras A.I., Zanakis S.H. , Zopounidis C., (1996), A survey of business failures with
+an emphasis on prediction methods and industrial applications, European Journal
+of Operational Research, 90, 487-513.
+Dogan E., Fausten D.K., (2003), Productivity and Technical Change in Malaysian
+Banking: 1989-1998, Asia-Pacific Financial Markets, 10, 205-237.
+Drake L., (2001), Efficiency and productivity change in UK banking, Applied
+Financial Economics, 11, 557-571.
+31
+
+Drake L., Hall M.J.B., (2003), Efficiency in Japanese banking: An empirical analysis,
+Journal of Banking and Finance, 27, 891-917.
+Drake L., Hall M.J.B., Simper R., (2006), The impact of macroeconomic and
+regulatory factors on bank efficiency: A non-parametric analysis of Hong
+Kongs banking system, Journal of Banking and Finance, 30, 1443-1466.
+Erdem C., Erdem M.S., (2007), Turkish banking efficiency and its relation to stock
+performance, Applied Economics Letters, 15, 207-211.
+Fare R., Grosskopf S., Weber W.L., (2004), The effect of risk-based capital
+requirements on profit efficiency in banking, Applied Economics, 36, 17311743.
+Fiordelisi F., (2008), Efficiency and shareholder return in banking, International Journal
+of Banking, Accounting and Finance, 1, 114- 132.
+Fried H.O., Lovell C.A.K., Schmidt S.S., Yaisawarng S., (2002), Accounting for
+Environmental Effects and Statistical Noise in Data Envelopment Analysis,
+Journal of Productivity Analysis, 17, 157174.
+Fried, H.O., Schmidt, S.S., Yaisawarng, S., (1999), Incorporating the operating
+environment into a nonparametric measure of technical efficiency, Journal of
+Productivity Analysis, 12, 249267.
+Fukuyama H., Weber W.L., (2005), Estimating output gains by means of Luenberger
+efficiency measures, European Journal of Operational Research, 164, 535-547.
+Fukuyama H., Weber W.L., (2002), Estimating output allocative efficiency and
+productivity change: Application to Japanese banks, European Journal of
+Operational Research, 137, 177-190.
+Fung M.K., (2006), Scale economies, X-efficiency, and convergence of productivy
+among bank holding companies, Journal of Banking and Finance, 30, 28572874.
+Gaganis C., Pasiouras F., Zopounidis C., (2006), A Multicriteria Decision Framework
+for Measuring Banks Soundness Around the World, Journal of Multi-Criteria
+Decision Analysis, 14, 103111
+Garcia-Cestona M., Surroca J., (2008), Multiple goals and ownership structure:
+Effects on the performance of Spanish savings banks, European Journal of
+Operational Research, 187, 582-599.
+Gilbert R.A., Wilson P.W., (1998), Effects of Deregulation on the Productivity of
+Korean Banks, Journal of Economics and Business, 50, 133-155.
+32
+
+Giokas D.I., (2008a), Cost efficiency impact of bank branch characteristics and
+location, Managerial Finance, 34, 3, 172-185.
+Giokas D.I., (2008b), Assessing the efficiency in operations of a large Greek bank
+branch network adopting different economic behaviors, Economic Modelling,
+25, 559-574.
+Golany, B., Storbeck, J.E., (1999), A Data Envelopment Analysis of the operational
+efficiency of bank branches, Interfaces, 29, 3, 14-26.
+Griffiths B, Beynon M.J., (2005), Expositing stages of VPRS analysis in an expert
+system: Application with bank credit ratings, Expert Systems with Applications,
+29, 879888
+Guzman I., Reverte C., (2008), Productivity and efficiency change and shareholder
+value: evidence from the Spanish banking sector, Applied Economics, 40, 20332040.
+Habibullah, M. S., Muhd Iqbal Makmur, M. I., Azman-Saini, W.N.W., Radam, A.,
+Boon. O.H., (2005) Bank Efficiency and the Efficient Market Hypothesis: The
+Case for Bank Stock Prices in KLSE, Savings and Development, 29, 4, 263-290.
+Hahn F.R., (2007a), Domestic mergers in the Austrian banking sector: a performance
+analysis, Applied Financial Economics, 17, 185-196.
+Hahn, F.R., (2007b), Environmental determinants of banking efficiency in Austria,
+Empirica, 34, 231-245.
+Halkos G.E., Salamouris D.S., (2004), Efficiency measurement of the Greek
+commercial banks with the use of financial ratios: a data envelopment analysis
+approach, Management Accounting Research, 15, 201-224.
+Hartman, T.E., Storbeck, J.E., Byrnes, P., (2001), Allocative efficiency in branch
+banking, European Journal of Operational Research, 134, 232-242.
+Hauner D., (2005), Explaining efficiency differences among large German and
+Austrian banks, Applied Economics, 37, 969-980.
+Havrylchyk O., (2006), Efficiency of the Polish banking industry: Foreign versus
+domestic banks, Journal of Banking and Finance, 30, 1975-1996.
+Howland, M., Rowse, J., (2006), Measuring bank branch efficiency using data
+envelopment analysis: managerial and implementation issues, INFOR, 44, 1, 4963.
+
+33
+
+Hu W-C., Lai M-C., Huang H-C., (2008), Rating the relative efficiency of financial
+holding companies in an emerging economy: A multiple DEA approach, Expert
+Systems with Applications, doi: 10. 1016/j.eswa.2008.06.080.
+Huang T-H., Wang M-H., (2002), Comparison of economic efficiency estimation
+methods: parametric and non-parametric techniques, The Manchester School,
+70, 682-709.
+Huang, L-H., Hsiao, H-C., Cheng, M-A., Chang, S-J., (2008), Effects of financial
+reform on productivity change, Industrial Management & Data Systems, 108, 7,
+867-886.
+Huanga Z, Chena H., Hsua C-J., Chenb W-H., Wu S., (2004), Credit rating analysis
+with support vector machines and neural networks: a market comparative study,
+Decision Support Systems 37, 543 558.
+Isik I., (2007), Bank ownership and productivity developments: evidence from
+Turkey, Studies in Economics and Finance, 24, 115-139.
+Isik I., (2008), Productivity, technology and efficiency of de novo banks: A counter
+evidence from Turkey, Journal of Multinational Financial Management, 18,
+427-442.
+Isik I., Akcaoglu E., (2006), An Empirical Analysis of Productivity Developments in
+Traditional Banks: The Initial Post-Liberalization Experience, Central Bank
+Review, 1, 1-35.
+Isik I., Hassan M.K., (2002), Technical, scale and allocative efficiencies of Turkish
+banking industry, Journal of Banking and Finance, 26, 719-766.
+Isik I., Hassan M.K., (2003a), Efficiency, Ownership and Market Structure, Corporate
+Control and Governance in the Turkish Banking Industry, Journal of Business
+Finance and Accounting, 30, 1363 - 1421.
+Isik I., Hassan M.K., (2003b), Financial deregulation and total factor productivity
+change: An empirical study of Turkish commercial banks, Journal of Banking
+and Finance, 27, 1455-1485.
+Isik I., Hassan M.K., (2003c), Financial disruption and bank productivity: The 1994
+experience of Turkish banks, The Quarterly Review of Economics and Finance,
+43, 291-320.
+Isik I., Uysai D., (2006), The Sources of Productivity Growth in Turkish Banks by
+Ownership: The Initial Responses of Public, Private, and Foreign Banks to
+Liberalization, Turkish Studies, 7, 365-403.
+34
+
+Kantor, J., Maital, S. (1999), Measuring efficiency by product group: integrating DEA
+with activity-based accounting in a large Mideast bank, Interfaces, 29, 3, 27-36
+Kao C., Liu S-T., (2004), Predicting bank performance with financial forecasts, A
+case of Taiwan commercial banks, Journal of Banking and Finance, 28, 23532368.
+Kirkwood J., Nahm D., (2006), Australian Banking Efficiency and Its Relation to
+Stock Returns, The Economic Record, 82, 253-267.
+Kohers T., Huang M-h., Kohers N., (2000), Market perception of efficiency in bank
+holding company mergers: the roles of the DEA and SFA models in capturing
+merger potential, Review of Financial Economics, 9, 101-120.
+Kolari J., Glennon D., Shin H., Caputo M., (2002), Predicting large US commercial
+bank failures, Journal of Economics and Business, 54, 361-387.
+Kosmidou K., Zopounidis C., (2008), Predicting US commercial bank failures via a
+multicriteria
+
+approach,
+
+International
+
+Journal
+
+of
+
+Risk
+
+Assessment
+
+and
+
+Management, 9, 26-43.
+Krishnasamy G., Ridzwa A.H., Perumal V., (2003), Malaysian Post Merger Banks
+Productivity: Application of Malmquist Productivity Index, Managerial Finance,
+30, 63- 74.
+Kumar, S., Gulati, R., (2008), Evaluation of technical efficiency and ranking of public
+sector banks in India, International Journal of Productivity & Performance
+Management, 57, 7, 540-568.
+Kuosmanen T., Post T., (2001), Measuring economic efficiency with incomplete price
+information: With an application to European commercial banks, European
+Journal of Operational Research, 134, 43-58.
+Kyj L., Isik I., (2008), Bank x-efficiency in Ukraine: An analysis of service
+characteristics and ownership, Journal of Economics and Business, 60, 369-393.
+Lanine G, Vander Vennet R., (2006), Failure prediction in the Russian bank sector with
+logit and trait recognition models, Expert Systems with Applications, 30, 463478
+Laurenceson, J., Qin, F., (2008), Has minority foreign investment in Chinas banks
+improved their cost efficiency? China and World Economy, 16, 3, 57-74.
+Leightner, J.E., Knox Lovell, C.A., (1998), The impact of financial liberalization on
+the performance of Thai banks, Journal of Economics and Business, 50, 115131.
+
+35
+
+Levine R., (2005), Finance and Growth: Theory and Evidence, Chapter 12 in
+Handbook of Economic Growth, vol 1. Part A., Springer, pp. 865-934.
+Lim, G.H., Randhawa, D.S., (2005), Competition, liberalization and efficiency:
+Evidence from a two-stage banking model on banks in Hong Kong and
+Singapore, Managerial Finance, 31, 1, 52-77.
+Lin Y-H., Hsu G.J.Y., Hsiao C-K., (2007), Measuring efficiency of domestic banks in
+Taiwan: application of data envelopment analysis and Malmquist index, Applied
+Economics Letters, 14, 821-827.
+Liu S-T., (2008), Slacks-based efficiency measures for predicting bank performance,
+Expert Systems with Applications, doi: 10.1016/j.eswa.2008.01.032.
+Liu S-T., Kao C., (2008), Stochastic data envelopment analysis in measuring the
+efficiency of Taiwan commercial banks, European Journal of Operational
+Research, doi: 10.1016/j.ejor.2008.02.023.
+Lozano-Vivas A., Pastor J.T., Hasan I., (2001), European Bank Performance Beyond
+Country Borders: What Really Matters, European Finance Review, 5, 141-165.
+Lozano-Vivas A., Pastor J.T., Pastor J.M., (2002), An Efficiency Comparison of
+European
+
+Banking Systems Operating under Different Environmental
+
+Conditions, Journal of Productivity Analysis, 18, 59-77.
+Luo X., (2003), Evaluating the profitability and marketability efficiency of large
+banks An application of data envelopment analysis, Journal of Business
+Research, 56, 627-635.
+Maghyereh, A., (2004), The effect of financial liberalization on the efficiency of
+financial institutions: the case of Jordanian commercial banks, Savings and
+Development, 1-24.
+Maudos J., Pastor J.M., (2003), Cost and profit efficiency in the Spanish banking
+sector (1985-1996): a non-parametric approach, Applied Financial Economics,
+13, 1-12.
+Maudos J., Pastor J.M., Perez F., (2002), Competition and efficiency in the Spanish
+banking sector: the importante of specialization, Applied Financial Economics,
+12, 505-516.
+Mercan M., Reisman A., Yolalan R., Emel A.B., (2003), The effect of scale and mode
+of ownership on the financial performance of the Turkish banking sector: results
+of a DEA-based analysis, Socio-Economic Planning Sciences, 37, 185-202.
+
+36
+
+Mester, L.J. (1996), A Study of Bank Efficiency Taking into Account Risk-Preferences,
+Journal of Banking and Finance, 20, 102545.
+Mostafa, M., (2007a), Benchmarking top Arab banks efficiency through efficient
+frontier analysis, Industrial Management & Data Systems, 107, 6, 802-823.
+Mostafa, M., (2007b), Modeling the efficiency of GCC banks: a data envelopment
+analysis approach, International Journal of Productivity and Performance
+Management, 56, 7, 623-643.
+Mukherjee K., Ray S.C., Miller S.M., (2001), Productivity growth in large US
+commercial banks: The initial post-deregulation experience, Journal of Banking
+and Finance, 25, 913-939.
+Mukherjee, A., Nath, P., Pal, M. (2003), Resource, service quality and performance
+triad: a framework for measuring efficiency of banking services, Journal of
+Operations Research Society, 54, 723-735.
+Neal P., (2004), X-efficiency and productivity change in Australian banking,
+Australian Economic Papers, June, 174-191.
+Ng G.S., Quek C, Jiang H, (2008), FCMAC-EWS: A bank failure early warning system
+based on a novel localized pattern learning and semantically associative fuzzy
+neural network, Expert Systems with Applications, 34, 9891003.
+Noulas, A.G., (2001), Deregulation and operating efficiency: the case of the Greek
+banks, Managerial Finance, 27, 8, 35-47.
+Noulas, A.G., 1997, Productivity growth in the Hellenic banking industry: state versus
+private banks. Applied Financial Economics 7, 223-228.
+Noulas, A.G., Glaveli, N., Kiriakopoulos, I., (2008), Investigating cost efficiency in
+the branch network of a Greek bank: empirical study, Managerial Finance, 34, 3,
+160-171.
+Olgu, O., Weyman-Jones, T.G., (2008), Parametric and nonparametric Malmquist
+productivity decomposition: a case study of European commercial banks,
+International Journal of Business Performance Management, 10, 4, 344-365.
+Paradi, J.C., Schaffnit, C., (2004), Commercial branch performance evaluation and
+results communication in a Canadian bank-a DEA application, European Journal
+of Operational Research, 156, 719-735.
+Parkan, C., Wu, M-L. (1999), Measurement of the performance of an investment bank
+using the operational competitiveness rating procedure, Omega, 27, 201-217.
+
+37
+
+Pasiouras F, Gaganis Ch, Doumpos M., (2007), A multicriteria discrimination approach
+for the credit rating of Asian banks, Annals of Finance, 3, 351367.
+Pasiouras F., (2008b), Estimating the technical and scale efficiency of Greek
+commercial banks: The impact of credit risk, off-balance sheet activities, and
+international operations, Research in International Business and Finance, 22,
+301-318.
+Pasiouras F., (2008a), International evidence on the impact of regulations and
+supervision on banks technical efficiency: an application of two-stage data
+envelopment analysis, Review of Quantitative Finance and Accounting, 30, 187223.
+Pasiouras F., Liadaki A., Zopounidis C., (2008), Bank efficeincy and share
+performance: evidence from Greece, Applied Financial Economics, 18, 11211130.
+Pastor J.M., (1999), Efficiency and risk management in Spanish banking: a method to
+decompose risk, Applied Financial Economics, 9, 371-384.
+Pastor J.M., (2002), Credit risk and efficiency in the European banking system: A
+three-stage analysis, Applied Financial Economics, 12, 895-911.
+Pastor J.M., Serrano L., (2006), The Effect of Specialisation on Banks Efficiency: An
+International Comparison, International Review of Applied Economics, 20, 125149.
+Paul, S., Kourouche, K., (2008), Regulatory policy and the efficiency of the banking
+sector in Australia, Australian Economic Review, 41, 3, 260-271.
+Porembski, M., Breitenstein, K., Alpar, P., (2005), Visualising efficiency and
+reference relations in data envelopment analysis with an application to the
+branches of a German bank, Journal of Productivity Analysis, 23, 203-221.
+Portela, M.C.A.S., Borges, P.C., Thanassoulis, E., (2003), Finding closest targets in
+non-oriented DEA models: the case of convex and non-convex technologies,
+Journal of Productivity Analysis, 19, 251-269.
+Portela, M.C.A.S., Thanassoulis, E., (2005), Profitability of a sample of Portuguese
+bank branches and its decomposition into technical and allocative components,
+European Journal of Operational Research, 162, 850-866.
+Portela, M.C.A.S., Thanassoulis, E., (2007), Comparative efficiency analysis of
+Portuguese bank branches, European Journal of Operational Research, 177,
+1275-1288.
+38
+
+Post T., Nonparametric efficiency estimation in stochastic environments: Noise-tosignal estimation, finite sample performance and hypothesis testing, Journal of
+Banking and Finance, 2065-2080.
+Prior D., (2003), Long- and short-run non-parametric cost frontier efficiency: An
+application to Spanish savings banks, Journal of Banking and Finance, 27, 655671.
+Ramanathan, R., (2007), Performance of banks in countries of the Gulf Cooperation
+Council, International Journal of Productivity and Performance Management,
+56, 2, 137-154.
+Ravi Kumar P, Ravi V., (2007), Bankruptcy prediction in banks and firms via statistical
+and intelligent techniques  A review, European Journal of Operational Research,
+180, 128.
+Ravi V., Kurniawan H., Thai P.N.K, Ravi Kumar P., (2008), Soft computing system for
+bank performance prediction, Applied Soft Computing, 8, 305315.
+Ravi V., Pramodh C., (2008), Threshold accepting trained principal component neural
+network and feature subset selection: Application to bankruptcy prediction in
+banks, Applied Soft Computing, doi:10.1016/j.asoc.2007.12.003
+Ray, S.C., Mukherjee, K. (1998), A study of size efficiency in US banking:
+identifying banks that are too large, International Journal of systems Science,
+29, 11, 1281-1294.
+Resti, A., (1998), Regulation can foster mergers, can mergers foster efficiency? The
+Italian case, Journal of Economics and Business, 50, 157-169.
+Rezitis A.N., (2006), Productivity growth in the Greek banking industry: A nonparametric approach, Journal of Applied Economics, IX, 119-138.
+Rizvi, S.F.A., (2001), Post-liberalisation efficiency and productivity of the banking
+sector in Pakistan, Pakistan Development Review, 40, 4, 605-632.
+Saha A., Ravisankar T.S., (2000), Rating of Indian commercial banks: A DEA
+approach, European Journal of Operational Research, 124, 187-203.
+Sahoo B.K., Tone K., (2008), Decomposing capacity utilization in data envelopment
+analysis: An application to banks in India, European Journal of Operational
+Research, doi: 10.1016/j.ejor.2008.02.017.
+Sathye M., (2003), Efficiency of banks in a developing economy: The case of India,
+European Journal of Operational Research, 148, 662-671.
+
+39
+
+Sathye M., (2001), X-efficiency in Australian banking: An empirical investigation,
+Journal of Banking and Finance, 25, 613-630.
+Sathye M., (2002), Measuring Productivity Changes in Australian Banking: An
+Application of Malmquist Indices, Managerial Finance, 28, 48  59.
+Sealey, C., Lindley, J., (1977), Inputs, outputs, and a theory of production and cost at
+depository financial institutions, Journal of Finance, 32, 1251-1266.
+Seiford L.M., Zhu J., (1999), Profitability and Marketability of the Top 55 U.S.
+Commercial Banks, Management Science, 45, 1270-1288.
+Sherman H.D., Rupert T.J., (2006), Do bank mergers have hidden or foregone value?
+Realized and unrealized operating synergies in one bank merger, European
+Journal of Operational Research, 168, 253-268.
+Sherman, H.D., Zhu, J., (2006), Benchmarking with quality-adjusted DEA (Q-DEA)
+to seek lower-cost high quality service: Evidence from a U.S. bank application,
+Annals of Operations Research, 145, 301-309.
+Simar L., Wilson P.W., (2007), Estimation and inference in two-stage, semiparametric models of production processes, Journal of Econometrics, 136, 3164.
+Smith K.A., Gupta J.N.D., (2000), Neural networks in business: techniques and
+applications for the operations research, Computers and Operations Research,
+27, 1023-1044.
+Soteriou A.C, Zenios S.A (1999a) Using data envelopment analysis for costing bank
+products. European Journal of Operational Research 114: 234-24.
+Soteriou, A., Zenios, S.A., (1999b), Operations, quality and profitability in the
+provision of banking services, Management Science, 45, 9, 1221-1238.
+Sowlati, T., Paradi, J.C., (2004) Establishing the practical frontier in data
+envelopment analysis, Omega, 32, 261-272.
+Stavrek, D., (2006), Banking efficiency in the context of European integration,
+Eastern European Economics, 44, 4, 5-31.
+Sturm J-E., Williams B., (2004), Foreign bank entry, deregulation and bank
+efficiency: Lessons from the Australian experience, Journal of Banking and
+Finance, 28, 1775-1799.
+Sueyoshi, T., Kirihara, Y., (1998), Efficiency measurement and strategic classification
+of Japanese banking institutions, International Journal of Systems Science, 29,
+11, 1249-1263.
+40
+
+Sufian F., (2008), Determinants of bank efficiency during unstable macroeconomic
+environment: Empirical evidence from Malaysia, Research in International
+Business and Finance, doi: 10.1016/j.ribaf.2008.07.002
+Sufian F., Majid M-Z. A., (2006), Banks Efficiency and Stock Prices in Emerging
+Markets: Evidence from Malaysia, Journal of Asia-Pacific Business, 7, 3553.
+Sufian F., Majid M-Z. A., (2007), X-efficiency and share prices in the Singaporean
+banking sector: A DEA window analysis approach, Investment Management
+and Financial Innovations, 4, 73- 90.
+Sufian, F., (2007), Trends in the efficiency of Singapores commercial banking
+groups: a non-stochastic frontier DEA window analysis approach, International
+Journal of Productivity & Performance Management, 56, 2, 99-136.
+Swicegood P., Clark J.A., (2001), Off-site Monitoring Systems for Predicting Bank
+Underperformance: A Comparison of Neural Networks, Discriminant Analysis,
+and Professional Human Judgment, International Journal of Intelligent Sytems in
+Accounting, Finance and Management, 10, 169186.
+Tay, F.E.H., Cao, L. 2001, Application of support vector machines in financial time
+series forecasting, Omega: The International Journal of Management Science, 29,
+309-317.
+Thanassoulis, E., 2001, Introduction to the Theory and Application of Data
+Envelopment Analysis. A Foundation Text with Integrated Software, Kluwer
+Academic Publishers, USA.
+Thomson JB., (1991), Predicting bank failure in the 1980s. Economic Review, Federal
+Reserve Bank of Cleveland, Q1, 920.
+Tortosa-Ausina E., (2002a), Bank Cost Efficiency and Output Specification, Journal
+of Productivity Analyis, 18, 199-222.
+Tortosa-Ausina E., (2002b), Cost Efficiency and Product Mix Clusters across the
+Spanish Banking Industry, Review of Industrial Organization, 20, 163-181.
+Tortosa-Ausina E., (2002c), Exploring efficiency differences over time in the Spanish
+banking industry, European Journal of Operational Research, 139, 643-664.
+Tortosa-Ausina E., (2003), Nontraditional activities and bank efficiency revisited: a
+distributional analysis for Spanish financial institutions, Journal of Economics and
+Business, 55, 371-395.
+Tortosa-Ausina E., Grifell-Tatje E., Armero C., Conesa D., (2008), Sensitivity
+analysis of efficiency and Malmquist productivity indices: An application to
+41
+
+Spanish savings banks, European Journal of Operational Research, 184, 10621084.
+Tsionas E.G., Lolos S.E.G., Christopoulos D.K., (2003), The performance of the
+Greek banking system in view of the EMU: results from a non-parametric
+approach, Economic Modelling, 20, 571-592.
+Tunga W.L., Queka C., Cheng P., (2004), GenSo-EWS: a novel neural-fuzzy based
+early warning system for predicting bank failures, Neural Networks, 17, 567587
+Valverde S.C., Humphrey D.B., Paso R.L., (2007), Opening the black box: Finding
+the source of cost inefficiency, Journal of Productivity Analysis, 27, 209-220.
+Vapnik, V.N. 1995, The nature of statistical learning theory, Springer-Verlag, New
+York.
+Wang M-H., Huang T-H., (2007), A study on the persistence of Farrells efficiency
+measure under a dynamic framework, European Journal of Operational
+Research, 180, 1302-1316.
+Webb R.M., (2003), Levels of efficiency in UK retail banks: a DEA window analysis,
+International Journal of the Economics of Business, 10, 305-322.
+Weill L., (2004), Measuring Cost Efficiency in European Banking: A Comparison of
+Frontier Techniques, Journal of Productivity Analyis, 21, 133-152.
+Wheelock D.C., Wilson P.W., (2000), Why do banks disappear? The determinants of
+U.S. bank failures and acquisitions, The Review of Economics and Statistics,
+82, 127-138.
+Wu, D., Yang, Z., Liang, L., (2006), Using DEA-neural network approach to evaluate
+branch efficiency of a large Canadian bank, Expert Systems with Applications,
+31, 108-115.
+Yildirim C., (2002), Evolution of banking efficiency within an unstable
+macroeconomic environment: the case of Turkish commercial banks, Applied
+Economics, 34, 2289-2301.
+Zadeh L. A., (1965), Fuzzy sets, Information and Control, 8, 338353.
+Zen F., Baldan C., (2008), The strategic paths and performances of Italian mutual
+banks: a nonparametric analysis, International Journal of Banking, Accounting
+and Finance, 1, 189 - 214.
+Zenios, C.V., Zenios, S.A., Agathocleous, K., Soteriou, A.C., (1999), Benchmarks of
+the efficiency of bank branches, Interfaces, 29, 3, 37-51.
+
+42
+
+Zhao H., Sinha A.P, Ge W., (2008), Effects of feature construction on classification
+performance: An empirical study in bank failure prediction, Expert Systems with
+Applications, doi:10.1016/j.eswa.2008.01.053
+Zhao, T., Casu, B., Ferrari, A., (2008), Deregulation and productivity growth: a study
+of the Indian commercial banking industry, International Journal of Business
+Performance Management, 10, 4, 318-343.
+Zhou p., Ang B.W., Poh K.L., (2008), A survey of data envelopment analysis in energy
+and environmental studies, European Journal of Operational Research, 189, 1-18.
+
+43
+
+Table 1  Surveyed studies by publication outlet
+
+Bank Efficiency productivity
+European Journal of Operational Research
+Journal of Banking and Finance
+Applied Financial Economics
+Applied Economics
+Journal of Productivity Analysis
+Expert Systems with Applications
+Journal of Economics and Business
+Managerial Finance
+Omega
+Applied Economics Letters
+Interfaces
+Other
+Total
+
+12
+15
+13
+9
+5
+2
+6
+5
+0
+4
+0
+65
+136
+
+Branch Efficiency productivity
+7
+0
+0
+0
+4
+1
+0
+2
+5
+0
+4
+5
+28
+
+Bank Bankruptcy 
+ratings underperformance
+0
+0
+0
+0
+0
+6
+1
+0
+0
+0
+0
+8
+15
+
+44
+
+Total
+
+19
+15
+13
+9
+9
+9
+7
+7
+5
+4
+4
+78
+179
+
+Appendix I  Studies in bank efficiency and productivity change
+
+Authors (Publication year)
+Akhtar (2002)
+
+Country
+Pakistan
+
+Al-Sharkas et al. (2008)
+
+US
+
+Ariff & Can (2008)
+Asmild et al. (2004)
+Ataullah et al. (2004)
+Ataullah & Le (2006)
+
+China
+Canada
+India,
+Pakistan
+India
+
+Ataullah & Le (2004)
+
+1986-2002
+
+28 banks; 230 obs
+5 banks
+
+1995-2004
+1981-2000
+
+Input
+Input CE,
+Output PE
+Input
+
+n.a.
+566 Obs
+
+1988-1998
+1992-1998
+
+Output
+Output
+
+India,
+Pakistan
+
+n.a.
+
+1987-1998
+
+Input
+
+Avkiran (1999)
+Aysan & Ceyhan (2008)
+
+Australia
+Turkey
+
+16-19 banks
+466 obs
+
+1986-1995
+1990-2006
+
+Input
+Input
+
+Barr et al. (2002)
+
+US
+
+n.a.
+
+1984-1998
+
+Input
+
+Bauer et al. (1998)
+
+US
+France,
+Germany,
+Italy, Spain,
+UK
+Denmark,
+Finland,
+Norway,
+Sweden
+
+683 banks
+
+1977-1988
+
+Beccalli et al. (2006)
+
+Bergendahl (1998)
+
+Period
+1998
+
+Input/Output
+Oriented
+Input
+
+Sample
+40 banks
+440 bank mergers &
+peer group of nonmerged banks
+
+Treatment of deposits
+Input
+
+2nd Stage
+regression
+n.a.
+
+Input
+
+Estimated measures
+OTE, AE, OE
+OTE, PTE, SE, AE, CE,
+Productivity (and APE
+using SFA)
+
+n.a.
+
+Input
+Output
+
+CE, APE, SPE
+OTE, Productivity
+
+Tobit
+n.a.
+
+Interest expense: input
+Interest expense: input
+Deposits: Output,
+Financial expenses:
+input
+Interest expense: input
+in Model 1; Deposits:
+input in Model 2
+Input
+
+OTE, PTE, SE
+PTE
+
+n.a.
+OLS, GMM
+
+PTE
+
+n.a.
+
+OTE
+PTE, Productivity
+
+n.a.
+FE regression
+
+OTE
+
+n.a.
+
+Input
+
+Interest expense: input
+Demand deposits:
+output; Time & saving
+deposits: input
+
+CE
+
+n.a.
+
+PTE* (and CE with SFA)
+
+n.a.
+
+OTE, PTE
+
+n.a.
+
+11-29 banks per
+country; 90 banks in
+total
+
+1999-2000
+
+Both
+
+Interest expenses - part
+of single input (i.e.
+total cost)
+
+48 banks
+
+1992-1993
+
+Input
+
+Output
+
+45
+
+Bergendahl & Lindblom
+(2008)
+
+Sweden
+
+85-88 banks
+
+1997-2001
+
+Input
+
+Output
+
+OTE*
+
+Brissimis et al. (2008)
+
+10 new EU
+countries
+
+364 banks; 4368 obs.
+
+1994-2005
+
+Input
+
+Input
+
+Canhoto & Dermine (2003)
+
+Portugal
+
+20 banks
+
+1990-1995
+
+Output
+
+Casu & Girardone (2004)
+
+Italy
+France,
+Germany,
+Italy, Spain,
+UK
+France,
+Germany,
+Italy, Spain,
+UK
+
+36-48 banks; 168 obs
+
+1996-1999
+
+Input
+Input Ef.,
+Output Prod
+
+PTE, Productivity
+OTE, PTE, SE,
+Productivity
+
+Input
+
+PTE, AE, CE, Productivity
+
+Logistic
+
+530 banks
+
+1993-1997
+
+Both
+
+Input
+
+OTE, PTE
+
+Bootstrap-Tobit
+
+2,086 banks
+
+1994-2000
+
+Output
+
+Productivity
+
+n.a.
+
+11,000 obs
+
+1997-2003
+
+Input
+
+PTE*
+
+n.a.
+
+2,086 banks
+26 banks
+41 banks
+
+1994-2000
+1996-2000
+1988-1997
+
+Output
+Input
+Both
+
+Productivity
+OTE, AE, CE
+OTE
+
+n.a.
+Tobit
+n.a.
+
+OTE, PTE, SE
+OTE
+OTE
+
+Type of
+regression not
+specified
+n.a.
+Regression
+
+Casu & Molyneux (2003)
+
+Casu et al (2004)
+
+Casu & Girardone (2006)
+
+Casu & Girardone (2005)
+Chang & Chiu (2006)
+Chen (2001)
+
+Chen (1998)
+Chen (2002a)
+Chen (2002b)
+
+EU-15
+France,
+Germany,
+Italy, Spain,
+UK
+Taiwan
+Taiwan
+
+Taiwan
+Taiwan
+Taiwan
+
+34 banks
+41 banks
+39 banks; 273 obs.
+
+1996
+1998
+1994-2000
+
+Input
+Output
+Input
+
+Cost of deposits as
+input
+Interest expenses - part
+of a single input (i.e.
+total cost)
+
+Cost of deposits: input
+Input
+Input
+Deposits: input in 2
+Models; Interest
+expenses: input in 6
+models
+n.a.
+Input
+
+n.a.
+double
+bootstrap twostage least
+squares
+truncated
+n.a.
+
+46
+
+Chen (2004)
+
+Taiwan
+
+44 banks
+
+1994-2000
+
+Input
+Input Ef.,
+Output Prod
+
+Chen &Yeh (2000)
+
+Taiwan
+
+34 banks
+
+1995-1996
+
+Chen et al. (2005)
+
+China
+
+43 banks
+
+1993-2000
+
+Chen et al. (2004)
+
+Taiwan
+
+49 banks
+
+2000-2002
+
+Chiu et al. (2008)
+
+Taiwan
+
+46 banks
+
+2000-2002
+
+Input
+Input Ef.,
+Output Prod.
+Input Ef.,
+Output Prod
+
+Chu & Lim (1998)
+
+Singapore
+
+6 banks
+
+1992-1996
+
+Both
+
+Cook et al. (2005)
+
+Tunisia
+
+10 banks; 69 obs
+
+1992-1997
+
+Input
+
+Damar (2006)
+
+Turkey
+
+35-38 banks
+
+2000-2003
+
+Input
+
+Das & Ghosh (2006)
+Debasish & Mishra (2007)
+Delis et al. (2008**)
+
+India
+India
+Greece
+
+74-98 banks
+93 banks
+14-23 banks; 244 obs
+
+1992-2002
+2000-2007
+1993-2005
+
+Input
+Output
+Input
+
+Devaney & Weber (2000)
+
+US
+
+3391 - 4146 banks
+
+1990-1993
+
+Output
+
+Dogan & Fauesten (2003)
+
+Malaysia
+
+16-18 banks
+
+1989-1998
+
+Output
+
+Drake (2001)
+
+UK
+
+1984-1995
+
+Input
+
+Drake et al. (2006)
+Drake & Hall (2003)
+
+Hong Kong
+Japan
+
+9 banks
+47-66 banks; 413
+observations in total
+149 banks
+
+1995-2001
+1997
+
+Input
+Input
+
+Input
+
+CE,OTE,PTE,SE,AE
+
+n.a.
+
+Input
+Price of deposits:
+input; Deposits: output
+
+OTE,PTE,SE
+
+n.a.
+
+PTE, AE, CE
+
+n.a.
+
+Input
+
+OTE, PTE,SE, Productivity
+
+n.a.
+
+Input
+Interest expenses:
+input
+Interm. App: Interest
+expenses (Input)
+Product. App:
+Deposits (Input)
+Interest expense:
+input;
+Deposits: output
+3 models in total:
+Interest expense: input
+in 2 models, Deposits:
+output in 1 model
+Input
+Input
+
+PTE, productivity
+
+Input
+Deposits: output;
+Interest expenses:
+input
+Input in Models 1 and
+1a; Output in Models 2
+and 2b
+n.a. in model 1, output
+in model 2
+Input
+
+OTE*, PTE, SE
+
+n.a.
+
+OTE
+
+Regression
+Type of
+regression not
+specified
+
+OTE, PTE, SE
+
+OTE, PTE, SE
+OTE
+CE (and PE using SFA)
+OTE, PTE, SE ,
+Productivity
+
+Tobit
+n.a.
+n.a.
+
+OTE, Productivity
+
+FE linear model
+
+OTE, PTE, SE,
+Productivity
+
+n.a.
+
+PTE
+OTE, PTE, SE
+
+Tobit
+n.a.
+
+SUR
+
+47
+
+Erdem & Erdem (2008)
+
+Turkey
+
+10 banks
+
+1998-2004
+
+Input
+
+Fare et al. (2004)
+
+Both
+
+1997-2002
+
+Fukuyama & Weber (2005)
+
+Japan
+
+858-938 banks
+Varies from 68 (UK,
+1997) to 2,183
+(Germany, 2002)
+110-141 banks (1073
+obs)
+
+1990-1994
+
+Fiordelisi (2008)
+
+US
+France,
+Germany,
+Italy, UK
+
+1992-1999
+
+Fukuyama & Weber (2002)
+Fung (2006)
+Garcia-Cestona & Surroca
+(2008)
+
+Japan
+US
+
+138-141 banks
+135 banks; 1,080 obs
+
+1992-1996
+1996-2003
+
+Input
+Output TE,
+Input AE
+Both (Input TE
+& Output AE;
+Output TE &
+Input AE)
+Input
+
+Spain
+
+226 Obs.
+
+1998-2002
+
+Output
+
+Gilbert & Wilson (1998)
+Guzman & Reverte (2008)
+
+Korea
+Spain
+
+15-25 banks
+14 banks
+
+1980-1994
+2000-2004
+
+Output
+Both
+
+Habibullah et al. (2005)
+
+Malaysia
+
+37 banks
+
+1988-1993
+
+Input
+
+Hahn (2007a)
+
+Austria
+
+Around 800 banks
+
+1996-2002
+
+Input
+
+Hahn (2007b)
+
+Austria
+
+More than 800 banks
+
+1995-2002
+
+Input
+
+Halkos & Salamouris (2004)
+
+Greece
+Germany,
+Austria
+Poland
+Taiwan
+
+15-18 banks
+
+1997-1999
+
+Output
+
+Input
+n.a. in Model 1; Input
+in Model 2
+Profit oriented: n.a
+Int. App.: Input
+n.a. in basic model;
+Interest expense: input
+in benchmark model
+
+97 banks; 485 obs
+247 Obs
+14 banks
+
+1995-1999
+1997-2001
+2007
+
+Input
+Input
+Input
+
+Input
+Input
+n.a.
+
+Hauner (2005)
+Havrylchyk (2006)
+Hu et al. (2008**)
+
+Input
+Transaction deposits:
+Output; Nontransaction deposits:
+input
+
+OTE, AE, CE*
+
+n.a.
+
+TE, AE, SPE
+
+n.a.
+
+Input
+
+PTE, SE, AE, CE (and PE
+using SFA)
+Luenberger & Farrell PTE,
+AE
+
+Input - part of funds
+from customers
+Input
+
+Productivity
+PTE, SE, Productivity
+
+n.a.
+OLS
+
+IP, AE*, IPR
+
+n.a.
+
+TE, Productivity
+OTE, PTE, Productivity
+OTE,SE,PTE, Congestion
+Efficiency
+PTE
+
+n.a.
+n.a.
+Granger
+causality
+Tobit
+(Bootstrapped)
+
+PTE
+
+Tobit
+
+Output
+
+Output
+Demand deposits:
+output; Time &
+savings deposits: input
+Input
+
+OTE, PTE, SE (and
+superefficiency measures)
+PTE, SE, AE, CE,
+Productivity
+OTE, PTE, SE, AE, CE
+OTE, PTE, SE
+
+n.a.
+n.a.
+
+n.a.
+Tobit
+Tobit
+n.a.
+
+48
+
+Huang et al. (2008)
+Huang & Wang (2002)
+
+Taiwan
+Taiwan
+
+42 banks
+22 banks
+
+2001-2004
+1982-1997
+
+Output
+Input
+
+Input
+Input
+
+n.a.
+
+Output
+
+Input
+Input
+Input - part of loanable
+funds
+Input - part of loanable
+funds
+
+Productivity
+CE
+OTE, PTE, SE,
+Productivity
+Productivity
+OTE, PTE, SE ,
+Productivity
+
+Isik (2008)
+Isik (2007)
+
+Turkey
+Turkey
+
+794 obs
+51 banks; 439 obs.
+
+1981-1996
+1981-1990
+
+Isik & Hassan (2003c)
+
+Turkey
+
+54 banks
+
+1992-1996
+
+Input
+Output
+Input Ef.,
+Output Prod
+
+Isik & Akcaoglu (2006)
+
+Turkey
+
+1981-1990
+
+Isik & Hassan (2002)
+
+Turkey
+
+28 banks
+36 banks in 1998, 50
+banks in 1992, 53
+banks in 1996
+
+Productivity
+
+n.a.
+
+Input
+
+Input
+
+OTE, PTE, SE, AE, CE
+(also CE, PE from SFA)
+
+GLS
+
+Isik & Hassan (2003a)
+
+Turkey
+
+39, 54, 56 banks
+
+Input
+
+1981-1990
+
+Input
+Input Ef.,
+Output Prod
+
+Isik & Hassan (2003b)
+
+Turkey
+
+38-56 banks; 458 obs.
+439 obs.
+24 banks
+
+1981-1990
+2000
+
+Output
+Input
+
+Taiwan
+
+25 banks
+
+1997-2001
+
+Both min. &
+max. problems
+
+Input
+Input - part of loanable
+funds
+Input
+Purchased funds:
+input; Demand
+deposits: output
+
+Isik & Uysal (2006)
+Kao & Liu (2004)
+
+Turkey
+Taiwan
+
+Kao & Liu (2008**)
+Kirkwood & Nahm (2006)
+
+Australia
+
+1995-2002
+
+Input
+
+Input
+
+Kohers et al. (2000)
+Krishnasamy et al. (2003)
+Kumar & Gulati (2008)
+Kuosmanen & Post (2001)
+
+US
+Malaysia
+India
+EU
+
+10 banks
+94 bidder, 94 targets,
+8960 obs peers
+10 banks
+27 banks
+453 banks
+
+1990-1995
+2000-2001
+2004/2005
+1997
+
+Input
+Output
+Input
+Input
+
+Kyj & Isik (2008)
+
+Ukraine
+
+150 banks; 883 obs.
+
+1998-2003
+
+Input
+
+Laurenceson & Qin (2008)
+Leightner & Lovell (1998)
+
+China
+Thailand
+
+65 banks
+31 banks
+
+2001-2006
+1989-1994
+
+Input
+Input
+
+Input & Output
+Output
+Loanable funds: input
+Debt capital: input
+Input - part of loanable
+funds
+Interest expenses:
+input; Deposits: output
+n.a.
+
+1988, 1992,
+1996
+1988, 1992,
+1996
+
+Regression
+n.a.
+n.a.
+GLS
+
+OTE, PTE, SE, AE, CE
+OTE, PTE, SE,
+Productivity
+
+GLS, Tobit
+n.a.
+
+Productivity
+OTE
+
+n.a.
+n.a.
+
+OTE
+PTE, SE, AE, CE, APE,
+Productivity
+
+n.a.
+
+CE
+Productivity
+OTE, Super eff.
+TE, AE, CE
+
+n.a.
+n.a.
+Regression
+n.a.
+
+OTE, PTE, SE
+
+GLS
+
+CE
+Productivity
+
+Tobit
+n.a.
+
+n.a.
+
+49
+
+Lim & Randhawa (2005)
+Lin et al. (2007)
+Liu (2008**)
+Lozano-Vivas et al. (2002)
+
+Hong Kong
+& Singapore
+
+19 banks
+
+1995-1999
+
+Input
+Output
+Input
+Input
+
+Production: output
+Intermediation: input
+Interest expenses:
+input
+Input
+Output
+
+OTE, PTE,SE
+
+n.a.
+
+OTE, Productivity
+OTE
+PTE
+
+n.a.
+n.a.
+n.a.
+
+PTE
+OTE, PTE, SE
+OTE, PTE, SE,
+Productivity
+
+n.a.
+n.a.
+
+CE
+
+Tobit
+
+Input
+n.a.
+
+CE, APE, SPE
+OTE
+
+n.a.
+n.a.
+
+n.a.
+n.a.
+Output
+Input
+Demand deposits:
+output; Term deposits,
+certificates of deposits,
+other deposits: input
+Interest expense: input
+
+PTE,OTE,SE
+PTE,OTE,SE
+PTE
+OTE, PTE
+
+n.a.
+n.a.
+n.a.
+GLS
+
+PTE, SE, AE, CE,
+Productivity
+OTE
+
+n.a.
+n.a.
+
+Productivity
+
+n.a.
+
+PTE, SE
+
+Tobit
+
+37 banks
+24 banks
+612 banks
+
+2002-2003
+2000
+1993
+
+Lozano-Vivas et al. (2001)
+Luo (2003)
+
+Taiwan
+Taiwan
+10 European
+10 EU
+countries
+US
+
+612 banks
+245 banks
+
+1993
+2000
+
+Input
+Input
+
+Output
+
+Maghyereh (2004)
+
+Jordan
+
+14 banks
+
+1984-2001
+
+Input
+
+Maudos et al. (2002)
+
+Spain
+
+1985-1996
+
+Maudos & Pastor (2003)
+Mercan et al. (2003)
+
+1985-1996
+1989-1999
+
+Input
+Input CE,
+Output PE
+Input
+
+Mostafa (2007b)
+Mostafa (2007a)
+Mukherjee et al. (2003)
+Mukherjee et al. (2001)
+
+Spain
+Turkey
+GCC-Gulf
+Coopn.
+Council
+Arab banks
+India
+US
+
+1666 Obs.
+50-77 savings; 75-98
+national
+545 obs.
+
+Input
+Price of loanable
+funds: Input;
+Loanable funds: output
+
+43 banks
+85 banks
+27 banks
+201 banks
+
+2005
+2005
+1997-2000
+1984-1990
+
+Output
+Output
+Output
+Input
+
+Neal (2004)
+Noulas (2001)
+Olgu & Weyman-Jones
+(2008)
+
+Australia
+Greece
+EU-12 and
+EU-10
+
+12-26 banks
+19 banks
+
+1995-1999
+1993-1998
+
+Input Ef.,
+Output Prod
+Input
+
+164 banks
+
+1997-2001
+
+Output
+
+Pasiouras (2008b)
+
+Greece
+
+12-18 banks; 78 obs
+
+2000-2004
+
+Input
+
+n.a.
+
+Input
+Deposits: Input in
+Models 1-4; Interest
+expense: input in
+Model 5
+
+Tobit
+
+50
+
+Pasiouras (2008a)
+Pasiouras et al. (2008)
+Pastor (1999)
+
+715 bank
+10 banks
+n.a.
+
+2003
+200-2005
+1985-1995
+
+Input
+Input
+Input
+
+Input
+Interest expense: input
+n.a.
+
+OTE, PTE, SE
+OTE, PTE, SE
+OTE, PTE, SE
+
+Tobit
+n.a.
+n.a.
+
+Pastor (2002)
+Pastor & Serrano (2006)
+
+95 countries
+Greece
+Spain
+Spain, Italy,
+Frane,
+Germany
+10 European
+
+2598 Obs.
+540 banks, 3,780 obs
+
+1988-1994
+1992-1998
+
+Input
+Input
+
+Output
+Input
+
+CE
+CE, COMPE, ISPE
+
+Tobit, Logistic
+n.a.
+
+Paul & Kourouche (2008)
+
+Australia
+
+10 banks 90 obs
+
+1997-2005
+
+Input
+
+OTE,PTE,SE
+
+n.a.
+
+Prior (2003)
+
+Spain
+
+n.a.
+
+1986, 1990,
+1995
+
+Input
+
+Interest expense: input
+Number of current &
+savings accounts:
+output
+
+SRCE, LRCE,CAPE
+
+n.a.
+
+Ramanathan (2007)
+
+GCC
+
+55 banks
+
+2000-2004
+
+Input
+
+OTE, PTE,SE, Productivity
+
+n.a.
+
+Ray & Mukherjee (1998)
+
+US
+
+201 banks
+
+1984-1990
+
+Input
+
+Input
+Transaction deposits:
+Input
+
+PTE,SE,SZE
+
+Tobit
+
+Resti (1998)
+
+Italy
+
+67 merger deals
+
+1987-1995
+
+Input
+
+Output
+
+n.a.
+
+Rezitis (2006)
+
+Greece
+
+6 banks
+
+1982-1997
+
+Output
+
+Input
+
+PTE, Extra efficiency
+OTE, PTE, SE,
+Productivity
+
+Tobit
+
+Rizvi (2001)
+
+Pakistan
+
+37 banks
+
+1993-1998
+
+Both
+
+OTE,PTE,SE Productivity
+
+n.a.
+
+Saha & Ravisankar (2000)
+Sahoo & Tone (2008**)
+
+India
+India
+
+25 banks
+78 banks
+
+1992-1995
+1997-2001
+
+Input
+Both
+
+OTE
+PCU, TE, RECU, OCI
+
+n.a.
+n.a.
+
+Sathye (2003)
+
+India
+
+94 banks
+
+1997-1998
+
+Input
+
+Output
+Interest expense:
+input; Deposits: output
+Input
+Interest expense: input
+in Model 1; Deposits:
+input in Model 2
+Time & saving
+deposits: input;
+Demand deposits:
+output
+
+PTE
+
+n.a.
+
+OTE, AE, CE
+
+Interest expenses:
+input
+
+Productivity
+
+n.a.
+
+OTE, PTE
+
+Sathye (2001)
+
+Australia
+
+29 banks
+
+1996
+
+Sathye (2002)
+
+Australia
+
+17 banks
+
+1995-1999
+
+Seiford, Zhu (1999)
+
+US
+
+55 banks
+
+1995
+
+Input
+
+Output
+Output
+oriented, Input
+
+Type of
+regression not
+specified
+Type of
+regression not
+specified
+
+51
+
+congestion
+
+Simar & Wilson (2007)
+
+322 banks;
+6,955 banks
+
+Stavarek (2006)
+
+US
+EU-11
+countries
+
+Q4 2002
+
+Sturm & Williams (2004)
+
+Australia
+
+122-126 banks
+10-26 banks;
+273 obs. In total
+
+Sueyoshi & Kirihara (1998)
+
+Japan
+
+136 banks
+
+Sufian (2008**)
+
+Malaysia
+
+33-36 banks;
+171observations
+
+1995-1999
+
+Input
+
+Sufian (20007)
+Sufian & Majid (2007)
+
+Singapore
+Singapore
+
+141 banks
+6 banks
+
+1993-2003
+1993-2003
+
+Input
+Input
+
+Sufian & Majid (2006)
+
+Malaysia
+
+9 banks
+
+2002-2003
+
+Both
+
+Tortosa-Ausina (2002c)
+
+Spain
+
+116-121 banks
+
+1986-1995
+
+Input
+
+Tortosa-Ausina (2002a)
+Tortosa-Ausina (2002b)
+Tortosa-Ausina (2003)
+Tortosa-Ausina et al. (2008)
+
+Spain
+Spain
+Spain
+Spain
+
+104 banks
+104 banks
+120-162 banks
+n.a.
+
+1985-1997
+1985-1997
+1986-1997
+1992-1998
+
+Tsionas (2003)
+Valverde et al. (2007)
+
+Greece
+Spain
+
+17-19 banks
+77 banks; 1540 obs
+
+1993-1998
+1992-2001
+
+Input
+Input
+Input
+Output
+Input Ef.,
+Output Prod
+Input
+
+Double
+Bootstrap
+truncated
+regression
+
+n.a.
+
+Input
+
+TE
+
+2001-2003
+
+Input
+
+Input
+
+n.a.
+
+1988-2001
+
+Input
+
+Input
+
+PTE, SE
+OTE, PTE, SE,
+Productivity
+
+n.a.
+
+Input
+
+n.a.
+Model 1: input, Model
+2: output with interest
+expense as input,
+Model 3: interest
+expense input
+
+OTE
+
+n.a.
+
+OTE, PTE, SE
+
+Tobit
+
+Input
+Input
+Interest expenses:
+input
+Model 1: Input; Model
+2: savings & time
+deposits: output,
+savings deposits, other
+deposits and interbank
+deposits: input
+Model 1: Input; Model
+2: Input & Output
+Input
+Input
+Both
+
+OTE,PTE,SE
+PTE*
+
+n.a.
+n.a.
+
+OTE*, PTE, SE
+
+n.a.
+
+CE
+
+n.a.
+
+CE
+CE
+CE
+OTE, Productivity
+OTE, PTE, SE, AE, CE,
+Productivity
+OCE, ICE
+
+n.a.
+n.a.
+n.a.
+n.a.
+
+Input
+Input
+
+n.a.
+
+n.a.
+n.a.
+
+52
+
+Wang & Huang (2007)
+Webb (2003)
+
+Taiwan
+UK
+France,
+Germany,
+Italy, Spain,
+Switzerland
+US
+Turkey
+Italy
+
+22 banks
+6-8 banks
+
+1982-2001
+1982-1995
+
+Input
+Input
+
+688 banks
+1316-2555 banks
+38-59 banks; 594 obs
+121 banks
+
+1992-1998
+1984-1993
+1988-1999
+2001-2005
+
+Input
+Both
+Input
+Input
+
+Input
+Input
+
+OTE, OTE-QFI, AE, CE,
+OTE, PTE, SE
+
+AR, GMM,
+Correlation,
+Markov
+n.a.
+
+Interest expense: input CE
+Correlation
+Input
+PTE (and CE with SFA)
+n.a.
+Input
+OTE, PTE, SE
+n.a.
+Output
+PTE, Productivity
+n.a.
+Input - part of loanable
+Zhao et al. (2008)
+India
+65 banks 845 obs
+1992-2004 Input
+funds
+OTE ,PTE,SE, Productivity n.a.
+Notes: ** Classified in 2008 on the basis of doi; OTE = Overall Technical Efficiency (i.e. CRS), PTE = Pure Technical Efficiency (i.e. VRS), SE = Scale Efficiency, AE=
+Allocative Efficiency, CE = Cost Efficiency, APE = Alternative Profit Efficiency, SPE = Standard Profit Efficiency, Productivity = Various Productivity Growth Measures, SRCE =
+Short-run cost efficiency, LRCE = Long-run cost efficiency; CAPE = Capacity efficiency, PCU = Physical capacity utilization, RECU = Ray economic capacity utilization, OCI =
+Optimal capacity idleness, IP = Performance index of PTE (result of private negotiations among stakeholders), AE* = A proxy of Allocative Efficiency (calculated without including
+input prices), IPR = Index of Efficiency with preferences revealed by the legislator (IPR = AE* x IP), COMPE = Composition efficiency, ISPE = Intra-specialization efficiency,
+OCE = Operating cost efficiency, ICE = Interest cost efficiency, OTE-QFI = OTE in the presence of quasi-fixed inputs, SZE = Size efficiency, PTE* & OTE* = these studies report
+measures which they label as P-efficiency or cost efficiency simply on the basis of some inputs/outputs that they use but they do not include inputs/output price inputs so in a sense
+they present measures of technical efficiency.
+Weill (2004)
+Wheelock & Wilson (2000)
+Yildirim (2002)
+Zen & Baldan (2008)
+
+53
+
+Appendix II  Studies in branch efficiency and productivity growth
+
+Authors
+
+Portela &
+Thannasoulis
+(2007)
+
+Inputs
+
+Outputs
+
+Input/Output
+Oriented
+
+INPUT SET1 -TRANSCT EFF 1.
+Number ETMs (ATMs + CATs) 2. Rent
+3. No. clients not registered INPUT
+SET2-OPRTNL EFF 1. Number of staff
+2. Rent INPUT SET3-PROFIT EFF 1.
+Number of staff 2. Supply costs
+
+OUTPUT SET1- TRANSCT EFF1.
+No. new registrations for internet use 2.
+No. transactions in CATs 3. No.
+deposits in ETMs OUTPUT SET2OPRTNL EFF 1.number of clients 2.
+Value current accounts 3. Value other
+resources 4. Value titles deposited 5.
+Value credit by bank 6. Value credit by
+associates 7. Number transactions
+OUTPUT SET3-PROFIT EFF1. Value
+current accounts 2. Value other
+resources 3. Value credit over bank 4.
+Value credit associates
+
+Output except
+profit
+efficiency
+(non-oriented
+DEA)
+
+Approach for
+input/output
+selection
+
+Estimated measures
+
+Sample
+size &
+Country
+
+Intermediation
+
+Transactional,
+Operational, Profit
+
+57,
+Portugal
+
+57,
+Portugal
+
+1)Number of staff 2)Supply costs
+
+1)Value current accounts 2)Value other
+resources 3)Value credit by bank
+4)Value credit associates
+
+Non-oriented
+
+Intermediation
+
+Overall profit efficiency;
+technical profit
+efficiency; allocative
+profit efficiency scale
+and mix effects.
+
+Portela et al.
+(2003)
+
+1)staff costs 2)other operating costs
+
+1. Value of current accounts 2.Value of
+credit 3. Interest revenues
+
+Non-oriented
+
+Intermediation
+
+PTE
+
+24,
+Portugal
+
+Camanho &
+Dyson (2008)
+
+1)Number of branch and account
+managers 2)Number of administrative
+and commercial staff 3)Number of
+tellers 4)Operational costs (excluding
+staff costs) And input prices
+
+1) Total value of deposits 2) Total
+value of loans 3) Total value of offbalance sheet business 4) Number of
+general service transactions.
+
+Production
+
+OTE, Allocative
+efficiency and Farrell CE
+measures, market
+efficiency and economic
+efficiency
+
+39,
+Portugal
+
+Portela &
+Thannasoulis
+(2005)
+
+Input DEA
+
+54
+
+Camanho &
+Dyson (2006)
+
+1)Number of branch
+employees(including branch and
+account managers, administrative and
+commercial staff and tellers)2)
+Operational costs (excluding staff
+costs).And input prices
+
+1) Total value of deposits 2) Total
+value of loans 3) Other revenue 4)
+Number of general service transactions.
+
+Camanho &
+Dyson (2005)
+
+1) Number of branch and account
+managers 2) Number of administrative
+and commercial staff 3)Number of
+tellers 4)Operational costs (excluding
+staff costs).
+
+1)Number of general service
+transactions
+
+Camanho &
+Dyson (1999)
+
+1) Number of employees in the branch
+2) Floor space of the branch 3)
+Operational costs (costs of supplies and
+other services). 4) Number of external
+ATMs.
+
+1)Number of general service
+transactions performed by branch staff
+2)Number of transactions in external
+ATMs 3) Number of all types of
+accounts at the branch 4) Value of
+savings 5)Value of loans
+
+1)# of different categories of employees
+
+1)value of deposits 2)value of credit
+3)noninterest income
+1)Value of loans 2)Value of deposits
+3)Non-interest income
+
+Das et al. (2007)
+Giokas (2008a)
+
+Giokas (2008b)
+
+1)Personnel costs 2)Running costs
+3)Operating expenses
+INPUT SET1-Production efficiency
+1)Personnel costs 2)Running and other
+operating costs INPUT SET2Transaction efficiency 1)Personnel costs
+2)Running costs and other operating
+costs INPUT SET3 Intermediation
+efficiency 1)Interest costs 2)Noninterest costs
+
+OUTPUT SET1 1)Value of loan
+portfolio 2)Value of deposits 3)Noninterest income OUTPUT SET 2
+1)Loan transactions 2)Deposit
+transactions 3)Remaining transactions
+OUTPUT SET 3 1)Interest income
+2)Non-interest income
+
+Production
+
+Overall regional
+performance, within
+region efficiency spread
+and frontier productivity
+
+n.a.,
+Portugal
+
+Input DEA
+
+Production
+
+OTE, Farrell CE,
+Optimistic CE and
+Pessimistic CE
+
+144,
+Portugal
+
+Both
+
+Production
+
+PTE, SE
+
+168,
+Portugal
+
+Input DEA
+
+Intermediation
+
+Labor use efficiency,
+Regional or spatial
+efficiency
+
+222, India
+
+Input DEA
+
+Intermediation
+
+Operating efficiency
+
+171, Greece
+
+Input DEA
+
+Production &
+Intermediation
+
+Production, transaction
+& Intermediation
+specific efficiency
+
+44, Greece
+
+Input DEA
+
+55
+
+Porembski et al.
+(2005)
+
+Paradi &
+Schaffnit (2004)
+
+1. #of Employees 2. Office space
+INPUT SET 1 Model 1 Production
+model 1)staff, 2)information
+technology, 3)premises, 4)other noninterest expenses INPUT SET 2 Model
+2 Strategic model 1)staff, 2)information
+technology, 3)premises, 4)other noninterest expenses 5)nonaccrual loans
+Environmental factors - Growth factor
+& risk rating incorporated into Models
+
+Sowlati &
+Paradi (2004)
+
+1)FTE sales 2)FTE support 3)FTE other
+
+Athanassopoulos
+& Giokas (2000)
+
+INPUT SET 1 1)labor hrs, 2)branch
+size 3) computer terminals 4)operating
+expenditure INPUT SET 2 1)labor
+costs, 2)operating expenses, 3)running
+costs of the building;
+
+Cook, Hababou
+& Tuenter
+(2000)
+
+1)FSE # service staff2) FSA # sales staff
+3)FSU # support staff 4)FOT # other
+staff
+
+1)Private demand deposits 2)Business
+demand deposits 3)Time deposits
+4)Saving deposits 5)Credits 6)Bearer
+securities 7)Recourse guarantees
+8)Bonds 9)Investment deposits10)
+Insurances (contracts) 11)Contributions
+to a building society (contracts)
+
+OUTPUT SET1
+1)Deposits2)Loans3)Fee
+income4)Maintenance activities
+OUTPUT SET2 1)Deposits 2)Loans
+3)Fee income4) Deposit spread 5) Loan
+spread
+1)Loans 2)Mortgages 3)RRSPs
+4)Letters of Credit
+OUTPUT SET1 1st Stage1)Group A
+transactions 2) Group B transactions
+3)Group C transactions 4)Group D
+transactions 2nd stage 1)Credit
+transactions 2) Deposit trans. 3)
+Foreign receipts OUTPUT SET 2
+1)savings deposits,2)current deposits,
+3)demand deposits,4)time deposits,
+5)total loans, 6)non-interest income.
+1)MDP # counter level deposits 2)
+MTR # transfers between accounts
+3)RSP # retirement savings plan
+openings 4)MOR # mortgage accounts
+opened
+
+Production
+
+PTE, SE
+
+141,
+German
+
+Both
+
+Intermediation
+
+OTE, PTE,
+Effectiveness, Cost
+effectiveness
+
+90, Canada
+
+Input DEA
+
+Production
+
+PTE
+
+79, Canada
+
+Intermediation
+
+Production,
+Intermediation &market
+efficiency
+
+47, Greece
+
+Production
+
+Aggregate, Sales &
+Service efficiencies
+
+20, Canada
+
+Input DEA
+
+Input DEA
+
+56
+
+Golany &
+Storbeck (1999)
+
+Service : 1)FSEtotal number of full
+time equivalent service staff Sales :
+1)FSAtotal number of full time
+equivalent sales staff Shared : 1)FSU
+total number of full time equivalent
+support staff 2)FSTtotal number of
+full time equivalent other staff
+1)Teller Labor 2)Non-Teller 3)Labor
+Retail Sq. Feet 4)Marketing
+5)Employment rate
+
+Hartman et al.
+(2001)
+
+1)No. of staff 2)No. of computer
+terminals3)square meters of premises
+
+Kantor & Maital
+(1999)
+
+INPUT SET 1 Customer services
+1)Labor costs (MSincluding social
+benefits); 2)services; 3)area (square
+meters), for services only INPUT SET
+2 Bank transactions 1)Labor costs
+(MSincluding social benefits);2)
+transactions only; 3)area (square
+meters),
+
+Cook &
+Hababou (2001)
+
+Service : 1)TOTMENUtotal number
+of menu account transactions
+2)VISAnumber of Visa cash
+advances 3) CADnumber of
+commercial deposit transactions Sales :
+1)RSPnumber of RSP account
+openings 2)MORTnumber of
+mortgages transacted 3)BPLnumber
+of variable rate consumer loans
+transacted
+1)Total Loans 2)Total Deposits
+3)Depth 4)Satisfaction
+1)Amount of deposits 2)amount of
+loans 3)Amount of house mortgages
+Non-discretionary variables: no. of
+customers
+
+Input DEA
+
+Production
+
+Sales & service
+efficiency
+
+20, Canada
+
+Output DEA
+
+Production
+
+Operational efficiency
+
+182, USA
+
+Input DEA
+
+Production
+
+OTE, PTE & AE
+
+50, Sweden
+
+250, n.a
+
+DEA
+
+Production
+
+customer service
+efficiency & transaction
+efficiency
+
+Parkan & Wu
+(1999)
+
+Cost (1)salaries, (2) staff benefits, (3)
+electronic data processing expenses, (4)
+occupancy, (5) temporary staff
+expenses(6) printing and stationary
+
+OUTPUT SET 1 1)number of demand
+deposit accounts; 2)weighted output
+indexcustomer service transactions;
+3)queue-replacing actions OUTPUT
+SET 2 1)Credit cards, regular and
+"gold"; 2)weighted output index
+transactions;3) commissions on import
+and export, commercial accounts;
+4)savings accounts, activity
+Revenue (1) LC (letter of credit)
+advice, (2) LC confirmation, (3) LC
+issuance, (4) guarantee, (5) acceptance,
+(6) negotiation and (7) net interest
+revenue.
+
+Input DEA
+
+Intermediation
+
+DEA scaled inefficiency
+
+24, Hong
+Kong
+
+Wu et al. (2006)
+
+1)Personnel 2)Other general expenses
+
+1)Deposits 2) Revenues 3) Loans
+
+Input DEA
+
+Intermediation
+
+DEA efficiency & DEANN efficiency
+
+142,
+Canada
+
+57
+
+Dekker & Post
+(2001)
+
+Zenios et al.
+(1999)
+
+1)Front office personnel 2)Facilitating
+personnel
+INPUT SET 1 Operational efficiency
+1st Set of Inputs 1.Managerial personnel
+2.Clerical personnel 3.Computer
+terminals 4.Space 2ndset of
+inputs1.Current accounts 2.Savings
+accounts 3.Foreign currency and
+commercial accounts 4.Credit
+applications 5. Commissions INPUT
+SET2 Service Quality Efficiency Model
+1st Set of Inputs 1.Managerial personnel
+2.Clerical personnel 3.Computer
+terminals 4.Space 2ndset of
+inputs1.Current accounts 2.Savings
+accounts 3.Foreign currency and
+commercial accounts 4.Credit
+applications 5. Commissions INPUT
+SET3 Profitability efficiency 1st Set of
+Inputs 1.Managerial personnel
+2.Clerical personnel 3.Computer
+terminals 4.Space 2ndset of
+inputs1.Current accounts 2.Savings
+accounts 3.Foreign currency and
+commercial accounts 4.Credit
+applications 5. Commissions
+INPUT SET1 1.Managerial personnel
+2.Clerical personnel 3.Computer
+terminals 4.Space INPUT SET 2
+1.Current accounts 2.Savings accounts
+3.Foreign currency 4.commercial
+accounts Credit applications
+
+Sherman &
+Rupert (2006)
+
+Personnel (FTE's) 1. Platform
+2.Teller3.Manager 4.Operating
+Expenses: Supplies, Telephone, Travel,
+Postage
+
+Soteriou &
+Zenios (1999)
+
+Total revenue
+
+OUTPUT SET 1 Total amount of
+work produced OUTPUT SET 2 The
+level of service quality achieved [i.e.
+Operational (Internal) &
+Marketing(Perceived) measures]
+OUTPUT SET 3 Profit
+
+Total amount of work produced
+1. Teller Transactions: Deposits,
+Withdrawals, Checks, Cashed Bank,
+Checks, Loan Payments, Bonds - Sold,
+Redeemed, Coupons 2.Marketing:New
+Accounts 3.Night Deposits 4.Safe
+Deposit Visits 5.ATMs Serviced
+
+Intermediation
+
+Revenue generating
+efficiency
+
+314,
+Netherlands
+
+Both
+
+Production
+
+Operational efficiency;
+Service Quality
+Efficiency; Profitability
+Efficiency
+
+144,
+Cyprus
+
+Input DEA
+
+Production
+
+Operating efficiency
+
+Input DEA
+
+Production
+
+OTE
+
+Input DEA
+
+144,
+Cyprus
+217
+branches
+from 4
+merged
+banks,
+USA
+
+58
+
+6.Loans - Mortgage & Consumer:
+Referrals, Applications, Closings
+
+Howland &
+Rowse (2006)
+
+1)Non-sales FTE2)sales FTE 3) Size in
+total square feet 4)City employment rate
+
+Sherman & Zhu
+(2006)
+
+1)Platform FTSe 2) Teller FTEs
+3)Management FTEs 4) Postage,
+supplies, telephone, travel expenses
+
+1)Loan volume 2) Deposit volume 3)
+Average number of products/customer
+4) customer loyalty
+1)Deposits, withdrawals, checks cashed
+2)Bank checks 3)Bond transactions
+4)Night deposits 5)Safe deposits visits
+6)New accounts 7)Mortgage and
+consumer loans 8 ATMs Quality
+measure-mystery shopper scores
+
+Noulas et al.
+(2008)
+
+Value of 1)Personnel costs 2)Other
+operating expenses
+
+Value of 1)Deposits 2)Financial
+products 3)Loans 4) Other loans
+
+Both
+
+Production
+
+PTE
+
+162,
+Canada
+
+Input DEA
+
+Production
+
+OTE
+
+225, US
+
+Input DEA
+
+Intermediation
+
+OTE
+
+58, Greece
+
+59
+
+Appendix III  Studies in bank bankruptcy, credit rating and underperformance (Part A)
+
+Authors
+
+Subject
+
+Country
+
+Alam et al.
+(2000)
+
+BF
+
+US
+
+Boyacioglu et
+al. (2008)
+Chen & Shih
+(2006)
+
+BF
+
+Turkey
+
+CR
+
+Taiwan
+
+Gaganis et al.
+(2006)
+Huang et al.
+(2004)
+
+CR
+
+79
+countries
+US,
+Taiwan
+
+Kolari et al.
+(2002)
+
+BF
+
+US
+
+Kosmidou &
+Zopounidis
+(2008)
+Lanine &
+Vander
+Vennet
+(2006)
+Ng et al.
+(2008)
+
+BF
+
+US
+
+BF
+
+Russia
+
+BF
+
+US
+
+Pasiouras et
+al. (2007)
+
+CR
+
+CR
+
+9 Asian
+countries
+
+Training sample
+Training: 3 failed, 17 extreme performance, 80 healthy; Validation: not
+specified, although the authors mention that they repeat their analysis in a
+second sample of another 100 obs. with qualitatively similar results
+Training: 14 failed, 29 non-failed; Validation: 7 failed, 15 non-failed
+Training: twAA & higher ratings (16), TwA (25), TwBBB (26), tw (BB) &
+lower ratings (6); Validation: twAA & higher ratings (6), TwA (9),
+TwBBB (9), tw (BB) & lower ratings (2)
+Training: Fitch ratings: A & B (466), C (214), D & E (214): Validation:
+10-fold cross-validation
+Training: Taiwan: AAA (8), AA (11), A (31), BBB (23), BB (1); US: AA
+(20), A (181), BBB (56), BB (7), B (1); Validation: 10-fold crossvalidation; leave-one-out cross-validation
+Training: 2 samples from 1989; Failed banks: 18, Non-failed banks: 1012
+& 1061; Validation: Various samples from 1990, 1991, 1992; Failed
+banks: 6 - 18; Non-failed banks: 1053 - 1178
+Training: 4 samples from 1993-1999; Failed banks: 19-89; Non-failed
+banks: 90-455; Validation: 2000-2003; Failed banks: 23; Non-failed
+banks: 112
+Training: 4 samples from January 1997-March (or August) 2000; Failed
+banks: 58-78; Non-failed banks: 290-390; Validation: 4 samples from
+April (or September) 2000 to November 2003 or January (or June) 2004
+Training: 20% of total sample (Failed: 358-548, Non-failed: 2,555-2,585);
+Validation: 80% of total sample (Failed: 358 - 548, Non-failed: 2,555 2,585)
+Training: Fitch ratings: A & A/B (4), B & B/C (31), C & C/D (69), D &
+D/E (77), E (34); Validation: 10-fold cross-validation
+
+Period
+covered
+
+1992
+
+Techniques Used
+
+1997-2003
+
+FC, CL-NN, SOM-NN
+MLP-NN, CL-NN, SOM-NN, LVQ-NN,
+SVMs, MDA, CA, LRA
+
+1998-2003
+
+SVMs, BP-NN, LR
+
+2004
+Taiwan:
+1998-2002;
+US: 19912000
+
+UTADIS, MDA, OLR
+
+1989-1992
+
+TR, LRA
+
+1993-2003
+
+UTADIS, MDA
+
+1997-2004
+
+MTR, TR, LRA
+
+1980-2000
+
+FCMAC-CRIS(S), GenSoFNN-CRIS(S),
+Coxs hazard model
+
+2004
+
+SVMs, BP-NN, LRA
+
+MHDIS, MDA, LRA
+
+60
+
+Ravi et al.
+(2008)
+Ravi &
+Pramodh
+(2008*)
+Swicegood &
+Clark (2001)
+
+BU
+
+BF
+
+US
+
+Turkey,
+Spain
+
+Training: 640 adequate performance & 160 poor performance banks; the
+160 poor performance banks where then duplicated to produce a total of
+640 poor performance cases; Validation: 200 banks
+Training: Turkey: 40, Spain: 66; Validation: 10-fold cross-validation
+
+1993
+
+n.a.
+BU
+
+US
+
+MLFF-BP, PNN, RBFN, SVM, CART,
+FRBC, PCA-MLFF-BP,
+PCNN, PCA-TANN, PCA-BPNN,
+TANN, BPNN
+
+Small-community banks: Adequate performance 480 (training) & 320
+(validation), Underperformance: 120 (training) & 80 (validation); Largeregional banks: Adequate perf. 356 (training) & 237 (validation),
+Underperformance: 89 (training) & 59 (training)
+Failed: 548, Non-failed: 2,555; Training: 20%; Validation:80%.
+
+1993 NN, MDA
+Tung et al.
+BF
+US
+(2004)
+1980-2000 GenSoFNN-CRI, Cox
+Zhao et al.
+BF
+US
+Training: 240 failed & 240 non-failed; Validation: 10-fold cross-validation
+(2008*)
+1991-1992 LRA, C4.5 decision tree, BP-NN, k-NN
+Notes: BF = Bank Failure, CR = Credit ratings; BU = Bank under-performance, FC = Fuzzy clustering; MLP-NN = Multi-layer perception neural networks, CLNN=Competitive learning NN, SOM-NN = Self-organizing map NN, LVQ-NN= Learning vector quantization NN, SVMs= Support Vector Machines, MDA = Multivariate
+discriminant analysis, CA = k-means Cluster Analysis, LRA = Logistic Regression Analysis, TR = Trait Recognition, MTR = Modified Trait Recognition, BP-NN = Backpropagation NN, LR = Linear regression, GenSoFNN-CRI = Generic Self-organising Fuzzy Neural Networks-CRI Scheme, k-NN = k-nearest neighbour, UTADIS= UTilits
+Additives DIScriminantes, MHDIS = Multi-Group Hierarchical Discrimination
+
+61
+
+Appendix III  Studies in bank bankruptcy, credit rating and underperformance (Part B)
+
+Authors
+Alam et al.
+(2000)
+Boyacioglu et
+al. (2008)
+
+Chen & Shih
+(2006)
+
+Gaganis et al.
+(2006)
+Huang et al.
+(2004)
+
+Kolari et al.
+(2002)
+
+Variables considered
+(1) Net income to total assets, (2) Net Loan losses to Adjusted assets, (3) Net loan losses to total loans, (4) non-performing loans
+to total assets, (5) (net loan losses + provisions) to net income
+(1) Shareholders equity / total assets, (2) shareholders equity / total loans, (3) (shareholders equity + net profit) / (total assets +
+off-balance sheet commitments), (4) permanent assets/ total asses, (5) total loans/total assets, (6) loans under follow-up/total loans,
+(7) specific provision/total loans, (8) specific provision/loans under follow-up, (9) personnel expenses/ average assets, (10) net
+profit/average assets, (11) net profit/average shareholders equity, (12) income before taxes/average assets, (13) interest
+income/total operating income, (14) non-interest expenses/total operating income, (15) liquid assets/total assets, (16) total
+loans/total deposits, (17) trading securities/total assets, (18) FX assets/FX liabilities, (19) net interest income/average assets, (20)
+net on balance sheet position/total shareholders equity; Note: reduced or normalized sets of variables were used in some models.
+(1) % of shares held by the government, (2) % of shares held by major shareholders (above 10%), (3) average stock price in
+previous year, (4) total assets, (5) liabilities, (6) shareholder's equity, (7) net sales, (8) operating income (loss), (9) liabilities to
+assets, (10) deposits to net worth, (11) fixed assets to net worth, (12) current reverse ratio, (13) total assets turnover (times), (14)
+deposit to loan, (15) non-performing loan ratio, (16) interest payments to annual average balance of deposits ratio, (17) interest
+income to annual average balance of credit extension ratio, (18) average amount of business income per employee, (19) average
+amount of profit per employee, (20) return on total assets, (21) return on shareholder's equity, (22) operating income to paid-in
+capital, (23) net profit to sales, (24) EPS, (25) cash flow adequacy ratio; Note: some models use subsets of these variables
+(1) Equity/Total assets, (2) Loan loss provisions / net interest revenue, (3) Return on average assets, (4) Cost to income ratio, (5)
+Liquid assets / Customer & short term funding, (6) Log (total assets), (7) Number of subsidiaries, (8) Number of institutional
+shareholders, (9) Whether the banks is listed on a stock exchange or not, (10) Whether the country is developed or developing
+(1) Total assets, (2) Total liabilities, (3) Long-term debts / total invested capital, (4) Debt ratio, (5) Current ratio, (6) EBIT/interest,
+(7) Operating profit margin, (8) (Shareholders equity + long-term debt) / fixed assets, (9) Quick ratio, (10) Return on total assets,
+(11) Return on equity, (12) Operating income/received capitals, (13) Net income before tax / received capitals, (14) Net profit
+margin, (15) EPS, (16) Gross profit margin, (17) Non-operating income / sales, (18) Net income before tax / sales, (19) Cash flow
+from operating activities / current liabilities, (20) (cash flow from operating activities / (capital expenditures +increase in
+inventory + cash dividends)) in last 5 years, (21) (cash flow from operating activities  cash dividends) / (fixed assets + other
+assets + working capitals); Note: Some models were developed with sub-sets of these variables
+(1) Total assets (millions), (2) Net interest income/total assets, (3) Net income after taxes/ total assets, (4) Total equity/total
+assets, (5) Allowance for loan losses/total assets, (6) Provisions for loan losses/total assets, (7) Net loan charge-offs / total assets,
+
+Classification resuls
+n.a.
+Correct accuracies: MLP-NN
+(95.50%), CL-NN (68.18%),
+SOM-NN (63.63%), LVQNN (100%), SVMs (90.90%),
+MDA (68.18%), CA
+(81.81%), LRA (81.81%)
+
+Correct accuracies: SVMs
+(73.08%-84.62%), BP-NN
+(50%-65.38%), LR (23.08%50%)
+UTADIS: 68.91%, MDA:
+65.06%, OLR: 62.88%
+Correct accuracies: SVMs
+(Taiwan: 75.68% - 79.73%;
+US:78.87% - 80.38%), BPNN (Taiwan: 74.32% 75.68%; US: 75.68% 80.75%), LRA (Taiwan:
+70.27% - 75.68%; US:
+75.09% - 76.98%),
+Correct accuracies: TR:
+around 85%; LRA: slightly
+
+62
+
+Kosmidou &
+Zopounidis
+(2008)
+
+(8) Total securities / total assets, (9) Nondeposit liabilities / total liabilities, (10) Certificates of deposit / total deposits, (11) Total
+loans & leases / total assets, (12) Sum of key asset accounts / total assets, (13-24) maximum change in each preceding ratio /
+mean of corresponding ratio, (25) Maximum change in loans past due at least 90 days/mean of numerator, (26) Bank Holding Co.
+total assets (millions), (27) Bank total assets / BHC total assets, (28) Maximum change in total assets / mean change in total assets
+26 variables were initially considered. After a combination of correlation analysis, ANOVA, Kruskal-Wallis, Mann-Whitney the
+following 9 variables were used: (1) Return on current assets, (2) Financing of current assets, (3) Operating income / current
+assets, (4) Income before taxes & exceptional outcome & provisions for loan losses / net depreciations, (5) Asset per employee,
+(6) Provisions for precarious loans / overdue loans, (7) loans / internal deposits, (8) Tier 1 ratio, (9) Ratio of precarious capital
+
+Lanine &
+Vander
+Vennet
+(2006)
+(1) Net income/total assets, (2) Liquid assets/total assets, (3) Government debt securities/total assets, (4) Capital / total assets, (5)
+Overdue loans + overdue promissory notes)/ total loans, (6) Total loans/total assets, (7) Log (total assets)
+Ng et al.
+(2008)
+(1) Average total equity capital / average total assets, (2) Average (accumulated) loan loss allowance / average gross total loans
+and lease (3) (Average (accumulated) loans 90 + days late) / average gross total loans & leases, (4) Annual loan loss provision /
+average gross total loans and leases, (5) Non-interest expense / operating income, (6) (total interest income  interest expense) /
+average total asset, (7) (net after tax income + applicable income taxes) / average total equity capital, (8) (average cash + average
+federal funds sold) / (average total deposit + average fed funds purchased + average banks liability on acceptance + average other
+liabilities), (9) % change in Annual Gross total loans & leases; Note: Additional models with 3 selected variables were also
+developed
+
+Pasiouras et
+al. (2007)
+
+19 financial variables were initially considered. Using factor analysis the following 5 financial variables were selected: (1) Equity
+/ Customer & short term funding, (2) Net interest margin, (3) Liquid assets / Total deposits & borrowings, (4) Net loans / Total
+deposits & borrowings, (5) Return on average equity. In addition, the following 5 non-financial variables were used: (6) Number
+of institutional shareholders, (7) Number of subsidiaries, (8) Auditor's opinion, (9) Whether the bank is listed or not, (10) Heritage
+
+better than chance
+
+Correct accuracies: UTADIS:
+75.75% - 85.44%; DA:
+75.75%-79.35%; Combined
+model: 83.6%
+Mean Square Error: TR
+(0.091 - 0.167), MTR (0.072
+- 0.149), LRA (0.098 0.138); AUC-ROC: TR
+(0.570 - 0.745), MTR (0.539
+- 0.906), LRA (0.511 - 0.752)
+FCMAC-CRIS(S)-9 inputs:
+82.07% (year -3) to 91.11%
+(year -1), FCMAC-CRIS(S)3 inputs: 83.76% (year -3) to
+95.28% (year -1)
+GenSoFNN-CRIS(S), Cox vs
+FCMAC-CRIS-various
+scenarios as for
+misclassification costs of
+failed vs survived banks:
+FCMAC better in minimizing
+Error I (i.e. classiyfing a
+failed bank as survived);
+FCMAC vs GenSoFNN: no
+difference in year -1; error
+rate of GenSoFNN almost
+double in years -2 & -3
+Correct accuracies: MHDIS
+(66.03%), MDA (53.73%),
+LRA (47.55%)
+
+63
+
+banking-finance index
+Ravi et al.
+(2008)
+Ravi &
+Pramodh
+(2008*)
+
+Turkey: (1) Interest expenses / average profitable assets, (2) Interest expenses / average non-profitable assets, (3) (Shareholders
+equity + total income)/(deposits + non-deposit funds), (4) Interest income / interest expenses, (5) (Shareholders equity + total
+income) / total assets, (6) (Shareholders equity + total income)/(Total assets + contingencies & commitments), (7) Networking
+capital / total assets, (8) Salary & employees benefits + reserve for retirement)/ no. of personnel, (9) Liquid assets / (deposits +
+non-deposit funds), (10) Interest expense / total expenses, (11) Liquid assets / total assets, (12) Standard capital ratio; Spain: (1)
+Current assets / total assets, (2) (Current assets  cash) / total assets, (3) Current assets / loans, (4) Reserves / loans, (5) Net income
+/ total assets, (6) Net income / total equity capital, (7) Net income / loans, (8) Cost of sales / sales, (9) Cash flow / loans; Note: in
+the case of Spain (Turkey) 6 (7) variables are selected when feature subset selection algorithm is used
+Swicegood &
+Clark (2001)
+
+Tung et al.
+(2004)
+
+(1) Earning assets / Total assets, (2) Total securities / Total assets, (3) Total loans / Total asses, (4) Nonperforming assets / Total
+assets, (5) Allowance for loan losses / Total loans, (6) Asset growth, (7) Core deposits / Total assets, (8) Volatile liabilities / Total
+liabilities, (9) Total equity / Total assets, (9) Noninterest income / Total assets, (10) Interest income / Total assets, (11) Gains
+(Losses) from sale of securities / Total assets, (12) Salary / Total assets, (13) (Noninterest expense  Salary)/Total assets, (14)
+Total interest expense / Total assets, (15) Provision expense/ Total loans, (16) Off balance sheet commitments / Total assets, (17)
+Regional geographic location, (18) Charter, (19) Holding company affiliation, (20) Federal Reserve Bank member, (21) Branch or
+Unit bank, (22) Deposit insurance
+Average total equity capital / average total assets, (2) Average (Accumulated) loan loss allowance / average gross total loans and
+leases, (3) Average (accumulated) loans 90 plus days late / average gross total loans and leases, (4) Annual loan loss provisions /
+
+Correct accuracies: PCNNWOFS-LTF (Spain: 96.6%,
+Turkey: 97.5%), PCNNWFS-LTF (Spain: 92.5%,
+Turkey:100%), TANN
+(Spain: 91.6%, Turkey:
+92.5%), PCA-TANN (Spain:
+97.5%, Turkey: 97.5%),
+PCA-BPNN (Spain: 84.1%,
+Turkey: 85%), BPNN (Spain:
+81.67%, Turkey: 87.5%),
+PCNN-WOFS-STF (Spain:
+82.4%, Turkey: 92.5%),
+PCNN-WFS-STF (Spain:
+86.6%, Turkey: 90%)
+Correct accuracies: NN
+(Large  Regional:
+Underperformance = 66.1%,
+Adequate performance =
+85.2%; Small  Community:
+Underperformance = 60.0%,
+Adequate performance =
+82.8%); MDA (Large 
+Regional: Underperformance
+= 50.8%, Adequate
+performance = 95.3%; Small
+ Community:
+Underperformance = 28.7%,
+Adequate performance =
+92.1%)
+Equal error rates:
+GenSoFNN-CRI: 8.17% -
+
+64
+
+average gross total loans and leases, (5) Non-interest expense / operating income, (6) (Total interest income  interest expense)/
+average total assets, (7) (Net income (After tax) + applicable income taxes) / average total equity capital, (8) (Average cash +
+average federal funds sold)/(average total deposits + average fed funds purchased + average banks liability on acceptances +
+average other liabilities), (9) % change in annual Gross total loans and leases
+
+Zhao et al.
+(2008*)
+93 raw accounting variables; 26 fianancial ratios: (1) Total equity / total assets, (2) Gross loans / total assets, (3) Commercial loans
+/ gross loans, (4) Individuals loans / gross loans, (5) Real estate loans / gross loans, (6) Late loans (90 days) / gross loans, (7) Not
+accruing loans / gross loans, (8) Loan loss provisions / gross loans, (9) Charge-off loans / gross loans, (10) Loan allowance / gross
+loans, (11) Total loans net-off unearned / total equity, (12) Net income / operating income, (13) Net income / total assets, (14)
+Operating expenses / total assets, (15) Operating income / total assets, (16) Interest income / interest expenses, (17) Operating
+income / operating expenses, (18) Net income / total assets, (19) Net income / total equity, (20) Interest expenses for deposits /
+Total deposits, (21) Interest income from Loans / Gross loans, (22) Interest income / operating income, (23) Cash / total assets,
+(24) (Cash + Securities) / Total assets, (25) (Cash + Federal funds sold + US Treasury + US Government Obligations)/ total assets,
+(26) Gross loans / total deposits
+
+36.10%; Errors under
+different misclassification
+costs: Cox - Type I error: 6%
+- 54%, Cox - Type II error:
+3.10% - 83.6%; GenSoFNNCRI - Type I error: 0% 0.69%, GenSoFNN-CRI Type II error: 45.45% - 100%
+Misclassifications costs under
+different prior probabilities
+and cost ratios: With raw
+accounting items
+(LRA:0.087-0.287; Tree:
+0.076-0.298; BP-NN: 0.0910.417; k-NN: 0.071 - 0.297),
+With financial ratios (LRA:
+0.053 - 0.199; Tree: 0.063 0.257; BP-NN: 0.057 - 0.240;
+k-NN: 0.057 - 0.272)
+
+65
+
+66
+
+

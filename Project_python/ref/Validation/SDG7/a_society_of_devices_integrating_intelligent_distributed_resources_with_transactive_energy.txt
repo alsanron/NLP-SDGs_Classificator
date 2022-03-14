@@ -1,0 +1,1108 @@
+A Society
+of Devices
+By Koen Kok and
+Steve Widergren
+
+Integrating Intelligent
+Distributed Resources
+with Transactive Energy
+
+S
+
+Secure, Clean, and Efficient Energy is one
+of the great societal challenges of our time. Electricity as a
+sustainable energy carrier plays a central role in the most
+effective transition scenarios toward sustainability. To harness this potential, the current electricity infrastructure
+needs to be rigorously re-engineered into an integrated
+and intelligent electricity system: the smart grid. Key elements of the smart grid vision are the coordination mechanisms. In such a system, vast numbers of devices, currently
+just passively connected to the grid, will become actively
+involved in system-wide and local coordination tasks. In
+
+Digital Object Identifier 10.1109/MPE.2016.2524962
+Date of publication: 19 April 2016
+
+34
+
+ieee power & energy magazine
+
+this light, transactive energy (TE) is emerging as a strong
+contender for orchestrating the coordinated operation of so
+many devices.
+The Gridwise Architecture Council (GWAC) defines TE
+as a set of economic and control mechanisms that allows
+the dynamic balance of supply and demand across the entire
+electrical infrastructure using value as a key operational
+parameter. We identify two key parts in this definition.
+One is using value as a key operational parameter, which
+defines what makes the approach transactive: operational
+decisions are made through an exchange of value-based
+information captured in transactions between participants.
+The other, across the entire electrical infrastructure,
+declares this approach feasible across the entire electricity
+system, from the transmission level with its bulk generation
+
+1540-7977/162016IEEE
+
+may/june 2016
+
+image licensed by ingram publishing
+
+and transport of electricity down to the distribution system
+and the variety of connected customers.
+In large parts of the world, electricity markets exist on
+the transmission level of the infrastructure. Here, markets
+and energy transactions are already used to influence system operation, and, thus, aspects of TE are arguably already
+in place at that level. Because of this, the distributed, collaborative decision-making nature of how market mechanisms work at the transmission level in modern power systems is already well understood. The big challenge for the
+smart grid is how to coordinate an ever-growing number
+of intelligent devices, each with their own objectives and
+value perspectives, into a resilient, secure, and efficient
+system that balances the trade-offs among the objectives of
+the many participants and has the flexibility to evolve with
+may/june 2016
+
+the changing mix of resources over time. This frames the
+opportunity for introducing TE concepts across the entire
+infrastructure and specifically into the distribution-level of
+the electricity grid.
+This article focuses primarily on the application of TE as
+a scalable coordination approach to electricity distribution
+systems operations by reviewing and contrasting the way a
+TE system works and its advantages with competing control
+and coordination approaches. Several field demonstrations
+are summarized both in Europe and the United States, where
+first-generation TE systems have been shown to improve the
+balance between local consumption and production and, by
+doing so, improve the integration of renewable generation
+and mitigate congestion (i.e., local power flow overloads) in
+distribution systems.
+ieee power & energy magazine
+
+35
+
+Classifying Distribution-Level Energy
+Management Approaches
+
+Top-Down Switching
+
+In a distribution-level TE system, mid- to small-sized electricity consuming or producing devices automatically negotiate
+about their actions with each other, with devices in the physical network, and with dispatch systems of energy suppliers
+through efficient and scalable electronic market algorithms.
+To debate the advantages of this approach, and to classify
+different approaches, the smart energy management matrix
+has been introduced. This matrix classifies smart grid energy
+management approaches into four main categories. The vertical matrix axis distinguishes if an approach makes decisions
+on local issues either locally or centrally. The horizontal axis
+plots whether the approach uses one-or two-way communications. Figure 1 shows this matrix with four general classes of
+energy management approaches filled in: top-down switching, price reaction, centralized optimization, and transactive
+control and coordination.
+
+This quadrant contains the classical demand-response
+programs where, typically in a certain grid area, one
+device group is switched simultaneously following a
+broadcasted signal. This is the simplest demand-response
+approach, and it has been used successfully for decades in
+different parts of the world. In the typical setup, a signal
+sent out through the power grid by the local utility company switches off systems such as water heaters, and airconditioning systems during peak load periods. Although
+the approach is simple and effective, it does not unlock
+the full response potential of devices, as the device state
+is not taken into account. The expected system reaction is only known by using statistics, and as a result the
+operation is based on worst-case scenarios. Most of all,
+the method ignores the consumer altogether. It does not
+take user preferences into account and interferes with the
+autonomy of energy consumers.
+
+Centralized Optimization
+Classifying Distribution-Level Energy Management Approaches
+Decisions
+on Local
+Issues
+Made
+Locally
+
+Price
+Reaction
+
+Decisions
+on Local
+Issues
+Made
+Centrally
+
+Transactive
+Control
+
+Top-Down
+Switching
+
+Centralized
+Optimization
+
+One-Way
+Communications
+
+Two-Way
+Communications
+(a)
+
+Decisions
+on Local
+Issues
+Made
+Locally
+Decisions
+on Local
+Issues
+Made
+Centrally
+
+Price Reaction
++ Full Use of Response Potential
+ Uncertain System Reaction
+ Market Inefficiency
++ No Privacy Issues
+
+Transactive Control
++ Full Use of Response Potential
++ Certain System Reaction
++ Efficiency Market
++ No Privacy Issues
+
+Top-Down Switching
+ Partial Use or Response Potential
+ Uncertain System Reaction
+ Autonomy Issues
+
+Centralized Optimization
++ Full Use of Response Potential
++ Certain System Reaction
+ Privacy and Autonomy Issues
+ Low Scalability
+
+One-Way
+Communications
+
+(b)
+
+Two-Way
+Communications
+
+figure 1. The energy management matrix: the four main categories of (a) smart grid
+energy management and (b) their pros and cons.
+36
+
+ieee power & energy magazine
+
+In the centralized optimization
+quadrant, local decisions are still
+made centrally, but communications are two way. Here, a complex optimization engine oversees
+all flexible demand and supply
+in the smart grid cluster under
+consideration (such as a virtual
+power plant or a local grid segment). Based on available information and taking into account
+the global and, perhaps, local control goals, the optimizer searches
+for the best solution for the whole
+system. All relevant local data
+need to be communicated to the
+optimizer, which informs the central controller that communicates
+control signals or schedules to
+the field.
+Having the relevant local data
+available as input to the optimization, the method is able to fully
+unlock the response potential of
+the individual devices. Further,
+as the central system performs
+a direct control on the local
+devices, the system-level reaction
+of the response cluster is known
+when a response is triggered. The
+autonomy issue of the top-down
+switching approach remains, and
+a privacy issue is added as detailed
+local information is now communicated. Further, c ommunicating
+may/june 2016
+
+Successful outcomes require acceptance by business and
+policy decision makers as a cost-effective, valid, equitable, and
+advantageous revenue/investment recovery mechanism.
+
+all relevant local information to a central point limits the accuracy and scalability properties of the approach. When equipment changes locally, the central system must be updated as
+well. If the number of responsive houses, buildings, and installations becomes large, the communication and optimization
+times grow nonlinearly. The approach also does not respond
+gracefully to communications or central optimizer failures.
+
+Price-Reactive Systems
+The price reaction approach is based on a one-way signaling of a dynamic price to end users. At certain time intervals, a new electricity price or a price profile for the coming hours is sent to an automation system at the premises.
+This price profile is displayed for the end user or automation system to adjust equipment operations. Benefits of
+this approach include 1) simple one-way communications
+leading to low system complexity, 2) no issues regarding privacy or autonomy, and 3) an easily implementable
+approach in regions having an electricity wholesale market
+due to the availability of a day-ahead or intraday price profile from this market.
+Using the price signal, the operation of responsive devices
+can be optimized economically by a local intelligent controller that is owned by and/or under the control of the consumer.
+Such a controller would thus be able to increase the consumers loads during low-priced periods, and generation during
+high-priced periods, while taking the device states and user
+preferences into account. The controller has the opportunity
+to unleash the full response potential. To bill the customer
+according to the prices signaled, a c ommunicating electricity meter needs to measure usage at a resolution appropriate
+to track response from the price signal. The recent technology developments in advanced metering are providing solutions to mitigate the privacy risks.
+These characteristics have advantages compared to
+the central optimization case; however, the reaction of a
+demand-response pool to each price reaction signal is difficult to predict without knowing each devices state and end
+users preferences.
+
+Transactive Control
+and Coordination
+The transactive control quadrant offers distinct advantages
+in integrating flexible devices in the electricity operations.
+Here, smart homes, buildings, and industrial sites engage
+in automated market trade with others at the distribution
+may/june 2016
+
+system level and with representation of the bulk system.
+Communications are based on prices and energy quantities
+in a two-way negotiation.
+Analogous to the price reaction approach, the operation of the flexible devices is optimized economically by
+a local intelligent controller (or agent) under the control
+of the end user. This controller receives price information and takes the device state and user preferences into
+account to operate local demand and supply resources.
+This is the same as the price reaction approach except
+that, before the price reaction takes place, the local controller communicates the available flexibility combined
+with their preferences and conditions to an electronic marketplace through a market transaction (price/quantity bid).
+Consuming devices communicate their willingness to pay,
+while producing devices communicate the price for which
+they are willing to produce.
+Since all resources participating in the market communicate their intended reaction to a range of price levels, the
+pool reaction to a range of price signals is known up front
+and the market mechanism can determine the price for an
+appropriate balance of supply and demand. From the end
+users or energy consumers point of view, the local energy
+management system agent acts on behalf of the user or
+consumer to bid into the market and reacts to the resulting
+market price signals. Unlike the centralized optimization
+approach, no direct outside control is involved here. However, from a system perspective, the participants engage in
+coordinated control actions. With this approach, demand
+response moves from influencing, with an uncertain overall response, into market-based control with a collaboratively derived dynamic price as a control signal to trigger
+a predictable system reaction. This is why this approach is
+sometimes referred to as market-based control or transactive control multiagent system (see Distributed Intelligence
+and Multiagent Systems).
+When properly implemented, the market bids sent by the
+end users energy management systems can be aggregated
+together. When this is done for two devices, the resulting
+bid represents the preferences of the two devices together.
+The message size of the aggregated bid curve is a simple
+combination of the individual device bid curves. Using this
+property, a highly scalable system can be obtained when,
+in a response cluster, bids are aggregated together. The
+processing and communication time then scales with the
+height of the aggregation tree instead of with the number
+ieee power & energy magazine
+
+37
+
+Distributed Intelligence
+and Multiagent Systems
+The study of market-based approaches as a distributed intelligence mechanism for solving multiobjective optimization problems have their roots in economic theory. With
+the advent of information and communications technology and the growth of robotics and intelligent systems,
+their application to solve complex systems of systems
+problems is expanding. The increasing pervasiveness of
+computational resources in devices enables local intelligence, and their communications connectivity allows
+them to interact. This interaction of intelligent devices is
+foundational to the discipline of multiagent systems and
+the methods and tools that support them.
+For the purposes of this article, devices or systems are
+intelligent if they are able to perceive their surroundings
+to gather information about the context of their operation.
+Like people, they can reason autonomously by processing information in a goal-directed way to forecast, plan,
+and act. Distributed multiagent systems are characterized
+by a population of intelligent devices that communicate
+with each other to exchange information (measured or
+derived) to better accomplish their independent objectives through cooperation and joint action. Multiagent
+systems are constrained by their environment, which imposes physical, temporal, and policy (economic or other)
+conditions on their interaction. In this regard, intelligent
+agents reside in an ecosystem of products, services, deployment platforms, and other supporting infrastructure.
+Like societies of people, they interact with more or less
+independent decision-making authority within cultural
+and governing policy structures. As their intelligence is
+captured in cyber-based programs, multiagent systems
+can reside in the real world or run in a simulated cyberworld. This is particularly important for complex systems
+design and testing, and simulation.
+
+of devices participating. Further, the approach protects the
+end users privacy as the bids communicate only information about energy quantities and prices. When these bids are
+aggregated on the level of a house, a building, or an industrial site before being communicated externally, the information exchanged is comparable to that of a metering system collecting near-real-time data as described for the price
+reaction approach above. And unlike the centralized optimization approach, no complicated models of the devices,
+consumer behavior, or preferences are exchanged or maintained. In summary, TE approaches are able to access the
+full response potential of flexible devices, provide greater
+38
+
+ieee power & energy magazine
+
+certainty about the momentary system reaction, realize an
+efficient market with proper incentives, and protect the privacy of the end user whose devices participate in the energy
+management task.
+
+TE Systems Implementations
+In terms of customer privacy, scalability, and efficiency, TE
+systems have clear advantages over more common smart
+grid coordination, such as price reactive systems and centralized optimization. Both in the United States and Europe, TE
+research has had a strong focus on intelligent agent-based innovation in household equipment and field demonstrations involving grid operators, energy supply companies, power technology
+companies, and regulators.
+
+TE Systems Implementations
+in the United States
+The U.S. Department of Energy partnered with several organizations in three major demonstration projects using TE
+mechanisms to coordinate distributed energy resources with
+system operations.
+
+Olympic Peninsula Demonstration, 20062007
+This first proof-of-concept TE project was located in an
+area of the Olympic Peninsula of Washington state, which
+receives electricity through a radial transmission connection to the Pacific Northwest power grid. The project tested
+the potential for flexibility offered in coordinating distributed energy resources to postpone or remove the need for
+a transmission upgrade. The project used a 5-min doubleauction market technique to coordinate four large municipal
+water pumps, two backup diesel generators, and residential
+demand response from electric water and space heating systems in 112 homes. The project established the viability of
+TE to achieve multiple objectives: system peak load and distribution constraint management; wholesale price purchases
+by the utility; and residential, commercial, and municipal
+energy cost savings.
+The market received supply bids from the utility based
+upon a markup of the wholesale price of energy in the area.
+The diesel generators bid was based on the actual fixed and
+variable costs incurred for operation. The pumps bid into
+the market was based on water-reservoir levels that they were
+designed to regulate. And the residential demand-response
+equipment allowed the households to specify their automatic
+price-response preferences. To capture their preferences, a
+list of comfort settings named to indicate ranges between
+most comfortable (nonprice responsive) to greatest economy
+(highly price responsive). The 5-min market determined the
+clearing price for energy and broadcast that to the market
+participants. Each participants bidding equipment would
+operate based on whether their bid was higher or lower than
+the market-clearing price.
+Figure 2 is the operational dashboard for the demonstration. Besides coordinating the price-responsive resources
+may/june 2016
+
+figure 2. The Olympic Peninsula dashboard summary.
+
+to wholesale price fluctuations, the transactive system also
+managed congestion on a distribution circuit, by managing
+all of the devices as if they were on one circuit and seasonally adjusting the capacity setting of that circuit to exercise
+constrained operating conditions. The project controlled the
+imported capacity of the circuit below the constraint for all
+but one 5-min interval over the entire project year.
+
+AEP Ohio gridSMART Real-Time Pricing
+Demonstration, 20102014
+Building upon the Olympic Peninsula project, the AEP
+Ohio gridSMART (gridSMART is a registered trademark
+of AEP Ohio) demonstration project had a real-time pricing
+(RTP) component, called SMART Choice (SMART Choice
+is a registered trademark of AEP Ohio), that used a 5-min
+double-auction market to dispatch participating responsive
+loads on each of four distribution circuits. The preferences of
+household occupants were reflected in software agents that
+developed an overall price flexibility curve for the household
+and coordinated device control actions [in this case heating,
+may/june 2016
+
+ventilation, and air conditioning (HVAC) units] with the
+market system. A market clearing engine at the operations
+center aggregated the bids from all households to form a
+price-sensitive demand curve for the distribution circuit and
+calculated a clearing price and a supply bid, which incorporated the regional market operators (PJM) 5-min wholesale
+locational marginal price for electricity. The clearing price
+was broadcast back to the households and captured in the
+billing system according to a tariff approved by the regulator,
+the Public Utility Commission of Ohio. An overview of the
+RTP system design is presented in Figure 3.
+The RTP experiments ran over the late spring and summer
+of 2013 and involved four feeders with approximately 200
+households actively participating. Figure 4 shows this transactive system in action on a hot summer day. As expected,
+the short-term energy use was negatively correlated with the
+electricity price. In addition, many experiments were held to
+determine the HVAC resources response to peak-shaving
+conditions by temporarily lowering the circuit capacity limits on the c ircuits. Under this situation, the billing system
+ieee power & energy magazine
+
+39
+
+Wholesale Market
+5-min Modal Energy Prices
+Service
+Provider
+Operations
+Bids
+Clearing
+Price
+
+Usage
+
+Meter
+
+Supply Usage
+Information
+
+Home
+Residential
+Energy
+Management
+System
+
+Bids
+
+Dispatch
+System
+
+Clearing Price
+
+Consumer
+Display
+Monthly Bill
+
+~200
+Homes
+on Four
+Feeders
+
+Operations Center
+
+Programmable
+Thermostat
+
+Field
+
+figure 3. A design overview of the AEP Ohio gridSMART RTP system.
+
+rebates a household for the difference between the congested
+clearing price and the normal 5-min real-time price and
+provides an incentive payment to a household if its bid was
+above the normal clearing price but below the congestion
+
+MW
+
+10
+8
+6
+4
+2
+0
+150
+
+clearing price. An analysis of the
+field results indicated that wholesale purchases and household bills
+reduced by about 5% each.
+The field data was also used
+to calibrate simulated household demand-response models
+for investigating higher penetration levels participants. Figure 5
+plots the expected response to
+congestion events on a feeder
+with 100% RTP household penetration. The dotted line represents a simulation without RTP
+response and the remaining lines
+show responses and the rebound
+for one-, two-, four-, and six-hour
+congestion events that represent
+the maximum response using the
+diversity of thermostat settings
+seen in the field.
+
+Pacific Northwest Smart Grid
+Demonstration, 20102015
+The Pacific Northwest Smart Grid Demonstration
+(PNWSGD) included multiple states and cooperation from
+
+Feeder 180 Power
+Feeder-Rated Capacity
+Feeder Limit
+Feeder Power
+
+Reduce Feeder
+Capacity to
+Engage End Use
+
+HVAC Load
+Oversatisfied
+Inactive
+Must Run
+Active
+
+100
+Devices
+Respond to
+Price
+Fluctuations
+US$/MWh
+
+50
+04 05 06
+
+HVAC Units
+Drop Off
+
+RTP PJM Price
+Constrained Price
+Price Volatility
+
+500
+
+Units Rebound
+When Capacity
+Returns to
+Normal
+
+12 13 14 15 16 17 18 19 20 21
+Hour
+Feeder 180 Price
+18 July 2013 20:30
+
+0
+3
+Average Indoor
+Temperature Rises
+~4 F Over
+Four Hours
+
+0
+
+80
+78
+76
+74
+72
+
+04 05
+
+Price Rises to
+Price Cap
+
+12 13 14 15 16 17 18 19 20 21
+Hour
+House Temperatures, Feeder 180
+18 July 2013 20:30
+Observed Average Temperature
+Temperature Average Deviation
+
+5
+0
+
+04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21
+
+F
+
+F
+
+3
+
+5
+
+figure 4. The AEP Ohio gridSMART RTP transactive system in action.
+40
+
+ieee power & energy magazine
+
+may/june 2016
+
+Demand (kW)
+
+multiple electric utilities, includ3.50
+ing rural electric co-ops and
+investor-owned, municipal, and
+other public utilities, as indicated
+3.00
+in Figure 6. There were 55 unique
+instantiations of distinct smart grid
+2.50
+systems demonstrated at the project sites. The local objectives for
+2.00
+these systems included improved
+Control
+reliability, energy conservation,
+One-Hour Event
+Four-Hour Event
+1.50
+improved efficiency, and demand
+Two-Hour Event
+Six-Hour Event
+One-Hour CPP
+responsiveness. The demonstraTwo-Hour CPP
+Four-Hour CPP
+Six-Hour CPP
+tion deployed a transactive sys1.00
+14:00 15:00 16:00 17:00 18:00 19:00 20:00 21:00 22:00 23:00
+tem to coordinate the operation
+17 July 2013
+of distributed energy resources
+and addressed regional objectives,
+including the mitigation of renew- figure 5. A Simulated response to congestion events calibrated from gridSMART field data.
+able energy intermittency and the
+flattening of system load. The
+Figure 7 provides a high-level summary of the transactransactive system coordinated a regional response across
+11 utilities and showed that distributed assets can respond tive-node approach developed for this project. Each node
+dynamically on a wide scale.
+represents one or more electrically connected resources.
+
+BC Hydro
+WA
+
+U. Washington
+Grand
+(Customer)
+Coulee
+*Seattle (and SCL)
+Peninsula Light
+(COOP)
+Ellensburg
+*Fox Island
+(MUNI)
+
+MT
+
+Flathead
+Electric
+(COOP)
+*Kalispell
+
+Island Power
+(COOP)
+*Spokane
+
+Hot Springs
+Taft
+
+Hydro Power
+Wind Power
+Carbon Power
+Nuclear Power
+
+Avista
+*Pullman (and WSU)
+
+Benton (PUD) L. Granite
+Hanford
+Little Goose
+Kennewick
+L. Monumental
+Ice Harbor
+Bonneville
+Milton-Freewater
+(MUNI)
+McNary
+Bonneville Power *Portland
+John Day
+State Line
+Administration (BPA)
+Bonneville
+
+Portland General Electric
+*Salem
+
+Key
+Subprojects
+
+Garrison
+
+North Western
+Energy
+*Helena
+To Colstrip
+Townsend
+
+Idaho Power
+Lower Valley
+Power (COOP)
+Idaho Falls
+Power
+
+*Jackson
+Palisades
+PacifiCorp
+
+Borah
+ID
+
+OR
+COB
+
+WY
+
+NOB (DC Intertie)
+
+figure 6. The PNWSGD geographical region, including participants and major generation and transmission.
+may/june 2016
+
+ieee power & energy magazine
+
+41
+
+Inf
+lue
+
+nc
+
+e
+
+Input
+Incentive
+or Price
+
+Control
+Signals for
+Nodes Assets
+
+Transactive Node
+ Aggregate Incentive or Quantity Estimate Inputs
+from Multiple Nodes
+ Calculate Output Incentive and Load Estimate
+for Adjacent Nodes
+ Implement Local Control of Assets at the Node
+
+G
+lob
+
+Local
+Data and Info
+
+al
+
+Output
+Quantity
+
+Output
+Incentive
+or Price
+Input
+Quantity
+(a)
+
+(b)
+
+figure 7. The PNWSGD transactive node communicating with electrical neighboring nodes.
+
+Nodes interact with electrically connected neighboring
+nodes to exchange information about the quantity of energy
+estimated to be produced or consumed and the cost of that
+energy. A time series of information is exchanged so that the
+nodes negotiate operation not only in the next interval but
+optimize their operation over the time horizon of the time
+series. Internally, the node manages the resources under
+its purview to see that their needs and flexibility are properly reflected in the negotiation. The system of nodes iterates exchanging information for each operations time step
+until the difference in incentive price and energy exchange
+between each neighbor converges.
+The transactive system revealed a continuum of incentives to the utilities and asset systems and engaged assets
+dynamically according the each assets capabilities and
+the flexibility of the assets owner. In addition, the project
+used a simulation model of the regional system to assess the
+impact of a scaled-up deployment of the transactive system.
+This simulation showed that the regions peak load might
+be reduced by about 8% if 30% of the regions loads were
+responding to the transactive system.
+
+TE Systems Implementations in Europe
+The major European TE-based coordination mechanism,
+PowerMatcher, has been installed in approximately 1,000
+households and industrial sites to integrate numerous small
+electricity-consuming and -producing devices in the operation of the electricity infrastructure. Since its incarnation in
+2004, the PowerMatcher has been implemented in five major
+software versions. In a spiral approach, each version was
+implemented almost from scratch and tested in simulations
+and field experiments. The first three versions were research
+42
+
+ieee power & energy magazine
+
+implementations written in the C# programming language.
+The second Java version, PowerMatcher 2.0, is industrialstrength software and is open source available through the
+Flexiblepower Alliance Network (FAN).
+PowerMatcher puts the end customer in a central position in the smart grid. It is the end customer who owns the
+domestic appliance, electrical car, and/or industrial installation that is potentially able to offer the operational flexibility
+needed for a smart and sustainable electricity grid. PowerMatcher empowers the end customer to sell this flexibility to
+the parties interested. This selling is completely automatic
+using a piece of intelligent software installed at the premises
+of, and running under the authority of, this end customer.
+This so-called intelligent agent trades on behalf of the end
+customer. For this trading activity on behalf of the device
+owner, the uniformed data messages exchanged are stripped
+of specific local information. Only aggregated information
+regarding power levels and prices is exchanged, protecting
+the privacy of the customer.
+With the European electricity sector highly unbundled
+into a market subsystem trading the electricity commodity
+and a network subsystem dealing with operation of the physical transmission and distribution networks, the two main
+application fields of the PowerMatcher technology are found
+in market operations and in active distribution network management. As the operations of these two subsystems are
+highly separated in Europe, PowerMatcher approaches these
+as two separate control objectives. The intelligence at the
+level of the customer premises, regardless of whether it is a
+household, business, or industry, delivers the available flexibility as a service to both sides. This leads to the multigoal
+optimization model depicted in Figure 8.
+may/june 2016
+
+TE systems have clear advantages over more common
+smart grid coordination, such as price reactive systems
+and centralized optimization.
+
+PowerMatcher Field Experiences
+An overview of accomplishments in field trials can be found
+in Table 1.
+
+Couperus Smart Grid, 20112015
+The Couperus building in the large The Hague suburb of
+Ypenburg, The Netherlands, includes an apartment tower of
+more than 70 m (Figure 9). Each of the approximately 300
+apartments in the tower has an individual heat pump feeding
+low-temperature floor heating and a heat storage tank containing hot tap water. The Couperus smart grid project tested the
+ability of these heat pumps to 1) integrate wind energy through
+imbalance reduction and 2) capacity management (peak shaving) on the local low-to-medium voltage substation. In the
+first case, the heat pumps reacted, through the use of Power-
+
+Matchers electronic market, to the unexpected over- or underproduction of a nearby wind farm. The so-called imbalance of
+the wind farm, i.e., the difference between its day-ahead forecast and the actual production, was used as a real-time control
+objective. In the European electricity wholesale markets, these
+imbalances generally lead to less revenue for the wind farm
+owner. Thus, reducing imbalance creates value for renewable
+generators. Simultaneously, the heat pump flexibility was used
+for congestion management in the local distribution grid.
+Each heat pump is represented by an intelligent control
+agent that delivers the pumps operational flexibility to the
+electronic market under the condition that it controls the
+apartments inner temperature within a temperature band of
+0.8 C around the user set point. In this way, the comfort of
+the residents is always the first priority: if a resident wants a
+
+figure 8. Orthogonal multiobjective optimization using transactional control and coordination. The intelligent system at
+the customers premises delivers the available flexibility in two directions.
+may/june 2016
+
+ieee power & energy magazine
+
+43
+
+table 1. A summary of field validation results for the PowerMatcher.
+Project/Demo
+
+Description
+
+Results
+
+Year
+
+Crisp field experiment
+
+Flexibility sourced from industrial and
+household sites reacting to fluctuations
+in wind energy generation.
+
+Electricity market related gain: wind
+imbalance reduction of 40%.
+
+20052006
+
+Microcogeneration
+field experiment
+
+Flexibility from microcogeneration units
+at households used to perform peakload reduction in a distribution grid.
+
+Distribution grid peak-load-reduction
+of 30% (during summer) to 50% (during
+winter).
+
+20062007
+
+PowerMatching City
+
+Demonstration of simultaneous
+optimization for energy trade and active
+distribution management. It included a
+value assessment of end user flexibility.
+
+Based on the demos outcomes, the value
+of end user flexibility in The Netherlands
+may reach an estimated 3.5 billion
+(US$2.8 billion). The Netherlands has a
+population of 17 million people.
+
+20092015
+
+Smart-charging
+electrical vehicles
+(EVs)
+
+A series of tests with smart-charging
+EVs coordinated using PowerMatcher,
+backed by large-scale simulation study
+(Grid4Vehicles project).
+
+Active network management: distribution
+grid peak-load-reductions of 3035%.
+
+First EV test:
+about 2007;
+Grid4Vehicles
+simulation:
+2010
+
+SmartHouse/
+SmartGrid scalability
+field experiment
+
+Scalability stress test of large-scale
+information communications technology
+(ICT) architecture connected to a cluster
+of real households.
+
+Scalability beyond 1 million customers is
+feasible.
+
+2010
+
+EcoGrid EU
+demonstration
+
+Large-scale demonstration of a novel
+real-time market involving 5-min
+electricity prices communicated to
+about 1,800 households, of which
+a subset ran PowerMatchers ICT
+architecture.
+
+Large-scale roll-out experience for
+price-based and transactive smart grid
+technologies. Unleashed flexibility from a
+large number of heat pumps, making 20%
+of their power consumption shiftable in
+time.
+
+20112015
+
+Couperus
+
+Approximately 300 apartments
+with heat pumps (HPs) involved
+in simultaneous optimization for
+energy trade and active distribution
+management.
+
+Electricity market related gain: wind
+imbalance reduction of 80%.
+Active network management: proof
+of principle of locational-price based
+congestion management. Operation of
+HPs shiftable up to eight hours.
+
+20112015
+
+temperature of 19, then his/her heat pumps agent will keep
+the temperature between 18.6 and 19.4 C. A temperature
+variation in such a narrow bandwidth is not noticed by the
+
+resident, while it allows the agent to postpone activation of a
+heat pump by six to eight hours.
+During the demonstration, the wind imbalance was
+reduced by more than 80%. At the same time the system
+showed it was capable of performing locational-price based
+congestion management in the local distribution grid.
+
+Lessons Learned
+
+figure 9. The Couperus building in The Hague, The Netherlands, was used as a TE test site. (Photo courtesy of Van
+Dongen-Koschuch Architects and Planners.)
+44
+
+ieee power & energy magazine
+
+The analysis results from these demonstrations indicate that
+independent decision making based on a frequently updated
+market-based signal can regulate the overall feeder load for
+economic and reliability benefits. Automation with simple
+user interfaces and program design is important to make this
+work. The technology must also be inexpensive and simple
+to install and maintain. The costs of deploying specialized
+communications and automation that can host the intelligent
+agents will likely lead to deployment approaches that incorporate these technologies for additional purposes (such as
+general building automation, premises security, or healthmonitoring systems).
+may/june 2016
+
+Independent decision making based on a frequently updated
+market-based signal can regulate the overall feeder load for
+economic and reliability benefits.
+In all of the demonstrations, it would have been interesting to collect and analyze further data. For example, to
+analyze household learning patterns and thermostat interactions, a demonstration program needs to operate over a long
+period (perhaps two years). This would also allow for analysis of seasonal variations. In addition, a greater population of
+responsive resources on the same feeder could provide direct
+measurement of the ability of a portfolio of resources to regulate feeder power levels for peak shaving and other benefits.
+Lastly, additional sensing of equipment operation could corroborate the derived information deduced by statistical analysis of metered data and better inform simulation models.
+The demonstrations only begin to address some of the
+many questions about such a transactive system. Due to the
+complex nature of interactions between consumers, smart
+equipment, and the electricity system, as well as the changing demands due to weather and time of day, week, and year,
+characterizing the amount of flexibility in the distribution
+system and the elasticity of demand-side resources to price
+is very difficult. The field data begins to provide insights, but
+predictive modeling and bell-weather metrics remain immature. More work is needed to develop a theoretical basis for
+analyzing these complex systems and testing designs for performance and stability prior to deployments.
+
+Conclusions and Future Directions
+The potential benefits from harnessing the flexibility in the
+operation of distributed energy resources to help meet an
+evolving set of requirements for safe, efficient, reliable, and
+resilient energy systems grows daily. TE concepts embrace
+the complex system of systems nature of electric power
+systems to present practical, scalable ways to integrate the
+assets of many self-directed participants working toward a
+mixed set of individual and shared objectives. Characteristics of any reasonable solution need to address the following
+important concerns:
+ mitigate privacy, free will, and cybersecurity issues
+ define a simple cyberinteraction paradigm, applicable
+at all levels of the system and supported by standards
+ offer viable transition paths that coexist with traditional approaches
+ provide smooth, stable, predictable operation and
+graceful degraded performance when stressed.
+A transition to TE at the distribution level of the system challenges the status quo. Successful outcomes require
+acceptance by business and policy decision makers as a
+cost-effective, valid, equitable, and advantageous revenue/
+may/june 2016
+
+investment recovery mechanism. In addition, a vibrant vendor community (or technology ecosystem) must emerge to
+supply a healthy variety of transactional products and services, such as operating platforms that support the integration of a heterogeneous mix of equipment, as well as the
+associated system and device-level automation needed to
+negotiate, operate to expectations, and reconcile agreedupon transactions.
+Work is underway to socialize TE concepts through the
+GWAC in North America and FAN in Europe, while FAN is
+also advancing TE framework standards and the Smart Grid
+Interoperability Panel is facilitating the extension of existing
+standards and development of new interface standards.
+
+For Further Reading
+GridWise Transactive Energy Framework. (2015, Jan.). [Online]. Available: http://www.gridwiseac.org/about/transactive_
+energy.aspx
+Olympic Peninsula: Pacific Northwest GridWise Testbed
+Demonstration Projects: Part I report (PNNL-17167). (2007,
+Oct.). [Online]. Available: http://www2.econ.iastate.edu/
+tesfatsi/OlympicPeninsulaProject.FinalReport_pnnl17167.pdf
+AEP Ohio gridSMART Demonstration Project Final
+Technical Report. (2014, June). [Online]. Available: https://
+www.smartgrid.gov/project/aep_ohio_gridsmartsm_
+demonstration_project
+Pacific Northwest Smart Grid Demonstration Project
+Technology Performance Report. (2015, June). [Online].
+Available: https://www.smartgrid.gov/document/Pacific_
+Northwest_Smart_Grid_Technology_Performance.html
+PowerMatcher and FAN Alliance websites. (2016). [Online]. Available: www.PowerMatcher.net, www.flexible
+power.org
+K. Kok. (2013, July). The PowerMatcher: Smart Coordination for the Smart Electricity Grid Book. [Online]. Available: www.tinyurl.com/PowerMatcherBook
+O. Pruissen, et al., Simultaneous imbalance reduction
+and peak shaving using field operational VPP with heat
+pumps, in Proc. 23rd Int. Conf. on Electricity Distribution
+CIRED, 2015.
+
+Biographies
+Koen Kok is with The Netherlands Organization for Applied
+Scientific Research and the Technical University of Denmark, Roskilde.
+Steve Widergren is with Pacific Northwest National Labp&e
+oratory, Richland, Washington.
+ieee power & energy magazine
+
+45
+
+

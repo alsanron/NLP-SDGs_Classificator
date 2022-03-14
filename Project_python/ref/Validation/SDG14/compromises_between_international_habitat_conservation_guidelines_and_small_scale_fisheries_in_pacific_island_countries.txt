@@ -1,0 +1,1064 @@
+LETTER
+
+Compromises between international habitat conservation
+guidelines and small-scale fisheries in Pacific island countries
+Melanie A. Hamel1,2 , Serge Andrefouet1 , & Robert L. Pressey2
+1
+2
+
+Institut de Recherche pour le Developpement, Centre de Noumea, B.P. A5, 98848, Noumea, New-Caledonia
+ARC Centre of Excellence for Coral Reef Studies, James Cook University, Townsville, QLD 4811 Australia
+
+Keywords
+Conservation planning; marine protected areas;
+reef fisheries; habitat maps; Pacific islands; CBD;
+conservation targets; Millennium Coral Reef
+Mapping Project.
+Correspondence
+Melanie A. Hamel, ARC Centre of Excellence for
+Coral Reef Studies, James Cook University,
+Townsville, QLD 4811, Australia. E-mail:
+melanie.hamel@my.jcu.edu.au
+Received
+2 May 2012
+Accepted
+30 July 2012
+Editor
+Leah Gerber
+
+Abstract
+Wallis, Alofi, and Futuna are three small islands in the central Pacific Ocean,
+characterized by different reef geomorphologies. Following a request from the
+local Environment Service, we developed an indicative conservation plan for
+each island with two objectives: (1) representing 20% of the extent of each
+coral reef habitat within no-take areas while (2) keeping all subsistence fishing
+grounds open for extraction. The first objective was more ambitious than the
+current Convention on Biological Diversity (Aichi) targets. We found that both
+objectives could not be achieved simultaneously and that large compromises
+are needed. Due to the small size of these islands, and the dependence of local
+communities on coral reef resources, the fishery objective significantly limited
+the extent of most habitats available for conservation. The problem is exacerbated if the conservation plan uses larger conservation units and more complex
+habitat typologies. Our results indicate that international conservation guidelines should be carefully adapted to small Pacific islands and that incentives to
+make feasible the necessary reductions in available fishing grounds will probably be needed.
+
+doi: 10.1111/j.1755-263X.2012.00285.x
+
+Introduction
+As a response to increasing global and local threats to
+marine and coastal ecosystems, a worldwide system of
+plans of action with ambitious conservation guidelines
+has been established by the international community
+(Butchart et al. 2010; Wabnitz et al. 2010). These guidelines typically target percentage representation of marine and coastal habitats within marine-protected areas
+(MPAs), involving various levels of restrictions on extractive uses within the seven International Union for
+Conservation of Nature (IUCN)-protected area management categories (IUCN 2008; WCPA). If reached successfully, these representation objectives are expected to
+help protect habitats, promote the viability of species,
+and ensure long-term and sustainable benefits to fisheries, thus sustaining economies and livelihoods as well as
+biodiversity.
+
+46
+
+In 2003, participants in the Cross-cutting Theme on
+Marine Issues at the 5th IUCN World Parks Congress in
+Durban, South Africa, called on the international community to include in networks of MPAs at least 2030%
+of each marine habitat by 2012 (IUCN World Parks
+Congress 2005). Since then, targets such as these have
+been identified for countries or whole regions. Regional
+action plans target protection in no-take areas of at least
+20% of habitats associated with coral reefs (Coral Triangle
+Initiative 2008), or effective conservation of at least 30%
+of near-shore marine resources by 2020 (The Micronesia
+Challenge 2006). The US national conservation strategy
+aims at protecting at least 20% of all coral reefs and associated habitats in each major island group and Florida
+(United States Coral Reef Task Force 2000). In Choiseul,
+in Solomon Islands, the local conservation strategy aims
+to protect 10% of the original extent of each terrestrial
+and marine ecosystem (Lipsett-Moore et al. 2010).
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+M. A. Hamel et al.
+
+In 2010, based on the last meeting of the Conference
+of the Parties to the Convention on Biological Diversity
+in Nagoya, Japan, the previous 2030% global targets
+were revised and the new objective is to protect 10%
+of coastal and marine areas [. . .] through [. . .] systems of
+protected areas and other effective area-based conservation measures by 2020 (UNEP/CBD/COP/10/X/2 2010).
+Yet, there is increasing recognition that (1) percentages
+larger than 10% are likely needed in the longer term
+for effective conservation (Rodrigues & Gaston 2001;
+Svancara et al. 2005; Gaines et al. 2010), and (2) failing to
+frame targets in terms of individual habitats (e.g., rezoning of the Great Barrier Reef Marine Park, Fernandes et al.
+2009) is likely to strongly bias conservation to habitats
+easiest to protect and perhaps least in need of protection,
+as demonstrated widely on land (Scott et al. 2001).
+Although quantitative conservation objectives are
+a foundation of systematic conservation planning
+(Margules & Pressey 2000) and a common tool in policy,
+many conservation plans based on such targets are
+either infeasible or ineffective in the short term (Agardy
+et al. 2003; Mace et al. 2010; Wood 2011). Important
+reasons include limited funds, inadequate biological or
+socioeconomic data, and insufficient areas available for
+conservation. The question of the ecological relevance
+of targets and general conservation guidelines is being
+debated within the scientific community (Carwardine
+et al. 2009) but the difficulty of complying with these
+recommendations is not yet well-addressed.
+How achievable are these global conservation objectives in regions such as in developing Pacific Islands,
+where people depend heavily on marine habitats and associated resources for day-to-day survival (Dalzell et al.
+1996; Bell et al. 2009; Govan et al. 2009)? Because of their
+small sizes and the dependence of local communities on
+coastal resources, these countries might be unable to balance food security with the closure of near-shore fisheries
+for protection of habitats. Finding areas available for conservation that are not used for resource extraction can
+be difficult in these countries and, if fishing grounds are
+to be closed, there is often limited scope for compensating resource users or finding them alternative livelihoods
+(Govan et al. 2009). Consequently, tensions are likely in
+Pacific Island countries between resource users and proponents of conservation (Hviding 2006).
+In this article, we demonstrate the conflict between
+conservation objectives based on the previous mid to
+upper range of international conservation guidelines
+and small-scale fisheries objectives for the three Pacific
+islands of Wallis, Alofi and Futuna, a French overseas
+territory where coral reef habitats are mainly exploited
+for subsistence. We focus on a conservation objective of
+20% of each marine habitat for two reasons. First, we
+
+Conservation and fisheries in Pacific islands
+
+believe that the present 11th Aichi target (10%) will
+be seen as an underestimate of required protection of
+near-shore marine environments (Allison et al. 2003;
+Botsford et al. 2003). Second, we note that some jurisdictions have specified larger percentages (2030, or even
+greater) of near-shore marine habitats to be protected
+(Airame et al. 2003; Fernandes et al. 2009; Mills et al.
+2011). Specifically, we show the spatial extent of the
+trade-off between sets of objectives for conservation and
+fisheries. In this case, we considered the best protection
+option for marine habitats and associated resources (i.e.,
+the implementation of no-take zones) and the best-case
+short-term scenario for fisheries (i.e., no restriction
+on take in current fishing grounds). Different sizes of
+potential no-take zones and different habitat data were
+tested to understand their influence on the trade-offs
+between conservation and fisheries objectives.
+
+Materials and methods
+Study sites and context
+Wallis, Alofi, and Futuna are three Polynesian high
+islands belonging to the French Territory of Wallis and
+Futuna Islands, in the central South Pacific (Figures 1a
+and b). Both Wallis and Futuna, the largest islands, are
+inhabited. Alofi is uninhabited but used daily by Futuna
+habitants for agriculture, fishing, and leisure. The three
+islands vary in size and in habitat complexity.
+Because tourism is not well developed, demand for
+reef fish is confined to local communities, who exploit
+the reefs and lagoons for their own subsistence. Almost
+a third of the population practises artisanal small-scale
+fishing in Wallis, Alofi and Futuna, mostly with nets and
+speargun (Egretaud et al. 2007a, b). Most catches are either eaten by the fishers themselves or exchanged or
+given away, with the remainder sold to buy fuel for fishing boats. The total lagoon fishery production, estimated
+at 200300 tonnes per year (Kronen et al. 2008; Ministere
+de lOutre-Mer 2011), is lower than the local demand,
+estimated at 900 tonnes per year (Egretaud et al. 2007b).
+This indicates that reduction in production resulting from
+marine conservation actions will be problematic.
+Thus far, there are no MPAs in Wallis, Alofi, and
+Futuna that have been integrated into a territorial
+management plan (Verducci & Juncker 2007). However, three small informal customary MPAs have been
+established in Wallis, based on a ad hoc decisions between local fishermen, customary authorities, and the
+Territorial Environment Service (Egretaud et al. 2007b).
+Wide agreement among both the local communities and
+authorities to increase the protection of these islands
+reefs and manage their resources led the local authorities
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+47
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+Figure 1 Location of Wallis, Alofi, and Futuna islands (a, b) and main reef features of Futuna and Alofi (c) and Wallis (d).
+
+to launch a territorial Management Plan for Marine Areas
+(in French, Plan de Gestion des Espaces Maritimes). Based
+on Frances national biodiversity strategy (Ministere de
+lEcologie du Developpement durable des Transports et
+du Logement 2011) which parallels the Aichi biodiversity
+targets (UNEP/CBD/COP/10/X/2 2010), the future territorial management plan for Wallis aims to move from
+the existing informal reserves to a new MPA network at
+the territory level.
+
+Objectives for the indicative conservation plan
+for this study
+An indicative conservation plan was set up for the three
+islands to reflect objectives of the Territorial Environment
+Service, with two sets of objectives based respectively
+on international habitat conservation guidelines and local fishery requirements. Wallis managers initially considered the guidelines of the previous 20022010 CBD
+Strategic Plan, which targeted a mid- to long-term protection of 2030% of each habitat (IUCN World Parks
+Congress 2005). They also considered a network of notake areas as the most efficient tool to provide rapid
+
+48
+
+ecological benefits. Thus, for this study, the conservation objective was to include 20% of the total extent
+of each habitat within no-take areas: a more ambitious
+amount than the new CBD marine target (11th target
+in UNEP/CBD/COP/10/X/2 2010) and, unlike the CBD
+guidelines, not considering zonings that permit extractive
+uses.
+Here, the fishery objective was intended to avoid conflicts with local communities highly dependent on reef
+habitats both culturally and economically. It prevented
+the main current fishing grounds for nets and spearguns
+from being identified as no-take areas. The data and analyses below allowed an assessment of the extent to which
+these potentially conflicting objectives can be reconciled.
+
+Coral reef habitat maps
+Two types of habitat maps with two levels of detail
+were used (see detailed methods in Andrefouet & Dirberg
+2006). First, a high-resolution geomorphic habitat map
+(hereafter the geomorphic map) of the three islands
+was derived from the Millennium Coral Reef Mapping
+Project (Andrefouet et al. 2006). Millennium Coral Reef
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+M. A. Hamel et al.
+
+Mapping Project maps were all created from Landsat 7
+ETM+ satellite imagery at 30-m spatial resolution. Second, a very high-resolution detailed habitat map (hereafter the geomorphic + benthic map), combining geomorphic attributes and benthic data, was derived from
+digital aerial photographs at 2-m spatial resolution (see
+Andrefouet & Dirberg 2006; Andrefouet et al. 2007, and
+Dalleau et al. 2010 for more information on these maps).
+In Wallis, Alofi, and Futuna, geomorphic habitats were
+respectively described in 16, 4, and 3 thematic classes.
+The combination of data in the geomorphic + benthic
+maps allowed habitats to be described in 55, 6, and 3
+thematic classes, respectively, excluding land features. To
+understand how map type would affect the feasibility
+of conservation and fishery objectives, all analyses were
+conducted for both habitat maps.
+
+Fishing grounds data
+In 2006, an environmental study was conducted in
+Wallis, Alofi, and Futuna to initiate the Plan de Gestion
+des Espaces Maritimes (Egretaud et al. 2007a, b). Socioeconomic and environmental data were collected to map
+the different uses of the marine environment and to
+understand the views and expectations of stakeholders
+in terms of management. The fishery geographic information system includes the boundaries of coral reef
+fishing grounds, itemized for different fishing gears and
+techniques (gleaning, line, speargun, net, and informal
+offshore fishing). For our analysis, we focused on net and
+speargun fisheries because they were the dominant gears.
+For Alofi and Futuna, only speargun data were available.
+
+Conservation units
+Each island of interest was partitioned into manageable
+conservation units by superimposing a grid of square cells
+on all areas containing coral reef habitats on the maps. To
+understand whether the size of conservation units would
+affect the feasibility of reconciling conservation and fishery objectives, all analyses were conducted for two different sizes of conservation units (500  500 m and 200 
+200 m, hereafter large and small, respectively).
+
+Reef area left available for conservation
+The set of possible no-take areas or areas left for conservation considered in these analyses initially excluded
+all fished units. For each combination of island/habitat
+map/size of conservation unit, we first measured the proportion of conservation units available for conservation
+when all fishing areas were left open. Within all conservation units (fished, and unfished), we computed the
+
+Conservation and fisheries in Pacific islands
+
+number of habitats (excluding land features) and their
+extent, and the occurrence of net or speargun fishing.
+Then we measured the proportion of habitats that could
+potentially meet the 20% objective within unfished conR
+servation units. All data were analysed using ESRI
+TM
+ArcMap
+10.0 and R (R Development Core Team
+2008).
+
+Trade-off between objectives for habitat
+conservation and small-scale fisheries
+Conservation objectives were fully achieved when 100%
+of habitats could meet the 20% objective. Full achievement of the fishery objective meant that 100% of initial fished units were available for harvest. We measured
+the actual extent to which conservation objectives must
+be compromised to fully achieve the fishery objective,
+and vice versa. For this, we created trade-off curves with
+Marxan (Possingham et al. 2000; Ball et al. 2009), a software system for systematic conservation planning. Fished
+conservation units were attributed a cost of 1. Nonfished
+conservation units had zero cost.
+We applied Marxan iteratively, starting with the set of
+unfished conservation units (full achievement of the fishing objective) and progressively increasing the percentage
+of fished conservation units to be considered as potential
+reserves (allowing increasing achievement of the habitat
+conservation objectives). To do this, we defined a series of
+increasing cost thresholds by the percentages of the total
+fished conservation units that could be moved to no-take
+zones: from 0 to 100% in 10% increments. For each of
+these 11 cost thresholds, 1,000 different sets of conservation units were selected to meet the objectives. Across
+these 1,000 repeat runs, we selected the best solution
+(with the lowest total cost) for each percentage threshold.
+For each threshold, we recorded the proportion of habitats that would meet their objectives in the best solution.
+
+Results
+Avoiding a priori any fishing ground in no-take areas had
+a large impact on the number of conservation units available for conservation, and on the extent of habitats that
+could be protected. At best, for both sizes of conservation units, about 60% of the potential conservation units
+would be left available in both Wallis and Futuna, and
+about 20% in Alofi (Figure 2). In these sets of available conservation units, a substantial proportion of the
+total number of habitats could not meet the 20% objective (unrepresented and under-represented habitats in
+Figure 3).
+Figure 4 shows the spatial distribution of unrepresented and under-represented habitats. Figure 5 shows
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+49
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+ing sizes of conservation units and thematic resolution of
+habitat maps had the greatest impact on the trade-off in
+Futuna, the simpler island in terms of habitats.
+
+Discussion
+
+Figure 2 Percentages of large and small conservation units fished (with
+speargun and net) or available for habitat conservation in Wallis, Alofi, and
+Futuna.
+
+the extent of each habitat left available for conservation (see Table 1 and Table 2 for lists of specific
+under-represented and unrepresented habitats types
+and percentage representation in unfished areas). Fringing reefs are of concern over the three islands. All
+geomorphic fringing reef classes (3/3 for either size of
+conservation unit; Table 1) and most geomorphic + benthic fringing reef classes (11/13 for smaller conservation
+units, 12/13 for larger ones; Table 2) could not meet
+their 20% objectives. In Wallis, barrier reef, and channel habitats would also be under-protected, especially
+when considering geomorphic + benthic habitats and
+larger conservation units (10/26 classes, against 5/26 for
+smaller units). In addition, none of the seagrass beds (4/4
+geomorphic + benthic classes) would be represented in
+Wallis. Using smaller conservation units in Futuna would
+allow all three geomorphic + benthic habitats to meet
+their conservation objectives. Overall, conservation objectives cannot be fully achieved if all fishing grounds are
+avoided, except for Futuna when geomorphic habitats
+and smaller conservation units are considered.
+The trade-off analyses showed that, if local communities harvested 100% of their fishing grounds (full
+achievement of the fishery objective), only 69% of all
+Wallis habitats and 75% of Alofi habitats, at best, can
+meet their conservation objectives (Figure 6). On the
+other hand, for all habitats to reach their objectives, at
+least 20% of fished conservation units must be made
+available for conservation in Wallis and Alofi. In general,
+geomorphic habitats could meet their conservation objectives with less impact on fisheries than geomorphic +
+benthic habitats. The habitat conservation objectives
+were also achieved with less impact on fisheries when
+smaller conservation units were used. A combination of
+geomorphic habitats and smaller conservation units reduced (Wallis, Alofi) or eliminated (Futuna) the tradeoff between conservation and fishery objectives. Modify-
+
+50
+
+Achieving 20% habitat conservation targets within
+no-take areas appears incompatible with the socioeconomicx context of small Pacific island countries such
+as Wallis, Futuna, and Alofi. Managers and conservation
+planners worldwide are already well aware of the tradeoff needed between conservation and fisheries objectives
+(see Proceedings of the Fourth World Fisheries Congress:
+Reconciling Fisheries with Conservation, 2004), and
+MPA designs now account for local socio-economic constraints (Klein et al. 2008). Here, we quantified the extent
+of trade-offs needed to reconcile two conflicting types of
+objectives, in the particular context of small tropical coral
+reef islands, rich in habitats, limited in extent, and with
+high levels of use for daily subsistence, and thus with limited scope to favor habitat protection over food security.
+To our knowledge, no study has previously assessed
+the extent of the compromises needed between fisheries
+and strict habitat conservation in this tropical island context. Our analyses, based on immediately available data
+sets, provide quantitative and spatially explicit answers
+to questions about compromises between core objectives
+for managing marine regions. We found that achievement of both strict conservation and fishery objectives is
+generally not possible in Wallis, Alofi, and Futuna, regardless of the habitat maps and sizes of conservation
+units considered. However, although the 20% no-take
+objectives were not all achievable without reducing fishing areas, the achievement of objectives for specific habitats was greatly influenced by the type of habitat maps
+and the size of the conservation units, so choosing these
+variables carefully is fundamental to understanding such
+trade-offs.
+Our results show that using more detailed habitat
+maps makes the achievement of habitat objectives more
+difficult. Very detailed habitat maps provide a finer
+description of physical and biological variation across
+reef systems, and Dalleau et al. (2010) suggested that
+finer resolution coral reef habitats might also be better
+surrogates of species diversity. However, finer resolution
+maps also contain more habitat classes that need to be
+represented in conservation designs, increasing the total
+area required to achieve objectives. The reason for this
+increase is the greater mismatch between the boundaries
+of conservation units and those of more detailed habitat
+classes, as demonstrated for terrestrial planning by
+Pressey & Logan (1995).
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+Figure 3 Percentages of habitats that were under-represented or unrepresented in units available for conservation after exclusion of fished units.
+Under-represented habitats are those for which conservation objectives
+were only partially achievable (less than 20% of total extent available for
+conservation). Unrepresented habitats were those that could not be protected at all because their entire extents were fished. Figures are shown
+
+for the three islands (Wallis, Alofi, and Futuna), two sizes of conservation
+units (500  500 m and 200  200 m), and two types of maps (geomorphic in blue, and geomorphic + benthic in red). We considered 16
+geomorphic habitats and 55 geomorphic + benthic habitats for Wallis, 4
+geomorphic habitats, and 6 geomorphic + benthic habitats for Alofi, and
+3 geomorphic habitats and 3 geomorphic + benthic habitats for Futuna.
+
+Figure 4 Spatial patterns of under-represented and unrepresented habitat types in units available for conservation after exclusion of fished units,
+both shown in red. Under-represented and unrepresented habitats were
+those for which conservation objectives were only partially achievable
+(more than 80% of total extent unavailable for conservation, so less than
+
+20% available) or not achievable, respectively. Effects of exclusion of fished
+conservation units are shown for each island, two sizes of conservation
+units, and two types of maps. The lower panels show the spatial footprint
+of net and speargun fishing in blue. For Alofi and Futuna Islands, only data
+on speargun fishing could be obtained.
+
+Decisions about the sizes of conservation units also
+influence the potential to achieve both habitat conservation and fishery objectives. In general, smaller
+conservation units allow a more exact habitat representation, for any given spatial and thematic resolution of
+map, in the sense that fewer objectives are over-achieved
+
+(see Mills et al. 2010 for coral reefs; Pressey & Logan
+1995; 1998 for land systems). Our findings agree with
+these studies, showing that smaller conservation units
+lead to easier compromises. However, the appropriate
+size of conservation units must be decided taking account
+of other factors such as data resolution, manageability,
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+51
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+Figure 5 Effects of exclusion of fished conservation units on the extent
+of individual coral reef habitats available for conservation, for the three
+islands, two sizes of conservation units, and two types of maps. Each bar
+corresponds to one habitat class. Habitat class labels have been omitted
+for clarity. Habitats for which conservation objectives were achievable are
+
+shown in green. The vertical green line indicates the 20% objective for
+each habitat. Geomorphic and geomorphic + benthic habitats for which
+conservation objectives were not achievable (less than 20% of total extent available for conservation) are shown, respectively, in blue and red.
+Habitats that could not be protected at all are shown with arrows.
+
+Table 1 Percentages of total extent of geomorphic habitats (level 5 classification) available for conservation after exclusion of all fished conservation
+units (500  500 m and 200  200 m) for Wallis, Alofi, and Futuna. Only under-represented and unrepresented habitats are listed. Points indicate habitat
+types that would not be represented at all in the set of potential reserves. Asterisks indicate habitat types for which the 20% objective could be achieved
+with the smaller conservation units (200 m x 200 m). Under-represented and unrepresented habitats are mapped in red in Figure 4
+
+Wallis
+
+Geomorphology
+(level 1)
+
+Geomorphology
+(level 2)
+
+Oceanic
+
+Oceanic island
+
+Geomorphology
+(level 3)
+Outer Barrier Reef Complex
+Coastal Barrier Reef Complex
+Lagoon exposed fringing
+
+Alofi
+
+Oceanic
+
+Oceanic island
+
+Fringing of coastal barrier complex
+Ocean exposed fringing
+
+Futuna
+
+Oceanic
+
+Oceanic island
+
+Ocean exposed fringing
+
+Geomorphology
+(level 4)a
+
+% surface
+(500  500 m)
+
+% surface
+(200  200 m)
+
+Pass
+Channel
+Barrier reef pinnacle/patch
+Reef flat
+Enclosed lagoon or basin
+Reef flat
+Forereef
+Reef flat
+Forereef
+Reef flat
+
+
+
+8
+
+
+
+4
+3
+11
+10
+
+6
+
+20a
+2
+
+
+15
+20a
+20a
+20a
+
+a
+
+Our analyses in this study were for the level 5 of the geomorphic classification, which is a combination of levels 1, 2, 3, and 4. Only unrepresented or
+under-represented habitats are listed here.
+
+52
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+Table 2 Percentages of total extent of geomorphic + benthic habitats available for conservation after exclusion of all fished conservation units (500 
+500 m and 200  200 m) for Wallis, Alofi and Futuna. Only under-represented and unrepresented habitats are listed. Points indicate habitat types that
+would not be represented at all in the set of potential reserves. Asterisks indicate habitat types for which the 20% objective could be achieved with the
+smaller conservation units (200  200 m) only. Under-represented and unrepresented habitats are mapped in red in Figure 4
+Geomorphology
+(level 1)
+Wallis
+
+Fringing reef
+
+Geomorphology
+(level 2)
+Reef flat
+Terrace
+
+Reef slope
+
+Coastal barrier reef
+
+Reef flat
+Terrace
+
+Barrier reef
+
+Reef flat
+Terrace
+Pass
+
+Lagoon patch reef
+Alofi
+
+Fringing reef
+
+Reef flat
+Terrace
+Reef flat
+Reef slope
+Reef flat
+
+Futuna
+
+Fringing reef
+
+Reef flat
+Reef slope
+
+Benthos (level 1)a
+
+% surface
+(500  500 m)
+
+% surface
+(200  200 m)
+
+Hard substrate with dispersed coral
+Soft substrate with dispersed coral
+Seagrass/algae bed
+Seagrass/algae bed
+Seagrass/algae bed
+Seagrass/algae bed
+Coral
+Soft substrate with dispersed coral
+Soft substrate
+Soft substrate
+Coral
+Soft substrate
+Hard substrate with dispersed coral
+Mixed substrate with dispersed coral
+Algae bed
+Soft substrate with dispersed coral
+Mixed substrate with dispersed coral
+Coral
+Algae bed
+Soft substrate
+Hard substrate
+Hard substrate with dispersed coral
+Soft substrate with dispersed coral
+Soft substrate
+Hard substrate
+Hard substrate with dispersed coral
+Hard substrate with dispersed coral
+Coral
+Hard substrate
+Coral
+Hard substrate with dispersed coral
+
+
+
+
+
+
+2
+8
+1
+
+3
+
+
+9
+16
+
+9
+18
+
+
+
+
+
+
+19
+4
+2
+6
+6
+12
+
+4
+
+1
+2
+
+1
+
+6
+12
+8
+
+20a
+
+
+20a
+20a
+20a
+20a
+20a
+
+16
+
+2
+
+
+20a
+12
+5
+20a
+20a
+20a
+
+13
+
+a
+Our analyses in this study were for a combination of both geomorphology levels and benthos level 1 of the geomorphic + benthic classification. Only
+unrepresented or under-represented habitats are listed here.
+
+and effectiveness of conservation actions in the long-run
+(Gaines et al. 2010; Mills et al. 2010).
+Prioritizing the fishery objective in Wallis, Alofi, and
+Futuna, as requested by the Territorial Environment Service, resulted in a deficit of reef areas available for conservation. The consequences were that several habitat
+types could not be protected at all, or could only partially
+achieve their objectives. These results were expected
+because several types of reef habitats are preferentially
+used by net and speargun fishermen for their accessibility, exposure, and resource abundance.
+An extreme response to avoiding conflicts between
+conservation and fishery objectives is to abandon heavily
+fished or overfished areas to further extraction. However,
+failing to protect such areas from further fishing is likely
+
+to preclude their ability to restore or enhance stocks, and
+ignores the potential benefits of spillover of larvae and
+adults to supplement other fished areas. Therefore, avoiding conflicts at all costs might not be the best strategy
+in the long run, even to maximize benefits to fishermen
+themselves. Although subject to controversy, there is a
+now a wide body of work demonstrating the benefits of
+MPAs for adjacent fisheries (Roberts et al. 2001; Hilborn
+et al. 2004; Russ et al. 2004; Kaiser 2005; Harrison et al.
+2012;). To incorporate these perspectives, our indicative
+conservation designs could be refined by considering past
+fishing activities, fishing pressure and yields, and the locations of potential MPAs relative to fished areas.
+The achievement of objectives for both fisheries and
+conservation as we defined them here for small Pacific
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+53
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+Figure 6 Trade-offs between conservation and fishery objectives in Wallis, Alofi, and Futuna, for two types of maps (geomorphic and geomorphic +
+benthic) and two sizes of conservation units (500  500 m and 200 
+200 m).Percentage of conservation objective achieved corresponds to
+
+the percentage of habitats that met their 20% objectives. Percentage of
+fishery objective achieved corresponds to the percentage of fished conservation units excluded from the sets of conservation units selected as
+potential no-take areas.
+
+islands is clearly not feasible without compromises on
+both sides. Methods to identify achievable, realistic
+objectives early in the process of conservation planning
+are needed urgently for these countries. By achievable,
+we mean objectives that can actually be reached through
+effective conservation and management actions, not
+simply on paper. By realistic, we mean conservation
+objectives that converge towards the strict application of
+international objectives while allowing some flexibility to
+minimize socio-economic impacts on local communities
+heavily dependent on fishing. On the fisheries side,
+objectives must allow flexibility to minimize impacts on
+targeted species, other species, and physical habitats.
+Current international conservation guidelines such as
+the CBD targets have moderated their options through
+time to allow some flexibility for complying countries.
+If no-take areas are seen by some as the best protection
+option for marine habitats and associated resources (see
+Graham et al. 2011 for a review on benefits for coral
+reefs), they are also the most difficult to implement.
+
+Low compliance can be expected, especially in small
+Pacific countries that depend heavily on coastal habitats
+and associated resources. There is now a multitude of
+spatial arrangements for marine management that do not
+require total and permanent restrictions on harvest (see
+for example Cinner & Aswani 2007; Gaines et al. 2010;
+Agardy et al. 2011; Mills et al. 2011). The IUCN-protected
+area management categories themselves offer a range of
+options to avoid the hard trade-offs demonstrated in this
+article.
+Incentives to accept marine conservation measures are
+also being investigated and include compensatory services such as schools or medical facilities (e.g., Aswani &
+Weiant 2004) and buyouts or alternative livelihoods (e.g.
+Niesten & Gjertsen 2010; Jones & Qiu 2011). For islands
+where most fishing activities provide food for subsistence,
+incentives might also need to include additional imports
+of food. Our analyses show that the extent of trade-offs
+between objectives and the need for such incentives
+can be demonstrated readily. Appropriate responses to
+
+54
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+M. A. Hamel et al.
+
+trade-offs must then be formulated amongst the affected
+communities, decision makers concerned with fisheries
+and conservation, and conservation scientists.
+
+Acknowledgments
+We thank the Service Territorial de lEnvironnement of Wallis and Futuna for funding this study and making the territorial management plan for marine areas data available
+(Egretaud et al. 2007a, b). MAH and RLP acknowledge
+the support of the Australian Research Council.
+
+References
+Agardy, T., Bridgewater, P., Crosby, M.P. et al. (2003)
+Dangerous targets? Unresolved issues and ideological
+clashes around marine protected areas. Aquat. Conserv. 13,
+353-367.
+Agardy, T., di Sciara, G.N. & Christie, P. (2011) Mind the gap:
+addressing the shortcomings of marine protected areas
+through large scale marine spatial planning. Mar. Policy 35,
+226-232.
+Airame, S., Dugan, J.E., Lafferty, K.D., Leslie, H., McArdle,
+D.A. & Warner, R.R. (2003) Applying ecological criteria to
+marine reserve design: a case study from the California
+Channel Islands. Eco. App. 13, S170-S184.
+Allison, G.W., Gaines, S.D., Lubchenco, J. & Possingham, H.P.
+(2003) Ensuring persistence of marine reserves:
+catastrophes require adopting an insurance factor. Eco. App.
+13, S8-S24.
+Andrefouet, S. & Dirberg, G. (2006) Cartographie et
+inventaire du systeme recifal de Wallis, Futuna et alofi par
+imagerie satellitaire Landsat 7 ETM+ et
+orthophotographies aeriennes a haute resolution spatiale.
+Conventions Sciences de la Mer, Biologie Marine. Institut de
+Recherche pour le Developpement, Noumea.
+Andrefouet, S., Muller-Karger, F.E., Robinson, J.A. et al.
+(2006) Global assessment of modern coral reef extent and
+diversity for regional science and management
+applications: a view from space. Pages 1732-1745. in Y.
+Suzuki, T. Nakamori et al. editors. 10th ICRS. Japanese
+Coral Reef Society, Okinawa, Japan.
+Andrefouet, S., Wabnitz, C. & Chauvin, C. (2007) Aide a la
+definition daires marines protegees pour la conservation
+de la biodiversite du systeme recifo-lagonaire de Wallis.
+1ere Partie : compilation et validation des donnees
+biologiques et habitats. Rapport Intermediaire. p. 18.
+Conventions Sciences de la Mer, Biologie Marine. Institut de
+Recherche pour le Developpement (IRD), Noumea, New
+Caledonia.
+Aswani, S. & Weiant, P. (2004) Scientific evaluation in
+womens participatory management: monitoring marine
+invertebrate refugia in the Solomon Islands. Hum. Organ.
+63, 301-319.
+
+Conservation and fisheries in Pacific islands
+
+Ball, I.R., Possingham, H.P. & Watts, M. (2009) Marxan and
+relatives: software for spatial conservation prioritisation. in
+A. Moilanen, K.A. Wilson, H.P. Possingham, editors. Spatial
+conservation prioritisation: quantitative methods and
+computational tools. Oxford University Press, Oxford, UK.
+Bell, J.D., Kronen, M., Vunisea, A. et al. (2009) Planning the
+use of fish for food security in the Pacific. Mar. Policy 33,
+64-76.
+Botsford, L.W., Micheli, F. & Hastings, A. (2003) Principles for
+the design of marine reserves. Eco. App. 13, S25-S31.
+Butchart, S.H.M., Walpole, M., Collen, B. et al. (2010) Global
+biodiversity: indicators of recent declines. Science 328,
+1164-1168.
+Carwardine, J., Klein, C.J., Wilson, K.A., Pressey, R.L. &
+Possingham, H.P. (2009) Hitting the target and missing the
+point: target-based conservation planning in context.
+Conserv. Lett. 2, 3-10.
+Cinner, J.E. & Aswani, S. (2007) Integrating customary
+management into marine conservation. Biol. Conserv. 140,
+201-216.
+Coral Triangle Initiative. (2008) Regional plan of action.
+Dalleau, M., Andrefouet, A., Wabnitz, C. et al. (2010) Use of
+habitats as surrogates of biodiversity for efficient coral reef
+conservation planning in Pacific Ocean islands. Conserv.
+Biol. 24, 541-552.
+Dalzell, P., Adams, T.J.H. & Polunin, N.V.C. (1996) Coastal
+fisheries in the Pacific islands. Oceanogr. Mar. Biol., Vol 34
+34, 395-531.
+Egretaud, C., Jouvin, B., Fare, H. & Quinquis, B. (2007a)
+Diagnostic environnemental de Futuna et alofi en vue
+de letablissement dun plan de gestion des espaces
+maritimes (PGEM). Composante 1AProjet 1A2: Appui aux
+Aires Marines Protegees. Coral Reef Initiatives for the Pacific
+(CRISP).
+Egretaud, C., Jouvin, B., Fare, H. & Quinquis, B. (2007b)
+Diagnostic environnemental de Wallis en vue de
+letablissement dun plan de gestion des espaces maritimes
+(PGEM). Composante 1AProjet 1A2: Appui aux Aires Marines
+Protegees. Coral Reef Initiatives for the Pacific (CRISP).
+Fernandes, L., Day, J., Kerrigan, B. et al. (2009) A process to
+design a network of marine no-take areas: lessons from the
+Great Barrier Reef. Ocean Coast. Manag. 52, 439-447.
+Gaines, S.D., White, C., Carr, M.H. & Palumbi, S.R. (2010)
+Designing marine reserve networks for both conservation
+and fisheries management. Proc. Natl. Acad. Sci. USA 107,
+18286-18293.
+Govan, H., Tawake, A., Tabunakawai, K. et al. (2009) Status
+and potential of locally-managed marine areas in the South
+Pacific: meeting nature conservation and sustainable
+livelihood targets through wide-spread implementation
+of LMMAs. p. 95 + 95 annexes. SPREP/WWF/
+WorldFish-Reefbase/CRISP.
+Graham, N.A.J., Ainsworth, T.D., Baird, A.H. et al. (2011)
+From microbes to people: tractable benefits of no-take
+areas for coral reefs. Pages 105-135. in R.N. Gibson, R.J.A.
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+55
+
+M. A. Hamel et al.
+
+Conservation and fisheries in Pacific islands
+
+Atkinson, J.D.M. Gordon, editors. Oceanogr. Mar. Biol.: Ann.
+Rev., Vol 49.
+Harrison, H.B., Williamson, D.H., Evans, R.D. et al. (2012)
+Larval export from marine reserves and the recruitment
+benefit for fish and fisheries. Curr. Biol., 22,
+1023-1028.
+Hilborn, R., Stokes, K., Maguire, J.J. et al. (2004) When can
+marine reserves improve fisheries management? Ocean
+Coast. Manag. 47, 197-205.
+Hviding, E. (2006) Knowing and managing biodiversity in the
+Pacific Islands: challenges of environmentalism in Marovo
+Lagoon. Int. Soc. Sci. J. 58, 6985.
+IUCN. (2008) Guidelines for Applying Protected Area Management
+Categories. N. Dudley editor. Gland, Switzerland.
+IUCN World Parks Congress. (2005) Vth IUCN World Parks
+Congress recommendations.
+Jones, P. & Qiu, W. (2011) Governing marine protected
+areasGetting the balance right. Technical report. United
+Nations Environment Programme.
+Kaiser, M.J. (2005) Are marine protected areas a red herring
+or fisheries panacea? Can. J. Fish. Aquat. Sci. 62,
+1194-1199.
+Klein, C.J., Chan, A., Kircher, L. et al. (2008) Striking a
+balance between biodiversity conservation and
+socioeconomic viability in the design of marine protected
+areas. Conserv. Biol. 22, 691-700.
+Kronen, M., Tardy, E., Boblin, P. et al. (2008) Wallis and
+Futuna country report: profile and results from in-country
+survey work (August to December 2005 and March 2006).
+Pacific Regional Oceanic and Coastal Fisheries Development
+Programme (PROCFish, coastal component). Pacific Regional
+Oceanic and Coastal Fisheries Development Programme
+(PROCFish/C/CoFish) / Secretariat of the Pacific
+Community.
+Lipsett-Moore, G., Hamilton, R., Peterson, N. et al. (2010)
+Ridges to reefs conservation plan for Choiseul Province,
+Solomon Islands. p. 53 pp. TNC Pacific Islands Countries
+Report.
+Mace, G.M., Cramer, W., Daz, S. et al. (2010) Biodiversity
+targets after 2010. Curr. Opin. Environ. Sustain. 2, 3-8.
+Margules, C.R. & Pressey, R.L. (2000) Systematic
+conservation planning. Nature 405, 243-253.
+Mills, M., Jupiter, S.D., Pressey, R.L., Ban, N.C. & Comley, J.
+(2011) Incorporating effectiveness of community-based
+management in a national marine gap analysis for Fiji.
+Conserv. Biol. 25, 1155-1164.
+Mills, M., Pressey, R.L., Weeks, R., Foale, S. & Ban, N.C.
+(2010) A mismatch of scales: challenges in planning for
+implementation of marine protected areas in the Coral
+Triangle. Conserv. Lett. 3, 291-303.
+Ministere de lEcologie du Developpement durable des
+Transports et du Logement. (2011) Strategie nationale
+pour la biodiversite 20112020. Ministere de lEcologie du
+Developpement durable des Transports et du Logement;
+
+56
+
+Direction generale de lAmenagement, du Logement et de
+la Nature.
+Ministere de lOutre-Mer. (2011).
+Niesten, E. & Gjertsen, H. (2010) Economic incentives for
+marine conservation. Science and Knowledge Division,
+Conservation International, Arlington, Virginia, USA.
+Possingham, H.P., Ball, I.R. & Andelman, S. (2000)
+Mathematical methods for identifying representative
+reserve networks. Pages 291-305 in S. Ferson, M.
+Burgman, editors. Quantitative methods for conservation
+biology. Springer-Verlag, New York.
+Pressey, R.L. & Logan, V.S. (1995) Reserve coverage and
+requirements in relation to partitioning and generalization
+of land classes: analyses for western New South Wales.
+Conserv. Biol. 9, 1506-1517.
+Pressey, R.L. & Logan, V.S. (1998) Size of selection units for
+future reserves and its influence on actual vs. targeted
+representation of features: a case study in western New
+South Wales. Biol. Conserv. 85, 305-319.
+R Development Core Team. (2008) R: A language and
+environment for statistical computing. R Foundation for
+Statistical Computing, Vienna, Austria.
+Roberts, C.M., Bohnsack, J.A., Gell, F., Hawkins, J.P. &
+Goodridge, R. (2001) Effects of marine reserves on adjacent
+fisheries. Science 294, 1920-1923.
+Rodrigues, A.S.L. & Gaston, K.J. (2001) How large do reserve
+networks need to be? Ecol. Lett. 4, 602-609.
+Russ, G.R., Alcala, A.C., Maypa, A.P., Calumpong, H.P. &
+White, A.T. (2004) Marine reserve benefits local fisheries.
+Ecol. Appl. 14, 597-606.
+Scott, J.M., Davis, F.W., McGhie, R.G., Wright, R.G., Groves,
+C. & Estes, J. (2001) Nature reserves: do they capture the
+full range of Americas biological diversity? Ecol. Appl. 11,
+999-1007.
+Svancara, L.K., Brannon, R., Scott, J.M., Groves, C.R., Noss,
+R.F. & Pressey, R.L. (2005) Policy-driven versus
+evidence-based conservation: a review of political targets
+and biological needs. Bioscience 55, 989-995.
+The Micronesia Challenge. (2006) Declaration of
+commitment: The Micronesia Challenge.
+UNEP/CBD/COP/10/X/2. (2010) Strategic plan for
+biodiversity 20112020. Pages in 18-29 Conference of the
+parties to the Convention on Biological Diversity (Tenth meeting).
+Nagoya, Japan.
+United States Coral Reef Task Force. (2000) The national
+action plan to conserve coral reefs. Washington, D.C.
+Verducci, M. & Juncker, M. (2007) Faisabilite de la mise en
+place dun Plan de Gestion des Espaces Maritimes (PGEM)
+a Alofi, Futuna et Wallis. Rapport de mission. Composante
+1AProjet 1A2: Appui aux Aires Marines Protegees. Coral Reef
+Initiatives for the Pacific (CRISP).
+Wabnitz, C.C.C., Andrefouet, S. & Muller-Karger, F.E. (2010)
+Measuring progress toward global marine conservation
+targets. Front. Ecol. Environ. 8, 124-129.
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+M. A. Hamel et al.
+
+WCPA. (forthcoming) Guidelines for applying the IUCN
+protected area management categories to marine protected
+areas (supplementary to the 2008 Guidelines). IUCN, Gland.
+Wood, L. (2011) Global marine protection targets: how
+S.M.A.R.T are they? Environ. Manag. 47, 525-535.
+
+Conservation and fisheries in Pacific islands
+
+Nielsen, J., Dodson, J.J., Friedland, K., Hamon, T.R., Musick,
+J., Verspoor, E., editors. (2004) Reconciling fisheries with
+conservation: Proceedings of the Fourth World Fisheries
+Congress. in Fourth World Fisheries Congress. American
+Fisheries Society, Vancouver, B.C.
+
+c 2012 Wiley Periodicals, Inc.
+Conservation Letters 6 (2013) 4657 Copyright and Photocopying: 
+
+57
+
+

@@ -1,0 +1,831 @@
+Automated Microscopy and Machine Learning for
+Expert-Level Malaria Field Diagnosis
+Charles B. Delahunt
+
+Courosh Mehanian, Liming Hu, Shawn K. McGuire,
+Cary R. Champlin, Matthew P. Horning,
+Benjamin K. Wilson
+
+Global Good/Intellectual Ventures Laboratory
+Bellevue, Washington, USA
+University of Washington, Seattle, Washington, USA
+
+Global Good/Intellectual Ventures Laboratory
+Bellevue, Washington, USA
+
+Clay M. Thompon
+Creative Creek Software
+Camano Island, Washington, USA
+AbstractThe optical microscope is one of the most widely
+used tools for diagnosing infectious diseases in the developing
+world. Due to its reliance on trained microscopists, field
+microscopy often suffers from poor sensitivity, specificity, and
+reproducibility. The goal of this work, called the Autoscope, is a
+low-cost automated digital microscope coupled with a set of
+computer vision and classification algorithms, which can
+accurately diagnose of a variety of infectious diseases, targeting
+use-cases in the developing world. Our initial target is malaria,
+because of the high difficulty of the task and because manual
+microscopy is currently a central but highly imperfect tool for
+malaria work in the field. In addition to diagnosis, the algorithm
+performs species identification and quantitation of parasite load,
+parameters which are critical in many field applications but
+which are not effectively determined by rapid diagnostic tests
+(RDTs).
+We have built a hardware prototype which can scan
+approximately 0.1 L of blood volume in a standard Giemsastained thick smear blood slide in approximately 20 minutes. We
+have also developed a comprehensive machine learning
+framework, leveraging computer vision and machine learning
+techniques including support vector machines (SVMs) and
+convolutional neural networks (CNNs). The Autoscope has
+undergone successful initial field testing for malaria diagnosis in
+Thailand.
+Keywordsmalaria; microscopy; computer-aided diagnosis;
+computer vision; machine learning.
+
+I. INTRODUCTION
+The optical microscope is one of the most widely used tools
+for diagnosing infectious diseases in the developing world
+[1][2]. There are several reasons for this including its low cost
+per test, the general availability of microscope hardware, and
+its ability to diagnose a variety of diseases. Some common
+diseases diagnosed with microscopes in low-resource settings
+include
+malaria,
+tuberculosis,
+different
+forms
+of
+trypanosomiasis, Borrelia infection, and helminth infection.
+Despite these advantages, field microscopy often suffers from
+poor sensitivity, specificity, and reproducibility. This is due to
+Research sponsored by the Global Good Fund.
+
+978-1-4673-6561-1/15/$31.00 2015 IEEE
+
+393
+
+its reliance on trained microscopists to interpret what is seen
+through the microscope. While quality assurance and
+assessment exist in many areas for microscopy, these face
+many limitations including a shortage of trained experts [3].
+In this work, we present a low-cost automated digital
+microscope called the Autoscope. In addition to automated
+image acquisition, the Autoscope is coupled to a set of
+computer vision and classification algorithms, which can
+accurately diagnose a variety of infectious diseases, targeting
+use cases in the developing world. The goal of Autoscope is to
+provide expert level microscopy with a user interface that is
+operable by a healthcare worker with an average level of
+training.
+Our initial target and the subject of this work is malaria
+diagnosis. We chose malaria as an initial target for several
+reasons. First, malaria remains a significant burden on global
+health, with an estimated 580,000 deaths per year [5]. Accurate
+diagnosis of malaria is an important part of case management.
+Secondly, manual microscopy for malaria is currently a central
+but highly imperfect tool in the field [5][6]. It is likely to
+retain a central role for years to come. Microscopy can perform
+species identification and quantitation of parasite load,
+parameters that are critical in many field applications but
+which are not effectively determined by rapid diagnostic tests
+(RDTs). Lastly, expert level microscopy for malaria is a highly
+difficult task because of the fine resolution required of the
+microscope hardware and the subtle features that must be
+correctly interpreted to accurately diagnose the disease while
+distinguishing between the five pathogenic species in
+humans [15]. By proving Autoscopes capabilities on this task,
+we will demonstrate the ability of a machine to perform one of
+the hardest tasks today performed by field microscopists.
+In this work, we describe some of the technical
+specifications of the Autoscope and its accompanying
+computer vision algorithms, as well as describe the system we
+have developed for training and testing the algorithms. We
+present data and results from a World Health Organization
+(WHO) 55 reference slide set and from a preliminary field test
+in Thailand and discuss future work for the project.
+
+IEEE 2015 Global Humanitarian Technology Conference
+
+II. MATERIALS AND METHODS
+A. Datasets
+The goal of Autoscope is to diagnose malaria using
+Giemsa-stained blood samples from the field (with the high
+variability in quality that field conditions imply), achieving a
+limit of detection (LoD) < 50 parasites/L (i.e. 1 parasite/1E5
+red blood cells), in fully automated fashion. While thin smears
+are generally easier to analyze than thick smears due to clearer
+morphological information, thin smears from the field are
+unreliable in quality and their total usable blood volume is
+insufficient to attain a 50 p/L LoD. Thus, thin smears are not
+practical for diagnosis of field samples, so the Autoscope uses
+thick smears for diagnosis.
+The training data consisted of Giemsa-stained blood
+samples, both Plasmodium falciparum-positive and uninfected,
+from 7 locations worldwide (see Fig. 1). Our goal was to
+maximize variety, since field slides vary tremendously in
+quality, color (e.g. from stain pH), and type of artifacts. In
+addition, falciparum parasites exhibit distinct morphologies at
+different stages of growth. We wished to capture this diversity
+as well. The modules of the algorithm described in this paper
+target P. falciparum, in thick smears only.
+B. Hardware
+The Autoscope hardware shown in Fig. 1 consists of a
+small aluminum chassis approximately 37 cm in height with a
+width and depth of 17 cm and 19 cm respectively. The small
+footprint allows for carry-on travel of the device while also
+minimizing space requirements on a lab benchtop. See 0. The
+initial Autoscope prototype described herein was designed to
+withstand ambient temperature ranges of 5 to 35 C and at
+100% humidity. However, extended testing at the extreme ends
+of this spectrum have not been performed. Maintenance of the
+device consists of cleaning the microscope objective in the
+same manner as a manual microscope. Power consumption of
+the device during scan is ~15.8 W. This does not count laptop
+power consumption. The Autoscope final cost will likely be
+between $1500 and $4000, roughly 1x to 3x the cost of a
+standard lab microscope. Use of the Autoscope does not
+require special skills (although repair would likely not be
+possible by field clinic staff). The Autoscope requires blood
+slides prepared and stained according to current protocols for
+manual microscopists diagnosing malaria via Giemsa stained
+blood slides.
+In order to satisfy the low limit of detection requirements,
+the Autoscope must scan at least 0.1 L of blood, which results
+in 300 fields-of-view (FOV) given the image size produced by
+the camera and the field size of the objective. Given the small
+size of malaria parasites, a 100 1.25 NA oil immersion
+microscope objective is used to adequately resolve features of
+interest inherent in the parasites for proper identification and
+classification. This results in a small depth of field of
+approximately 0.6 m, which leads to the requirement that
+parasites be within approximately 0.3 m of the ideal focal
+depth. To this end, a linear piezo motor (shown in Fig. 1)
+accompanied by an optical (linear) encoder was used to
+provide rapid motion along the z-axis with a resolution of
+ 0.1 m. Focus performance was determined using a Brenner
+
+gradient algorithm across the FOV resulting in a focus score
+for each z-stack level. The score is then used in a Fibonacci
+search algorithm to expedite location of optimal focal depth.
+Parasites in a given FOV are often located at different depths
+and so nine images differing by 0.3 m in height are taken for
+each FOV to ensure an in-focus image of every parasite is
+captured. A 1.0 Watt white LED combined with a diffuser
+results in an exposure time of 8-20 ms, depending on the
+malaria sample being examined. This results in an overall scan
+time of approximately 20 minutes with approximately 0.1 L
+of blood being examined.
+&&&
+!%
+ 
+*#'('#%
+ 
+$' # (!"
+ +'
+
+"%"#%
+ ')
+  
+"%'('#%
+'
+
+Fig. 1. 3D Model of Autoscope chassis
+
+(a)
+
+(b)
+
+Fig. 2. Autoscope (a) on lab bench, (b) in the field at SMRU
+
+TABLE I.
+
+Source
+
+# Negatives
+
+# falciparum
+
+Parasitemia (p/L)
+
+a
+
+50
+
+33
+
+5,000150,000
+
+b
+
+SMRU
+UPCH
+
+LIST OF SLIDES, NEGATIVES AND FALCIPARUM ONLY
+
+50
+
+0
+
+N/A
+
+RITMc
+
+40
+
+3
+
+5001,500
+
+HTDd
+
+1
+
+8
+
+5004,000
+
+ACMEDe
+
+1
+
+5
+
+350141,000
+
+AMREFf
+
+1
+
+16
+
+500300,000
+
+KEMRI
+RITMh
+a.
+b.
+c.
+d.
+e.
+f.
+g.
+h.
+
+g
+
+20
+
+10
+
+100200
+
+20
+
+23
+
+1002,000
+
+Shoklo Malaria Research Unit, Thailand
+Universidad Peruana Cayetano Heredia, Peru
+Research Institute of Tropical Medicine, Philippines
+London Hospital of Tropical Diseases, UK
+Andri Centre of Excellence for Malaria Diagnosis, Nigeria
+African Medical and Research Foundation, Kenya
+Kenya Medical Research Institute, Kenya
+World Health Organization (WHO) dataset from RITM
+
+C. Annotation
+Image sets were manually annotated using a variety of
+software applications having a graphical user interface
+(GUI). Annotations of parasites were cross-checked by
+multiple on-site and off-site experts. Negative samples
+were assumed to be parasite-free, since they were PCRnegative. All annotated objects, as well as sample metadata, were stored in an SQL database. Manual annotation
+recorded only the x-y location of each parasite; best focus
+z-stack level was computed by the algorithm.
+An example of a portion of a field-of-view image is
+shown in Fig. 3a. Two white blood cells can be seen in the
+image, as well as three early-stage P. falciparum
+trophozoites which are indicated with a red plus sign. Fig.
+3b shows a close up of the P. falciparum ring closest to the
+center of the image. The nucleus is a dark, round blob that
+is typically purple in color, although the color can vary
+between blue, violet, and purple depending on the imaging
+characteristics and the Giemsa stain pH. The cytoplasm is
+a somewhat less dark, thin blob that is spatially associated
+with the nucleus (or nuclei). The color is typically blue
+and the shape highly variable. For example, P. falciparum
+trophozoites can look like a semicolon or a basket as well
+as a variety of other shapes. In some instances,
+trophozoites with two nuclei can take on a characteristic
+headphone shape (not shown).
+Another typical characteristic of these images is that
+they contain artifacts (distractors) that share many of the
+same image features as P. falciparum rings. To the
+untrained eye, they can look like parasites, and one of the
+main challenges of Autoscope was to distinguish between
+real parasites and distractors. Application of the Autoscope
+diagnostic algorithms to non-malarial diseases in 2016 will
+provide datasets for pathogens that might act as distractors
+for malaria (e.g. babesia).
+
+D. Image Analysis
+The annotated images provide the ground truth for the
+Autoscope machine learning system. The image analysis
+framework is structured as a classical computer vision
+architecture. The system consists of the following modules:
+1.
+
+Preprocessing
+
+There can be considerable color variability between
+images. Even images captured with the same Autoscope
+device can vary in color based on the pH of the Giemsa
+stain as mentioned above. These color differences are not
+germane to discriminating between parasites and
+distractors. The preprocessing module transforms the
+scanned color images to take on a consistent appearance.
+2.
+
+Detection
+
+The detection module finds parasite candidate
+objects in all the field-of-view images acquired from a
+blood sample. A fast, coarse level of classification is
+employed to detect these candidate locations. Subsequent
+to the detection stage, only candidate object locations are
+examined.
+The ground truth is leveraged to train the Autoscope
+machine learning algorithms by establishing a
+correspondence between the detected objects and the
+annotated parasites. A detected object that coincides with
+an annotated parasite is used as a positive sample to train
+the machine learning algorithm. Annotated parasites that
+are not detected are also used as positive training samples.
+Detected objects that do not correspond to any annotated
+parasite are used as negative training samples (distractors).
+The output of the correspondence algorithm is a set of
+objects that are labeled as either parasites or distractors.
+3.
+
+Segmentation
+
+The segmentation module automatically delineates
+the nucleus and the cytoplasm blobs at candidate object
+locations. This segmentation is performed on positive and
+negative samples alike, mimicking what would be done in
+a field trial where the ground truth is unknown. The
+nucleus and cytoplasm are the cornerstone for many of the
+extracted features that are the basis of the classification
+algorithms.
+4.
+
+Feature extraction
+
+Two feature extraction approaches have been
+adopted in Autoscope: traditional feature engineering as
+well as convolutional neural networks. The traditional
+features can be divided into four major groupings.
+Morphological features capture shaped-based attributes
+that characterize the nucleus and cytoplasm. Color features
+characterize the observed color differences between the
+nucleus and cytoplasm. Texture features help to
+distinguish between distractors which are rich in texture
+from P. falciparum rings which are essentially simple
+objects without texture. Finally, a range of rectangular
+Haar features provide a numerical representation of the
+spatial relationship between nucleus and cytoplasm.
+
+5.
+
+Classification
+
+In the training phase, the labeled objects are used to
+train a classifier based on their computed features. A
+number of different classifiers have been employed in the
+classification module, including a linear support vector
+machine (SVM), a radial basis function SVM (we used the
+libsvm package [16]), a conventional neural network (NN),
+as well as a Gradient-Boosted Decision Tree (GBM). A
+two-stage classifier (linear SVM followed by NN) gave the
+best results. It should be noted that the hyperparameters of
+the classifiers (e.g. C value for a linear SVM) are tuned on
+a validation set, and subsequently applied to testing sets.
+The classifiers output a classifier score in the range [0,1],
+which approximates the probability that a candidate object
+is a parasite.
+
+
+ 
+
+(a)
+
+(b)
+
+Fig. 3. (a) Autoscope FOV image, (b) close-up of P. falciparum
+
+6.
+
+Diagnosis
+
+In validation and testing phases, the diagnosis module
+makes a determination whether a blood sample has malaria
+or not. The determination is based on the classifier scores
+for all of the detected candidate objects. The algorithm
+counts the number of objects above an object-level
+classifier score threshold (). The algorithm then applies a
+second threshold () on the number of objects above the
+classifier threshold .
+In addition to making a determination of whether a
+blood sample is infected, the Autoscope software
+framework computes an estimate of the parasitemia, which
+is defined as the number of parasites per 8,000 white blood
+cells. This is a standard proxy for parasites per microliter
+(p/L), used when the blood volume is not directly
+observable.
+Fig. 5 shows block diagrams for the process flow in the
+training, validation, and testing phases of the Autoscope
+software framework. It is apparent from the figures that the
+preprocessing, detection, segmentation, and feature extraction
+phases are common to all three modes of operation. Objectlevel ground truth annotation is a requirement for the training
+and validation sets. In the validation and testing phases, the
+classifier is operated in prediction mode: training does not
+occur. Validation results are used to tune the classifier
+hyperparameters, and to tune the diagnosis thresholds. Feature
+selection is optionally used to trim the features down to a
+
+minimal discriminatory set. For the testing phase, object-level
+annotation is optional. With ground truth annotation, it is
+possible to report object-level ROC and Precision-Recall
+curves for the testing set. Without it, sample-level sensitivity,
+specificity, and parasitemia accuracy may be reported.
+In the field, the algorithm outputs diagnosis and quantitation
+information, and thumbnails of high-scoring objects (i.e.
+possible parasites) for inspection by the human user. In
+addition, it saves all the images, and a file with each objects
+location, feature, and scoring information.
+III. RESULTS
+A. WHO55 diagnosis
+The algorithm was trained on 27 P. falciparum-positive
+samples (50 FOVs each, several thousand parasites), and 36
+negative samples (50 FOVs each), drawn from all the
+collections listed in Fig. 1 (except KEMRI and RITM WHO).
+The algorithms diagnosis parameters were set by ensuring
+90% sample-level specificity on a validation set of negative
+samples from RITM only.
+The algorithm was then applied to a separate test set,
+consisting of the P. falciparum component of a WHO55 set
+(source: RITM) as well as 3 low-parasitemia samples from
+SMRU. This test set included 20 negative samples, 10 RITM
+P. falciparum samples (parasitemia in the range 100  200
+p/L), and 14 RITM and SMRU P. falciparum samples (200 
+1200 p/L). Fig. 6 shows typical suspected parasites detected
+by the algorithm. TABLE II. gives Autoscope diagnosis
+results. Autoscope sensitivity and specificity exceed the
+diagnosis requirements for a WHO Level 1 (expert)
+microscopist. The algorithm reported in TABLE II. did not
+incorporate CNN-derived features.
+Fig. 4 shows a heat map of the balanced accuracy =
+0.5*(sensitivity + specificity), over the 2-D space of  and .
+Everything to the right of the diagonal black boundary gives
+ 90% specificity on the validation set. This constraint was
+used to set the diagnosis parameters before testing the WHO
+set. The top left region has low accuracy on the WHO set due
+to low specificity. The bottom right region has low accuracy
+due to low sensitivity. The central region has accuracy  90%,
+and also obeys the validation set specificity constraint. Any
+parameter pair in this central region would meet Level 1 WHO
+accuracy requirements. There are other parameter regions to
+the left of the black diagonal boundary which give accuracy
+ 90% on the WHO set, but these regions were rejected during
+tuning on the validation set.
+B. Thailand field test
+As a hardware test, two Autoscopes were deployed to
+SMRU clinics in Thailand during the malaria season Dec 2014
+ Jan 2015. A total of 168 samples were collected and
+processed: 95 negatives, 8 P. falciparum, 62 P. vivax, and 3
+mixed species.
+A version of the algorithm was trained on 11 P.
+falciparum-positive samples (50 FOVs each, total thousands of
+parasites), and 25 negative samples (50 FOVs each), drawn
+
+     
+
+mainly from SMRU samples (excluding samples collected
+during the field test). The diagnosis thresholds were set by
+ensuring 90% sample-level specificity on a validation set of
+negative samples from SMRU only (excluding samples
+collected during the field test). The goal was to tailor training
+to the region where the Autoscope was being tested.
+
+can detect all species (in contrast to, for example, hemozoinbased methods that risk low sensitivity on P. falciparum [17]).
+Therefore, it can potentially make a substantial difference to
+known use cases such as patient case management.
+The results presented here apply only to P. falciparum.
+Two algorithm modules remain: Diagnosis of non-P.
+falciparum species (P. vivax, P. ovale, and P. malariae) on
+thick smear; and species differentiation (e.g. between P. vivax
+and P. ovale) on thin smear. Non-P. falciparum species are
+easier to identify than P. falciparum due to the presence of
+larger late stage parasites. Thin smears are in general easier to
+analyze than thick smears, as stated above. Development
+continues on these two modules, as well as on improvements to
+the P. falciparum module, deeper exploration of convolutional
+neural network architectures, and improvements to the
+hardware (e.g. speed, cost).
+To be maximally useful in the field, an Autoscope should
+also be able to diagnose other parasites (e.g. loa loa, Borrelia)
+and do basic hematology (differential). Since other parasites
+are orders of magnitude larger than malaria parasites, these are
+fundamentally easier tasks, and are targets for future work.
+ACKNOWLEDGMENT
+
+       
+Fig. 4. Heatmap of Autosccopes balanced accuracy on the WHO set
+
+Sample-level specificity on field data was 92%. Limit of
+Detection (LoD) on the few P. falciparum samples matched the
+results on the WHO55 set (LoD < 300 p/L, limited by the
+parasitemia of available samples in the set). Although P. vivax
+parasites were entirely absent from the training set, the
+algorithm detected many P. vivax samples, with LoD on
+P. vivax  3000 p/L. This sensitivity to P. vivax was due to
+detection of P. vivax ring stage parasites that sufficiently
+resembled P. falciparum ring stages to be captured by the
+algorithm. The percentage of early ring-stage forms in a given
+P. vivax infection can range from 0 to 100%. Thus the high
+LoD of the algorithm (compared to LoD on P. falciparum)
+reflects the fact that only a fraction of P. vivax parasites present
+as ring stage trophozoites.
+The hardware performed smoothly in the field. One of the
+devices experienced sporadic trouble with camera connectivity.
+The algorithm software performed smoothly.
+IV. DISCUSSION
+The goal of Autoscope is to diagnose malaria using
+Giemsa-stained blood samples from the field with
+LoD < 50 p/L, in fully automated fashion. Autoscope is, to
+our knowledge, the first fully automated hardware-software
+system to demonstrate WHO Level 1 diagnosis expertise on
+P. falciparum using field slides.
+Because Autoscope uses Giemsa-stained field samples
+prepared according to current standard practice, it can be
+readily deployed to the field with minimal infrastructure
+changes. It targets the LoDs required by field use cases and it
+
+The authors gratefully acknowledge: Bill and Melinda
+Gates for their sponsorship through the Global Good Fund;
+David Bell for his guidance and support; Jane Carter, Peter
+Chiodini, Mehul Dhorda, Dionicia Gamboa, Ken Lilley, Earl
+Long, Stephane Proux, and Carol Sibley for serving on the
+technical advisory panel and generously sharing their expertise.
+REFERENCES
+[1]
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+Microscopy for the detection, identification and quantification of
+malaria parasites on stained thick and thin blood films in research
+settings. World Health Organization, May 2015.
+Heidi Albert, Yukari Manabe, George Lukyamuzi, Patrick Ademun,
+Sheena Mukkada,
+Barnabas Nyesiga,
+Moses Joloba,
+C. N.
+Paramasivan, Mark D. Perkins, Performance of three LED-based
+fluorescence microscopy systems for detection of tuberculosis in
+Uganda, PLoS ONE 2010, doi: 10.1371/journal.pone.0015206.
+Sania Ashraf, Angie Kao, Cecilia Hugo, Eva M Christophel, Bayo
+Fatunmbi, Jennifer Luchavez, Ken Lilley, and David Bell Developing
+standards for malaria microscopy: external competency assessment for
+malaria microscopists in the Asia-Pacific, Malaria Journal 2012,
+11:352, doi:10.1186/1475-2875-11-352.
+Moses Kiggundu, Samuel L. Nsobya, Moses R. Kamya, Scott Filler,
+Sussan Nasr, Grant Dorsey, and Adoke Yeka, Evaluation of a
+comprehensive refresher training program in malaria microscopy
+covering four districts of Uganda, Am. J. Trop. Med. Hyg. 2011 vol. 84
+no. 5, pp. 820-824, doi: 10.4269/ajtmh.2011.10-0597.
+World Malaria Report 2014. World Health Organization, 2014.
+Durrheim D N, Becker P J, Billinghurst K, Diagnostic disagreement
+the lessons learnt from malaria diagnosis in Mpumalanga, S. Afr. Med.
+J. 1997, 87:1016.
+Kachur SP, Nicolas E, Jean-Francois V, Benitez A, Bloland PB, Saint
+Jean Y, Mount DL, Ruebush TK 2nd, Nguyen-Dinh P, Prevalence of
+malaria parasitemia and accuracy of microscopic diagnosis in Haiti,
+October 1995. Rev Panam Salud Publica 1998, 3:35-39.
+Kain KC, Harrington MA, Tennyson S, Keystone JS, Imported malaria:
+prospective analysis of problems in diagnosis and management, Clin
+Infect Dis 1998, 27:142-149.
+Kilian AH, Metzger WG, Mutschelknauss EJ, Kabagambe G, Langi P,
+Korte R, von Sonnenburg F, Reliability of malaria microscopy in
+
+[13] Nankabirwa J, Zurovac D, Njogu JN, Rwakimari JB, Counihan H, Snow
+RW, Tibenderana JK, Malaria misdiagnosis in Uganda-implications for
+policy change, Malaria Journal 2009, 8:66.
+[14] Zurovac D, Midia B, Ochola SA, English M, Snow RW, Microscopy
+and outpatient malaria case management among older children and
+adults in Kenya, Trop Med Int Health 2006, 11:432-440.
+[15] Basic malaria microscopy  Part I: Learner's guide. Second edition.
+World Health Organization, February 2010.
+[16] Chih-Chung Chang and Chih-Jen Lin, LIBSVM: a library for support
+vector machines, ACM Transactions on Intelligent Systems and
+Technology,
+2:27:1--27:27,
+2011.
+Software
+available
+at
+http://www.csie.ntu.edu.tw/~cjlin/libsvm.
+[17] Charles Delahunt, Matthew P Horning, Benjamin K Wilson, Joshua L
+Proctor and Michael C Hegg, Limitations of haemozoin-based
+diagnosis of Plasmodium falciparum using dark-field microscopy,
+Malaria Journal 2014, 13:147, doi:10.1186/1475-2875-13-147.
+
+epidemiological studies: results of quality control, Trop Med Int Health
+2000, 5:3-8.
+[10] Coleman RE, Maneechai N, Rachaphaew N, Kumpitak C, Miller RS,
+Soyseng V, Thimasarn K, Sattabongkot J, Comparison of field and
+expert laboratory microscopy for active surveillance for asymptomatic
+Plasmodium falciparum and Plasmodium vivax in western Thailand,
+Am J Trop Med Hyg 2002, 67:141-144.
+[11] OMeara WP, McKenzie FE, Magill AJ, Forney JR, Permpanich B,
+Lucas C, Gasser RA Jr, Wongsrichanalai C, Sources of variability in
+determining malaria parasite density by microscopy, Am J Trop Med
+Hyg 2005, 73:593-598.
+[12] Kahama-Maro J, DAcremont V, Mtasiwa D, Genton B, Lengeler C,
+Low quality of routine microscopy for malaria at different levels of the
+health system in Dar es Salaam, Malaria Journal 2011, 10:332.
+
+TABLE II.
+
+RESULTS OF AUTOSCOPE APPLIED TO THE P. FALCIPARUM PORTION OF A WHO55 SET. ROW 3 GIVES THE WHO REQUIREMENTS FOR LEVEL 1
+(EXPERT) MICROSCOPISTS.
+
+WHO set (RITM)
+
+# slides
+
+Parasitemia (p/L)
+
+Sensitivity
+
+Specificity
+
+LoD (p/L)
+
+10 pos/20 neg
+
+100  200
+
+100%
+
+95%
+
+< 100
+
+14 pos
+
+200  1,200
+
+100%
+
+95%
+
+10 pos/20 neg
+
+80  200
+
+90%
+
+90%
+
+Other P. falciparum
+Level 1 Reference
+
+ 
+
+"
+"
+"
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+"
+"
+"
+
+
+
+
+  
+
+
+
+
+ 
+
+
+ 
+' (
+
+"
+"
+"
+
+
+
+
+80
+
+  
+
+
+
+
+ 
+
+
+' (
+ 
+
+
+ 
+
+"#
+" # 
+
+
+ &
+
+ 
+
+
+$
+
+
+
+ 
+
+
+"#
+" # 
+
+"#
+" # 
+
+
+ &
+
+ 
+
+
+
+ &
+
+ 
+
+
+
+
+
+
+
+
+
+(b)
+
+(c)
+
+ 
+ "
+
+(a)
+
+Fig. 5. Autoscope process flow in (a) training, (b) validation, and (c) testing phases
+
+Fig. 6. Output of Autoscope algorithm showing z-stack thumbnails of top-scoring parasite suspects. The most in-focus thumbnail is framed in blue.
+
+

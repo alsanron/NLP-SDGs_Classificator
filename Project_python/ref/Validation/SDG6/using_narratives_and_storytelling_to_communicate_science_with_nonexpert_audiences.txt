@@ -1,0 +1,766 @@
+Using narratives and storytelling to communicate
+science with nonexpert audiences
+Michael F. Dahlstrom1
+Greenlee School of Journalism and Communication, Iowa State University, Ames, IA 50010
+Edited by Dietram A. Scheufele, University of Wisconsin-Madison, Madison, WI, and accepted by the Editorial Board April 7, 2014 (received for review
+November 1, 2013)
+
+Although storytelling often has negative connotations within
+science, narrative formats of communication should not be
+disregarded when communicating science to nonexpert audiences. Narratives offer increased comprehension, interest, and
+engagement. Nonexperts get most of their science information
+from mass media content, which is itself already biased toward
+narrative formats. Narratives are also intrinsically persuasive,
+which offers science communicators tactics for persuading otherwise
+resistant audiences, although such use also raises ethical considerations. Future intersections of narrative research with ongoing
+discussions in science communication are introduced.
+persuasion
+
+| ethics
+
+S
+
+torytelling often has a bad reputation within science (1).
+Viewed as baseless or even manipulative, stories are often
+denigrated with statements such as, the plural of anecdote is not
+data. Such a perspective is valuable within the context of scientific data collection to underscore the important difference
+between making informed generalizations from systematically
+sampled populations versus overgeneralizations from small and
+often biased samples.
+However, when the context moves from data collection to the
+communication of science to nonexpert audiences, stories,
+anecdotes, and narratives become not only more appropriate but
+potentially more important. Research suggests that narratives
+are easier to comprehend and audiences find them more engaging than traditional logical-scientific communication (3, 4).
+More pragmatically, the sources from which nonexperts receive
+most of their science information are already biased toward narrative formats of communication. Once out of formal schooling,
+nonexpert audiences get the majority of their scientific information
+from mass media content (5). Because media practitioners have to
+compete for the attention of their audiences, they routinely rely on
+stories, anecdotes, and other narrative formats to cut although the
+information clutter and resonate with their audiences. Although
+the plural of anecdote may not be data, the anecdote has a greater
+chance of reaching and engaging with a nonexpert audience. The
+challenge for science communicators, then, is to decide when and
+how narratives can effectively and appropriately help them communicate to nonexperts about science.
+The purpose of this article is to synthesize literature on
+narrative communication and place it within a science communication context. The article begins with a review of narrative literature, as well as the mass media context through
+which most nonexpert audiences get their information about
+science. The article then reviews the potential persuasive
+impacts of narrative communication and the ethical considerations of using narrative to communicate science. Finally,
+future intersections of narrative with ongoing questions in
+science communication are introduced.
+
+certain factors that distinguish narrative as a communication
+format. Narratives follow a particular structure that describes the
+cause-and-effect relationships between events that take place
+over a particular time period that impact particular characters.
+Although there exist more nuanced factors that scholars can use
+to further determine the narrativity of a message (68), this triumvirate of causality, temporality, and character represents a
+fairly standard definition of narrative communication. Such
+a definition is independent of content and so narratives can be
+present within almost any communication activity or media platform. Obvious examples include interpersonal conversation, entertainment television programs, and news profiles, but narratives
+can also present themselves within larger messages as testimonials,
+exemplars, case studies, or eyewitness accounts.
+Narratives are often contrasted with other formats of communication, such as expository or argumentative communication
+(7), or with other types of explanations, such as descriptive, deductive, or statistical (6). However, more generally, narratives are
+often contrasted with the logical-scientific communication underlying most of the sciences (3, 9). Three areas in particular
+where logical-scientific and narrative formats differ are in their
+direction of generalizability, their reliance on context, and their
+standards for legitimacy.
+Logical-scientific communication aims to provide abstract truths
+that remain valid across a specified range of situations. An individual may then use these abstract truths to generalize down to
+a specific case and ideally provide some level of predictive power
+regarding that specific. Narrative communication instead provides
+a specific case from which an individual can generalize up to infer
+what the general truths must be to permit such a specific to occur
+(3, 10). In essence, the utilization of logical-scientific information
+follows deductive reasoning, whereas the utilization of narrative
+information follows inductive reasoning.
+Logical-scientific communication is context-free in that it deals
+with the understanding of facts that retain their meaning independently from their surrounding units of information. As
+such, these facts represent the meaningful unit of content and can
+be excised from a larger message and inserted into other messages, or even presented alone, with little loss of understanding.
+In contrast, narrative communication is context-dependent because it derives it meaning from the ongoing cause-and-effect
+structure of the temporal events of which it is comprised (1113).
+As such, it is much harder to break a narrative into smaller
+units of meaningful content without either greatly altering the
+
+This paper results from the Arthur M. Sackler Colloquium of the National Academy of
+Sciences, The Science of Science Communication II, held September 2325, 2013, at the
+National Academy of Sciences in Washington, DC. The complete program and video
+recordings of most presentations are available on the NAS website at www.nasonline.
+org/science-communication-II.
+Author contributions: M.F.D. wrote the paper.
+
+Narratives
+Most individuals have an inherent understanding of what it
+means to tell a story. Communication scholars supplement this
+colloquial understanding of narrative through the articulation of
+1361413620 | PNAS | September 16, 2014 | vol. 111 | suppl. 4
+
+The author declares no conflict of interest.
+This article is a PNAS Direct Submission. D.A.S. is a guest editor invited by the
+Editorial Board.
+1
+
+Email: mfd@iastate.edu.
+
+www.pnas.org/cgi/doi/10.1073/pnas.1320645111
+
+understanding of the smaller unit or rendering the original narrative incoherent (3).
+Finally, because logical-scientific communication aims to provide general truths as an outcome, the legitimacy of its message is
+judged on the accuracy of its claims. In contrast, because narrative communication instead aims to provide a reasonable depiction of individual experiences, the legitimacy of its message
+is judged on the verisimilitude of its situations. This difference
+confusingly allows logical-scientific communication and narrative
+communication with opposing outcomes to be judged with equal
+levels of truth (3), and partially explains why narratives can
+rarely be effectively countered with facts (14).
+Such differences have in part led to a framework claiming that
+logical-scientific and narrative communication are not just contrasting formats of communication, but represent two distinct
+cognitive pathways of comprehension (3, 15, 16). The paradigmatic pathway controls the encoding of science-based evidence,
+whereas the narrative pathway controls the encoding of situation-based exemplars, leading to distinct differences in comprehension and understanding based on the pathway used to process
+the content.
+Empirical studies support such a categorical difference between paradigmatic and narrative processing, and suggest that
+narrative processing is generally more efficient. Narratives are
+often associated with increased recall, ease of comprehension, and
+shorter reading times (17, 18). In a direct comparison with expository text, narrative text was read twice as fast and recalled
+twice as well, regardless of topic familiarity or interest in the
+content itself (19, 20). Graesser and Ottati (20) describe these and
+similar results as suggesting that narratives have a privileged
+status in human cognition. These benefits should not be assumed
+to come from simplicity, as coherent narratives demand a high
+level of complexity in both internal complexity and alignment to
+cultural and social expectancies (15, 21). Instead, narratives seem
+to offer intrinsic benefits in each of the four main steps of processing information: motivation and interest, allocating cognitive
+resources, elaboration, and transfer into long-term memory (22).
+As such, narrative cognition is thought to represent the default
+mode of human thought, proving structure to reality and serving
+as the underlying foundation for memory (18). This reliance on
+narratives is suggested to be the result of an evolutionary benefit
+because narratives provide their users with a format of comprehension to simulate possible realities (23), which would serve
+to better predict cause-and-effect relationships and model the
+thoughts of other humans in the complex social interactions that
+define our species (24).
+Such intrinsic benefits in comprehension could benefit the communication of science. Indeed, such a movement is underway within
+the science education literature (7, 25). Responding to various calls
+for reform in science education curriculum, some of which specifically note the potential of narrative formats for learning (26),
+scholars are exploring how narratives may improve upon the
+traditional ways science is taught. For example, Glaser et al. (22)
+describe four factors that narratives offer, which could improve
+knowledge acquisition about science compared with the traditional
+expository curriculum, namely dramatization, emotionalization,
+personalization, and fictionalization. Similarly, the capacity model
+describes how both the narrative and educational components are
+processed when narratives are used in service of science education.
+Specifically, educational content that is more integral to the plotline
+of the narrative requires less cognitive resources for comprehension
+and leads to enhanced learning (27), a prediction that has found
+empirical support elsewhere in narrative research (12, 13).
+Similarly, health communication is another area exploring the
+potential benefits of using narrative, often to better educate or
+persuade individuals toward healthy behavior choices. Some
+studies empirically examine the effects of narratives on perceptions of specific health issues, such as anticoagulant medication
+Dahlstrom
+
+(28), breast cancer (29), or vaccinations (2032), whereas others
+take a broader view to justify the theoretical inclusion of narrative within health (33) or to provide a guide to its use (8). A
+meta-analysis of many of these health-related narrative studies
+found mixed results with regard to a net narrative effect (34),
+although a lack of a consistent conceptualization of narrative
+(35) likely complicates any generalization. Regardless of the
+complexities involved, calls for more narrative within health
+contexts continue to surface (36).
+Although the benefits of including narrative into science education and health contexts remain under investigation, there is
+another context where narratives have long been the norm in the
+communication of science: the mass media.
+Mass Media and Narratives
+The mass media is especially relevant when considering the
+communication of science because it represents the source from
+which nonexpert audiences get most of its science information.
+Because much of science is outside of direct experience, people
+are dependent on others to inform and help them interpret information about science. Although many sources aim to fulfill
+this role, including formal schooling, institutes of informal science
+learning, or interpersonal discussion, none trump the ubiquity or
+frequency of the mass media. As such, mass media content serves
+as the primary source of information regarding science, health,
+and environmental issues (5).
+Science and Engineering Indicators is an ongoing 2-y report
+produced by the National Science Foundation to document
+trends surrounding science and engineering and its intersection
+with the larger society. The most recent 2012 report (5) finds that
+the primary source where Americans receive information about
+science and technology is nearly tied between television (34%)
+and the Internet (35%), with magazines and other print media
+tied for a distant third and fourth (9%). Government agencies,
+family, friends, and colleagues as sources for science information
+only reached 3% when combined. When seeking information
+about a particular science or technology topic, the Internet
+becomes the primary source chosen (59%), with over half (52%)
+of the online content being derived from traditional journalistic
+sources. This reliance on mass media content for information
+about science and technology is especially relevant for the current
+discussion because the organizational and societal pressures surrounding the mass media make them intrinsically biased toward
+the use of narratives.
+Journalists must balance their dual goals of reporting objective
+and accurate information while simultaneously remaining economically viable by earning and maintaining the fleeting attention of their audiences. In response to this challenge, media
+messages are often packaged into familiar and predictable forms,
+known as media logic or medialization, which have proven
+successful in attracting the target audiences attention (37, 38).
+Gatekeeping theory describes the upstream influences of organizational routines, external pressures, and internal goals of
+media industries that shape the messages and formats that
+eventually emerge for audience consumption (39, 40). The theory emphasizes that news stories are not preexisting units that
+journalists merely select for transmission, but rather, reality
+becomes news through a selective structuring that creates units
+that fit the organizational needs, such as timing of creation, ease
+of transmission, and audience expectations.
+In particular, the concept of news values articulate specific foci
+that have a better chance of attracting the attention of an audience. As such, news is packaged to match as many news values
+as possible, while downplaying or even ignoring other relevant
+aspects (41). Common news values include conflict, novelty,
+geographic or cultural proximity to the audience, prominence of
+individuals, impact or personal relevance to the audience, and
+timeliness (41, 42).
+PNAS | September 16, 2014 | vol. 111 | suppl. 4 | 13615
+
+However, another important news value is one with clear links
+to narrative: personification. Even when reporting on larger social forces, news media routinely personify abstract concepts for
+dramatic storytelling, focusing on a particular individual or
+smaller group within the larger context and exploring the consequences of their actions (41), a practice explored in detail
+within exemplification theory (43). There are many reasons why
+personification makes sense for news media. For the audience,
+personification allows the audience a greater chance of identification and empathy compared with the larger aggregate and
+aligns better with the Western expectation of individualism. For
+the media, personification better meets the needs of news production, as it is easier to interview and photograph an individual
+rather than something that represents larger social forces. Similarly, individual people generally act in a timespan that more
+closely matches the frequency of news publication (41).
+This narrative bias of the personification news value is evident
+within the coverage of science. Health and biology are routinely
+the most commonly covered science topics (5, 42), both of which
+lend themselves to easier personification than the colder and
+more abstract sciences. Badenschier and Wormer (42) interviewed editors of science sections in German newspapers and
+content-analyzed the science coverage of their newspapers to
+determine the specific news values that impact the coverage of
+science. Although the authors argue that some of the standard
+news values need to be amended for the specifics of science
+coverage, personalization was found to remain one of the strong
+predictors on the selection process of science news. Elliott (38)
+found a similar bias toward personalization in the framing of
+news media covering medical technologies.
+Whereas informative news coverage often dominates the discussion of media dissemination of science, entertainment media
+actually rises to greater importance when considering the overall
+amount of content consumed. Entertainment media, such as
+movies, television comedies and dramas, documentaries, novels,
+and even video games, routinely use narrative formats. Although
+most entertainment media may not be trying to inform audiences
+about anything in particular, the combined influence of entertainment media has long been known to influence perceptions
+about the real world.
+Cultivation theory describes this influence of entertainment
+narratives on public perceptions about the world (44). The
+central tenants of the theory are that storytelling patterns in
+entertainment media are designed to increase profit, not necessarily to accurately represent reality. Therefore, the narrative
+worlds presented in entertainment media are systematically
+skewed and individuals who are exposed to larger amounts of
+these stories tend to internalize and share the beliefs and values
+portrayed (45). For example, although less than 1% of Americans are victims of violent crime, 70% of broadcast network
+television shows characters engaged as either a victim or perpetrator of such violence (45). Such a discrepancy has led to
+a mean world syndrome, where heavy watchers of television
+perceive the world to be a more dangerous place than it is
+statistically (46).
+Although much of cultivation research has focused on perceptions of violence or underrepresented groups, science-related
+issues are also often explored through the lens of cultivation
+theory, such as the environment (47, 48), biotechnology (49), and
+perceptions of scientists themselves (50), with findings that, generally, audiences are influenced by the often-inaccurate portrayal
+of science within entertainment narratives.
+Whereas cultivation explores the effects of finished entertainment narratives, a recent study exploring how television
+producers incorporate forensic science information into their
+storytelling helps to shed light on the process of integrating
+science into the narrative construction process. Kirby (51)
+interviewed television writers and producers and reports that
+13616 | www.pnas.org/cgi/doi/10.1073/pnas.1320645111
+
+they often look to science to add realism to their stories, but
+must use the science in a way that aligns with narrative conventions and their particular franchise to attract an audience.
+Because the science must be used in service toward the larger
+goal of storytelling, the producers and writers stress the need
+for flexible realism or fictional conceit that permits them
+to use science that is possible, regardless of its probability of
+occurring. One of the interviewees, David Berman, the primary science consultant for the program CSI, said his team
+doesnt want to get bogged down in what usually happens, but
+what could happen (51). He stresses that scientific realism for
+writers is about authenticity and plausibility, not accuracy.
+Although there is no empirical measure of the proportion of
+narrative to nonnarrative formats within mass media messages,
+narratives align with the organizational and structural needs of
+both informative and entertainment media systems and are
+ubiquitous across most media platforms. As such, narratives
+represent the dominant form of science communication nonexpert audiences are receiving. Therefore, questioning whether
+narratives should be used to communicate science is somewhat
+moot. A more relevant question would be: How should narratives be used to communicate science appropriately because of
+their power to persuade?
+Narrative Persuasion and Ethical Considerations
+Narratives are intrinsically persuasive. Because they describe
+a particular experience rather than general truths, narratives
+have no need to justify the accuracy of their claims; the story
+itself demonstrates the claim. Similarly, the structure of narrative
+links its events into a cause-and-effect relationship, making the
+conclusion of the narrative seem inevitable even though many
+possibilities could have happened (52). This inevitability, combined with the lack of a need for justification, supports the many
+normative elements with a storywhat is good, what is bad
+without ever needing to clearly articulate or defend them (20).
+Because narratives are able to provide values to real-world
+objects without argument, it is difficult to counter their claims.
+The field of narrative persuasion explores this persuasive side
+of narratives, examining how audiences tend to accept normative
+views presented in a narrative and the underlying mechanisms
+that facilitate such persuasion. Results generally suggest that
+audiences are more willing to accept normative evaluations from
+narratives than from more logical-scientific arguments (53, 54),
+and that a range of mediating and moderating factors influence
+this tendency.
+For example, engagement into the world of a narrative,
+termed transportation, uses enough emotional and cognitive
+resources that it is difficult for audiences to generate counterarguments against the evaluations to which they are exposed (4,
+53). Similarly, the related field of exemplification theory finds
+that when narrative and statistical information are both present
+within a single message, such as in a news story that describes an
+overall phenomenon but then also provides specific cases as
+examples, perceptions skew toward the experiences of the specific cases regardless of whether the overall evaluations align or
+not (55). One of the few factors that has been found to hinder
+narrative persuasion is when the persuasive intent becomes
+obvious and audiences react against being manipulated (56). As
+long as such persuasive intent remains concealed, acceptance of
+narrative evaluations is thought to represent the default outcome of exposure, where rejection is only possible with added
+scrutiny afterward (4, 57).
+Similar persuasive influences are found even if the audience
+knows that the narrative in question is fictional (53). Fictional
+narratives often contain elements within them that are truthful
+(58), and individuals readily use information from fictional stories to answer questions about the world (59, 60). In fact, cultivation theory discussed in the previous section has been described
+Dahlstrom
+
+as the cumulative effect of long-term narrative persuasion from
+fictional entertainment media (61).
+The persuasiveness of narrative formats of communication can
+both benefit science communication and create challenges. Research has shown that narratives can be used to sway beliefs about
+numerous science topics, such as vaccines (62), proenvironmental
+beliefs (12), and HIV/AIDS (63), and science communicators
+could leverage the influence of narratives to persuade otherwise
+resistant audiences about issues related to science. The National
+Academy of Sciences Science and Entertainment Exchange represents one organization already using narratives for the benefit of
+science communication (64). The Science and Entertainment Exchange connects science experts with entertainment writers and
+producers to encourage frequent and accurate portrayals of
+science within entertainment media narratives as a powerful
+avenue of reaching the public with science content.
+In contrast to such benefits, narratives can also perpetuate
+misinformation and inaccuracies about science or about scientists themselves (65). Additionally, because narratives are
+not subject to the same truth requirements as logical-scientific
+communication (3), they are not easily countered. In fact,
+accepted narratives are trusted so much that individuals rarely
+allow evidence to contradict the narrative; evidence is altered
+to fit their narratives (66).
+Especially within the heated context of social controversies
+regarding science, it may be tempting for science communicators
+to rely on the covert persuasive influences of narrative to counter
+misinformation and promote audiences acceptance of science.
+However, the use of narratives within social controversies introduces unique ethical considerations. A recent paper explored
+some of these ethical considerations and offered three questions
+communicators should consider before using narratives to communicate science within social controversies (58).
+The first ethical question asks if the underlying goal for using
+narrative is for persuasion or comprehension. These two goals
+represent contrasting roles for science communication within
+society and generally align with one of two competing models.
+The first is the Public Understanding of Science model that
+considers controversies about science to be caused by a deficit
+of scientific understanding, and the role of communication is
+to rectify this deficit by educating the public and reducing the
+controversy toward a predetermined outcome (67, 68). In contrast, the second model is the Public Engagement in Science and
+Technology model that considers controversies about science a
+necessary and beneficial process of aligning science with societal
+values. In this model, the role of communication is to engage a
+wider audience and increase the inclusion of science within the
+debate, regardless of which side it is used to support (69, 70).
+In other words, should science communication create agreement toward a preferred outcome or promote personal autonomy to make choices (58)? A narrative aiming to persuade could
+exemplify the preferred side of the issue while championing
+a character who is rewarded for making the right choices. In
+contrast, a narrative aiming to increase comprehension could
+exemplify how science influences multiple sides of an issue
+through the eyes of a character who actively considers the options.
+Both goals could be ethical in different circumstancespersonal
+autonomy is often championed, but persuasion may be appropriate in contexts where social benefits are large enough to outweigh individual choiceso any narrative created needs to be
+carefully aligned with the appropriate goal for the situation.
+The second ethical question asks what levels of accuracy need
+to be maintained within the narrative. Narratives contain multiple layers of accuracy that may or may not be necessary to
+maintain, depending on the purpose of the communication.
+Two layers in particular represent external realism and representativeness. External realism represents narrative elements that are accurate relative to the real world (71). When
+Dahlstrom
+
+creating a narrative, it is likely that certain elements will be
+desired to accurately represent science in the real world;
+however, it may still be appropriate to relax the accuracy
+expectations on many of the other narrative elements for the
+larger purposes of narrative structure. For example, a narrative
+attempting to explain the process of converting grain to ethanol
+may personify yeast as a picky character that refuses to eat its lunch
+of sugar until it is comfortable at the right temperature (58). Obviously, such a cause-and-effect relationship is low on external realism, but the inputs and requirements of the procedure itself can
+remain high on external realism and accurately describe the process
+in an understandable and possibly memorable manner. Other elements within a narrative that may or may not need to be high on
+external realism include types of characters, characters motivations
+and actions, settings, situations, events, procedures, chronologies,
+or time-frames (58).
+Similarly, because narratives offer a specific example that will
+be generalized outward, the representativeness of the example
+used represents another potential layer of accuracy. Selecting
+a worst-case scenario as the example around which to create
+a narrative is likely not generalizable to what is likely to occur,
+and is therefore representationally inaccurate. However, selecting a nonrepresentative narrative could be beneficial for a science communicator attempting to use narrative to persuade an
+audience toward a predetermined end (58).
+The third ethical question asks if narratives should be used at
+all. It may be that nonexperts so align their expectation of how
+scientists should communicate with the logical-scientific processing pathway, that an otherwise appropriate narrative may be
+perceived as violating their normative expectations of science
+communication. On the other hand, other communicators within
+the issue will likely use narratives and it would be unethical not
+to use narrative and surrender the benefits of a communication
+technique to the nonexpert side of an issue (58).
+To sum up the previous three sections, narratives represent
+a potentially useful format of communication for the communication of science to nonexpert audiences. Narratives are
+easier to process and generate more attention and engagement
+than traditional logical-scientific communication. Narratives
+already represent the format with which most nonexperts receive their information about science and narratives are intrinsically
+persuasive, which presents both benefits and challenges for
+science communication. The final section explores how narratives may intersect with ongoing and future discussions within
+science communication.
+Future Narrative Intersections with Science Communication
+Although narratives have a long history of scholarly study (14,
+72), their integration within a science context is fairly recent. As
+such, existing discussions within the field of science communication may benefit from an inclusion of narrative constructs.
+Building Trust. Trust is receiving growing attention as one of the
+central issues in science communication. Even though overall trust in
+science remains strong (5), many are pointing to a crisis in trust between the public and specific areas of science as an obstacle to successful science communication (73, 74). For example, survey data
+suggest that trust in institutional actors matters more for the acceptance of technologies than individual knowledge or education levels
+(75, 76). Similarly, the link between knowledge and concern about
+climate change was found to depend upon levels of trust in scientists
+(77). Although persuasion theories suggest peripheral source cues
+that lend themselves to trustworthiness (78), developing trust in the
+midst of more controversial science communication contexts
+demands different tactics, but still remains challenging (74).
+Even with the current emphasis on engaging the public within
+science decision-making (79), little is known about the expectations that audiences hold with regard to how science should be
+PNAS | September 16, 2014 | vol. 111 | suppl. 4 | 13617
+
+communicated to them. Pielke discusses contrasting roles that
+scientists can play within policy contexts (80), but what roles
+do audiences accept as appropriate and in what contexts? Unknowingly violating such expectations could severely hinder
+trust-building communication.
+How does science communicated in narrative format influence
+audience perceptions of trust? Do narratives increase trust because of their greater verisimilitude, or possibly because audiences appreciate information being packaged in an easier format
+to comprehend? Or do narratives decrease trust because they are
+seen as overly sensational or manipulative? What other factors,
+personal or societal, alter the perceived trustworthiness of science narratives? For example, narrative communication may be
+perceived as aligning more closely with certain roles within society and may be perceived, either centrally or heuristically, as
+indicating certain motives of the science communicator. Recent
+work has begun to explore how perceived motives influence the
+processing of scientific information (81) but the influence of
+narratives within a trust context remains unknown.
+Potentially more complex is how trust is related to dueling
+narratives claiming truth within the same science issue. Climate
+change provides an obvious context where conflicting narratives
+are present, including disjointed narratives of problem versus solution (82) and polarizing partisan narratives that substitute for
+scientific understanding (83). In these cases, the questions shift
+toward issues of how individuals select the most trusted narrative
+from among available choices, and how the trustworthiness of
+competing narratives is evaluated in light of the structure outlined
+by the already-accepted narrative. When are conflicting narratives
+simply rejected and when can certain elements from the competing narrative be incorporated to slightly modify the accepted
+narrative? What conditions must be met to cause an individual to
+lose trust in a previously accepted narrative?
+Science Communication in a New Media Environment. The new
+media environment is changing how science is communicated
+to nonexperts. New media audiences are imbued with greater
+power to seek, select, and share information that interests them
+most. Similarly, in contrast to traditional informative reporting,
+blogs and other newer platforms of communication mix fact and
+opinion, with little need to differentiate between the two (84).
+Although Internet use may be reducing gaps in science knowledge among groups of different educational levels (85), the new
+metacontent that surrounds science information, such as comments, Facebook likes, or twitter mentions, can influence the
+perceived quality of the science information itself (86).
+How do science narratives compare with other formats of
+science information within the new media environment? Will
+science narratives better serve the needs of a new media audience,
+floating to the top of the information pool to earn greater attention and dissemination through shared personal networks? A recent study examining the message factors that lead to increased
+sharing suggests that this may be the case (87). Comparing the
+features of the most emailed New York Times articles to those that
+were not, Berger and Milkman (87) found that the biggest predictors of sharing content with others was that which was perceived as interesting, practical, surprising, and that evoked emotional reactions, many factors at which narratives excel.
+Any influence of narratives in the new media environment is also
+likely to increase in the future. As the new media environment
+continues to increase the volume of potential messages available to
+1. Katz Y (2013) Against storytelling of scientific results. Nat Methods 10(11):1045.
+2. Polsby NW (1993) Where do you get your ideas? PS: Political Science and Politics 26(1):8387.
+3. Bruner J (1986) Actual Minds, Possible Worlds (Harvard Univ Press, Cambridge,
+MA), p 222.
+4. Green MC (2006) Narratives and cancer communication. J Commun 56(Suppl 1):
+S163S183.
+
+13618 | www.pnas.org/cgi/doi/10.1073/pnas.1320645111
+
+audiences and as audiences continue to morph into users able to
+select and share their media messages of choice, the competition
+for attention will intensify. Narratives may be recruited even more
+frequently in an attempt to overcome this information explosion.
+Communicating Beyond Human Scale. A relatively underexplored
+area that nonetheless impacts science communication directly
+concerns the challenges surrounding the communication of
+phenomena that can never be directly experienced because of
+the particular scale at which humans have evolved to perceive
+reality (88). The field of grounded cognition suggests that human
+cognitive processes evolved to facilitate practical interaction with
+the surrounding environment, and are therefore biased toward
+comprehension at this human scale (88, 89). However, science
+routinely examines processes and phenomenon far removed
+from human scale. Accurate values and explanations do little
+to provide an intuitive sense of something as large as climate
+change, as small as parts per billion, or as distant as 10,000 y
+away. When attempting to understand such ideas, audiences
+must take some relevant aspect of experience from human
+scale and mentally extrapolate it past possible experience to
+arrive a general perception of the phenomenon in question,
+a perception on which they will the base their decision making.
+Unfortunately, research suggests that the farther the perception is from human scale, the less accurate it is likely to be.
+Risk probabilities using smaller denominators that are closer
+to plausible group sizes in human society (x/125) allow easier
+comprehension and are less influenced by message factors than
+when the denominator represents a value larger than normal
+human group sizes (x/100,000) (90). Construal theory explains
+similar changes in perception based on scale, namely that an
+event with greater psychological distance, and therefore farther
+away from immediate human scale, leads to perceptions that are
+more abstract and emotional than events with less psychological
+distance (91, 92).
+Common techniques to assist with the communication of
+phenomena beyond human scale include developing metaphors
+or other comparisons to link the phenomena to something understandable within human scale (93), such as describing nanotechnology as manipulating something a million times smaller
+than the length of an ant (94). Although useful, such comparisons may introduce unintended associations (95) or merely repackage the same problem around a new concept. For example,
+an ant represents something that can be experienced and is
+therefore easy to bring to mind, but how easy is it to imagine
+dividing an ant into a million parts?
+Narratives may represent another promising and relatively
+understudied communication tool for communicating beyond
+human scale. Narratives represent mental simulation of some
+aspect of reality from a particular human point of view (23).
+Narratives, in essence, may represent a method of packaging
+phenomena into human scale: providing a possible remedy for
+the problems of communicating a meaningful sense of distant
+science topics (88). No empirical studies have yet explored
+this possibility.
+In summary, storytelling within science should not be disregarded. The plural of anecdote is not data, remains an important mantra to uphold the rigor of systematic data collection.
+However, when considering the communication of science to
+nonexpert audiences, a more appropriate mantra might be, the
+plural of anecdote is engaging science communication.
+5. National Science Board (2012) Science and technology: Public attitudes and understanding.
+Science and Engineering Indicators 2012 (National Science Foundation, Arlington, VA).
+6. Norris SP, Guilbert SM, Smith ML, Hakimelahi S, Phillips LM (2005) A theoretical
+framework for narrative explanation in science. Sci Educ 89(4):535563.
+7. Avraamidou L, Osborne J (2009) The role of narrative in communicating science. Int J
+Sci Educ 31(12):16831707.
+
+Dahlstrom
+
+8. Kreuter MW, et al. (2007) Narrative communication in cancer prevention and control:
+A framework to guide research and application. Ann Behav Med 33(3):221235.
+9. Fisher WR (1985) The narrative paradigm: In the beginning. J Commun 35(4):7489.
+10. Strange JJ, Leung CC (1999) How anecdotal accounts in news and in fiction can influence judgments of a social problems urgency, causes, and cures. Pers Soc Psychol
+Bull 25(4):436449.
+11. Trabasso T, Sperry LL (1985) Causal relatedness and importance of story events. J Mem
+Lang 24(5):595611.
+12. Dahlstrom MF (2010) The role of causality in information acceptance in narratives: An
+example from science communication. Communic Res 37(6):857875.
+13. Dahlstrom MF (2012) The persuasive influence of narrative causality: Psychological
+mechanism, strength in overcoming resistance, and persistence over time. Media
+Psychol 15(3):303326.
+14. Kreiswirth M (1992) Trusting the tale: The narrativist turn in the human sciences. New
+Lit Hist 23(3):629657.
+15. Monteagudo-Gonzalez J (2011) Jerome Bruner and the challenges of the narrative
+turn. Then and now. Narrative Inq 21(2):295302.
+16. Fisher WR (1984) Narration as a human-communication paradigm: The case of public
+moral argument. Commun Monogr 51(1):122.
+17. Zabrucky KM, Moore D (1999) Influence of text genre on adults monitoring of understanding and recall. Educ Gerontol 25(8):691710.
+18. Schank RC, Abelson R (1995) Knowledge and memory: The real story. Knowledge and
+Memory: The Real Story, ed Wyer RS (Lawrence Erlbaum, Hilldale, NJ), pp 186.
+19. Graesser AC, Olde B, Klettke B (2002) How does the mind construct and represent
+stories? Narrative Impact: Social and Cognitive Foundations, eds Green MC, Strange JJ,
+Brock TC (Lawrence Erlbaum, Mahwah, NJ), pp 229262.
+20. Graesser AC, Ottati V (1995) Why Stories? Some evidence, questions, and challenges.
+Knowledge and Memory: The Real Story, ed Wyer RS (Lawrence Erlbaum Associates,
+HIllsdale, NJ).
+21. Bruner J (1991) The narrative construction of reality. Crit Inq 18(1):121.
+22. Glaser M, Garsoffky B, Schwan S (2009) Narrative-based learning: Possible benefits
+and problems. Communications-European Journal of Communication Research 34(4):
+429447.
+23. Oatley K (1999) Why fiction may be twice as true as fact: Fiction as cognitive and
+emotional simulation. Rev Gen Psychol 3(2):101117.
+24. Read SJ, Miller LC (1995) Stories are fundamental to meaning and memory: For social
+creatures, could it be otherwise? Knowledge and Memory: The Real Story, ed Wyer RS
+(Lawrence Erlbaum, Hillsdale, NJ), pp 139152.
+25. Klassen S (2010) The relation of story structure to a model of conceptual change in
+science learning. Sci Educ 19(3):305317.
+26. Reiss MJ, Millar R, Osborne J (1999) Beyond 2000: Science/biology education for the
+future. J Biol Educ 33(2):6870.
+27. Fisch SM (2000) A capacity model of childrens comprehension of educational content
+on television. Media Psychol 2(1):6391.
+28. Mazor KM, et al. (2007) Patient education about anticoagulant medication: Is narrative evidence or statistical evidence more effective? Patient Educ Couns 69(13):
+145157.
+29. Wise M, Han JY, Shaw B, McTavish F, Gustafson DH (2008) Effects of using online
+narrative and didactic information on healthcare participation for breast cancer patients. Patient Educ Couns 70(3):348356.
+30. Betsch C, Ulshfer C, Renkewitz F, Betsch T (2011) The influence of narrative v. statistical information on perceiving vaccination risks. Med Decis Making 31(5):742753.
+31. Hopfer S (2012) Effects of a narrative HPV vaccination intervention aimed at reaching
+college women: A randomized controlled trial. Prev Sci 13(2):173182.
+32. Nan X, Dahlstrom MF, Richards AS, Rangarajan S (2014) Influence of evidence type
+and narrative type on HPV risk perception and intention to obtain the HPV vaccine.
+Health Commun, in press.
+33. Hinyard LJ, Kreuter MW (2007) Using narrative communication as a tool for health
+behavior change: A conceptual, theoretical, and empirical overview. Health Educ
+Behav 34(5):777792.
+34. Winterbottom A, Bekker HL, Conner M, Mooney A (2008) Does narrative information
+bias individuals decision making? A systematic review. Soc Sci Med 67(12):20792088.
+35. Shaffer VA, Zikmund-Fisher BJ (2013) All stories are not alike: A purpose-, content-,
+and valence-based taxonomy of patient narratives in decision aids. Med Decis Making
+33(1):413.
+36. Cunningham RM, Boom JA (2013) Telling stories of vaccine-preventable diseases: Why
+it works. S D Med (Spec no):2126.
+37. McQuail D (2010) McQuails Mass Communication Theory (Sage Publications,
+London), 6th Ed.
+38. Elliott R (2012) The medialization of regenerative medicine: Frames and metaphors
+in UK news stories. The Sciences Media ConnectionPublic Communication and Its
+Repercussions, eds Rdder S, Franzen M, Weingart P (Springer, London), pp 87106.
+39. Shoemaker PJ, Eichholz M, Kim E, Wrigley B (2001) Individual and routine forces in
+gatekeeping. Journalism Mass Commun Q 78(2):233246.
+40. Reese SD, Ballinger J (2001) The roots of a sociology of news: Remembering Mr. Gates
+and social control in the newsroom. Journalism Mass Commun Q 78(4):641658.
+41. Galtung J, Ruge MH (1965) The structure of foreign-newsThe presentation of the
+Congo, Cuba and Cyprus crises in 4 Norwegian newspapers. J Peace Res 2(1):6491.
+42. Badenschier F, Wormer H (2012) Issue selection in science journalism: Towards a
+special theory of news values for science news? The Sciences Media Connection
+Public Communication and Its Repercussions, eds Rdder S, Franzen M, Weingart P
+(Springer, London), pp 5986.
+43. Zillmann D (1999) Exemplification theory: Judging the whole by some of its parts.
+Media Psychol 1(1):6994.
+
+Dahlstrom
+
+44. Gerbner G (1998) Telling stories, or how do we know what we know? The story of
+cultural indicators and the cultural environment movement. Wide Angle; A Quarterly
+Journal of Film History Theory Criticism & Practice 20(2):116131.
+45. Shanahan J, Morgan M (1999) Televison and its Viewers; Cultivation Theory and Research (Cambridge Univ Press, Cambridge, UK).
+46. Gerbner G, Gross L (1976) Living with television: The violence profile. J Commun 26(2):
+173199.
+47. McComas K, Shanahan J, Butler JS (2001) Environmental content in prime-time network TVs non-news entertainment and fictional programs. Soc Nat Resour 14(6):
+533542.
+48. Dahlstrom MF, Scheufele DA (2010) Diversity of television exposure and its association
+with the cultivation of concern for environmental risks. Environ Commun 4(1):5465.
+49. Besley JC, Shanahan J (2005) Media attention and exposure in relation to support
+for agricultural biotechnology. Sci Commun 26(4):347367.
+50. Dudo A, et al. (2011) Science on television in the 21st century: Recent trends in
+portrayals and their contributions to public attitudes toward science. Communic Res
+38(6):754777.
+51. Kirby DA (2013) Forensic fictions: Science, television production, and modern storytelling. Stud Hist Philos Biol Biomed Sci 44(1):92102.
+52. Curtis R (1994) Narrative form and normative forceBaconian storytelling in popular
+science. Soc Stud Sci 24(3):419461.
+53. Green MC, Brock TC (2000) The role of transportation in the persuasiveness of public
+narratives. J Pers Soc Psychol 79(5):701721.
+54. Slater MD, Rouner D (2002) Entertainment-education and elaboration likelihood:
+Understanding the processing of narrative persuasion. Commun Theory 12(2):
+173191.
+55. Gibson R, Zillmann D (1994) Exaggerated versus representative exemplification in
+news reportsPerceptions of issues and personal consequences. Communic Res 21(5):
+603624.
+56. Moyer-Guse E, Nabi RL (2010) Explaining the effects of narrative in an entertainment
+television program: Overcoming resistance to persuasion. Hum Commun Res 36(1):
+2652.
+57. Gerrig RJ (1993) Experiencing Narrative Worlds: On the Psychological Activities of
+Reading (Westview Press, Boulder, CO).
+58. Dahlstrom MF, Ho SS (2012) Ethical considerations of using narrative to communicate
+science. Sci Commun 34(5):592617.
+59. Appel M, Richter T (2007) Persuasive effects of fictional narratives increase over time.
+Media Psychol 10(1):113134.
+60. Marsh EJ, Meade ML, Roediger HL (2003) Learning facts from fiction. J Mem Lang
+49(4):519536.
+61. Bilandzic H, Busselle RW (2008) Transportation and transportability in the cultivation
+of genre-consistent attitudes and estimates. J Commun 58(3):508529.
+62. Brodie M, et al. (2001) Communicating health information through the entertainment media. Health Aff (Millwood) 20(1):192199.
+63. Vaughan PW, Rogers EM, Singhal A, Swalehe RM (2000) Entertainment-education
+and HIV/AIDS prevention: A field experiment in Tanzania. J Health Commun 5(Suppl):
+81100.
+64. National Academy of Sciences (2013) The Science and Entertainment Exchange.
+Available at www.scienceandentertainmentexchange.org. Accessed April 17, 2014.
+65. Barriga CA, Shapiro MA, Fernandez ML (2010) Science information in fictional movies:
+Effects of context and gender. Sci Commun 32(1):324.
+66. McComas K, Shanahan J (1999) Telling stories about global climate changeMeasuring the impact of narratives on issue cycles. Communic Res 26(1):3057.
+67. Miller JD, Kimmel L (2001) Biomedical Communications: Purposes, Audiences, and
+Strategies (John Wiley, New York).
+68. Miller JD, Pardo R, Niwa F (1997) Public Perceptions of Science and Technology:
+A Comparative Study of the European Union, the United States, Japan, and Canada
+(Chicago Academy of Sciences, Chicago).
+69. Dickson D (2001) Weaving a social web. Nature 414(6864):587587.
+70. Walker G, Simmons P, Irwin A, Wynne B (1999) Risk communication, public participation and the Seveso II directive. J Hazard Mater 65(12):179190.
+71. Busselle RW, Bilandzic H (2008) Fictionality and perceived realism in experiencing
+stories: A model of narrative comprehension and engagement. Commun Theory
+18(2):255280.
+72. Kreiswirth M (2000) Merely telling stories? Narrative and knowledge in the human
+sciences. Poetics Today 21(2):293318.
+73. Wynne B (2006) Public engagement as a means of restoring public trust in science
+Hitting the notes, but missing the music? Community Genet 9(3):211220.
+74. Goodwin J, Dahlstrom MF (2014) Communication strategies for earning trust in
+climate change debates. WIREs Climate Change 5(1):151160.
+75. Priest SH (2001) Misplaced faithCommunication variables as predictors of encouragement for biotechnology development. Sci Commun 23(2):97110.
+76. Priest SH, Bonfadelli H, Rusanen M (2003) The trust gap hypothesis: Predicting
+support for biotechnology across national cultures as a function of trust in actors. Risk
+Anal 23(4):751766.
+77. Malka A, Krosnick JA, Langer G (2009) The association of knowledge with concern
+about global warming: trusted information sources shape public thinking. Risk Anal
+29(5):633647.
+78. Pornpitakpan C (2004) The persuasiveness of source credibility: A critical review of
+five decades evidence. J Appl Soc Psychol 34(2):243281.
+79. Einsiedel E (2008) Public engagement and dialogue: A research review. Handbook of
+Public Communication on Science and Technology, eds Bucchi M, Smart B (Routledge,
+London), pp 173184.
+80. Pielke RA (2007) The Honest Broker: Making Sense of Science in Policy and Politics
+(Cambridge Univ Press, Cambridge, UK).
+
+PNAS | September 16, 2014 | vol. 111 | suppl. 4 | 13619
+
+81. Rabinovich A, Morton TA, Birney ME (2012) Communicating climate science: The role
+of perceived communicators motives. J Environ Psychol 32(1):1118.
+82. Randall R (2009) Loss and climate change: The cost of parallel narratives. Ecopsychology 1(3):118129.
+83. Kahan DM (2012) Why we are poles apart on climate change. Nature 488(7411):255.
+84. Brossard D (2013) New media landscapes and the science information consumer. Proc
+Natl Acad Sci USA 110(Suppl 3):1409614101.
+85. Cacciatore MA, Scheufele DA, Corley EA (2013) Another (methodological) look at
+knowledge gaps and the Internets potential for closing them. Public Underst Sci.
+86. Anderson AA, Brossard D, Scheufele DA, Xenos MA, Ladwig P (2013) The nasty effect: Online incivility and risk perceptions of emerging technologies. Journal of
+Computer-Mediated Communication 19(3):373387.
+87. Berger J, Milkman KL (2012) What makes online content viral? J Mark Res 49(2):192205.
+88. Dahlstrom MF, Ritland R (2012) The problem of communicating beyond human scale.
+Between Scientists and Citizens, ed Goodwin J (Great Plains Society for the Study of
+Argumentation, Ames, IA), pp 121130.
+
+13620 | www.pnas.org/cgi/doi/10.1073/pnas.1320645111
+
+89. Kaschak MP, Maner JK (2009) Embodiment, evolution, and social cognition: An integrative framework. Eur J Soc Psychol 39(7):12361244.
+90. Garcia-Retamero R, Galesic M (2011) Using plausible group sizes to communicate
+information about medical risks. Patient Educ Couns 84(2):245250.
+91. McCarthy RJ, Skowronski JJ (2011) Youre getting warmer: Level of construal affects the
+impact of central traits on impression formation. J Exp Soc Psychol 47(6):13041307.
+92. Trope Y, Liberman N, Wakslak C (2007) Construal levels and psychological distance:
+Effects on representation, prediction, evaluation, and behavior. J Consum Psychol
+17(2):8395.
+93. Baake K (2003) Metaphor and Knowledge: The Challenges of Writing Science (State
+Univ of New York Press, New York, NY).
+94. National Nanotechnology Initiative (2014) Nanotechnology 101. Available at www.
+nano.gov/nanotech-101. Accessed April 17, 2014.
+95. Weigmann K (2004) The code, the text and the language of God. When explaining
+science and its implications to the lay public, metaphors come in handy. But their
+indiscriminant use could also easily backfire. EMBO Rep 5(2):116118.
+
+Dahlstrom
+
+

@@ -1,0 +1,1698 @@
+IEEE Intelligent Transportation Systems Magazine
+vol. 6, no. 4, Winter 2014, pp. 6-22
+
+6
+
+Three Decades of Driver Assistance Systems
+Review and Future Perspectives
+Klaus Bengler, Klaus Dietmayer, Berthold Frber, Markus Maurer, Christoph Stiller, Hermann Winner
+Abstract  This contribution provides a review of fundamental goals, development and future perspectives of driver
+assistance systems. Mobility is a fundamental desire of mankind. Virtually any society strives for safe and efficient
+mobility at low ecological and economic costs. Nevertheless, its technical implementation significantly differs among
+societies, depending on their culture and their degree of industrialization. A potential evolutionary roadmap for driver
+assistance systems is discussed. Emerging from systems based on proprioceptive sensors, such as ABS or ESC, we review
+the progress incented by the use of exteroceptive sensors such as radar, video, or lidar. While the ultimate goal of
+automated and cooperative traffic still remains a vision of the future, intermediate steps towards that aim can be realized
+through systems that mitigate or avoid collisions in selected driving situations. Research extends the state-of-the-art in
+automated driving in urban traffic and in cooperative driving, the latter addressing communication and collaboration
+between different vehicles, as well as cooperative vehicle operation by its driver and its machine intelligence. These steps
+are considered important for the interim period, until reliable unsupervised automated driving for all conceivable traffic
+situations becomes available. The prospective evolution of driver assistance systems will be stimulated by several
+technological, societal and market trends. The paper closes with a view on current research fields.
+
+1. Objectives of Mobility and Driver Assistance
+Mobility is highly correlated with societal and individual well-being and greatly contributes to quality of life. It is the
+backbone of commercial trading and services and, therefore, the basis for economic success. Through mass automobile
+production and strategic, long-term paved road creation, industrialized countries have reached a high degree of individual
+mobility.
+Its advantages, however, come at a price. In addition to obvious monetary costs of vehicles, fuel, and the provision and
+maintenance of automobile infrastructure, mass mobilization entails further economic, ecological, and social costs:
+resource consumption, noise and exhaust pollution, loss of productive time due to traffic congestion and harmful or fatal
+traffic incidents as a personal safety risk are merely a select few examples of adverse effects (Verhoef 1994, Schrank et al.
+2012, Holden 2012).
+While the focus of the mobility industry is partly shifting towards emerging markets where the need for individual
+mobility is not yet as saturated, automobile markets in highly industrialized countries like Germany mainly aim to raise
+the quality of todays mobility. This goal includes a reduction of traffic related accidents (keyword: vision zero: Vision
+zero is the image of a future in which no one will be killed or seriously injured by traffic accidents) (Vgverket, 2014) and
+environmental pollution, as well as an increase of mobile efficiency in terms of energy, time, and resources (European
+Union 2010).
+Measures to reduce the costs of mobility per distance driven have been taken since the 1970s, e.g. the development of
+passive passenger safety concepts, low-emission vehicles, and safer traffic routes. In order to further diminish the negative
+impact of mass mobilization on economy, environment, and society, new strategies have to be devised.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+7
+
+A frequently discussed concept is the electrification of automobiles with the aim of reducing ecological costs and
+countering the increasing scarcity of resources. Despite the solutions electric cars offer in response to the disadvantages of
+ordinary automobiles, the reasonability of mass electrification is still open to dispute (Ogden et al. 2004). For the purposes
+of this article, electro-mobility will be considered a possible long-term approach, but not a dominant choice for the near
+future.
+A different approach to increase the efficiency of mobility is the concept of driver assistance. Driver assistance systems
+(DAS) offer a means to enhance, among other things, active and integrated safety. However, in order to maximize their
+contribution to overall traffic safety, an increased market penetration is required (Lu 2006). This can be achieved by
+raising awareness for DAS and their benefits throughout the population, or by regulating their implementation by law. A
+good example for the latter is, e.g. electronic stability control systems (ESC), which are mandatorily included in newly
+produced vehicles throughout the traditional markets (e.g. from November 2014 on in the EU, (European Union 2008)).
+In order to tap the full potential of DAS, increased emphasis should be put on special needs of driver groups, such as
+first time drivers or elderly drivers. By adapting to the specific needs of such drivers, DAS can probably better help
+reduce traffic related fatalities, which amount to 1.2 million people worldwide (Volvo 2013). While the majority of
+these fatalities occur within the vehicle, safety vulnerable traffic participants, i.e. pedestrians, bicyclists, and
+motorcyclists, must not be neglected. The potential contribution of passive safety, such as bluff vehicle bodies, is very
+limited. Active collision protection systems with emergency braking and collision mitigation capabilities, despite the
+technical challenge they represent, can be considered indispensable in order to truly decrease traffic-related fatalities.
+When forming future concepts, it is necessary to maintain an integral and systematic perspective. PROMETHEUS (19871995), a European research project dedicated to the improvement of mobility quality, showed that success is not merely
+dependent on technological feasibility (Nagel 2008). The California PATH program established in 1986 was a multidisciplinary US initiative with a similar integral perspective including automated Highways (PATH 2014). Other projects
+for future concepts include SARTRE and DRIVE, both of which were funded by the European Commission. SARTRE
+aimed to encourage a change in personal transport by platooning. The unique element of the program was the interaction
+between the lead vehicle and the following vehicles. The introduction of platooning was predicted to achieve
+environmental as well as safety benefits and a reduction of congestions (SARTRE).
+
+2. Current State of Technology, Research, and the Market
+Evolution of Driver Assistance Functions from a Market Perspective
+The past and a potential future evolution of DAS is sketched in Fig. 1 from a technological point of view 1. Early DAS
+were based on proprioceptive sensors, i.e. sensors measuring the internal status of the vehicle, such as wheel velocity,
+acceleration, or rotational velocity. These enable the control of vehicle dynamics with the goal of following the trajectory
+requested by the driver in the best possible way.
+One of the first active assistance systems based on proprioceptive sensors was the Anti-lock Braking System (ABS), with
+serial production from 1978 (Bosch). A Traction Control System (TCS) later augmented the system.
+
+1
+
+The figure sketches the dates of market introduction for selected DAS functions to the best knowledge and understanding of the
+authors. Nevertheless, the selection of the first market introduction for a specific DAS function depends on the detailed definition of
+several factors, like functional specifications, serial size, and market acceptance and retention.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+8
+
+Fig. 1 Past and potential future evolution towards automated cooperative driving.
+Years later in 1995, the introduction of additional dynamic driving controls, such as Electronic Stability Control (ESC),
+marked a further milestone in assistance development (van Zanten & Kost 2012). With ESC, an electronic gyroscope
+found its way into the automobile. This equipment did not only lay the foundation for the ESC, but revealed an entire
+range of additional usage possibilities. Overall component price was reduced twofold by emphasizing cost efficiency in
+the production process. In terms of road safety, studies have shown that dynamic driving controls are the second most
+efficient safety system for passengers, outmatched only by the seatbelt (Aga et al. 2003, Sferco et al. 2001). This was
+strikingly demonstrated in the Mercedes A-Class Moose Test, which caught the attention of the media, see e.g.
+(Andrews 1997, Strassmann 1988). With the public recognition of the safety potential of dynamic driving control systems,
+the frequency of implementation for such systems increased significantly, and they have, in consequence, saved several
+thousands of lives. Starting November 2014, ESC (in addition to braking assistance systems developed at the same time)
+will even be a legal requirement in each new car in the EU.
+Exteroceptive sensors acquire information from outside the vehicle, including ultrasonic, radar, lidar or video sensors and
+to some extent Global Navigation Satellite System (GNSS)2 receivers. These sensors provide information about the road
+ahead and the presence as well as the driving status of other traffic participants or the vehicles position in the world. The
+international evolution in the area of navigation systems in relation to progress in positioning technology is described in
+(Akamatsu et al. 2013).
+The second generation of driver assistance functions first introduced around 1990 based on exteroceptive sensors focuses
+on providing information and warnings to the driver, and on enhancing driving comfort. Substantially driven by the cost
+reduction of mobile devices navigation technology using GNSS has become prevalent in present-day vehicles. Due to the
+phenomenon of the non-local risk, constituting that non-locals are involved in accidents more frequently than locals
+(Engels & Dellen 1989), navigation systems have safety implications. By aiding a driver in orientation, navigation
+systems hold the potential to reduce the drivers workload, allowing a greater amount of mental resources to be dedicated
+
+2
+
+GNSS summarizes GPS, Galileo, and GLONASS for satellite-based localization.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+9
+
+to the primary driving task, thereby reducing the risk of accidents due to inattention (TNO 2007). Additionally, several
+studies indicate the advantages in saving gas/fuel by anticipatory driving and travelling to a destination via the optimal
+route (e.g. Zlocki et al. 2010, Br et al. 2011, Boriboonsomsin et al. 2012, Dornieden et al. 2012, Popiv et al. 2010). With
+increasingly accurate navigation technology in the future, further beneficial effects are conceivable through the provision
+of localization data to support systems, enabling their functions to be better adapted to local driving conditions.
+Parking assistance systems entered the market in the mid-1990s, e.g. (Katzwinkel et al. 2012). Ultrasonic sensors are used
+to detect obstacles in the surrounding environment. Initially, these systems had merely a warning function to help prevent
+collisions while backing into and out of parking spaces; later, they were complemented by rear-view cameras to better
+assist the driver with more detailed information. After electronically controllable steering became available, parking
+assistants became capable of entirely relieving the driver of lateral vehicle control during the parking maneuver, requiring
+him only to accelerate and brake. Over the years, this systems capability expanded from parallel to perpendicular
+parking. Additionally, video data of the vehicles surroundings were upgraded from a simple rear view to one that spans
+an entire 360 (Nissan 2007). The market did not respond as fast to parking assistance systems as to ESC and navigation
+systems. However, considering that parking assistance systems are typically considered an optional feature and associated
+with additional costs, such systems have nonetheless been successful in their own right. So far, state-of-the-art of these
+systems is limited to automatic steering (Valeo 2013) into a parking space designated by the driver (and recognized by the
+vehicle), whereas a type of valet parking (where the driver is completely removed from the procedure of finding a parking
+space) may soon be technologically possible.
+The development of Adaptive Cruise Control (ACC) (Winner et al. 2009, Winner 2012) set another milestone in driving
+assistance history. Through the implementation of electronic brake and drive control, and the use of previously very
+expensive radar technology, which in turn became significantly more affordable, partially automated driving was made
+possible. When ACC was introduced in 1999, these features were initially only usable at speeds greater than 30km/h
+(Jones 2001). Current systems with automatic transmission, however, have the ability to employ these features at lower
+speeds and, for example, to automatically follow other vehicles within traffic jam (TC204 2009).
+Forward collision prevention systems using inexpensive low-range and low-resolution versions of lidar sensors are
+currently being used for low speed applications, marketed under the names: City Safety (Volvo 2014) and City Stop
+(Ford 2014). Both systems introduced around 2010 help to prevent car body damages, an economically very useful
+application. For advanced applications (e.g. higher speeds), the small detection range of inexpensive lidar systems is,
+however, a strongly limiting factor. Interestingly, long range collision mitigation systems based on the radar technology
+originally introduced with ACC had been introduced before in 2003-2006 (Kodaka et al. 2003). By means of escalating
+warning levels, the driver is made aware of an impending collision. If the driver does not react, the vehicle actively brakes
+to mitigate accident severity once a collision is no longer avoidable (Maurer 2012). Such systems have been investigated
+in the European PREVENT project (2004-2008), and can prove especially effective for larger vehicles such as trucks, due
+to their limited driving dynamics requiring earlier-onset braking in comparison to smaller vehicles. Consequently, these
+collision mitigation systems will be mandatory in new trucks in the EU by law, starting November 2013 (EC No
+661/2009).
+The same obligation exists for Lane Departure Warning (LDW) systems. These and the active lane keeping assistance
+systems derived from them, spawned the market entry of machine vision in the mobility sector and thereby constitute
+another milestone in DAS history (Ishida & Gayko 2004).
+The latest class of DAS selects and controls trajectories beyond the current request of the driver. The high certainty level
+required for such decisions can only be achieved with an interconnected set of sensors. Radar and camera technologies
+currently dominate the DAS sector. Having complementary capabilities, an omission of one technology in favor of the
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+10
+
+other is not to be expected. Rather, data fusion strategies (Stiller et al. 2011) and joint sensor self-calibration (Dang et al.
+2009) will combine the strengths of both technologies. The short-term goal is to automate driving in selected situations.
+As an example, traffic jam assistance systems have recently been introduced based on radar and stereo cameras. Merging
+longitudinal and lateral control, these systems are designed for Automated Low Speed Driving on congested highways
+assuming full lateral and longitudinal vehicle control at low speeds (Daimler 2013). Maximum hands-off speed is still low
+(30 km/h), restricted to stop-and-go situations, but this function may eventually emerge towards automated highway
+driving.
+Other extensions of current DAS are soon to come. Examples include an assistant for collision avoidance by evasive
+steering (Dang et al. 2012), assistants for the detection of oncoming traffic and pedestrians (Enzweiler & Gavrilla 2009)
+under adverse vision (weather) conditions (Roser & Geiger 2009), or assistants for improved intersection safety
+(Hopstock & Klanner 2007). Some of these systems require data exchange between traffic participants or with the road
+infrastructure, which is currently being investigated and demonstrated in field tests such as SIM-TD (2008-2013) (SIMTD 2013), Ko-FAS (2009-2013) (Ko-FAS 2013), Koline (Saust et al. 2012), DriveC2X (2011-2013) (DRIVEC2X 2013).
+This approach promises an extension of a systems boundaries with respect to the availability of information and the
+expansion of its function to an entire collective of road users allowing for assisted or automated cooperative maneuvering
+(Stiller et al. 2007, Shladover 2009).
+
+Research towards Automated Driving
+The ultimate DAS of the future should be capable of automated driving in all conceivable situations at a safety level
+significantly superior to that of a human driver and in cooperation with other traffic participants. This is considered
+especially important, as the compensation for human error, accounting for 90% of all accidents (Volvo 2013, Treat et al.
+1979) is a prerequisite for accident-free traffic. In order to develop such cooperative automated vehicles, the driving tasks
+need to be broken up into basic functional components that can be technically implemented at a certified level of maturity.
+Automated driving has already been a research topic since the late 1980s leading to e.g. the California PATH project
+(1986-ongoing), the NAVLAB project (1986-ongoing), (Thorpe 1990), the PROMETHEUS project (1987-1995) and the
+U.S. DOT National Automated Highway System Research Program (NAHS) (1994-1997). These projects have
+significantly advanced research in sensor hardware and software. In particular, e.g., lane recognition based on video
+capturing and processing technology has been demonstrated (Dickmanns & Mysliwetz 1992). In 1994 two demonstrator
+vehicles drove in normal traffic on Autoroute 1 near Paris demonstrating lane keeping up to 130 km/h, convoy and lane
+change maneuvers. The latter still required a manual confirmation by a safety driver. About 50 transputers processed
+images from four cameras extracting lane geometry and the pose of other vehicles. (Franke et al. 1994, Dickmanns et al.
+1994). In 1995 an automated vehicle travelled from Munich, Germany, to Odense, Denmark, at velocities up to 175 km/h
+with about 95% in automated mode (Maurer et al. 1996, Maurer 2000). At about the same time another group
+demonstrated vision-based automated urban driving in the city of Karlsruhe at speeds of ca. 30 km/h. (Siegle et al. 1992,
+Nagel et al. 1995).
+In the No hands across America tour a vehicle drove from Washington DC to San Diego with 98% automated steering
+yet manual longitudinal control (Pomerleau 1995, Pomerleau & Jochem1996). The NAHS Demo97 on I-15 in San Diego
+showed the capabilities of cars, busses and trucks in various automated highway scenarios. Various lane keeping
+technologies were presented using computer vision and based on augmented infrastructure like roadway embedded
+magnets and roadway laid radar-reflective stripes. Vehicle following was demonstrated using laser or radar sensors.
+Platooning with narrow headways was accomplished using inter-vehicle communication (Thorpe et al. 1997, Ozguner et
+al. 1997, Rajamani et al 2000). Likewise early contributions in Japan included public demonstrations of automated
+vehicles including Demo 2000 organized by the National Institute of Advanced Industrial Science and Technology.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+11
+
+Cooperative platoon driving of five vehicles was demonstrated including advanced maneuvers such as stop-and-go,
+merging, and obstacle avoidance (Tsugawa & Sadayuki 1994, Kutami et al. 1995, Kato et al.2002).
+Another long-distance mostly hands-free drive through Italy has been reported by (Broggi et al.1999). Multisensory
+automated driving without need for a safety driver onboard the vehicle has been realized on proving grounds (Stiller et al.
+2001). Joint lateral an longitudinal control has been one of the main campaigns of the research programs INVENT (20012005) (Invent 2005) and AKTIV (2006-2010) (Aktiv 2012).
+In the ongoing century several public challenges catalyzed international research on automated vehicles. The Defense
+Advanced Research Projects Agency (DARPA) organized a first Grand Challenge for autonomous off-road ground
+vehicles in March 2004. The vehicles had to navigate a course of 175 miles through the desert defined by a dense series of
+some 2000 waypoints avoiding static obstacles. The furthest distance traveled was about 7 miles.
+The second DARPA Grand Challenge in 2005 had a similar setup with a course defined by some 3000 waypoints over
+150 miles through the desert. All finalists based their work on high-end laser scanners coupled with high-precision
+GPS/INS systems and radars for long range sensing. Again vehicles had to avoid static obstacles only on the closed-tothe-public course. Five teams led by the Stanford Racing Team finished the course (Darpa 2005, Thrun et al. 2006,
+zgner et al. 2007).
+The third DARPA Challenge held in 2007, named Urban Challenge, took place in a mock up urban environment in
+California. A Road Net Description File was available that included a map of the terrain and the local traffic rules.
+Vehicles had to negotiate their way through traffic build by other participants and stunt drivers following regular traffic
+rules. The main sensors used by the finalists were a high-end, roof-mounted lidar scanner (Velodyne 2007), high-precision
+GPS/INS and radars were used for long range sensing, while computer vision played at most a secondary role. The team
+of Carnegie Mellon University won before Stanford and Virginia Tech (Urmson et al. 2008).
+The Grand Cooperative Driving Challenge 2011 (GCDC) was the first international competition of vehicles connected
+with communication devices. Participating teams from about 10 countries had to come up with strategies that were able to
+drive without knowing the algorithms and technical equipment of other vehicles in their platoon. Teams were shuffled to a
+random starting position in a random platoon over 15 runs on a highway near Helmond, the Netherlands. Criteria for
+performance evaluation included damping to strong oscillating braking/acceleration maneuvers of the common platoon
+leader, overall traveling time and platoon length of the team. The team of KIT won before Chalmers University (Geiger et
+al. 2012).
+Inspired by the challenges, numerous research groups from industry and academia continue research and automated
+driving demonstrations in increasingly complex scenarios can be expected in the near future. In 2010 a team of
+Braunschweig University extended their work of the Urban Challenge by automated driving in public traffic on a piece of
+the Braunschweig city ring road within the Stadtpilot Project (Wille et al. 2010, Saust et al. 2011).
+Among the publicly most noticed activities is the impressive work by Google that extends experience gained in the Urban
+Challenge. A roof-mounted high-end laser scanner and a detailed map, recorded in a prior manual drive, provide the main
+information about the driving environment. A color camera is used for traffic light recognition. The overwhelming
+amount of more than 500.000 km of automated driving has been reported in 2013 (Markoff 2013).
+In July 2013 a car drove autonomously in public traffic near Parma, Italy, remarkably at times even with nobody on the
+drivers seat. The 13 km long route included two-way rural roads, freeways with junctions, and urban areas with
+pedestrian crossings, tunnels, artificial bumps, tight roundabouts, and traffic lights (PROUD 2013).
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+12
+
+In August 2013, a collaboration of Daimler AG and KIT/FZI automated a Mercedes Benz S-Class demonstrating the
+maturity of mono- and binocular video sensors augmented only by serial or close-to-production radar and GPS sensors
+and a digital map. The vehicle successfully drove the 100 km long Bertha Benz Memorial Route from Mannheim to
+Pforzheim, Germany, in presence of crossing pedestrians, bicyclists, vehicles and trucks in narrow urban and rural roads
+and complied with traffic rules including traffic signs and lights (Franke et al. 2013, Lategahn et al. 2013, ITS Podcast
+2013, Ziegler et al. 2014).
+As outlined above, highway and freeway automation and low speed automated driving are currently being introduced in
+first products. Urban driving, however, poses a particular challenge because it involves many different situations and
+complex scenarios, that state-of-the-art technology is not yet able to handle and is therefore a focus of ongoing research
+activities. The project UR:BAN (2012-2016) (UR:BAN 2014) gathers various stakeholders for these applications to
+prepare a new generation of driver assistance functions (Manstetten et al. 2013).
+
+Related Research Directions
+Beyond all enthusiasm concerning technological progress, however, it must be acknowledged that automated driving in all
+conceivable traffic situations requires considerably more cognitive capabilities than available at the current state-of-theart. Furthermore, clear definitions for liability, licensing, and registration of automated cars are yet to be devised.
+Therefore, as an interim stage, some research projects focus on so-called semi-automation or high automatization.
+Human factors play an important role in such systems that share tasks and responsibility between the human driver and
+the semi-automated vehicle. There are approaches favoring a human-machine cooperation in general (Hakuli et al. 2009,
+Kienle et al. 2009) or in dangerous situations, see, e.g. the research project HAVEit (2007-2010) (HAVEit 2010). In other
+approaches, the machine takes control whenever the driver is unable to, and automatically halts the vehicle or pilots it to a
+safe position, as demonstrated in the SmartSenior project (2009-2012) (Kmpchen et al. 2010).
+Until full automation is feasible, support of the driver by DAS is sought. They can intervene in case of deficient driving
+abilities, when, for example, the driver becomes drowsy. Drowsiness detection and warning systems are already on the
+market. Based, for example, on drivers steering behavior and response times, length of the trip, use of turn signals, and
+time of day (Bosch 2012), the system alerts its users of possible drowsiness. Effects and consequences of drowsiness
+detection, especially in terms of acceptance by the driver, are, however, not yet profoundly researched. Aside from
+drowsiness, inattention can also occur when the driver neglects his primary driving task due to distraction by an auxiliary
+task. Interior cameras can recognize this state and adapt the parameters of warning and intervention systems (Trivedi et al.
+2007).
+Distraction aside, it is possible that the driver is unable to handle all incoming information and act upon it correctly, even
+when allocating full attention to the primary driving task. As this especially pertains to night driving situations, systems to
+enhance night vision have been developed. One such technology uses intelligent headlights (Thom et al. 2011). This
+technology allows illumination of specific solid angles to maximize the illumination of the road without dazzling other
+traffic participants. Furthermore, areas of high relevance can be illuminated for a short time to attract the drivers
+attention. Other night vision systems are based on close-range and long-range infrared technology, providing an on-screen
+display of the drivers surroundings. Recognized objects, such as pedestrians, can be highlighted, or trigger an active
+warning (Horter et al. 2009, Li et al. 2012).
+Mental over- or underload due to the varying complexity of traffic situations can be another source of erroneous driver
+behavior. Though researchers have presented assistance concepts based on mental load (e.g. Smiley 1989), no proper
+implementation of such a concept into the human-machine-interaction has yet been realized. At best, simple attempts to
+avoid mental overload from complex traffic routing have been made with assistants indicating the number of lanes and the
+traffic situation on the upcoming road. Mental underload from monotony, with the potential to induce inattention (e.g.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+13
+
+Young & Stanton 2002), is an entirely unresolved issue. An attention deficit may manifest far before the driver enters a
+state of drowsiness that could be picked up on by drowsiness detection systems. Solutions for the problems posed by
+mental over- and underload could contribute greatly to the improvement of DAS.
+Apart from a general lack of market penetration, it is known that DASs are not well distributed in accordance with the
+needs of specific user groups. As can be seen from Fig. 2, the groups with the highest probability of being the main
+perpetrator of an accident are young and old drivers (Destatis 2013). The prevalence of DAS as of today, however,
+appears limited to a small user group of mostly middle-aged persons (Langwieder et al. 2012). Use of these systems is
+often impeded by the inability to be retrofitted in ones current vehicle (Trbswetter & Bengler 2013).
+
+Fig. 2 Share of being the main perpetrator of accidents
+with injuries for age group involved (Destatis 2012)
+Soon after DAS became available for passenger cars, they were also offered in commercial vehicles. Due to the universal
+ambition to save costs, such systems were, however, even less frequently acquired in this sector. Unlike in the private
+sector, regulations (EC No 661/2009) were put into place, making it a legal requirement for certain commercial vehicles
+to come equipped with, for example, emergency braking and lane keeping systems as a serial standard.
+Other than traffic jam prevention, through ACC (van Arem et al. 2006), assistance systems have not yet been able to
+contribute much to traffic efficiency. To achieve a noticeable improvement, assistance systems need to extend their
+capabilities towards cooperative driving. Though previous research has shown that cooperative systems can improve
+efficiency (e.g. convoy driving (Schulze 1997)), an underlying functional concept of cooperation has not yet been
+established. In terms of energy efficiency, existing possibilities to increase efficiency are not yet being broadly applied.
+To date, cooperative driving exercises of different vehicle groups, for example, were only rudimentarily examined (Frese
+et al. 2007).
+In an intermediate conclusion, one may summarize that automotive research and engineering offers a broad inventory of
+DAS with a potential to improve the quality of mobility. In the long term, cooperative automated vehicles can be expected
+from this technical evolution. Todays market situation of DAS, however, suffers from the following yet unresolved
+weaknesses:
+
+
+Even when available in the class of compact cars, DAS are ordered only by a minority of customers (Karmasin
+2008, Krger 2008).
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+14
+
+
+
+
+
+Overall, DAS acceptance is increasing but DAS are often poorly understood by users (Zwerschke, 2006).
+DASs are unattainable for relevant social groups and cannot be upgraded or retrofitted.
+DASs communicate with the carrier vehicle only, and remain isolated from other road users and traffic
+infrastructure. They have not yet found their way into intermodal traffic (Saust et al. 2012).
+
+This non-exhaustive list discloses the foci of future developments. DAS need to be embedded into transportation systems
+on a larger scale. They need to be interlinked with one another, between different users, and to other technical systems.
+
+3. Stimuli for future developments
+In addition to several essential technological breakthroughs in the past, further leaps in technology are expected in the
+future. A vehicles awareness of its surrounding environment is becoming increasingly complete and more detailed,
+especially with innovations such as new image processing approaches with 6-D (e.g. Mller et al. 2011, Rabe et al. 2010,
+Rabe et al. 2007), imaging radar systems (Khler et al. 2013), and improved positioning systems. Through advancements
+in hardware and software, a relatively high level of artificial intelligence is likely to be established. Machine cognition
+will continually improve, ultimately paving the way for fully autonomous driving. As a long term development, an
+increase in efficient and smooth traffic flow with few accidents is to be expected. However, before this vision can become
+a reality, a number of issues have to be resolved.
+
+Car2Car and Car2X Communication
+The internet, has, so far, played an only marginal role in vehicles. Up until now, the use of data links has been restricted
+mainly to infotainment and navigation support. In the future, along with developments in the infotainment area, new
+driving assistance capabilities can be expected. The driving office is certainly an interesting concept for managers and
+businessmen. It may be assumed that, in the future, the mobile office and autonomous driving package will be subject to
+intense request in regard to company cars. Other potential use cases for data communication include the allocation of
+parking spaces before the actual arrival of the vehicle at the parking lot, or the communication in intermodal traffic.
+Communication-based DAS for guidance or stabilization support on the other hand require an independent network
+concept. In field operational tests, like SIM-TD (www.simtd.org) and research projects like Ko-FAS (www.kofas.de) and
+Koline (Saust et al. 2012), the foundations for a comprehensive implementation of such technology are being laid down.
+Integrating all traffic participants of a certain area into a common network, a new stage of driving assistance can be
+realized, based on the vastly improved quality and quantity of information about the local traffic situation. This would, for
+example, impact traffic infrastructure considerably (Tank & Linnartz 1997, Tischler & Hummel 2005, Nagel et al. 2007,
+Dietl et al. 2001, Eichler 2007, Kosch 2004). A traffic light, for example, could be replaced by a wireless access point that
+directs the vehicles through the junction. While this approach would be more efficient and effective with automated
+vehicles than with human operators, it should yield positive results irrespective of who is driving the vehicle. Vehicles
+equipped with sensors and v2v communication devices could expand their horizon via cooperative sensing. Given
+sufficient bandwidth and integrity of the data sources and the communication network, information from all the vehicles
+and the infrastructure, if available, could then be fused into a detailed dynamic map, as demonstrated in the EU project
+DRIVE C2X (www.drive-c2x.eu). In analogy to the IT-cloud concept, shared sensor data could be described as cloudsensors.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+15
+
+Fig. 3 Cooperative traffic of communicating vehicles
+As depicted in the traffic scenario in Fig. 3, vehicles may communicate slowdowns to their rear or inform forward traffic
+about the presence of vehicles in their blind spot. Furthermore, connected vehicles may negotiate driving trajectories to
+their mutual benefit and to the benefit of overall traffic flow and safety (Stiller et al. 2007, Goldhammer et al. 2012).
+Seeing the enormous potential to increase driving safety and efficiency with respect to energy, time and traffic
+infrastructure, such networks will hopefully soon become a reality for the benefit of all traffic participants (European
+Union 2010). The high initial costs associated with the provision of a sensor-cloud concept can be expected to be
+redeemed during long term usage. A necessary precondition, however, is a reliable network with a high quality of service
+and integrity, which is yet to be developed.
+
+Electro-mobility
+Electro-mobility, too, presents new challenges for driver assistance. Primary requisites are an adequately tight network of
+charging stations and guaranteeing a sufficient amount of energy to complete the desired journey. For example in March
+2014, Tesla has 66 stations in the US, which can only be seen as a starting point (Tesla 2014). In the course of these issues
+being resolved, the usage of e-mobility can be expected to change. This will mainly affect variables of energy efficiency,
+forcing a series of decisions on the means and the objectives of mobility in general, as well as on business models to be
+implemented in light of the respective technological state-of-the-art. Accordingly, assistance functions will have to adapt
+to altered basic conditions of transportation usage and provide additional functions for intermodal mobile assistants and
+range extension.
+One approach towards improved energy efficiency, discussed particularly often in the e-mobility sector, is the reduction
+of vehicle weight. Besides the weight of the engine and the transmission a high proportion of a vehicles mass is attributed
+to passive passenger safety. Increasing the emphasis on and improving the performance of active and integrated safety
+systems can thus pave the way to a significant reduction of vehicle weight.
+
+Societal Changes and market trends
+Changes in society will reflect in changes of technology. In regards to mobility, two major trends of societal change can
+currently be observed. One manifests in the world of senior citizens. Being the first generation of elderly people having
+used individual mobility for a large part of their lives, they have grown accustomed to and wish to maintain their acquired
+standard of mobility. Several factors, like extended retirement ages and changes in family structure, can even make this a
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+16
+
+necessity. The need to adapt to the specific needs of the elderly becomes apparent. Moreover, the trend reminds us, that,
+while hard to imagine today, there will be future generations accustomed to technology like the cloud, demanding
+intelligent vehicles with high support for driving tasks. Another major societal change regarding mobility occurs within
+the young generation. Having grown up with a high degree of individual mobility as a common standard, they tend to take
+mobility for granted. In conjunction with increasing urbanization the car as an important symbol of societal status is being
+replaced by other values, such as real estate, group affiliation, or design icons. The consequences of this trend are not yet
+clear. It could lead to the possession of a vehicle becoming increasingly less important in the course of increasingly
+rational choice of transport. Or it could promote an increasing emphasis on design features in a car to help it regain its
+function as a symbol of societal status. As with the iPhone in the mobile phone sector, interaction concepts that differ
+radically from established standards are often key to product success, with competitors quickly following suit, thus
+rendering previous, conventional product generations hard to market. In vehicle design, this could cause the steering
+wheel and pedal interaction concepts, developed more than 110 years ago, to be abandoned (see e.g. Fig. 4). In the course
+of such a reinvention of driver-vehicle-interaction, new elements like assistance functions and partial automation could
+find their way into the proverbial iCar not as an optional feature, but an integral and defining part. Provided such
+vehicles share the success of todays models, conventional vehicles could quickly become old rather than classic.
+A different market trend results from changes in the value-creation chain. Companies generate revenues by brokering
+product deliveries. The Apple App Store, for example, provides a distribution platform as its own investment, but does not
+take over the risk of product development and warranty obligation. These business models have not yet been applied to
+the mobility sector in large scale. Currently, there is only a small number of successful mobility platforms like organized
+ridesharing or used car portals. Smartphone based approaches, such as the App taxi.eu (www.taxi.eu) , demonstrate how
+the product mobility can turn into a brokered good. Such services can prove to be an obstacle or a catalyst for the further
+development of DAS.
+
+Fig. 4: Drive-by-Wire-System (Daimler Media Services)
+In vehicles optimized for cost reduction, requirements are likely to be fulfilled with minimal effort in the least expensive
+way possible, which could prove fatal for the budget for innovations. On the flip side, certain automation technologies, for
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+17
+
+example driving to a parking lot, the next customer, or even a mobile ordering office for an online retailing corporation,
+can serve as the technical basis for future business models (Blser et al. 2012, Terporten et al. 2012).
+
+The role of culture and media
+Other stimuli for future developments can come from the adaptation of traditions or new developments from other
+cultures. Increased globalization accelerates the rate of such transfer. Regarding market and technology, German and
+Japanese companies currently dominate the driving assistance scene; this is primarily due to the customers and automobile
+companies being sufficiently willing and financially strong to invest in vehicle technology. As time passes, older, more
+saturated markets may be overtaken by newer, emerging ones. This results in a change of numbers, customer needs, and
+usage conditions, as well as the initial difficulty to appraise willingness to pay and foresee possible regulative
+interventions.
+Finally the role of media should not be underestimated. It is obvious that the presentation of Googles self-driving car in
+the media has both changed the attitudes of users and the effort of established car manufacturers with respect to this
+technology.
+
+4. Challenges and Effects
+For future transportation technology, simple roadmaps showing different developmental steps can be derived. Usually,
+these plans culminate in an interconnected autonomous vehicle, able to drive unsupervised in any possible environment.
+Along the paths towards such a vehicle, many arduous issues of homologation and liability have to be addressed. Todays
+testing and approval methods are unsuitable for the evaluation of intelligent machines, and new metrics assessing the
+performance of driving robots are required. Some experts consider this an even greater challenge, than the development of
+artificial intelligence for autonomous driving itself. The U.S. National Highway Traffic Safety Administration (NHTSA)
+for example, though explicitly encouraging the development and testing of self-driving vehicles, has recently published
+the specific recommendation for state governments to not even attempt to establish safety standards for such technologies
+at this point in time (NHTSA 2013).
+Another aspect impeding advancements are their costs. Technological development requires large investments that can
+only be redeemed by an appropriate market demand. If the market does not accept the developed product, financing
+further developmental steps may prove difficult. This risk is increased by several mediating influences on a products way
+from its development to its end user. So-called specialist magazines often prefer to rave over the sound and power of a
+combustion engine instead of covering meaningful technological innovations in an appropriate manner. Even trade chains
+and car salesmen often fail to promote the technology properly. It is worth pointing out, however, that development of
+DAS has not always been user-oriented and is therefore, in part, co-responsible for low user acceptance (Maurer 2012). In
+order to maximize the success of human-machine-interaction, the increasing number of assistance functions requires the
+development of integrated display and control concepts, providing a consistent user interface.
+Technological development is also impacted, as has been discussed, by social changes. Market response to changed
+conditions can result in a product line shift or entirely new business models, creating new markets and suppressing old
+ones. Such revolutionary market changes may prove especially challenging for the well-established German automotive
+industry. The example of the IT sector (dominated by companies like IBM/DEC/Nixdorf, then Microsoft/Intel/Nokia, then
+Google/Apple/Facebook) demonstrates that decades of success are transient if circumstances and business models change.
+DAS appearing at the right time and along with a fitting business model can be a key element to revolutionize individual
+mobility. As long as cars are used the way they are today, the market is not expected to change remarkably. But the
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+18
+
+development of DAS, especially towards autonomous vehicles, opens up different usage options. This progress cannot be
+held back and potentially threatens todays dominant car companies, if they fail to pro-actively be part of it. In order to
+help co-create the future, extensive scientific research is required to prevent misdevelopments, find optimal terms of
+implementation, and observe the market.
+While future DAS are expected to contribute greatly to traffic safety and efficiency, they are also likely to entail sideeffects. Depending on the pace at which new assistance systems are implemented, a segregation of high-tech assisted
+automobiles and still operable older vehicle models may occur to an extent surpassing the already given situation. While
+such conditions could act as an incentive to buy a new model, they could as well exacerbate discrimination and envy
+between vehicle holders. Since any market change will produce winners and losers, an impact assessment of technological
+innovations should be conducted beforehand, to ensure that technological progress does not get stifled and that its
+advantages are made visible.
+Since they are a vision of the distant future, the effects of interconnected autonomous vehicles cannot yet be fully
+estimated. Traffic flow and traffic safety will increase, while old vehicles could be considered a traffic obstacle or safety
+risk. Here, a legal obligation to new technology may be worth discussing. On the plus side, the need for parking space
+close to a destination would become less relevant, as vehicles could drive to and from any external parking space by
+themselves; this would additionally benefit the environment, reducing the amount of land required to build parking lots.
+Transportation centrals could work as bookable resources managed within a network, which would create new
+opportunities for the industry as well as public authorities.
+Even though it is difficult to transfer from one technology to another, the new quality of mobility gained by autonomous
+vehicles could change our lives in the next 20 years as it was the case with mobile communication. The preconditions
+from a research point of view are presented in Chapter 5.
+
+5. Future Research Foci
+Despite all previous successes of driving assistance research and development, much can still be achieved. Four focus
+areas have been established from the technical perspective.
+
+Individualization
+One important focal point emerging from the status quo is the need for individualization of DAS functional parameters
+and HMI, the need to adapt to individual preferences and requirements. On the one hand, this implies paying special
+attention to and developing DAS specifically for particular user groups. This need becomes apparent in regard to elderly
+drivers who need to preserve their individual mobility for as long as possible, but is equally applicable to young drivers
+who are disproportionally frequently involved in accidents, motor bike drivers as users of a vehicle-class inherently
+different from four-wheelers, and commercial bus and truck conductors with their unusually high driving frequencies and
+heavy vehicles. Regarding the latter, traffic safety should be re-evaluated after the introduction of the new emergency
+braking and lane keeping systems, in order to determine what additional support is required.
+On the other hand, the need for individualization and adapting to user preferences and requirements also implies
+optimizing the human-machine-interaction. By reducing deficits of existing functions in this context, quality of experience
+and transparency of the system for the user could improve user acceptance and promote market penetration. Especially the
+increase of different DAS functionalities that clearly exceed classical ACC and lane keeping support makes integrative
+interaction concepts necessary. Integration of the presentation of information of e.g. all longitudinal support systems or
+lateral support systems is thinkable. Free programmable displays plus head up displays and haptical feedback are
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+19
+
+promising enabling technologies for this. Additionally integration is reasonable in the area of driver input as an increasing
+number of buttons and controls needs to be located in the interieur for different functionalities. Function development
+focused on individual usage and optimal parameterization become particularly vital for future assistance functions,
+especially in highly-automated vehicles (Kienle et al. 2009). It is important that new interface technologies for displays
+and controls provide high immersion of the driver into the driver-vehicle-system to ensure the system is  figuratively 
+controlled by the drivers intentions, and that task sharing between driver and automated functions is intuitive and reliable
+(see. Fig 5 for a contact-analogue head up display). All stages towards a fully automated vehicle require fail-safe
+interaction concepts for a handover of responsibility between driver and vehicle. Since such progress can be achieved only
+via commercial success, the systems require a high hedonic quality regarding all aspects of the interfaces design (Krger
+2008). For both, market success as well as traffic safety, individualization is imperative and should be tackled
+internationally in order to meet requirements for different societies, economic zones, and jurisdictions.
+
+Future foci
+
+
+
+
+
+
+
+
+Assistance functions addressing specific requirements of specific user groups, especially young or elderly drivers
+as well as motorcyclists
+Analysis of traffic accidents after introduction of emergency braking and lane keeping support systems
+New human machine interfaces to support immersion into an integrated driver-vehicle-system
+Driver intention recognition
+Concepts for cooperation between driver and vehicle in automated mode
+Raise hedonic quality in regard to acceptance and market success
+International approach to DAS to achieve acceptance in different countries and cultures
+
+Fig. 5: Visualization of intentions (potential trajectories and speed limits) of a highly automated vehicle in a
+contact-analogue head up display (Dambck et al. 2012b).
+
+Machine Perception and Cognition
+Todays sensors are capable of collecting detailed data of a cars surrounding environment, but machine cognition and
+situational awareness are still in their infancy. To improve them, significant progress is required in symbolic scene
+classification, e.g. object recognition under dynamic conditions, as well as in contextual scene understanding, e.g.
+inference of the relationship between different dynamic objects and with traffic infrastructure elements (Fig. 6). Last but
+not least, the uncertainty and vagueness of the information from and interpretation of the traffic scene needs to be made
+explicit.
+Managing the above is crucial for the realization of appropriate driving functions and corrective actions in complex traffic
+situations. The acquisition of information should be based on more sources than are available in todays cars. High
+precision ego-localization in rich 3D digital maps will play a special role (Nothdurft et al. 2011). New hardware concepts
+and algorithms for sensor data acquisition and interpretation could pave the way for performance improvements at
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+20
+
+reduced costs. Machine vision techniques for image sequence analysis as well as microwave and active optical sensor
+technologies, still exhibit large potentials to enhance spatio-temporal resolution and situational awareness of the perceived
+traffic scene. Methods for scene representation, including measures for quality, need to be further elaborated as a basis for
+situational awareness.
+Another future focus will be on a probabilistic prediction of likely future behavior of the ego-vehicle and other traffic
+participants, based on comprehensive intention inference and behavior modeling (Liebner et al. 2013). Figure 7 shows an
+example for ego-vehicle path prediction including based on machine learning algorithms (Wiest et al. 2012).
+
+Fig. 6 Improving machine cognition and situational
+awareness are future challenges.
+
+Fig. 7 Ego-vehicle trajectory prediction using the
+Trajectory history and present sensor signals like steering
+angle and yaw rate.
+
+Future foci
+
+
+
+
+
+
+Improved algorithms for vehicle situational awareness in complex traffic scenarios, especially in urban
+environment
+Improvement of sensor hardware and software to yield richer high-quality information
+Development of methods and algorithms to acquire situational awareness at a safety-relevant integrity level
+Automated generation, updating, and distribution of local dynamic maps
+Intention and behavior models to predict the behavior of the driver and other traffic participants
+
+Methods of Assessment
+In the past, driving assistance research focused on technological breakthroughs. The emphasis is now shifting, as methods
+of assessment (e.g. Fecher et al. 2008, Schner et al. 2011, Aparicio et al. 2012, Brahmi et al. 2013) become increasingly
+important. Without suitable and generally accepted methods of assessment, potentially distracting or unsafe functions
+cannot be introduced to the market.
+Conventional testing procedures are insufficient to ensure the safety of increasingly complex future assistance functions
+involving machine perception and cognition. For this reason, only apparently harmless assistance functions, like ACC
+or systems with short intervention periods like emergency braking assistance, are currently available. However, the
+number of DAS and their functional range are expected to grow considerably in the near term. If testing and assessment
+methods cannot keep pace with this functional growth, they will become the bottleneck of the introduction of advanced
+DAS to the market (Maurer & Winner 2013).
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+21
+
+Currently, all stages of DAS development lack economically feasible concepts for assessment (Winner & Wolf 2009).
+These include the evaluation of machine perception (Brahmi et al. 2013), the assessment of desired as well as faulty
+function behavior, and last not least, user acceptance tests. A particular challenge is posed by functions that delegate
+decisions from the human operator to the machine in unexpected scenarios. In these cases, market introduction requires
+prior proof that the risk taken on by handing vehicle control over to the machine is at most equal to the risk taken on when
+the human driver is in control (Frber & Maurer 2005, Bock et al. 2007). Two yet unresolved issues arise: how to measure
+performance of the machine and that of the human operator (Dambck et al. 2012a). Valid assessment methodologies
+exist for neither, not even to mention the case of shared or cooperative control by human operator and machine (Bengler
+et al. 2012). To allow comparison between different control modes, a suitable metric has to be devised.
+Since a solution to these challenges is not to be expected in near term, research on suitable assessment methods constitutes
+a part of the critical path to be taken in order to avoid DAS development being held up for decades.
+
+Future foci
+
+
+
+Testing and evaluation methods for machine cognition and (semi-) automated assistance functions.
+Concepts for the assessment of human and machine driving performance
+
+Cooperative Driving
+The fourth focal point concerns the interconnection of and the cooperation between individual vehicles in order to
+establish a traffic network. Existing communication networks and in particular near-future vehicle2x networks open up a
+wide spectrum of improvements to the holistic performance of transportation systems. Hence, existing approaches should
+be further developed towards a level of maturity that allows market introduction and increases the safety of all traffic
+participants through the benefits of shared information (Fig. 8).
+
+Fig. 8 Information sharing using Car2x Communication circumvents dangerous situations
+Initially, driver assistance functions based on vehicle2x communication will have to provide benefits even with low
+market penetration rates. In the long term, high penetration can be expected, requiring additional concepts to be
+established in order to further optimize traffic, including minimizing resource consumption and maximizing safety. These
+concepts should furthermore not focus merely on individual rides, but also provide interfaces to currently inactive or
+intermodal traffic in order to interlink alternative transportation systems. When DAS are modified to promote cooperative
+traffic, appealing visions such as deterministic traffic can come true. This would mean that a trip is carried out
+according to an interactive schedule with traffic participants moving in imaginary spatio-temporal slots.
+
+Future foci
+
+
+
+
+Incorporation of vehicle2x networks for the sake of traffic safety and efficiency.
+Collective provision of accurate local traffic information.
+Collective traffic control based on individually operated cooperative systems.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+22
+
+
+
+
+Continual joint mission planning with reliable prediction of the individual vehicle trajectories.
+Usage optimization of deterministic traffic system concepts.
+
+Social foci of research
+The foci addressed so far concentrated on research areas from a technological point of view. They are based on the
+expertise of the authors of this technical report. However, not all relevant topics have been exhaustively addressed. DAS
+not only reflect the progress of technology, but are developed for humans who purchase and use them; they make a
+difference for individual and collective safety as well as for the mobility of groups and individuals.
+Development of advanced DAS may be stimulated by market acceptance or stunted by societal reservations (Krger 2008,
+Karmasin 2008). On the other hand DAS - particularly those with a high degree of vehicle automation - may induce
+changes in traffic behavior (Freyer 2007 et al., Freyer 2008). Furthermore, advanced DAS may stimulate new business
+models and have a drastic impact on the nature of future mobility. An early pro-active assessment of the consequences of
+technology may reduce potential conflicts. Here, political and social discussions can begin prior to market introduction,
+thus reducing the risk of investments loss (Homann 2005). A crucial input for this discussion will be reliable and valid
+methods to assess the controllability of DAS. This assessment has not only to focus single functions as addressed in the
+RESPONSE Code of Practice (Donner et al. 2007) but moreover the combination of functions in increasingly complex
+scenarios. The BASt taxonomy of automation levels (Gasser, 2012, Gasser et al. 2012) gives important orientation for
+these methodological activities that will also have to cope with higher levels of automation and effects of automation
+under behavioral aspects (Lee & See 2004). Finally, further interdisciplinary research should be dedicated to determine
+the social impact of DAS and fully automated driving to pave the way towards its introduction.
+
+6. Summary and Conclusion
+Since the 1980s, we have seen a long-term evolution of research in advanced DAS with different foci. Due to several
+reasons, it took a long time for these systems to find their way from research into production. Only for the last few years
+we could observe an increasing, significant market penetration of DAS. In the course of the next several years, this will be
+further boosted by the new regulations of the Euro NCAP (NCAP 2014), where the maximum score of five stars will only
+be awarded to cars equipped with basic DAS. But users themselves are also beginning to see the advantages of such
+systems and are becoming increasingly willing to pay their price.
+Currently, we are observing the trend that previously isolated driver assistant functions are merged together, in order to
+realize more complex assistance with respect to both, longitudinal and lateral, driving support. Partly autonomous driving
+is expected to become a reality within the next few innovation cycles of high-end cars, and even highly automated driving
+no longer appears completely out of reach.
+Before such progress can be achieved, however, not only a suitable regulatory framework must be adopted, but significant
+research is required. The main topics, of course, are technological, such as improved machine vision and situational
+assessment. This includes the mapping of learned driving experience of human operators to machine cognition. On the
+other hand, soft factors, e.g. the acceptance of such systems by its end users, should not be neglected. This obviously
+requires functional transparency and reliability with respect to autonomous behavior, along with adequate HMI concepts.
+These interdisciplinary challenges can only be overcome by a close collaboration between engineers and psychologists.
+All of these aspects demand a significant amount of fundamental research for at least the next decade.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+23
+
+7. Literature
+Aga 2003
+
+M. Aga, A. Ogada, "Analysis of Vehicle Stability Control Effectiveness from Accident Data", 18. Int.
+Enhanced Safety Vehicles Conf. Nagoya, AI, 2003.
+
+Akamatsu et al. M. Akamatsu, P. Green, K. Bengler . Automotive Technology and Human Factors Research: Past,
+2013
+Present, and Future. Hindawi Publishing Corporation. International Journal of Vehicular Technology,
+p.27, vol. 2013, Article ID 526180. http://dx.doi.org/10.1155/2013/526180.
+Aktiv 2012
+
+Research Initiative AKTIV [accessed 17.07.2013], http//www.aktiv-online.org/english/projects.html
+
+Andrews 1997
+
+E.L. Andrews, Mercedes-Benz Tries to Put a Persistent Moose Problem to Rest. The New York
+Times, Dec. 11, 1997, http://www.nytimes.com/1997/12/11/business/mercedes-benz-tries-to-puta-persistent-moose-problem-to-rest.html [Accessed: January 2014]
+
+Aparicio et al.
+2012
+
+A. Aparicio, J. Bargall, S. Baurs, C. Rodarius, J. Vissers, O. Bartels, P. Seiniger, P. Lemmen, T.
+Unselt, M. Ranovona, T. Okawa, S. Schaub, Pre-crash performance of collision mitigation and
+avoidance systems  results from the ASSESS project, Proc. 11th AVEC Conference, Paper No.
+AVEC-043, Seoul, Sept. 2012.
+
+van Arem et al.
+2006
+
+B. van Arem, C. van Driel, R. Visser, The Impact of Cooperative Adaptive Cruise Control on
+Traffic-Flow Characteristics , IEEE Trans. Intelligent Transportation Systems 7(4), Dec. 2006
+
+Br et al. 2011
+
+T. Br, R. Kohlhaas, J.M. Zllner, K. Scholl, Anticipatory driving assistance for energy efficient
+driving, Proceedings IEEE Forum on Integrated and Sustainable Transportation System (FISTS),
+2011.
+
+Bengler et al.
+2012
+
+K. Bengler, M. Zimmermann, D. Bortot, M. Kienle, D. Dambck, Interaction principles for
+cooperative human-machine systems, Information Technology, vol. 54, no. 4, pp. 157-164, 2012.
+
+Blser et al.
+2012
+
+D. Blser, M. Arch, A. Schmidt, Mobilitt findet Stadt. Zukunft der Mobilitt fr urbane
+Metropolrume. In H. Proff, J. Schnharting, D. Schramm, J. Ziegler (Eds.), Zuknftige
+Entwicklungen in der Mobilitt. Betriebswirtschaftliche und technische Aspekte (S. 501-515).
+Wiesbaden: Springer Gabler, 2012.
+
+Bock et al. 2007
+
+T. Bock, M. Maurer, B. Frber, "Vehicle in the Loop (VIL) - A new simulator set-up for testing
+Advanced Driving Assistance Systems." In: Driving Simulation Conference North America 2007,
+University of Iowa, 2007
+
+Boriboonsomsin
+et al. 2012
+
+K. Boriboonsomsin, M.J. Barth, W. Zhu, A. Vu, Eco-Routing Navigation System Based on
+Multisource Historical and Real-Time Traffic Information, IEEE Transactions on Intelligent
+Transportation Systems, vol. 13, no. 4, 2012.
+
+Bosch 2014
+
+http://www.bosch.com/assets/de/company/innovation/theme03.htm [Accessed: January 2014]
+
+Bosch 2012
+
+Bosch Media Service, Kampf dem Sekundenschlaf  Mdigkeitserkennung von Bosch,
+www.bosch-presse.de, Mar. 2012.
+
+Brahmi et al.
+2013
+
+M. Brahmi, K.H. Siedersberger, A. Siegel, M. Maurer, "Referenzsysteme fr die Bewertung der
+Umfelderfassung: Anforderungen, Validierung und Einsatz" In: 6. Tagung Fahrerassistenz, Mnchen,
+2013.
+
+Broggi et al.
+1999
+
+A. Broggi, M. Bertozzi, A. Fascioli, G. Conte, The Experience of the ARGO Autonomous Vehicle,
+World Scientific, Singapore, 1999.
+
+Daimler 2013
+
+Daimler AG, Mercedes-Benz Intelligent Drive, www.daimler.com/brands-and-products, 2013,
+[Accessed: January 2014]
+
+Dang et al. 2012
+
+T. Dang, J. Desens, U. Franke, D. Gavrila, L. Schfers, W. Ziegler: "Steering and evasion assist," in
+Handbook of Intelligent Vehicles, A. Eskandarian, edt., Springer , London, 759-782, 2012.
+
+Dambck et al.
+2012a
+
+D. Dambck, M. Farid, L. Tnert, K. Bengler, bernahmezeiten beim hochautomatisierten Fahren,
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+24
+
+TV Fahrerassistenztagung 2012.
+Dambck et al.
+2012b
+
+D. Dambck,T. Weigerber, M. Kienle, K. Bengler, Evaluation of a Contact Analog Head-Up
+Display for Highly Automated Driving, Proceedings 4th Conference on Applied Human Factors and
+Ergonomics (AHFE) International Conference, San Francisco, U.S., July 2012.
+
+Dang et al. 2009
+
+T. Dang, C. Hoffmann, C. Stiller, Continuous stereo self-calibration by camera parameter tracking,
+IEEE Transactions on Image Processing, vol. 18, pp. 15361550, July 2009.
+
+Darpa 2005
+
+Grand Challenge 05 http://www.darpa.mil/grandchallenge/overview.html, Oct. 2005.
+
+Destatis 2012
+
+Statistisches Bundesamt: "Verkehrsunflle - Unflle von Frauen und Mnnern im Straenverkehr
+2011",
+Dec.
+2012,
+https://www.destatis.de/DE/Publikationen/Thematisch/TransportVerkehr/
+Verkehrsunfaelle/UnfaelleFrauenMaenner5462407117004.pdf?__blob=publicationFile , May 2013.
+
+Destatis 2013
+
+Statistisches Bundesamt, Verkehr auf einen Blick, Wiesbaden 2013.
+
+Dickmanns &
+Mysliwetz 1992
+
+E. D. Dickmanns, B. Mysliwetz, Recursive 3-D road and relative ego-state recognition, IEEE
+Transactions on Pattern Analysis and Machine Intelligence, vol. 14, pp. 199 213, Februar 1992.
+
+Dickmanns et
+al. 1994
+
+E. D. Dickmanns, R. Behringer, D. Dickmanns, T. Hildebrandt, M. Maurer, F. Thomanek, J.
+Schiehlen, "The seeing passenger car VaMoRs-P", IEEE Symposium on Intelligent Vehicles, Paris,
+1994.
+
+Dietl et al. 2001
+
+M. Dietl, J.-S. Gutmann, B. Nebel, Cooperative sensing in dynamic environments, Proc. IEEE/RSJ
+International Conference on Intelligent Robots and Systems (IROS), (Maui, HI, USA), pp. 1706
+1713, Nov. 2001.
+
+Donner et al.
+2007
+
+E. Donner, T. Winkle, R. Walz, J. Schwarz. "RESPONSE 3  Code of Practice fr die Entwicklung,
+Validierung und Markteinfhrung von Fahrerassistenzsystemen." VDA. Technischer Kongress.
+Sindelfingen 2007.
+
+Dornieden et al.
+2012
+
+B. Dornieden, L. Junge, P. Pascheka, Anticipatory Energy-Efficient Longitudinal Vehicle Control,
+ATZ worldwide edition 03/2012, pp. 24-29, 2012.
+
+Eichler 2007
+
+S. Eichler, Extending onboard sensor information by wireless communication, Proc. IEEE
+Intelligent Vehicles Symposium, (Istanbul, Turkey), pp. 541546, June 2007.
+
+EC No
+661/2009
+
+Regulation (EC) No 661/2009 of the European Parliament and of the Council concerning typeapproval requirements for the general safety of motor vehicles, their trailers and systems, components
+and separate technical units intended therefor, EC Standard No 661/2009.
+
+Engels & Dellen
+1989
+
+K. Engels, R.G. Dellen, Der Einfluss von Suchfahrten auf das Unfallverursachungsrisiko,
+Zeitschrift fr Verkehrssicherheit, vol. 5, pp. 93-100, 1989.
+
+Enzweiler &
+Gavrila 2009
+
+M. Enzweiler, D. Gavrila: "Monocular pedestrian detection: survey and experiments. IEEE Trans.
+Pattern Anal. Mach. Intell. 31(12), 21792195, 2009.
+
+European Union
+2010
+
+European
+Union,
+E-Safety,
+[Accessed: June 2013], Nov. 2010.
+
+European
+Union 2008
+
+Improving the safety and environmental performance of vehicles. Press Release, European
+Commission - IP/08/786, 23/05/2008.
+
+Frber &
+Maurer 2005
+
+B. Frber, M. Maurer, "Nutzer- und Nutzen-Parameter von Collision Warning und Collision
+Mitigation Systemen." In: M. Maurer, C. Stiller (Editors) Workshop Fahrerassistenzsysteme FAS2005, Walting, 2005.
+
+Fecher et al.
+2008
+
+N. Fecher, K. Fuchs, J. Hoffmann, B. Abendroth, R. Bruder, H. Winner, Analysis of the driver
+behavior in autonomous emergency hazard braking situations. FISITA World Automotive Congress.
+14.-19. September 2008 in Munich, 2008.
+
+Ford 2014
+
+http://de.euroncap.com/de/rewards/Ford_ActiveCityStop.aspx [Accessed: January 2014]
+
+http://www.ec.europa.eu/informationsociety/activities/esafety,
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+25
+
+Franke et al.
+1994
+
+U. Franke, S. Mehring, A. Suissa, S. Hahn, The Daimler-Benz Steering Assistant  a spin-off from
+autonomous driving,  IEEE Intelligent Vehicles Symposium, Paris, Oct. 1994.
+
+Franke et al.
+2013
+
+U. Franke, D. Pfeiffer, C. Rabe, C. Knoeppel, M. Enzweiler, F. Stein, R.G. Herrtwich, Making
+Bertha see, IEEE ICCV Workshop 2013
+
+Frese et al. 2007
+
+C. Frese, J. Beyerer, P. Zimmer, Cooperation of cars and formation of cooperative groups, Proc.
+IEEE Intelligent Vehicles Symposium, (Istanbul, Turkey), pp. 227232, June 2007.
+
+Freyer et al.
+2007
+
+J. Freyer, B. Deml, M. Maurer, B. Frber, "ACC with enhanced situation awareness to reduce
+behavior adaptations in lane change situations." In: Intelligent Vehicles Symposium - IV2007,
+Istanbul, 2007
+
+Freyer 2008
+
+J. Freyer, "Vernetzung von Fahrerassistenzsystemen zur Verbesserung des Spurwechselverhaltens
+von ACC", Cuvillier, 2008.
+
+Geiger et al.
+2012
+
+A. Geiger, M. Lauer, F. Moosmann, B. Ranft, H. Rapp, C. Stiller, J. Ziegler, Team AnnieWays
+entry to the Grand Cooperative Driving Challenge 2011, IEEE Transactions on Intelligent
+Transportation Systems, vol. 13, pp. 10081017, September 2012.
+
+Gasser 2012
+
+T.M. Gasser. "Ergebnisse der Projektgruppe Automatisierung: Rechtsfolgen zunehmender
+Fahrzeugautomatisierung." In: Tagungsband der 5. Tagung Fahrerassistenz, 15./16. Mai 2012,
+Mnchen.
+
+Gasser et al.
+2012
+
+T. Gasser, C. Arzt, M. Ayoubi, A. Bartels, L. Brkle, J. Eier, F. Flemisch, D. Hcker, T. Hesse, W.
+Huber, C. Lotz, M. Maurer, S. Ruth-Schumacher, J. Schwarz, W. Vogt, "Rechtsfolgen zunehmender
+Fahrzeugautomatisierung - Gemeinsamer Schlussbericht der Projektgruppe." In: Berichte der
+Bundesanstalt fr Straenwesen, Bergisch-Gladbach, 2012.
+
+Goldhammer et
+al. 2012
+
+M. Goldhammer, E. Strigel, D. Meissner, U. Brunsmann, K. Doll, K. Dietmayer, "Cooperative multi
+sensor network for traffic safety applications at intersections, 15th International IEEE Conference on
+Intelligent Transportation Systems (ITSC), pp. 1178 -1183, 2012.
+
+Hakuli et al.
+2009
+
+S. Hakuli, R. Bruder, F. O. Flemisch, Ch. Lper, H. Rausch, M. Schreiber, H. Winner, Kooperative
+Automation. In: H. Winner, S. Hakuli, G. Wolf (Eds.): Handbuch Fahrerassistenzsysteme.
+Vieweg+Teubner Verlag, Wiesbaden, 2009.
+
+HAVEit 2010
+
+European Union Project HAVEit Website www.haveit-eu.org [Accessed: January 2014]
+
+Holden 2012
+
+E. Holden, Achieving Sustainable Mobility: Every day and Leisure-time Travel in the EU Transport
+and Mobility, Ashgate Publishing, Ltd., 2012, ISBN 1409487318, 9781409487319.
+
+Homann 2005
+
+K. Homann, Wirtschaft und gesellschaftliche Akzeptanz: Fahrerassistenzsysteme auf dem
+Prfstand. In: M. Maurer, C. Stiller. (Eds.), Fahrerassistenzsysteme mit maschineller Wahrnehmung,
+pp. 239-244, Springer-Verlag Berlin Heidelberg, 2005.
+
+Horter et al.
+2009
+
+M. Horter, C. Stiller, C. Koelen, A hardware and software framework for automotive intelligent
+lighting, IEEE Intelligent Vehicles Symposium, 299-304, 2009.
+
+IEA 2012
+Invent 2005
+
+CO2 Emissions from Fuel Combustion, International Energy Agency.
+http://www.iea.org/co2highlights/co2highlights.pdf
+Forschungsinitiative Invent: http://www.invent-online.de
+
+Ishida & Gayko
+2004
+
+S. Ishida, J. Gayko, Development, evaluation and introduction of a lane keeping assistance system,
+IEEE Intelligent Vehicles Symp., (Parma, Italien), pp. 943944, June 2004.
+
+ITS Podcast
+2013
+Jones 2001
+
+ITS Podcast Episode 8: Daimler and KIT Bertha Benz Route Autonomous Drive, itsp.cicei.com
+
+Kmpchen et al.
+2010
+
+N. Kmpchen, P. Waldmann, F. Homm, M. Ardelt, Umfelderfassung fr den Nothalteassistenten 
+ein System zum automatischen Anhalten bei pltzlich reduzierter Fahrttigkeit des Fahrers,
+
+W.D. Jones, Keeping cars from crashing, Spectrum, IEEE , vol.38, no.9, pp.40,45, Sep 2001
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+26
+
+Tagungsband AAET-Kongress Braunschweig, 2010.
+Karmasin 2008
+
+H. Karmasin, Motivation zum Kauf von Fahrerassistenzsystemen, in 24. VDI/VWGemeinschaftstagung Integrierte Sicherheit und Fahrerassistenzsysteme. VDI-Berichte 2048.
+Wolfsburg, 2008.
+
+Kato et al. 2002
+
+S. Kato, S. Tsugawa, K. Tokuda, T. Matsui, H. Fujii, Vehicle control algorithms for cooperative
+driving with automated vehicles and intervehicle communications, IEEE Trans. Intelligent
+Transportation Systems 3 (3) 155-161, 2002.
+
+Katzwinkel et
+al. 2012
+
+R. Katzwinkel, R. Auer, S. Brosig, M. Rohlfs, V. Schning, F. Schroven, F. Schwitters, U. Wuttke,
+"Einparkassistenz," in: H. Winner, S. Hakuli, G. Wolf (Eds.), Handbuch Fahrerassistenzsysteme,
+Vieweg+Teubner Verlag, Wiesbaden, 2nd ed., 2012.
+
+Kienle et al.
+2009
+
+M. Kienle, D. Dambck, J. Kelsch, F. Flemisch, and K. Bengler.: Towards an H-Mode for highly
+automated vehicles: driving with side sticks. In: A. Schmidt, A. K. Dey, T. Seder, O. Juhlin (Eds.),
+Proceedings of 1st International Conference on Automotive User Interfaces and Interactive Vehicular
+Applications, Automotive UI 2009, pp. 19-23, 2009.
+
+Kodaka et al
+2003
+
+K. Kodaka, M. Otabe, Y. Urai, H. Koike,  Rear-end collision velocity reduction system, SAE
+World Congress, Detroit 2003
+
+Ko-FAS 2013
+
+Kooperative Sensorik und kooperative Perzeption fr die Prventive Sicherheit im Straenverkehr,
+www.kofas.de [Accessed: January 2014]
+
+Khler et al.
+2013
+
+M. Khler, J. Schr, and L.-P. Schmidt, Antenna Concept for an Automotive Radar Sensor at 150
+GHz, Radio and Wireless Symposium (RWS), 2013.
+
+Kosch 2004
+
+T. Kosch, Efficient information dissemination in vehicle ad-hoc networks, in Proceedings of the
+11th World Congress on Intelligent Transportation Systems (ITS), Oct. 2004.
+
+Krger 2008
+
+H.P. Krger, Hedonomie  die emotionale Dimension der Fahrerassistenz, 3. Tagung Aktive
+Sicherheit durch Fahrerassistenz. Garching, 2008.
+
+Kutami et al.
+1995
+
+A. Kutami, Y. Maruya, H. Takashi, A. Okuno, Visual navigation of autonomous on-road vehicle,
+IEEE/RSJ Intl. Conf. Intelligent Robots and Systems, 175-180, 1995.
+
+Langwieder et
+al. 2012
+
+K. Langwieder, K. Bengler, F. Maier, Effectiveness of Driver Assistance Systems and the Need of
+Promotion Regarding the Aim Vision Zero. Proceedings ICrash 2012, International Crash
+Worthiness-Conference, Milano, July 18-20, 2012.
+
+Lategahn et al.
+2013
+
+H. Lategahn, M. Schreiber, J. Ziegler, C. Stiller, Urban Localization with Camera and Inertial
+Measurement Unit, IEEE Intelligent Vehicles Symposium, 719-724, Gold Coast, Australia, June
+2013.
+
+Lee & See 2004
+
+J.D. Lee, K.A. See, "Trust in automation: designing for appropriate reliance." Human Factors, 46, 5080, 2004.
+
+Li et al. 2012
+
+L. Li; D. Wen, N. Zheng, L. Shen, "Cognitive Cars: A New Frontier for ADAS Research," IEEE
+Trans. Intelligent Transportation Systems 13, (1), 395-407, Mar. 2012.
+
+Liebner et al.
+2013
+
+M. Liebner, F. Klanner, M. Baumann, C. Ruhhammer, C. Stiller, Velocity-based driver intent
+inference at urban intersections in the presence of preceding vehicles, IEEE Intelligent
+Transportation Systems Magazine, vol. 5, no. 2, pp. 1021, 2013.
+
+Lu 2006
+
+M. Lu, "Modelling the effects of road traffic safety measures, Accident Analysis & Prevention",
+Volume 38, Issue 3, May 2006, Pages 507-517, ISSN 0001-4575.
+
+Manstetten et al.
+2013
+
+D. Manstetten, K. Bengler, F. Busch, B. Frber, C. Lehsing, A. Neukum, I. Petermann-Stock, T.
+Schendzielorz, UR:BAN MV  a German project focusing on human factors to increase traffic
+safety in urban areas, ITS World Congress, Tokyo, Oct 14th  Oct 18th, 2013.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+27
+
+Markoff 2013
+
+Markoff, John. "At High Speed, on the Road to a Driverless Future,." New York Times (2013).
+
+Maurer et al.
+1996
+
+M. Maurer, R. Behringer, S. Frst, F. Thomanek, E.D. Dickmanns, "A compact vision system for
+road vehicle guidance." In: 13th Int. Conference on Pattern Recognition, Wien, 1996, pp. 313 - 317
+
+Maurer 2000
+
+M. Maurer, "Flexible Automatisierung von Straenfahrzeugen mit Rechnersehen." Dsseldorf,
+Nummer 443 In Verkehrstechnik/Fahrzeugtechnik Reihe 12. VDI-Verlag, 2000, available
+http://www.ifr.ing.tu-bs.de/static/files/forschung/buecher/dissertation_maurer.pdf
+
+Maurer 2012
+
+M. Maurer, "Forward Collision Warning and Avoidance." In: A. Eskandarian (Ed.), Handbook of
+Intelligent Vehicles, Springer London, 2012.
+
+Maurer &
+Winner 2013
+
+M. Maurer, H. Winner, "Automotive Systems Engineering", Springer, 2013.
+
+Mller et al.
+2011
+
+T. Mller, C. Rabe, U. Franke, Dense 6D  Position und Bewegung robust an jedem Bildpunkt. In:
+M. Maurer, K. Dietmayer, B. Frber, C. Stiller, H. Winner (Eds.), 7. Workshop
+Fahrerassistenzsysteme FAS2011, Walting, 2011.
+
+Nagel et al.
+1995
+
+H.-H. Nagel, W. Enkelmann, G. Struck, FhG-Co-Driver: From Map-Guided Automatic Driving by
+Machine vision to a Cooperative Driver Support, Journal Mathematical and Computer Modeling, 22,
+101-108, 1995.
+R. Nagel, S. Eichler, J. Eberspcher, Intelligent wireless communication for future autonomous and
+cognitive automobiles, Proc. IEEE Intelligent Vehicles Symposium, (Istanbul, Turkey), pp. 716
+721, June 2007.
+
+Nagel et al.
+2007
+Nagel 2008
+
+H.-H. Nagel, "EUREKA-Projekt PROMETHEUS und PRO-ART (19861994)". In: B. Reuse, R.
+Vollmar (Eds.), Informatikforschung in Deutschland, Springer, 2008.
+
+NCAP 2014
+
+European New Car Assessment Programme (2012). Assessment Protocol - Overall Rating (Version
+6.0). Retrieved March 19, 2014, from http://www.euroncap.com/technical/protocols.aspx. [Accessed
+March 2014].
+
+Nothdurft et al.
+2011
+
+T. Nothdurft, P. Hecker, S. Ohl, F. Saust, M. Maurer, A. Reschka, J. R. Bhmer, Stadtpilot: First
+Fully Autonomous Test Drives in Urban Traffic, 14th International IEEE Annual Conference on
+Intelligent Transportation Systems, Washington DC, United States, 2011.
+
+NHTSA 2013
+
+National Highway Traffic Safety Administration, Preliminary Statement of Policy Concerning
+Automated
+Vehicles,
+2013,
+available
+http://www.nhtsa.gov/staticfiles/rulemaking/pdf/
+Automated_Vehicles_Policy.pdf, [Accessed: July 7th, 2013].
+
+Nissan
+2007
+
+Nissan:
+Around
+View
+Monitor
+with
+Parking
+Guide,
+2007,
+www.nissanglobal.com/EN/TECHNOLOGY/OVERVIEW/avm_g.html, [Accessed: January 2014].
+
+Ogden et al.
+2004
+
+J. M. Ogden, R. H. Williams, E. D. Larson, Societal lifecycle costs of cars with alternative
+fuels/engines, Energy Policy, vol. 32, no. 1, pp. 7-27, Jan. 2004.
+
+Ozguner et al.
+1997
+
+U. Ozguner, B. Baertlein, C. Cavello, D. Farkas, C. Hatipoglu, S. Lytle, J. Martin, F. Paynter, K.
+Redmill, S. Schneider, E. Walton, J. Young, The OSU Demo 97 vehicle, IEEE Intelligent
+Transportation Systems Conf., 502-507, 1997.
+
+Ozguner et al.
+2007
+
+U. Ozguner, C. Stiller, K. Redmill, Systems for safety and autonomous behavior in cars: The
+DARPA Grand Challenge experience, IEEE Proceedings, vol. 95, no. 2, pp. 116, Feb. 2007.
+
+PATH 2014
+
+Partners
+for
+Advanced
+Transportation
+TecHnology,
+http://www.path.berkeley.edu/Default.htm. [Accessed: January 2014].
+
+Pomerleau 1995
+
+D.A. Pomerleau, Ralph: Rapidly adapting lateral position handler, IEEE Intelligent Vehicles
+Symposium, Detroit, 1995.
+
+Pomerleau &
+Jochem 1996
+
+D. Pomerleau, T. Jochem, Rapidly adapting machine vision for automated vehicle steering, IEEE
+Expert, 11 (2), 19-27, 1996.
+
+PATH,
+
+see
+
+URL:
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+28
+
+Popiv et al.
+2010
+
+D. Popiv, M. Rakic, F. Laquai, M. Duschl, K. Bengler, Reduction of fuel consumption by early
+anticipation and assistance of deceleration phases, World Automotive Congress of International
+Federation of Automotive Engineering Societies (FISITA), Budapest, Hungary, 30, June 2010.
+
+PROUD 2013
+
+VisLab PROUD-Car Test 2013, www.vislab.it/proud [Accessed: Nov. 2013].
+
+Rabe et al. 2010
+
+C. Rabe, T. Mller, A. Wedel, U. Franke, Dense, Robust and Accurate 3D Motion Field Estimation
+from Stereo Image Sequences in Real-Time, Proc. ECCV 2010, 5.-11.Sept. 2010, Heraklion, Greece,
+2010.
+
+Rabe et al. 2007
+
+C. Rabe, U. Franke, S. Gehrig, Fast detection of moving objects in complex scenarios, IEEE
+Intelligent Vehicles Symposium IV 2007, Istanbul, 2007.
+
+Rajamani et al
+2000
+
+R. Rajamani, H.-S. Tan, B.K. Law, W.-B. Zhang: "Demonstration of integrated longitudinal and
+lateral control for the operation of automated vehicles in platoons," IEEE Transactions on Control
+Systems Technology, 8(4), 695-708, July 2000.
+
+Roser & Geiger
+2009
+
+M. Roser, A. Geiger: "Video-based raindrop detection for improved image registration," In ICCV
+Workshop on Video-Oriented Object and Event Classification, Kyoto, Japan, Sept. 2009.
+
+SARTRE
+
+SARTRE, http://www.sartre-project.eu/en/about/Sidor/default.aspx [Accessed: January 2014]
+
+Saust et al. 2011
+
+F. Saust, J. Wille, B. Lichte, M. Maurer, "Autonomous Vehicle Guidance on Braunschweig's Inner
+Ring Road within the Stadtpilot Project." In: IEEE Intelligent Vehicles Syposium, 2011, pp. 169-174.
+
+Saust et al. 2012
+
+F. Saust, J. Wille, M. Maurer, Energy-optimized driving with an autonomous vehicle in urban
+environments, IEEE Vehicular Technology Conference (VTC Spring), Yokohama, Japan, 2012.
+
+Schner et al.
+2011
+
+H.-P. Schner, W. Hurich, D. Haaf, Selbstfahrendes Soft Crash Target zur Erprobung von
+Fahrerassistenzsystemen, Proceedings Konferenz AAET 2011, Braunschweig, 2011.
+
+Schrank et al.
+2012
+
+D. Schrank, B. Eisele, and T. Lomax. "TTIs 2012 Urban Mobility Report." Texas A&M
+Transportation Institute. The Texas A&M University System (2012).
+
+Schulze 1997
+
+M. Schulze, CHAUFFEUR  the European way towards an automated highway system, Proc. 4th
+ITS World Congress, vol. CD ROM I, (Berlin), pp. 15, Oct. 1997.
+
+Sferco 2001
+
+R. Sferco, Y. Page, J.Y. LeCoz, P. Fay, "Potential Effectiveness of the Electronic Stability Programs
+(ESP)  What European Field Studies Tell Us." 17. International ESV-Conference, Amsterdam.
+
+Shladover 2009
+
+S. Shladover, Cooperative (rather than autonomous) vehicle-highway automation systems, IEEE
+Intelligent Transportation Systems Magazine, vol. 1, no. 1, pp. 10 19, Spring 2009.
+
+Siegle et al.
+1992
+
+G. Siegle, J. Geisler, F. Laubenstein, H.-H. Nagel, G. Struck, Autonomous driving on a road
+network, IEEE Intelligent Vehicles Symposium, 403-408, 1992.
+
+SIM-TD 2013
+
+Sichere Intelligente Mobilitt Testfeld Deutschland, www.simtd.org [Accessed: January 2014]
+
+Smiley 1989
+
+A. Smiley, Mental Workload and Information Management, Vehicle Navigation and Information
+Systems Conference, pp. 435-438, Sept.1989.
+
+Stiller et al.
+2001
+
+C. Stiller, A. Simon, H. Weisser, A Driving Robot for Autonomous Vehicles on Extreme Courses,
+IFAC Conference Telematics Applications in Automation and Robotics, Baden-Baden, 361-367, Jul.
+2001.
+
+Stiller et al.
+2007
+
+C. Stiller, G. Frber, S. Kammel, Cooperative cognitive automobiles, Proc. IEEE Intelligent
+Vehicles Symposium, (Istanbul, Turkey), pp. 215220, June 2007.
+
+Stiller et al.
+2011
+
+C. Stiller, F. Puente Leon, M. Kruse, Information fusion for automotive applications - an overview,
+Information Fusion, vol. 12, no. 4, pp. 244252, Oct. 2011.
+
+Strassmann
+1998
+
+B. Strassmann, Der Elechtester, Die Zeit, Jan. 2, 1988, http://www.zeit.de/1998/02/
+Der_Elchtester/ [Accessed: January 2014].
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+29
+
+Tank & Linnartz T. Tank, M. Linnartz, Vehicle-to-vehicle communications for avcs platooning, IEEE Transactions
+1997
+on Vehicular Technology, vol. 46, pp. 528536, May 1997.
+TC204 2009
+
+TC204/WG14, ISO. ISO 22179:2009 Intelligent transport systems  Full speed range adaptive cruise
+control (FSRA) systems  Performance requirements and test procedures, 2009.
+
+Terporten et al.
+2012
+
+M.Terporten, D. Bialdyga, P. Planing, Vernderte Kundenwnsche als Chance zur Differenzierung.
+Herausforderungen fr das Marketing am Beispiel neuer Mobilittskonzepte. In: H. Proff, J.
+Schnharting, D. Schramm, J. Ziegler (Eds.), Zuknftige Entwicklungen in der Mobilitt.
+Betriebswirtschaftliche und technische Aspekte (S. 367-382). Wiesbaden: Springer Gabler, 2012.
+
+Tesla 2014
+
+www.teslamotors.com/supercharger, [Accessed: March 2014]
+
+Thorpe 1990
+
+C. Thorpe, Vision and navigation, The Carnegie Mellon Navlab. Kluwer Academic Publishers,
+1990.
+
+Thorpe et al.
+1997
+
+C. Thorpe, T. Jochem, D. Pomerleau, The 1997 automated highway free agent demonstration, IEEE
+Intelligent Transportation Systems Conf., 496-501, 1997.
+
+Tischler &
+Hummel 2005
+
+K. Tischler, B. Hummel, Enhanced environmental perception by inter-vehicle data exchange, IEEE
+Intelligent Vehicles Symposium, (Las Vegas, USA), June 2005.
+
+TNO 2007
+
+TNO 2007-D-R0048/B Report, www.tomtom.com/lib/img/pr/32324%20TNO_ES-UK.PDF
+
+Thom et al.
+2011
+
+M. Thom, W. Ritter, and J. Moisel. "Pedestrian Highlighting Using Programmable LED Headlights."
+Proc. Int. Symposium on Automotive Lighting. 2011.
+
+Thrun et al.
+2006
+
+S. Thrun, M. Montemerlo, H. Dahlkamp, D. Stavens, A. Aron, J. Diebel, P. Fong, J. Gale, M.
+Halpenny, G. Hoffmann, K. Lau, C. Oakley, M. Palatucci, V. Pratt, P. Stang, S. Strohband, C.
+Dupont, L.-E. Jendrossek, C. Koelen, C. Markey, C. Rummel, J. Nie- kerk, E. Jensen, P.
+Alessandrini, G. Bradski, B. Davies, S. Ettinger, A. Kaehler, A. Nefian, P. Mahoney, Stanley: The
+robot that won the DARPA Grand Challenge, Journal of Field Robotics, vol. 23, no. 9, pp. 661692,
+2006.
+
+Treat et al. 1979
+
+J.R. Treat, N.S. Tumbas, S.T. McDonald, R.D. Shinar, R.E. Mayer, R.L. Sansifer, and N.J. Castellan,
+"Tri-Level Study Of The Causes of Traffic Accidents," Executive Summary, Indiana University,
+DOT HS 805 099, May, 1979.
+
+Trivedi et al.
+2007
+
+M. Trivedi, T. Gandhi, J. McCall, Looking-in and looking-out of a vehicle: Computer-vision-based
+enhanced vehicle safety, IEEE Trans. Intelligent Transportation Systems 8 (1), 108-120, 2007.
+
+Trbswetter &
+Bengler 2013
+
+N. Trbswetter, K. Bengler, "Why Should I Use ADAS? Advanced Driver Assistance Systems and
+the Elderly: Knowledge, Experience and Usage Barriers." Proceedings of the 7th International
+Driving Symposium on Human Factors in Driver Assessment, Training and Vehicle Design, Bolton
+Landing, New York, June 17-20, 2013.
+
+Tsugawa &
+Sadayuki 1994
+
+S. Tsugawa, S. Sadayuki, Vision-based vehicles in Japan, IEEE Trans. Industrial Electronics,
+Machine vision systems and driving control systems, 41 (4), 398-405, 1994.
+
+UR:BAN 2014
+
+Urban Space: User oriented assistance systems
+online.org/en/urban.html [Accessed: January 2014].
+
+Urmson et al.
+2008
+
+C. Urmson, J. Anhalt, D. Bagnell, C. Baker, R. Bittner, M. N. Clark, J. Dolan, D. Duggins, M.
+Gittleman, S. Harbaugh, Z. Wolkowicki, J. Ziglar, H. Bae, T. Brown, D. Demitrish, V. Sadekar, W.
+Zhang, J. Struble, M. Taylor, M. Darms, D. Ferguson, Autonomous driving in urban environments:
+Boss and the urban challenge, Journal of Field Robotics: Special Issue on the 2007 DARPA Urban
+Challenge, pp. 425466, 2008.
+
+Vgverket
+
+http://publikationswebbutik.vv.se/upload/1723/88325_safe_traffic_vision_zero_on_the_move.pdf
+[Accessed: January 2014]
+
+Valeo 2013
+
+Valeo,
+
+Park4U
+
+and
+
+network
+
+management,
+
+urban-
+
+http://www.valeo.com/en/our-activities/comfort-and-driving-assistance-systems/
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+30
+
+technologies/park4u-81.html [Accessed: June 2013].
+Van Zanten &
+Kost 2012
+
+A. van Zanten, F. Kost: "Bremsenbasierte Assistenzfunktionen" In: H. Winner, S. Hakuli, G. Wolf
+(Eds.), Handbuch Fahrerassistenzsysteme. Vieweg+Teubner Verlag, Wiesbaden, 2nd ed. 2012.
+
+Velodyne 2007
+
+White Paper, VelodyneS HDL-64E: "A High Definition Lidar - Sensor for 3-D Application",
+http://velodynelidar.com/lidar/products/white_paper/HDL%20white%20paper_OCT2007_web.pdf
+[Accessed: June 2013].
+
+Verhoef 1994
+
+E. Verhoef, External effects and social costs of road transport, Transportation Research Part A:
+Policy and Practice, Volume 28, Issue 4, July 1994, Pages 273-287, ISSN 0965-8564.
+
+Volvo 2014
+
+http://www.volvocars.com/de/top/about/news_events/pages/press.aspx?itemid=401
+January 2014]
+
+Volvo 2013
+
+Volvo Trucks European Accident Research and Safety Report 2013.
+
+Wiest et al.
+2012
+
+J. Wiest, M. Hffken, U. Kreel, K. Dietmayer, "Probabilistic Trajectory Prediction with Gaussian
+Mixture Models." Intelligent Vehicles Symposium (IV), 2012 IEEE, 2012.
+
+Wille et al. 2010
+
+J.M. Wille, F. Saust, M. Maurer, "Stadtpilot: Driving Autonomously on Braunschweig's Inner Ring
+Road." In: IEEE International Conference on Intelligent Vehicles, San Diego, USA, 2010, pp. 506511.
+
+Winner 2012
+
+H. Winner, Adaptive Cruise Control, in: A. Eskandarian (Ed.), Handbook of Intelligent Vehicles,
+Springer, 2012.
+
+Winner 2009 et
+al.
+
+H. Winner, B. Danner, J. Steinle, Adaptive Cruise Control. In: H. Winner, S. Hakuli, G. Wolf
+(Eds.), Handbuch Fahrerassistenzsysteme. Vieweg+Teubner Verlag, Wiesbaden, 2009.
+
+Winner & Wolf
+2009
+
+H. Winner, G. Wolf, Quo vadis, FAS?. In: H. Winner, S. Hakuli, G. Wolf (Eds.): Handbuch
+Fahrerassistenzsysteme. Vieweg+Teubner Verlag, Wiesbaden, 2009.
+
+Young &
+Stanton 2002
+
+M. Young, N. Stanton, Malleable Attentional Resources Theory: A New Explanation for the Effects
+of Mental Underload on Performance, Human Factors: The Journal of the Human Factors and
+Ergonomics Society, 44 (3), pp. 365-375, 2002.
+
+Ziegler et al.
+2014
+
+J. Ziegler, P. Bender, M. Schreiber, H. Lategahn, T. Strauss, C. Stiller, T. Dang, U. Franke, N.
+Appenrodt, C.G. Keller, E. Kaus, R.G. Herrtwich, C. Rabe, D. Pfeiffer, F. Lindner, F. Stein, F. Erbs,
+M. Enzweiler, C. Knoppel, J. Hipp, M. Haueis, M. Trepte, C. Brenk, A. Tamke, M. Ghanaat, M.
+Braun, A. Joos, H. Fritz, H. Mock, M. Hein, E. Zeeb: Making Bertha Drive - An Autonomous
+Journey on a Historic Route. IEEE Intelligent Transportation Systems Magazine vol. 6, no. 2, pp. 8
+20, 2014.
+
+Zlocki et al.
+2010
+
+A. Zlocki, A. Benmimoun, P. Themann, Eco ACC - Ansatz fr die Bewertung des
+Energieeinsparpotenzials eines ACC-Algorithmus fr Hybridfahrzeuge, Proceedings 19. Aachener
+Kolloquium "Fahrzeug- und Motorentechnik" 04.-06.10.2010, Aachen, 2010.
+
+[Accessed:
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+31
+
+About the Authors
+Klaus Bengler graduated in psychology at the University of Regensburg in 1991 and received his
+Doctorate in 1994 in cooperation with BMW. After his time in BMW Research and Technology
+responsible for HMI research and usability he is now leading the chair of Ergonomics at
+Technische Universitt Mnchen which is active in research areas like digital human modeling,
+driver assistance, automated driving and human reliability.
+
+Klaus Dietmayer was born in Celle, Germany in 1962. He received his Diploma degree in 1989
+Electrical Engineering from the Technical University of Braunschweig (Germany), and the Dr.Ing. degree (equivalent to PhD) in 1994 from the University of Armed Forces in Hamburg
+(Germany). In 1994 he joined the Philips Semiconductors Systems Laboratory in Hamburg,
+Germany as a research engineer. Since 1996 he became a manager in the field of networks and
+sensors for automotive applications. In 2000 he was appointed to a professorship at the University
+of Ulm in the field of measurement and control. Currently he is Full Professor and Director of the
+Institute of Measurement, Control and Microtechnology in the school of Engineering and
+Computer Science at the University of Ulm. Research interests include information fusion, multiobject tracking, environment perception for advanced automotive driver assistance systems and
+autonomous driving. Klaus Dietmayer is member of the IEEE and the German society of
+engineers VDI/VDE.
+
+Berthold Frber studied Psychology at the University of Regensburg, where he got his doctors
+degree in 1980. Since 1989 he is full professor for human factors at the Universitaet der
+Bundeswehr, Munich. His research topics are: traffic safety, human factors for advanced driver
+assistance systems and robotics. He was a partner in many national and European research projects
+on Driver Assistance Systems like PROMETHEUS, DRIVE, MOTIV, AKTIV or UR:BAN.
+
+Markus Maurer has held the chair for Vehicle Electronics at Technische Universitt
+Braunschweig since 2008. His main research interests include autonomous road vehicles, driver
+assistance systems and automotive systems engineering. From 2000 to 2007 he was active in the
+development of driver assistance systems at Audi AG.
+
+K. Bengler, K. Dietmayer, B. Frber, M. Maurer, C. Stiller, H. Winner: Three Decades of Driver Assistance Systems - Review and Future
+Perspectives, IEEE Intelligent Transportation Systems Magazine, vol. 6, no. 4, Winter 2014, pp. 6-22
+32
+
+Christoph Stiller studied Electrical Engineering towards Diploma degree in Aachen, Germany
+and Trondheim, Norway. In 1988 he became a Scientific Assistant at Aachen University of
+Technology. After completion of his Dr.-Ing. degree (Ph.D.) in 1994 he spent a PostDoc year at
+INRS in Montreal, Canada. In 1995 he joined the Corporate Research and Advanced
+Development of Robert Bosch GmbH, Hildesheim, Germany. In 2001 he became chaired
+professor at Karlsruhe Institute of Technology, Germany. In 2010 he spent three months at CSIRO
+in Brisbane, Australia. Dr. Stiller served as President of the IEEE Intelligent Transportation
+Systems Society (2012-2013) and was a Vice President before since 2006. He served as Editor-inChief of the IEEE Intelligent Transportation Systems Magazine (2009-2011) and as Associate
+Editor for the IEEE Transactions on Image processing (19992003), for the IEEE Transactions on
+Intelligent Transportation Systems (2004-ongoing) and for the IEEE Intelligent Transportation
+Systems Magazine (2012-ongoing).
+
+Hermann Winner began working at Robert Bosch GmbH in 1987, after receiving his PhD in
+physics, focusing on the pre-development of by-wire technology and Adaptive Cruise Control
+(ACC). Beginning in 1995, he led the series development of ACC up to the start of production.
+Since 2002, he has been pursuing the research of driver assistance systems and other automotive
+systems engineering topics as professor of Automotive Engineering at the Technische Universitt
+Darmstadt.
+
+

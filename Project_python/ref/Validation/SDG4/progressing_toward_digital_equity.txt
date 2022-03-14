@@ -1,0 +1,590 @@
+Progressing Toward Digital Equity
+Ramon Puigjaner(&)
+IFIP Vice-President, Catalonia, Spain
+putxi@uib.cat
+
+Abstract. In the computer domain, the objective to be reached in order to give
+opportunities equality to all persons is dened as Digital Equity. However,
+different international organizations are working to reach this goal. The analysis
+of the key points for reaching this objective and how international organizations
+(International Telecommunications Union, United Nations, International Federation for Information Processing) are working for this goal will be presented in
+the paper.
+Keywords: Digital equity  Building the infrastructure  Education levels  ITU
+WSIS  UN SDG  IFIP
+
+1 Introduction
+ICT is a set of technologies that well used should allow the progress and the wellbeing
+of people everywhere in the world. However as there are important differences in the
+current situation of people, depending on its general level of use in each country, the
+use of ICT to reach the progress and the wellbeing cannot be the same in all countries.
+To evaluate this influence of the ICT we will use the concept of Digital Equity.
+Digital equity [1] is the social-justice goal of ensuring that everyone in our society
+has equal access to technology tools, computers and the Internet. Even more, it is when
+all individuals have the knowledge and skills to access and use technology tools,
+computers and the Internet. A simple denition of digital equity can be a state in which
+both the digital divide and the participation gap are bridged.
+Digital equity ensures that everyone has equal opportunities to use the tools and
+resources needed to fully participate as a citizen in todays digitally-powered world.
+Lacking these opportunities causes people to encounter educational, economic and
+social limitations that negatively impact their quality of life. The progress towards the
+Digital Equity, as it is established in the IFIP strategic action, should be achieved by:
+
+
+
+
+
+Promoting accessibility to ICT,
+Promoting good practices,
+Promoting and enhancing appropriate access to knowledge and experiences,
+Organizing and contributing to activities aimed at achieving the goals of the World
+Summit on the Information Society (ITU-WSIS) [2],
+ Organizing and contributing to activities aimed at achieving the UN Sustainable
+Development Goals (SDGs) [3], as we will analyze in Sect. 4.
+
+ IFIP International Federation for Information Processing 2016
+Published by Springer International Publishing Switzerland 2016. All Rights Reserved
+F.J. Mata and A. Pont (Eds.): WITFOR 2016, IFIP AICT 481, pp. 109120, 2016.
+DOI: 10.1007/978-3-319-44447-5_11
+
+110
+
+R. Puigjaner
+
+To analyze in depth the points suggested in the previous paragraphs, this paper will
+be organized as follows: in Sect. 2 the concept of Digital Equity will be detailed;
+Sect. 3 will be devoted to the relations of Digital Equity with the ITU-WSIS Action
+Lines; the relation of ITU-WSIS Action Lines with the UN Sustainable Development
+Goals will be the topic of Sect. 4. In Sect. 5 it is analyze the differences of Digital
+Equity in developed and developing countries and how IFIP [4] can contribute to reach
+these goals. Finally Sect. 6 gives some conclusions about the coming future.
+
+2 Concept of Digital Equity
+2.1
+
+What Is Digital Equity?
+
+As it has been stated in the previous section, Digital equity is the social-justice goal of
+ensuring that everyone in our society has equal access to technology tools, computers
+and the Internet. Even more, it is when all individuals have the knowledge and skills to
+access and use technology tools, computers and the Internet. Digital equity can be
+dened as the state in which both the digital divide and the participation gap are both
+bridged. Digital equity ensures that everyone has equal opportunities to use the tools
+and resources needed to fully participate as a citizen in todays digitally-powered
+world. Lacking these opportunities causes people to encounter educational, economic
+and social limitations that negatively impact their quality of life.
+Technology is so commonplace in our lives that it may be hard to believe there are
+still many people with limited access to and knowledge of the resources that are
+available online today. Children still stand in lines at libraries for a brief stint on a
+computer and parents have difculty completing online employment applications; a
+clear and important difference between the new digital generation and the previous
+ones. While cell phones may have helped to close the gap to some degree, there are still
+important activities that are not well-suited for small mobile devices.
+
+2.2
+
+The Five Dimensions of Digital Equity
+
+These dimensions have been chosen as fundamental categories by educators and
+professionals working in the eld. If you are just beginning to learn about this eld then
+these categories should help you address your basic needs:
+ Access to technology resources (hardware, software, wiring and connectivity):
+possibility to have access to the technological resources allowing us to access the
+information existing in the network.
+ Access to high quality digital content; if the information available in the network is
+not of good quality, people will not be attracted to access it.
+ Access to high quality, culturally relevant content; the available information should
+not only be of high quality but adapted to the context in which each community is
+leaving.
+ Educators skilled in using these resources effectively for teaching and learning; it Is
+obvious that for approaching the digital equity it is necessary to educate users but in
+
+Progressing Toward Digital Equity
+
+111
+
+many environments there are not enough people with appropriate skills for learning
+end users in all the needed categories (e.g. basic user, advanced user, expert in
+installation and maintenance, hardware and software developer and builder, ICT
+research).
+ Opportunities for learners and educators to create their own content; a way to
+increase the capacity of learners and educators is to offer them some tools to create
+contents accessible to the appropriate end users.
+
+2.3
+
+Digital Divide Impacts
+
+It is difcult to have progress toward Digital Equity homogeneously in its ve dimensions and, in consequence the risk to fall in Digital Divide exists, at least in someone of
+the ve dimensions. How to avoid this inconvenient situation? What are the initial steps
+to progress toward Digital Equity?
+ First it is necessary to allow that people can obtain the education allowing to
+conveniently using computers and networks in a large sense that is that users need
+to acquire a convenient knowledge for a correct use of computers and networks
+depending on the people desired education level: basic user, advanced user, expert
+in installation and maintenance, hardware and software developer and builder, ICT
+research, etc..
+ And second people should be able to easily and deeply use both computers and
+networks for accessing and using all kind of information. Without infrastructure the
+other dimensions have no sense. But the investment in a new infrastructure has to be
+done only if the possibility of maintaining it is ensured; otherwise there is an
+important risk of wasting the funds of this investment.
+In summary, the rst steps to reach Digital Equity should be education and
+infrastructure. However the progress towards Digital Equity cannot be reached through
+individual efforts but by the coordinate effect of actions promoted by governments and
+governmental organizations. The global organizations to consider will be the International Telecommunication Union (ITU), the United Nations (UN) and the International
+Federation for Information Processing (IFIP).
+
+3 Relation Between Digital Equity and the ITU-WSIS Action
+Lines
+3.1
+
+WSIS Action Lines
+
+The Action Lines of the World Summit in Information Society (WSIS), proposed by
+the ITU are:
+AL1. The role of public governance authorities and all stakeholders in the promotion of ICTs for development
+AL2. Information and communication infrastructure
+
+112
+
+R. Puigjaner
+
+AL3.
+AL4.
+AL5.
+AL6.
+AL7.
+
+Access to information and knowledge
+Capacity building
+Building condence and security in the use of ICTs
+Enabling environment
+ICT Applications: benets in all aspects of life
+AL7.1 E-Government
+AL7.2 E-Business
+AL7.3 E-Learning
+AL7.4 E-Health
+AL7.5 E-Employment
+AL7.6 E-Environment
+AL7.7 E-Agriculture
+AL7.8 E-Science
+AL8. Cultural diversity and identity, linguistic diversity and local content
+AL9. Media
+AL10. Ethical dimensions of the Information Society
+AL11. International and regional cooperation.
+
+3.2
+
+Relation Between WSIS and Digital Equity
+
+The action lines proposed by the ITU have as global goal the implementation of the
+Digital Equity in order to avoid the Digital Divide. The description of these Action
+Lines can be found in [2]. Maybe the idea of Digital Equity with respect to the WSIS
+Action Lines is not explicitly expressed, but after reading the documentation contained
+in [2], the conclusion is that Digital Equity should be considered as a transversal goal,
+common to all action lines. The goal of each one of these Action Lines works, in some
+way, to complete one or several dimensions of Digital Equity. Some examples of this
+fact are presented in the coming sections.
+Example 1. Action Line 2: Information and Communication Infrastructure. The
+vision of this action line, as it is dened in [2], is: Infrastructure is the cornerstone in
+achieving goals such as digital inclusion, enabling universal, sustainable, ubiquitous
+and affordable access to ICTs by all, taking into account relevant experiences from
+developing countries and countries with economies in transition.
+Digital Equity should be supported by a convenient infrastructure. So the infrastructure suggested in this Action Line has to be able to allow all citizens the correct
+access and use of ICT, covering one of the ve dimensions of the Digital Equity.
+Example 2: Action Line 3: Access to Information and Knowledge. The vision of
+this action line, as it is dened in [2], is: For the post-2015, it is envisioned inclusive
+information and knowledge societies to facilitate access and use of information and
+exchange of knowledge among all people, including those coming from previously
+marginalized groups and regions in addition to persons with impairments with a signicant portion of knowledge flows and innovations that advance human rights and the
+attainment of development goals.
+
+Progressing Toward Digital Equity
+
+113
+
+To succeed with the Digital Equity the government has to create and offer information and knowledge to all citizens or to establish the appropriate mechanisms
+allowing the creation and offering of information and knowledge accessible for all
+citizens. Otherwise there is the risk of provoking the Digital Divide between the
+citizens of the same country or between the citizens of the country with the citizens of
+other countries.
+Example 3: Action Line 8: Cultural Diversity and Identity, Linguistic Diversity
+and Local Content. The vision of this action line, as it is dened in [2], is: The vision
+on inclusive Knowledge Societies is that of a more culturally and linguistically diverse
+digital world, where around 40 % of all existing languages are present in cyberspace
+and where development takes into account local, national and regional contexts, builds
+on the knowledge generated by all communities, promotes innovation and creativity,
+and allows all human beings to practice their own culture and enjoy that of others free
+from fear. It is a world where marginalized groups, including indigenous peoples, and
+those coming from migrations, diasporas and from language minorities, enjoy
+increased recognition and equity; artists, cultural professionals and practitioners are
+empowered to create, produce, disseminate enjoy and preserve a broad range of cultural
+goods, services and activities; and where intangible expressions inherited from past
+generations are kept alive for future generations.
+If the global goal is to attain the Digital Equity it is necessary to respect the cultural
+diversity and identity giving the convenient importance to the linguistic diversity and
+local content. Otherwise there will be people without interest in accessing the information existing in the network and avoiding the attainment of the Digital Equity.
+
+4 ITU-WSIS Action Lines and the UN Sustainable
+Development Goals
+4.1
+
+UN Sustainable Development Goals (SDG)
+
+The recently dened by the United Nations Sustainable Development Goals are:
+SDG1. End poverty in all its forms everywhere
+SDG2. End hunger, achieve food security and improved nutrition and promote
+sustainable agriculture
+SDG3. Ensure healthy lives and promote well-being for all at all ages
+SDG4. Ensure inclusive and equitable quality education and promote lifelong
+learning opportunities for all
+SDG5. Achieve gender equality and empower all women and girls
+SDG6. Ensure availability and sustainable management of water for all
+SDG7. Ensure access to affordable, reliable, sustainable and modern energy for all
+SDG8. Promote sustained, inclusive and sustainable economic growth, full and
+productive employment and decent work for all
+SDG9. Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation
+
+114
+
+R. Puigjaner
+
+SDG10. Reduce inequality within and among countries
+SDG11. Make cities and human settlements inclusive, safe, resilient and sustainable
+SDG12. Ensure sustainable consumption and production patterns
+SDG13. Take urgent action to combat climate change and its impacts
+SDG14. Conserve and sustainably use the oceans, seas and marine resources for
+sustainable development
+SDG15. Protect, restore and promote sustainable use of terrestrial ecosystems,
+sustainably manage forests, combat desertication, and halt and reverse land
+degradation and halt biodiversity loss
+SDG16. Promote peaceful and inclusive societies for sustainable development,
+provide access to justice for all and build effective, accountable and inclusive
+institutions at all levels
+SDG17. Strengthen the means of implementation and revitalize the global partnership for sustainable development
+Each one of these goals is divided in [3] in a number of sub-goals (83) whose
+analysis allows a better understanding with respect to WSIS ALs and to the IFIP TCs.
+
+4.2
+
+Relations Between the UN SDG and the WSIS Action Lines
+
+WSIS has prepared a matrix indicating the effect of each one of the Action Lines on the
+different Sustainable Development Goals [5]. Table 1 presents these relations.
+Table 1. Effect of each one of the Action Lines on the SDG
+Sustainable Development Goal
+1. End poverty in all its forms everywhere
+2. End hunger, achieve food security and
+improved nutrition and promote
+sustainable agriculture
+3. Ensure healthy lives and promote
+well-being for all at all ages
+4. Ensure inclusive and equitable quality
+education and promote lifelong learning
+opportunities for all
+5. Achieve gender equality and empower all
+women and girls
+6. Ensure availability and sustainable
+management of water and sanitation for all
+7. Ensure access to affordable, reliable,
+sustainable and modern energy for all
+8. Promote sustained, inclusive and
+sustainable economic growth, full and
+productive employment and decent work
+for all
+
+WSIS Action Lines
+AL1, AL2, AL3, AL4, AL5, AL7.2, AL7.4,
+AL7.7, AL7.8, AL10
+AL3, AL4, AL6, AL7.2, AL7.4, AL7.7,
+AL8, AL10
+AL1, AL3, AL4, AL7.4, AL7.7, AL8, AL10
+AL3, AL4, AL5, AL6, AL7.3, AL7.5,
+AL7.7, AL8, AL10
+AL1, AL3, AL4, AL5, AL6, AL7.2, AL7.4,
+AL7.7, AL9, AL10
+AL3, AL4, AL7.8, AL8
+AL3, AL5, AL7.8
+AL2, AL3, AL5, AL6, AL7.5, AL7.7, AL8,
+AL10
+
+(Continued)
+
+Progressing Toward Digital Equity
+
+115
+
+Table 1. (Continued)
+Sustainable Development Goal
+9. Build resilient infrastructure, promote
+inclusive and sustainable industrialization
+and foster innovation
+10. Reduce inequality within and among
+countries
+11. Make cities and human settlements
+inclusive, safe, resilient and sustainable
+12. Ensure sustainable consumption and
+production patterns
+13. Take urgent action to combat climate
+change and its impacts
+14. Conserve and sustainably use the oceans,
+seas and marine resources for sustainable
+development
+15. Protect, restore and promote sustainable
+use of terrestrial ecosystems, sustainably
+manage forests, combat desertication, and
+halt and reverse land degradation and halt
+biodiversity loss
+16. Promote peaceful and inclusive societies
+for sustainable development, provide
+access to justice for all and build effective,
+accountable and inclusive institutions at all
+levels
+17. Strengthen the means of implementation
+and revitalize the global partnership for
+sustainable development
+
+WSIS Action Lines
+AL2, AL3, AL5, AL6, AL7.1, AL7.2,
+AL7.6, AL7.7, AL9, AL10
+AL1, AL3, AL6, AL7.5, AL10
+AL2, AL3, AL5, AL6, AL7.6, AL8, AL10
+AL3, AL4, AL7.5, AL7.7, AL8, AL9, AL10
+AL3, AL4, AL7.6, AL7.7, AL7.8, AL10
+AL3, AL4, AL7.6, AL7.8
+
+AL3, AL7.6, AL7.8
+
+AL1, AL3, AL4, AL5, AL6, AL7.1, AL9,
+AL10
+
+AL1, AL3, AL4, AL5, AL6, AL7.1, AL7.2,
+AL7.4, AL7.5, AL7.7, AL7.8, AL9, AL10,
+AL11
+
+If all WSIS Action Lines have some impact in the UN SDGs, the actions conducting to the Digital Equity will contribute at some level to approach the UN SDGs.
+So we can say that Digital Equity establishes the UN SDG in the specic domain of
+ICT that is WSIS Action Lines represent the application of SDG in the ICT domain. In
+some sense the dimensions of Digital Equity are included in one or several SDG and
+actions going toward Digital Equity contribute to the UN SDGs.
+
+5 Digital Equity in Different Groups or Environments
+Is Digital Equity in identical situation in all countries? Is Digital Equity in identical
+situation for the different genders?
+It would be interesting to see the situation of Digital Equity with respect to different
+criteria like developed versus developing countries, like gender issue, etc. but let us
+concentrate in this article in the differences between developed and developing countries.
+
+116
+
+5.1
+
+R. Puigjaner
+
+Situation of Digital Equity in Developed and Developing Countries
+
+Digital Equity is neither yet reached in developed nor in developing countries. However the level of Digital Equity is quite different in developed and in developing
+countries. We can analyze these differences comparing the state of the ve dimensions
+of Digital Equity in both types of countries.
+ Access to technology resources (hardware, software, wiring and connectivity):
+possibility to have access to the technological resources allowing us to access the
+information existing in the network: Obviously the situation of the technological
+resources in developed countries is more comfortable than in developing ones,
+mainly because the extension of the network coverage and its capacity in developed
+countries are much more higher, faster and reliable than in developing ones. Also
+because the availability of devices in developed countries is greater, with higher
+novelty of models and at prices economically cheaper taking into account the economic level of the country. And nally the possibility for the end users of receiving
+the appropriate education is also higher; and this is true at all levels of education:
+basic user, advanced user, expert in installation and maintenance, hardware and
+software developer and builder, ICT research, etc.; it is easy to nd the necessary
+education at reasonable prices for all type of education. Also in many countries there
+are strong differences in the access possibilities for the different genders.
+ Access to high quality digital content; if the information available in the network is
+not of good quality, people will not be attracted to access it. Developed countries
+have an infrastructure allowing the access to all information existing in Internet by
+both the quality of the physical connection and the freedom for accessing all kind of
+information. Developing countries can have limitations by one or both of these
+aspects; in some cases the network has not enough capacity for accessing heavy
+information, and in other cases the access is limited by political reasons.
+ Access to high quality, culturally relevant content; the available information should
+not only be of high quality but adapted to the context in which each community is
+living. Most of the web pages are written in English (or at least is the greatest
+minority) making difcult the access of people not fluent in reading this language.
+Also the topics contained in these pages are thought with Anglo-Saxon parameters
+making the access by people of other cultures of low interest. Consequence: not all
+pages are equally interesting for all people in the world, increasing the disadvantages of people of developing countries.
+ Educators skilled in using these resources for effectively teaching and learning; it Is
+obvious that for approaching the digital equity it is necessary to educate users but in
+many environments there are not enough people with appropriate skills for learning
+end users in all the needed categories. Education is a key point for reaching Digital
+Equity. However to deliver education it is necessary to have educators of all the
+needed proles. The number and quality of the education centres dedicated to the
+educators are higher in developed than in developing countries.
+
+Progressing Toward Digital Equity
+
+117
+
+ Opportunities for learners and educators to create their own content; a way to
+increase the capacity of learners and educators is to offer them some tool to create
+contents accessible to the appropriate end users. The hardware and software
+infrastructure is much more solid in developed than in developing countries.
+
+5.2
+
+Contribution of IFIP to Digital Equity
+
+The International Federation for Information Processing is a society created in 1960
+under the auspices of UNESCO grouping computer societies under the base of one
+member society per country. From the technical point of view IFIP is composed of a
+number of Technical Committees (TC) each one dedicated to a specic aspect of
+computer science, engineering and applications. Each TC is composed of a number of
+Working Groups (WG), each one devoted to a specic aspect of the TC domain.
+Currently there are 13 TCs and 120 WGs grouping thousands of computer professionals.
+IFIP has decided that Digital Equity is one of its Strategic Activity Lines. In general
+we can consider that the work of all these bodies contribute to the Digital Equity.
+However there are some of them are more specically oriented to tackle the Digital
+Divide and empowering Digital Equity.
+From the previous introduction let us review the different TCs and analyze what is
+their involvement in some aspect of the Digital Equity. The IFIP TCs are:
+ TC1 on Foundations of Computer Science, whose aims are: to support the development of theoretical computer science as a fundamental science; and to support the
+development and exploration of fundamental concepts, models, theories, systems,
+and and the understanding of laws, limits, and possibilities of information processing. Its influence on Digital Equity is generic but not directly implied.
+ TC2 on Software, Theory and Practice, whose aim is to obtain a deeper understanding of programming concepts in order to improve the quality of software by
+studying all aspects of the software development process, both theoretical and
+practical. So, building good software products has a positive influence on Digital
+Equity mainly promoting good practices in the creation of software products.
+ TC3 on Education whose aims are: to provide an international forum for educators
+to discuss research and practice in: teaching informatics; and educational uses of
+communication and information technologies (ICT); to establish models for informatics curricula, training programs, and teaching methodologies; to consider the
+relationship of informatics in other curriculum areas; to promote the ongoing
+education of ICT professionals and those in the workforce whose employment
+involves the use of information and communication technologies; to examine the
+impact of information and communication technologies on the whole educational
+environment: teaching and learning; administration and management of the educational enterprise; and local, national and regional policy-making and collaboration. As education is a key factor for reaching Digital Equity, we can see that the
+aims of this TC are fully in line with the dimensions of Digital Equity.
+ TC5 on Information Technology Applications whose aim is to promote research
+and development of fundamental concepts, models, and theories to support
+
+118
+
+
+
+
+
+
+
+
+
+R. Puigjaner
+
+applications of ICT. So, it has a generic interest for Digital Equity; only the promotion of applications appropriate for developing countries can help to attain
+Digital Equity.
+TC6 on Communication Systems, whose aims are to promote the international
+exchange of information related to communication systems; to bridge gaps existing
+between users, telecommunication operators, service providers and computer and
+equipment manufacturers; and to establish working contacts with international
+bodies concerned with data communication, such as ITU, ETSI, ISO, IEEE, IETF,
+ITC and ATM Forum. The aims of this TC are fully in line with a dimension of the
+Digital Equity (creation of a convenient infrastructure). In particular in this TC there
+is a WG devoted to developing countries so dedicated to bridge the gap between
+developed and developing countries with respect to Digital Equity. This is the
+WG6.9 on Communications Systems for Developing Countries, whose aims are: to
+identify and study technical problems related to the access to, understanding of and
+application of network and telecommunications technology in developing countries
+or regions; to encourage cross-fertilization of concepts and techniques among
+developing countries, and between developing countries and developed countries;
+to promote activities oriented to the diffusion of the methods and techniques for
+accessing computer networks in developing countries or regions.
+TC7 on System Modelling and Optimization, whose aims are: to provide an
+international clearing house for computational (as well as related theoretical)
+aspects of optimization problems; to promote the development of necessary theory
+to meet the needs of complex optimization problems and cooperate with the
+International Mathematics Union; and to foster interdisciplinary activity on optimization problems spanning the areas such as Economics, Biomedicine, Meteorology, etc., in cooperation with associated international bodies. So, it has not a
+specic interest for Digital Equity.
+TC8 on Information Systems whose aim is to promote and encourage interactions
+among professionals from practice and research and advancement of investigation
+of concepts, methods, techniques, tools, and issues related to information systems in
+organizations. So, it has a generic interest for Digital Equity specially proposing
+good practices for the information systems.
+TC9 on ICT and Society whose aims are: to develop understanding of how ICT
+progress is associated with change in society; and to influence the shaping of
+socially responsible and ethical policies and professional practices.
+The aims of this TC are fully in line with several dimensions of the Digital Equity.
+In particular it has a WG devoted to Developing countries dedicated to bridge the gap
+between developed and developing countries. It is the WG9.4 on Social Implications
+of Computers in Developing Countries, whose aims are: to collect, exchange and
+disseminate experiences of ICT implementation in developing countries; to develop
+a consciousness amongst professionals, policy makers and public on social implications of ICT in developing nations; to develop criteria, theory, methods, and
+guidelines for design and implementation of culturally adapted information systems;
+and to create a greater interest in professionals from industrialized countries to focus
+on issues of special relevance to developing countries.
+
+Progressing Toward Digital Equity
+
+119
+
+ TC10 on Computer Systems Technology, whose aim is the promotion of the
+State-of-the-Art and the coordination of information exchange on concepts,
+methodologies, and tools in the stages in the life cycle of computer systems. So, it
+has a generic but not specic interest for Digital Equity.
+ TC11 on Security and Privacy Protection in Information Processing Systems whose
+aim is to increase the trustworthiness and general condence in information processing and to act as a forum for security and privacy protection experts and others
+professionally active in the eld. Obviously the topics concerned by this TC are of
+high importance for reaching Digital Equity, ensuring the needed security and
+privacy protection to the information and to the end users.
+ TC12 on Articial Intelligence whose aims are: to foster the development and
+understanding of Articial Intelligence and its applications worldwide; to promote
+interdisciplinary exchanges between Articial Intelligence and other elds of
+information processing; and to contribute to the overall aims and objectives and
+further development of IFIP as the international body for Information Processing.
+The aims of this TC are not of specic interest for Digital Equity.
+ TC13 on Human-Computer Interaction whose aims are: to encourage empirical
+research (using valid and reliable methodology, with studies of the methods themselves where necessary); to promote the use of knowledge and methods from the
+human sciences in both design and evaluation of computer systems; to promote
+better understanding of the relation between formal design methods and system
+usability and acceptability; to develop guidelines, models and methods by which
+designers may be able to provide better human-oriented computer systems; and to
+co-operate with other groups, inside and outside IFIP, so as to promote userorientation and humani-zation in system design. Obviously the topics concerned
+by this TC are important for reaching Digital Equity, because a good interface to the
+searched information helps a lot to its usability by the end users.
+ TC14 on Entertainment Computing whose aims are: to enhance algorithmic research
+on board and card games; to promote a new type of entertainment using information
+technologies; to encourage hardware technology research and development to
+facilitate implementing entertainment systems; and to encourage non-traditional
+human interface technologies for entertainment. Maybe the topics concerned by this
+TC are marginal for reaching Digital Equity, but it works on topics making the access
+to information more attractive to the end users.
+So IFIP has convenient bodies to tackle the problems derived from and related to
+Digital Equity in general and specically in developing countries. The recent creation
+of a Standing Committee in Digital Equity will increase and coordinate the action to
+promote the Digital Equity.
+
+6 Conclusions
+We have analyzed the concept of Digital Equity and the different aspect it includes.
+Also we have seen how several international organizations; the Action Lines of the
+World Summit in Information Society, the United Nations Sustainable Development
+
+120
+
+R. Puigjaner
+
+Goals and the Technical Committees of the International Federation for Information
+Processing have a strong overlapping with the goals proposed by Digital Equity.
+Maybe these international organizations have not an exact coincidence on their goals,
+but an important overlap between them has been clearly stated.
+
+References
+1. International Society for Technology Education: Digital Equity Toolkit  Working Draft
+(2006)
+2. World Summit in Information Society: WSIS Action lines. http://www.itu.int/net/wsis/
+implementation/
+3. United Nations: Transforming our World  The 2030 Agenda for Sustainable Development
+goals. https://sustainabledevelopment.un.org/topics
+4. International Federation for Information Processing: Structure of IFIP. http://www.ip.org/
+index.php?option=com_content&task=view&id=131&Itemid=448
+5. World Summit in Information Society: WSIS-SDG Matrix Linking WSIS Action Lines with
+Sustainable Development Goals. http://www.itu.int/net4/wsis/sdg/Content/wsis-sdg_matrix_
+document.pdf
+
+

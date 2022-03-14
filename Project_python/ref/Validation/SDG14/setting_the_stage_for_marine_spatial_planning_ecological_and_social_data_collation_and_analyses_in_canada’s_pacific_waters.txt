@@ -1,0 +1,860 @@
+Marine Policy 39 (2013) 1120
+
+Contents lists available at SciVerse ScienceDirect
+
+Marine Policy
+journal homepage: www.elsevier.com/locate/marpol
+
+Setting the stage for marine spatial planning: Ecological and social data
+collation and analyses in Canadas Pacic waters
+Natalie C. Ban a,n, Karin M. Bodtker b, David Nicolson c, Carolyn K. Robb b, Krista Royle d, Charlie Short e
+a
+
+Australian Research Council Centre of Excellence for Coral Reef Studies, James Cook University, Townsville, Queensland, Australia, 4811
+Living Oceans Society, PO Box 320, Sointula, British Columbia, Canada V0N 3E0
+c
+British Columbia Marine Conservation Analysis, 4469 Annette Pl, Victoria, British Columbia, Canada V8N 3J6
+d
+Parks Canada, 300-300 West Georgia St. Vancouver, BC, Canada V6B 6B4
+e
+Province of British Columbia, Ministry of Forests, Lands and Natural Resource Operations, PO Box 9525 STN PROV GOV, Victoria BC, Canada V8W 9C3
+b
+
+a r t i c l e i n f o
+
+abstract
+
+Article history:
+Received 29 May 2012
+Received in revised form
+6 October 2012
+Accepted 14 October 2012
+
+Canadas Pacic coast is one region where there is a renewed commitment to pursue marine spatial
+planning (MSP). The British Columbia Marine Conservation Analysis (BCMCA) project aimed to set the
+stage for MSP, and was designed to provide resource managers, scientists, decision-makers, and
+stakeholders with a new set of resources to inform coast-wide integrated marine planning and
+management initiatives. Geographic Information Systems and the decision support tool Marxan were
+used to develop two main products: (1) an atlas of known marine ecological values and human uses;
+and (2) analyses of areas of conservation value and human use value. 110 biophysical datasets and 78
+human use datasets were collated and rened where applicable, as identied through ve ecological
+expert workshops, one expert review of physical marine classication and representation, and guidance
+from the human use data working group. Ecological data richness maps and Marxan results show the
+importance of nearshore and continental shelf regions. Data richness maps for the six categories of
+human uses show that all, except shipping and transport, are also closely linked to the shoreline and
+continental shelf. An example ecological Marxan solution identifying areas of conservation value
+overlapped human use sector footprints by percentages ranging from 92% (i.e., 92% of planning units
+selected by Marxan also contain commercial sheries) to 3%. The experience of the BCMCA project has
+the potential to provide valuable guidance to regions seeking to jump-start planning processes by
+collating spatial information and carrying out exploratory analyses.
+& 2012 Elsevier Ltd. All rights reserved.
+
+Keywords:
+Marine spatial planning
+Marine conservation
+Stakeholders
+Marxan
+Decision-support tools
+Marine use planning
+
+1. Introduction
+Declining marine resources and ecosystem services [1], and
+evidence that sector-based approaches to management have been
+inadequate at achieving sustainability [2], have led to increased global
+interest in marine spatial planning (MSP) [2,3]. MSP is a framework
+that informs the spatial distribution of marine activities to support
+current and future uses, and maintain delivery of ecosystem services
+to meet ecological, economic and social objectives [2]. Complementary literature on systematic conservation planning emphasises the
+importance of rigorous process, transparency and efciency (e.g.,
+through setting quantitative targets) throughout the planning process
+[4,5]. One example of combined systematic conservation planning
+and MSP is the rezoning of the Great Barrier Reef in Australia, which
+assigned six different zones, allowing a range of uses, in a region
+n
+
+Corresponding author. Tel.: 61 7 4781 6067; fax: 61 7 4781 6722.
+E-mail addresses: Natalie.ban@jcu.edu.au (N.C. Ban),
+KBodtker@livingoceans.org (K.M. Bodtker), b.coffee@telus.net (D. Nicolson),
+krista.royle@pc.gc.ca (K. Royle), charles.short@gov.bc.ca (C. Short).
+0308-597X/$ - see front matter & 2012 Elsevier Ltd. All rights reserved.
+http://dx.doi.org/10.1016/j.marpol.2012.10.017
+
+about 350,000 km2 [6]. Many regions are following suit, instigating
+systematic MSP processes [e.g., Belgium, 7, California, 8, Australia, 9].
+As illustrated in MSP exercises worldwide, a critical component
+to its efcacy is comprehensive ecological and social data to support
+the process [2]. Ecological data are necessary to identify areas of
+importance for biodiversity conservation and delivery of ecosystem
+services. Data on human activities are useful for identifying areas of
+importance to marine industries and other uses. The combination of
+ecological and human use data is particularly valuable in explicitly
+identifying overlapping interest to multiple users and/or biodiversity
+conservation, and investigating tradeoffs [8]. Spatial data are also
+necessary to use decision-support tools, such as Marxan [10,11] or
+Marxan with Zones [12]. Such decision-support tools can aid MSP by
+identifying options for areas requiring special management [e.g.,
+marine protected areas, 6], or human use areas [e.g., designated
+shing areas, 13].
+Canadas Pacic coast (province of British Columbia, BC) is
+one region where there is a renewed commitment to carry out
+MSP, also referred to as Integrated Management in Canada [14].
+In particular, the provincial government is partnering with some
+
+12
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+coastal First Nations to create marine plans, through what is
+called the Marine Planning Partnership for the North Pacic Coast
+(www.mappocean.org), and the federal government is working on
+a planning process called the Pacic North Coast Integrated
+Management Area. In other areas, such as the west coast of
+Vancouver Island, MSP has been taking place via local community,
+First Nations and government partnerships (i.e., West Coast
+Aquatic, http://westcoastaquatic.ca/plans/). While these initiatives are promising, previous discussions about MSP have been
+slow to get started, which has signicantly impeded progress to
+date [1517].
+The British Columbia Marine Conservation Analysis (BCMCA)
+project emerged from the interest of a multitude of stakeholders
+to set the stage for MSP in British Columbia. The BCMCA (www.
+bcmca.ca) is a collaborative project designed to provide resource
+managers, scientists, decision-makers, and those with a vested
+interest in the marine environment with a new set of resources to
+inform coast-wide integrated marine planning and management
+initiatives. Furthermore, the BCMCA project set out to spatially
+identify marine areas of high conservation value and areas
+important to human use in Canadas Pacic Ocean. The BCMCA
+is not a planning process as it does not have the ability or
+mandate to implement management actions, and it does not seek
+to replace planning initiatives that are underway or in preparation. Rather, the results are intended to inform and help advance
+marine planning initiatives in BC by providing collaborative
+analyses based on the best available ecological and human use
+spatial data at scales relevant to a BC coast-wide analysis. The
+BCMCA project is coordinated by a Project Team, comprised of
+representatives from the Canadian government, BC government,
+First Nations (self-dened as observers), academia, marine users
+and environmental organisations, which is responsible for coordinating, organising and implementing the project. The BCMCA
+projects ecological objectives were to represent the diversity of
+BCs marine ecosystems across their natural range of variation,
+maintain viable populations of native species, sustain ecological
+and evolutionary processes within an acceptable range of variability, and build a conservation network that is resilient to
+environmental change. The history and approach of the project
+has been described by Ban et al. [18], and supporting documents
+can be found online (www.bcmca.ca).
+The purpose of this paper is to report the process and results of
+the multi-year BCMCA effort, and discuss its relevance to BC and
+beyond. With increasing global popularity of MSP, the impetus for
+the BCMCA project, an interest by a diversity of stakeholders to
+set the stage for MSP is likely emerging in many regions of the
+world. The experience of the BCMCA project has the potential to
+provide valuable guidance to those regions seeking to jump-start
+planning processes by collating spatial information and carrying
+out exploratory analyses.
+
+2. Methods
+Geographic Information Systems (GIS) and the decision support tool Marxan were used to develop two main products: (1) an
+atlas of known marine ecological values and human uses; and
+(2) analyses to identify areas of high conservation value and areas
+important to human use. The BCMCA Project Team guided and
+implemented the methods, informed by ecological and human
+use experts who provided overarching direction and advice about
+the collation, use and analyses of data. All data layers were stored,
+mapped and documented using ArcGIS (versions 9.010). Key
+steps of the Marxan analyses, after data were collated, were to
+create planning units, develop targets, carry out calibration, run
+analyses, and draft reports explaining results.
+
+2.1. Collation of existing data
+Differing approaches were used to identify ecological and human
+use data to incorporate in the BCMCA project. Ecological features
+and datasets recommended by experts via workshops were collated
+and prepared for use in Marxan. Individual workshops were held for
+seabirds, marine plants, marine mammals, marine and anadromous
+sh, and marine invertebrates. Approaches used, and other details of
+the workshops, are described in Ban et al. [18]. A list of features and
+datasets to represent the physical marine environment was rst
+proposed by the BCMCA Project Team based on a review of similar
+projects, then revised following expert review. Once all available
+datasets for a given feature were obtained, data were collated using
+GIS and prepared following advice given at the workshops or given
+by data providers. Checkplots of mapped features and supporting
+metadata, which documented collation and preparation methods,
+were reviewed by workshop participants and/or data providers
+in a comprehensive review process. Review questionnaires asked
+reviewers to (1) conrm existing target ranges or recommend new
+values, (2) comment on data collation and preparation methods, (3)
+comment on the appropriateness of older data, (4) recommend
+dates of expiry for use of these data in a marine planning context,
+and (5) make the project aware of additional data sources.
+Human use datasets were rst sourced by BCMCA Project
+Team members within each of their organisations (e.g., federally
+held sheries data, provincially held recreation data). Example
+maps were drafted and a review of these data was sought through
+a two-pronged strategy of group-by-group engagement and the
+formation of a human use data working group to advise on the
+collation, mapping and analysis of human use data. Six sectors or
+categories of human use were identied (i.e., commercial sheries, recreational sheries, ocean energy, shipping and transportation, tenures, and recreation and tourism), and a nomination
+process was held for each sector to self-identify two representatives to participate in the working group. The working group was
+lead by a neutral facilitator and was designed to be broadly
+representative of user groups, but participants were not expected
+to represent a constituency in any formal capacity. The working
+group held thirteen meetings over almost 2 years. Two of the
+working group representatives  with the support of the rest of
+the working group  also participated on the Project Team.
+Due to data limitations, it was not possible to create spatial
+data for some recommended features, while other datasets not
+specically mentioned at workshops were developed from available data (e.g., general kelp). While the focus of the BCMCA
+project was to collate existing data, opportunities arose to create
+or update some ecological and human use datasets. Known gaps
+in digital datasets for four ecological features were lled by
+digitising data (e.g., central coast Marbled Murrelet surveys). For
+the purposes of the BCMCA, the existing provincial benthic
+classication scheme was replaced by a new benthic classication
+developed by Parks Canada using methods published by the
+Nature Conservancy (TNC) [19]. The benthic classication combined three parameters: (i) landscape features, (ii) depth, and (iii)
+substrate in order to identify areas of similar benthic characteristics. Human use datasets were reviewed by the appropriate
+sector and some were deemed outdated or inadequate for marine
+planning. A comprehensive local knowledge collection project,
+funded and overseen by the BCMCA, was undertaken through
+consultation with members of the Sport Fishing Advisory Board to
+update sport shing data. BCMCA also undertook work which
+enabled access to spatial data describing commercial sheries
+including Roe Herring, Sardine, and Salmon sheries. In addition,
+oil and gas prospectivity data were updated, cruise ship and ferry
+route data were corrected, and multiple datasets were merged
+and/or veried with knowledgeable users to develop updated and
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+13
+
+corrected, coast wide scuba diving, campsite and marine facilities
+(marinas and other tourism facilities with docks) data. The
+BCMCA also developed a dataset illustrating areas of interest for
+ocean energy (wave and tidal) through a participatory exercise at
+a mapping workshop.
+Once all features were compiled and reviewed, maps and
+descriptive information were combined into atlas pages, available
+online (www.bcmca.ca). Maps showing the number of features
+found in each planning unit (i.e., data richness maps) were
+created for each ecological group and human use sector, counting
+only datasets designated for use in Marxan.
+2.2. Marxan analyses
+Marxan (version 2.1.1) was used to identify areas of high
+conservation value and areas important to human use. Marxan is
+a free decision support tool that nds efcient solutions to the
+problem of selecting a set of areas that meet a suite of conservation [10,20] or human use targets [e.g., 13]. Explanations of how
+Marxan works have been provided in detail elsewhere and are not
+repeated here (e.g., see the Marxan website http://www.uq.edu.
+au/marxan/). An expert workshop was held in May 2009, bringing
+together Marxan practitioners to advise the BCMCA on its proper
+and robust use and make recommendations related to specic
+questions posed by the BCMCA (proceedings from the workshop
+can be found at http://www.bcmca.ca/document-library/). During
+the Marxan experts workshop, a new tool called Marxan with
+Zones [12] was recommended for running analyses incorporating
+human use data. At that time BCMCA decided it was not feasible
+to use Marxan with Zones due to the learning curve, time
+constraints and the unproven nature of the new tool. Instead, all
+the human use scenarios were designed to use Marxan to identify
+areas important to human use by exploring what happens to the
+footprint if uses were reduced.
+2.2.1. Dening targets
+Targets for ecological features are intended to quantify the
+amount required to meet ecological objectives. At the ecological
+workshops, experts were requested to recommend a range of targets
+for each feature, spanning a minimum to preferred amount (see Ban
+et al. [18] for details). Workshops were attended by regional species
+experts who drew upon their own experience and knowledge to
+recommend targets. Targets for physical classication and representation features were proposed by the Project Team and reviewed
+by experts. During data review, workshop experts and data providers were given a chance to view the collated spatial data, and were
+asked to review target recommendations and provide targets for any
+features lacking an established target range. Any targets still missing
+after the review were systematically assigned by the Project Team.
+An unanticipated result of asking experts to recommend targets
+through separate workshops was that values differed greatly among
+ecological themes (e.g., recommended seabirds targets differed from
+marine plant targets and invertebrate targets, etc). The BCMCA
+Project Team decided to illustrate solutions for three added What
+ify? scenarios using consistent targets for features in all ecological
+themes. Target ranges for these scenarios were collaboratively set by
+the BCMCA Project Team after consulting best practices, peerreviewed scientic literature and the advice of the ecological experts
+(Fig. 1). Marxan scenarios were run using low, medium and high
+target values for both the expert-recommended and Project Team
+target ranges in order to visually display the impact that targets
+have on the footprint of the Marxan solutions.
+To incorporate human use features, the Project Team initially
+suggested running Marxan for ecological features, using human
+uses as a cost, as is commonly done in Marxan analyses [21].
+
+Fig. 1. Criteria used by Project Team to set ecological targets. The owchart
+indicates the process used for assigning targets to ecological features (i.e., whether
+features are special or representational), and the corresponding percentage targets
+used in the three scenarios.
+
+Alternately, an option was to set targets for human use features,
+which tells Marxan how much of each feature to include in the
+solution (i.e., to identify areas of important for all human uses, as
+per [13]). The human use data working group was introduced to
+Marxan and ultimately recommended using a range of targets,
+run through separate Marxan analyses for the six human use
+sectors: (1) commercial sheries, (2) sport shing, (3) ocean
+energy, (4) tourism and recreation, (5) tenures, and (6) shipping
+and transportation. The idea of running one combined analysis for
+all human uses did not receive support from the human use data
+working group, primarily because of the variation in metrics and
+quality among human use datasets (i.e. data varied from quantied use, to presence/absence to potential future areas of use), and
+for this reason was not performed.
+2.2.2. Calibration
+Calibration was conducted to ensure that Marxan was behaving
+in a robust and logical manner, following guidance from the BCMCA
+Marxan expert workshop and Marxan Good Practices handbook
+[22]. First, the inuence of the boundary cost was tested in order to
+alleviate bias for or against external edges. This test highlighted
+problems inherent in using two different-sized planning units
+(nearshore and offshore) in the same analysis and a decision was
+made to use consistent 2 km by 2 km planning units throughout the
+study area (for a total of 120,499 planning units). The number of
+iterations was tested to determine how many were sufcient, such
+that Marxan consistently produced near optimal solutions. The
+Boundary Length Modier (BLM) controls the importance of minimising the overall boundary length relative to minimising the total
+area of the selected planning units. Increasing the BLM encourages
+Marxan to select fewer, larger contiguous areas to meet its targets.
+This parameter was tested in order to ne-tune the degree of
+clumping present in the Marxan solutions. The Feature Penalty
+Factor parameter is a user-dened weighting which controls how
+much emphasis is placed on fully representing a particular input
+feature in the solution. This parameter was calibrated to ensure that
+Marxan was adequately reaching its targets for each input feature.
+2.2.3. Ecological Marxan analyses
+Once Marxan parameters were nalised through calibration,
+the BCMCA explored a range of What ify? scenarios designed
+to identify areas of high conservation value. Eighteen ecological
+scenarios were used: High, medium and low target scenarios for
+the targets set by experts during the workshops as well as those
+identied by the Project Team. Each of these six scenarios had
+
+14
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+three sub-scenarios with different BLMs. The best and summed
+solutions were mapped for all scenarios.
+2.2.4. Human use Marxan analyses
+Marxan was used to produce a range of solutions for the
+human use scenarios. In this case, the scenarios were designed to
+explore the most efcient reduction of footprint for each human
+use sector. For each of the six human use sectors, ve separate
+scenarios were performed to explore how a range of reductions in
+each sectors use would affect that sectors footprint. Reduction
+values of 5%, 10%, 15%, 20%, and 25% were applied resulting in a
+range of corresponding Marxan targets (95%, 90%, 85%, 80%, and
+75%) and a total of 30 unique scenarios. Various metrics were
+used in Marxan for characterising the human use data. Marxan
+runs for commercial shing targeted total catch; ocean energy
+used a combination of area and relative importance; shipping and
+transport, and tourism and recreation, used relative intensity; and
+sport shing and tenures used area. The best and summed
+solutions for all scenarios were mapped but are not shown here.
+2.2.5. Overlap analyses
+ArcGIS was used to identify the per cent of overlap between
+the six human use sectors and one example solution from an
+ecological Marxan scenario. The scenario with the Project Team
+medium targets and medium clump size was chosen for this
+overlap analysis because it illustrates a middle-of-the-road scenario. For each of the human use sectors, the combined footprint
+of all uses within each sector was used. Some caveats regarding
+the footprint data are that they only reect the mapped footprint
+(which may or may not represent the most current footprint), and
+not the relative importance for any particular human use.
+
+3. Results
+3.1. Collation of existing data
+110 biophysical datasets were collated and rened, where
+applicable, to create 200 features, many of which were targeted by
+class or region in the Marxan analyses (see Supplementary Table 1).
+Reports from each of the workshops were posted online (http://
+www.bcmca.ca/document-library/). Once the datasets were collated
+into the recommended features, the features were reviewed by
+experts. Features, and reviewer comments for each feature, can be
+found in the online data library (http://www.bcmca.ca/data/).
+Seventy-eight human use datasets were collated and rened
+where applicable (see Supplementary Table 2). These datasets
+were identied through the process described in Section 2.1
+above. Once the datasets were collated into features for each
+human use sector, members of the human use data working
+group were provided an opportunity to review relevant features.
+The purpose of the review was threefold; to identify deciencies
+in the data, to identify missing or proprietary data, and to record
+concerns about use of the data. In some cases features and
+descriptions drafted for atlas facing pages were circulated to
+other experts (i.e. people who partake in those uses) for further
+review; in others (i.e. tenures) no review was undertaken as the
+data were generally considered accurate. Features, and reviewer
+comments for each feature or human use, can be found in the
+online data library (http://www.bcmca.ca/data/).
+3.2. Marxan analyses
+3.2.1. Targets
+Low, medium and high values for ecological targets were
+identied from the ranges recommended at expert workshops (as
+
+described in Section 2.2.1) (see Supplementary Table 1). For the
+Project Team scenarios, features were split into two categories:
+representational (i.e., whether the feature represents an ecosystem
+or species) or special (i.e., higher target warranted if a species has
+been listed as endangered or threatened, for example, Fig. 1).
+Representational features were assigned low, medium and high
+targets of 10, 20 and 30% while special features were assigned
+targets of 20, 40 and 60%. The Project Team also considered using
+the footprint  spatial extent  of a feature to determine targets
+(i.e., so that features covering a large portion of the coast have
+smaller targets than those with small footprints), but decided not
+to pursue this criteria because no feature covered more than 14 per
+cent of the coast, and it would have raised too many additional
+questions (e.g., Should the % of shoreline linear features be
+calculated for each ecoregion? Or for the coast overall? What
+happens if % is high in just one region? How high is too high?).
+Human use targets were set based on the human use working
+group recommendation of conducting analyses where the use
+declines by 5% for each scenario, and the metric for that use
+depends upon the sector. Therefore scenarios consisting of these
+ve target values: 95%, 90%, 85%, 80% and 75% were run for each
+of the six human use sectors.
+3.2.2. Calibration
+Sensitivity tests uncovered a problem with the initial plan of
+using two different-sized planning units (smaller nearshore and
+larger offshore) in the same Marxan analysis. Marxan solutions for
+runs using a BLM equal to zero, area as cost, and a single feature
+lling all planning units equally but targeted at 30%, signicantly
+favoured the smaller planning units (Fig. 2). The problem was
+resolved by using only one size of planning units, although the
+trade-off was increased computing time. Additional details of how
+the problem was discovered and solved are provided in the Marxan
+Good Practices Handbook, Version 2 (Box 8.1) [22].
+Other calibration tests included number of iterations, boundary
+length modier, and feature penalty. We determined that 750
+million or 1 billion iterations effectively and efciently produced
+solutions that adequately considered the solution space (Fig. 3A).
+The ecological runs used 1 billion iterations while the human use
+runs used 750 million iterations because there were more ecological
+features than human use features, thus warranting more iterations.
+The BLM for the ecological analyses was determined by calibration
+and visual inspection of several options and consensus decision by
+the Project Team (Fig. 3B). BLMs of 0, 750, and 2500 were chosen to
+
+Fig. 2. Illustration of the problem of using two sizes of planning units. The effect
+was tested with one feature that was distributed across all planning units, with
+cost reecting the size of planning units. The smaller planning units located
+inshore of the continental shelf, 2 km by 2 km, were selected more frequently
+(redder, darker colours) than the larger 4 km by 4 km planning units located
+offshore (yellow, lighter colours).
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+15
+
+Fig. 3. Calibration used in Marxan. (A) Calibration of the number of iterations needed in Marxan to obtain efcient solutions that meet targets. Results shown are from
+runs using physical data only (more than 75% of the nal features). (B) Calibration of the boundary length modier (BLM).
+
+illustrate results with no BLM and possible solutions to the range of
+What ify? scenarios that might be recommended by planners.
+The human use runs used a BLM of 1000, accepted by the human
+use data working group as the most appropriate BLM suitable for
+use across all six sectors. A consistent feature penalty factor of 8 was
+used for ecological features, and 500 for human use features.
+3.2.3. Ecological Marxan analyses
+Ecological data and Marxan results show the importance of
+nearshore and continental shelf regions. Overlaying all ecological
+datasets (i.e., displaying data richness, Fig. 4) shows that much of the
+available data hugs the shoreline, likely the result of a combination of
+survey effort and actual elevated biodiversity along the nearshore and
+on the continental shelf. The various ecological Marxan results  low,
+medium, and high targets (expert [Fig. 5] and Project Team derived
+[Fig. 6]) using medium and large clumps  highlight similar areas as
+being of high conservation value. The results are intuitive: lower
+targets depict fewer areas as being of high importance compared to
+
+Fig. 4. Overview map and number of ecological features found in each planning
+unit. Blue colours indicate few ecological features, red colours many features.
+
+16
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+Fig. 5. Selection frequency of Marxan results from ecological runs using target ranges recommended by experts. Blue colours indicate areas selected less frequently in
+Marxan runs, green colours those with intermediate selection, and orange colours those selected most frequently. The panels show results for the scenarios that used: (A)
+Low targets, medium clump size. (B) Low targets, large clump size. (C) Medium targets, medium clump size. (D) Medium targets, large clump size. (E) High targets, medium
+clump size. (F) High targets, large clump size.
+
+high targets, and medium clump size solutions shows smaller areas
+highlighted than those with large clump size (Figs. 5 and 6). Despite
+having different target ranges, the expert-set and Project Team-set
+target ranges (medium, high) show similar patterns and areas as
+being important for conservation. Targets were met 95% of the time
+or better. The expert recommended targets ranged up to 100%, and
+features targeted at this level were underrepresented more often than
+others.
+3.2.4. Human use Marxan analyses
+Data richness layers for the six categories of human uses show
+that all, except for shipping and transport, are closely linked to
+the shoreline and continental shelf (Fig. 7). As expected, the
+Marxan results closely mirror the data richness layers, with areas
+of higher data richness selected more frequently in Marxan. The
+human use sectors had concerns about the limitations of the
+input data (see discussion), and did not want the results published; hence the maps are not included.
+
+3.2.5. Overlap analyses
+Overlapping the footprint of one example solution of an
+ecological Marxan scenario with the footprint of each of the six
+human use sectors showed that all sectors utilise areas that
+appear in the Marxan solution as areas of high conservation
+value. The percentage of the Marxan solution that overlapped
+the sector use footprints ranged from 92% (i.e., 92% of planning
+units selected by Marxan also contain commercial sheries) to 3%.
+Conversely, the area of each sector footprint that overlapped with
+the example Marxan solution ranged from 18% to 23% (Table 1).
+
+4. Discussion
+The BCMCA projects multi-year effort to collate existing
+data, augment existing datasets by making additional and new
+data available, and provide examples of Marxan analyses, has
+made available an impressive resource for marine planners and
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+17
+
+Fig. 6. Selection frequency of Marxan results from ecological runs using target ranges recommended by Project Team (see Fig. 1). Blue colours indicate areas selected less
+frequently in Marxan runs, green colours those with intermediate selection, and orange colours those selected most frequently. The panels show results for the scenarios
+that used: (A) Low targets, medium clump size. (B) Low targets, large clump size. (C) Medium targets, medium clump size. (D) Medium targets, large clump size. (E) High
+targets, medium clump size. (F) High targets, large clump size.
+
+stakeholders in British Columbia and elsewhere. The project
+attempted to follow best practices for data analysis [22] for not
+only ecological conservation scenarios, but also for involving
+stakeholder groups and integrating human use data into analyses
+[23,24]. These data and supporting Marxan analyses may also
+have utility for habitat mangers, marine ecologists, oil spill
+response teams, coarse scale environmental assessments and
+marine protected area designall applications beyond the projects intent to support MSP efforts. It provides a successful
+example of a collaborative effort to move ahead with preparatory
+work for marine planning without requiring the mandate to carry
+out the planning, a situation that likely applies to many other
+regions where marine planning has not been initiated.
+While data collation is time-intensive, although relatively
+straightforward, the experience of the BCMCA project with
+Marxan analyses highlights several lessons that may be of interest
+to similar endeavours elsewhere. First, setting conservation
+
+targets is notoriously difcult [25,26] and although the BCMCA
+projects approach of using workshops, organised by ecological
+theme, provided some good input and advice, it also created
+several challenges. It proved difcult to get experts to recommend percentage targets for features and, for those that were
+provided either as specic numbers or as ranges, values differed
+greatly among ecological themes (e.g., recommended seabirds
+targets differed from marine plant targets and invertebrate
+targets, etc). Also, experts tended to recommend very high
+percentage targets, often 100% for some features, which can skew
+the results for features with a large spatial footprint and resulted
+in some feature targets not being achieved in scenario results.
+Follow-up sensitivity analyses with several increases to the
+number of iterations did not solve this problem, conrming
+recommendations not to use 100% target values [22]. As a way
+around these issues related to expert recommended targets, the
+BCMCA Project Team decided to illustrate solutions for three
+
+18
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+Fig. 7. Number of human use features mapped in planning units by sector. Blue colours indicate few human use features, red colours many features. The panels show
+feature counts for the six human use sectors: (A) Commercial shing, (B) sport shing, (C) ocean energy, (D) tenures, (E) shipping and transport and (F) tourism and
+recreation.
+Table 1
+Overlap between human use sector footprints and one example of an ecological
+Marxan solution illustrating areas of conservation value (Project Team medium
+target, medium clump size, which selected 22% of Pacic Canada waters).
+
+Commercial shing
+Energy
+Shipping
+Sports shing
+Tenures
+Tourism and recreation
+
+Per cent of ecological
+Marxan solution in
+sector footprint %
+
+Per cent of sector
+footprint in ecological
+Marxan solution %
+
+92.10
+32.66
+92.10
+15.37
+2.61
+10.88
+
+22.60
+22.72
+22.36
+22.80
+17.53
+23.35
+
+added What ify? scenarios using consistent targets for features
+in all ecological themes. This also served as a sensitivity analysis
+of the effect of varying the targets, and showed that the results
+(i.e., the patterns of areas of conservation value) were quite robust
+to such variations.
+
+Second, the creation of a human use data working group was a
+key strength of the BCMCA project, but more could have been
+done to involve human users earlier and more effectively [23,24].
+A common recommendation for marine planning and conservation projects is to be inclusive and transparent [2,2729]. The
+BCMCA project started with a focus on identifying ecological areas
+of conservation importance in the marine environment in British
+Columbia [18], with Project Team members or observers from
+academia, federal and provincial governments, environmental
+groups, and First Nations groups (the latter self-identied as
+observers). It soon became apparent that the input of marine
+users would be crucial in identifying these areas of importance,
+and the human use data working group was conceived. However,
+because marine users were not part of the inception of the
+project, a fact that could not be changed, they may have felt less
+ownership of the project than other project team members. It also
+created some challenges for the desired outputs and the overall
+scope of the project because some marine users wanted to amend
+some components. In response, the project team strengthened the
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+terms of reference and claried terminology based on comments
+from marine users. Additional time was needed to build the new
+relationships with marine users within the Project Team. Furthermore, members of the working group had a different background
+than most of the Project Team, and for this reason a concerted
+effort was made to introduce Marxan and systematic conservation planning concepts to them. Terminology used in conservation planning did not always directly translate to the day-to-day
+lexicon of members of the working group, highlighting the
+importance of regular, two-way communication. A facilitator,
+independent of the process, was hired to ensure the working
+group process was meaningful to participants, that all participants input was obtained, concerns recognised, addressed where
+possible, and documented where they could not be addressed.
+Third, experts, including human use sector representatives,
+were crucial to identifying the limitations of existing human use
+data for use in Marxan, and data gaps. Challenges are similar for
+ecological and human use data. For example, some species distributions and human uses are seasonal, and where spatially
+explicit seasonality data are missing, Marxan results do not capture
+such nuanced information. Similarly, some areas may be particularly important for some species or human uses (e.g., spawning
+grounds, shipping trafc to small communities, shing areas close
+to communities), but this level of detail may not be represented in
+available data. Thus, although analyses were designed to identify
+areas important to ecosystems and human users, with little or no
+relative value information in the data sets, Marxan uses data
+density to determine areas of importance. Another data limitation
+is that the time period over which data were originally collected
+was not consistent. Some data are older, even though they may be
+the best-available data, and data sets for different features used in
+a single analysis may have been compiled for different time
+periods. Furthermore, data illustrated for some features may not
+reect current or future reality in terms of the various measures of
+relative importance. Both ecological and human use features shift
+spatially over time due to ongoing changes in the environment and
+management. Thus feedback from the human use sectors was that
+the Marxan results for human uses were of limited value, and may
+not represent actual areas of importance.
+Fourth, as highlighted in the Marxan Good Practices Handbook
+[22], the BCMCA project found that calibrating parameters in
+Marxan and documenting and communicating data limitations
+was crucial. Calibration uncovered problems with the external edges
+and the use of two sizes of planning units. Without careful
+calibration, the analyses would not be robust, and the results might
+not have represented areas of conservation value. Similarly, because
+such a project involves a vast amount of data and numerous data
+providers, clear and transparent documentation of the limitations of
+each dataset is very important. Without this, the integrity of the
+project and its results could be compromised. One of the particular
+strengths of the BCMCA projects atlas is that it pairs each map with
+a facing page that documents details of the data sources, limitations,
+and any other comments noted as important by peer reviewers of
+the dataset(s) illustrated on the map.
+Fifth, unfamiliarity with Marxan was an obstacle, but a
+surmountable one. Education about Marxan, how it works, what
+it does, and what it is used for, was necessary with most
+participantse.g., ecological experts, data providers, government
+employees, non-prot groups and marine users. Much effort was
+put into educating participants about this tool and its potential
+uses and limitations. An ancillary benet to the marine based
+community in British Columbia is a better understanding of
+Marxan, both its strengths and limitations. This may prove useful
+for marine planning processes in the future.
+Finally, while the BCMCA project was made possible in part
+because of the commitment and dedication of many people who
+
+19
+
+volunteered their time, having adequate funding ultimately made
+the project possible. Some groups needed funding to participate,
+workshops cost money, GIS contractors were needed for preparation of the many datasets, and so on. Thus, while volunteer efforts
+can go a long way to instigating a data collation and analysis
+project, to realise its full potential, the BCMCA required nancial
+resources to be completed.
+Ultimately, one of the most important benets of a project
+such as the BCMCA is the development and maintenance of
+working relationships among stakeholder groups. As shown by
+the exploratory overlap analyses, marine areas of conservation
+value in the Canadian Pacic are also important to a variety of
+stakeholders. The process that the BCMCA project developed 
+including development of a Project Team, human use working
+group, user group outreach, presentations to planners  served to
+get parties to work together, strengthen relationships, raise
+awareness about the need for data collation and analysis, and
+educate marine users and others on the value of quality data and
+Marxan analyses. Communication with collaborators was a part of
+the project throughout. Such benets are difcult to substantiate,
+yet anecdotal feedback from participants indicates that communication and collaboration among stakeholders has improved
+because of the project, and that the BCMCAs data products are
+in high demand.
+This project afrmed the importance of several issues discussed in the marine spatial planning and conservation planning
+literatures. Involving stakeholders early in the process is important for their support for the project [23,24], but it is also difcult
+to conceive a project with all stakeholders involveda conundrum that most planning processes are faced with [7,9,15,30].
+Having good data is important for achieving quality analyses, but
+much more emphasis exists in the literature on how to incorporate ecological than social data [2,3,23]. Ultimately, the acceptance of any projects analyses  and the BCMCAs in particular
+because the project itself does not have an implementation
+mandate  depends upon acceptance by stakeholders, which is
+partly inuenced by the process followed and the quality of the
+data and analyses.
+
+5. Conclusion
+The BCMCA project has been invaluable in supporting MSP
+initiatives in British Columbia. The BCMCA project has received
+additional funding for a period ending May 2013 for product
+support, updates to select datasets, and support (if requested) to
+marine planning processes that are now underway. Additional
+communication and outreach are also planned to help people
+understand and build trust in the data products and supporting
+analyses. Furthermore, the Project Team is interested in exploring
+tradeoffs and win-win solutions for human uses and conservation.
+The simple overlap analyses reported here were illustrative only;
+more sophisticated and informative analyses would be useful. For
+example, possible use of a sister tool of Marxan, Marxan with Zones
+[12], to develop trade-off curves between different human uses and
+ecological features, is under discussion. This is one way to explore
+analysing and visualising overlap amongst users and between
+human uses and biodiversity hotspots.
+
+Acknowledgements
+We recognise and thank all the BCMCA Project Team participants and representatives on the Human Use Data Working Group
+for their thoughtful collaboration in steering the project (http://
+www.bcmca.net/data/atlas/). The BCMCA Project Team is grateful
+
+20
+
+N.C. Ban et al. / Marine Policy 39 (2013) 1120
+
+to the many people who participated in workshops, contributed
+data and knowledge and helped to steer this work to completion.
+We also wish to thank the human use sectors for feedback on a
+draft version of this manuscript, especially Douglas Daugert and
+Michelle James. The BCMCA is a project of Tides Canada Initiatives
+and this work would not have been possible without the funding
+support of the Gordon and Betty Moore Foundation (GBMF)
+Marine Conservation Initiative and the David and Lucile Packard
+Foundation. Other organisations who contributed funding include
+the David Suzuki Foundation, Fisheries and Oceans Canada, Living
+Oceans Society and the Royal Caribbean Oceans Fund. We also
+thank the Pacic Marine Analysis and Research Association
+(PacMARA) for jointly hosting and funding the PacMARA/BCMCA
+international Marxan workshop.
+
+Appendix A. Supplementary Information
+Supplementary data associated with this article can be found
+in the online version at http://dx.doi.org/10.1016/j.marpol.2012.
+10.017.
+
+References
+[1] Worm B, Hilborn R, Baum JK, Branch TA, Collie JS, Costello C, et al. Rebuilding
+global sheries. Science 2009;325:57885.
+[2] Foley MM, Halpern BS, Micheli F, Armsby MH, Caldwell MR, Crain CM, et al.
+Guiding ecological principles for marine spatial planning. Mar Policy
+2010;34:95566.
+[3] Douvere F. The importance of marine spatial planning in advancing
+ecosystem-based sea use management. Mar Policy 2008;32:76271.
+[4] Margules CR, Pressey RL. Systematic conservation planning. Nature 2000;405:
+24353.
+[5] Pressey RL, Bottrill MC. Approaches to landscape- and seascape-scale conservation planning: convergence, contrasts and challenges. Oryx 2009;43:
+46475.
+[6] Fernandes L, Day J, Lewis A, Slegers S, Kerrigan B, Breen D, et al. Establishing
+representative no-take areas in the Great Barrier Reef: large-scale implementation of theory on marine protected areas. Conserv Biol 2005;19:
+173344.
+[7] Douvere F, Maes F, Vanhulle A, Schrijvers J. The role of marine spatial
+planning in sea use management: the Belgian case. Mar Policy 2007;31:
+18291.
+[8] Klein CJ, Steinback C, Watts M, Scholz AJ, Possingham HP. Spatial marine
+zoning for sheries and conservation. Front Ecol Environ 2010;8:34953.
+[9] Day V, Paxinos R, Emmett J, Wright A, Goecker M. The Marine Planning
+Framework for South Australia: a new ecosystem-based zoning policy for
+marine management. Mar Policy 2008;32:53543.
+[10] Possingham HP, Ball IR, Andelman S. Mathematical methods for identifying
+representative reserve networks. In: Ferson S, Burgman M, editors. Quantitative methods for conservation biology. New York: Springer-Verlag; 2000.
+p. 291305.
+
+[11] Ball IR, Possingham HP, Watts M. Marxan and relatives: software for spatial
+conservation prioritisation. In: Moilanen A, Wilson KA, Possingham HP,
+editors. Spatial conservation prioritisation: quantitative methods and computational tools. Oxford, United Kingdom: Oxford University Press; 2009.
+p. 18595.
+[12] Watts ME, Ball IR, Stewart RS, Klein CJ, Wilson K, Steinback C, et al. Marxan
+with zones: software for optimal conservation based land- and sea-use
+zoning. Environ Model Software 2009;24:151321.
+[13] Ban NC, Vincent ACJ. Beyond marine reserves: exploring the approach of
+selecting areas where shing is permitted, rather than prohibited. PLoS One
+2009;4:e6258.
+[14] Government of Canada. Canadas oceans strategy. Ottawa, Ontario. Fisheries
+and Oceans Canada, Oceans Directorate; 2002. p. 132.
+[15] Guenette S, Alder J. Lessons from marine protected areas and integrated
+ocean management initiatives in Canada. Coastal Manage 2007;35:5178.
+[16] Jessen S, Ban N. Establishing marine protected areas in British Columbia: an
+NGO perspective. In: Beumer JP, Grant A, Smith DC, editors. Aquatic
+protected areas: what works best and how do we know? Cairns, Australia:
+Australian Society for Fish Biology; 2002. p. 37787.
+[17] Peterson DL, Wood A, Gardner J. As assessment of Fisheries and Oceans
+Canada Pacic Regions effectiveness in meeting its conservation mandate.
+Vancouver, BC. David Suzuki Foundation; 2005. p. 1137.
+[18] Ban N, Royle K, Short C, Davis N, Bodtker K, Bryan T, et al. Identifying
+priority areas for marine conservation in BC: a collaborative approach. In:
+Bondrup-Nielsen S, Beazley K, Bissix G, Colville D, Flemming S, Herman T,
+et al., editors. Ecosystem based management: beyond boundaries proceedings of the sixth international conference of science and the management of
+protected areas, 2126 May 2007. Acadia University, Wolfville, Nova Scotia:
+Science and Management of Protected Areas Association, Wolfville, NS.;
+2010. p. 25162.
+[19] Ferdana Z. Case Study: Pacic Northwest Coast (PNWC) Ecoregion Offshore
+Classication Methodology. Ecoregional Assessment Toolkit; 2006. /http://
+science.natureconservancy.ca/centralinterior/docs/ERAtoolbox/7/Standard7_
+casestudy_PNWC.pdfS.
+[20] Ball IR, Possingham H. Marxan (V1.8.2): marine reserve design using spatially
+explicit annealing. A manual. 1.8.2 ed; 2000.
+[21] Ban NC, Klein CJ. Spatial socio-economic data as a cost in systematic marine
+conservation planning. Conserv Lett 2009;2:20615.
+[22] Ardron JA, Possingham HP, Klein CJ. Marxan good practices handbook.
+Version 2 Pacic Marine Analysis and Research Association, Vancouver, BC,
+Canada; 2010.
+[23] Ban NC, Mills M, Tam J, Hicks C, Klain S, Stoeckl N, et al. Towards a social
+ecological approach for conservation planning: embedding social considerations. Frontiers in Ecology and the Environment; http://dx.doi.org/10.1890/
+110205, in press.
+[24] Pomeroy R, Douvere F. The engagement of stakeholders in the marine spatial
+planning process. Mar Policy 2008;32:81622.
+[25] Salafsky N, Margoluis R, Redford KH, Robinson JG. Improving the practice of
+conservation: a conceptual framework and research agenda for conservation
+science. Conserv Biol 2002;16:146979.
+[26] Groves CR, Jensen DB, Valutis LL, Redford KH, Shaffer ML, Scott JM, et al.
+Planning for biodiversity conservation: putting conservation science into
+practice. Bioscience 2002;52:499512.
+[27] Knight AT, Cowling RM, Campbell BM. An operational model for implementing conservation action. Conserv Biol 2006;20:73950.
+[28] Gilliland PM, Laffoley D. Key elements and steps in the process of developing
+ecosystem-based marine spatial planning. Mar Policy 2008;32:78796.
+[29] Plasman IC. Implementing marine spatial planning: a policy perspective. Mar
+Policy 2008;32:8115.
+[30] Ehler C. Conclusions: benets, lessons learned, and future challenges of
+marine spatial planning. Mar Policy 2008;32:8403.
+
+

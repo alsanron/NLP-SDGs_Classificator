@@ -1,0 +1,1703 @@
+Detecting Price Manipulation in the Financial Market
+Yi Cao, Yuhua Li, Sonya Coleman, Ammar Belatreche, T.M.McGinnity
+Intelligent Systems Research Centre
+University of Ulster
+Londonderry, United Kingdom
+cao-y1@email.ulster.ac.uk, {y.li, sa.coleman, a.belatreche, tm.mcginnity}@ulster.ac.uk
+based detection models and the obtained promising
+performance is reported. Finally Section V concludes the paper
+and discusses potential improvements and future work.
+
+Abstract Market abuse has attracted much attention from
+financial regulators around the world but it is difficult to fully
+prevent. One of the reasons is the lack of thoroughly studies of
+the market abuse strategies and the corresponding effective
+market abuse approaches. In this paper, the strategies of
+reported price manipulation cases are analysed as well as the
+related empirical studies. A transformation is then defined to
+convert the time-varying financial trading data into pseudostationary time series, where machine learning algorithms can be
+easily applied to the detection of the price manipulation. The
+evaluation experiments conducted on four stocks from NASDAQ
+show a promising improved performance for effectively detecting
+such manipulation cases.
+
+I.
+
+II.
+
+REVIEW OF RELATED LITERATURE
+
+Theoretical studies of the stock price manipulation were
+presented in a number of existing works. A model of
+transaction-based manipulation was developed, showing that
+price manipulation is profitable [1]. An equilibrium model
+was derived and proved that the existence of noise traders
+made it possible to manipulate the price, although theoretically,
+no profit should be expected according to the efficient market
+hypothesis [3]. A real price manipulation case conducted by
+large traders was examined and analysed in [5]. The real case
+proved that the manipulation tactic can make a risk-free profit,
+as a result of the significantly changing order flow. More
+empirical studies showed the increase of the volatility,
+liquidity, and returns of the underlying stock and an up then
+down process of the price during the manipulation period [1]
+[6] [2]. A comprehensive empirical study of the price
+manipulation strategy as well as the corresponding intention
+was carried out on real manipulation cases from Korea
+Exchange (KRX) [4]. One type of price manipulation strategy
+was formally defined according to its statistical features from
+the empirical study of the data from KRX; however, the
+thorough study did not lead to the design of a detection model.
+
+INTRODUCTION
+
+Surveillance of the financial exchange market for
+monitoring market abuse activities has attracted much attention
+from financial regulators across different exchange markets in
+recent years especially since the flash crash in 2010. However,
+the lack of research in effective and efficient detection
+algorithms, in both industry and academia, causes challenges
+for regulators in their ability to monitor huge amounts of
+trading activities in real-time. A major concern to financial
+market abuse is price manipulation, where the manipulated
+target is the bid (or ask) price of certain financial instruments
+[1]. There is a large amount of literature regarding stock
+market manipulation theories [1] [2] [3] and a few empirical
+studies of real manipulation cases [4]. However, an effective
+detection model of price manipulation is yet to be developed
+due to the lack of understanding of strategic spoofing tactics.
+
+Research regarding the detection of the stock price
+manipulation is comparably limited in both academia and the
+financial industry. The appropriateness of a sample entropy
+methodology as a measure for the detection was evaluated in
+[7]; however, the statistical results did not favour the properties
+of sample entropy as an indicator of price manipulation.
+Logistic regression with an artificial neural network and
+support vector machine has been studied and compared as a
+method of detecting trade based manipulation within the
+emerging Istanbul Stock Market [8]. The detection model was
+built based on the assumption of higher deviations of the
+statistical features of daily return, volume and volatilities from
+normal cases indicating manipulation. Similar work has been
+carried out by firstly studying the reported manipulated cases
+and constructing a dataset of manipulated cases, and then
+modelling the returns, liquidity and volatility as well as the
+news and events related to the stocks during the manipulation
+period by linear and logistic regression [9]. Evaluations and
+comparisons of different techniques were also presented in [8]
+and [9], yet both works lack a reliable, reasonable analysis of
+the link between the abnormalities of the stock features and the
+disclosure of price manipulation. Therefore, this leaves a
+knowledge gap between the data attribute deviations and the
+detection techniques. An Inverse Reinforcement Learning
+
+In this paper, we summarize and further analyse the price
+manipulation strategies by examining actual reported cases as
+well as the empirical studies in existing literature. We define
+two key characteristics of price manipulation strategies, which
+enable us to propose a transformation procedure, converting
+the original market trading data to a comparable metric, where
+the non-stationary nature of the financial data is demonstrated
+to be nearly removed and the machine learning techniques
+can then be effectively applied as detection models. Our
+proposed detection approach is evaluated based on real trading
+records of selected stocks from NASDAQ.
+The remainder of this paper is organized as follows:
+Section II provides a brief review of price manipulation and the
+corresponding detection methods. In Section III, the price
+manipulation tactics are thoroughly analysed. A data transform
+procedure is then proposed and illustrated with real trading
+data. Section IV evaluates the proposed machine learning
+This project is supported by the companies and organizations involved in
+the Northern Ireland Capital Markets Engineering Research Initiative.
+
+77
+
+(IRL) algorithm was applied to the learning and classifying of
+traders behaviours. The experiments were conducted on a
+simulated S&P 500 futures market through a multi-agent
+approach [10] and achieved more than 90% classification
+accuracy. An empirical study of the relationship between the
+market efficiency and the market close price manipulation,
+defined as ramping, was carried out and showed a raise in
+execution costs of completing large trades when experiencing
+the market close ramping [11]. Ramping alert records
+generated by the detection algorithm from Smart Group
+International, a surveillance system provider, were analysed as
+a benchmark for this study. The algorithm detected market
+close ramping according to critical price changes where the
+threshold was set as the 99% histogram distribution cut-off of
+the historical price change during the benchmark period. A
+market close ramping alert was triggered if the changes of the
+closing price and price 15 minutes prior were greater than the
+chosen threshold [11].
+
+detection model. The strategy is not constructed as incidentally
+heuristic attempts of placing orders but as careful designs of
+every single attribute of the placed orders according to the
+market impact theory [13], which suggests that the market
+effects are correlated with the quotes and sizes of the posted
+orders. A quantitative estimation of this effect given by a
+Vector Autoregressive Model (VAR) [13] showed that either
+the larger size or the higher (or lower) quote (compared with
+the current bid (or ask)) induces stronger price impact on the
+market. For normal traders, measuring and eliminating the
+market impact is crucial; however, for the market
+manipulators, the market impact is simply utilized by them in
+strategies to make an economical profit. According to this, the
+price manipulation orders ought to be large-sized and of a
+higher (or lower) price than the bid (or ask) to maximize the
+market impact. However, none of the reported price
+manipulation will be completely conducted when following
+such format [13] due to another constraint: the placed orders
+for spoofing the market are expected to have little chance of
+being executed [4], (Execution refers to a failed manipulative
+action that is not accepted by the manipulators). Consequently,
+we argue that a price manipulative strategy is deemed to be
+fulfilling of two conditions: (1) maximising the induced price
+change; (2) minimising the execution risk.
+
+To date, existing research has mainly focused on either
+empirical studies of certain price manipulation cases or the
+detection techniques based on abnormalities of the market
+features during the manipulation period. An effective
+classification algorithm was shown in [10] but it was based
+only on simulated markets where the traders and their
+strategies were clearly defined.
+
+The definition of the primary manipulation tactic, spoofing
+trading, summarized from the real manipulation cases, is given
+as: an order with a size at least twice the previous days
+average order size, with a price at least 6 basis points (bps) 1
+away from the current bid (or ask) price and with a cancellation
+time longer than 30 minutes [4]. Those numerical definitions,
+6 bps, 2 times and 30 minutes, show a typical case of
+our argument: maximizing the induced price change (impact)
+by large size (at least twice the previous days average size)
+order staying at order book for a relatively longer time (30
+minutes) and minimizing the risk by passive quotes (6 bps
+away from the bid (or ask)) [4].
+
+In this paper, the manipulative strategies are analysed with
+no assumptions on unusual changes of market features. The
+proposed detection approaches are aimed at learning and
+modelling the trading behaviours and further identifying the
+manipulative actions by the learned model. Our approach is
+evaluated in a real data context.
+III.
+
+CHARACTERISING PRICE MANIPULATION
+
+Price manipulation activities affect price fluctuation in
+capital markets, where the returns, volatilities and liquidities,
+unexpectedly rise then decline during the manipulation period
+[1] [6] [2]. However, the occurrence of manipulation is hard to
+prove given the observed changes of the market attributes,
+which in most cases are the result of economic cycles, market
+(index) moves and even public events. The detection models
+based on the significant deviation of the market attributes are
+doomed to suffer from the error rate of the unusual but
+legitimate activities that are recognised as manipulation [7] [8]
+[9]. Instead of using the discrepancies of the financial market
+attributes, the manipulation strategic behaviour intrinsically
+offers a more accurate measure. Nevertheless, a model that is
+capable of directly monitoring behaviours is not available due
+to the lack of accurate definitions of manipulative behaviours.
+This is one of the major challenges faced when attempting to
+detect price manipulation. Recognise
+
+In September 2012, a price manipulation case was reported
+and documented by the Financial Industry Regulatory
+Authority of the USA [14]. In this case, a sequence of spoofing
+buy orders was placed inside the spread, pushing up the bid
+price by 6.9 bps. After the manipulators had benefited from the
+transaction on their previous sell order at a higher price, the
+spoofing orders were cancelled. The complete manipulation
+process lasted for only 819ms and is known as quote stuffing.
+Another 17 analogous quote stuffing cases from 2011 - 2012
+were then reported by Nanex [15]. The average time duration
+and the induced bid (or ask) changes of the cases were
+calculated as 6.2 seconds and 627 bps respectively. Obviously,
+the numerical features, 6.9 bps and 819ms, of quote stuffing
+also conform to our argument: the aggressive quotes
+maximising the fictitious wild price changes and the
+instantaneous market sweeping minimising the execution risk.
+
+A. Price manipulation strategy characteristics
+A generic price manipulation tactic is defined as artificially
+pushing up (or down) the bid (or ask) price of a security and
+taking advantage of the shifted price so as to make a profit
+[12]. The deliberately constructed trading order sequences
+change the market bid (or ask) price and show the traders
+manipulative intentions. The characteristics of those orders
+define the manipulation strategy, which is the target of the
+
+Spoofing trading and quote stuffing suggest two primary
+strategies of price manipulation. The former utilises a large
+volume and a passive quote for inducing the impact and
+reducing the risk while an aggressive quote and a tiny
+cancellation time are used in the latter, respectively. Both
+1
+
+78
+
+A basis point is a unit equal to one hundredth of a percentage point
+
+represent order price, volume and submission time (physical
+time) respectively. Furthermore,
+and
+denote the best bid
+order activity. is
+and ask price instantaneously before the
+denoted as the length of a sliding window and is set to one
+trading day, corresponding with the spoofing trading
+definition. Thus,  and  define the moving average volume
+of the buy and sell orders in the previous period of time
+excluding the current data point . The cancellation times and
+(or ) are denoted by
+and
+execution times of order
+
+formats can be depicted by two key conditions defined in our
+argument.
+The two strategies are graphically illustrated in Fig. 1,
+where a three-level order book is initiated at the best bid, , ,
+and best ask, , and the dotted lines represent a quick sweep
+of the market (tiny cancellation time).
+volume
+
+Spoofing Trading
+
+d
+
+large volume
+passive price
+
+b ,3
+t
+
+d tb , 2
+
+d tb ,1
+
+Quote Stuffing
+
+d ta ,1
+
+aggressive price
+tiny time
+
+(or
+
+d ta , 2
+d ta ,3
+
+p p p
+
+outside spread
+(lower than bid)
+
+Inside spread
+
+b ,1
+t
+
+a ,1
+t
+
+p
+
+a,2
+t
+
+p
+
+) and the lifecycle of an order
+
+p
+
+
+
+/
+
+(1)
+
+/
+
+=
+
+/
+
+
+
+/
+
+(2)
+
+,
+
+/
+
+=
+
+/
+
+=
+
+1
+
+(3)
+
+/
+
+(4)
+
+1
+/
+
+The transformation is then defined in Equations (5), (6) and
+(7), where
+,
+,
+represent three transformed attributes.
+
+=
+
+=
+
+=
+
+ln
+
+
+(5)
+
+
+ ln
+
+ln
+
+
+ ln
+
+
+ln
+
+
+,
+
+
+ ln
+
+
+,
+
+
+
+(6)
+
+ln
+ln
+
+,
+
+(7)
+
+,
+
+The stationary nature of a time series ( ,
+tested by the weak definition of stationarity [22]
+that the mean and variance of ( , ) do not
+while the autocorrelation (AutoCor) between
+(
+) depends only on the lag.
+,
+
+) is usually
+[23] meaning
+depend on t,
+( , ) and
+
+To evaluate the stationarity, we calculate the mean,
+variance and AutoCor for the original and transformed data of
+the trading orders. In the calculation, we consider each order
+attribute as a single time series thus the original and the
+transformed data are represented as three time series
+respectively:
+
+Denoting as a time index, indicating all order book
+activities, i.e., submission, cancellation and execution, a buy
+(or ) is described as a three dimensional
+(or sell) order
+,
+
+/
+
+,
+
+Inspired by the differencing step and log-return methods,
+we define a transformation procedure as converting the order
+data to a consistent and comparable metric. On one hand, this
+procedure transforms the original data to pseudo-stationary; on
+the other hand, it enables the evaluation of analytic
+relationships amongst stocks despite the original unequal
+values of the order series.
+
+(or
+
+=
+
+,
+
+Here, we propose to transform the original data to a
+stationary domain while maintaining the desired features,
+which may bring an alternative computationally efficient
+solution. This idea is also reflected in a time series analysis,
+such as the autoregressive integrated moving average
+(ARIMA) model which is usually applied in cases where the
+non-stationary feature of the data can be removed by an initial
+differencing step [18]. The log-return is also considered to be a
+transformation from market data to price difference, which is
+not believed to be perfectly time invariant [19] [20] but has
+also been analysed and concluded as stationary in a recent
+investigation [21].
+
+,
+
+/
+
+outside spread
+(higher than ask)
+
+B. Market Data Transformation
+Financial data is usually considered as a non-stationary
+time series [16]. From the detection models perspective, the
+non-stationarity increases the difficulty of identifying the
+manipulation through the utilisation of one uniform model.
+One method that would compensate this is that proposed in
+[17], which adaptively updates the model by monitoring any
+deviations in the data. However, frequent updates increase the
+computational complexity of the model.
+
+,
+
+can then
+
+for the cancelled or executed order respectively. Thus the
+average lifecycle of orders in the prior period are calculated
+as
+
+a ,3
+t
+
+Fig. 1 Spoofing trading and quote stuffing strategies in a three-level order
+book.
+
+vector,
+
+/
+
+be defined as
+
+price
+Bid-ask spread
+
+b, 2
+t
+
+b ,3
+t
+
+and
+
+), where p, v and t
+
+79
+
+,
+
+=
+
+/
+
+=
+
+As a time series matches up perfectly with itself (zerolag), the figures in Fig. 3 begin from t = 1 to avoid large
+value at t = 0 . Fig. 3 clearly shows the autocorrelation,
+AutoCor, of three transformed time series
+,
+and
+,
+decreasing with an increasing lag and tailing off to tiny values,
+which additionally suggests the decorrelation of the
+transformed time series. Meanwhile, AutoCor of the original
+data also declines with increasing lags. Although not given in
+this paper, the datasets of another three stocks (Google, Intel
+and Microsoft) show identical features as illustrated in both
+Fig. 2 and Fig. 3.
+
+;
+.
+
+The top four stocks in NASDAQ in terms of the total
+market capital, Apple, Google, Intel and Microsoft, are
+selected for evaluation. The datasets, obtained from LOBSTER
+project [24], cover messages over five trading days, from the
+11th to the 15th of June, 2012 and consist of more than 40,000
+trading orders in total for each stock. We calculated the mean
+) with t from 0 to
+,X
+and variance of the time series (X
+the length of the time series. The autocorrelation, AutoCor, is
+calculated
+between
+the
+time
+) with the same t values.
+series (X , X ) and (X
+,X
+
+Origin P
+
+The calculated mean and variance of three attributes, price,
+volume and time, for the Intel dataset are shown as an example
+in Fig. 2. It should be noted that only the first 200 lag values
+are illustrated in the figures for a clear comparison between the
+original and transformed data. As shown in Fig. 2(g)-(l), the
+transformed price, volume and time all fluctuate around a
+nearly constant mean value with an approximately constant
+variance, while the attributes of original data Fig. 2(a)-(f) move
+with volatility across the time.
+
+V
+T
+
+P
+V
+T
+
+MSFT
+3.31E-01
+2.02E-01
+4.26E-02
+1.88E-01
+2.25E-01
+2.08E-01
+
+200
+
+930
+925
+
+0
+
+100
+Lag
+
+0
+
+100
+Lag
+
+200
+
+Origin V
+
+711.4
+711.2
+711
+
+0
+
+100
+Volume
+
+(c)
+Origin T
+
+1850
+
+1840
+
+0
+
+100
+Lag
+
+200
+
+885
+880
+875
+
+0
+
+100
+Lag
+
+(e)
+-3
+
+Trans P
+
+-3
+
+0
+-5
+
+P
+0
+
+100
+Lag
+
+Mean
+200
+
+x 10
+
+1.346
+
+0.9318
+
+1.346
+
+0
+
+100
+Lag
+
+(g)
+Trans V
+
+0
+-5
+
+V
+0
+
+Mean
+100
+Lag
+
+200
+
+0.9318
+0.9318
+
+0
+
+100
+Lag
+
+(i)
+
+APPA
+1.01E-01
+2.16E-01
+1.59E-02
+1.40E-01
+5.14E-01
+1.83E-01
+
+-5
+
+x 10
+
+T
+
+Mean
+
+0.5
+0
+
+0
+
+200
+
+(j)
+
+-4
+
+1
+
+200
+
+(h)
+
+5
+
+APPA
+1.19E-04
+4.71E-10
+-1.31E-06
+1.64E-10
+3.34E-06
+1.00E-08
+
+200
+
+(f)
+
+Stock INTEL
+
+x 10
+
+5
+
+200
+
+(d)
+
+T
+Mean
+
+1845
+
+200
+
+(b)
+V
+Mean
+
+500
+0
+
+Trans T
+
+P
+
+100
+Lag
+
+935
+
+(a)
+
+Table I COEFFICIENT OF VARIATION OF THE SEQUENCE OF MEAN & VARIANCE
+OF THE PRICE, VOLUME AND TIME FOR THE DATASET OF FOUR STOCKS
+Coefficient of variation
+INTC
+GOOG
+-3.73E-06
+-2.63E-05
+6.76E-11
+6.59E-10
+-9.51E-07
+-1.33E-06
+1.08E-10
+1.83E-10
+3.70E-06
+3.26E-06
+4.63E-09
+1.76E-09
+Coefficient of variation
+INTC
+GOOG
+8.73E-02
+1.20E-02
+2.05E-01
+3.66E-01
+1.17E-01
+5.74E-02
+2.08E-01
+9.44E-02
+7.75E-02
+8.74E-01
+1.92E-01
+1.66E-01
+
+0
+
+1000
+
+The significantly smaller CV values of the mean and
+variance sequences of the transformed price, volume and time
+compared with the original data show far lower level of
+dispersion in the transformed data sequences, which indicates
+nearly constant mean and variance values. The nearly
+constant mean and variance partially conform to the weak
+definition of stationarity.
+
+MSFT
+-1.08E-04
+1.31E-10
+-1.11E-06
+1.68E-10
+3.38E-06
+2.37E-09
+
+P
+Mean
+
+2.75
+2.74
+
+When further observing the dispersion of the sequences of
+calculated mean and variance, the measure of the dispersion of
+a given sequence, the coefficient of variation (CV), defined as
+the ratio of standard deviation to the mean of a data sequence,
+is further calculated. The CV of the mean and variance
+sequences under different lag values for three attributes, price,
+volume and time are calculated for both the original data and
+the transformed data across four datasets and shown in Table I.
+
+Trans.
+Data
+Mean
+Var.
+Mean
+Var.
+Mean
+Var.
+Origin.
+Data
+Mean
+Var.
+Mean
+Var.
+Mean
+Var.
+
+5
+x 10 Stock INTEL
+
+2.76
+
+Var of Origin P
+
+,
+
+Var of Origin V
+
+=
+
+/
+
+Var of Origin T
+
+,
+
+=
+
+Var of Trans P
+
+=
+
+,
+
+Var of Trans V
+
+/
+
+100
+Lag
+
+(k)
+
+200
+
+Var of Trans T
+
+=
+
+6.2903
+
+x 10
+
+6.2903
+6.2903
+
+0
+
+100
+Lag
+
+200
+
+(l)
+
+Fig. 2 Mean & Variance of original and transformed Price, Volume and Time
+for Intel stock.
+
+80
+
+The comparison between these figures shows that the nonstationary features of the original data are nearly removed by
+the transformation; pseudo-stationary data is then generated,
+compensating for the time-varying features.
+AutoCor p
+5
+Lag
+
+0.9
+0.8
+0.7
+0
+
+10
+4
+
+x 10
+
+(a)
+AutoCor v
+
+AutoCor V
+
+0
+5
+Lag
+
+10
+
+0.8
+
+Stock APPLE
+-4
+
+x 10
+
+0.6
+0.4
+
+0
+
+4
+
+x 10
+
+AutoCor t
+
+AutoCor T
+
+0.2
+5
+Lag
+
+10
+4
+
+x 10
+
+INTEL (Origin)
+
+INTEL (Trans)
+
+0
+
+5
+Lag
+
+(d)
+
+0.4
+
+10
+4
+
+x 10
+
+(e)
+
+Normal Orders
+Price Manipulation Orders
+
+1
+
+(c)
+
+0
+
+4
+
+INTEL (Origin)
+
+0.1
+
+0
+
+10
+x 10
+
+(b)
+
+INTEL (Trans)
+
+-0.1
+
+5
+Lag
+
+Trans. T
+
+AutoCor P
+
+0
+0
+
+Since the manipulation cases are apparently located apart
+from the cluster (as Fig. 4(a)), the boundaries of such clusters
+provide an effective decision threshold. However, such
+boundaries cannot be described by simply setting up thresholds
+on three attributes; this is due to the unknown convexity
+feature of the 3-dimensional spherical surface. Precisely
+describing the cluster shapes by only the normal data requires
+some sophistication.
+
+INTEL (Origin)
+
+INTEL (Trans)
+0.1
+
+-0.1
+
+the normal orders congest together as an agglomerative cluster
+occupying a certain space with analogous but different shapes
+due to the naturally distinct trading behaviours across financial
+instruments while the original data show the exotic shapes.
+
+0.5
+
+1
+0
+5
+
+0.5
+0
+
+0
+
+5
+Lag
+
+10
+Trans. V
+
+4
+
+x 10
+
+and time t
+
+/
+
+0
+
+-2
+-4
+
+-3
+
+x 10
+
+Trans. P
+
+(a)
+Stock APPLE
+
+C. Strategic behaviour illustration
+Given the non-stationarity removing transformation and
+the characteristics of the manipulation strategy previously
+discussed, we illustrate the converted data by denoting the x, y
+and z-axis by transformed price p , volume v and time t
+respectively. The trading orders are then represented in a new
+3-dimensional domain as shown in the example in Fig. 4(a).
+Similarly, the original orders are also illustrated in the domain
+where x, y and z-axis is represented by original price p / ,
+/
+
+-5
+
+(f)
+
+Fig. 3 AutoCor of original and transformed Price, Volume and Time for Intel
+stock.
+
+volume v
+
+2
+
+0
+
+Normal Orders
+Price Manipulation Orders
+
+Origin T
+
+15000
+10000
+5000
+0
+2000
+1000
+Origin V
+
+respectively in Fig. 4(b). The
+
+0
+
+5.85
+
+5.86
+
+5.87
+
+5.88
+
+5.89
+6
+
+x 10
+
+Origin P
+
+(b)
+
+example is formed from the Apple stock dataset captured on
+the 10th July 2013 with both normal and real manipulation
+cases, which were reported by Nanex [25] later on the same
+day.
+
+Fig. 4 Normal and Manipulation cases illustration. (a) The transformed data;
+(b) The original data.
+
+Fig. 4 clearly shows that: (1) the price manipulation cases
+(shown as the crosses) deviate from the mass normal trading
+orders in the transformed domain in Fig. 4(a) while
+overlapping with the normal orders in the domain of the
+original data in Fig. 4(b); (2) the normal trading orders tend to
+be distributed along the three axes in the transformed domain
+in Fig. 4(a) while the original data shows exotic (and time
+varying) distributions in Fig. 4(b). The reported manipulation
+cases in the Apple stock trading also follow the proposed
+arguments: maximising the manipulated effects by aggressive
+quotes and minimising the execution risks by a tiny
+cancellation time.
+
+The concept of describing the shape of a cluster of
+normalities is often referred to as novelty detection, where the
+abnormalities are subsequently identified by testing for novelty
+against the model of the normality. The mass of normal trading
+data and the scarceness of the manipulation cases, due to the
+regulatory rules prohibiting the disclosure of illegitimate
+market cases, are another reason that the novelty detection
+paradigm suits the detection of such manipulation.
+
+IV.
+
+DETECTING PRICE MANIPULATION
+
+K-Nearest Neighbour (kNN) based novelty detection is one
+of the simplest non-parameter methods. It simply computes the
+distances between the test data and all training samples and
+uses the lowest distance score plus a threshold (a radius around
+that example) to make the novelty decision. In general, the
+Euclidean distance is used between two samples [26].
+
+Similarly, the normal orders data of other selected stocks
+shows a similar pattern to Fig. 4. In the transformed domain,
+
+81
+
+One-class support vector machine (OCSVM) is another
+ideal approach for novelty detection, as it provides a direct
+description of the boundary of normality (the support vectors)
+[27] [28]. OCSVM applied to price manipulation detection
+provides a measure of unusualness in trading activity by
+learning a representation of normal orders.
+
+of the approach, 5000 synthesized cases are injected to each
+dataset with each type containing 2500 examples. For the
+Apple stock dataset, the reported real cases are also injected for
+evaluation.
+In our experiments, LIBSVM [32] and DDTool [33], two
+open source libraries, are used as the implementation of the
+OCSVM and kNN respectively. The model parameters, namely
+the Gaussian kernel and the k value for kNN are determined by
+5-folder cross-validation for stable and optimised results.
+
+In this paper, we examine the price manipulation detection
+problem using the above-mentioned two machine learning
+models on the transformed time series as well as the original
+market data. We argue that both models work effectively on
+the underlying detection problem and the proposed
+transformation procedure significantly improves the detection
+performance.
+
+Performance evaluation is based on the Receiver Operating
+Characteristic (ROC), which is calculated according to the
+confusion matrix, where false positive (FP), is defined as
+manipulation cases detected as normal, false negative (FN) is
+defined as normal cases detected as manipulation, true positive
+(TP) is defined as normal cases detected as normal and true
+negative (TN) is defined as manipulation cases detected as
+manipulation. The ROC curve is a widely used metric for
+evaluating and comparing binary classifiers. The ROC curve
+against the false positive
+plots the true positive rate
+
+A. Application of OCSVM and kNN to price manipulation
+detection
+When applying the novelty detection approaches to the
+price manipulation detection problem, a set of normal data
+vectors = { , ,  , } is collected as the training dataset.
+The vector is from either the vector of the original market
+, ,
+( : a buy or sell order), or the transformed
+data
+data
+,
+,
+, calculated by Equations (5)-(7). In the
+experimental evaluation, the OCSVM and kNN are applied to
+the four datasets Apple, Google, Intel and Microsoft
+discussed in Section III.B. The selection of these datasets is
+according to their relatively high trading volumes and more
+volatile price fluctuation, factors that may increase the
+likelihood of manipulation across the exchanges [4] [29]. Each
+dataset is divided into five subsets according to the trading
+date. One subset is chosen as the training dataset, where the 5fold cross-validation is used for training the models; the
+remaining four subsets are used in the testing.
+
+rate
+while the discrimination threshold of the binary
+classifier is varied. In order to assess the overall performance
+of a novelty detector, one can measure the area under the ROC
+curve (AUC). Larger AUC values are generally an indication
+of better classification performance.
+The ROC curves of two models on four stock datasets
+(original and transformed) with 5000 injected novelties in each
+dataset are illustrated in Fig. 5. The calculated AUC values are
+summarised in TABLE II.
+TABLE II AUC OF TWO MODELS ON FOUR STOCK DATASETS
+
+The evaluation of a detection model is usually reliant upon
+the labelled benchmarks of both normality and abnormality.
+Due to a few real manipulation cases being reported, we
+needed to synthesize a number of abnormal cases based on our
+study of the characteristics of the manipulation strategy.
+Synthetic exploratory financial data is accepted in academia for
+evaluating the proposed model when real market data is hard to
+collect [30] [31].
+
+x
+
+AUC
+
+OCSVM
+
+APPLE
+GOOGLE
+INTEL
+MSFT
+AUC
+
+kNN
+
+Two primary formats of price manipulation, spoofing
+trading and quote stuffing, are reproduced in the context of the
+datasets of each stock following the original characteristics
+discussed in Section III.A:
+x
+
+Model
+
+Data
+Original
+
+Transformed
+
+0.866
+0.831
+0.906
+0.976
+
+0.963
+0.997
+0.958
+0.990
+
+11.201%
+19.976%
+5.751%
+1.379%
+
+Data
+Original
+
+Transformed
+
+0.884
+0.625
+0.854
+0. 926
+
+0.928
+0.857
+0.866
+0.964
+
+APPLE
+GOOGLE
+INTEL
+MSFT
+
+Improvement
+
+Improvement
+
+5.057%
+37.279%
+1.433%
+4.117%
+
+It is clear that both detection models with the
+transformation procedure achieved a significantly better
+performance than with the original market data in terms of the
+AUC values in TABLE II, where the Improvement column is
+
+spoofing trading: orders with sizes of at least twice
+the previous days average order size, with prices of at
+least 6 basis points outside the current bid-ask spread
+and with a cancellation time of 30 minutes;
+
+calculated
+
+by
+
+.
+
+as
+
+the
+
+improvement
+
+percentage. On the transformed data, both models achieved
+high AUC on all four of the datasets. Even the smallest AUC
+value, 0.857 of kNN on the Google dataset, can also be
+considered as a good performance [34]. After checking the
+testing results of the Apple stock, the injected real
+manipulation cases are successfully discovered by both
+models. The good performance can be explained by the
+OCSVM and kNN models effectively modelling the
+boundaries of the normal behaviour clusters.
+
+quote stuffing: orders with regular size, with quotes
+627 bps higher (or lower) than the current bid (or ask)
+price and with approximately 6.2 seconds of
+cancellation time.
+
+The generated manipulation cases are then randomly
+injected into the corresponding order records, creating a
+mixture of both normal and abnormal patterns in the
+testing datasets. In order to ensure comprehensive assessment
+
+82
+
+As discussed before, to compensate the non-stationarity of
+the data, one approach is to adaptively updating the model by
+monitoring any deviations in the data distribution. The pseudostationarity feature of the transformed data will effectively
+reduce the necessary updates and consequently provides a
+computationally efficient approach.
+
+Meanwhile, as shown in Fig. 4(a), the transformed data
+show a relatively regular cluster shapes compared with the
+exotically distributed initial data in Fig. 4(b). We argue that the
+proposed transformation procedure particularly contributes to
+establishing the pseudo stationary regular cluster shapes.
+From the machine learning perspective, the proposed
+transformation procedure pre-processes the data and
+sufficiently extracts the required features. The data points in
+the feature domain can be easily and relatively effectively
+modelled by both kNN and OCSVM.
+
+It is also noted that the OCSVM outperforms the kNN
+across all four different datasets. The higher performance of
+OCSVM may be due to a better description of the clusters of
+normal cases through a more accurate description of the
+boundary by support vectors.
+
+ROC curve of APPLE
+
+True Positive Rate
+
+1
+
+V.
+
+0.8
+
+This paper analysed the price manipulation in the financial
+market and defined its key features. A transformation
+procedure is proposed for mapping non-stationary market data
+to pseudo stationary attributes, to which the machine learning
+algorithms can easily be applied as a detection model. The
+evaluation, which has been conducted on top four stocks from
+NASDAQ in terms of the market capital, shows promising
+performance in terms of area under the ROC curve.
+
+0.6
+0.4
+
+Transformed Data OCSVM
+Origin Data OCSVM
+Transformed Data kNN
+Origin Data kNN
+
+0.2
+0
+
+0
+
+0.2
+
+0.4
+0.6
+False Positive Rate
+
+0.8
+
+1
+
+(a)
+
+In the proposed method, the stationary nature of the data is
+tested separately on three attributes, which however, have been
+modelled by OCSVM and kNN as a feature vector. The study
+of the stationarity of the order vector and the corresponding
+detection model updating (re-training) will be the focus of our
+future work. Furthermore, in recent years, the market
+manipulation tends to be carried out in more than one exchange
+market by some tricky manipulators. Detection within any
+single market hardly achieves a complete and accurate result.
+This requires a cross-market detection model, which is also one
+of our primary future works.
+
+ROC curve of GOOGLE
+
+True Positive Rate
+
+1
+0.8
+0.6
+0.4
+
+Transformed Data OCSVM
+Origin Data OCSVM
+Transformed Data kNN
+Origin Data kNN
+
+0.2
+0
+
+0
+
+0.2
+
+0.4
+0.6
+False Positive Rate
+
+0.8
+
+CONCLUSION AND FUTURE WORK
+
+1
+
+(b)
+ROC curve of INTEL
+
+True Positive Rate
+
+1
+
+REFERENCES
+
+0.8
+
+[1] F. Allen and D. Gale, Stock-price manipulation, Review of Financial
+Studies, vol. 5, no. 3, pp. 503-529, 1992.
+
+0.6
+0.4
+
+Transformed Data OCSVM
+Origin Data OCSVM
+Transformed Data kNN
+Origin Data kNN
+
+0.2
+0
+
+0
+
+0.2
+
+0.4
+0.6
+False Positive Rate
+
+0.8
+
+[2] R. K. Aggarwal and G. Wu, Stock Market Manipulations, The Journal
+of Business, vol. 79, no. 4, pp. 1915-1953, 2006.
+[3] F. Allen and G. Gorton, Stock Price Manipulation, Market
+Microstructure and Asymmetric Information, European Economic
+Review, vol. 36, pp. 624-630, 1992.
+
+1
+
+[4] E. J. Lee, K. S. Eom and K. S. Park, Microstructure-based
+manipulation: Strategic behavior and performance of spoofing traders,
+Journal of Financial Markets, vol. 16, no. 2, p. 227252, 2013.
+
+(c)
+ROC curve of MSFT
+
+True Positive Rate
+
+1
+
+[5] R. A. Jarrow, Market manipulation, bubbles, corners, and short
+squeezes., Journal of financial and Quantitative Analysis, vol. 3, p. 27,
+1992.
+
+0.8
+0.6
+0.4
+0.2
+0
+
+[6] M. Jianping, G. Wu and C. Zhou, Behavior based manipulation: theory
+and prosecution evidence., New York University, 2004.
+
+Transformed Data OCSVM
+Origin Data OCSVM
+Transformed Data kNN
+Origin Data kNN
+0
+
+0.2
+
+0.4
+0.6
+False Positive Rate
+
+0.8
+
+[7] M. Slama and E. Strmma, Trade-Based Stock Price Manipulation and
+Sample Entropy, Stockholm School of Economics, 2008.
+[8] H. t, M. M. Doanay and R. Akta, Detecting stock-price
+manipulation in an emerging market: The case of Turkey, Expert
+Systems with Applications, vol. 36, no. 9, p. 1194411949, 2009.
+
+1
+
+(d)
+
+[9] D. Diaz, B. Theodoulidis and P. Sampaio, Analysis of stock market
+manipulations using knowledge discovery techniques applied to intraday
+trade prices., Expert Systems with Applications, vol. 38, no. 10, pp.
+12757-12771., 2011.
+
+Fig. 5 ROC of two models on four stock datasets.
+
+[10] S. Yang, M. Paddrik, R. Hayes, A. Todd, A. Kirilenko, P. Beling and W.
+
+83
+
+Scherer, Behavior based learning in identifying High Frequency
+Trading strategies, in IEEE Conference on Computational Intelligence
+for Financial Engineering & Economics (CIFEr), New York, 2012.
+
+[23] S. Van Bellegem, Adaptive methods for modelling, estimating and
+forecasting locally stationary processes, Universit catholique de
+Louvain, Louvain, 2003.
+
+[11] M. Aitken, F. R. Harris and S. Ji, Trade-based manipulation and market
+efficiency: a cross-market comparison, in 22nd Australasian Finance
+and Banking Conference, 2009.
+
+[24] LOBSTER, LOBSTER, Humboldt Universitt zu Berlin, 2013.
+[Online]. Available: https://lobster.wiwi.hu-berlin.de/index.php.
+[25] Nanex, Incredible, Blatant Manipulation in Apple Stock, 10 July 2013.
+[Online]. Available: http://www.nanex.net/aqck2/4352.html.
+
+[12] Y. Cao, Y. Li, S. Coleman, A. Belatreche and T.M.McGinnity, A
+Hidden Markov Model with Abnormal States for Detecting Stock Price
+Manipulation, in 2013 IEEE International Conference on Systems, Man,
+and Cybernetics (SMC), Manchester, pp.3014-3019, Oct 2013.
+
+[26] C. M. Bishop, Pattern Recognition and Machine Learning, Springer ,
+2007 .
+
+[13] N. Hautsch and R. Huang, The market impact of a limit order, Journal
+of Economic Dynamics and Control, vol. 36, no. 4, pp. 501 - 522, 2012.
+
+[27] B. Schlkopf, J. C. Platt, J. Shawe-Taylor, A. J. Smola and R. C.
+Williamson., Estimating the support of a high-dimensional
+distribution, Neural computation, vol. 13, no. 7, pp. 1443-1471, 2001.
+
+[14] M. Ong and N. Condon, FINRA Joins Exchanges and the SEC in
+Fining Hold Brothers More Than $5.9 Million for Manipulative Trading,
+Anti-Money Laundering, and Other Violations, 25 September 2012.
+[Online]. Available:
+http://www.finra.org/Newsroom/NewsReleases/2012/P178687.
+
+[28] P. Hayton, S. Utete, D. King, S. King, P. Anuzis and L. Tarassenko.,
+Static and dynamic novelty detection methods for jet engine health
+monitoring, Philosophical Transactions of the Royal Society A:
+Mathematical,Physical and Engineering Sciences, vol. 365, no. 1851, pp.
+493-514, 2007.
+
+[15] NANEX, Whac-A-Mole is Manipulation, 25 September 2012.
+[Online]. Available: http://www.nanex.net/aqck2/3598.html.
+
+[29] D. J. Cumming, F. Zhan and M. J. Aitken, High Frequency Trading and
+End-of-Day Manipulation, Social Science Research Network, 2012.
+
+[16] R. Ghazali, A. J. Hussain, N. M. Nawi and B. Mohamad, Nonstationary and stationary prediction of financial time series using
+dynamic ridge polynomial neural network, Neurocomputing, vol. 72,
+no. 10-12, p. 23592367, 2009.
+
+[30] G. K. Palshikar and M. M. Apte, Collusion set detection using graph
+clustering, Data Mining and Knowledge Discovery, vol. 16, no. 2, pp.
+135-164, 2008.
+[31] M. Franke, B. Hoser and J. Schrder, On the Analysis of Irregular Stock
+Market Trading Behavior, Studies in Classification, Data Analysis, and
+Knowledge Organization, pp. 355-362, 2008.
+
+[17] L. Cao, Y. Ou and P. Yu, Coupled Behavior Analysis with
+Applications, IEEE Transaction on Knowledge and Data Engeering,
+vol. 24, no. 8, pp. 1378-1392, 2012.
+
+[32] C.-C. Chang and C.-J. Lin, LIBSVM: A library for support vector
+machines, ACM Transactions on Intelligent Systems and Technology,
+vol. 2, p. 27:127:27, 2011.
+
+[18] R. S. Tsay, Analysis of Financial Time Series, Wiley, 2010.
+[19] R. F. Engle, Autoregressive Conditional Heteroscedasticity with
+Estimates of the Variance of United Kingdom Inflation, Econometrica,
+vol. 50, no. 4, pp. 987-1008, 1982.
+
+[33] D. Tax, DDtools, the Data Description Toolbox for Matlab version 2.0.1,
+Delft University of Technology, 2013.
+
+[20] T. Bollerslev, Generalized autoregressive conditional
+heteroskedasticity, Journal of Econometrics, vol. 31, no. 3, p. 307327,
+1986.
+
+[34] T. Fawcett, An introduction to ROC analysis, Pattern Recognition
+Letters, vol. 27, p. 74, 2006.
+
+[21] C.-C. Lee, J.-D. Lee and C.-C. Lee, Stock prices and the efficient
+market hypothesis: Evidence from a panel stationary test with structural
+breaks, Japan and the World Economy, vol. 22, no. 1, p. 4958, 2010.
+[22] M. B. Priestley, Spectral Analysis and Time Series,, Academic Press,
+1982 .
+
+84
+
+

@@ -1,0 +1,908 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/237151955
+
+A fuzzy logic model for biogas generation in bioreactor landlls
+Article in Canadian Journal of Civil Engineering  April 2009
+DOI: 10.1139/L09-015
+
+CITATIONS
+
+READS
+
+16
+
+323
+
+4 authors, including:
+Mohamed Abdallah
+
+Ladslau Fernandes
+
+University of Sharjah
+
+Saxion University of Applied Sciences
+
+49 PUBLICATIONS 326 CITATIONS
+
+37 PUBLICATIONS 578 CITATIONS
+
+SEE PROFILE
+
+Mostafa A Warith
+Ryerson University
+34 PUBLICATIONS 1,327 CITATIONS
+SEE PROFILE
+
+All content following this page was uploaded by Mohamed Abdallah on 18 June 2017.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+701
+
+A fuzzy logic model for biogas generation in
+bioreactor landfills1
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Mohamed Abdallah, Leta Fernandes, Mostafa Warith, and Septa Rendra
+
+Abstract: A fuzzy logic model was developed to simulate the effect of leachate recirculation and sludge addition on the
+biogas generation in anaerobic bioreactor landfills. The model was designed using a fuzzy logic system (FLS) which incorporated 3 input variables (time, leachate recirculation, and sludge addition) and a single manipulated output (biogas generation rate). The biogas production rate was measured during the experiment and was increasing proportionally with the
+rate of both leachate recirculation and sludge addition. The experimental work involved the operation of six simulated laboratory-scale bioreactors for over a year under different operating schemes. The experimental results were employed in
+formulating the fuzzy rule base, calibrating the model, and verifying its predictions. Then, the model was validated against
+other measured data that was compiled from published studies. The FLS model simulations demonstrated high correlation
+with the experimental observations.
+Key words: fuzzy logic model, biogas generation, anaerobic bioreactor landfills.
+Resume : Un modele a logique floue a ete developpe afin de simuler leffet de la recirculation des lixiviats et de lajout
+de boues sur la production de biogaz dans les sites denfouissement a bioreacteur anaerobie. Ce modele a ete concu en utilisant un systeme a logique floue comportant trois variables dentree (temps, recirculation des lixiviats et ajout de boues)
+et une variable manipulee de sortie unique (taux de production de biogaz). Le taux de production des biogaz a ete mesure
+durant les essais et il augmentait proportionnellement au taux de recirculation des lixiviats et de lajout de boues. Les essais impliquaient lexploitation de six bioreacteurs simules a lechelle du laboratoire pendant plus dune annee selon differents schemas dexploitation. Les resultats ont ete utilises pour formuler la base de la regle floue, etalonner le modele et
+verifier ses previsions. Le modele a ensuite ete valide par rapport a dautres donnees mesurees compilees dans des etudes
+publiees. Les simulations du modele a logique floue ont demontre une correlation elevee avec les observations experimentales.
+Mots-cles : modele a logique floue, production de biogaz, sites denfouissement a bioreacteur anaerobie.
+[Traduit par la Redaction]
+
+1. Introduction
+Leachate recirculation and sludge addition are among the
+most effective techniques used in enhancing the design and
+operation of bioreactor landfills. In both methods, the concept is to control and manipulate the influencing factors, specifically moisture content and nutrients, in a positive manner
+to accelerate the biodegradation of municipal solid waste
+(MSW). One special advantage of leachate recirculation is
+lowering the treatment cost and environmental impacts of
+the high strength leachate as the organic component of
+Received 4 May 2008. Revision accepted 3 February 2009.
+Published on the NRC Research Press Web site at cjce.nrc.ca on
+17 April 2009.
+M.S. Abdallah,2 L. Fernandes,3 and S. Rendra. Department of
+Civil Engineering, University of Ottawa, 161 Louis Pasteur,
+Ottawa, ON K1N 6N5, Canada.
+M.A. Warith. Department of Civil Engineering, Ryerson
+University, 350 Victoria Street, Toronto, ON M5B 2K3, Canada.
+Written discussion of this article is welcomed and will be
+received by the Editor until 31 August 2009.
+1A
+
+paper submitted to the Journal of Environmental Engineering
+and Science.
+2Corresponding author (e-mail: mabda050@uottawa.ca).
+3Deceased.
+Can. J. Civ. Eng. 36: 701708 (2009)
+
+leachate is reduced by the active biological communities
+within the refuse mass.
+Several studies have developed mathematical models to
+simulate the quantity and quality of biogas generated from
+landfills (El-Fadel et al. 1989; Peer et al. 1992; Lay et al.
+1998; White et al. 2004). In addition, stochastic modeling
+was used to simulate landfill processes (Copty et al. 2004;
+Zacharof and Butler 2004). Thus far, most of these models
+are practically inapplicable as they are complicated and require extensive data inputs. Furthermore, the heterogeneity
+in MSW characteristics as well as the complex processes
+taking place within the landfill add difficulty in assessing
+the individual and coupled effect of various parameters in
+the system. Therefore, this study targeted an entirely different approach which is based on fuzzy logic modeling. The
+fuzzy logic can offer advantages in dealing with systems
+that are complex, ill structured, and best described qualitatively (Ibrahim 2004).
+The fuzzy logic is a generalization of Boolean logic implementing the concept of partial truth or uncertainty.
+Within the fuzzy set theory, an element can have a gradual
+membership to different sets. The system behaviour is
+described by defining fuzzy sets, fuzzy rules or so-called
+IFTHEN rules, and applying a fuzzy inference scheme.
+The generation of a fuzzy logic system (FLS) model can be
+based both on experts knowledge and experimental data.
+
+doi:10.1139/L09-015
+
+Published by NRC Research Press
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+702
+
+Over the last few decades, applications of fuzzy logic have
+reached almost every area of science, engineering, business,
+and high-tech industries.
+In this study, the FLS was employed to develop a model
+for MSW biodegradation in terms of biogas generation. The
+time, leachate recirculation and sludge addition were set as
+the controlled input variables and the biogas generation was
+the only manipulated output variable. The data obtained
+from the present experimental investigation was employed
+in building and calibrating the rule base of the fuzzy inference system. The model was validated by examining its predictions against measured data that were compiled from the
+literature (Bae et al. 1998; San and Onay 2001). The statistical analyses used to test model adequacy included linear
+regression between actual and predicted data and mean
+squared deviation (MSD) measures.
+
+Can. J. Civ. Eng. Vol. 36, 2009
+Fig. 1. Configuration of the simulated anaerobic bioreactor.
+
+2. Materials and methods
+2.1. Experimental setup
+The experimental setup consisted of six simulated anaerobic bioreactor landfill models made from Plexiglas1 with
+dimensions of 150 mm in diameter and 550 mm in height.
+The schematic representation of the simulated bioreactor is
+shown in Fig. 1. The bioreactors were equipped with a
+leachate recirculation system including an outlet port at the
+bottom for leachate collection, as well as an inlet port to distribute the simulated rainfall and the recycled leachate.
+To achieve a representative sample of MSW commonly
+disposed in a landfill, waste was collected from the curbside
+of the city of Ottawa. The major components of this waste
+were paper (36.6%), food (36.2%), and yard trimmings
+(27.2%). The collected waste was shredded manually to a
+size of 5 to 10 mm and then mixed uniformly. The shredded
+solid waste was filled in 100 mm layers and compacted to a
+density of 350 kg/m3. The final height of the waste inside
+each bioreactor was 400 mm. The total mass and volume of
+waste in the bioreactors were 2.5 kg and 7 L, respectively.
+In addition, a layer of 15 mm diameter marbles was placed
+at the bottom of each bioreactor. This supporting layer was
+used as a leachate drainage system and to prevent clogging
+of the leachate outlet.
+The simulated rainfall was maintained at a rate of 2 L/week.
+Leachate was collected in a 15 L tank and was then recycled
+daily to the top of the bioreactors starting from the third week
+of operation. The sludge addition was carried out through the
+leachate recirculation system and using anaerobically digested
+and thickened waste activated sludge from the Robert O. Pickard Environmental Centre (ROPEC) municipal wastewater
+treatment plant in Ottawa. The volume of gas produced in the
+simulated bioreactors was measured using a wet tip meter device. The number of tip readings was converted into a rate of
+biogas generation using a calibration curve.
+2.2. Operating schemes
+The operational conditions of the six bioreactors, notated
+as R1 to R6, are outlined in Table 1. The design strategy
+which was put forward for this study included four combinations of operating conditions and two center point replicates.
+
+Table 1. Operational conditions for the simulated bioreactors.
+
+Bioreactor
+R1
+R2
+R3
+R4
+R5
+R6
+
+Rate of leachate
+recirculation
+(mL/kg wasted)
+285
+855
+285
+855
+570
+570
+
+Rate of sludge
+addition
+(mL/kg wasted)
+28.5
+28.5
+85.5
+85.5
+57.0
+57.0
+
+2.3. Fuzzy Logic Controller
+A static fuzzy logic controller (FLC) structure was designed to model the biodegradation of MSW. As illustrated
+in Fig. 2, the typical elements of the FLC structure include:
+(i) inputs, (ii) fuzzification unit, (iii) database, (iv) rule base,
+(v) fuzzy inference engine, (vi) defuzzification unit, and
+(vii) output.
+Inputs included time, leachate recirculation, and sludge
+addition. The crisp values of the input variables were obtained from the conducted experimental work.
+Fuzzification is to map the observed inputs to fuzzy sets
+in the universe of discourse. The fuzzification strategy involves the following: (i) acquiring the crisp values of the
+three input variables, (ii) mapping the crisp values of the input variables into the corresponding universes of discourse
+and finally (iii) converting the mapped data into suitable linguistic terms so as to make it a compatible fuzzy sets representation.
+Published by NRC Research Press
+
+Abdallah et al.
+
+703
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Fig. 2. Typical structure of the fuzzy logic controller.
+
+Fig. 3. Membership functions defined for the operating variables.
+LR, low rate; MR, medium rate; HR, high rate
+
+define the system behaviour and replace the mathematical
+modeling of the system. These rules are noted as an IFTHEN
+statement that describes the action to be processed in response to various fuzzy inputs. A total number of 55 statements were created to describe the system behaviour under
+different operating scenarios. The following rule is an example of the developed fuzzy rule base statements, IF
+time is D AND leachate recirculation is HR AND sludge
+addition is HR THEN biogas generation is MH, where D,
+HR, and MH stand for, respectively, degradation, high rate,
+and medium high. Table 3 shows all the developed fuzzy
+rules in the developed model.
+Fuzzy inference engine is required to determine the fuzzy
+output and to compute the rules along with the membership
+function of the fuzzy input. The MAX-MIN fuzzy inference
+technique was applied to compute a numerical value representing the aggregate effect of all that was triggered by an
+input value.
+Defuzzification occurs as part of the last stage of fuzzy
+inference. Typically, it involves weighting and incorporating
+a number of fuzzy sets in a calculation which gives a single
+crisp value for the output. The defuzzification method used
+in this study is the centroid method. In this method, the defuzzified value, m, can be calculated as:
+X
+r
+r
+X
+m
+mci Ci
+mci
+i1
+
+i1
+
+where r is the total number of rules, mci is the degree of
+membership of the output fuzzy set i, and Ci is the value
+associated with the peak of output fuzzy set i.
+2.4. Model Simulation
+The fuzzy inference system was developed using the
+MATLABTM 7.0 program through the Fuzzy Logic Toolbox.
+The simulation was designed and run at discrete variable
+steps using SimulinkTM software, which work concurrently
+with the fuzzy logic toolbox. The flowchart of the developed
+simulation is illustrated in Fig. 4.
+Database is provided by defining the membership functions (MF) of the fuzzy sets used as values for each system
+variable. Membership functions must be defined for each input and output variable and are represented by a real number
+ranging between 0 and 1. Figure 3 illustrates the designed
+MF for the leachate recirculation and sludge addition as an
+example. The figure shows the fuzzy sets defined as low
+rate (LR), medium rate (MR), and high rate (HR). The complete fuzzy sets and MF, which were defined to the developed model, are illustrated in Table 2.
+Rule base maps fuzzy values of the inputs to fuzzy values
+of the outputs. It consists of a number of fuzzy rules which
+
+2.5. Model evaluation criteria
+In addition to graphical assessment, the model was evaluated statistically using a group of criteria that was established prior to the evaluation process. These criteria
+included linear regression between actual and predicted data
+and MSD measures. The regression estimates of the intercept (a) and the slope (b) are good indicators of accuracy;
+the simultaneously closer to zero the intercept is and the
+slope is to unity, the higher the accuracy. On the other
+hand, the correlation coefficient (R) is a good indicator
+of precision; the higher the R, the higher the precision
+Published by NRC Research Press
+
+704
+
+Can. J. Civ. Eng. Vol. 36, 2009
+
+Table 2. The defined fuzzy sets and membership functions for the developed model.
+Parameters
+Variable
+Leachate recirculation
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Sludge addition
+
+Time
+
+Biogas generation
+
+Fuzzy set
+Low rate (LR)
+Medium rate (MR)
+High rate (HR)
+Low rate (LR)
+Medium rate (MR)
+High rate (HR)
+Initiation (IN)
+Begin degradation (BD)
+Medium degradation (MD)
+Advanced degradation (AD)
+Degradation (D)
+Begin stabilization (BS)
+Medium stabilization (MS)
+Advanced stabilization (AS)
+Stabilization (S)
+Ultimate (U)
+No gas (NG)
+Ultra low (UL)
+Extra low (XL)
+Very low (VL)
+Medium low (ML)
+low (L)
+Medium (M)
+High (H)
+Medium high (MH)
+Very high (VH)
+Extra high (XH)
+Ultra high (UH)
+
+Type
+Trapezoidal
+Trapezoidal
+S-shaped
+Trapezoidal
+Trapezoidal
+S-shaped
+Gaussian
+Gaussian
+Gaussian
+Gaussian
+Gaussian
+Triangular
+Gaussian
+Gaussian
+Gaussian
+Gaussian
+Trapezoidal
+Trapezoidal
+Gaussian
+Gaussian
+Gaussian
+Gaussian
+Trapezoidal
+Gaussian
+Gaussian
+Triangular
+Triangular
+S-shaped
+
+a
+0.00
+6.82
+11.72
+0.00
+0.62
+1.18
+19.01
+0.00
+0.04
+1.64
+2.53
+2.82
+3.07
+
+b
+
+c
+
+4.22
+9.26
+15.00
+0.42
+1.00
+1.50
+31.41
+0.00
+0.25
+0.64
+0.96
+1.30
+1.64
+1.86
+2.25
+2.57
+2.88
+3.18
+3.50
+
+5.78
+10.82
+0.58
+1.10
+0.00
+7.80
+13.28
+20.19
+25.75
+43.65
+36.50
+43.60
+51.30
+60.80
+0.07
+0.39
+2.00
+3.23
+3.53
+-
+
+d
+8.22
+13.26
+0.82
+1.39
+0.28
+0.60
+2.21
+-
+
+s
+4.32
+2.62
+3.00
+3.00
+4.29
+4.20
+4.57
+5.26
+7.85
+0.15
+0.15
+0.15
+0.15
+0.15
+0.15
+-
+
+Note: For the trapezoidal MF: parameters a and d locate the feet of the trapezoid, whereas parameters b and c locate the shoulders. For the Sshaped MF, parameters a and b locate the extremes of the sloped portion of the curve. For the triangular MF, parameters a and c locate the feet of
+the triangle and parameter b locates the peak. For the Gaussian MF, parameters s and c are the variables in the symmetric Gaussian function, f (x;s,c) =
+exp{(xc)2/(2s2)}.
+
+(Tedeschi 2006). The MSD is the mean of the squared deviations around the regression line in a plot of model simulation against measured values. Following the approach
+developed by Gauch et al. (2003), the MSD was partitioned into three components to achieve further understanding of model performance; square bias (SB), nonunity
+slope (NU), and lack of correlation (LC). These MSD
+components, which add up to give MSD, have simple and
+distinct geometrical interpretation. SB, NU, and LC point
+up the translation, rotation, and scattering around the regression line, respectively. Additionally, the root mean
+square error (RMSE) is calculated by square-rooting the
+MSD. The RMSE indicates the mean difference between
+observed and predicted values in their same units. However, due to the different scales of the involved experimental setups, the RMSE is normalized by dividing its value
+by the mean of the measured data.
+
+3. Results and discussion
+3.1. Experimental data analyses
+The experimental data of biogas production rate was plotted together with the model simulations for the simulated bioreactors in Fig. 5. The general patterns of the biogas
+
+production in the six bioreactors followed an analogous
+trend; starting with an increasing rate to a peak value, followed by a declining phase. Based on the experimental data,
+the positive effect of leachate recirculation was more substantial than that of sludge addition. The baseline for the
+analyses was set to be R1, which was operated under minimum leachate and sludge recirculation rates (285 mL/kg
+wasted and 28.5 mL/kg wasted, respectively). Increasing
+the rate of leachate recirculation to 855 mL/kg wasted in
+R2 enhanced the biogas generation in terms of peak production time (18 weeks earlier) and total biogas production
+(71% higher). On the other hand, increasing the rate of
+sludge addition to 85.5 mL/kg wasted in R3 improved the
+biogas generation in terms of peak production time (13 weeks
+earlier), and total biogas production (53% higher). In R2 and
+R4, where the leachate recycling rate was high (855 mL/kg
+wasted), increasing the sludge addition rate didnt affect the
+biogas generation significantly. Conversely, when the leachate recycling rate was low (285 mL/kg wasted), higher
+sludge addition rate in R3 (85.5 mL/kg wasted) improved
+the bioreactor performance in terms of biogas production
+compared with R1 (28.5 mL/kg wasted). Operating R5 and
+R6 at medium leachate and sludge recirculation rates
+doubled the total biogas production compared with R1.
+Published by NRC Research Press
+
+Abdallah et al.
+
+705
+
+Table 3. The designed fuzzy rules for the developed model.
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Leachate recirculation, sludge addition
+
+IF Time
+IInitiation (IN)
+Begin degradation (BD)
+Medium degradations (MD)
+
+Low rate, low
+rate (LR< LR)
+No gas (NG)
+No gas (NG)
+No gas (NG)
+
+Advanced degradation (AD)
+
+Ultra low (UL)
+
+Low rate,
+high rate
+(LR< HR)
+No gas (NG)
+No gas (NG)
+Extra low
+(XL)
+Low (L)
+
+Degradation (D)
+
+Extra low (XL)
+
+High (H)
+
+Begin stabilization (BS)
+
+Very low (VL)
+
+Medium stabilization (MS)
+
+Very low (VL)
+
+Very high
+(VH)
+High (H)
+
+Advanced stabilization (AS)
+Stabilization (S)
+
+Medium low
+(ML)
+Low (L)
+
+Ultimate (U)
+
+Very low
+
+Medium low
+(ML)
+Very low
+(VL)
+Very low
+(VL)
+
+Medium rate
+(MR, LR),
+low rate
+No gas (NG)
+
+Medium rate,
+medium rate
+(MR, MR)
+No gas (NG)
+No gas (NG)
+Ultra low
+(UL)
+Low (L)
+
+High rate, low
+rate (HR, LR)
+No gas (NG)
+No gas (NG)
+No gas (NG)
+
+High rate, high
+rate (HR, HR)
+No gas (NG)
+No gas (NG)
+Extra low (XL)
+
+Ultra low (UL)
+
+Medium (M)
+
+Medium (M)
+
+Very low (VL)
+
+Ultra high
+(UH)
+Medium low
+(ML)
+-
+
+High (H)
+
+Low (L)
+
+Medium high
+(MH)
+Extra high (XH)
+
+MH
+
+Medium (M)
+
+High (H)
+
+High (H)
+
+High (H)
+
+Medium low (ML)
+
+-
+
+Low (L)
+
+Medium (M)
+
+Very low (VL)
+
+-
+
+Medium low
+(ML)
+
+LLow (L)
+
+Very low (VL)
+
+Ultra low
+(UL)
+Low (L)
+
+Note: The fuzzy rules read such that for the first cell: IF time is IN AND leachate recirculation is LR AND sludge addition is LR THEN biogas generation is NG.
+
+Fig. 4. Flowchart of the model simulation.
+
+3.2. Model verification
+The evaluation of the developed model is carried out
+through verification and validation. Initially, the model is
+verified by comparing its predictions to the experimental
+data that were used already in creating the fuzzy rules and
+calibrating the membership functions. Referring to Fig. 5,
+the model overestimated the biogas generation in the same
+manner for bioreactors R1 and R3. However, the actual
+production trend was fairly reproduced by the model
+simulations. The differences of biogas production rate between the simulation and experimental data ranged from
+0.25 to 0.5 L/week. The comparison plotted for R2 was
+largely similar to the one for R4. The simulation results of
+R2 duplicated the experimental data with the exception at
+the peak. Slight discrepancies of around 0.5 L/week could
+be recognized during weeks 10 to 17 and 27 to 35 of the
+experiment. The model developed for R5 and R6 was the
+same due to the fact that these bioreactors were replicates.
+
+The FLS model was most successful in predicting biogas
+production rates for R6.
+3.3. Model validation
+Model validation was used to examine the applicability of
+the simulation model under a wide range of operating conditions. Data used for model validation were compiled from
+two published studies on laboratory-scale bioreactor landfills.
+The first experimental study, by Bae et al. (1998), was processed on laboratory-scale lysimeters. The experiment consisted of one control and two recycled setups; one with
+sludge and the other with leachate. For each lysimeter,
+114 kg of solid wastes were filled at a density of 700 kg/m3.
+Before recycling, the leachate was treated in an anaerobic digester. The effluent of this digester was used for sludge addition purposes.
+The second experimental study, by San and Onay (2001),
+included two reactors, one with leachate recycle and the
+Published by NRC Research Press
+
+706
+
+Can. J. Civ. Eng. Vol. 36, 2009
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Fig. 5. Measured and simulated biogas generation for bioreactors R1 to R6. FLS, fuzzy logic system
+
+Table 4. Main characteristics and operating conditions of the studies used in validating the model.
+Study
+Bae et al. (1998)
+San and Onay (2001)
+
+Scale
+laboratory
+laboratory
+
+Waste mass
+(kg)
+114
+13
+
+other without. The reactors were 350 mm in diameter and
+1000 mm in height and each of them was filled with 13 kg
+of shredded and compacted synthetic solid waste. The average density of the waste matrix was 178 kg/m3. In the re-
+
+Type of
+recirculation
+Sludge
+Leachate
+
+Range of recirculation rate
+(mL/kg wasted)
+0.71.32
+1188
+
+cycled reactor, the recirculating frequency was gradually
+increased from one to four times per week.
+The validation process was run on the experimental data
+of the sludge-added lysimeter and the leachate-recycled
+Published by NRC Research Press
+
+Abdallah et al.
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Fig. 6. Model validation using experimental data from Bae et al.
+(1998) and San and Onay (2001).FLS, fuzy logic system.
+
+reactor in the first and second experiments, respectively.
+Table 4 summarizes the main features and operating conditions for the selected setups. The operational inputs and scenarios of the validation data sets were introduced to the FLS
+model. Then, the predicted outputs were plotted with the
+measured data in Fig. 6.
+In the first study, the model overestimated the biogas generation by an average of 20% during the periods of gradual
+increase and decrease of the rate. In contrast, the model
+underestimated the peak and produced a constant generation
+rate during this part. This could be due to the fact that, in
+this study, the sludge addition rates between week 30 and
+week 40 were higher than the maximum recycling rate that
+was defined in the model. As these rates were not expressed
+in the fuzzy rules, the FLS model applied the maximum defined recycling rate scenario constantly during that period.
+Despite that, the model predicted accurately the average
+measured production through that period and eventually followed the decreasing trend of the actual data.
+In the second experiment, the pattern of the biogas generation was anomalous; the curve started with a major generation rate followed by gradual decrease to the dip.
+Afterwards, the production rate started to increase steadily.
+This irregular shape was produced as a result of the operating scheme that was followed in that particular experimental
+study. This actually added to the merit of the FLS model
+
+707
+Fig. 7. Linear regression between simulated and measured data for
+the present experiment and validation data sets.
+
+validation process. The model predicted the general trend of
+the production pattern adequately despite the fact that it
+underestimated the generation rate during most of the operation period.
+3.4. Statistical analyses
+The evaluation criteria and main features of the statistical
+tests that were selected for this study were previously discussed in the Model Evaluation Criteria section. Figure 7
+shows the linear regression between model-based predictions
+and measured data for the present experiment and validation
+Published by NRC Research Press
+
+708
+
+Can. J. Civ. Eng. Vol. 36, 2009
+Table 5. Statistical testing of the fuzzy logic model for the two studies used in the validation process.
+
+Data set
+Present experiment*
+Bae et al. (1998)
+San and Onay (2001)
+
+Linear regression
+a
+b
+0.082 1.017
+9.274 1.014
+1.291
+1.080
+
+R
+0.985
+0.909
+0.844
+
+Mean square deviation
+SB
+NU
+LC
+0
+0.022
+0.026
+72.82
+0.219
+242.28
+2.605
+0.053
+3.877
+
+MSD
+0.004
+315.31
+6.529
+
+RMSE
+0.063
+17.75
+2.555
+
+N-RMSE
+13.72
+45.42
+39.25
+
+Can. J. Civ. Eng. Downloaded from www.nrcresearchpress.com by PIONEER HI BRED Library on 04/25/11
+For personal use only.
+
+Note: a, intercept of regression line; b, slope of regression line; R, correlation coefficient; SB, squared bias; NU, nonunity slope; LC, lack
+of correlation; MSD: mean square deviation; RMSE: root mean square error; N-RMSE: normalized root mean square error (in percent).
+*average values for the six bioreactors (R1 to R6).
+
+data sets. It can be observed that, in all data sets, the slope
+was close to unity and the intercept was close to zero. This
+could be a positive indication of the model accuracy. The
+values of slope, intercept, and correlation coefficients of the
+regression lines are illustrated in Table 5. The slope exceeded unity in all cases and the intercept was negative in
+both the verification data and one of the validation data
+sets. This demonstrates that the FLS model overestimated
+the measured data in general. The model predictions
+achieved high correlation with the verification data set (R =
+0.99). It should be clarified that this ideal correlation was
+achieved because the model was calibrated on this data set.
+In the validation process, the model simulations were reasonably correlated to the actual data with correlation coefficients of 0.84 and 0.91.
+Based on the MSD partitioning shown in Table 5, LC was
+the main contributing component to MSD. The average percentages of SB, NU, and LC to MSD were 25%, 1%, and
+74%, respectively. Accordingly, the deviations could be attributed mostly to scattering around the regression line as
+well as translation of the regression line from the 1:1 line.
+The differences between measured and simulated values
+were expressed in terms of the normalized RMSE. The FLS
+model achieved an acceptable normalized RMSE of 13.72%
+for the present experiment, whereas, it achieved a significantly high percentage (42.34% in average) for the validation data sets. These shortcomings could have been avoided
+if more data and operating scenarios were implemented in
+the construction and calibration processes of the fuzzy rules
+and membership functions of the FLS model.
+
+4. Conclusions
+The main objective of this work was to develop a fuzzy
+logic system that is capable of simulating the biogas generation in an anaerobic bioreactor landfill. The developed
+model went through several steps to evaluate its potentials
+and reveal its weak points. In the verification step, the FLS
+model proved to simulate perfectly the experimental data;
+this was confirmed statistically. On the other hand, the validation process revealed certain weaknesses in the model.
+Although the model predictions were in reasonable agreement with the validation data sets, it produced significant
+difference between simulated and measured data in terms of
+the normalized RMSE.
+The overall model simulation proved significant concurrence with the experimental results indicating the model reliability in capturing the pertinent features of the system.
+The validation process showed that the fuzzy logic system
+functions better when the modeled system is fully described
+
+under all possible operating conditions. However, the validation process proved the model flexibility in dealing with
+atypical operating scenarios such as irregular biogas generation trends and extreme recirculating rates. Based on these
+findings, the application of the fuzzy logic system in modeling the MSW biodegradation process can be considered as a
+successful simulating technique that implicitly describes the
+large number of complex physical and biochemical processes that occur within the bioreactor landfill.
+
+References
+Bae, J.H., Cho, K.W., Lee, S.L., Bum, B.S., and Yoon, B.H. 1998.
+Effects of leachate recycle and anaerobic digester sludge recycle
+on the methane production from solid wastes. Water Science
+and Technology, 38(2): 159168. doi:10.1016/S0273-1223(98)
+00441-7.
+Copty, N.K., Ergene, D., and Onay, T.T. 2004. Stochastic model
+for landfill gas transport and energy recovery. Journal of Environmental Engineering, 130(9): 10421049. doi:10.1061/(ASCE)
+0733-9372(2004)130:9(1042).
+El-Fadel, M., Findikakis, A.N., and Leckie, O.J. 1989. A numerical
+model for methane production in managed sanitary landfills.
+Waste Management & Research, 7(1): 3142. doi:10.1177/
+0734242X8900700105.
+Gauch, H.G., Hwang, J.T.G., and Fick, G.W. 2003. Model evaluation by comparison of model-based predictions and measured
+values. Agronomy Journal, 95(6): 14421446.
+Ibrahim, A.M. 2004. Fuzzy logic for embedded system applications. Elsevier Science Publisher, New York.
+Lay, J., Li, Y., and Noike, T. 1998. Mathematical model for
+methane production from landfill bioreactor. Journal of Environmental Engineering, 124(8): 730736. doi:10.1061/(ASCE)07339372(1998)124:8(730).
+Peer, R.L., Darcy, D.L., Campbell, D.L., and Brook, P.V. 1992.
+Development of an empirical model of methane emissions from
+landfills. EPA/600/SR-92/037. U.S. Environmental Protection
+Agency, Air and Energy Engineering Research Laboratory, Triangle Park, N.C.
+San, I., and Onay, T. 2001. Impact of various leachate recirculation
+regimes on municipal solid waste degradation. Journal of Hazardous Materials, 87: 259271. doi:10.1016/S0304-3894(01)
+00290-4.
+Tedeschi, L.O. 2006. Assessment of the adequacy of mathematical
+models. Agricultural Systems, 89(2-3): 225247. doi:10.1016/j.
+agsy.2005.11.004.
+White, J., Robinson, J., and Ren, Q. 2004. Modeling the biochemical degradation of solid waste in landfill. Waste Management,
+24(3): 227240. doi:10.1016/j.wasman.2003.11.009.
+Zacharof, A.I., and Butler, A.P. 2004. Stochastic modeling of landfill processes incorporating waste heterogeneity and data uncer-
+
+Published by NRC Research Press
+View publication stats
+
+

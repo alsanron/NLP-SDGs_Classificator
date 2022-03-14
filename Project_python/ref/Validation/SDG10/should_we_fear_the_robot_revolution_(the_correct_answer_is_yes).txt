@@ -1,0 +1,3342 @@
+WP/18/116
+
+Should We Fear the Robot Revolution?
+(The Correct Answer is Yes)
+
+by Andrew Berg, Edward F. Buffie, and Luis-Felipe Zanna
+
+IMF Working Papers describe research in progress by the author(s) and are published to
+elicit comments and to encourage debate. The views expressed in IMF Working Papers are
+those of the author(s) and do not necessarily represent the views of the IMF, its Executive
+Board, or IMF management.
+
+ 2018 International Monetary Fund
+
+WP/18/116
+
+IMF Working Paper
+Institute for Capacity Development
+Should We Fear the Robot Revolution?
+(The Correct Answer is Yes)
+Prepared by Andrew Berg, Edward F. Buffie, and Luis-Felipe Zanna*
+Authorized for distribution by Andrew Berg
+May 2018
+IMF Working Papers describe research in progress by the author(s) and are published
+to elicit comments and to encourage debate. The views expressed in IMF Working Papers
+are those of the author(s) and do not necessarily represent the views of the IMF, its
+Executive Board, or IMF management.
+Abstract
+Advances in artificial intelligence and robotics may be leading to a new industrial revolution.
+This paper presents a model with the minimum necessary features to analyze the implications
+for inequality and output. Two assumptions are key: robot capital is distinct from
+traditional capital in its degree of substitutability with human labor; and only capitalists and
+skilled workers save. We analyze a range of variants that reflect widely different views of
+how automation may transform the labor market. Our main results are surprisingly robust:
+automation is good for growth and bad for equality; in the benchmark model real wages fall
+in the short run and eventually rise, but eventually can easily take generations.
+
+JEL Classification Numbers: E23, E25, O30, O40.
+Keywords: Technological change, robots, growth, income distribution.
+Authors E-Mail Address: aberg@imf.org, ebuffie@indiana.edu, fzanna@imf.org
+
+*
+This paper was prepared for the Carnegie-Rochester NYU Series Fall 2017 Conference on The Consequences
+of Transformative Technical Progress for the Macroeconomy. We would like to thank Robert Chirinko, Doug
+Hanley, Anton Korinek, Andy Levin, Chris Papageourgiou, Sevin Yeltekin, participants at the CarnegieRochester-NYU Conference on Public Policy, and many IMF colleagues. Edward Buffie: Department of
+Economics, Indiana University, Wylie Hall Rm 105, 100 S. Woodlawn, Bloomington, IN 47405.
+
+2
+Contents
+
+Page
+
+I.
+
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A. The Theoretical Literature: Searching for the Right Approach . . . . . . . . .
+B. This Paper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+II.
+
+Model 1: Robots Do Everything . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+A. The Short- vs. Long-Run Outcome . . . . . . . . . . . . . . . . . . . . . . . 14
+B. The Transition Path . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+III. Model 2: Robots Cannot Do Everything . . . . . . . . . . . .
+A. The Direct Effect of Automation (bZ ) on Labor Demand
+B. The Long Run . . . . . . . . . . . . . . . . . . . . . . .
+C. The Transition Path . . . . . . . . . . . . . . . . . . . .
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+4
+5
+8
+
+24
+24
+26
+27
+
+IV.
+
+Model 3: Robots Do Not Substitute for Skilled Labor . . . . . . . . . . . . . . . . 35
+A. Multi-Dimensional Inequality . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+B. The Transition Path: Distributional Carnage . . . . . . . . . . . . . . . . . . . 39
+
+V.
+
+Model 4: Adding a Non-Automatable Sector . . . . . . . . . . . . . . . . . . . . . 39
+
+VI. Concluding Remarks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Appendices
+A.
+
+Model 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+B.
+
+The Singularity Scenario . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+
+C.
+
+Model 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+
+Tables
+1.
+2.
+3.
+4.
+
+Model 1: Long-run outcome with constant vs endogenous non-robot capital
+Model 2: Value of 3 (3 > 3 = rising wages in short run) . . . . . . .
+Model 1 vs. Model 2 in the long run . . . . . . . . . . . . . . . . . . . . .
+Model 2: Depth and duration of the low-wage phase . . . . . . . . . . . . .
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+18
+26
+27
+32
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+16
+21
+23
+29
+30
+
+Figures
+1.
+2.
+3.
+4.
+5.
+
+Model 1: Real wages in the long run . . . . . . . . . . .
+Model 1: Transition Path for Scenario 1 . . . . . . . . .
+Model 1: An Economic Singularity . . . . . . . . . . . .
+Model 1 vs Model 2 for various values of 3 . . . . . . .
+Model 2 in the short and long run for various values of 2
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+3
+6.
+7.
+8.
+9.
+10.
+
+Model 2: The tradeoff between the short and long run . . . . . . . . . . . . . .
+Model 2: Response of the robot capital stock when 2 is very high . . . . . . .
+Model 2: Transition path under alternative scenarios for 2 and b . . . . . . . .
+Model 3: The transition path for various elasticities . . . . . . . . . . . . . . .
+Model 4: Transition paths for differing factor intensities in the non-automatable
+sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+31
+33
+34
+40
+
+. . 43
+
+4
+I. I NTRODUCTION
+
+The factory of the future will have only two employees, a man and a dog. The
+man will be there to feed the dog. The dog will be there to keep the man from
+touching the equipment. (Warren Bennis, management consultant)
+
+There is a growing perception that advances in artificial intelligence (AI) and robotics will
+radically transform the workplace in upcoming decades (Brynjolfsson and McAfee, 2014;
+Ford, 2015). Robots load, unload, retrieve and send out products with minimal human supervision at Symbolic LLCs automated distribution centers. AI programs have started working
+as paralegals, accountants, and teaching assistants, and self-driving vehicles may soon eliminate millions of jobs held by truck, bus, and taxicab drivers. Uber aims to be driverless by
+2030. Robots staff more assembly lines each year, kiosks are replacing cashiers at fast-food
+restaurants,1 and Watson recently co-authored a song. The list goes on, with each week bringing a new or imminent application of smart machines. According to estimates by Frey and
+Osborne (2017), Chui, Manyika, and Miremadi (2015), and the World Bank (2016), anticipated advances in automation threaten 45-57% of all jobs in the United States. The White
+Houses Council of Economic Advisors projects that automation will affect 83% of jobs paying $20 an hour or less.2
+The sense that we are on the cusp of a robot revolution has sparked a lively debate among
+economists, journalists, and technophiles about the likely impact of automation on growth
+and the distribution of income. Broadly speaking, there are two camps with starkly different
+views of what the future holds. Technology pessimists fear that we are headed toward an economic dystopia of extreme inequality and class conflict: "Without ownership stakes, workers
+will become serfs working on behalf of robots overlords [in] a new form of economic feudalism" (Freeman, 2015). Summers (2016) shares Freemans vision (if not his colorful language), predicting that the prime-age employment rate for American males will drop below 2
+% by mid-century in the absence of an aggressive policy response.
+Technology optimists do not deny that automation will prove disruptive in the short run. They
+point out, however, that historically periods of rapid technological change have created more
+1 McDonalds
+
+has announced that it will introduce digital self-serve ordering stations at all 14,000 of its American restaurants.
+2 Grace and others (2017) find that AI researchers on average expect to see AI outperforming humans at translating languages by 2024, driving a truck by 2027, and working in retail by 2031, for example, with considerable
+variation around these estimates.
+
+5
+jobs than they have destroyed and have raised wages and per capita income in rough proportion. The AI revolution may be different, but there are good reasons to believe that a resilient, adaptable economy will again vanquish the specter of technological unemployment:
+income growth raises the demand for labor in sectors that produce non-automatable goods
+and for workers that perform manual-intensive tasks; higher productivity stimulates investment throughout the economy in cooperating capital inputs; and while automation renders
+some jobs obsolete, it complements many others, especially jobs that place a premium on creativity, flexibility, and abstract reasoning. Criticizing technology pessimists for missing the
+big picture, Autor (2014) argues that "journalists and even expert commentators tend to overstate the extent of machine substitution for human labor and ignore the strong complementarities between automation and labor that increase productivity, raise earnings, and augment
+the demand for labor . . . Focusing only on what is lost misses a central economic mechanism
+by which automation affects the demand for labor: raising the value of the tasks that workers
+supply uniquely."
+
+A. The Theoretical Literature: Searching for the Right Approach
+Although economists have extensively analyzed the effects of technological change, the formal theoretical macroeconomic literature that bears on the current debate is quite small. This
+is important, because the models that tend to shape intuitions fail to capture the the key features of the new technologies. The macroeconomic literature has focused on technological
+change that increases the supply of some factor in efficiency units. In this formulation, skillbiased technological change exacerbates wage inequality if the elasticity of substitution between low- and high-skill labor exceeds unity.3 Similarly, capital-augmenting technological
+progress lowers or raises labors share in national income depending on whether the elasticity of substitution between capital and labor is above or below unity. But while inequality
+may worsen, real wages increase across-the-board for all types of labor.4 This is a serious
+limitation. The benign conclusion that everyone gains may correctly characterize the effects
+of technological in bygone eras, but it is hard to reconcile with the post-1980 stylized facts
+and the experiences of working-class citizens of many advanced countries. As Acemoglu
+(2002) observes, "pure technological approaches" fail to explain "how sustained technological change can be associated with an extended period of falling wages of low-skill workers
+3 For
+
+example Acemoglu and Autors (2011a) canonical model is CES two-factor production function of
+skilled and unskilled labor.
+4 This result assumes a non-nested CES production function containing capital and labor, as in for example
+Karabarbounis and Neiman (2014) and (implicitly) in Nordhaus (2015).
+
+6
+and stagnant average wages." And it fails to address the central idea that the latest technologies differ fundamentally in their ability to allow machines to substitute for human labor in a
+broad range of tasks.
+The shortcomings of existing theory have motivated a new line of research that models robots
+and automation more realistically as a special type of capital that greatly increases the supply
+of labor services while reducing the marginal product of human labor that competes for employment in the same production tasks. Sachs and Kotlikoff (2012) frame an overlapping generations (OG) model with a production function in which old skilled workers combine with
+a CES aggregate of robots and young unskilled workers. When the elasticity of substitution
+between robots and unskilled labor is sufficiently high, an improvement in robot productivity reduces the demand for unskilled workers. After their wage decreases, unskilled workers
+ the only group that saves in the economy  cut investment in robots and human capital.5
+This leads to successive rounds of contraction, with aggregate income and wages declining
+and each new generation investing less than the generation before. Under weak conditions,
+welfare of the current young generation and all future generations decreases.6
+Sachs, Benzell, and LaGarda (2015) analyze OG models that are simpler in some ways and
+more complex in others. In the one-sector model, firms produce a homogeneous good by
+operating either a traditional Cobb-Douglas production function with capital and labor or
+a fully-automated production function linear in robots. The two-sector model adds a nonautomatable sector with Cobb-Douglas technology. Capital and robots are putty-putty, not
+putty-clay, so when robot productivity improves capitalists take apart some factories and convert them overnight into robots. Since capital and labor are complements, the results are qualitatively similar to those in Sachs and Kotlikoff (2012): wage income, saving, and investment
+decrease and welfare declines for all except the first old generation.7 There is an important
+new twist, however, in the two-sector model. In scenarios where the traditional technology
+disappears and robots take over the automatable sector, the economy either ascends to a virtuous circle of ongoing endogenous growth or descends into a death spiral of perpetual contraction. Unfortunately, the odds strongly favor the death spiral.8
+5 Under
+
+the assumption of log utility, saving is independent of returns to investment in robots and human capital.
+6 The current old generation gains. They receive a pay raise (the skilled wage increases) and earn a higher return
+on their robots.
+7 In the most relevant case where traditional technology and robots both produce the automatable good, the
+condition for immiserization in their equation (68) holds for plausible parameter values, including their baseline
+calibration.
+8 The condition for perpetual contraction in equation (73) of Sachs, Benzell, and LaGarda (2015) holds easily in
+the baseline calibration of the model in their Section 6.
+
+7
+The latest addition to the literature is an ingenious, innovative paper by Acemoglu and Restrepo (2016a). In their model, technological progress proceeds on two fronts: automation
+and the creation of new more complex tasks that only human labor can perform. A representative Ramsey agent invests in AI capital that serves as a perfect substitute for labor in a
+subset of potentially automatable tasks. Provided labor supply is increasing in the ratio of the
+wage to capital income, endogenous directed technological change drives the economy onto
+a balanced growth path where automation and the creation of complex, new AI-immune tasks
+advance at the same rate.9 Acemoglu and Restrepo show that, ceteris paribus, advances in
+automation then reduce the demand for labor relative to capital if the elasticity of substitution between tasks that produce the final good is close to the elasticity of substitution between
+task-specific intermediate inputs and labor services.10 The short-/medium-run impact on absolute labor demand is unclear, but in the long run, after the capital stock fully adjusts, the
+real wage increases and labors share in national income returns to its original level. When
+labor is divided into high- and low-skill workers, the same restrictions ensure that the skill
+premium increases in the short run but not the long run. The results pertain only to relative
+wages; nothing can be inferred about the short-/medium-term impact on the absolute wage
+paid to low-skill labor.
+Summing up, the debate between the pessimists and the optimists is still unsettled. The papers
+by Sachs and co-authors make a powerful case for technology pessimism. But the case is
+built on the OG structure in which all saving and investment is done by wage earners. This
+is likely to be a sticking point for many people  in the U.S., the majority of regular wage
+earners live check to check. The Acemoglu and Restrepo paper highlights a new mechanism
+that strengthens the case for technology optimism. It is hard to ascertain, however, what happens to the absolute level of the real wage on the transition path and how robust the results
+are to the assumption that capital and labor are perfect substitutes in automatable tasks, to the
+unusual quasi-labor supply function required for convergence to balanced growth, and to the
+
+9 See
+
+Hemous and Olsen (2015) for an alternative model of endogenous technological change. In their model,
+growth is driven by automation and horizontal innovation that increases the variety of intermediate inputs.
+(Greater variety of intermediate inputs acts like Hicks-neutral technological progress in a Dixit-Stiglitz gainsfrom-variety production function.) Automation kicks in when high wages for low-skill labor make it profitable
+for firms to hire high-skill labor to do research on automation technology. A variety of results are possible depending on the exogenous parameters that control the productivity of horizontal innovation and automation.
+10 This condition is not needed if either the production function for tasks is Cobb-Douglas or if the share of intermediate inputs in the task production function is close to zero. The alternative restrictions ensure that factor
+demands do not stray too far from homotheticity.
+
+8
+strong restrictions on technology that ensure automation does not change the skill premium or
+labors share in national income in the long run.11
+
+B. This Paper
+This paper analyzes the short and long-run effects of robots on output and its distribution in
+a family of dynamic general equilibrium models designed to include the minimum necessary
+features.12 The models depart from the existing literature by making two critical additions to
+the standard neoclassical framework. First, they incorporate investment in both robots and traditional capital. In standard production functions, an increase in the supply of labor stimulates
+investment by raising the productivity of capital. Since the same logic applies when robots increase the effective supply of labor services, the two types of capital should be gross complements. The positive impact of robot labor services on traditional capital accumulation is missing, however, in existing models. In Acemoglu and Restrepo (2016a), robots are the only type
+of capital. Both types of capital are present in Sachs, Benzell, and LaGarda (2015), but not as
+cooperating inputs; robots reside in a separate production function and do not therefore affect
+the productivity of non-robot capital. At the core of the story here is that robot capital substitutes for human labor as it complements traditional capital, while increases in traditional
+capital spur demand for robot capital that attenuates the usual effect of capital accumulation
+on labor demand.
+Second, in keeping with the empirical evidence for the U.S. and other developed countries,
+we allow for two types of agents in the economy: capitalists who save and invest (and in some
+variants perform skilled labor), and workers who live check to check. Thus we do not assume
+that everyone saves, as in the representative agent model of Acemoglu and Restrepo (2016a),
+or that only young wage-earners save, as in the OG models of Sachs and co-authors. We can
+thus look at inequality along two dimensions: the distribution of income between capitalists
+and workers, and (in variants with skilled workers) the skilled/unskilled wage differential.
+11 Nordhaus
+
+(2015) examines macro data from recent decades to see whether the U.S. economy is undergoing a
+robot revolution. In his formulation, information technology capital is different. However, he frames his analysis
+using a CES production function of IT capital and labor, implicitly bundling other capital with labor. This twofactor production function leads him to limit the substitutability between capital and labor to fairly low values.
+This plus the absence of explicit treatment of both IT-intensive and traditional capital leads him to conclude that
+real wages should rise strongly with technological progress in the IT sector, counter to the evidence he examines.
+12 By "robots" we mean the combination of computers, artificial intelligence, big data and the digitalization of
+information, networks, sensors and servos that are emphasized in the literature on the new machine age (Brynjolfsson and McAfee, 2014, e.g.)
+
+9
+Insofar as in reality the number of capitalists is relatively small and that their capital income
+is generally much greater than wage income, the we interpret the capital share as an index
+of income inequality. When we allow for skilled as well as unskilled workers in the models, skilled workers are also the capitalists, so that both an increase in the wage premium for
+skilled workers and the capital labor ratio increase inequality.13
+While we are confident that the right model features complementary capital inputs and households too poor to save, a number of potentially important design decisions are less clearcut.
+The basic problem is that nobody knows what the world will look like in say 2035. There
+is considerable disagreement among and between economists and technology experts about
+whether automation will (i) destroy jobs for just low-skill labor or labor at all skill levels; (ii)
+penetrate most or only a small subset of sectors; (iii) reduce the demand for labor in all tasks
+or decrease it in some and increase it in others. The lack of consensus coupled with the uncertainty inherent in predicting a "future that aint what it used to be" (Yogi Berra) makes it hard
+to justify choosing one set of answers over any other.
+Our solution to this problem is to start with a benchmark model and then examine the implications of plausible variations that reflect widely different views about how automation may
+transform the labor market. In Model 1, robots compete against all labor in all tasks. Subsequent extensions of the model assume that robots (i) compete only for some tasks (Model 2);
+substitute only for unskilled labor while complementing skilled labor (Model 3); and contribute to production only in one sector  elsewhere, production requires only labor and traditional capital (Model 4). We examine the implications of an increase in the level of robot productivity on the level of output and its distribution, both in the long run and during the transition. Our main results, previewed below, are surprisingly robust. Automation is very good
+for growth and very bad for equality in all variants, including those reputed to be conducive to
+technological optimism:
+
+ Real per capita income increases 30 - 240% in the long run. The large positive impact
+on growth does not require dramatic advances in robot technology. Small improvements suffice when robots and human labor are very close substitutes. In runs for this
+13 In
+
+the model, we assume without loss of generality that there is one capitalist and one (unskilled) worker, and
+we solve for the evolution through time of the capital share, the wage, and the wage premium. Thus, we can
+describe the evolution of inequality along both dimensions (capital share and wage premium) relative to the
+initial equilibrium. If we were were interested in comparing the evolution in inequality across runs that involved
+very different dynamics for the two dimensions of inequality, we could assign relative weights to the two types
+of agents and create a single index of inequality. In practice, the two dimensions move similarly so this does not
+seem necessary.
+
+10
+scenario, the direct gains from more investment in more productive robots account for
+only 6 - 16% of the increase in GDP. The remaining 84 - 94% reflects the strong positive
+feedback effects between robot and non-robot capital accumulation.
+ In the benchmark model, the real wage decreases in the short run under weak conditions. In the long run, however, growth in the non-robot capital stock raises the demand
+for labor and the real wage. Both the long-run increase in the real wage and the depth
+and duration of the low-wage phase are greater the higher the elasticity of substitution
+between robots and labor. The intertemporal trade-off for labor is thus sharply defined:
+more short-run pain for a larger long-run gain.
+ Following up on the hint in the last statement, the transition path is difficult for labor.
+When multiple parameters happen to fall within specific narrow ranges, it takes as little
+as twelve years for positive real wage growth to materialize. In other scenarios, the lowwage phase lasts 20 - 50+ years. (The "short run" can consume an entire working life.)
+ Although the real wage increases in the long run, labors share in income decreases
+most when real output increases most. The bigger the increase in the GDP pie, the less
+equitable the distribution of the pie.
+ In the limiting case of perfect substitutability between robots and labor, the long run
+never comes. There is a dramatic "singularity": the increase in the level of robot productivity sends the economy on a trajectory that converges to endogenous growth, in
+which the accumulation of robot and traditional capital continues forever, wages fall
+and stay below initial levels forever, and the labor share of income converges to zero.
+ The distributional outcome is much worse when robots substitute only for low-skill
+labor (Model 3). While skilled labor enjoys continuous large gains, the wage for lowskill labor decreases in the short/medium run under conditions much weaker than in
+the benchmark model. Nor is there any assurance that growth eventually raises the lowskill wage. Quite the contrary: there is a strong presumption the real wage decreases
+more in the long run than in the short run. And the magnitude of the worsening in inequality is horrific. In our base case calibration, the skilled wage increases 56 - 157%
+in the long run while the wage paid to low-skill labor drops 26 - 56% and the groups
+share in national income decreases from 31% to 8 - 18%.
+ The most common arguments for technology optimism do not stand up to scrutiny. Neither the assumption that robots complement labor in some production tasks (Model 2)
+
+11
+or that a non-automatable sector co-exists alongside the automation-vulnerable sector (Model 4) delivers optimistic results. Rather, they tend to underscore an underlying
+trade-off: variations in which inequality worsens by less also tend to deliver less output
+growth and lower wage growth.
+
+The rest of the paper is organized into five sections. Section II lays out the benchmark model
+in which robots compete with homogeneous human labor in a single production task. Following this, Sections III  V develop models with low- and high-skill labor, automatable and
+non-automatable sectors, and human-specific production tasks. Section VI revisits the debate
+between optimists and pessimists, concluding with an appeal for research aimed at finding
+policy measures that promote a more equitable distribution of the gains from automation-led
+growth.
+
+II. M ODEL 1: ROBOTS D O E VERYTHING
+
+In the benchmark model, robots substitute for all labor in all tasks. This may seem fanciful,
+but many AI experts and some economists believe that the future marriage of machine learning and big data will enhance robot pattern recognition to the point where most tasks can be
+automated.14 It turns out, moreover, that the focus on one type of labor and one output yields
+a surprisingly robust pattern of results.
+
+Technology and Factor Demands
+Competitive firms operate the linearly homogeneous production function
+Q = n[a1/1 K (1 1)/1 + (1  a)1/1 V (1 1)/1 ]1 /(1 1) ],
+where
+V = [e1/2 L(2 1)/2 + (1  e)1/2 (bZ)(2 1)/2 ]2 /(2 1) ,
+
+14 AI
+
+researchers on average believe that there is a 50% chance of AI outperforming humans in all tasks in 45
+years, with substantial variation; Asian researchers on average expect the same point to be reached in 30 years,
+for example (Grace and others, 2017).
+
+12
+K, Z, and L denote traditional capital, robots, and labor; the parameter b determines the productivity of robots; 2 is the elasticity of substitution between robots and labor; and 1 is the
+elasticity of substitution between traditional capital and the composite input V .15
+Multi-level CES production functions are inelegant and ungainly. This is especially true of
+the three-tiered functions that appear in subsequent sections. To minimize clutter and facilitate the derivation of analytical results, we bypass the production function and work with the
+firms unit cost function:
+
+11
+
+C[rk , f (w, rz /b] = [ark
+
++ (1  a) f 11 ]1/(11 )/n,
+
+(1)
+
+where w is the real wage; rk and rz are the real capital and robot rentals; and
+f = [ew12 + (1  e)(rz /b)12 ]1/(12 )
+is the sub-cost function dual to the composite input V . When deriving analytical results, we
+can work with C[rk , f (w, rz /b] and invoke well known formulas that link the derivatives of
+the cost function to the substitution elasticities and factor cost shares; it is not necessary to
+manipulate the actual, cumbersome cost function.
+Factor prices adjust to equate demand and supply for each input. Using Shepherds lemma,
+the market-clearing conditions may be written as
+K = Crk Q,
+
+(2)
+
+Z = C f fz Q/b,
+
+(3)
+
+L = C f fw Q,
+
+(4)
+
+where fz   f / (rz /b). Labor supply is perfectly inelastic. The capital stocks vary with net
+investment but are predetermined in the short run.
+
+The Zero-Profit Condition
+Perfect competition rules out supranormal profits. Hence price always equals unit cost:
+1 = C(rk , w, rz /b).
+
+15 n
+
+is the TFP parameter and a and e are CES distribution parameters.
+
+(5)
+
+13
+Saving and Investment
+There are two types of agents: workers, who consume all of their income each period, and
+capitalists. The representative capitalist chooses consumption c, investment in robots Iz , and
+investment in traditional capital Ik to maximize
+Z  11/
+c
+et ,
+U=
+0
+
+(6)
+
+1  1/
+
+subject to
+vk
+c + Iz + Ik = rk K + rz Z 
+2
+
+
+
+Ik
+
+K
+
+2
+
+vz
+K
+2
+
+
+
+Iz
+
+Z
+
+2
+(7)
+
+Z,
+
+K = Ik   K,
+
+(8)
+
+Z = Iz   Z,
+
+(9)
+
+where ,  , and  denote the pure time preference rate, the depreciation rate, and the intertemporal elasticity of substitution, respectively. In the budget constraint (7), the terms
+vk ()2 K/2 and vz ()2 Z/2 capture adjustment costs incurred in changing the two capital stocks.
+The Maximum Principle furnishes the first-order conditions for an optimum. These may be
+compressed into two Euler equations for investment
+ 
+
+
+2
+
+
+c
+vk Ik
+Ik
+vk 
+
+ + +
++
+   rk ,
+Ik = 1 + vk
+K
+K
+c
+2 K
+ 
+
+
+2
+
+
+vz 
+c
+vz Iz
+Iz
+
+ + +
++
+   rz ,
+Iz = 1 + vz
+Z
+Z
+c
+2 Z
+
+(10)
+
+(11)
+
+which require, as usual, that the real interest rate ( + c/c) equal the capital and robot rentals,
+net of depreciation and adjustment costs, at every point in time.
+
+14
+Advances in Robotics
+Advances in robotics come in waves. Following an initial jump at t = 0, b increases monotonically until it reaches its new steady-state level b:16
+b = s(b  b),
+
+s > 0,
+
+bo < b(0) < b.
+
+(12)
+
+A. The Short- vs. Long-Run Outcome
+Equations (2) - (5) can be solved for w, rz , rk , and Q as a function of K, Z, and b. The solution
+for w is (see Appendix A)17
+w =
+
+1  2 K
+K
+z (b + Z) + K,
+1 2
+1
+
+(13)
+
+where a circumflex denotes the percentage change in a variable (x = dx/x); 1 is the elasticity
+of substitution between capital and labor services (V ); 2 is the elasticity of substitution between robots and labor;  j is the cost share of factor j (V = L + Z ); and i is the cost share
+of input i (i = Z, L) in the production of labor services (L + z = 1).
+In the short run, the capital stocks are fixed and
+w|t=0 =
+
+1  2  K
+z b,
+1 2
+
+= w|t=0 < 0
+
+iff 2 > 1 /K .
+
+(14)
+
+The condition in (14) is the same as in DeCanio (2016) and Sachs and Kotlikoff (2012). To
+understand its logic, suppose that 2 = 1 . We then have a standard non-nested CES production function in which all inputs are gross complements. Hence 2 > 1 is necessary for
+automation to reduce w. Note also that as K  0, the production function has only two inputs, implying, again, that labor and robots must be gross complements. Hence the threshold
+
+16 The
+
+jump in b at t = 0 may be interpreted as improvements in software and machine-learning algorithms that
+can be implemented with existing hardware. Postulating an initial jump in b allows for a clean separation of
+short- and long-run results. It is not essential, however, to the theoretical analysis. The equations below apply
+regardless of what happens to b at t = 0.
+17 The solution pertains to small, differential changes. Hence the factor cost shares equal their values at the initial
+steady state.
+
+15
+value of 2  the value at which L and Z become gross substitutes  varies inversely with
+K . Putting this together with 2 > 1 suggests the condition 2 > 1 /K .18
+Production theory asserts that normally inputs are gross complements (Rader, 1968). The
+normal rule may not apply, however, to robots and human labor. For K = .33 - .40, the condition in (14) requires 2 to be 2.5 - 3 times larger than 1 . Empirical estimates of 1 range
+from .4 to 1.2, so the borderline value of 2 could be on the order of 3.6. This is very high for
+an elasticity of substitution between two primary inputs. But a value of 3.6, or even a much
+larger number, is consistent with the view that robots are a special type of capital that greatly
+increases the total supply of labor services, e.g.: Counting both humans and machines, the
+worlds labor force will be able to do more work than ever before. But this abundance of labor  both those made of cells and those made of bits  could create a glut of labor. The
+machines may render humans as redundant as so many vintage washing machines" (The Atlantic, 2016).
+When robot technology improves and wages decline, capitalists rake in more profits and perceive higher returns on robot and non-robot capital. They react prosaically by increasing investment in both types of capital.19 Across steady states where rz = rk =  +  , equations
+(2) - (5) give
+K = Q = 2
+
+z
+b > 0,
+L
+
+Z = (2 /L  1)b.
+
+(15)
+(16)
+
+Moreover, the positive effect on labor demand of growth in the non-robot capital stock eventually dominates the labor-displacing effect of greater utilization of more productive robots. It
+follows from the zero-profit condition
+1 = C[ +  , w, ( +  )/b]
+
+(50 )
+
+that the real wage increases in the long run
+w =
+18 We
+
+Z
+b > 0.
+L
+
+(17)
+
+focus on the impact on the real wage. Equations (A11) and (A12) give the solutions for the capital rentals.
+Naturally, the conditions for rz and rk to increase relative to w are much weaker than the condition for w to decline. Straightforward algebra yields rz  w = [(2  1)/2 ]b and rk  w = [(2  1 )z /1 2 ]b. Thus both
+capital rentals increase relative to w if 2 > Max{1, 1 }.
+19 This remark pertains to the medium run. In the short run, higher investment in robot capital may come at the
+expense of investment in non-robot capital. See the analysis of the transition path in the next section.
+The increase in investment is in sharp contrast to the results of Sachs and co-authors, where all saving is done
+by unskilled (young genertion) workers.
+
+16
+Figure 1 supplies the intuition for this result. At the initial steady state, the capital rental rk
+equals the time preference rate plus the depreciation rate. The increases in b and Z reduce
+the marginal product of labor (MPL) and raise the return to traditional capital. At K = K1 ,
+the wage has recovered to its original level. But since rz /b has decreased, we know from the
+zero-profit condition that rk still exceeds  +  .20 Capitalists keep investing therefore until K rises to K. The additional capital accumulation increases labor demand and bids up the
+market-clearing wage to w.
+
+Figure 1. Model 1: Real wages in the long run
+
+Two other results deserve attention. First, there are striking tradeoffs between short-run pain
+and long-run gain for labor and, at the macro level, between inequality and growth.21 The
+larger is 2 , the more the real wage decreases in the short run and, as shown in the next section, the longer the period of wage stagnation. But larger values of 2 also imply larger increases in the total supply of labor services, greater productivity gains, and higher returns to
+20 For
+
+K = K1 and bZ = bZ, rz /b is lower both because b > bo and because rz <  +  . (On an optimal path, of
+course, Z < Z when K = K1 and rz >  +  . Figure 1 is a heuristic device.)
+21 We quantify the tradeoffs in Section III.C, assuming Model 2 is more likely to command agreement than
+Model 1.
+
+17
+investment in robots and traditional capital. Consequently, both capital stocks, real income,
+and the real wage increase more in the long run. The positive effect of 2 on K, Z, and Q appears directly in (15) and (16). In the solution for the real wage it shows up indirectly as an
+increase in Z /L for non-infinitesimal changes in b. Importantly, both higher Z and lower
+L contribute to the increase in w:
+Z = (2  1)b > 0,
+z
+L =
+(1  2 )b < 0.
+L
+
+(18)
+(19)
+
+There is not much doubt that 2 exceeds one. In the empirically relevant range, therefore,
+Z /b > 0 and L /b < 0. Labors share in income declines, and, paradoxically, it declines most
+when 2 is large and the real wage increases most in absolute terms. A rising tide lifts all
+boats in the long run, but it never lifts labors boat as much as other boats. This result proves
+depressingly robust across all the models we investigate.
+The other result pertains to methodology. Returning to a point emphasized in the introduction,
+inclusion of traditional capital complementary to robot capital is critical to understanding the
+general equilibrium effects of technological advances in robotics. Obviously, non-robot capital accumulation takes all of the credit for the long-run increase in the real wage. In addition,
+it is the central, driving force behind the large increase in per capita income. Table 1 reports
+long-run solutions for output, robot capital, and the real wage when the non-robot capital
+stock is constant. The real wage decreases 9 - 11%, and the increase in income is only 6 -25%
+as large as in the full model. Most of the action in the full model revolves around the strong
+positive feedback effects between robot and non-robot capital accumulation. This is true even
+of robot investment. Only 8 - 37% of the increase in robot capital is a response to better technology (b ). The rest reflects the impact of non-robot capital accumulation raising the return
+to robot investment.
+
+B. The Transition Path
+The real wage decreases in the short run and increases in the long run. What happens in between determines whether Model 1 sides with technology optimism or technology pessimism.
+If the long run is too far away  if it takes 30+ years for the real wage to increase  we definitely have a problem.
+
+18
+Table 1. Model 1: Long-run outcome with constant vs endogenous
+non-robot capital
+Model 1 with K constant
+
+Full Model
+
+Scenario
+
+GDP
+
+w
+
+Z
+
+K
+
+GDP
+
+w
+
+Z
+
+K
+
+2 = 2.5, b = 1.5
+2 = 5, b = .75
+2 = 10, b = .65
+
+21
+12
+12
+
+-11
+-9
+-11
+
+288
+215
+240
+
+0
+0
+0
+
+71
+47
+202
+
+24
+8
+12
+
+788
+646
+3099
+
+71
+47
+202
+
+Notes: The entries report the percentage change in the variable.
+
+There are a variety of ways to approximate the stable manifold. Given the substantial nonlinearities present in the model, we judged the method in Novales, Fernndez, and Ruz (2008)
+to offer the best tradeoff between solution speed and minimization of approximation error.
+The method derives stability conditions from a linear approximation around the steady state,
+but incorporates the nonlinear structure of the model when tracking the transition path.
+To calibrate the model, we assigned the following parameter values in the base case:
+ = .05,
+
+ = .50,
+
+K = 1,
+
+ = .06,
+
+bo = .50,
+
+b(0) = bo + .1(b  bo ),
+
+K = .35,
+
+1 = .50,
+
+Z = .04,
+
+Z = .50,
+
+s = .15
+
+2 = 2.5 - 20, .
+
+The depreciation rate, the intertemporal elasticity of substitution, and the q-elasticity of nonrobot investment (K ) all take ordinary values, while the numbers for the time preference rate
+and the total cost share for capital (K + Z = .39) match the long-run return on stocks and the
+data on factor shares in the U.S.22
+To the best of our knowledge, there are no econometric estimates of 2 . Technology experts
+concur that substitution between robots and human labor (in tasks where substitution is possible) is much easier than substitution between most primary inputs. But it is difficult to translate "much easier" into a number for 2 . Employing a different nesting structure and calibrating to data for 1950-2013, Eden and Gaggl (2018) conclude that 2 has risen rapidly
+
+22 The
+
+income share for labor L = 1  K  Z = .61 equals labors share in the U.S. in 2013 and the income
+share for robots implies that Z/(Z + K) is close to the share of information capital in the total capital stock
+(10.1%) reported in Nordhaus (2015). The value assigned to K pins down the adjustment cost parameter vk .
+[The first-order condition for investment is 1 + vk (Ik /K   ) = q, where q  2 /1 and 1 and 2 are multipliers attached to the constraints in (7) and (8). q is Tobins q, the ratio of the demand price of capital to its supply
+price. Evaluated at a steady state, vk = 1/(K  ), where K  IK /q.]
+
+19
+since the late 1990s, from 2.5 to 3.3. Calibrating to their data with our nesting structure yields
+2 = 2.13.23
+The estimates in Acemoglu and Restrepo (2016b) also provide some guidance. Their finding
+that one industrial robot directly eliminates 10.6 jobs suggests that 2 might be quite large.24
+We are reluctant, however, to pin too much on one estimate or the results of a couple of calibration exercises based on historical data.25 Seeking robust results, we carried out runs for
+moderately low (2 = 2.5), moderately high (2 = 5 ), very high (2 = 10, 20), and perfect
+substitution (2 = ).26
+With respect to the other choices:
+ Improvements in robot productivity arrive continuously, with b covering 90% of the
+ground to its new steady-state level in the first fifteen years.
+ As noted earlier, empirical estimates suggest that 1 lies somewhere between .4 and
+1.2. Our choice of .50 is in line with newer, micro-based estimates 27
+ Lack of empirical information forced us to rely on semi-educated guesses for the last
+two parameters. We decided to set the q-elasticity for robot investment (Z ) at .50 on
+23 These
+
+calculations are only approximations to the concept of 2 in this paper. Eden and Gaggl (2018) divide
+capital into information and communication (ICT) capital and other capital. These may correspond, highly imperfectly of course, to our notions of Z and K (indeed traditional industrial robots are not part of ICT capital.)
+Eden and Gaggl (2018) also divide labor into non-routine and routine. Again, these may correspond only imperfectly to the notions of skilled and unskilled labor in models 3 and 4 below. In particular, the current
+wave of technology may substitute differently across jobs and industries than traditional automation ((Brynjolfsson and Mitchell, 2017)). For the second calculation, we use the fact that, in a CES nest that includes unln(zL1 /zL2 )
+skilled/routine labor with robot/ICT capital, as in models 3 and 4 below, 2 = 1  ln((rz /wb)
+, where
+1 /(rz /wb)2 )
+zL1  z/L at time 1 and rz /wb1  rz/wb at time 1, and we use data from Eden and Gaggl (2018) to proxy for
+the shares Z and K , the wage w, and the ICT capital rental rate rz /b for time 1 = 1967 and time 2 = 2013. For
+the analysis of historical data on ICT capital, which plausible substituted for many fewer tasks than new wave of
+technology that this the subject of this paper, the nesting structure of model 3, where Z substitutes for only a part
+of labor, seems more appropriate than model 1.
+24 This is not a pure empirical estimate. It depends on the regression coefficient in the employment equation and
+the values assigned to the inverse of the Frisch elasticity of labor supply and the inverse elasticity of supply of
+robots.
+25 AI experts generally expect that automation capital will be much more substitutable with labor in the near
+future. If they are right, then calibrating to historical data underestimates the value of 2 that will prevail in coming decades. (The advent of driverless vehicles, for example, is likely to have a big impact on 2 in the transport
+industry.)
+26 The case of perfect substitution is extreme. However, it claims a fair number of supporters, at least with reference to some time in the (not too distant?) future, provides a useful benchmark, and has received a good deal
+of attention in the economics literature. The models of Sachs, Benzell, and LaGarda (2015) and Acemoglu and
+Restrepo (2016a), for example, assume perfect substitution in a subset of production tasks.
+27 See Chirinko (2008), Chirinko and Mallick (2017), Raval (2011), Klump, McAdam, and Willman (2007), and
+Oberfield and Raval (2014)).
+
+20
+the grounds that installing a new type of capital that embodies new, highly innovative
+technology is likely to involve greater adjustment costs than construction of another
+plant identical to plants the firm has built and operated many times before.28
+
+Scenario 1: Moderately Low Substitution (2 = 2.5) and Large Increases in Robot
+Productivity
+We start with a relatively optimistic scenario. In Figure 2, 2 is a moderately high 2.5 and
+successive waves of innovation increase the productivity of robots 200%. Robot investment
+surges, and as b and Z increase the market for human labor becomes very soft. To make matters worse, the high return on robots attracts investment away from capital complementary to
+labor. The non-robot capital stock decreases 4% in the first five years and does not surpass its
+start value until year fourteen. In the short/medium run, everything conspires to depress the
+demand for labor and the real wage. Since real output rises apace, the income share of capital
+increases quickly, rising from 39% to 43% at year ten.
+
+Fortunately, the story does not end here. The diversion of investment from traditional capital
+into robots is temporary. (K increases across steady states.) Further out on the transition path,
+firms start investing more in both types of capital and positive wage growth emerges. But it
+takes time for the positive effect on labor demand of traditional capital accumulation to outweigh the labor-displacing effect of the robot revolution. The path for w does not leave the
+fourth quadrant until year twenty. In the decades that follow, the real wage increases steadily
+but never catches up with per capita income growth. The distribution of income continues
+to worsen; in the long run, labors share in national income drops to 44%. Calculated over
+the entire transition path, capitalists reap an equivalent variation (EV) welfare gain equal to
+23.7% of initial consumption, reflecting large, persistent increases in the two capital rentals,
+while labor suffers an EV welfare loss of 1.05%.29
+The robot revolution produces large gains in per capita income. Inequality worsens, but the
+real wage increases in the long run. The long-run gains in income and the real wage are greater
+the larger the elasticity of substitution between robots and human labor; disturbingly, how28 This
+
+assumption is not critical. The results change little when k = z and the q-elasticity varies from .5 to 5.
+See Table 4 in Section III.C.
+29 We assign labor the same utility function as the representative capitalist. Non-savers, however, may have a
+higher time preference rate than savers. When labor has the same instantaneous utility function as the representative capitalist but a higher time preference rate of 8-10%, labors EV welfare loss rises to 1.86-2.31%.
+
+21
+Figure 2. Model 1: Transition Path for Scenario 1
+
+K
+
+w, GDP
+25
+
+20
+
+20
+
+15
+
+15
+10
+
+10
+
+5
+
+5
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+t
+
+-5
+
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+t
+
+-5
+
+Income Shares
+
+Rental rates
+0.20
+
+0.6
+
+Labor
+0.18
+
+0.5
+Capital
+
+0.4
+
+0.16
+rz
+
+0.3
+
+0.14
+
+0.2
+0.12
+
+0.1
+0.0
+
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+t
+
+rk
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+t
+
+Notes: Transition path when 2 = 2.5 and b increases from .5 to 1.5 in the long run. In the top
+two panels, the paths for the real wage w (solid line), GDP (dashed), and the non-robot capital
+stock K show the percentage deviations from initial values.
+
+ever, inequality worsens more and a full generation may pass before real wage increases show
+up on the transition path.30
+
+Scenario 2: A Troubling Singularity (2 = )
+The above set of results does not carry over to the limiting case where robots substitute perfectly for human labor. One important result disappears and the others become more extreme.
+A discontinuity separates the cases of high and perfect substitution. In effect, in the perfect
+substitution case the low-wage/increasing-inequality transition becomes permanent. With perfect substitution, the build-up of robot and traditional capital never brings about a rise in the
+marginal product of (human) labor, and by the same token the scarcity of human labor never
+brings about an end to what is otherwise transitional growth.
+30 Because
+
+real GDP increases continuously, redistributive tax-transfer schemes can protect workers real income
+(until w = wo at t = 20), while leaving capitalists better off. We calculated numbers for the simplest case of a
+cut in government services that enter capitalists utility function in a separable manner. (The cut in spending
+on services finances the requisite transfer payments to workers.) Measured as a percentage of the increase in
+capitalists net income (gross income less depreciation), the tax ranged from 31-55% in years 1-12 and averaged
+32.2% over the twenty-year low-wage phase. (Measured as a percentage of GDP, the tax peaks at 2.7% in year
+six and then declines steadily, dropping to 1% at year seventeen.)
+
+22
+The good news is that income rises forever in an economy that would otherwise stop growing.
+As labors share in income approaches zero, the production function exhibits constant returns
+to scale in the two capital stocks and the economy enters the pleasant world of sustained endogenous growth. In Appendix B we show that for 1 = 1
+io
+n
+hg
+(2  ) +  = (rk     ),
+(20)
+g 1 + vk
+2
+n
+hg
+io
+g 1 + vz
+(2  ) +  = (rz     ),
+(21)
+2
+where g is the equilibrium growth rate,
+rk = nK (bz)1K ,
+rz =
+
+nb(1  K )
+,
+(bz)K
+
+and z  Z/K. The presence of adjustment costs complicates matters.31 Suppose, purely for
+expositional purposes, that vk = vz = 0. We then get the usual solution
+g = (rk     ),
+
+(22)
+
+rk = rz = nK [b(1  K )/K ]1K .
+
+(23)
+
+with
+
+Labors share in income goes to zero asymptotically. This would not be troubling if the real
+wage increased forever (at a slower rate than GDP) or plateaued at a very high level. There
+is nothing wrong with a world in which the machines do all the work and all the humans become fabulously rich.32 But not all the humans become rich. In fact, workers suffer a permanent decrease in income. The solution for rz in (23) and the arbitrage condition
+w = rz /b
+give
+w|Long Run = K b.
+31 Either
+
+(24)
+
+ < 2 or  > g/2 are sufficient to ensure sustained growth. In general, sustained growth is possible
+as long as the q-elasticities of investment are not very close to zero. (Recall that vz and vk are tied to the qelasticities of investment spending via vz = 1/z  and vk = 1/k  . See footnote 22).
+32 Income envy and class distinctions may also fade away. When low-skill workers earn enough, they will start
+to save and derive some of their income from capital. Inequality should decrease steadily as everyone joins the
+"ownership economy." If capitalists and todays workers share identical Stone-Geary utility functions, the distribution of income would become perfectly equitable in the long run.
+
+23
+The same qualitative results obtain in the full model that incorporates adjustment costs. Figure
+3 plots the transition paths for 2 =  vs. 2 = 5 when 1 = 1 and all other parameters
+take their base case values.33 Perfect substitution of robot for human labor delivers perpetual growth. But the rich become richer and the poor poorer with every passing year. In the
+long run, the real wage decreases 13.4% while capitalists income rises without limit.
+
+Figure 3. Model 1: An Economic Singularity
+
+Notes: Transition paths for the growth rate and the real wage for Model 1 when robots and labor are perfect vs imperfect substitutes.
+
+These results differ sharply from those in Sachs, Benzell, and LaGarda (2015) and Acemoglu
+and Restrepo (2016a), which assume perfect substitution either in a subset of production tasks
+or in a separate production function. In Sachs et al.s two-sector model, there is a strong presumption the economy will fall into the death spiral of never-ending negative growth. The
+culprit, as usual, is the assumption in the OG framework that automation reduces saving and
+investment by reducing wage income. The model in Acemoglu and Restrepo (2016a) differs
+in many ways from ours. Crucially, exogenous technological advances in automation do not
+affect the growth rate or the return on capital in the long run. Because the capital rental does
+not change, the results for the long run are the same as when robots and labor are imperfect
+substitutes in our model: the real wage increases, but labors share in national income declines. In Acemoglu and Restrepos preferred ("complete") model, where endogenous directed technological change creates countervailing forces that strengthen labor demand, the
+
+33 b
+
+increases from bo = .1803 to b = .30. When bo = .1803, the return on robots equals the time preference rate
+for 2 =  (i.e., bo = .1803 is the inflection point) . Hence the initial equilibrium growth rate is zero for both
+2 = 5 and 2 =   the starting point is the same in the two runs.
+
+24
+outcome is less clear. Labors income share may decrease or recover to its original value depending on how automation technology improves.
+
+III. M ODEL 2: ROBOTS C ANNOT D O E VERYTHING
+
+Model 1 is not entirely pessimistic. Per capita income rises and strong crowding in of the
+non-robot capital stock guarantees that overall labor demand and the real wage increase in
+the long run (assuming 2 6= ). Nevertheless, the model is contrary to the spirit of of Autor
+and other technology optimists. They would presumably take issue specifically with the assumption that robots substitute for human labor in all tasks, arguing that it is unrealistic and
+strongly biases the results toward pessimism over a lengthy medium run. The right model recognizes that automation reduces the demand for labor in some tasks but increases it in many
+others. Model 1 needs to be replaced by something more evenhanded.
+To accommodate this view, we shift some labor from the CES nest with robots into a CES
+nest with traditional capital. The production function is Q = F[H(K, L2 ),V (L1 , Z)], where L2
+is labor that performs some task complementary to the task performed by L1 and Z in V ().
+L = L1 + L2 , L1 and L2 both get paid w, and the firms unit cost function is C[h(rk , w), f (w, rz /b)].
+In what follows, 3 , H , k , and L denote the elasticity of substitution between K and L2 , the
+cost share of the composite input H (H = K + L2 ), and the cost shares of capital and labor
+in production of H (k + L = 1). We can interpret this model as an optimistic one in which
+labor moves freely between the two tasks; there is no skill differential and no education or
+other investment is necessary. Model 3 will present a polar case in which labor is immobile
+across the two tasks.
+
+A. The Direct Effect of Automation (bZ ) on Labor Demand
+The new versions of equations (2) - (5) are
+K = Cr Q,
+
+(25)
+
+Z = C f fz Q/b,
+
+(26)
+
+L = (C f fw +Ch hw )Q,
+
+(27)
+
+1 = C(rk , w, rz /b),
+
+(28)
+
+25
+which can again be solved for w, rz , rk , and Q as a function of K, Z, and b. The counterpart of
+equation (13) is
+z
+(b + Z)
+N
+K
++ [2 K (1 + L L2 /L1 ) + (1  3 V )k z L2 /L1 ] ,
+N
+
+w = [(1  2 H )k + 3 V (L + L2 /L1 )]
+
+(29)
+(30)
+
+where
+N  2 (1 k z + 3 L ) + (1 z + 2 L )3 L2 /L1 .
+An increase in bZ now reduces the wage when
+2 >
+
+1 k + 3 V (L + L2 /L1 )
+.
+K
+
+(31)
+
+There is no support for optimism here. Robots eliminate jobs in the V (L1 , Z) nest and increase productivity of labor in the H(K, L2 ) nest. The adjustment in the wage required to absorb displaced L1 workers in L2 -type tasks depends on the slope of the MPL2 schedule and
+how much the schedule shifts upward. A lot rides therefore on the magnitude of 3 relative to
+1 . The wage is more likely to decrease than in the case where robots substitute for all labor
+when
+1 k + 3 V (L + L2 /L1 ) 1
+<
+,
+K
+K
+which reduces to
+1
+3 <
+.
+(32)
+V + H /L
+Since V + H = 1 and L  .95 at the initial equilibrium, this condition holds when 3 is
+slightly below 1 . Reversing the inequality makes Model 2 more optimistic than Model 1,
+but does not weaken the presumption that automation reduces total labor demand. Ceteris
+paribus, robots increase the wage only if
+3 > 3 =
+
+k (2 H  1 )
+.
+L (V + H /L )
+|
+{z
+}
+
+(33)
+
+1
+
+For plausible parameter values, 3 is much greater than 1 and considerably above high-end
+estimates of the elasticity of substitution between capital and labor (Table 2). At present,
+the neutral assumption is 3  1 . The case for optimism over the short/medium term is no
+greater in Model 2 than in Model 1.
+
+26
+Table 2. Model 2: Value of 3
+= rising wages in short run)
+(3 > 3
+
+2 = 2.5
+L2 /L1 = .5
+L2 /L1 = 1
+L2 /L1 = 2
+
+1.44
+1.20
+1.04
+
+1 = .5
+
+1 = 1
+
+2 = 5 2 = 10 2 = 2.5
+
+2 = 5
+
+2 = 10
+
+2.89
+2.40
+2.08
+
+7.41
+5.87
+4.92
+
+3.70
+2.93
+2.46
+
+8.23
+6.39
+5.29
+
+NA
+NA
+NA
+
+Note: The total cost share of labor is 61% at the initial equilibrium. All other parameters take the
+values specified in section II.B. NA indicates that the real wage always rises (by a minuscule
+amount) when 1 = 1 and 2 = 2.5.
+
+B. The Long Run
+The long run is also not kind to Model 2. Compared to model 1, the effects are similar but
+attenuated. As with model 1, inequality worsens, the wage falls at first, and output and the
+real wage eventually grow. Consider first the impact on GDP. When robots substitute for labor
+in some but not all tasks, the productivity gain associated with the innovation in b is smaller.
+There is a straight line from this to a smaller increase in the return to non-robot investment,
+less crowding in of non-robot capital, and a smaller multiplier effect on real output. In the
+benchmark case where 3 = 1 ,
+
+
+ 
+z L1 Z
+L2
++ 1 L2
+b,
+(34)
+K = Q = 2 1 +
+V
+L1 LL
+where L  L1 + L2 . K and Q increase less than in Model 1 provided
+2 > 1
+
+z L1
+,
+L + z L1
+
+(35)
+
+which holds even when 2 is much smaller than 1 .
+The wage is pinned down by the zero-profit condition (28). As before,
+w =
+
+Z
+b > 0.
+L
+
+(36)
+
+For small changes, the solution is the same as in Model 1. But for large (i.e., non-infinitesimal)
+changes, w increases less because Z /L increases less. The explanation for this result is
+straightforward. When the inequality sign in (33) is reversed, job losses directly attributable
+to automation are smaller than in Model 1. But the positive impact on labor demand of tradi-
+
+27
+tional capital accumulation is also smaller. The jobs lost from the weakening of this positive
+effect exceed (ex ante) jobs recovered from the weakening of the adverse automation effect.
+Consequently, regardless of what happens in the short run, the real wage always increases less
+in the long run (Table 3).
+
+Table 3. Model 1 vs. Model 2 in the long run
+
+Model 1
+Model 2
+
+3 = .5
+3 = .25
+3 = 1
+
+GDP
+
+w
+
+K
+
+L
+
+Z
+
+IZ/GDP
+
+71
+
+24
+
+71
+
+44
+
+788
+
+9
+
+45
+43
+50
+
+19
+19
+19
+
+45
+40
+56
+
+58
+59
+56
+
+446
+436
+465
+
+7
+7
+7
+
+Note: The entries for GDP, w, K , and Z are the percentage
+change in the variables. In all cases 1 = .5, 2 = 2.5, and b
+increases from 0.5 to 1.5.
+
+Although real output and the real wage increase less in Model 2, those who care more about
+inequality than growth may not agree that the long-run equilibrium in Model 2 is inferior to
+the long-run equilibrium in Model 1. For small changes, the wage increases the same amount
+in Model 2 as in Model 1 while output rises less. Thus, at the new steady state, labors share
+in national income is higher in Model 2 than in Model 1. But inequality still worsens. From
+(34 and (36),
+1 + (1  1 z )L2 /L1
+.
+(37)
+L < 0 iff 2 >
+1 + L2 /V
+The term on the right side is smaller than unity for 1 > 1. When 1 < 1, L decreases under
+the weak condition
+L
+2 >
+.
+(38)
+L  L2 z
+L2 z is on the order of .05, so values of 2 slightly above unity satisfy (38).
+
+C. The Transition Path
+Income per capita and the real wage increase less in the long run in Model 2 than in Model
+1. In scenarios where 3  1 , however, the wage decreases less in Model 2 in the short run.
+If the difference is large and persists for decades, the argument that labor fares better when
+robots and humans compete in fewer production tasks has merit, even though the economy
+
+28
+ends up at an inferior steady-state equilibrium. We evaluate the argument in two scenarios
+that differ in the degree of substitution between robots and human labor and the size of the
+increase in robot productivity. First, we compare Models 1 and 2 in Scenario 1 (low 2 , large
+increase in b). Following this, we analyze a new scenario (Scenario 3) with small increases in
+robot productivity and high but not perfect substitution between robots and human workers.
+
+Scenario 1 Redux: Moderately Low Substitution (2 = 2.5)and Large Increases in Robot
+Productivity
+Figure 4 compares impulse responses in Models 1 and 2 in three cases which vary with respect to 3/1 .34 Model 2 does not score well in any of the runs. In the two runs where 3 
+1 , real output is slightly higher in Model 2 than in Model 1 for the first 50 years because the
+transfer of labor from the V () nest to the H() nest increases the marginal product of both
+capital stocks, spurring faster capital accumulation. (L1  increases MPZ and L2  increases
+MPK). On the other hand, the low-wage phase lasts 4 - 8 years longer and inflicts deeper
+wage cuts, especially in the run for 3 < 1 (Figure 4b). The most favorable case (4c), where
+3 > 1 , also yields mixed results. The EV welfare gain for capitalists exceeds their gain
+in Model 1 in all three scenarios, equaling 32.2%, 28.5%, and 23.9% (vs 23.7% in Model
+1) when 3 =.25, .50, and 1, respectively. Workers suffer larger welfare losses in the runs for
+3 =.25 and .50 (3. % and 2.2% vs 1.05% in Model 1), but a slightly smaller loss (.6%) when
+3 equals unity.3536
+
+34 To
+
+calibrate the model, we set L2 = .30 and L1 = .31. (The total cost share of labor is the same as in Model
+1.) All other parameters take the same values as in the baseline calibration.
+35 The EV welfare loss for workers in the three scenarios rises to 1 - 4.4% when their time preference rate equals
+8% and to 1.25 - 4.9% when the rate is 10%. (As before, the welfare calculations assume workers have the same
+instantaneous utility function as the representative capitalist.)
+36 Measured as a percentage of the increase in capitalist income, the lump-sum tax that finances transfer payments sufficient to protect workers real income in years 1 - 12 equals 37 - 60%, 30 - 45%, and 17 - 26% for
+3 = .25, .50, and 1, respectively. The corresponding averages over the entire low-wage phase are 32.4%, 24.8%,
+and 14.5%.
+
+29
+Figure 4. Model 1 vs Model 2 for various values of 3
+
+(a) 3
+
+= .5
+
+(b) 3
+
+= .25
+
+(c) 3
+
+= 1
+
+Notes: In all cases 1 = .5, 2 = 2.5, and b increases from .5 to 1.5. The paths show percentage deviations from initial values.
+
+30
+Taking stock, what is the general import of these results? To be clear, the argument for optimism, based on complementarity of labor and robots in some production tasks, is not necessarily wrong. It is shaky, however, and certainly does not work as advertised. The argument
+gets the long-run outcome completely wrong. In the short/medium run, it cuts the right way
+when 3 > 1 and the wrong way when 3 < 1 ; but no empirical estimates justify 3 > 1 ,
+the condition for a better result (w decreases less), let alone 3 > 3 , the stringent condition
+for a strictly positive result (w  at t = 0).
+
+Short- vs. Long-Run Tradeoffs
+We demonstrated analytically in Model 1 that there are sharp tradeoffs between inequality,
+growth, real wage cuts in the short run, and real wage increases in the long run. Figures 5 6 quantify the tradeoffs in Model 2. As 2 increases from 2 to 10 in Figure 5, the long-run
+increases in w and GDP rise from 6.7% and 12.9% to 52.8% and 151.3%, respectively. The
+much larger long-run gains for 2 = 10 come at a steep price, however: the real wage cut at
+the trough of the transition path jumps from -.8% to -21.8%.
+
+Figure 5. Model 2 in the short and long run for various values of 2
+
+Notes: The short-run solution for the first panel shows the largest decrease in w on the transition path (which generally occurs between years 10 and 15). The right-hand panel shows the
+long-run solutions for GDP and the labor share. In all cases b increases from .5 to 1 and all
+other parameters take their base-case calibration values (see section II.B).
+
+Figure 6 provide additional information on the tradeoff for labor. Reducing the increase in
+robot productivity from 200% to 50% greatly reduces investment in robots and the long-run
+increases in real output and the real wage (9.4% vs. 50% for GDP and 3.7% vs. 19.8% for w).
+
+31
+Figure 6. Model 2: The tradeoff between the short and long run
+
+(a) For various values of b, 2 = 2.5.
+
+(b) For various values of 2 , b = 1.5.
+
+Notes: In all cases 1 = .5, 2 = 2.5, and b increases from .5 to 2. The paths for
+w and K show percentage deviations from initial values. The path for Z shows the
+level of robot capital.
+
+By way of compensation, the low-wage phase ends seven years earlier and real wage losses
+are 2 - 5 percentage points smaller in the short/medium run (t = 0 - 20). Increasing 2 from
+2.5 to 5 makes an even bigger difference. Real output and the real wage increase much more
+in the long run (204% vs. 50% for GDP and 70.7% vs. 19.8% for w), but workers suffer huge,
+brutal wage cuts during a low-wage phase that persists for almost two generations. The problem, clearly, is the composition of investment; labor gets hit front and back as firms finance
+rapid increases in robot capital by cutting investment in traditional capital.37
+
+37 Large
+
+cuts in non-robot investment are concentrated in the first ten years. At year x, K is 6.8% below its initial
+level in the run for 2 = 5 vs. 3.6% in the run for 2 = 2.5. The difference  equal to 10.2% of initial GDP 
+helps fuel the much faster growth in Z when 2 = 5.
+
+32
+The robot productivity parameter b and the substitution elasticity 2 are the only parameters
+that significantly affect the depth and duration of the low-wage phase. Individually, none of
+the other parameters have much impact. Table 4 presents results for runs with alternative values of 1 , k , z , and . It is possible to reduce the low-wage phase to 12 years, but only if
+one gets a lucky draw from the parameter space.
+
+Table 4. Model 2: Depth and duration of the low-wage phase
+
+2 = 2.5
+Scenario
+
+2 = 5
+
+w decrease
+
+Duration
+
+w decrease
+
+Duration
+
+-5.3
+
+27
+
+-20.6
+
+38
+
+1 = .75
+1 = 1
+
+-2.1
+NA2
+
+20
+NA
+
+-16.2
+-14.8
+
+45
+51
+
+k = z = .5
+k = z = 1
+k = z = 2
+k = z = 5
+
+-4.8
+-5.6
+-6.6
+-7.9
+
+33
+27
+23
+21
+
+-20.0
+-22.8
+-27.5
+-36.0
+
+46
+33
+28
+24
+
+ = .33
+ = .75
+ =1
+
+-6.6
+-4.3
+-3.7
+
+32
+24
+21
+
+-22.7
+-18.8
+-17.9
+
+42
+34
+33
+
+1 = .75,  = 1
+
+-1.0
+
+13
+
+-12.3
+
+35
+
+1 = .75,  = 1 , k = z = 2
+
+-1.4
+
+12
+
+-15.6
+
+24
+
+base case:
+
+1 = .50, k = 1, z = .50,  = .50
+variations:
+
+Note: Notes: "w decrease" is the percentage decease in the real wage at the trough of the low-wage phase.
+"Duration" is the length of the low-wage phase in years. "NA" applies to cases where automation has a (minuscule) positive impact on labor demand, which occurs when 1 = 1 and 2 = 2.4. For varations, parameters are as in base case unless otherwise specified.
+
+33
+Scenario 3: Small Increases in Robot Productivity, But Very High Substitution Between
+Robots and Human Labor (2 = 10, 20)
+In Scenario 1 the robot revolution is powered by technological innovations that greatly increase robot productivity. This is not the only path to revolution. When robots and labor are
+almost perfect substitutes, the MPZ schedule in Figure 7 is extremely flat. Even a small upward shift in the schedule then leads to a huge increase in utilization of robots and the destruction of millions of jobs. Extremely high substitution, in other words, puts the economy
+near a tipping point. The robots are almost ready to take over; they just need to become a little
+smarter, a little better at doing what humans do.
+
+Figure 7. Model 2: Response of the robot capital stock
+when 2 is very high
+
+Figures 8a and 8b depict this scenario.38 The small 20% increase in b in Figure 8a does not
+seem like a big deal, but it excites a tremendous response. Robot investment skyrockets, jumping from 1.8% to 6.2% of GDP at t = 0. Moreover, since the MPZ schedule is very flat and
+shifts upward every time the traditional capital stock increases, the surge in investment continues far into the future. At t = 50, robot investment is 8.4% of GDP and rising.
+
+38 In
+
+these two runs, b jumps at t = 0 from .5 to .6.
+
+34
+Figure 8. Model 2: Transition path under alternative scenarios for 2 and b
+
+(a) 2 = 20, b increases from .5 to .5
+
+(b) 2 = 10, b increases from .5 to .75
+
+Notes: In the top two panels of each figure, the paths for the real wage w (solid), GDP (dashed), and
+the non-robot capital stock K show percentage deviations from initial values. The bottom panels show
+the levels of K (solid) Z (dashed), and income shares.
+
+35
+The forces operating on the labor market are the same as in Scenario 1: robots destroy jobs,
+growth of traditional capital creates them. When 2 is large, it takes much longer for the second effect to dominate the first. In Figure 6a, the low-wage phase lasts 27 years; in Figure 8b
+it lasts 142 years and in Figure 8a it stretches well into the third century (w pulls within 1% of
+its initial value at t = 283).
+
+IV. M ODEL 3: ROBOTS D O N OT S UBSTITUTE FOR S KILLED L ABOR
+
+Models 1 implicitly assumes that robots substitute for low- and high-skill labor to the same
+degree. Some smart people believe this will soon be true, but, for now, it is very much a minority view. Model 2 assumes that when robots substitute for some labor workers can readily
+shift into other production tasks. A still-dominant view, however, emphasizes the interaction
+of automation and skill. The skill-biased technological change hypothesis holds not only that
+high-skill jobs are less vulnerable to automation than low-skill jobs, but that automation has
+increased the productivity of skilled labor and contributed significantly to widening wage inequality over the past thirty years (Autor, 2014). The machine-learning crowd might respond
+that yesterdays world is gone and that in the future skilled labor will find itself struggling in
+the same way as unskilled labor. Be that as it may, the majority view deserves a hearing.
+We bring skilled labor S into the model by adapting Model 2. S replaces L2 in the CES nest
+with traditional capital [i.e., H(K, S) replaces H(K, L2 )]. The wage paid to skilled labor is ws
+and C[h(rk , ws ), f (w, rz /b)] is the new unit cost function. Skilled labor saves and invests in
+the same manner as capitalists. The budget constraint of the representative Ramsey agent thus
+includes the additional income term ws S. Motivated by the empirical evidence that the supply
+of skilled labor responds little, if at all, to the skill premium, we abstract from investment in
+human capital, treating S as perfectly inelastic in both the short and long run.39
+
+39 College
+
+graduates share of total hours worked by males with less than ten years of experience stayed constant
+at 40% in the U.S. as the skill premium rose 80% between 1975 and 2015 (Autor, 2015). At the other extreme
+from the assumption in this section of inelastic supply of skilled labor, the notion that unskilled workers can
+costlessly become skilled is captured by Model 2.
+
+36
+The static structure of the model contains an extra market-clearing condition (for S) and an
+extra endogenous variable (ws ). Formally,
+K = Ch hr Q,
+
+(39)
+
+Z = C f fz Q/b,
+
+(40)
+
+L = C f fw Q,
+
+(41)
+
+S = Ch hw Q,
+
+(42)
+
+1 = C(rk , ws , w, rz /b),
+
+(43)
+
+and the optimization problem in (6) - (9) [with income totaling rk K + rz Z + ws S in the budget
+constraint (7)] define the complete model.
+Low-skill labor has a rough time of it in Model 3. The usual algebra delivers
+K
+1  2 H
+z (b + Z) + K,
+1 2
+1
+1  3 V
+Z
+k K.
+ws = (b + Z) +
+1
+1 3
+w =
+
+(44)
+(45)
+
+Automation always increases ws . It reduces w iff
+2 >
+
+1
+.
+H
+
+(46)
+
+Since H = K + S and S  .30 in the data,40 this condition is appreciably weaker than
+2 > 1 /K , the corresponding condition in Model 1.41
+
+40 For
+
+s = .30 and an income share of .61 for all labor, the share of skilled labor in the wage bill is 49% vs.
+41-54% in Appendix 1 in Autor, Katz, and Krueger (1998).
+41 In the unlikely event that  <  / , w increases. Wage inequality worsens, however (w > w, assuming
+s
+2
+1 H
+2 > 1 ).
+
+37
+The results for the long run are also an order of magnitude worse. Across steady states,
+K =
+
+3 2 Z
+b > 0,
+J
+
+(47)
+
+2  Z
+Q = (3 k + 1 s )
+b > 0,
+J
+
+
+s
+Z
+w =
+(1  2 H ) + 3 k
+b  0,
+V
+J
+ws =
+
+2  z
+b > 0,
+J
+
+S ws + L w = Z b > 0
+
+sgn
+
+(48)
+(49)
+(50)
+
+L
+S
+dws +
+dw,
+L+S
+L+S
+
+(51)
+
+where
+J  2 s z + 1 s L + 3 k L .
+The zero-profit condition tells us only that the (employment or cost share) weighted-average
+wage increases. There is no assurance that both wages increase. The skilled wage rises, but
+when
+
+
+1
+3 k V
+2 >
+1+
+(52)
+H
+1 s
+the low-skill wage stays lower forever. Skilled labor then claims all of the productivity gains
+along with some of the wages formerly paid to poor, low-skill workers [ws = (Z b  L w)/S ,
+where w < 0].
+This ugly outcome is almost a foregone conclusion. Empirical estimates suggest 3  .51 ,
+while k  s and V  .35 in the raw data.42 The "mean" value of the term on the right side
+in (52) is thus 1.821 . Even if we throw in a couple of standard deviations so that 3 = 1
+joins the potentially relevant parameter space, the borderline value of 2 is only 1 - 2.1 for
+1 = .5 - 1. Econometricians have yet to estimate 2 , but the findings in Acemoglu and Restrepo (2016b) and narrative accounts in case studies argue that values of 2 in this range are
+unrealistically low. In all likelihood, 2 satisfies the condition in (52) with room to spare.
+
+42 See
+
+Griliches (1969), Fallon and Layard (1975), Hamermesh (1993), Krusell and others (2000), and Raval
+(2011) for estimates of how substitution between capital and skilled labor compares to substitution between
+capital and unskilled labor. s  .30 in the raw data. This together with K = .35 implies H = .65, V = .35,
+k = .538 and s = .462.
+
+38
+A. Multi-Dimensional Inequality
+In contrast to Models 1 and 2, inequality in Model 3 is multi-dimensional. Four variables
+matter: the income shares of low- and high-skill labor, L and S ; the aggregate income share
+of labor, LS = L + S ; and the skill premium, ws /w.
+Under weak conditions, inequality worsens in all dimensions. From (44) and (45),
+ws > w
+
+iff
+
+2 >
+
+1 s + 3 k V
+.
+s + V
+
+(53)
+
+The term on the right side is smaller than 1 /H if 1 > 3 K , which is sure to hold. Wage
+inequality worsens in both the short and long run, therefore, whenever automation reduces the
+demand for low-skill labor (for given K).43
+The long-run income shares for labor can be computed from (48) - (45). After simplification,
+the solutions read
+
+
+Z S
+(1  2 ) + 3 k (1  2 ) b,
+(54)
+L =
+J V
+2  Z
+S =
+(1  1 s  3 k )b,
+(55)
+J
+Z
+LS = {1 s + 3 k V  2 [(1 s + 3 k )LS  S z }
+b.
+(56)
+LS J
+Low-skill labor loses ground: its income share decreases assuming 2 > Max{1 , 1}. The
+share for skilled labor rises or falls depending on whether the weighted average of 1 and 3
+is above or below unity. Given the empirical evidence that 3 < 1 < 1, an increase in S is
+much more likely than not. Finally, the total income share for labor decreases if
+1 s + 3 k >
+and
+2 >  L
+
+S z
+LS
+
+1 s + 3 k V
+.
+LS (1 s + 3 k )  S z
+
+(57)
+
+(58)
+
+The first condition holds (S z /LS is close to zero). The second condition is not automatic,
+but it holds easily in the relevant parameter space. Suppose K = .35, S = L = .30, 1 = .5 2, and 3 = .5 - 2. Despite the inclusion of wildly biased and irrelevant parameter combinations (1 = 2?, 3 = 2?), the highest borderline value of 2 is only .98.
+43 Positing
+
+2 < 1 /H does not overturn this conclusion unless 3 is absurdly large. When 3 = 1 , for example, the skill premium increases in the short and long run if 2 > 1 .
+
+39
+B. The Transition Path: Distributional Carnage
+It is obvious from the preceding results that skilled labor and capitalists make out very well.
+The only unresolved question is whether the transition path and the long-run outcome are bad
+or very bad for low-skill labor.
+Both are very bad. There is no need to comment at length on Figures 9a - 9c.44 . From a distributional standpoint, they are a disaster, with 26 - 56% reductions in the low-skill wage while
+GDP increases 30 - 105% and the share of national income paid to capital and skilled labor
+rises from 69% to 82 - 92%.
+
+V. M ODEL 4: A DDING A N ON -AUTOMATABLE S ECTOR
+
+We consider one final way in which we could be setting things up for failure. Because they
+have only one sector, Models 1 - 3 assume perforce that automation penetrates production
+processes throughout the economy. Some sectors, however, seem largely immune to automation. Home nursing care, the arts and entertainment, and a variety of service-related industries
+such as elementary education, yoga, and psychotherapy come to mind. When automation increases real income, these sectors will expand to meet higher demand. If they expand enough
+and if factor-intensity conditions take the right form, the real wage for low-skill labor may
+increase in general equilibrium despite layoffs in the automatable sectors. Autor (2015) propounds this hypothesis, speculating that the income and price elasticities of demand for nonautomatable (NA) goods and substitutability of labor across sectors will play a large role in
+determining the outcome.
+We now have the apparatus to examine this idea carefully. In particular, we test this case for
+technology optimism by adding a NA sector to Model 3. Firms in sector 2 (the NA sector)
+operate a two-tiered CES production function in which low-skill labor combines in the up-
+
+44 We
+
+calibrate the model for S = .30, L = .31, and ws /w = 2. All other parameters take the same values as
+in the baseline calibration ( = .06, K = 1, etc.). The values assigned to S , L , and ws /w are consistent with
+the data on the share of skilled wages in the total wage bill, the wage ratio for high- vs. low-skill labor, the college wage premium, and the ratio of hours worked for high- vs. low-skill labor (see Johnson (1997), Acemoglu
+and Autor (2011b), Blankenau and Cassou (2011), and Autor (2014)). The range for 3 (.25-.50) brackets the
+value we obtain (.398) from calibrating to the data for 1967 and 2013 in Eden and Gaggl (2018) as described in
+footnote 23.
+
+40
+Figure 9. Model 3: The transition path for various elasticities
+
+(a) 2 = 2.5, 1 = .67, 3 = .33
+
+(b) 2 = 5, 1 = 3 = .5
+
+(c) 2 = 5, 1 = 1, 3 = .5
+
+Note: b increases from .5 to 2. See footnote 44 for explanation of scenario calibration.
+
+41
+per tier with a composite input formed by capital and skilled labor in the lower tier.45 Labor is intersectorally mobile, while capital is sector-specific. The unit cost function in sector 2 is thus C2 [h2 (rk2 , ws ), w]. Good 1 may be used either for consumption or investment,
+good 2 only for consumption. Households derive utility from a CES aggregate of the two consumption goods.46 The exact price index for the composite consumer good is p = [m + (1 
+1/(1) , where m is a distribution parameter,  is the elasticity of substitution, and p
+m)p1
+2
+2 ]
+is the relative price of good 2. See Appendix C for other details and a full statement of the
+model.
+Although analytical results are out of reach for Model 4, it is useful to consult certain intermediatestage solutions. Consider the zero-profit conditions
+1 = C1 (rk1 , ws , w, rz /b),
+p2 = C2 (rk2 , ws , w).
+
+(59)
+(60)
+
+Across steady states, rk1 = rk2 = rz = 0 and
+w =
+
+S1 p2  S2 Z b
+,
+
+
+(61)
+
+ws =
+
+L2 Z b  L1 p2
+,
+
+
+(62)
+
+where
+ = S1 L2  S2 L1
+
+which has the same sign as L2 /S2  L1 /S1 .
+
+For the real wages  = w/p and s = ws /p,
+[S1 (1  L2 ) + S2 L1 ] p2  S2 Z b
+,
+ = w   p2 =
+
+ 2 Z b  [[L1 (1  S2 ) + S1 L2 ] p2
+s = ws   p2 = S
+,
+
+
+(63)
+(64)
+
+where  is the consumption share of the NA good.
+These solutions are incomplete (p2 is a function of b), but informative. Two points merit emphasis. First, factor-intensity conditions are important. The low-skill wage increases with p2
+and decreases with b when employment in the NA sector is relatively intensive in low-skill
+labor (i.e.,  > 0 or equivalently L2 /S2  L1 /S1 > 0). Second, it is hard to get p2 and b to
+45 We
+
+could supposed that the lower tier composite is of capital and unskilled labor, which would then combine
+with skilled labor in the upper tier. However, the literature and associated empirical evidence follows the approach we assume here. See Krusell and others (2000) and Papageorgiou and Saam (2008).
+46 This implies unitary income elasticity of demand for output in both sectors.
+
+42
+collaborate and pull strongly in the desired direction. An increase in b raises real income and
+demand for good 2. The net effect on supply in sector 2 is positive and large when employment in the sector is relatively low-skill intensive. In this case,  > 0 and b  tends to lower 
+while p2  has the opposite effect. But the large rightward shift of the supply curve in sector 2
+weakens the positive effect by limiting the increase in p2 . (Indeed, p2 could decrease.) Conversely, when sector 2 is relatively skill intensive,  < 0 and p2 increases sharply because the
+supply curve shifts left or only a small amount to the right. The negative effect on  of p2 is
+then large relative to the positive effect of b . Many more general equilibrium effects are at
+play in Model 4 than in Model 3. But since the effects are offsetting rather than reinforcing,
+it is unlikely their net impact will be large enough to reverse or significantly ameliorate the
+harsh distributional results in Model 3.
+Figure 10 confirms this conjecture.47 In both runs, high-skill labor gains more and low-skill
+labor loses more in Model 4 than in Model 3.48 Because GDP growth is higher in Model 4,
+the income share of low-skill labor also decreases more.
+
+We generated many other solutions with widely varying values for , , 1 , 2 , 3 , 1 , and
+3 (elasticities of substitution in sector 2 analogous to 1 and 3 in sector 1). The runs always came back looking like either Figure 10a or Figure 10b.49 After investigating further,
+we managed to find some scenarios in which real wages increase for both low- and high-skill
+labor. But the scenarios require that b increase only a little, that 2 not be too large, and that
+other parameters take just the right values.50 And since 2 and the increase in b are small, real
+wages increase only a few percent. Technology optimism is confined to a small, uninteresting
+part of the parameter space that produces small, uninteresting results.
+
+VI. C ONCLUDING R EMARKS
+
+The premise of this paper is that we are in the midst of a technological inflection point, a new
+"machine age" in which artificial intelligence and robots are rapidly developing the capacity
+47 The
+
+differences in relative skill intensity of sectors 1 and 2 in Figure 10 are in line with the data on lowvs. high-skill sectors in Blankenau and Cassou (2011).
+48 The qualitative comparisons change sign in the very long run. Across steady states, the decrease in the lowskill wage and the increases in the high-skill wage and GDP are all greater in Model 3 than in Model 4.
+49 Most notably, the results are very insensitive to , the elasticity of substitution between goods 1 and 2. Raising
+ to five has almost no effect on the runs in Figures 10a and 10b.
+50 The NA sector gets driven out of business in runs with modest values for  or small (as opposed to very
+2
+small) increases in b. Model 4 then produces the same results as Model 3.
+
+43
+Figure 10. Model 4: Transition paths for differing factor intensities in the non-automatable
+sector
+
+(a) The ratio of unskilled to skilled labor in sector 2 is 1.6
+
+(b) The ratio of unskilled to skilled labor in sector 2 is .44
+
+Notes: 2 = 5, 1 = 3 = 1 = 3 = .5, and b increase from .5 to 2. The ratio of skilled to unskilled labor is
+0.967 in sector 1. In left two panels, the lines above the x axis represent s and the lines below represent  .
+
+to do the cognitive as well as physical work of large fractions of the labor force. This idea is
+dominating discussions of technologists, business elites, and policymakers. The macroeconomic literature has lagged behind, with few papers coming to grips with this possibility and
+analyzing the consequences. This has left informal and policy discussions to be based (often
+implicitly) on inappropriate models.
+Here we present a general equilibrium model to analyze the implications of robots for output,
+wages, and inequality. Despite its complexities, this model is the simplest we could think of
+with the critical ingredients: a second type of capital ("robots") that operates alongside traditional capital and labor; and plausible savings behavior in which owners of capital (and
+
+44
+skilled workers, in the variants that include them) do the saving. Most of the economics literature on inequality and technology has focused on the wage differential between high and
+low-skill workers. Or, it has analyzed an undifferentiated capital stock such that technological advances always raise the real wage. Often, the conclusion has been essentially optimistic.
+As with past technological change, some categories of workers or tasks may be harmed, at
+least in the short run. But output and overall wages should increase, as new technologies open
+up more opportunities than they close. As long as labor force skills keep up, we have little to
+worry about.
+We show that this time may indeed be different. In our benchmark model, robots are close
+substitutes for human workers, combining with them in a CES aggregate to produce labor
+services. These labor services then combines with traditional capital in a CES production
+function to produce final output. Even a small increase in the level of robot productivity can
+increase output enormously if the robots and humans are sufficiently close substitutes. The
+basic mechanism is that the introduction of more productive robots initially lowers the wage
+and raises the return to both robots and traditional capital. Large quantities of traditional capital have to be accumulated before a scarcity of human labor raises wages and the return on
+capital declines to normal levels.
+All this is thus very good for output. It is also very bad for distribution. For the real wage,
+understanding the dynamics is critical; the short runwhich can last for generationsis very
+different from the long run. At first, the real wage is likely to fall in absolute terms, even as
+the economy grows. Eventually, the real wage will rise above initial levels, but there are two
+distributional problems. First, "eventually" can take a long time, typically 20 to 50+ years in
+our baseline calibrations. Second, even in the long run, the labor share declines substantially
+and overall inequality rises.
+The benchmark model glosses over many issues that have been central in the policy debate
+about the new machine age. We address these issues in extensions of the baseline model in
+which robots (i) compete only for some tasks (Model 2); (ii) substitute only for unskilled labor while complementing skilled labor (Model 3); and (iii) contribute to production only in
+one sector  elsewhere firms use only labor and traditional capital (Model 4). It turns out,
+perhaps surprisingly, that our main results are robust across the different models. In all variants, for reasonable parameter values, automation is very good for growth and very bad for
+equality, including those reputed to be conducive to technological optimism.
+When robots only compete for some tasks (Model 2), both the impact on growth and on inequality tend to be attenuated, but it remains the case that inequality worsens in the short run
+
+45
+as wages fall and in the long run, as the capital share rises. Allowing for tasks that complement robots does not help as much as one might think, partly because more and more workers compete for those jobs, driving down the overall wage. When, alternatively, we close off
+labor labor mobility between tasks, assuming that robots complement "skilled" labor and substitute for "unskilled" labor (Model 3), the distributional outcome is much more uneven. In
+addition to the fall in the average wage and the rise in the capital share, unskilled workers
+suffer large decreases in absolute and relative wages. Finally, we assume a non-automatable
+sector where robots cannot compete. This also does not really help, again because there are
+only so many of those jobs to go around, and labor chased out of the automatable sector tends
+to drive down wages. Of course, it is not impossible to overturn our main results. If robots do
+only a very small fraction of tasks, contribute to output in only a very small fraction of the
+economy, or are poor substitutes for human workers, then they will not increase inequality.
+But this is another way of restating the premise of the paper: if there is no technological revolution underway of the sort we have been discussing, then there will only be small effects.
+We see three natural extensions of this work as being of high priority. The first is to discuss
+policy responses. Education is often touted as the main solution to the challenges of automation (The White House, 2016, e.g.). We can already see the limits of this view. Education
+can be viewed as investment to convert workers from "unskilled" to "skilled." Doubtless this
+would reduce wage inequality and strengthen the demand for unskilled labor. But can it offset the huge real wage cuts unskilled labor suffers and the decrease in labors overall income
+share at an acceptable cost? And if the answer is yes, how long will it take for wages to increase for those who remain unskilled?
+Another set of policy responses involves transfers from the owners of capital to workers, perhaps in the form of a universal basic income, widely touted by industrialists and technologists as well as some economists. It would be interesting to examine in our framework the
+implications of taxing capital initially (when returns are especially high) to finance ownership
+shares in capital that could be distributed to or held on behalf of workers. Of course, there are
+many practical and conceptual challenges. Among the latter, one worth noting at the outset is
+that growth in our framework derives not directly from technological change or total-factorproductivity but rather from capital accumulation, especially of traditional capital, as robots
+keep returns to this capital higher for longer. A conjecture is that this makes the potential negative implications of capital taxation for growth especially strong. Among the more practical
+considerations, capital taxation is becoming more and more difficult with globalization and
+the increasing capital mobility.
+
+46
+A second set of extensions could use this framework to examine the experience of recent
+decades in the United States and other countries on the technological frontier. Along the lines
+of Nordhaus (2015), but with a more appropriate model, it might be revealing to consider
+whether the recent experience with stagnant wages and falling labor shares can be usefully
+explained with a framework such as ours.
+Finally, we have considered a closed economy at the technological frontier. However, a technological revolution such as we have examined here has profound implications for the international division of labor and prospects for developing countries. The introduction of robots
+is by no means limited to frontier economies. For example, nearly full automation of Chinas
+iPhone factories is apparently underway, with a benchmark of 30% replacement by robots by
+2020, while technology is threatening call center industries in places such as India and the
+Philippines.51 Rodrik (2016) documents the phenomenon of "premature deindustrialization"
+and links it to both globalization and technological change. Extending our models to consider
+these international dimensions could be useful.
+
+51 On
+
+iPhone production, see for example The South China Morning Post (2015). On call centers, see for example Economist (2016). See also World Bank (2016).
+
+47
+R EFERENCES
+Acemoglu, Daron, 2002, Technical change, inequality, and the labor market, Journal of
+economic literature, Vol. 40, No. 1, pp. 772.
+Acemoglu, Daron, and David Autor, 2011a, Skills, tasks and technologies: Implications for
+employment and earnings, Handbook of labor economics, Vol. 4, pp. 10431171.
+, 2011b, Skills, tasks and technologies: Implications for employment and earnings,
+Handbook of labor economics, Vol. 4, pp. 10431171.
+Acemoglu, Daron, and Pascual Restrepo, 2016a, The race between machine and man: Implications of technology for growth, factor shares and employment, Techn. rep., National
+Bureau of Economic Research.
+, 2016b, Robots and Jobs: Evidence rom U.S. Labor Markets, unpublished.
+Autor, David, 2014, Skills, Education, and the Rise of Earnings Inequality Among the
+Other 99 Percent., Science, Vol. 344, pp. 843851.
+Autor, David H, 2015, Why are there still so many jobs? The history and future of workplace automation, The Journal of Economic Perspectives, Vol. 29, No. 3, pp. 330.
+Autor, David H., Lawrence F. Katz, and Alan B. Krueger, 1998, Computing Inequality: Have
+Computers Changed the Labor Market? The Quarterly Journal of Economics, Vol. 113,
+No. 4, pp. 11691213.
+Blankenau, William F, and Steven P Cassou, 2011, Industry estimates of the elasticity of
+substitution and the rate of biased technological change between skilled and unskilled
+labour, Applied Economics, Vol. 43, No. 23, pp. 31293142.
+Brynjolfsson, Erik, and Andrew McAfee, 2014, The second machine age: Work, progress,
+and prosperity in a time of brilliant technologies (WW Norton & Company).
+Brynjolfsson, Erik, and Tom Mitchell, 2017, What can machine learning do? Workforce implications, Science, Vol. 358, No. 6370, pp. 15301534.
+Chirinko, Bob, and Debdulal Mallick, 2017, The Substitution Elasticity, Factor Shares,
+Long-Run Growth, and the Low-Frequency Panel Model, American Economic Journal:
+Macroeconomics, Vol. 9, No. 4, pp. 224253.
+Chirinko, Robert S, 2008, [sigma]: The long and short of it, Journal of Macroeconomics,
+Vol. 30, No. 2, pp. 671686.
+Chui, Michael, James Manyika, and Mehdi Miremadi, 2015, Four fundamentals of workplace automation, McKinsey Quarterly, pp. 19.
+DeCanio, Stephen J, 2016, Robots and humanscomplements or substitutes? Journal of
+Macroeconomics, Vol. 49, pp. 280291.
+Economist, 2016, Call Centresthe end of the linel, Techn. rep., The Economist.
+
+48
+Eden, Maya, and Paul Gaggl, 2018, On the Welfare Implications of Automation, Review of
+Economic Dynamics, Vol. 29, pp. 1543.
+Fallon, Peter R, and P Richard G Layard, 1975, Capital-skill complementarity, income distribution, and output accounting, Journal of political economy, Vol. 83, No. 2, pp. 279
+302.
+Ford, Martin, 2015, Rise of the Robots: Technology and the Threat of a Jobless Future (Basic
+Books).
+Freeman, Richard B, 2015, Who owns the robots rules the world, IZA World of Labor.
+Frey, Carl Benedikt, and Michael A Osborne, 2017, The future of employment: how susceptible are jobs to computerisation? Technological Forecasting and Social Change, Vol.
+114, pp. 254280.
+Grace, Katja, John Salvatier, Allan Dafoe, Baobao Zhang, and Owain Evans, 2017, When
+Will AI Exceed Human Performance? Evidence from AI Experts, Techn. rep.
+Griliches, Zvi, 1969, Capital-skill complementarity, The review of Economics and Statistics, pp. 465468.
+Hamermesh, Daniel, 1993, Labor Demand (Princeton, NJ: Princeton University Press).
+Hemous, David, and Morten Olsen, 2015, The Rise of the Machines: Automation, Horizontal Innovation and Income Inequality, 2015 Meeting Papers 456, Society for Economic
+Dynamics.
+Johnson, George E, 1997, Changes in earnings inequality: the role of demand shifts, The
+Journal of Economic Perspectives, Vol. 11, No. 2, pp. 4154.
+Karabarbounis, Loukas, and Brent Neiman, 2014, The global decline of the labor share,
+The Quarterly Journal of Economics, Vol. 129, No. 1, pp. 61103.
+Klump, Rainer, Peter McAdam, and Alpo Willman, 2007, Factor substitution and factoraugmenting technical progress in the United States: a normalized supply-side system approach, The Review of Economics and Statistics, Vol. 89, No. 1, pp. 183192.
+Krusell, Per, Lee E Ohanian, Jos-Vctor Ros-Rull, and Giovanni L Violante, 2000, Capitalskill complementarity and inequality: A macroeconomic analysis, Econometrica, Vol. 68,
+No. 5, pp. 10291053.
+Nordhaus, William D, 2015, Are We Approaching an Economic Singularity? Information
+Technology and the Future of Economic Growth, Techn. Rep. 21547, National Bureau of
+Economic Research.
+Novales, Alfonso, Esther Fernndez, and Jess Ruz, 2008, Economic growth: theory and
+numerical solution methods (Springer Science & Business Media).
+Oberfield, Ezra, and Devesh Raval, 2014, Micro data and macro technology, Techn. Rep.
+20452, National Bureau of Economic Research.
+
+49
+Papageorgiou, Chris, and Marianne Saam, 2008, Two-level CES Production Technology in
+the Solow and Diamond Growth Models, The Scandinavian Journal of Economics, Vol.
+110, No. 1, pp. 119143.
+Rader, Trout, 1968, Normally, factor inputs are never gross substitutes, Journal of Political
+Economy, Vol. 76, No. 1, pp. 3843.
+Raval, Devesh, 2011, Beyond Cobb-Douglas: Estimation of a CES Production Function with
+Factor Augmenting Technology, Working Papers 11-05, Center for Economic Studies,
+U.S. Census Bureau.
+Rodrik, Dani, 2016, Premature deindustrialization, Journal of Economic Growth, Vol. 21,
+No. 1, pp. 133.
+Sachs, Jeffrey D, Seth G Benzell, and Guillermo LaGarda, 2015, Robots: Curse or blessing?
+A basic framework, Techn. Rep. 21091, National Bureau of Economic Research.
+Sachs, Jeffrey D, and Laurence J Kotlikoff, 2012, Smart machines and long-term misery,
+Techn. Rep. 18629, National Bureau of Economic Research.
+Summers, Lawrence, 2016, A Disaster is Looming for American Men, Washington Post,
+September 29.
+The Atlantic, 2016, The Next Industrial Revolution Could Put Millions Out of Work,
+Techn. rep., TheAtlantic.
+The South China Morning Post, 2015, "Foxconns Foxbot army close to hitting the Chinese
+market, on track tomeet 30 percent automation target, Techn. rep.
+The White House, 2016, Artificial Intelligence, Automation, and the Economy, Techn. rep.
+World Bank, 2016, World Development Report 2016 (Washington, D.C.: The World Bank).
+
+50
+A PPENDIX A. M ODEL 1
+
+Equations (2) - (5) can be solved for rk , rz , w, and Q as a function of K, Z, and b. To express
+the results in an intelligible form, note that the Allen-Uzawa partial elasticity of substitution
+between inputs i and j is
+Ci jC
+.
+i j =
+CiC j
+Applying the formula to equation (2) gives
+
+
+
+
+
+
+Cr f C
+fC f 
+CrrC
+rkCr
+K =
+f + Q
+rk +
+Cr2
+C
+CrC f
+C
+| {z }| {z }
+| {z }| {z }
+KK
+
+1
+
+K
+
+V
+
+= K = KK K rk + 1 V f + Q.
+
+(A1)
+
+The adding-up condition  j  j i j = 0 says that KK K = 1 V . Thus52
+
+
+K = 1 V ( fw w/ f )w + ( fz rz /b f )(rz  b)  rk  + Q,
+| {z }
+| {z }
+L
+
+z
+
+= K = 1 [L w + Z (rz  b)  V rk ] + Q.
+
+(A2)
+
+Equations (3) and (4) are more involved. From (3),
+!
+
+
+
+
+
+
+
+fC f 
+C f rC
+Cf fC
+rkCr
+fzw f
+w fw
+f+
+w
+Z =
+rk +
+CrC f
+C
+C
+fz fw
+f
+C2f
+| {z }| {z }
+| {z }| {z }
+| {z }| {z }
+2
+L
+1
+
+K
+V
+VV
+
+
+
+fzz f
+fz rz /b
++
+(rz  b) + Q  b.
+2
+fz
+f
+| {z }| {z }
+ZZ
+
+z
+
+After making use of the adding-up conditions V VV + 1 K = 0 and z ZZ + L 2 = 0, this
+simplifies to
+Z = 1 K [rk  L w  z (rz  b)] + 2 L [w  (rz  b)] + Q  b,
+= Z = 1 K rk + L (2  1 K )w  (1 z K + 2 L )(rz  b) + Q  b.
+
+(A3)
+
+Executing the same manipulations in equation (4) yields
+(1 L K + 2 z )w = 1 K rk + z (2  1 K )(rz  b) + Q.
+52 Recall
+
+that fz =  f / (rz /b).
+
+(A4)
+
+51
+Last but not least, the zero-profit condition provides
+K rk + L w + Z (rz  b) = 0.
+
+(A5)
+
+Solving (A2) - (A5) for w, rk , rz , and Q is a straightforward, albeit tedious, business. First substitute rz  b = (K rk + L w)/Z in (A2) and (A4). This produces
+Q = K + 1 rk
+
+(A6)
+
+and
+2 w = (1  2 )
+= 2 w =
+
+K
+rk + Q,
+V
+
+1  2  K
+rk + K,
+V
+
+(A7)
+
+as K + V = 1. Turn next to equation (A3). Substitute for Q and rz  b and solve for rk :53
+{1 [1 + K (1 + K /V ] + 2 L K /Z }rk = b + Z  K  [L (2  1 K )
++ (1 z K + 2 L )L /Z ]w,
+a2
+L
+rk = b + Z  K  2 w,
+V
+z
+
+(A8)
+(A9)
+
+where
+a2  1 + 2 L K /z .
+Solve (A8) and (A9) for w and rk :
+1  2 K
+K
+z (b + Z) + K,
+1 2
+1
+Z (b + Z)  V K
+rk =
+.
+1
+w =
+
+(A10)
+(A11)
+
+Substitute for w and rk in (A5) to get the solution for rz . After considerable simplification, the
+solution reads
+
+
+2 z K + 1 L
+K
+2  z  K + 1  L
+rz = 1 
+b 
+Z + K.
+(A12)
+1 2
+1 2
+1
+
+53 Here
+
+and in subsequent derivations we make use of the links between the aggregate cost shares and the cost
+shares in the composite labor input (Z = z V and L = L V ).
+
+52
+The Long-Run Outcome
+Across steady states where rk = rz = 0, equations (A5) and A6) yield
+w =
+
+Z
+z
+b =
+b,
+L
+L
+
+Q = K.
+
+(A13)
+(A14)
+
+From (A7) and (A13),
+K = Q = 2 w,
+L
+= K = Q = 2 b.
+z
+
+(A15)
+
+The steady-state version of (A9) is
+Z = K + 2
+
+L
+w  b,
+z
+
+= Z = (2 /L  1)b.
+
+(A16)
+
+Solving for the Transition Path
+The core dynamic system is comprised of
+K = Ik   K
+
+(8)
+
+Z = Iz   Z
+
+(9)
+
+b = s(b  b),
+
+s>0
+
+(12)
+
+and the two Euler equations for investment
+
+
+
+2
+c
+vk 
+vk Ik
+Ik = k  +  +
++
+   rk
+K
+c
+2 K
+
+
+
+2
+vz 
+c
+vz Iz
+Iz = z  +  +
++
+   rz
+Z
+c
+2 Z
+
+(10)
+(11)
+
+wherek  1+vk (Ik /K  ) and z  1+vz (Iz /Z  ). To get the system in the right form, we
+need pseudo reduced-form solutions that relate rk , rz , and c to K, Z, b, Ik , and Iz . Equations
+(A11) and (A12) supply the requisite solutions for rk and rz . For c, the private agents budget
+
+53
+constraint gives
+
+2
+
+
+v
+I
+I
+k
+k
+k
+c = rk K + rz Z + K rk + Z rz  Ik  Iz 
+  K  vk
+  Ik
+2 K
+K
+
+
+2
+
+
+
+
+
+vz Iz
+Ik
+Iz
+Iz
+I
+Ik
+z
+
+K 
+  Z  vz
+  Iz + vz
+
+Z.
++ vk
+K
+K
+2 Z
+Z
+Z
+Z
+Substitute for rk and rz from (A11) and (A12):
+c = rk K + rz Z + rk K[n2 (Z/Z + b/b)  n1 K/K] + rz Z[(1  n3 )b/b  n3 Z/Z + n4 K/K]
+2
+
+
+
+
+
+Ik
+v
+I
+I
+I
+k
+k
+k
+k
+ Ik  Iz 
+  K  vk
+  Ik + vk
+
+K
+2 K
+K
+K
+K
+
+2
+
+
+
+
+Iz
+Iz
+Iz
+vz Iz
+
+  Z  vz
+  Iz + vz
+
+
+Z,
+2 Z
+Z
+Z
+Z
+= c = rk (1 + n4 Z/K  n1 )(Ik   K) + rz (1 + n2 K/Z  n3 )(Iz   Z)
+
+2
+
+
+I
+v
+I
+k
+k
+k
++ [rk n2 K/b + rz (1  n3 )Z/b]s(b  b)  Ik  Iz 
+  K  vk
+  Ik
+2 K
+K
+
+
+
+2
+
+
+
+
+Ik
+Ik
+Iz
+Iz
+Iz
+vz Iz
+
++ vk
+
+  Z  vz
+  Iz + vz
+
+K 
+Z,
+(A17)
+K
+K
+2 Z
+Z
+Z
+Z
+where
+n1 = V /1 ,
+n2 = Z /1 ,
+2 z K + 1 L
+,
+n3 =
+1 2
+n4 = K /1 .
+Linearize (A17) around a steady state. The result is54
+c = ( +  )u1 (dIk   dK) + ( +  )u2 (dIz   dZ)  u3 sdb  Ik  Iz ,
+
+(A18)
+
+adjustment cost terms drop out because Ik /K   , Iz /Z   , K, Z, Ik , and Iz all equal zero evaluated at a
+steady state.
+
+54 The
+
+54
+where the differentials denote deviations from the steady state and
+u1 = 1 + n4 Z/K  n1 ,
+u2 = 1 + n2 K/Z  n3 ,
+u3 =
+
+ +
+[n2 K + (1  n3 )Z].
+b
+
+Now linearize (10). The first step generates
+c
+vk
+vk 
+Ik =
++ ( +  ) (dIk   dK)  ( +  )rk .
+K
+c
+K
+Substituting for c and rk from (A10) and (A17) leads to
+
+
+ n c
+vk c   
+vk c 
+1
+1+
+Ik + Iz = ( +  ) u1 +
+dIk + ( +  )u2 dIz + ( +  )
+ u1 
+K
+K
+K
+
+
+
+ n c
+
+( +  )n2 c
+ vk c
+2
+
+dK  ( +  )
++ u2  dZ 
++ u3 s db.
+K
+Z
+b
+(A19)
+Linearizing (11) yields
+vz 
+vz
+c
++ ( +  ) (dIz   dZ)  ( +  )rz
+Iz =
+Z
+c
+Z
+and the symmetric solution
+
+
+ n c
+
+vz c   
+vz c 
+4
+Iz + Ik = ( +  )u1 dIk + ( +  ) u2 +
+dIz  ( +  )
++ u1  dK
+1+
+Z
+K
+Z
+
+
+
+ vz c
+( +  )c(1  n3 )
+n3 c
+ u2  
+dZ 
++ u3 s db.
++ ( +  )
+Z
+Z
+b
+(A20)
+The linearized versions of (8), (9), and (12) are simply
+K = dIk   dK,
+
+(A21)
+
+Z = dIz   dZ,
+
+(A22)
+
+b = sdb.
+
+(A23)
+
+55
+The complete linearized system is thus
+
+
+ 
+
+
+e1 1 0 0 0
+Ik
+( +  )h1 ( +  )u2 e3 e4 g1
+Ik  Ik
+
+
+ 
+
+
+ 1 e2 0 0 0   Iz   ( +  )u1 ( +  )h2 e5 e6 g2   Iz  Iz 
+
+
+ 
+
+
+ 0 0 1 0 0   K  = 
+
+
+1
+0
+
+0
+0 
+
+
+ 
+  K  K  ,
+
+
+ 
+
+
+0
+1
+0
+
+0   Z  Z 
+ 0 0 0 1 0   Z  
+0 0 0 0 1
+b
+0
+0
+0
+0
+s
+b  b
+(A24)
+where
+e1 = 1 + vk c/K,
+e2 = 1 + vz c/Z,
+h1 = u1 + vk c/K,
+h2 = u2 + vz c/Z,
+e3 = ( +  ) (n1 c/K  u1    vk c/K) ,
+e4 = ( +  ) (n2 c/Z + u2  ) ,
+e5 = ( +  ) (n4 c/K + u1  ) ,
+e6 = ( +  ) (n3 c/Z  u2    vz c/Z) ,
+g1 = ( +  )n2 c/b + u3 s,
+g2 = ( +  )(1  n3 )c/b + u3 s.
+Since b, K, and Z are state variables, the steady state is saddle-point stable iff the system in
+(A23) has three negative eigenvalues. This condition held in all runs. The solutions for the
+transition path were generated by substituting the solutions for K(t), Z(t), and b(t) into (2) (5) and solving for w, Q, rk , and rz with
+[ark11 + (1  a) f 11 ]1/(11 )
+,
+C=
+n
+f = [ew12 + (1  e)z(rz /b)12 ]1/(12 ) .
+Space does not allow us to present detailed solutions for Models 2, 3, and 4. These models are
+more complicated and their solutions involve more algebra. The solution procedure, however,
+is essentially the same as in Model 1.
+
+56
+A PPENDIX B. T HE S INGULARITY S CENARIO
+
+When robots and human labor are perfect substitutes in Model 1, the economy achieves sustained, endogenous growth. To solve this case, we set 1 equal to unity and work with the
+firms production function55
+Q = nK  (L + bZ)1 .
+(B1)
+On the balanced growth path, ratios of variables converge to stationary values. Accordingly,
+we scale all variables by K. Let q  Q/K, `  L/K, z  Z/K, iz  Iz /K, ik = Ik /K. and gk 
+K/K. Then
+q = n(` + bz)1
+(B2)
+and the new versions of the private agents budget constraint and the accumulation equations
+for K and Z are
+gk = ik   ,
+
+(B3)
+
+Z/K = iz   ,
+= z = iz  ( + gk )z.
+
+(B4)
+
+Transforming the Euler equations for investment involves a little more work. First rewrite
+equations (10) and (11) as
+
+
+c/K
+vk
+Ik
++ (ik   )2  rk ,
+(B5)
+vk = k  +  +
+K
+c
+2
+
+
+
+2
+c/K
+vz iz
+vz Iz
+= z  +  +
++
+   rz ,
+(B6)
+zK
+c
+2 z
+where c  c/K, k  1 + vk (ik   ), and z  1 + vz (iz /z   ), and
+rk = QK = n (` + bz)1 ,
+rz = QZ =
+
+55 For
+
+bn(1   )
+.
+(` + bz)
+
+simple production functions, there are no advantages to working with the firms cost function. Also, the
+mechanics of solving endogenous growth models with Cobb-Douglas technology are familiar from the existing
+literature.
+
+57
+Now
+Ik /K = dik /dt + ik gk ,
+Iz /K = diz /dt + iz gk ,
+c/K = d c/dt + cgk .
+Substitute these expressions into (B5) and (B6):
+
+
+
+
+d c/dt
+gk vk
+dik
++ ik gk = k  +  +
++ + (ik   )2  rk ,
+vk
+dt
+c
+
+2
+
+
+
+
+vz diz
+d c/dt
+gk vz iz
++ iz gk = z  +  +
++ + (   )2  rz .
+z dt
+c
+
+2 z
+
+(B7)
+(B8)
+
+The Long-Run Equilibrium Growth Rate
+The economy converges asymptotically to a balanced growth path where dik /dt = diz /dt =
+d c/dt = z = ` = 0 and ik   = iz /z   = gk . Imposing these conditions in (B2), (B7), and
+(B8) gives
+q = (bz)1 ,
+vk
+vk gk (gk +  ) = k ( +  + gk /) + g2k  rk ,
+2
+vz 2
+vz gk (gk +  ) = z ( +  + gk /) + gk  rz ,
+2
+
+(B9)
+(B10)
+(B11)
+
+with
+rk = n (bz)1 ,
+rz =
+
+nb(1   )
+.
+(bz)
+
+Equations (B9) - (B11) can be solved for q, gk , and z as a function of b. Since z and q are constant in the long run, gz = gk = gq = g. After replacing gk with g and combining terms in
+(B10) and (B11), we have
+n
+hg
+io
+g 1 + vk
+(2  ) +  = (rk     ),
+(B12)
+n
+h 2
+io
+g
+g 1 + vz
+(2  ) +  = (rz     ).
+(B13)
+2
+
+58
+The Transition Path
+For
+bo =
+
+ +
+,
+L
+
+rz = rk =  +  and g = 0 at the initial equilibrium. Any small increase in b then leads to
+permanent growth. The transition path is governed by (B4), (B7), (B8), the law of motion for
+b
+b = s(b  b), s > 0
+(12)
+and
+` = `gk ,
+
+(B14)
+
+a self-contained system of five differential equations in z, ik , iz , b, and `. ( rz and rk depend on
+b, z, `, while the private agents budget constraint links d c/dt to the variables in the system).
+The solution procedure is the same as in Appendix A.56
+
+56 Two
+
+points should be noted. First, the adjustment cost terms do not drop out in the linearized system because
+ik   = iz /z   = g 6= 0 on the balanced growth path. Second, the linearized version of (B14) is ` = g`.
+
+59
+A PPENDIX C. M ODEL 4
+
+Model 4 is Model 3 plus a second sector that produces a non-automatable good using capital,
+skilled labor, and unskilled labor. The factor demands and zero-profit conditions in the two
+sectors are
+K1 = Ch1 h1r Q1 ,
+
+(C1)
+
+Z = C1f fz Q1 /b,
+
+(C2)
+
+L1 = C1f fw Q1 ,
+
+(C3)
+
+S1 = Ch1 h1w Q1 ,
+
+(C4)
+
+K2 = Ch2 gr Q2 ,
+
+(C5)
+
+L2 = Cw2 Q2 ,
+
+(C6)
+
+S2 = Ch2 gw Q2
+
+(C7)
+
+1 = C1 (rk1 , ws , w, rz /b),
+
+(C8)
+
+p2 = C1 (rk2 , ws , w),
+
+(C9)
+
+where p2 is the relative price of good 2 and
+C1 =
+
+[ah11 + (1  a) f 11 ]1/(11 )
+,
+n1
+
+f = [ew12 + (1  e)(rz /b)12 ]1/(12 ) ,
+13
+3 ]1/(13 ) ,
+h = [ jrk1
++ (1  j)w1
+s
+
+C2 =
+
+[ug11 + (1  u)w11 ]1/(11 )
+,
+n2
+13 1/(13 )
+
+g = [vrk2 13 + (1  v)ws
+
+]
+
+.
+
+Wages adjust to equate demand to the fixed supplies of low- and high-skill labor:
+L1 + L2 = L,
+
+(C10)
+
+S1 + S2 = S.
+
+(C11)
+
+Capitalists and skilled labor belong to an extended family that chooses c, Ik1 , Ik2 , and Iz to
+maximize
+Z  11/
+c
+U=
+et ,
+(C12)
+1
+
+1/
+0
+
+60
+subject to
+
+2
+vk Ik1
+pc + Iz + Ik1 + Ik2 = rk1 K1 + rk2 K2 + rz Z + ws S 
+  K1
+2 K1
+
+2
+
+2
+vk Ik2
+vz Iz
+  K2 
+  Z,
+
+2 K2
+2 Z
+
+(C13)
+
+K1 = Ik1   K1 ,
+
+(C14)
+
+K2 = Ik2   K2 ,
+
+(C15)
+
+Z = Iz   Z,
+
+(C16)
+
+where
+(1)/
+
+c = [m1/ c1
+
+(1)/ /(1)
+
++ (1  m)1/ c2
+
+]
+
+,
+
+1/(1)
+p = [m + (1  m)p1
+.
+2 ]
+
+c is a CES aggregate of the two consumer goods, with substitution elasticity . The exact consumer price index is p and the automatable good serves as the numeraire. Good 2 is a pure
+consumption good while good 1 may be used either for consumption or investment. Hence p
+multiplies c but not Ik1 or Ik2 in the budget constraint (C13). The solution to the optimization
+problem in (C12) - (C16) generates three Euler equations for Iz , Ik1 , and Ik2 :
+
+
+
+2
+vk Ik1
+c
+vk 
++
+Ik1 = [1 + vk (Ik1 /K1   )]  +  +
+   rk1 ,
+K1
+c
+2 K1
+
+
+2
+
+vk 
+vk Ik2
+c
++
+   rk2 ,
+Ik2 = [1 + vk (Ik2 /K2   )]  +  +
+K2
+c
+2 K2
+
+
+2
+
+vz Iz
+vz 
+c
+Iz = [1 + vz (Iz /Kz   )]  +  +
++
+   rz .
+Z
+c
+2 Z
+
+(C17)
+(C18)
+(C19)
+
+Finally, the model is closed by the market-clearing condition for the non-automatable good.
+Since low-skill workers do not save,
+ 
+p2
+Q2 = (1  m)
+(c + L),
+(C20)
+p
+where   w/p.57
+
+57 Capitalists,
+
+low- and high-skill labor have identical homothetic preferences, qua consumers. Demand depends
+therefore only on aggregate consumption, not the distribution of consumption spending across agents.
+
+
