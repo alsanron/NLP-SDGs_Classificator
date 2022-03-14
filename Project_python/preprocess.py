@@ -1,15 +1,14 @@
-# Preprocess the validation files and create an array
+# Functions that return the training and validation data used for the models training
 
 import os
 import difflib
 from numpy import empty
+import pandas as pd
 import tools
 
-refPath = "ref/Validation/"
 
-def get_validation_files(preprocess=True):
+def get_validation_files(preprocess=True, refPath="ref/Validation/"):
     filesDict = dict()
-    
     for folder in os.listdir(refPath):
         if os.path.isdir(refPath + folder):
             sdgId = int(folder.replace("SDG",""))
@@ -25,8 +24,22 @@ def get_validation_files(preprocess=True):
     if preprocess:
         # Only checks when new files are created
         check_dictionary_valid(filesDict)
-                
+    nFiles = len(filesDict.keys())
+    print("- {} validation files were found".format(nFiles))          
     return filesDict
+
+
+
+def get_training_files(refPath="ref/Training/"):
+    ercData = pd.read_csv(refPath + "ERC.csv", delimiter=",")
+    nFiles = len(ercData["Abstract"])
+    filesTraining = []
+    for ii in range(0, nFiles):
+        filesTraining.append([ercData["Abstract"][ii], ercData["Author Keywords"][ii]])
+    
+    print("- {} training files were found".format(nFiles))    
+    return filesTraining
+        
         
         
 def preprocess_files(folderPath):

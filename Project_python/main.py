@@ -1,10 +1,7 @@
 # Tests an already trained model for classifying a given input paper into the corresponding Sustainable Development goals
 
-from preprocess_validation_files import get_validation_files
+from preprocess import get_validation_files, get_training_files
 
 validFilesDict = get_validation_files(preprocess=False)
-values = list(validFilesDict.values())
+trainFiles = get_training_files()
 
-fp = open(values[0][0], 'r')
-print(fp.read())
-fp.close()
