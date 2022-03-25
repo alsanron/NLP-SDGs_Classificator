@@ -7,10 +7,12 @@ import pandas as pd
 import tools
 
 
-def get_validation_files(preprocess=True, refPath="ref/Validation/"):
+def get_validation_files(refPath, preprocess=True):
+    # Returns a dictionary where the keys are the name of each papers, and the values are an array where:
+    # [0] = path of each file, [1] = SDGs to which the paper belongs to
     filesDict = dict()
     for folder in os.listdir(refPath):
-        if os.path.isdir(refPath + folder):
+        if os.path.isdir(refPath + folder) and not(folder == "Temp_out"):
             sdgId = int(folder.replace("SDG",""))
             folderPath = refPath + folder + "/"
             if preprocess:
@@ -30,12 +32,21 @@ def get_validation_files(preprocess=True, refPath="ref/Validation/"):
 
 
 
-def get_training_files(refPath="ref/Training/"):
-    ercData = pd.read_csv(refPath + "ERC.csv", delimiter=",")
-    nFiles = len(ercData["Abstract"])
+def get_training_files(refPath, sdg=-1):
+    sdgsPath = refPath + "SDGs_description/"
+    if sdg > 0:
+        sdgStart = "{:02d}".format(sdg)
+    else:
+        sdgStart = "" # it's always true
+    
     filesTraining = []
-    for ii in range(0, nFiles):
-        filesTraining.append([ercData["Abstract"][ii], ercData["Author Keywords"][ii]])
+    for file in os.listdir(sdgsPath):
+        if file.endswith(".txt") and file.startswith(sdgStart):
+            f = open(sdgsPath + file, 'r', encoding="ascii")
+            text = f.read()
+            f.close()
+            filesTraining.append(text)
+    nFiles = len(filesTraining)
     
     print("- {} training files were found".format(nFiles))    
     return filesTraining
@@ -70,8 +81,4 @@ def check_dictionary_valid(filesDict):
                 continue
             else:
                 raise Exception("Process exited by user...")
-
-
-# filesDict = get_validation_files(preprocess=False)
-# print(filesDict.values())
 
