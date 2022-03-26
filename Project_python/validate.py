@@ -77,9 +77,11 @@ def validate_model(model, vectorizer, topics_association, sdgs_mapped, validFile
         df['valid'] = validPredict
         df.to_csv(pathToCsv)
         
-    return [percOk, percents, okPerSDG, countPerSDG]
+    return [percOk, percents, okPerSDG, countPerSDG, exclude_sdg]
         
-def compute_statistics(realSDGs, predictedSDGs, validPredict, excludedSDGs, pathToWrite="", verbose=True):
+def compute_statistics(realSDGs, predictedSDGs, validPredict, excludedSDGs, 
+                       pathToWrite="", 
+                       verbose=True):
     if len(pathToWrite) > 3:
         file = open(pathToWrite,'w')
     else:

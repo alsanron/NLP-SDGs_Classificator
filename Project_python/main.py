@@ -6,6 +6,7 @@ import pandas as pd
 import train
 import json
 import validate
+import optimize
 
 
 #%% Configuration
@@ -27,7 +28,7 @@ f.close()
 #%%  17 models are trained for classifying each SDG
 multigrams = (1,1)
 nTopics = 1
-nTopWords = 30
+nTopWords = 25
 res_singleSDG = []
 df = pd.DataFrame()
 colNames = []
@@ -43,26 +44,16 @@ df.columns = colNames
 df.to_csv("out/single_topics_n{}.csv".format(17))
 
 #%% 1 model with nTopics is trained with the same documents. This model is used for text classification. Each topic gets associated with the real SDG based on its similarity with the topics obtained in the 17 models.
-nTopics = 17
-trainFiles = get_training_files(refPath=paths["training"])
-nmf_res = train.train_nmf(trainFiles, n_topics=nTopics, ngram=multigrams)
-topics = train.get_topics(model=nmf_res[0], vectorizer=nmf_res[1], n_top_words=nTopWords, n_topics=nTopics)
-[topics_association, sdgs_coh, sdgs_found] = validate.map_model_topics_to_sdgs(res_singleSDG, topics, 
-                                                                               pathToCsv=paths["out"]+"association_map.csv", 
-                                                                               verbose=True)
-validFilesDict = get_validation_files(preprocess=False, refPath=paths["validation"])
-[percOk, percents, okPerSDG, countPerSDG] = validate.validate_model(model=nmf_res[0], 
-                                                                    vectorizer=nmf_res[1],                         topics_association=topics_association,                        sdgs_mapped=sdgs_found,                         validFilesDict=validFilesDict,
-                                                                    pathToCsv=paths["out"]+"results.csv")
 
-#%% Show how good the model fits the validation files, and extract the topics
-# topics = train.get_topics(model=model_nmf, vectorizer=vect_nmf, n_top_words=nTopWords, n_topics=nTopics)
-# topics.to_csv("out/topics_n{}.csv".format(nTopics))
+#%% BRUT FORCE OPTIMIZATION OF THE NUMBER_TOPICS AND MULTIGRAMS
+range_topics = range(15,24,2)
+range_multigrams = range(1,4)
+optimize.nmf_brut_force(paths, single_sdgs_models=res_singleSDG, 
+                        n_top_words=nTopWords, 
+                        range_topics=range_topics, 
+                        range_multigrams=range_multigrams)
 
-# Optimize the number of topics for the best fit with the files. Maybe 17 does not imply ok.
+#%% COMPARISON OF THE RESULTS WHEN USING ORIGINAL TEXTS AND ADDING NEW CORPORA: ERC Papers
 
-# Show how good classifies the model the new test files according to the previous class
 
-# Optimize the number of topics to maximize the classification accuracy
-
-# Introduce as variable the multigrams, and test if the results are improved
+#%% COMPARISON OF THE RESULTS
