@@ -27,7 +27,7 @@ f.close()
 #%%  17 models are trained for classifying each SDG
 multigrams = (1,1)
 nTopics = 1
-nTopWords = 20
+nTopWords = 30
 res_singleSDG = []
 df = pd.DataFrame()
 colNames = []
@@ -43,9 +43,7 @@ df.columns = colNames
 df.to_csv("out/single_topics_n{}.csv".format(17))
 
 #%% 1 model with nTopics is trained with the same documents. This model is used for text classification. Each topic gets associated with the real SDG based on its similarity with the topics obtained in the 17 models.
-multigrams = (1,1)
-nTopics = 20
-nTopWords = 20
+nTopics = 17
 trainFiles = get_training_files(refPath=paths["training"])
 nmf_res = train.train_nmf(trainFiles, n_topics=nTopics, ngram=multigrams)
 topics = train.get_topics(model=nmf_res[0], vectorizer=nmf_res[1], n_top_words=nTopWords, n_topics=nTopics)
@@ -53,8 +51,9 @@ topics = train.get_topics(model=nmf_res[0], vectorizer=nmf_res[1], n_top_words=n
                                                                                pathToCsv=paths["out"]+"association_map.csv", 
                                                                                verbose=True)
 validFilesDict = get_validation_files(preprocess=False, refPath=paths["validation"])
-validate.validate_model(model=nmf_res[0], vectorizer=nmf_res[1], 
-                        topics_association=topics_association, validFilesDict=validFilesDict)
+[percOk, percents, okPerSDG, countPerSDG] = validate.validate_model(model=nmf_res[0], 
+                                                                    vectorizer=nmf_res[1],                         topics_association=topics_association,                        sdgs_mapped=sdgs_found,                         validFilesDict=validFilesDict,
+                                                                    pathToCsv=paths["out"]+"results.csv")
 
 #%% Show how good the model fits the validation files, and extract the topics
 # topics = train.get_topics(model=model_nmf, vectorizer=vect_nmf, n_top_words=nTopWords, n_topics=nTopics)
