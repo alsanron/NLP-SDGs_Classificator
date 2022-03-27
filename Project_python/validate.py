@@ -23,6 +23,7 @@ def validate_model(model, vectorizer, topics_association, sdgs_mapped, validFile
     if len(pathToCsv) > 4:
         saveCSV = True
     paperNames = []; paperPaths = []; paperRealSDGs = []; paperPredictSDGs = []; validPredict = []
+    returnValidFiles = []
     for key, value in validFilesDict.items():
         fileName = key
         filePath = value[0]
@@ -50,6 +51,7 @@ def validate_model(model, vectorizer, topics_association, sdgs_mapped, validFile
             
         if sorted(fileSDGs) == sorted(predictSDGs):
             valid = True
+            returnValidFiles.append(tokens)
         else:
             valid = False
         if verbose:
@@ -77,7 +79,7 @@ def validate_model(model, vectorizer, topics_association, sdgs_mapped, validFile
         df['valid'] = validPredict
         df.to_csv(pathToCsv)
         
-    return [percOk, percents, okPerSDG, countPerSDG, exclude_sdg]
+    return [percOk, percents, okPerSDG, countPerSDG, exclude_sdg, returnValidFiles]
         
 def compute_statistics(realSDGs, predictedSDGs, validPredict, excludedSDGs, 
                        pathToWrite="", 

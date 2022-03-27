@@ -33,7 +33,7 @@ res_singleSDG = []
 df = pd.DataFrame()
 colNames = []
 for ii in range(1, 18):
-    trainFiles = get_training_files(refPath=paths["training"], sdg=ii)
+    trainFiles = get_training_files(refPath=paths["training"], sdg=ii, abstracts=False)
     nmf_res = train.train_nmf(trainFiles, n_topics=nTopics, ngram=multigrams)
     res_singleSDG.append(nmf_res)
     topics = train.get_topics(model=res_singleSDG[ii - 1][0], vectorizer=res_singleSDG[ii - 1][1], n_top_words=nTopWords,       n_topics=nTopics)
@@ -46,14 +46,31 @@ df.to_csv("out/single_topics_n{}.csv".format(17))
 #%% 1 model with nTopics is trained with the same documents. This model is used for text classification. Each topic gets associated with the real SDG based on its similarity with the topics obtained in the 17 models.
 
 #%% BRUT FORCE OPTIMIZATION OF THE NUMBER_TOPICS AND MULTIGRAMS
-range_topics = range(15,24,2)
-range_multigrams = range(1,4)
-optimize.nmf_brut_force(paths, single_sdgs_models=res_singleSDG, 
-                        n_top_words=nTopWords, 
-                        range_topics=range_topics, 
-                        range_multigrams=range_multigrams)
+# range_topics = range(15,24,2)
+# range_multigrams = range(1,4)
+# optimize.nmf_brut_force(paths, single_sdgs_models=res_singleSDG, 
+#                         n_top_words=nTopWords, 
+#                         range_topics=range_topics, 
+#                         range_multigrams=range_multigrams)
 
 #%% COMPARISON OF THE RESULTS WHEN USING ORIGINAL TEXTS AND ADDING NEW CORPORA: ERC Papers
+[percOk, percents, okPerSDG, countPerSDG, exclude_sdg, returnValidFiles] = optimize.train_validate_model(paths, 
+                        single_sdgs_models=res_singleSDG, n_top_words=nTopWords, 
+                        n_topics=17, n_multigrams=(1,1), 
+                        abstracts=True,
+                        alpha_w=0.0000)
+print("OK: {:.2f}, Excluded: {}".format(percOk, exclude_sdg))
 
 
-#%% COMPARISON OF THE RESULTS
+#%% Those files which were classified as valid, are returned as training files and used for the model training in the next iteration
+nIterations = 3
+returnValidFiles = []
+for ii in range(0, nIterations):
+    print("Iteration #{}".format(ii + 1))
+    [percOk, percents, okPerSDG, countPerSDG, exclude_sdg, returnValidFiles] = optimize.train_validate_model(paths, 
+                    single_sdgs_models=res_singleSDG, n_top_words=nTopWords, 
+                    n_topics=17, n_multigrams=(1,1), 
+                    abstracts=True,
+                    alpha_w=0.0000,
+                    new_training=returnValidFiles)
+    print("New training files: {}, OK: {:.2f}, Excluded: {}".format(len(returnValidFiles), percOk, exclude_sdg))

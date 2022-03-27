@@ -32,7 +32,7 @@ def get_validation_files(refPath, preprocess=True):
 
 
 
-def get_training_files(refPath, sdg=-1):
+def get_training_files(refPath, sdg=-1, abstracts=False):
     sdgsPath = refPath + "SDGs_description/"
     if sdg > 0:
         sdgStart = "{:02d}".format(sdg)
@@ -46,6 +46,16 @@ def get_training_files(refPath, sdg=-1):
             text = f.read()
             f.close()
             filesTraining.append(text)
+    if abstracts:
+        # Then the abstracts are also returned
+        absPath = refPath + "Abstracts/"
+        for file in os.listdir(absPath):
+            if file.endswith(".txt"):
+                f = open(absPath + file, 'r', encoding="utf-8")
+                text = f.read()
+                f.close()
+                filesTraining.append(text)     
+            
     nFiles = len(filesTraining)
     
     print("- {} training files were found".format(nFiles))    

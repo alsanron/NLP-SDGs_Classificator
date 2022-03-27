@@ -11,7 +11,7 @@ def train_model(trainData, validData, model="nmf"):
     print("hola")
     
     
-def train_nmf(trainData, n_topics, ngram=(1,1)):
+def train_nmf(trainData, n_topics, ngram=(1,1), alpha_w=0.0):
     tokens = []
     for text in trainData:
         tokens.append(" ".join(tools.lemmatize_text(text)))
@@ -23,10 +23,11 @@ def train_nmf(trainData, n_topics, ngram=(1,1)):
                                  #token_pattern=u'(?u)\b\w*[a-zA-Z]\w*\b' 
                                  )
     vectorized_data = vectorizer.fit_transform(tokens)
-    model_nmf = NMF(n_components=n_topics, random_state=5, verbose=0)
+    model_nmf = NMF(n_components=n_topics, random_state=5, verbose=0, alpha_W=alpha_w)
     model_nmf.fit(vectorized_data)
     
     return [model_nmf, vectorizer]
+
 
 def get_topics(model, vectorizer, n_top_words, n_topics):
     # Returns the n_top_words for each of the n_topics with which a model has been trained
