@@ -5,7 +5,7 @@ import difflib
 from numpy import empty
 import pandas as pd
 import tools
-
+import temp
 
 def get_validation_files(refPath, preprocess=True):
     # Returns a dictionary where the keys are the name of each papers, and the values are an array where:
@@ -26,9 +26,19 @@ def get_validation_files(refPath, preprocess=True):
     if preprocess:
         # Only checks when new files are created
         check_dictionary_valid(filesDict)
-    nFiles = len(filesDict.keys())
+    
+    abstractsFiles = temp.get_validation_files(refPath)
+    newDict = dict()
+    for paperName, abstract in abstractsFiles:
+        newDict[paperName] = filesDict[paperName]
+    
+    
+    # nFiles = len(filesDict.keys())
+    # print("- {} validation files were found".format(nFiles))          
+    # return filesDict
+    nFiles = len(newDict.keys())
     print("- {} validation files were found".format(nFiles))          
-    return filesDict
+    return newDict
 
 
 

@@ -36,7 +36,7 @@ def nmf_brut_force(paths, single_sdgs_models, n_top_words, range_topics, range_m
             df = df.append(df_new, ignore_index=True)
     df.to_csv(paths['out'] + "force_brut_optimization.csv") 
     
-def train_validate_model(paths, single_sdgs_models, n_top_words, n_topics, n_multigrams, alpha_w=0.0, abstracts=False, new_training=[]):
+def train_validate_model(paths, single_sdgs_models, n_top_words, n_topics, n_multigrams, alpha_w=0.0, abstracts=False, new_training=[], verbose=False):
     trainFiles = get_training_files(refPath=paths["training"], abstracts=abstracts)
     if len(new_training) > 1:
         for file in new_training:
@@ -49,6 +49,6 @@ def train_validate_model(paths, single_sdgs_models, n_top_words, n_topics, n_mul
     validFilesDict = get_validation_files(preprocess=False, refPath=paths["validation"])
     [percOk, percents, okPerSDG, countPerSDG, exclude_sdg, returnValidFiles] = validate.validate_model(model=nmf_res[0], 
                                                                         vectorizer=nmf_res[1],                         topics_association=topics_association,                        sdgs_mapped=sdgs_found,                         validFilesDict=validFilesDict,
-                                                                        verbose=False,
+                                                                        verbose=verbose,
                                                                         pathToCsv=paths["out"]+"results.csv")
     return [percOk, percents, okPerSDG, countPerSDG, exclude_sdg, returnValidFiles]
