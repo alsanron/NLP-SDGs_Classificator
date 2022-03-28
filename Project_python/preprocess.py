@@ -7,7 +7,7 @@ import pandas as pd
 import tools
 import temp
 
-def get_validation_files(refPath, preprocess=True):
+def get_validation_files(refPath, preprocess=True, abstracts_only=False):
     # Returns a dictionary where the keys are the name of each papers, and the values are an array where:
     # [0] = path of each file, [1] = SDGs to which the paper belongs to
     filesDict = dict()
@@ -26,36 +26,39 @@ def get_validation_files(refPath, preprocess=True):
     if preprocess:
         # Only checks when new files are created
         check_dictionary_valid(filesDict)
+        
+    if abstracts_only:
+        abstractsFiles = temp.get_validation_files(refPath)
+        newDict = dict()
+        for paperName, abstract in abstractsFiles:
+            newDict[paperName] = filesDict[paperName]    
+        nFiles = len(newDict.keys())
+        print("- {} validation files were found".format(nFiles))          
+        return newDict
     
-    abstractsFiles = temp.get_validation_files(refPath)
-    newDict = dict()
-    for paperName, abstract in abstractsFiles:
-        newDict[paperName] = filesDict[paperName]
-    
-    
-    # nFiles = len(filesDict.keys())
-    # print("- {} validation files were found".format(nFiles))          
-    # return filesDict
-    nFiles = len(newDict.keys())
+    nFiles = len(filesDict.keys())
     print("- {} validation files were found".format(nFiles))          
-    return newDict
+    return filesDict
 
 
 
 def get_training_files(refPath, sdg=-1, abstracts=False):
-    sdgsPath = refPath + "SDGs_description/"
+    sdgsPaths = [refPath + "SDGs_description/",
+                 refPath + "SDGs_progress/"
+                 ]
     if sdg > 0:
         sdgStart = "{:02d}".format(sdg)
     else:
         sdgStart = "" # it's always true
     
     filesTraining = []
-    for file in os.listdir(sdgsPath):
-        if file.endswith(".txt") and file.startswith(sdgStart):
-            f = open(sdgsPath + file, 'r', encoding="ascii")
-            text = f.read()
-            f.close()
-            filesTraining.append(text)
+    for path in sdgsPaths:
+        for file in os.listdir(path):
+            if file.endswith(".txt") and file.startswith(sdgStart):
+                f = open(path + file, 'r', encoding="utf8")
+                text = f.read()
+                f.close()
+                filesTraining.append(text)
     if abstracts:
         # Then the abstracts are also returned
         absPath = refPath + "Abstracts/"

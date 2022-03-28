@@ -55,7 +55,7 @@ df.to_csv("out/single_topics_n{}.csv".format(17))
 
 #%% COMPARISON OF THE RESULTS WHEN USING ORIGINAL TEXTS AND ADDING NEW CORPORA: ERC Papers
 [percOk, percents, okPerSDG, countPerSDG, exclude_sdg, returnValidFiles] = optimize.train_validate_model(paths, 
-                        single_sdgs_models=res_singleSDG, n_top_words=nTopWords, verbose=True,
+                        single_sdgs_models=res_singleSDG, n_top_words=nTopWords, verbose=False,
                         n_topics=17, n_multigrams=(1,1), 
                         abstracts=True,
                         alpha_w=0.0000)
