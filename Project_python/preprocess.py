@@ -5,9 +5,18 @@ import difflib
 from numpy import empty
 import pandas as pd
 import tools
-import temp
+import json
+import preprocess
 
-def get_validation_files(refPath, preprocess=True, abstracts_only=False):
+def get_sdg_titles(refPath):
+    # returns the title of each SDG as a dictionary, with key: SDGx, value = title.
+    # for example: "SDG1":"No poverty"
+    f = open(refPath + "SDG_titles.json")
+    sdgs_title = json.load(f)
+    f.close()
+    return sdgs_title
+
+def get_nature_files(refPath, preprocess=True):
     # Returns a dictionary where the keys are the name of each papers, and the values are an array where:
     # [0] = path of each file, [1] = SDGs to which the paper belongs to
     filesDict = dict()
@@ -27,21 +36,41 @@ def get_validation_files(refPath, preprocess=True, abstracts_only=False):
         # Only checks when new files are created
         check_dictionary_valid(filesDict)
         
-    if abstracts_only:
-        abstractsFiles = temp.get_validation_files(refPath)
-        newDict = dict()
-        for paperName, abstract in abstractsFiles:
-            newDict[paperName] = filesDict[paperName]    
-        nFiles = len(newDict.keys())
-        print("- {} validation files were found".format(nFiles))          
-        return newDict
-    
     nFiles = len(filesDict.keys())
     print("- {} validation files were found".format(nFiles))          
     return filesDict
 
+def get_nature_abstracts(refPath):
+    # returns a dictionary where the keys are the name of each paper, and the values are an array where:
+    # [0] = abstract of each file, [1] = SDGs to which the paper belongs to
+    # warning: only returns those abstracts whose associated paper has been found classified in any of the SDGs folder
+    cites = pd.read_csv(refPath + "cites_nature.csv")
 
+    def get_closest_file(filesDict, fileName):
+        # Checks if 2 files have a very close name. This generally avoids having to compare all texts
+        closestName = difflib.get_close_matches(fileName, filesDict.keys(), n=1, cutoff=0.8)
+        return closestName
 
+    papers = []
+    for [title, abstract] in zip(cites['Title'], cites['Abstract']):
+        if title == "[No title available]" or abstract == "[No abstract available]":
+            continue
+        else:
+            papers.append((preprocess.standarize_file_name(title) + ".txt", abstract))
+    
+    validationDict = get_nature_files(refPath=refPath)
+    abstractsDict = dict()
+    for paper in papers:
+        getClose = get_closest_file(validationDict, paper[0])
+        
+        if len(getClose) == 1:
+            fileName = getClose[0]
+            dictValues = validationDict[fileName]
+            abstractsDict[fileName] = [paper[1], dictValues[1]]
+
+    print("Total of: {} papers".format(len(abstractsDict)))
+    return abstractsDict
+    
 def get_training_files(refPath, sdg=-1, abstracts=False):
     sdgsPaths = [refPath + "SDGs_description/",
                  refPath + "SDGs_progress/"
@@ -74,17 +103,11 @@ def get_training_files(refPath, sdg=-1, abstracts=False):
     print("- {} training files were found".format(nFiles))    
     return filesTraining
         
-        
-        
+             
 def preprocess_files(folderPath):
     pdfs = [file for file in os.listdir(folderPath) if file.endswith(".pdf")]
-
-    # First renames the files accordingly
-    symbols = [",", " ", "&", ":", "-","__"]
     for pdf in pdfs:
-        newPdf = pdf.lower()
-        for symbol in symbols:
-            newPdf = newPdf.replace(symbol, "_")
+        newPdf = standarize_file_name(pdf)
         oldPath = folderPath + pdf
         newPath = folderPath + newPdf
         os.renames(oldPath, newPath)
@@ -104,4 +127,15 @@ def check_dictionary_valid(filesDict):
                 continue
             else:
                 raise Exception("Process exited by user...")
+          
+            
+def standarize_file_name(file_name, n_iter=3):
+    # removes the rare caracters from the file name
+    symbols = [",", " ", "&", ":", "-","__","___","?","¿","$"]
+    newName = file_name.lower()
+    for iteration in range(0, n_iter):
+        for symbol in symbols:
+            newName = newName.replace(symbol, "_")
+
+    return newName
 

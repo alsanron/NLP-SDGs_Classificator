@@ -1,6 +1,7 @@
 # Tests an already trained model for classifying a given input paper into the corresponding Sustainable Development goals
 
 from preprocess import get_validation_files, get_training_files
+import preprocess
 import tools
 import pandas as pd
 import train
@@ -20,9 +21,7 @@ paths["out"] = "out/"
 #%% Training and validation data load
 # validFilesDict = get_validation_files(preprocess=False, refPath=paths["validation"])
 # trainFiles = get_training_files(refPath=paths["training"])
-f = open(paths["ref"] + "SDG_titles.json")
-sdgs_title = json.load(f)
-f.close()
+sdgs_title = preprocess.get_sdg_titles()
 
 
 #%%  17 models are trained for classifying each SDG
