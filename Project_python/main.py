@@ -8,20 +8,11 @@ import train
 import json
 import validate
 import optimize
+import conf
+import data
 
-
-#%% Configuration
-paths = dict()
-paths["ref"] = "ref/"
-paths["training"] = "ref/Training/"
-paths["validation"] = "ref/Validation/"
-paths["out"] = "out/"
-
-
-#%% Training and validation data load
-# validFilesDict = get_validation_files(preprocess=False, refPath=paths["validation"])
-# trainFiles = get_training_files(refPath=paths["training"])
-sdgs_title = preprocess.get_sdg_titles()
+paths = conf.get_paths()
+sdgs_title = data.get_sdg_titles()
 
 
 #%%  17 models are trained for classifying each SDG
