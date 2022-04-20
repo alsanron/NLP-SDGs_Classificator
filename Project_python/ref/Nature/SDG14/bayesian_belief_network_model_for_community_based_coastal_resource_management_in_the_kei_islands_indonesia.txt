@@ -2,7 +2,7 @@ See discussions, stats, and author profiles for this publication at: https://www
 
 A Bayesian belief network model for community-based coastal resource
 management in the Kei Islands, Indonesia
-Article in ECOLOGY AND SOCIETY · June 2016
+Article in ECOLOGY AND SOCIETY  June 2016
 DOI: 10.5751/ES-08285-210216
 
 CITATIONS
@@ -56,7 +56,7 @@ The user has requested enhancement of the downloaded file.
 
 SEE PROFILE
 
-Copyright © 2016 by the author(s). Published here under license by the Resilience Alliance.
+Copyright  2016 by the author(s). Published here under license by the Resilience Alliance.
 Hoshino, E., I. van Putten, W. Girsang, B. P. Resosudarmo, and S. Yamazaki. 2016. A Bayesian belief network model for communitybased coastal resource management in the Kei Islands, Indonesia. Ecology and Society 21(2):16. http://dx.doi.org/10.5751/
 ES-08285-210216
 
@@ -195,8 +195,8 @@ caught in the area include small tuna (komu), coral cod (kerapu),
 mackerel (kawalinya), scad (momar), bluefin trevally (bubara),
 ornate emperor (sikuda), and anchovy (puri).
 For a long time, daily activities of the people in Kei have been
-organized by a system of traditional rules that is called “Larwul
-Ngabal.” One aspect of these traditional rules is Sasi. The goals
+organized by a system of traditional rules that is called Larwul
+Ngabal. One aspect of these traditional rules is Sasi. The goals
 of implementing Sasi in Kei are: (1) to manage harmony in social
 relationship, particularly between women and men; and (2) to
 manage natural resources and the environment. However,
@@ -239,8 +239,8 @@ subsistence agriculture and fishing, with copra (dried coconuts)
 
 Survey
 Household and village leader surveys were conducted in four
-fishery villages in two subdistricts—Kei Kecil and Dullah Utara
-—between November and December 2013. Prior to the surveys,
+fishery villages in two subdistrictsKei Kecil and Dullah Utara
+between November and December 2013. Prior to the surveys,
 site visits were carried out by the research team members in order
 to identify main stakeholder groups in the region, as well as to
 develop and pretest the survey questionnaire in consultation with
@@ -302,7 +302,7 @@ characteristics of species caught and type of gear used. The
 extremely large catch was typically attributed to larger operators
 who used lift nets or fish aggregation devices combined with purse
 seine nets, and where more than 15 employees were on board.
-However, a few small-scale operators (≤ four people) also reported
+However, a few small-scale operators ( four people) also reported
 large catches of pelagic species of more than 5 tonnes per trip.
 For reasons of confidentiality, it was not possible to disclose the
 names of the sampled villages or show their exact locations, but
@@ -334,12 +334,12 @@ Bagan (41.2%), rumpon (7.8%)
 Traditional boat (60.1%), long boat
 (16.6%), speed boat (31.1%)
 Fishing seasons (most
-Min 3 months (March–May) to max
+Min 3 months (MarchMay) to max
 productive months)
 12 months
-Number of paid employees 1–4 people (67.8%), 5–9 people
+Number of paid employees 14 people (67.8%), 59 people
 on board
-(16.6%), 10–14 people (3.0%), < 15
+(16.6%), 1014 people (3.0%), < 15
 people (12.5%); mean 5.3 people
 Average fishing days per
 Fishing season (6.2 days), nonfishing
@@ -403,15 +403,15 @@ the person owns a boat can be calculated as follows:
 
 =
 
-∗
-∗
+
+
 
 |
 
 |
 +
 
-∗
+
 
 |
 
@@ -455,7 +455,7 @@ The excluded species were anchovies (puri), bigeye scad
 (momar), and Indian mackerel (lemma). A large proportion of
 these pelagic species is caught in water greater than 100 m in depth,
 although anchovies are caught mainly in relatively shallow water
-of about 10–15 m depth. Examples of coastal species included in
+of about 1015 m depth. Examples of coastal species included in
 CPUE are bluefin trevally (bubara), ornate emperor (sikuda),
 grouper or coral cod (kerapu), squid (cumi), snapper-like species
 (kakap merah, tenggiri, baronang), parrot fish (kakakutua), and
@@ -541,7 +541,7 @@ Urbanization
 Environment
 Habitat quality
 Current abundance trend
-Future fish abundance†
+Future fish abundance
 Fishing
 Catch per unit effort (CPUE) coastal
 Catch trend
@@ -557,36 +557,36 @@ Not affected (60.7%), affected little (31.1%), highly affected (8.2%)
 Not affected (49.7%), affected little (46.0%), highly affected (4.3%)
 Not affected (81.8%), affected little (16.2%), highly affected (2.0%)
 Not affected (66.1%), affected little (29.1%), highly affected (4.8%)
-Perceived habitat quality of the respondent’s fishing grounds: improved (22.6%), unchanged (35.8%),
+Perceived habitat quality of the respondents fishing grounds: improved (22.6%), unchanged (35.8%),
 damaged (41.6%)
-Perceived current fish abundance trend at respondents’ fishing grounds: up (23.0%), unchanged (27.2%),
+Perceived current fish abundance trend at respondents fishing grounds: up (23.0%), unchanged (27.2%),
 down (49.9%)
-Low (48.5–62.7%), high (37.3–51.5%)
-Average catch (kg) per trip excluding pelagic species over the last 12 months: low (0–99 kg, 47.5%),
-medium (100–200 kg, 26.2%), high (200 kg, 26.3%)
-Perceived catch trend at respondents’ fishing grounds: up (19.6%), unchanged (36.6%), down (43.8%)
-Number of paid employee on board: 0–4 (67.3%), 5–9 (16.7%), 10–14 (3.3%), > 15 (12.7%)
+Low (48.562.7%), high (37.351.5%)
+Average catch (kg) per trip excluding pelagic species over the last 12 months: low (099 kg, 47.5%),
+medium (100200 kg, 26.2%), high (200 kg, 26.3%)
+Perceived catch trend at respondents fishing grounds: up (19.6%), unchanged (36.6%), down (43.8%)
+Number of paid employee on board: 04 (67.3%), 59 (16.7%), 1014 (3.3%), > 15 (12.7%)
 Whether the respondents have modernized their fishing gear over the last 12 months: modernized
 (32.6%), unchanged (67.4%)
-Percentage of fishing gear owned by the respondents: 0–33 (39.4%), 34–65 (19.4%), 66–100 (40.8%)
+Percentage of fishing gear owned by the respondents: 033 (39.4%), 3465 (19.4%), 66100 (40.8%)
 Cost of fishing per trip (Rp000 per trip): low (<Rp500k, 77.1%), medium to high (>Rp500k, 22.9%)
-Low (47.7–53.1%), High (46.9–52.3%)
+Low (47.753.1%), High (46.952.3%)
 
 % Gear own
 Cost
-Fishing pressure†
+Fishing pressure
 Customary marine tenure (CMT) (Sasi
 laut)
 Sasi strength
 Whether the respondents perceive that the strength of Sasi has changed over time: weakened/disappeared
 (92.8%), unchanged (3.0%), strengthened (4.3%)
 Area closure
-Sea area closure in the village’s territorial waters: present (86.3%), absent (13.7%)
+Sea area closure in the villages territorial waters: present (86.3%), absent (13.7%)
 % seasonal closure
-Percentage of year closed by Sasi laut: 0–9 (90.4%), 10–49 (1.3%), 50–100(8.3%)
+Percentage of year closed by Sasi laut: 09 (90.4%), 1049 (1.3%), 50100(8.3%)
 Num of species protected
-Number of species protected by Sasi laut, such as Lola, Tripang (sea cucumber), and Lainnya: 0–1
-species (0.7%), 1–2 species (64.1%), 2–3 species (35.2%)
+Number of species protected by Sasi laut, such as Lola, Tripang (sea cucumber), and Lainnya: 01
+species (0.7%), 12 species (64.1%), 23 species (35.2%)
 Fine_money
 Presence of fine in terms of money when an offense is found: yes (6.4%), no (93.6%)
 Fine_goods
@@ -595,16 +595,16 @@ Suspension
 Whether the offender will be suspended from fishing activities: yes (6.4%), no (93.6%)
 Exclusion
 Whether the offender will be excluded from the village: yes (1.0%), no (99.0%)
-Enforcement†
-Strength of enforcement (combined effect of monitoring and sanction): weak (84.7–96.4%), strong (3.6–
+Enforcement
+Strength of enforcement (combined effect of monitoring and sanction): weak (84.796.4%), strong (3.6
 15.3%)
-Sanction†
-Strength of sanction, based on the presence of fine, suspension, and exclusion above: weak (89.3–91.3%),
-strong (9.7–10.7%)
-Sasi implementation†
-Combined effects of area closure, seasonal closure, and species protection: weak (58.5–74.6%), strong
-(25.4–41.5%)
-Monitoring†
+Sanction
+Strength of sanction, based on the presence of fine, suspension, and exclusion above: weak (89.391.3%),
+strong (9.710.7%)
+Sasi implementation
+Combined effects of area closure, seasonal closure, and species protection: weak (58.574.6%), strong
+(25.441.5%)
+Monitoring
 Monitoring of infringement: yes (50%), no (50%)
 Social
 Intervillage conflict
@@ -617,7 +617,7 @@ Fishery officer relation
 Relationship with fishery officers: good (64.5%), not good (35.5%)
 Outsiders
 Sighting of outsiders fishing in their sea territory: present (47.2%), absent (52.8%)
-† indicates the variables where conditional probability tables were generated from expert judgment or were given a very simple scenario (e.g., low/high)
+ indicates the variables where conditional probability tables were generated from expert judgment or were given a very simple scenario (e.g., low/high)
 that was assigned equal probabilities due to lack of information. The resulting base case posterior probability distribution is also given a range.
 
 indicators and their entropy/variance reduction scores. As a
@@ -727,12 +727,12 @@ Absent (70.0%); present
 (30.0%)
 Not applicable
 
-Low (48.5–62.7%); high (37.3–
+Low (48.562.7%); high (37.3
 51.5%)
-Low (23.5–47.2%); high (52.8–
+Low (23.547.2%); high (52.8
 76.5%)
-Down: low (33.7–49.3%); high
-(50.7–66.3%)
+Down: low (33.749.3%); high
+(50.766.3%)
 
 14) Strong Sasi implementation Not applicable
 
@@ -807,11 +807,11 @@ Not applicable
 Not applicable
 
 CPUE for small-scale operators (up to four people on board,
-covering 67.8% of survey respondents) was 52.1%. When fishers’
+covering 67.8% of survey respondents) was 52.1%. When fishers
 perceived habitat condition had improved and fish abundance was
 higher, the probability of CPUE being low decreased to 41.2%
 (Table 3). The probability of a low CPUE was further reduced to
-28.3% when sighting of outsiders fishing in the respondents’
+28.3% when sighting of outsiders fishing in the respondents
 territorial water was absent in addition to the improved habitat
 and fish abundance trend. When fishers perceived Sasi laut to be
 strong, the probability of CPUE being low decreased to 34.3%,
@@ -824,32 +824,32 @@ traditional comanagement is to reduce the number of conflicts
 (FAO 1999), and examples have been reported within Indonesia
 (Campbell et al. 2012, Cinner et al. 2012a). The base case
 
-Low (47.2–62.7%); high (37.3–
+Low (47.262.7%); high (37.3
 52.8%)
-Low (13.2–32.0%); high (68.0–
+Low (13.232.0%); high (68.0
 86.8%)
-Low (13.2–31.9%); high (68.1–
+Low (13.231.9%); high (68.1
 86.8%)
-Low (47.4–62.9%); high (37.1–
+Low (47.462.9%); high (37.1
 52.6%)
-Low (50.7–70.6%); high (29.4–
+Low (50.770.6%); high (29.4
 49.3%)
-Low (48.2–62.1%); high (37.9–
+Low (48.262.1%); high (37.9
 51.8%)
-Low (48.9–63.2%); high (36.8–
+Low (48.963.2%); high (36.8
 51.1%)
 Not applicable
 Not applicable
 Not applicable
-Low (44.1–60.4%); high (39.6–
+Low (44.160.4%); high (39.6
 55.9%)
-Low (38.7–57.4%); high (42.6–
+Low (38.757.4%); high (42.6
 61.3%)
-Low (42.8–59.8%); high (40.2–
+Low (42.859.8%); high (40.2
 57.2%)
-Low (38.8–57.7%); high (42.3–
+Low (38.857.7%); high (42.3
 61.2%)
-Low (26.9–51.3%); high (48.7–
+Low (26.951.3%); high (48.7
 73.1%)
 
 suggested that the probability of a fisher being involved in a
@@ -862,7 +862,7 @@ probability of intravillage conflicts. Tourism development also
 had a large impact on the presence of intravillage conflicts (50.2%
 probability) when fishers perceived they were highly affected by
 tourism. The probability of intravillage conflicts was lower
-(26.4%) when sighting of outsiders fishing in the respondents’
+(26.4%) when sighting of outsiders fishing in the respondents
 territorial water was absent, compared to when it was present
 (35.2%). In contrast, the probability of intervillage conflicts was
 slightly higher (33.6%) when sighting of outsiders was absent,
@@ -899,7 +899,7 @@ rule existence, 92.3% of respondents felt that Sasi has weakened
 or totally disappeared in their village (Table 2). This gap is likely
 due to weak enforcement of Sasi regulations, as indicated by the
 low levels of sanctions (less than 6.4% adopted any sanctions),
-high incidence of outsiders fishing in the respondents’ territorial
+high incidence of outsiders fishing in the respondents territorial
 waters (47.4%), and lack of vessel monitoring or patrolling to
 detect violation of Sasi. Adhuri (2013) also suggested that there
 are, in general, not enough speedboats and personnel to carry out
@@ -908,9 +908,9 @@ through the introduction of a monitoring program to patrol the
 sea, and strong Sasi implementation in terms of a combination
 of customary area closures, seasonal closures, and species
 protection may reduce the probability of fishing pressure being
-high from approximately 47–52% to 30–33%. This would be
-further reduced when population growth is lower (21.3–25.7%)
-and alternative jobs are present (13.3–17.7%). These factors
+high from approximately 4752% to 3033%. This would be
+further reduced when population growth is lower (21.325.7%)
+and alternative jobs are present (13.317.7%). These factors
 together contribute to lower fishing pressure, which reduces the
 probability of future fish abundance being low from between
 48.5% and 62.7% (base case) to between 26.9% and 51.3% (Table
@@ -919,23 +919,23 @@ probability of future fish abundance being low from between
 achieving both the social and economic objectives, as a higher
 probability of increasing CPUE and lower conflicts can be
 expected through reduced incidence of outsiders fishing in the
-respondents’ territorial waters.
+respondents territorial waters.
 Sensitivity analyses
 The results of sensitivity analyses (Table 4) showed that for CPUE,
 the number of paid employee, modernization of fishing gear, and
 perceived habitat quality were the top three most influential
 factors in both subdistricts. The influence of Sasi strength and
-presence of outsiders fishing in the respondents’ territorial water
+presence of outsiders fishing in the respondents territorial water
 was ranked 4th and 5th in Dullah Utara, while perceived fish
 abundance and Sasi strength took the 4th and 5th place in Kei
 Kecil. External stressors, such as deforestation, urbanization,
 population growth, and aquaculture development all affect
 perceived habitat condition; hence, there are indirect impacts on
 CPUE, but their influence in terms of variance reduction was
-minimal (ranked 8th–12th).
+minimal (ranked 8th12th).
 Factors most influential to intervillage conflicts were perceived
 catch trend (whether catch is increasing/decreasing or
-unchanged), sighting of outsiders fishing in the respondents’
+unchanged), sighting of outsiders fishing in the respondents
 territorial waters, perceived fish abundance, modernization of
 fishing gear, and presence of intravillage conflicts in both
 subdistricts, although their ranks were slightly different in each
@@ -1079,14 +1079,14 @@ Entropy reduction
 management rules. This suggests that a combination of measures
 to reduce fishing pressure may be effective in achieving higher
 future fish abundance. Other lesser but important factors (ranked
-6th–10th) to future fish abundance were population growth, cost
+6th10th) to future fish abundance were population growth, cost
 of fishing, CPUE, enforcement, and sea area closure.
 Perceived fish abundance trend was listed as among the most
 important (top five) factors for all three indicators. This indicates
 that local knowledge about current fish abundance is a key driver
 of fishing activities that affect the successful outcome of achieving
 all social, economic, and environment objectives. Presence of
-outsiders fishing in the respondents’ territorial water was another
+outsiders fishing in the respondents territorial water was another
 key driver that affected both CPUE and conflicts directly, and
 future fish abundance indirectly, since the frequency of sighting
 outsiders was linked to Sasi implementation.
@@ -1138,7 +1138,7 @@ outsiders fishing in their water (from 52% to 28%) rather than
 only improving habitat quality (from 52% to 41%). This implies
 that management or policy intervention could be more effective
 when addressing multiple factors simultaneously.
-The local community’s perception of the upward or downward
+The local communitys perception of the upward or downward
 trend of fish abundance is a key factor influencing social,
 economic, and environmental outcomes of Kei's CMT.
 Perceptions are distinct from actual observed trends and might
@@ -1169,7 +1169,7 @@ an area, which can in turn change the perception of Sasi strength
 and thus improve social outcomes for this CMT. Our results
 suggest that strengthening of Sasi alone has the most prominent
 impact on improving the economic (CPUE) indicator, which
-supports Ruttan’s (1998) argument that the intention behind the
+supports Ruttans (1998) argument that the intention behind the
 marine Sasi in Kei Besar Island is to maximize economic benefits
 rather than conservation.
 Our results also suggest that sighting outsider presence and
@@ -1197,7 +1197,7 @@ words, worsening environmental conditions have different effects
 on the occurrence of intravillage and intervillage conflicts. This
 may be because fishers in the same village cooperate to overcome
 unfavorable fishing conditions, while such conditions may provide
-incentives for fishers to operate in other villages’ territorial waters;
+incentives for fishers to operate in other villages territorial waters;
 hence, increased intervillage conflicts. These interrelationships
 strongly illustrate the close connection between ecological and
 social outcomes, and the importance of considering socialecological systems as a whole.
@@ -1208,7 +1208,7 @@ extractive nature of fishing, and the two are not perceived to be
 complimentary activities. Increased tourism therefore means
 more conflict between those who fish and those involved in the
 tourism sector. This is interesting in that tourism is often
-presented as the “economic savior” of tropical reef systems (and
+presented as the economic savior of tropical reef systems (and
 small islands in the Pacific and elsewhere), but it may in fact create
 conflict within the village and thus potentially undermine the
 comanagement of the area (or the Sasi). In addition, the
@@ -1275,7 +1275,7 @@ ownership may be a good starting point. Monitoring and
 enforcement can be improved by increasing the presence of local
 village patrollers or enforcement agencies (Takahashi and van
 Duijn 2012) but also, for instance, by increasing education or
-changing the fisher’s decision framework. Decision frameworks
+changing the fishers decision framework. Decision frameworks
 can be changed, for instance, by providing opportunities for
 anonymous incidence reporting, which has proven to change
 behavior and perceptions in some other locations (Aaron et al.
@@ -1289,7 +1289,7 @@ behavior have to be well understood. A BBN model based on
 empirical data can be used to represent different factors that drive
 fishing activity and to assess the influence and impact of changing
 social, economic, and environmental conditions on meeting the
-community’s CMT objectives.
+communitys CMT objectives.
 Bayesian belief network models are particularly useful in
 highlighting current information and knowledge gaps that are
 important for decision-makers, but as additional or more accurate
@@ -1327,26 +1327,26 @@ http://www.ecologyandsociety.org/issues/responses.
 php/8285
 
 LITERATURE CITED
-Aaron, H., S. Jaffry, O. Thébaud, and E. Bennett. 2000.
+Aaron, H., S. Jaffry, O. Thbaud, and E. Bennett. 2000.
 Normative and social influences affecting compliance with fishery
-regulations. Land Economics 76(3):448–461. http://dx.doi.
+regulations. Land Economics 76(3):448461. http://dx.doi.
 org/10.2307/3147040
 Adhuri, D. S. 2013. Selling the sea, fishing for power: a study of
 conflict over marine tenure in Kei Islands, eastern Indonesia.
 Australian National University E Press, Canberra, Australia.
 Albert, S., M. Love, and T. D. Brewer. 2013. Contrasts in social
 and ecological assessments of coral reef health in Melanesia.
-Pacific Science 67(3):409–424. http://dx.doi.org/10.2984/67.3.8
+Pacific Science 67(3):409424. http://dx.doi.org/10.2984/67.3.8
 Aswani, S., G. G. Gurney, S. Mulville, J. Matera, and M. Gurven.
 2013. Insights from experimental economics on local cooperation
 in a small-scale fishery management system. Global
-Environmental Change 23(6):1402–1409. http://dx.doi.org/10.1016/
+Environmental Change 23(6):14021409. http://dx.doi.org/10.1016/
 j.gloenvcha.2013.08.003
 Aswani, S., and R. J. Hamilton. 2004. Integrating indigenous
 ecological knowledge and customary sea tenure with marine and
 social science for conservation of bumphead parrotfish
 (Bolbometopon muricatum) in the Roviana Lagoon, Solomon
-Islands. Environmental Conservation 31(01):69–83. http://dx.doi.
+Islands. Environmental Conservation 31(01):6983. http://dx.doi.
 org/10.1017/s037689290400116x
 Badan Pusat Statistik. 2014a. Maluku tenggara in figures (p. 344).
 Southeast Maluku Regency (badan pusat statistik kabupaten
@@ -1362,14 +1362,14 @@ Pratchett, and A. H. Baird. 2012. Avoiding conflicts and
 http://www.ecologyandsociety.org/vol21/iss2/art16/
 
 protecting coral reefs: customary management benefits marine
-habitats and fish biomass. Oryx 46(04):486–494. http://dx.doi.
+habitats and fish biomass. Oryx 46(04):486494. http://dx.doi.
 org/10.1017/s0030605312000348
 Cinner, J. 2005. Socioeconomic factors influencing customary
 marine tenure in the Indo-Pacific. Ecology and Society 10(1):36.
 Cinner, J. E., X. Basurto, P. Fidelman, J. Kuange, R. Lahari, and
 A. Mukminin. 2012a. Institutional designs of customary fisheries
 management arrangements in Indonesia, Papua New Guinea,
-and Mexico. Marine Policy 36(1):278–285. http://dx.doi.
+and Mexico. Marine Policy 36(1):278285. http://dx.doi.
 org/10.1016/j.marpol.2011.06.005
 Cinner, J. E., T. R. McClanahan, M. A. MacNeil, N. A. J. Graham,
 T. M. Daw, A. Mukminin, D. A. Feary, A. L. Rabearisoa, A.
@@ -1377,64 +1377,64 @@ Wamukota, N. Jiddawi, S. J. Campbell, A. H. Baird, F. A.
 Januchowski-Hartley, S. Hamed, R. Lahari, T. Morove, and J.
 Kuange. 2012b. Comanagement of coral reef social-ecological
 systems. Proceedings of the National Academy of Sciences 109
-(14):5219–5222. http://dx.doi.org/10.1073/pnas.1121215109
+(14):52195222. http://dx.doi.org/10.1073/pnas.1121215109
 Cinner, J. E., and R. B. Pollnac. 2004. Poverty, perceptions and
 planning: why socioeconomics matter in the management of
-Mexican reefs. Ocean & Coastal Management 47(9–10):479–493.
+Mexican reefs. Ocean & Coastal Management 47(910):479493.
 http://dx.doi.org/10.1016/j.ocecoaman.2004.09.002
 Cooke, A. J., N. V. C. Polunin, and K. Moce. 2000. Comparative
 assessment of stakeholder management in traditional Fijian
-fishing-grounds. Environmental Conservation 27(03):291–299.
+fishing-grounds. Environmental Conservation 27(03):291299.
 http://dx.doi.org/10.1017/s0376892900000333
-Cox, M., G. Arnold, and S. V. Tomás. 2010. A review of design
+Cox, M., G. Arnold, and S. V. Toms. 2010. A review of design
 principles for community-based natural resource management.
 Ecology and Society 15(4):38.
 Evans, S. M., M. E. Gill, A. S. W. Retraubun, J. Abrahamz, and
 J. Dangeubun. 1997. Traditional management practices and the
 conservation of the gastropod (Trochus nilitocus) and fish stocks
 in the Maluku Province (eastern Indonesia). Fisheries Research
-31(1–2):83–91. http://dx.doi.org/10.1016/s0165-7836(97)00011-8
+31(12):8391. http://dx.doi.org/10.1016/s0165-7836(97)00011-8
 Food and Agriculture Organization of the United Nations (FAO).
 1999. Use of property rights in fisheries management. FAO
 Fisheries Technical Paper 404/1. FAO, Rome, Italy.
 Gutierrez, N. L., R. Hilborn, and O. Defeo. 2011. Leadership,
 social capital and incentives promote successful fisheries. Nature
-470(7334):386–389. http://dx.doi.org/10.1038/nature09689
+470(7334):386389. http://dx.doi.org/10.1038/nature09689
 Haapasaari, P., and T. P. Karjalainen. 2010. Formalizing expert
 knowledge to compare alternative management plans:
 sociological perspective to the future management of Baltic
-salmon stocks. Marine Policy 34(3):477–486. http://dx.doi.
+salmon stocks. Marine Policy 34(3):477486. http://dx.doi.
 org/10.1016/j.marpol.2009.10.002
 
 Sparholt, and O. Varis. 1999. Modeling environmentally driven
 uncertainties in Baltic cod (Gadus morhua) by Bayesian influence
 diagrams. Canadian Journal of Fisheries and Aquatic Sciences 56
-(4):629–641. http://dx.doi.org/10.1139/f98-206
+(4):629641. http://dx.doi.org/10.1139/f98-206
 Levontin, P., S. Kulmala, P. Haapasaari, and S. Kuikka. 2011.
 Integration of biological, economic, and sociological knowledge
 by Bayesian belief networks: the interdisciplinary evaluation of
 potential management plans for Baltic salmon. ICES Journal of
-Marine Science: Journal du Conseil 68(3):632–638. http://dx.doi.
+Marine Science: Journal du Conseil 68(3):632638. http://dx.doi.
 org/10.1093/icesjms/fsr004
 Liese, C., M. D. Smith, and R. A. Kramer. 2007. Open access in
 a spatially delineated artisanal fishery: the case of Minahasa,
-Indonesia. Environment and Development Economics 12(01):123–
+Indonesia. Environment and Development Economics 12(01):123
 143. http://dx.doi.org/10.1017/s1355770x06003421
 Little, L. R., S. Kuikka, A. E. Punt, F. Pantus, C. R. Davies, and
 B. D. Mapstone. 2004. Information flow among fishing vessels
 modelled using a Bayesian network. Environmental Modelling &
-Software 19(1):27–34. http://dx.doi.org/10.1016/s1364-8152(03)
+Software 19(1):2734. http://dx.doi.org/10.1016/s1364-8152(03)
 00100-2
 Marcot, B. G., J. D. Steventon, G. D. Sutherland, and R. K.
 McCann. 2006. Guidelines for developing and updating Bayesian
 belief networks applied to ecological modeling and conservation.
-Canadian Journal of Forest Research 36(12):3063–3074. http://dx.
+Canadian Journal of Forest Research 36(12):30633074. http://dx.
 doi.org/10.1139/x06-135
 Mosse, J. W., J. M. S. Tetelepta, and F. X. V. R. Letsoin. 2012.
 Hawear di kepulauan kei (hawear in Kei Islands). Ambon.
 Nikijuluw, V. P. H. 1994. Indigenous fisheries resource
 management in the Maluku Islands. Indigenous Knowledge and
-Development Monitor 2(2):6–8.
+Development Monitor 2(2):68.
 Novaczek, I., H. T. Harkes, J. Sopacua, and M. D. D. Tatuhey.
 2001. An institutional analysis of Sasi laut in Maluku, Indonesia.
 The WorldFish Center, Penang, Malaysia.
@@ -1445,20 +1445,20 @@ CBO9780511807763
 Pollnac, R., P. Christie, J. E. Cinner, T. Dalton, T. M. Daw, G. E.
 Forrester, N. A. J. Graham, and T. R. McClanahan. 2010. Marine
 reserves as linked social-ecological systems. Proceedings of the
-National Academy of Sciences 107(43):18262–18265. http://dx.
+National Academy of Sciences 107(43):1826218265. http://dx.
 doi.org/10.1073/pnas.0908266107
 Ruddle, K. 1993. External forces and change in traditional
-community-based þshery management systems in the Pacific
-island region. Maritime Anthropological Studies 6(1–2):1–37.
+community-based shery management systems in the Pacific
+island region. Maritime Anthropological Studies 6(12):137.
 
 Hviding, E. 1998. Contextual flexibility: present status and future
 of customary marine tenure in Solomon Islands. Ocean & Coastal
-Management 40(2–3):253–269. http://dx.doi.org/10.1016/S0964-5691
+Management 40(23):253269. http://dx.doi.org/10.1016/S0964-5691
 (98)00042-8
 
 Ruddle, K. 1998. The context of policy design for existing
 community-based fisheries management systems in the Pacific
-Islands. Ocean & Coastal Management 40(2–3):105–126. http://
+Islands. Ocean & Coastal Management 40(23):105126. http://
 dx.doi.org/10.1016/s0964-5691(98)00040-4
 
 Korb, K. B., and A. E. Nicholson. 2011. Bayesian artificial
@@ -1466,11 +1466,11 @@ intelligence. Chapman & Hall/CRC, London, UK. http://dx.doi.
 org/10.1201/9780203491294
 
 Ruttan, L. M. 1998. Closing the commons: cooperation for gain
-or restraint? Human Ecology 26(1):43–66. http://dx.doi.
+or restraint? Human Ecology 26(1):4366. http://dx.doi.
 org/10.1023/A:1018744816814
 
-Kuikka, S., M. Hildén, H. Gislason, S. Hansson, H. Sparholt, O.
-Varis, S. Kuikka, M. Hildén, H. Gislason, S. Hansson, H.
+Kuikka, S., M. Hildn, H. Gislason, S. Hansson, H. Sparholt, O.
+Varis, S. Kuikka, M. Hildn, H. Gislason, S. Hansson, H.
 
 Setiawan, A., J. E. Cinner, S. G. Sutton, and A. Mukminin. 2012.
 The perceived impact of customary marine resource management
@@ -1479,10 +1479,10 @@ The perceived impact of customary marine resource management
 http://www.ecologyandsociety.org/vol21/iss2/art16/
 
 on household and community welfare in northern Sumatra,
-Indonesia. Coastal Management 40(3):239–249. http://dx.doi.
+Indonesia. Coastal Management 40(3):239249. http://dx.doi.
 org/10.1080/08920753.2012.677626
 Southeast Maluku Regional Development Planning Agency.
-2012. Southeast Maluku regency spatial plan 563. 2012–2032.
+2012. Southeast Maluku regency spatial plan 563. 20122032.
 Government of Southeast Maluku Regency, Langgur, Indonesia.
 Takahashi, B., and A. P. van Duijn. 2012. Operationalizing
 fisheries co-management: lessons learned from lagoon fisheries
@@ -1490,34 +1490,34 @@ co-management in Thua Thien Hue Province, Viet Nam. FAP
 Regional Office for Asia and the Pacific, Bangkok, Thailand.
 Thorburn, C. 2001. The house that poison built: customary
 marine property rights and the live food fish trade in the Kei
-Islands, Southeast Maluku. Development and Change 32(1):151–
+Islands, Southeast Maluku. Development and Change 32(1):151
 180. http://dx.doi.org/10.1111/1467-7660.00200
 Thorburn, C. C. 2000. Changing customary marine resource
 management practice and institutions: the case of Sasi lola in the
-Kei Islands, Indonesia. World Development 28(8):1461–1479.
+Kei Islands, Indonesia. World Development 28(8):14611479.
 http://dx.doi.org/10.1016/s0305-750x(00)00039-5
 Ticehurst, J. L., L. T. H. Newham, D. Rissik, R. A. Letcher, and
 A. J. Jakeman. 2007. A Bayesian network approach for assessing
 the sustainability of coastal lakes in New South Wales, Australia.
-Environmental Modelling & Software 22(8):1129–1139. http://dx.
+Environmental Modelling & Software 22(8):11291139. http://dx.
 doi.org/10.1016/j.envsoft.2006.03.003
 van Putten, I., A. Lalancette, P. Bayliss, D. Dennis, T. Hutton, A.
-Norman-López, S. Pascoe, E. Plagányi, and T. Skewes. 2013. A
+Norman-Lpez, S. Pascoe, E. Plagnyi, and T. Skewes. 2013. A
 Bayesian model of factors influencing indigenous participation
 in the Torres Strait tropical rocklobster fishery. Marine Policy
-37:96–105. http://dx.doi.org/10.1016/j.marpol.2012.04.001
+37:96105. http://dx.doi.org/10.1016/j.marpol.2012.04.001
 Varis, O., and S. Kuikka. 1997. Joint use of multiple
 environmental assessment models by a Bayesian meta-model: the
-Baltic salmon case. Ecological Modelling 102(2–3):341–351.
+Baltic salmon case. Ecological Modelling 102(23):341351.
 http://dx.doi.org/10.1016/s0304-3800(97)00068-9
 Viswanathan, K. K., I. H. Omar, Y. Jeon, J. Kirkley, D. Squires,
 and I. Susilowati. 2001. Fishing skill in developing country
 fisheries: the kedah, Malaysia trawl fishery. Marine Resource
-Economics 16(4):293–314. http://dx.doi.org/10.1086/mre.16.4.42629339
+Economics 16(4):293314. http://dx.doi.org/10.1086/mre.16.4.42629339
 Yu, J., V. A. Smith, P. P. Wang, A. J. Hartemink, and E. D. Jarvis.
 2004. Advances to Bayesian network inference for generating
 causal networks from observational biological data. Bioinformatics
-20(18):3594–3603. http://dx.doi.org/10.1093/bioinformatics/bth448
+20(18):35943603. http://dx.doi.org/10.1093/bioinformatics/bth448
 
 View publication stats
 

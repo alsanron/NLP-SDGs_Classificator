@@ -14,7 +14,7 @@ def train_model(trainData, validData, model="nmf"):
 def train_nmf(trainData, n_topics, ngram=(1,1), alpha_w=0.0):
     tokens = []
     for text in trainData:
-        tokens.append(" ".join(tools.lemmatize_text(text)))
+        tokens.append(" ".join(tools.tokenize_text(text)))
     
     vectorizer = TfidfVectorizer(min_df=2, # They have to appear in at least x documents
                                  stop_words='english', # Remove all stop words from English

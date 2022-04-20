@@ -17,7 +17,7 @@ def get_sdg_titles(refPath):
 
 
 # DATASET: the role of artificial intelligence in achieving the sustainable development goals
-def get_nature_files(refPath, preprocess=True):
+def get_nature_files(refPath, flag_preprocess=False):
     # Returns a dictionary where the keys are the name of each papers, and the values are an array where:
     # [0] = path of each file, [1] = SDGs to which the paper belongs to
     filesDict = dict()
@@ -25,7 +25,7 @@ def get_nature_files(refPath, preprocess=True):
         if os.path.isdir(refPath + folder) and not(folder == "Temp_out"):
             sdgId = int(folder.replace("SDG",""))
             folderPath = refPath + folder + "/"
-            if preprocess:
+            if flag_preprocess:
                 preprocess.preprocess_files(folderPath)
             files = [file for file in os.listdir(folderPath) if file.endswith(".txt")]
             for file in files:
@@ -33,7 +33,7 @@ def get_nature_files(refPath, preprocess=True):
                     filesDict[file][1].append(sdgId)
                 else:
                     filesDict[file] = [folderPath + file, [sdgId]]
-    if preprocess:
+    if flag_preprocess:
         # Only checks when new files are created
         preprocess.check_dictionary_valid(filesDict)
         
