@@ -12,7 +12,6 @@ def pdfs2txt(pdfPath):
     bashCommand = "bash pdftotxt.sh {} {}".format(pdfPath, pdfPath)
     subprocess.call(bashCommand, shell=True)
 
-
 def tokenize_text(text, min_word_length=3, lemmatize=True, stem=False):
     # Clears the text from stopwords and lemmatizes the text returning the tokens
     lemmatizer = WordNetLemmatizer()

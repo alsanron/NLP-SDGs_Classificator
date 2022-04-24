@@ -1,5 +1,5 @@
 #!/bin/bash -x 
-# transforms a csv file into asccii files
+# transforms a pdf file into ascii file
 input=$1
 output=$2
 

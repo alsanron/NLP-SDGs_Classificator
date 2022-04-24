@@ -17,7 +17,6 @@ def preprocess_files(folderPath):
     # Converts the pdfs to txt
     tools.pdfs2txt(folderPath)
     
-    
 def check_dictionary_valid(filesDict):
     # Checks if 2 files have a very close name. This generally avoids having to compare all texts
     for file in filesDict.keys():
@@ -30,8 +29,7 @@ def check_dictionary_valid(filesDict):
                 continue
             else:
                 raise Exception("Process exited by user...")
-          
-            
+                     
 def standarize_file_name(file_name, n_iter=3):
     # removes the rare caracters from the file name
     symbols = [",", " ", "&", ":", "-","__","___","?","¿","$"]

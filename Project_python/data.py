@@ -15,7 +15,6 @@ def get_sdg_titles(refPath):
     f.close()
     return sdgs_title
 
-
 # DATASET: the role of artificial intelligence in achieving the sustainable development goals
 def get_nature_files(refPath, flag_preprocess=False):
     # Returns a dictionary where the keys are the name of each papers, and the values are an array where:
@@ -38,7 +37,7 @@ def get_nature_files(refPath, flag_preprocess=False):
         preprocess.check_dictionary_valid(filesDict)
         
     nFiles = len(filesDict.keys())
-    print("- {} validation files were found".format(nFiles))          
+    print("- Total of {} nature files were found".format(nFiles))          
     return filesDict
 
 def get_nature_abstracts(refPath):
@@ -69,9 +68,8 @@ def get_nature_abstracts(refPath):
             dictValues = validationDict[fileName]
             abstractsDict[fileName] = [paper[1], dictValues[1]]
 
-    print("Total of: {} papers".format(len(abstractsDict)))
+    print("Total of: {} abstracts from nature".format(len(abstractsDict)))
     return abstractsDict
-    
     
 # DATASET: https://sdgs.un.org/
 # - Goals definition
@@ -118,6 +116,8 @@ def get_previous_classified_abstracts(refPath):
 def get_sdgs_pathfinder(refPath):
     csv = pd.read_csv(refPath + "ds_sdg_path_finder.csv")
     data = []
-    for [text, sdgs] in zip(csv["text"], csv["SDGs"]):
-        data.append([text, sdgs])
+    for [text, sdgsAscii] in zip(csv["text"], csv["SDGs"]):
+        sdgsInt = [int(sdg) for sdg in (sdgsAscii.replace("[","").replace("]","")).split(",")]
+        data.append([text, sdgsInt])
+    print("- {} texts in the pathfinder dataset".format(len(data)))
     return data

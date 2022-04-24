@@ -25,9 +25,15 @@ def validate_model(model, vectorizer, topics_association, sdgs_mapped, validFile
     paperNames = []; paperPaths = []; paperRealSDGs = []; paperPredictSDGs = []; validPredict = []
     returnValidFiles = []
     for key, value in validFilesDict.items():
+    # for validData in validFilesDict:
+        # fileName = "[NO NAME]"
+        # filePath = "[NO Path]"
         fileName = key
         filePath = value[0]
+        # text = validData[0]
         fileSDGs = value[1]
+        
+        
         if any(outSDG in fileSDGs for outSDG in exclude_sdg):
             # Then that file should not be checked
             continue
@@ -35,7 +41,9 @@ def validate_model(model, vectorizer, topics_association, sdgs_mapped, validFile
         f = open(filePath, 'r',errors='replace')
         text = f.read()
         f.close()
-        tokens = " ".join(tools.lemmatize_text(text))
+        
+        
+        tokens = " ".join(tools.tokenize_text(text))
         query_words_vect = vectorizer.transform([tokens])
         topicFeats = model.transform(query_words_vect)[0]
         sortArgs = topicFeats.argsort()
@@ -126,63 +134,3 @@ def compute_statistics(realSDGs, predictedSDGs, validPredict, excludedSDGs,
     return [percOk, percents, okPerSDG, countPerSDG]
         
 
-def map_model_topics_to_sdgs(res_singleSDG, newTopics, pathToCsv="", verbose=True):
-    # Maps each new topic of the general NMF model to an specific SDG obtained from training 17 models
-    associated_sdg = []
-    nTopics = len(newTopics.columns)
-    for ii in range(0,nTopics):
-        topicWords = list(newTopics.iloc[:, ii])
-        [topic, topic_ind] = get_associated_sdg(res_singleSDG, topicWords, verbose=verbose)
-        associated_sdg.append([topic, topic_ind])
-    sdgs_coh = [sdg[0] for sdg in associated_sdg]
-    topics_association = [sdg[1] for sdg in associated_sdg]
-    sdgs_found = [topics_association.count(sdg) for sdg in range(1,18)]
-    
-    if verbose:
-        print(topics_association)
-        print(sdgs_found)
-        
-    if len(pathToCsv) > 4:
-        # Then the mapping result is stored in a csv
-        df = pd.DataFrame()
-        
-        col_names = []
-        col_data = []
-        for sdg in range(1,18):
-            if sdg in topics_association:
-                sdgCount = topics_association.count(sdg)
-                index = -1
-                for jj in range(0,sdgCount):
-                    index = topics_association.index(sdg, index + 1)
-                    colName = "Topic #{} - {}".format(sdg, jj)
-                    
-                    colWords = list(newTopics.iloc[:, index])
-                    df[colName] = colWords
-            else:
-                colName = "Topic #{:2d} - xx".format(sdg)
-                df[colName] = 0
-        df.to_csv(pathToCsv)
-                
-    return [topics_association, sdgs_coh, sdgs_found]
-
-
-
-
-def get_associated_sdg(sdgs_models, query_words, verbose=True):
-    query_words = ' '.join(query_words)
-    max_values = []
-    for sdg in sdgs_models:
-        model = sdg[0]
-        vect = sdg[1]
-        query_words_vect = vect.transform([query_words])
-        nmf_features = model.transform(query_words_vect)
-        max_values.append(nmf_features.max())
-    
-    max_coh_val = max(max_values)
-    max_coh_ind = max_values.index(max_coh_val)  
-    topic_ind = max_coh_ind + 1 
-    
-    if verbose:
-        print("Max coherence: {:0.2f}, SDG # {:2d}".format(max_coh_val, topic_ind))
-    
-    return [max_coh_val, topic_ind]
