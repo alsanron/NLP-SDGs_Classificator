@@ -40,15 +40,24 @@ paths = conf.get_paths()
 
 # texts = [elem[0] for elem in textsPathfinder]
 # test_text_preprocess(texts)
+trainFiles = [file[0] for file in data.get_sdgs_org_files(paths["SDGs_inf"])]
+topWords = 25
+
+lda = model.LDA_classifier(paths)
+lda.train_individual_model_per_sdg(trainFiles)
+# lda.export_individual_model_topics_to_csv("out/topics_lda_individual_models_monogram.csv", n_top_words=topWords)
+lda.train_global_model(trainFiles, n_topics=18)
+lda.export_global_model_topics_to_csv("out/topics_lda_global_unordered.csv", n_top_words=topWords)
+# lda.map_model_topics_to_sdgs(n_top_words=topWords, path_csv="out/topics_lda_global_monogram.csv")
 
 nmf = model.NMF_classifier(paths)
 nmf.train_individual_model_per_sdg(multigrams=(1,1))
 # nmf.load_individual_model_per_sdg()
-nmf.export_individual_model_topics_to_csv("out/topics_individual_models_monogram.csv", n_top_words=25)
-trainFiles = [file[0] for file in data.get_sdgs_org_files(paths["SDGs_inf"])]
+nmf.export_individual_model_topics_to_csv("out/topics_nmf_individual_models_monogram.csv", n_top_words=topWords)
+
 nmf.train_global_model(trainFiles, n_topics=17, multigrams=(1,1))
 # nmf.load_global_model(n_topics=17)
-nmf.map_model_topics_to_sdgs(n_top_words=25, path_csv="out/topics_global_monogram.csv")
+nmf.map_model_topics_to_sdgs(n_top_words=topWords, path_csv="out/topics_nmf_global_monogram.csv")
 # nmf.export_global_model_topics_to_csv("out/topics_global.csv", n_top_words=25)
 # nmf.map_model_topics_to_sdgs(n_top_words=25, path_csv="out/topics_global.csv")
 
