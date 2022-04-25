@@ -2,6 +2,7 @@
 from signal import valid_signals
 import tools
 import pandas as pd
+import numpy as np
 import conf
 import data
 from gensim.parsing.preprocessing import STOPWORDS
@@ -9,7 +10,7 @@ from sklearn.decomposition import NMF
 from sklearn.preprocessing import normalize
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
-import pandas as pd
+import matplotlib.pyplot as plt
 import tools
 import warnings
 warnings.filterwarnings('ignore')
@@ -89,10 +90,14 @@ class NMF_classifier:
         validsAny = []
         files = []
         abstracts = []
+        countPerSDG = np.zeros(17)
+        countWellPredictionsPerSDG = np.zeros(17)
         
         for file in database:
             text = ""
             sdgs = database[file]["SDG"]
+            for sdg in sdgs:
+                countPerSDG[sdg - 1] += 1 # increments the SDGs counter
             if abstract:
                 text += database[file]["abstract"]
             if kw:
@@ -109,10 +114,12 @@ class NMF_classifier:
             if sorted(sdgs) == sorted(predic):
                 valid = True
             validSingle = False
-            for sdg in predic:
-                if sdg in sdgs:
+            for sdg in sdgs:
+                if sdg in predic:
                     validSingle = True
+                    countWellPredictionsPerSDG[sdg - 1] += 1
                     break
+
             predictedSDGs.append(predic)
             realSDGs.append(sdgs)
             scoresSDGs.append(score)
@@ -132,9 +139,29 @@ class NMF_classifier:
         
         oks = [ok for ok in valids if ok == True]
         oksSingle = [ok for ok in validsAny if ok == True]
-        print("#### Config: Abstract = {}, Kw = {}, Intro = {}, Body = {}, Concl = {}".format(abstract, kw, intro, body, concl))
+        configStr = "Abstract {} - Kw - {} Intro - {} Body - {} Concl - {}".format(int(abstract), int(kw), int(intro), int(body), int(concl))
+        print("#### Config:" + configStr)
         print("- {:.2f} % valid global, {:.2f} % valid any, of {} files".format(len(oks) / len(valids) * 100, len(oksSingle) / len(valids) * 100, len(valids)))
         df.to_excel(path_excel)
+        
+        sdgs = []
+        percents = []
+        for ii in range(1, 18):
+            # sdgs.append('SDG{}'.format(ii))
+            sdgs.append('{}'.format(ii))
+            perc = countWellPredictionsPerSDG[ii - 1] / float(countPerSDG[ii - 1]) * 100.0
+            percents.append(perc)
+        plt.figure()
+        plt.bar(sdgs, percents)
+        plt.xlabel('SDGS')
+        plt.ylabel("Correctly individual identified [%]")
+        plt.savefig('out/percentage_valid_' + configStr.replace('-','').replace(' ', '_').replace('__','_') + ".png")
+        
+        plt.figure()
+        plt.bar(sdgs, countPerSDG)
+        plt.xlabel('SDGS')
+        plt.ylabel("Number papers associated to each SDG")
+        plt.savefig("out/counter_files_per_sdg.png")
         
     def map_text_to_sdgs(self, text, top_score):
         tokens = " ".join(tools.tokenize_text(text, lemmatize=True))
@@ -220,6 +247,7 @@ class NMF_classifier:
             word_dict['Topic # {:02d}'.format(ii + 1)] = words
             
         return pd.DataFrame(word_dict)
+      
             
     def __train_nmf(self, trainData, n_topics, ngram=(1,1), alpha_w=0.0):
     # Trains a NMF model
