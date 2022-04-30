@@ -6,6 +6,7 @@ from nltk.stem.porter import PorterStemmer
 import gensim
 from gensim.parsing.preprocessing import STOPWORDS
 import pickle
+import conf
 
 def pdfs2txt(pdfPath): 
     # Changes the environment to the powershell for windows
@@ -13,20 +14,26 @@ def pdfs2txt(pdfPath):
     bashCommand = "bash pdftotxt.sh {} {}".format(pdfPath, pdfPath)
     subprocess.call(bashCommand, shell=True)
 
-def tokenize_text(text, min_word_length=3, lemmatize=True, stem=False):
+def tokenize_text(text, min_word_length=3, lemmatize=True, stem=False, extended_stopwords=False):
     # Clears the text from stopwords and lemmatizes the text returning the tokens
     lemmatizer = WordNetLemmatizer()
     stemmer = PorterStemmer()
     tokens = gensim.parsing.strip_tags(text)
     tokens = gensim.parsing.strip_punctuation(tokens)
     tokens = gensim.parsing.strip_numeric(tokens)
-    tokens = gensim.parsing.remove_stopwords(tokens, stopwords=STOPWORDS)
+    # tokens = gensim.parsing.remove_stopwords(tokens, stopwords=STOPWORDS)
     tokens = gensim.parsing.strip_multiple_whitespaces(tokens)
     tokens = gensim.utils.simple_preprocess(tokens, deacc=True, min_len=min_word_length)
     
-    own_set = frozenset(['cent', 'billion', 'million', 'use'])
-    set = STOPWORDS.union(own_set)
-    tokens = [token for token in tokens if token not in set]
+    set = STOPWORDS
+    if extended_stopwords:
+        paths = conf.get_paths()
+        with open(paths["ref"] + "stop_words.txt", 'r') as f:
+            words = f.read().split(' ')
+            f.close()
+        own_set = frozenset(words)
+        set = STOPWORDS.union(own_set)
+    tokens = [token for token in tokens if not(token in set)]
     
     tokenizedText = []
     for token in tokens:
@@ -34,6 +41,7 @@ def tokenize_text(text, min_word_length=3, lemmatize=True, stem=False):
         if lemmatize: newToken = lemmatizer.lemmatize(newToken)
         if stem: newToken = stemmer.stem(newToken)
         tokenizedText.append(newToken)
+    tokenizedText = [token for token in tokenizedText if not(token in set)]
     return tokenizedText
 
 def save_obj(obj, path):
@@ -42,6 +50,3 @@ def save_obj(obj, path):
 def load_obj(path):
     obj = pickle.load(open(path, 'rb'))
     return obj
-
-text = "This article is on the Decision Tree algorithm in Machine Learning. In this article, I will try to cover everything related to it. First of all, let’s see what is classification. Classification: The process of dividing the data points into the data set into different groups or different categories by adding a label to it is called Classification. But how is it possible"
-print(tokenize_text(text))
