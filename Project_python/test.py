@@ -47,9 +47,9 @@ print('######## LOADING TEXTS...')
 
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_orgFilesCompact, sdgs_orgFilesCompact = data.get_sdgs_org_files(paths["SDGs_inf"], compact_per_sdg=True)
-raw_natureShort, sdgs_nature = data.get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=False)
-raw_natureExt, sdgs_nature = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"])
+raw_natureShort, sdgs_nature = data.get_nature_abstracts()
+raw_natureExt, sdgs_natureAll = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
+# raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"])
 
 topWords = 25
 
@@ -64,7 +64,6 @@ orgFiles = prepare_texts(raw_orgFiles)
 orgFilesCompact = prepare_texts(raw_orgFilesCompact)
 natureShort = prepare_texts(raw_natureShort)
 natureExt = prepare_texts(raw_natureExt)
-
 
 # TRAINING SECTION
 print('######## TRAINING MODELS...')
@@ -86,8 +85,8 @@ trainData = [raw_orgFiles, sdgs_orgFiles]
 def test_model(model, outTopics):
     model.map_model_topics_to_sdgs(associated_sdgs=trainData[1], path_csv=outTopics)# out/topics_top2vec.csv"
     model.test_model(corpus=raw_natureShort, stat_topics=1, associated_SDGs=sdgs_nature)
-    model.test_model(corpus=raw_natureExt, stat_topics=1, associated_SDGs=sdgs_nature)
-    model.test_model(corpus=raw_pathFinder, stat_topics=1, associated_SDGs=sdgs_pathFinder)
+    model.test_model(corpus=raw_natureExt, stat_topics=1, associated_SDGs=sdgs_natureAll)
+    # model.test_model(corpus=raw_pathFinder, stat_topics=1, associated_SDGs=sdgs_pathFinder)
 
 
 top2vec.train_global_model(train_data=trainData, embedding_model="universal-sentence-encoder", method="learn", ngram=True, min_count=1, workers=8, embedding_batch_size=10)
@@ -107,8 +106,8 @@ if 1:
     # # TESTING SECTION
     print('###### NMF models...')
     nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, path_to_excel="out/results4.xlsx")
-    nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_nature, path_to_excel="out/results5.xlsx")
-    nmf.test_model(corpus=raw_pathFinder, associated_SDGs=sdgs_pathFinder, path_to_excel="out/results6.xlsx")
+    nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, path_to_excel="out/results5.xlsx")
+    # nmf.test_model(corpus=raw_pathFinder, associated_SDGs=sdgs_pathFinder, path_to_excel="out/results6.xlsx")
 # nmf.test_model(corpus=validFilesPathfinder, associated_SDGs=sdgsPathfinder, path_to_plot="out/test_nmf_fulltext_pathfinder.png")
 # nmf.test_model(database=validationDB, path_excel="out/matrix_classification_abstract_kw.xlsx", abstract=True, kw=True)
 # nmf.test_model(database=validationDB, path_excel="out/matrix_classification_abstract_kw_intro.xlsx", abstract=True, kw=True, intro=True)

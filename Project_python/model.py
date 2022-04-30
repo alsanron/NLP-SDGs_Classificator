@@ -704,7 +704,7 @@ class Top2Vec_classifier:
         #         tokens = tools.tokenize_text(text, min_word_length=3, lemmatize=False, stem=False, extended_stopwords=True)
         #         return tokens     
 
-        self.global_model = Top2Vec(documents=corpus, embedding_model=embedding_model, min_count=min_count, ngram_vocab=ngram, speed=method, workers=workers, embedding_batch_size=embedding_batch_size, document_chunker="sequential")
+        self.global_model = Top2Vec(documents=corpus, embedding_model=embedding_model, min_count=min_count, ngram_vocab=ngram, speed=method, workers=workers, embedding_batch_size=embedding_batch_size, document_chunker="sequential", chunk_length=25)
         self.print_model_summary()
         self.global_model.save(self.paths["model"] + "model_top2vec")
         # self.map_model_topics_to_sdgs(associated_sdgs=associated_sdgs)

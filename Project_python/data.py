@@ -20,7 +20,7 @@ def get_sdg_titles(refPath):
 # DATASET: the role of artificial intelligence in achieving the sustainable development goals. NATURE PAPER. The user can select independently: abstract, keywords, introduction, body or conclusions.
 def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=False):
     paths = conf.get_paths()
-    with open(paths["ref"] + "ext_database.json", "r") as f:
+    with open(paths["ref"] + "cleaned_database.json", "r") as f:
         json_dump = f.read()
         f.close()
     database = json.loads(json_dump)
@@ -30,7 +30,8 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
         text = ""
         sdgs = database[file]["SDG"]
         if abstract:
-            text += database[file]["abstract"]
+            if len(database[file]["abstract"]) > 50:
+                text += database[file]["abstract"]
         if kw:
             text += database[file]["keywords"]
         if intro:
@@ -43,6 +44,23 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
         associatedSDGs.append(sdgs)
     print("- {} nature files were found".format(len(corpus)))
     return [corpus, associatedSDGs]
+
+def get_nature_abstracts():
+    paths = conf.get_paths()
+    with open(paths["ref"] + "cleaned_database.json", "r") as f:
+        json_dump = f.read()
+        f.close()
+    database = json.loads(json_dump)
+    
+    corpus = []; associatedSDGs = []
+    for file in database:
+        sdgs = database[file]["SDG"]
+        if len(database[file]["abstract"].split(' ')) > 50:
+            corpus.append(database[file]["abstract"])
+            associatedSDGs.append(sdgs)
+    print("- {} nature abstracts were found".format(len(corpus)))
+    return [corpus, associatedSDGs]
+
     
 # DATASET: https://sdgs.un.org/
 # - Goals definition
