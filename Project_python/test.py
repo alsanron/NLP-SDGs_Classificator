@@ -87,9 +87,8 @@ def test_model(model, outTopics):
     model.test_model(corpus=raw_natureShort, stat_topics=1, associated_SDGs=sdgs_nature)
     model.test_model(corpus=raw_natureExt, stat_topics=1, associated_SDGs=sdgs_natureAll)
     # model.test_model(corpus=raw_pathFinder, stat_topics=1, associated_SDGs=sdgs_pathFinder)
-
-
-top2vec.train_global_model(train_data=trainData, embedding_model="universal-sentence-encoder", method="learn", ngram=True, min_count=1, workers=8, embedding_batch_size=10)
+# universal-sentence-encoder
+top2vec.train_global_model(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method="learn", ngram=True, min_count=1, workers=8, embedding_batch_size=10)
 test_model(top2vec, "out/topics_top2vec.csv")
 
 

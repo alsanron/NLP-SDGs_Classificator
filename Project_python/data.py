@@ -25,8 +25,8 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
         f.close()
     database = json.loads(json_dump)
     
-    corpus = []; associatedSDGs = []
-    for file in database:
+    corpus = []; associatedSDGs = []; indexes = []
+    for file, index in zip(database, range(len(database))):
         text = ""
         sdgs = database[file]["SDG"]
         if abstract:
@@ -42,8 +42,9 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
             text += database[file]["conclusions"]
         corpus.append(text)
         associatedSDGs.append(sdgs)
+        indexes.append(index)
     print("- {} nature files were found".format(len(corpus)))
-    return [corpus, associatedSDGs]
+    return [corpus, associatedSDGs, indexes]
 
 def get_nature_abstracts():
     paths = conf.get_paths()
@@ -52,16 +53,16 @@ def get_nature_abstracts():
         f.close()
     database = json.loads(json_dump)
     
-    corpus = []; associatedSDGs = []
-    for file in database:
+    corpus = []; associatedSDGs = []; indexes = []
+    for (file, index) in zip(database, range(len(database))):
         sdgs = database[file]["SDG"]
         if len(database[file]["abstract"].split(' ')) > 50:
             corpus.append(database[file]["abstract"])
             associatedSDGs.append(sdgs)
+            indexes.append(index)
     print("- {} nature abstracts were found".format(len(corpus)))
-    return [corpus, associatedSDGs]
+    return [corpus, associatedSDGs, indexes]
 
-    
 # DATASET: https://sdgs.un.org/
 # - Goals definition
 # - Goals progress - evolution section
