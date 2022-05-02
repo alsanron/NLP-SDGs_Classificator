@@ -5,7 +5,7 @@ import pandas as pd
 import tools
 import model
 import json
-
+import os
 
 
 def test_text_preprocess(texts, n_texts=20):
@@ -39,16 +39,13 @@ paths = conf.get_paths()
 # sdgsFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 # textsPathfinder = data.get_sdgs_pathfinder(paths["ref"])
 
-# texts = [elem[0] for elem in textsPathfinder]
-# test_text_preprocess(texts)
 
 # PREPROCESS THE INPUT TEXTS
 print('######## LOADING TEXTS...')
 
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
-raw_orgFilesCompact, sdgs_orgFilesCompact = data.get_sdgs_org_files(paths["SDGs_inf"], compact_per_sdg=True)
-raw_natureShort, sdgs_nature = data.get_nature_abstracts()
-raw_natureExt, sdgs_natureAll = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
+raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
+raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
 # raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"])
 
 topWords = 25
@@ -61,7 +58,6 @@ def prepare_texts(corpus):
         
 # trainFiles = prepare_texts(raw_trainFiles)
 orgFiles = prepare_texts(raw_orgFiles)
-orgFilesCompact = prepare_texts(raw_orgFilesCompact)
 natureShort = prepare_texts(raw_natureShort)
 natureExt = prepare_texts(raw_natureExt)
 
@@ -80,7 +76,6 @@ print('######## TRAINING MODELS...')
 
 top2vec = model.Top2Vec_classifier(paths)
 trainData = [raw_orgFiles, sdgs_orgFiles]
-
 
 def test_model(model, outTopics):
     model.map_model_topics_to_sdgs(associated_sdgs=trainData[1], path_csv=outTopics)# out/topics_top2vec.csv"

@@ -6,7 +6,6 @@ import data
 
 paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
-raw_orgFilesCompact, sdgs_orgFilesCompact = data.get_sdgs_org_files(paths["SDGs_inf"], compact_per_sdg=True)
 raw_natureShort, sdgs_nature, index_natureAbstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_natureFull = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
 

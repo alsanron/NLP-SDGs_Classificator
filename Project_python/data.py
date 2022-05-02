@@ -66,65 +66,32 @@ def get_nature_abstracts():
 # DATASET: https://sdgs.un.org/
 # - Goals definition
 # - Goals progress - evolution section
-def get_sdgs_org_files(refPath, sdg=-1, compact_per_sdg=False):
+def get_sdgs_org_files(refPath, sdg=-1):
     # Returns an array where each elements consist of an array with the fields:
     # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
     if sdg > 0:
         sdgStart = "{:02d}".format(sdg)
     else:
         sdgStart = "" # it's always true
-
-    if compact_per_sdg:
-        sdgsPaths = [refPath + "SDGs_description/"]
-        corpus = [""] * 17
-        associatedSDGs = [[ii] for ii in range(1,17)]
-        for path in sdgsPaths:
-            for file in os.listdir(path):
-                if file.endswith(".txt") and file.startswith(sdgStart):
+        
+    sdgsPaths = [refPath + "SDGs_description/",
+                refPath + "SDGs_progress/",
+                refPath + "SDGs_targets/"
+                ]
+    corpus = []; associatedSDGs = []
+    for path in sdgsPaths:
+        for file in os.listdir(path):
+            if file.endswith(".txt") and file.startswith(sdgStart):
+                try:
+                    f = open(path + file, 'r')
+                    text = f.read()
+                except UnicodeError:
                     f = open(path + file, 'r', encoding="utf8")
                     text = f.read()
-                    f.close()
-                    fileSDG = int(file.partition("_")[0])
-                    corpus[fileSDG - 1] += text
-    else:
-        sdgsPaths = [refPath + "SDGs_description/",
-                     refPath + "SDGs_progress/",
-                     #refPath + "SDGs_targets/"
-                    ]
-        corpus = []; associatedSDGs = []
-        for path in sdgsPaths:
-            for file in os.listdir(path):
-                if file.endswith(".txt") and file.startswith(sdgStart):
-                    try:
-                        f = open(path + file, 'r')
-                        text = f.read()
-                    except UnicodeError:
-                        f = open(path + file, 'r', encoding="utf8")
-                        text = f.read()
-                    f.close()
-                    fileSDG = [int(file.partition("_")[0])]
-                    corpus.append(text)
-                    associatedSDGs.append(fileSDG)
-        sdgsPaths = [refPath + "SDGs_targets/",
-                    #  refPath + "SDGs_description/",
-                    #  refPath + "SDGs_progress/"
-                    ]
-        for path in sdgsPaths:
-            texts = [""] * 17
-            for file in os.listdir(path):
-                if file.endswith(".txt") and file.startswith(sdgStart):
-                    try:
-                        f = open(path + file, 'r')
-                        text = f.read()
-                    except UnicodeError:
-                        f = open(path + file, 'r', encoding="utf8")
-                        text = f.read()
-                    f.close()
-                    fileSDG = int(file.partition("_")[0])
-                    texts[fileSDG - 1] += " " + text
-            for text, sdg in zip(texts, range(1,18)):
+                f.close()
+                fileSDG = [int(file.partition("_")[0])]
                 corpus.append(text)
-                associatedSDGs.append([sdg])
+                associatedSDGs.append(fileSDG)
         
     nFiles = len(corpus)
     print("- {} sdgs files were found".format(nFiles))    
