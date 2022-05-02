@@ -1,0 +1,268 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/222453416
+
+Articial intelligence and expert systems in ecology and
+natural resource management
+Article in Ecological Modelling  July 1989
+DOI: 10.1016/0304-3800(89)90066-5
+
+CITATIONS
+
+READS
+
+72
+
+2,752
+
+1 author:
+Edward J Rykiel
+53 PUBLICATIONS 3,459 CITATIONS
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+Comparison of the movements of wintering and resident birds in urban parks View project
+
+Grassland Ecology View project
+
+All content following this page was uploaded by Edward J Rykiel on 14 November 2017.
+The user has requested enhancement of the downloaded file.
+
+Ecological Modelling, 46 (1989) 3-8
+
+3
+
+Elsevier Science Publishers B.V., Amsterdam - Printed in The Netherlands
+Editorial
+
+ARTIFICIAL INTELLIGENCE AND EXPERT SYSTEMS IN ECOLOGY
+AND NATURAL RESOURCE MANAGEMENT
+
+EDWARD J. RYKIEL, Jr.
+Biosystems Group, Industrial Engineering Department, Texas A & M University, College Statior,.,
+TX 77843 (U.S.A.)
+
+ABSTRACT
+Rykiel, E.J., Jr., 1989. Artificial intelligence and expert systems in ecology and natural
+resource management. Ecol. Modelling, 46: 3-8.
+Ecologists have a variety of tools for collecting and analyzing data, but relatively few tools
+that facilitate ecological reasoning. Up to this time, simulation models have been the basic
+means of organizing ecological knowledge in a way that can be rapidly processed by
+computer. Technologies for computer-based manipulation of knowledge have been developed
+in artificial intelligence. The areas of ecological science in which this technology is likely to
+prove important include: modelling and simulation, integration of qualitative and quantitative knowledge, theoretical development, and, natural resource management. Researchers and
+managers in both basic and applied ecology will be affected by these developments as
+AI-derived technologies are added to the ecological toolkit.
+
+INTRODUCTION
+As it is currently taught a n d practiced, ecology reflects in large m e a s u r e
+the collection of ever more data. Ecologists delight in p o i n t i n g out the
+complexity of ecological systems, the difficulty of p e r f o r m i n g controlled,
+replicated experiments, the impossibility of e x p e r i m e n t i n g on large-scale
+systems, the i m m e n s e n u m b e r of variables to be considered, the bewildering
+array of ecological behaviors that are possible, the exasperating ability of
+living organisms to acclimate, adapt, evolve. Yet, with the exception of
+c o m p u t e r simulation modelling, ecologists have developed, or a d a p t e d f r o m
+other disciplines, virtually no c o m p u t e r - b a s e d tools that might help t h e m
+think a b o u t this mass of i n f o r m a t i o n .
+The ecological knowledge base, s p a n n i n g as it does the range from
+physiology to the biosphere, is a l r e a d y e n o r m o u s a n d growing continually.
+This huge knowledge base challenges us to develop new a n d m o r e efficient
+ways of organizing, processing, a n d analyzing ecological k n o w l e d g e to
+0304-3800/89/$03.50
+
+ 1989 Elsevier Science Publishers B.V.
+
+emphasize and facilitate the process of ecological reasoning, rather than data
+reduction. Moreover, it is essential to take up this challenge if ecological
+science is to have any impact on the social, political, and management
+decisions influencing the course of the biosphere.
+Can artificial intelligence, with its emphasis on understanding how the
+human mind organizes and processes massive amounts of information, help?
+The technologies emerging from AI research may provide the high speed,
+computerized tools and techniques that aid ecologists in thinking and
+reasoning about ecological complexity, unifying theory, and mechanisms for
+applying ecological knowledge to real problems. Although a period of
+exploration and testing is necessary to delimit the scientific role that AI can
+play in ecology, it is certain that some of the techniques will become an
+accepted part of the ecologist's toolkit. The articles in this special issue
+represent some of the first steps being taken to adapt AI techniques to
+ecological research. In addition, these papers illustrate the major research
+areas briefly sketched below.
+
+Artificial intelligence
+Artificial intelligence (AI) is a branch of computer science that is principally concerned with using computational models to understand how humans think (Tanimoto, 1987). Major research areas include expert systems
+(ES), search methods, knowledge representation, logical and probabilistic
+reasoning, learning, natural language understanding, vision, and robotics
+(Cohen and Feigenbaum, 1982). The catch phrase, 'AI (or expert systems)
+techniques', generally refers to computer methods developed in one or more
+of those areas. Expert systems technology (Jackson, 1986), for example,
+represents an integration of methods from several AI research areas such as
+search methods, knowledge representation, and logical reasoning (production systems). For a long time, relatively little AI research found a pragmatic
+use outside of academia. However, the development of expert systems led
+many researchers from numerous other fields to explore the potential
+applications of AI to their particular disciplines. Expert systems technology
+thus became the major development that led to the explosion of interest in
+artificial intelligence that we are currently experiencing. However, it is by no
+means the only AI technique applicable to ecological research.
+
+Expert systems
+An expert system is a computer program that can solve problems in a
+specific area of knowledge (the problem domain) as well as a human expert
+(O'Keefe et al., 1987), or, that automates tasks that are normally performed
+
+by specially trained or talented people (Shannon et al., 1985). Expert
+systems research led to a methodology for separating knowledge in the form
+of rules, principally IV/THEY statements, from the procedures used to
+invoke these rules to solve a problem (Buchanan and Shortliffe, 1985). A
+collection of IF/THEN statements is only one of various methods used for
+knowledge representation. At its simplest, an expert system therefore consists of a knowledge base containing the rules and a procedure (inference
+engine) for processing the rules. This separation of knowledge from procedure has also given rise to the terminology 'knowledge-based systems'.
+The principal method of developing an expert system is to interview the,
+expert intensively to develop rules by which he or she solves problems or
+produces a diagnosis/evaluation. The process of extracting, formatting, and
+encoding an expert's knowledge in a computer program is referred to as
+knowledge engineering. Because the inference engine can be constructed
+independently of the knowledge base, it is possible to build an expert system
+'shell'; that is, a program that requires the user to provide only the
+knowledge base. The user can therefore become both the expert and the
+knowledge engineer. There are now a number of implementations of expert
+system shells available (e.g., Epp et al., 1988).
+The image of computer programs serving as experts has diverted attention
+away from the use of A I / E S technology for ecological research (in contrast
+to applications) (e.g., Loehle, 1987; Noble 1987). The exercise of building an
+expert system often reveals weaknesses in existing knowledge that point to
+needed research. These systems also serve to indicate the quality of decisionmaking that is possible with existing knowledge (e.g., Starfield and
+Bleloch, 1983, 1986). Expert systems techniques can be used to produce both
+stand-alone applications and components for other types of systems (i.e.,
+embedded expert systems). These techniques can be used to add so-called
+'intelligent' components to standard programs and models (Coulson et al.,
+1987). But most importantly, A I / E S techniques can be used to investigate
+ecological problems, particularly those associated with the development of
+coherent theory and ecological reasoning processes. Artifical intelligence
+methodologies, including but not limited to expert systems, may ultimately
+prove useful as tools for exploring ecological issues and developing ecological theory (Rykiel and Mayer, 1988).
+MAJOR RESEARCH AREAS
+
+Modelling and simulation
+Perhaps the most immediate impact of AI technologies will be on the way
+ecologists organize, develop, and implement models. Two developments are
+
+worth emphasizing. The first is the development of specialized computing
+environments that allow a researcher to concentrate on the problem domain
+rather than mechanics of manipulating the computer. Ecological modellers
+have used one basic knowledge representation scheme up to now, the
+equation. Although elegant in many respects, equations severely limit the
+kinds of knowledge that can be represented and how knowledge is organized.
+Many ecological computer models are merely procedures for producing
+numerical approximations to the solutions of several to many equations.
+These models range from difficult to impossible for a non-modeller to
+parameterize and operate, and especially to understand the resulting output.
+Thus, the majority of the research effort is devoted to producing and
+debugging the model with much less time spent on thinking about the
+problem that inspired the modelling effort to begin with. An ecological
+computing environment should allow an ecologist to think mostly about the
+ecological problem and much less about the mechanics of computing. The
+first halting steps toward such modelling environments are now being taken.
+The second development worth mentioning is object-oriented programming systems (OOPS). In current modelling technology, ecological entities
+are generally represented by variables or vectors. For example, in a forest
+growth model, a tree might be represented by a vector of numbers that
+indicates its age, Dan, and height. However, there is no object in the model
+called a 'tree' because knowledge representation by variable (or equation)
+does not provide a means of defining a tree object. In addition, there is no
+particular data structure that associates these variables as a tree. It would
+seem to be much more natural to build a model using the ecological objects
+ecologists are familar with. Object-oriented programming is based on this
+idea of a set of interacting objects that are meaningfully defined in the
+appropriate scientific context. Examples of computer languages that incorporate the object-oriented approach are Smalltalk and C + + . Object-oriented programming may be particularly effective for hierarchical representations of ecological systems since OOPS are inherently hierarchical.
+
+Integration of quafitative and quantitative knowledge
+Much ecological knowledge is qualitative and fuzzy, expressed verbally
+and diagrammatically. Ecologists have no effective technology for using this
+vast knowledge in a meaningful way. The core of ecology does not yet exist
+in the form of an accepted set of mathematical expressions. There is no
+evident point to waiting around for ecology to become primarily quantitative, and in the mean time ignoring the predictive power of qualitative
+knowledge. In reality, ecologists have considerable knowledge in their heads
+and not many ways to make this knowledge explicit, well-organized, and
+
+computer-processable. Artificial intelligence research may provide tools in
+the form of symbolic computing techniques for manipulating qualitative
+knowledge. Many questions of interest in ecology (and especially to decisionmakers) can be answered in terms of 'better or worse, more or less,
+sooner or later,' etc.
+The search for quantitative knowledge, must continue to discover ecological relationships that can be expressed and manipulated with the power of
+mathematics. The challenge is to integrate quantitative knowledge with
+qualitative knowledge to deal with the complexity of ecological and environmental systems. Scientifically valid qualitative predictions can be made even
+when quantitative predictions cannot. Often, quantitative methods are used
+to arrive at a qualitative prediction or decision. When quantitative methods
+are inadequate or lacking, estimates, predictions, and decisions must still be
+made in both scientific and management situations.
+
+Theoretical development
+It is perfectly valid to ask the ecologist to describe the rules by which
+ecological systems operate. Science is after all a search for the rules that
+describe the way nature behaves. We have no evidence at this point in time
+that there is a simple set of rules for ecological systems. Ecological systems
+are complex and it is not unreasonable to think that there may be hundreds
+or thousands of rules needed to describe, for example, the behaviour of a
+salt marsh. Theoretical development is hampered by the limited mental
+capacity we have for figuring out the consequences of even small knowledge
+bases. Why not take advantage of any technology that can assist us in
+determining the logical consequences of complicated ecological chains of
+reasoning.
+AI technologies may eventually prove useful for theoretical developmenl
+in at least three ways: organization of computer-compatible knowledge
+bases including both qualitative and quantitative knowledge; rapid assessment of assumptions, hypotheses, or other ideas in a theoretical context; and
+determining the consequences and logical consistency of long and com-.
+plicated reasoning pathways.
+
+Natural resource management and policy analysis
+This is an area where expert systems are likely to play an increasingly
+important role. It is one of the few readily identifiable ways to introduce
+sound ecological knowledge into the management environment. All resource
+management agencies engage in planning activities that can be enhanced by
+A I / E S technologies. To the extent that ecological considerations can be
+
+factored into these systems, the influence of ecological science on the
+decisionmaking process can be increased. Resource applications can also be
+used to evaluate the impact of alternative management policies. While policy
+analysis has not been given much attention in ecological circles, it is likely to
+become increasingly important for translating ecological insights into
+management practices.
+CONCLUSION
+
+Artificial intelligence techniques are now being investigated for application to ecological science. At this very early stage of development, research is
+focused on how to use A I / E S technologies to further ecological research.
+The role that this technology can play in ecology will be decided over the
+course of the next decade. Many current expectations will fall by the
+wayside, but some will be realized and lead to useful tools for ecological
+research and for the application of ecological knowledge to management.
+REFERENCES
+Buchanan, B.G. and Shortliffe, E.H., 1985. Rule-Based Expert Systems. Addison-Wesley,
+Reading, MA, 748 pp.
+Cohen, P.R. and Feigenbaum, E.A. (Editors), 1982. The Handbook of Artificial Intelligence,
+Vols. I-IlL Kaufmann, Los Altos, CA, 1476 pp.
+Coulson, R.N., Folse, L.J. and Loh, D.K., 1987. Artificial intelligence and natural resource
+management. Science, 237: 262-267.
+Epp, H., Kalin, M. and Miller, D., 1988. PC software for artificial intelligence applications.
+Science, 240: 824-830.
+Jackson, P., 1986. Introduction to Expert Systems. Addison-Wesley, Workingham, England,
+246 pp.
+Loehle, C., 1987. Applying artificial intelligence techniques to ecological modeling. Ecol.
+Modelling, 38: 191-212.
+Noble, I.R., 1987. The role of expert systems in vegetation science. Vegetatio, 69: 115-121.
+O'Keefe, R.M., Balci, O. and Smith, E.P., 1987. Validating expert systems. IEEE Expert, 2:
+81-90.
+Rykiel, E.J., Jr. and Mayer, R.D., 1988. Modelling grazing systems: an expert systems
+approach. In: Proc. 1988 Forage and Grassland Conf., 13-15 Arpil 1988, Baton Rouge,
+LA. American Forage and Grassland Council, Belleville, PA, pp. 294-304.
+Shannon, R.E., Mayer, R.J. and Adelsberger, H.H. 1985. Expert systems and simulation.
+Simulation, 44: 275-284.
+Starfield, A.M. and Bleloch, A.L., 1983. Expert systems: an approach to problems in
+ecological management that are difficult to quantify. J. Environ. Manage., 16: 261-268.
+Starfield, A.M. and Bleloch, A.L., 1986. Building Models for Conservation and Wildlife
+Management. Macmillan, New York, pp. 211-232.
+Tanimoto, S.L., 1987. The Elements of Artificial Intelligence. Computer Science Press,
+Rockville, MD, 527 pp.
+
+View publication stats
+
+

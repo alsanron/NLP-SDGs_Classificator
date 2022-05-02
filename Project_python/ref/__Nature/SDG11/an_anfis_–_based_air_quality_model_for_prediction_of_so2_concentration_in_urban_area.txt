@@ -1,0 +1,1011 @@
+Serbian Journal of Management 8 (1) (2013) 25 - 38
+
+Serbian
+Journal
+of
+Management
+
+www.sjm06.com
+
+An AnFIS  BASED AIR QUALITY MODEL FOR PREDICTIOn OF
+SO2 COnCEnTRATIOn In URBAn AREA
+Marija Savi, Ivan Mihajlovi*and ivan ivkovi
+University in Belgrade, Technical Faculty in Bor,
+Vojske Jugoslavije 12, 19210 Bor, Serbia
+(Received 20 January 2013; accepted 1 February 2013)
+Abstract
+This paper presents the results of attempt to perform modeling of SO2 concentration in urban area
+in vicinity of copper smelter in Bor (Serbia), using ANFIS methodological approach. The aim of
+obtained model was to develop a prediction tool that will be used to calculate potential SO2
+concentration, above prescribed limitation, based on input parameters. As predictors, both
+technogenic and meteorological input parameters were considered. Accordingly, the dependence of
+SO2 concentration was modeled as the function of wind speed, wind direction, air temperature,
+humidity and amount sulfur emitted from the pyrometallurgical process of sulfidic copper
+concentration treatment.
+Keywords:Mathematical modeling, ANFIS, SO2 air concentration
+
+could appear exposure to increased SO2
+concentrates during period longer than 10
+Sulfur dioxide (SO2) pollution has long minutes (WHO, 2006). Based on this
+been reported to be associated with many evidence, it is recommended that a SO2
+adverse health effects (Herbarth et al., 2001;
+concentration of 500 g/m3 should not be
+Brunekreef & Holgate, 2002; Biggeri et al.,
+exceeded over averaging periods of 10
+2005; WHO, 2006). The control studies have
+minutes duration (WHO, 2006). Some
+indicated that some respiration problems
+evidences of SO2 harmful effect on human
+
+1.
+
+InTRODUCTIOn
+
+* Corresponding author: imihajlovic@tf.bor.ac.rs
+
+DOI: 10.5937/sjm8-3295
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+26
+
+respiration organs are presented in references
+(Koren, 1995; Wong et al., 2001; Barnet et
+al., 2005; Biggeri et al., 2005), this is
+especially evident with children (Herbnarth
+et al., 2001). Also, many studies evidenced
+existence of increased mortality in regions
+with increased SO2 concentration in the air
+
+the copper smelter in Bor, Eastern Serbia, in
+the period 2005-2008, in the urban part of the
+city, maximum monthly average SO2
+concentrations were recorded in the range of
+500-2000 gm-3 (Nikoli et al., 2010). In the
+
+period 2000-2008, the episodes occurred
+with a daily average values in the range of
+(Kan & Chen, 2003; Buringh et al., 2000;
+5000 - 8000 gm-3 in this region
+Jerrett, 2005).
+(Dimitrijevi et al., 2008), when the smelter
+The European Union (EU) limits the
+was stopped after intervention of the state for
+concentration of SO2 in the air: (1) hourly
+a few days because of the high toxicity of
+limit for protection of human health is 350 gas, and then continued to work with the
+gm-3 and must not be exceeded more than same technical parameters. If the SO2 >
+24 times in a calendar year; (2) daily limit for
+1000 gm-3 concentrations occur several
+protection of human health is 125 gm-3 and times a year, it represent a significant risk to
+must not be exceeded more than three times human health and vegetation (Garciain a calendar year; (3) annual limit in order to Huidobro et al., 2001). During 2011 and
+protect ecosystem is 20 gm-3.
+2012, episodes of SO2 contrentations up to
+All these measures are the result of high
+10.000 gm-3 were registrated (Djordjevi
+concentrations of SO2 in many regions of the
+et al., 2013).
+world which seriously endangers human
+In the region of Eastern Serbia, in Bor,
+health and vegetation (WHO, 2006; EU within the company RTB Bor, one of the
+Directive, 2008). In the central region of largest copper smelters in Europe operates
+Chile in the period 1997  1999, in the for over 100 years. In the technology of
+vicinity of copper smelters Caletones, high copper production in this company, since
+concentrations of SO2 were registered. It is 1975 to date, important improvement at the
+thought that there is a possibility of stage of melting, refining gas and production
+occurrence of acute injuries (in each year), of H2SO4 has not been done. Since 2003,
+considering that the concentration of SO2 immission of pollutants was monitored at
+was in the range of 500 to 50,000 gm-3 eight measuring points (Nikoli et al., 2010),
+(Huidobro-Garcia et al., 2001). In Istanbul, and after 2010 only at three measuring
+Turkey, SO2 concentrations were recorded in points, with limited measurement range and
+transparency of data controlled by the
+the range of 50-170 gm-3 (Sahin et al., government, and at the two measuring points
+2011). In Beijing, during the year 2000, SO2 with the internal character data. In the period
+concentrations were up to 100 gm-3 (Chak 2009-2011, there were episodes of extremely
+& Yao, 2008). In one of the regions of Spain, high concentrations of SO2 with over 9000
+SO2 gm-3, with fatal consequences for the bees
+concentrations ranged up to 100 gm-3 and agricultural crops. In these cases, the
+(Santacatalina et al., 2011). In the vicinity of company has paid damages to farmers from
+in
+
+the
+
+period
+
+2004
+
+-
+
+2007,
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+the surrounding and penalties for the
+responsible managers, and then company
+continued to work with the same technical
+parameters.
+In order to curb the growing harmful
+effects of air quality, urgent risk assessment
+and appropriate risk management tools are
+essential in order to ensure flexible control of
+high levels of pollution. For this purpose,
+mathematical models have become essential
+in the design of business decisions and
+engineering management of technological
+processes (Yetilmezsoy et al., 2011). Linear
+statistical models generally do not produce
+satisfactory results, which led to the
+development of nonlinear models of artificial
+neural networks ANNs (Yilmaz & Kaynar,
+2011), and more recently several adaptive
+neuro-fuzzy techniques - Adaptive NeuralFuzzy Inference System (ANFIS) are
+developed, which have been applied
+successfully to control air pollution
+(Morabito & Versaci, 2003; Yildrim &
+Bayramogly, 2006; Ashish & Rashami,
+2011). In order to combine the advantages of
+fuzzy logic methodology and architecture of
+the neural network, Jang (1993) has
+proposed a brand new hybrid, adaptive
+neuro-fuzzy inference system (ANFIS).
+ANFIS has the advantages of neural
+networks and fuzzy logic, where the ANN
+has a better ability to learn, parallel
+processing, adaptation, fault tolerance, while
+the strategy of fuzzy logic can deal with
+higher-level reasoning (Lei & Wan, 2012).
+The main objective of this study is to
+define the appropriate mathematical model
+for predicting the SO2 content (imission) at
+the measuring stations around the copper
+smelter in Bor, which currently emits the
+greatest amount of sulfur in the SO2 in the
+urban environment smelter. Defined model
+
+27
+
+should allow defining the content of SO2 in
+urban areas, with acceptable statistical
+significance, from the amount of concentrate
+processed and meteorological parameters,
+which should enable better management of
+SO2 immission in the urban environment
+around the copper smelter.
+1.1. Study area and measuring points
+The study area is located in southeastern
+Serbia, Figure l. City of Bor has about
+40,000 inhabitants and is situated at a
+distance of 30 km from the border with
+Bulgaria, and about 100 km with Romania.
+The rivers in this region belong to the basin
+of the Danube River. The whole region has
+about 200,000 inhabitants. Near to the
+Romanian border is a national park Djerdap,
+representative tourist center of the region.
+Locations of measuring stations shown in
+Figure 1, are representing the system of
+monitoring of emissions in the city of Bor.
+Distances between the measuring stations
+and furnace chimney - the source of pollutant
+emissions is as follows: measuring station 1
+- Jugopetrol, in the south - southeast, is about
+2.990 m from the emission source;
+measuring station 2  Faculty, in the north northwest, away from the furnace chimney
+about 880 m; measuring station 3 - City Park,
+in the west, from the copper smelter at a
+distance of about 480 m from the furnace
+chimney, in the center of the urban part of the
+city (local government, primary school,
+hospital, town market, the main shopping
+areas, promenade); measuring station 4 Instituit, in the south - southwest of the
+smelter, in the new town center at a distance
+of about 2,600 m from the furnace chimney,
+where there are nearly half of the city's
+population; measuring station 5 - Brezonik,
+
+28
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+in the north, at a distance of 2.000 m from
+furnace chimney on the border of the urban
+part of the city; and measuring station 6 Krivelj, located 7,000 m from the furnace
+chimney in a rural part of the city.
+Measuring the concentration of SO2 at
+
+Registered parameters in real time are
+publicly available on the website of the State
+Agency for Environmental Protection
+(http://www.sepa.gov.rs), for measuring
+stations (3), (4), (5) and (6), and the data
+from the measuring stations (1) and (2),
+these measuring stations are performed in which are registered by the Institute of
+accordance with standard EN 14212 ISO Mining and Metallurgy in Bor, are available
+10498 : 2004. Accuracy of measuring to local government and RTB company.
+instruments is at the level of 0.4 gm-3.
+
+Figure 1. Location of measuring stations in the study area
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+2. EXPERIMEnTAL
+In recent years, artificial intelligence (AI)
+based methods have been proposed as
+alternatives to traditional linear statistical
+ones in many scientific disciplines. The
+literature demonstrates that AI models such
+as ANN and neuro-fuzzy techniques are
+successfully used for air pollution modeling
+(Nunnari et al., 2004; Perez-Roa et al., 2006)
+and forecasting (Perez et al., 2000; Gautam
+et al., 2008; Mihajlovi et al., 2011).
+If observing the measurement series for
+variables presented in Table 1, it can be
+concluded that almost all have wide range of
+relative change (ratio of variance compared
+to range). This way nonlinear statistic
+analysis method, based on only one rule
+describing the behaviour of input variable,
+such are ANNs, most certainly wouldnt
+present accurate enough results. From that
+reason, further modeling approach was based
+on
+Adaptive-Network-Based
+Fuzzy
+Inference System (ANFIS).
+The ANFIS system serve as a basis for
+constructing a set of fuzzy if-then rules with
+appropriate membership functions to
+generate the stipulate input-output pairs. The
+ANFIS structure is obtained by embedding
+the fuzzy interference system into the
+framework of adaptive networks (Jang,
+1993). An adaptive network is a network
+structure consisting of a number of nodes
+connected through directional links. The
+outputs of these adaptive nodes depend on
+modifiable parameters pertaining to these
+nodes (Guneri et al., 2011). The learning rule
+specifies how these parameters should be
+varied through iterations to minimize the
+final error. On the other hand, according to
+Takagi and Sugeno (1985) the fuzzy
+inference system (FIS) is a framework based
+on fuzzy set theory and fuzzy if-then rules.
+
+29
+
+Three main components of a FIS structure
+are: a rule base, a database, and a reasoning
+mechanism. The rule base has adequate
+number of if-then rules for levels of ranges
+of input variables. For example, one rule
+might be if wind speed is low, than
+registered SO2 concentration in the air is
+high, where low and high are linguistic
+variables. The database defines the
+membership functions applied in fuzzy rules
+and the reasoning mechanism performs the
+inference procedure (Jang et al., 1997).
+This way, for example that there are two
+input variables (X1 and X2), and assuming
+that their ranges can be divided in two levels,
+there would be the rule base with two rules
+for modeling the value of output variable Y:
+Rule 1: If X1 is in the range A1 and X2 is
+in the range B1, then f1 = p1x1 + q1x2 + r1
+Rule 2: If X1 is in the range A2 and X2 is
+in the range B2, then f2 = p2x1 + q2x2 + r2
+In the case f(x1, x2) is a first-order
+polynomial, then the model is called a firstorder Sugeno fuzzy model.
+The graphical presentation of general
+ANFIS network is presented in Figure 2. As
+can be seen in Figure 2, ANFIS architecture
+can be presented with five layers. Where X1
+and X2 are inputs to nodes in layer 1, Ai and
+Bi are the linguistic label of the ranges of
+input variables (small, large, etc), associated
+with the node function. Membership
+functions of nodes located in layer 1 (Oi1 =
+Ai(Xi) or Oi2 = Bi(Xi)) specifies the
+degree to which the given Xi satisfies the
+quantifier Ai, Bi, etc. Usually, membership
+functions are either bell-shaped with
+
+30
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+maximum equal to 1 and minimum equal to
+0, or Gaussian function.
+Nodes located in the layer 2 are
+multipliers, which are multiplying the
+signals exiting the layer 1 nodes. For
+example Oi2 = Wi = Ai(Xi) x Bi(Xi), i =
+1, 2, etc. Output of each node is representing
+the firing strength of a rule. The i-th node of
+layer 3 calculates the ratio of i-th rules firing
+strength to sum of all rules firing strengths.
+This way Oi3 = Wi = Wi /(W1 + W2 +
+), i = 1, 2,  Every node i in the layer 4
+has a node function of following type: Oi4 =
+Wi. f1 = Wi . (pix1 + qix2 + ri), where pi, qi
+
+conclusions about the possibilities of
+predicting the SO2 concentration in the
+ambient air, under different environmental
+conditions and based on the influence of
+sulphur entering the process with the charge.
+This way, for modeling the dependence of
+SO2 concentration, on different predictors,
+the data obtained from the automated
+measuring stations were used in combination
+with the data obtained from the smelting
+process. The data were collected during the
+year 2011, in the period of two months
+(October and November). Measurement of
+the four input parameters: wind speed (X1);
+
+wind direction (X2); air temperature (X3);
+and ri will be referred to as consequent relative humidity (X ) and the one output
+4
+parameters. The single node of layer 5 is the (Y) parameter  SO concentration in the air,
+2
+node that computes the overall output as the
+was facilitated using three of above
+summation of all incoming signals i.e., Oi5 = described measuring stations (4, 5 and 6, in
+Figure 1), with data acquisition in the data
+base on one hour intervals. The data was
+collected from three different stations to
+assess the influence of the wind direction and
+Training of the parameters in the ANFIS the distance from the source of emission.
+structure is accommodated according to the The last input parameter (X5)  amount of
+hybrid learning rule algorithm which is the sulphur emitted through the chimneys of the
+integration of the gradient descent method smelter plant (Figure 1) was calculated
+and the least square methods. In the forward according to the amounts of sulphur entering
+pass of the algorithm, functional signals go the process with the concentrate and its
+forward until layer 4 and the consequent utilization in the sulphuric acid production
+parameters are identified by the least squares facility. Those values were obtained from the
+method to minimize the measured error. In smelter plant. Before the model building
+the back propagation pass, the premise phase, all the data points were examined for
+parameters are updated by the gradient potential outliers. The measurement
+descent method (Jang et al., 1997).
+intervals, during which some of investigated
+input parameters were not recorded, from
+some reasons, were eliminated. After this,
+3. RESULTS AnD DISCUSSIOn
+1,800 data sets remained for further analysis.
+The values of the measured input
+The main motive for investigations parameters (X ) and the air quality indicator,
+i
+presented in this article was to draw
+investigated in this work  output of the
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+31
+
+Figure 2. Graphical presentation of ANFIS
+process (Y) in the form of descriptive Table 1, potential risk of the SO2 pollution in
+statistics results  are presented in Table 1.
+the air is obvious in this region, considering
+According to the results presented in that measured hourly SO concentration is in
+2
+Table 1. Values of the Input (Xi) and the Output (Y) Variables of the Model  Descriptive
+Statistics of 1,800 Data Sets
+
+Measured
+No. Parameter
+1. Wind speed
+2. Wind
+direction
+3. Air
+temperature
+4. Relative
+humidity
+5. S
+emitted
+from
+the
+process
+6. SO2 in the
+air
+
+Unit
+m/s
+2
+
+2
+
+Model
+Symbol Range Min Max
+8.6
+0
+8.6
+X1
+359
+0
+359
+X2
+
+C
+
+X3
+
+28.30
+
+%
+
+X4
+
+83.30 16.70 100.0
+
+t
+
+X5
+
+Pg/m3 Y
+
+-2.30
+
+26.00
+
+Mean
+Std.
+Std.
+Statistic Error Deviation Var.
+1.5534 .03174
+1.326
+1.812
+168.9929 2.66976 113.23697 12822.611
+11.5628 .11191
+
+4.74520
+
+74.7916 .47789 20.26934
+
+149.14 3.36 152.50 59.8323 .83209 35.29299
+
+4624.00
+
+0
+
+22.517
+410.846
+1245.595
+
+4624.00 119.2257 8.49300 360.12739 129691.741
+
+32
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+the range up to 4624.7 g/m3, which is
+above prescribed maximal values.
+Defining
+the
+linear
+correlation
+dependence between the output and the input
+parameters, with significant value of
+coefficient of correlation (R2), provides the
+possibility of predicting potential excess of
+SO2 concentration in the air, in the
+investigated area, using linear statistical
+analysis methods such is multiple linear
+regression analysis (MLRA). MLRA is one
+of the most widely used methodologies for
+expressing the dependence of a response
+variable on several independent variables
+(Al-Alawi et al., 2008). For defining the
+linear correlation dependence in the form:
+output of the model (Y) = f input of the
+model (X1  X5), a bivariate correlation
+analysis was performed. As the result of this
+analysis,
+Pearson
+correlation
+(PC)
+coefficients with responding statistical
+significance were calculated (Table 2).
+According to values presented in Table 2,
+it could be concluded that there isnt high
+linear
+dependence
+between
+SO2
+concentration in the air (Y) and input
+variables, although statistical significance is
+recorded for most of correlated pairs.
+According to these values, it was decided
+that using MLRA for obtaining the
+dependence between SO2 concentration and
+investigated predictors, wouldnt result with
+high accuracy.
+On the other hand, if the value of
+correlation between two variables is not
+high, this doesnt automatically mean that
+behaviour of one variable do not influence
+the behaviour of other. This is indicator that
+their inter correlation cannot be described
+with linear model, however modeling based
+on dynamic behaviour of the variables can be
+
+used to present their inter dependences
+(orevic et al., 2010). In such cases,
+modeling could be facilitated using nonlinear
+statistic approach such are Artificial Neural
+Networks (ANNs) - in case that input
+variables do not have vide range during
+whole time interval of observation (AbdulWahab & Al-Alawi, 2002; Ozdemir et al,
+2008; Al-Alawi et al., 2008), or AdaptiveNetwork-Based Fuzzy Inference System for
+variables with vide range of change (Noori et
+al., 2010; Johanyak & Kovacs, 2011).
+According to the number of input
+variables, their ranges and the variations,
+presented in Table 1, it was decided that two
+rules ANFIS network should be applied.
+Selected membership function was Gaussian
+one. Number of input variables was five (X1
+to X5), with one output variable (Y).
+To apply the ANFIS methodology the
+assembly of 1,800 input and output samples
+was divided into two groups. The first group
+consisted of 1,292 (70 %) at random
+selected samples, and it was used for training
+of the model, whereas the second group
+consisted of 508 (30 %) remaining samples
+from the starting data set, and it was used for
+testing the model. The selection of the
+variables for these two stages was performed
+by using random number generator. In the
+gathering data process for the training and
+the testing stage, the values for each input
+variable are normalized by the maximum
+values. This was done because of different
+nature and measuring units of input
+variables.
+During the training phase the correction
+of the weighted parameters (pi, qi, ri, etc) of
+the connections is achieved through the
+necessary number of iterations, until the
+mean squared error between the calculated
+and measured outputs of the ANFIS network,
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+33
+
+Table 2. Correlation Matrix for the Input (X1  X5) and the Output (Y) Variables of the
+Investigated occurrence (Number of Data Points for Each Variable is Equal to 1,800)
+X2
+
+X4
+
+X5
+
+relative
+humidity
+
+S emitted from
+the process
+
+X3
+
+X1
+wind speed
+
+wind
+direction
+
+Y
+
+temperature
+
+X1
+
+1
+
+X2
+
+**
+
+.339
+
+1
+
+X3
+
+.210**
+
+-.008
+
+1
+
+X4
+
+**
+
+**
+
+**
+
+1
+
+X5
+Y
+
+-.345
+
+-.088
+
+-.546
+
+-.003
+
+.027
+
+.229**
+
+-.088**
+
+1
+
+**
+
+**
+
+**
+
+**
+
+-.005
+
+-.107
+
+-.115
+
+.106
+
+-.090
+
+SO2 in the air
+
+1
+
+**. Correlation is significant at the 0.01 level (2-tailed).
+
+is minimal. During the second phase, the
+remaining 30% of the data is used for testing
+the trained network. In this phase, the
+network uses the weighted parameters
+determined during the first phase. These new
+data, excluded during the network training
+stage, are now incorporated as the new input
+values (Xi) which are then transformed into
+the new outputs (Y). For calculation
+presented in this paper MATLAB ANFIS
+editor was used (MathWorks, R2012b).
+In the phase of the network training, the
+necessary number of iterations was
+performed until the error between the
+measured output of the SO2 concentration in
+the air - Y and the calculated values wasnt
+minimized and remained constant. In the
+case of the investigation presented in this
+paper, optimal number of iterations (epochs)
+was 10. The obtained results from the
+training stage can be evaluated by
+comparison of the calculated values Y with
+the measured ones (Figure 3). The
+dependance of the output value (Y) on
+different predictors is presented in Figure 4.
+
+The ANFIS modeling approach, in the
+training stage, predicted the SO2
+concentration in the air with a determination
+coefficient R2 = 0.526 (Figure 3), which
+doesnt represent very large significance.
+The reason for such behaviour of the model
+is in large dispersion of the starting sample,
+ranging with SO2 values from 0 to 4,624.
+
+Figure 3. Coefficient of determination
+between measured and model predicted SO2
+concentration in the training stage
+
+34
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+Figure 4. Surface diagrams presenting dependence of SO2 concentration on input
+parameters
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+35
+
+However, the ANFIS model is largely Y becomes indirectly dependant on X1,
+more accurate than plain ANNs and MLRA when paired with X (Air temperature).
+3
+approach, which resulted with R2 below 0.2.
+Accordingly, using the model described in
+this paper, SO2 concentration in the air can 4. COnCLUSIOn
+be predicted as the function of investigated
+input variables, with the accuracy above
+This paper presents the beginning of
+50%.
+investigation of applicability of nonlinear
+Another merit of obtained model is in statistical modeling on modeling the SO2
+possibility to assess the influence of single or content in the air dependence on different
+coupled input variables on values of output predictors. It was presented that such
+variable. Such dependence of SO2 approach can be used in general, based on
+concentration on different combinations of
+input variables is presented in Figure 4.
+According to results presented in Figure
+4, the interrelation of different predictors is
+obvious. The predictor can influence the
+output variable in completely different way
+when paired with one, compared to pairing
+with another. For example Y is in direct
+dependence on X1 (Wind speed) if paired
+
+ANFIS method. On the other hand, the
+model fitting that was obtained was not that
+high. The reason is in the fact, that the data
+for only two months were used for analysis.
+In our future work, the procedure will be
+repeated with data aquatinted in longer time
+intervals (a year or more). Also, results of
+bivariate influence of predictors on output
+variable will be further studied in subsequent
+with X2 (Wind direction). On the other hand, work.
+
+     
+     SO2
+ ,     
+
+        
+,       ().     ANFIS
+ .            
+     SO2    ,
+   .  ,      
+  .   ,   SO2   
+  ,  ,  ,    
+       .
+ : , ANFIS,  SO2  
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+36
+
+ACKNOWLEDGEMENTS
+Research presented in this paper is
+financially supported by Serbian Ministry of
+Education and Science, as the part of the
+project No: TR 34023.
+
+References
+Abdul-Wahab, S.A., Al-Alawi, S.M.
+(2002). Assessment and prediction of
+tropospheric ozone concentration levels
+using
+artificial
+neural
+networks.
+Environmental Modelling & Software, 17,
+219-228.
+Al-Alawi, S.M., Abdul-Wahab, S.A.,
+Bakheit, C.S. (2008). Combining principal
+component regression and artificial neural
+networks for more accurate predictions of
+ground-level
+ozone.
+Environmental
+Modelling & Software, 23, 396-403.
+Ashish, M., Rashmi, B. (2011). Prediction
+of daily air pollution using wavelet
+decomposition and adaptive-network-based
+fuzzy inference system. International Journal
+of Environmental Sciences, 2 (1), 185-196.
+Barnet, A.G., Williams, G.M., Schwartz,
+J., Neller, A.H., Best, T.L., Petroeschevsky,
+A.L., Simpson, R.W. (2005). Air pollution
+and child respiratory health: a case-crossover
+study in Australia and New Zealand. Amer.
+Respir. Crit. Care. Med., 171, 1272- 1278.
+Biggeri, A., Bellini, P., Terracini, B.
+(2005). Meta-analysis of the Italian studies
+of short-term effects of air pollution (MISA).
+International Journal of Occupational and
+Environmental Health, 11, 107-122.
+Brunekreef, B., & Holgate, S.T. (2002).
+Air pollution and health. Lancet, 360, 12331242.
+Buringh, E., Fischer, P., Hoek, G. (2000).
+Is SO2 a causative factor for the PM-
+
+associated mortality risks in the
+Netherlands?. Inhalation Toxicology, 12, 5560.
+Chak, K.C., Yao, X. (2008). Air pollution
+in mega cities in China. Atmospheric
+Environment, 42, 1-42.
+Dimitrijevi, A., Michalewski, H.J., Zeng,
+F.G., Pratt, H., Starr, A. (2008). Frequency
+Changes in a Continuous Tone: Auditory
+Cortical
+Potentials.
+Clinical
+Neurophysiology, 119, 2111-2124.
+orevi, P., Mihajlovi, I., ivkovi, .
+(2010). Comparison of linear and nonlinear
+statistics methods applied in industrial
+process modeling procedure. Serbian Journal
+of Management, 5 (2), 189-198.
+Djordjevic, P., Mitevska, N., Mihajlovi,
+I., Nikoli, D., ivkovi, . (2013). Effect of
+the slag basicity on the coefficient of
+distribution between copper matte and the
+slag for certain metals. Mineral Processing
+and Extractive Metallurgy Review, Taylor &
+Francis, (In press).
+EU
+Directive
+(2008).
+Directive
+2008/104/EC of the European Parliament
+and of the Council. Official Journal of the
+European Union.
+Garcia-Huidobro, T., Marshall, F.M.,
+Bell, J.N.B. (2001). A risk assessment of
+potential agricultural losses due to ambient
+SO2 in the central regions of Chile.
+Atmospheric Environment, 35, 4903-4915.
+Gautam, A.K., Chelani, A.B., Jain, V.K.,
+Devotta, S. (2008). A new scheme to predict
+chaotic time series of air pollutant
+concentrations using artificial neural
+network and nearest neighbor searching.
+Atmospheric Environment, 42, 4409-4417.
+Guneri, A.F., Ertay, T., Yucel, A. (2011).
+An approach based on ANFIS input selection
+and modeling for supplier selection problem.
+Expert Systems with Applications, 38,
+14907-14917.
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+Herbarth, O., Fritz, G., Krumbiegel, P.,
+Diez, U., Franck, U., Richter, M. (2001).
+Effect of sulfur dioxide and particulate
+pollutions on bronchitis in children  a risk
+analysis. Environmental Toxicoilogy, 16,
+269-276.
+Jang, J.S.R. (1993). ANFIS: Adaptivenetwork-based fuzzy inference system, IEEE
+Transactions on Systems, Man, and
+Cybernetics, 23 (03), 665-658.
+Jang, M., Cai, L., Udeani, G., Slowing,
+K., Thomas, K., Beecher, C., Fong, H.,
+Farnsworth, N., Kinghorn, A.D., Mehta, R.,
+Moon, R., Pezzuto, J. (1997). Cancer
+Chemopreventive Activity of Resveratrol, a
+Natural Product Derived from Grapes.
+Science Magazine, 275, 218-220.
+Jerrett, M., Burnett, R.T., Ma, R., Pope,
+C.A. 3rd, Krewski, D., Newbold, K.B.,
+Thurston, G., Shi, Y., Finkelstein, N., Calle,
+E.E., Thun, M.J. (2005). Spatial analysis of
+air pollution and mortality in Los Angeles.
+Epidemiology, 16, 727- 736.
+Johanyak, Z.C., Kovacs, J. (2011). Fuzzy
+model based prediction of ground-level
+ozone concentration. Acta Technica
+Jaurinensis, 4 (1), 113-124.
+Kan, H., & Chen, B. (2003). Air pollution
+and daily mortality in Shanghai: a timeseries study. Archives of Environmental
+Health, 58, 360-367.
+Koren, H.S. (1995). Associations between
+criteria air pollution and asthma.
+Environmental Health Perspectives, 103,
+235-242.
+Lei, K.S., Wan, F. (2012). Applying
+ensemble learning techniques to ANFIS for
+air pollution index prediction in Macau.
+Advances in Neural Networks, 7367, 509516.
+Morabito, F.C., Versaci, M. (2003). Fuzzy
+neural identification and forecasting
+techniques to process experimental urban air
+
+37
+
+pollution data. Neural Networks, 16, 493506.
+Nikoli, ., Miloevi, N., Mihajlovi, I.,
+ivkovi, ., Tasi, V., Kovaevi, R.,
+Petrovi, N. (2010). Multi-criteria analysis
+of air pollution with SO2 and PM10 in urban
+area around the copper smelter in Bor,
+Serbia. Water Air Soil Pollution, 206, 369383.
+Noori, R., Hoshyaripour, G., Ashrafi, K.,
+Araabi, B.N. (2010). Uncertainty analysis of
+developed ANN and ANFIS models in
+prediction of carbon monoxide daily
+concentration. Atmospheric Environment,
+44, 476-482.
+Nunnari, G., Dorling, S., Schlink, U.,
+Cawley, G., Foxall, R., Chatterton, T. (2004).
+Modelling SO2 concentration at a point with
+statistical approaches. Environmental
+Modelling & Software, 19, 887-905.
+Ozdemir H., Demir, G., Altay, G.,
+Albayrak, S., and Bayat, C. (2008).
+Prediction
+of
+Tropospheric
+Ozone
+Concentration by Employing Artificial
+Neural
+Networks.
+Environmental
+Engineering Science, 25 (9), 1249-1254.
+Perez, P., Trier, A., Reyes, J. (2000).
+Prediction of PM2.5 concentrations several
+hours in advance using neural networks in
+Santiago, Chile. Atmospheric Environment,
+34, 1189-1196.
+Perez-Roa, R., Castro, J., Jorquera, H.,
+Perez-Correa, J.R., Vesovic, V. (2006). Airpollution modelling in an urban area:
+Correlating turbulent diffusion coefficients
+by means of an artificial neural network
+approach. Atmospheric Environment, 40,
+109-125.
+Sahin, E., Colla,S., Liesa, M., Moslehi, J.,
+Mller, F.L., Guo, M., Cooper, M., Kotton,
+D., Fabian, A.J., Walkey, C., Maser, R.S.,
+Tonon, G., Foerster, F., Xiong, R., Wang,
+
+38
+
+M.Savi / SJM 8 (1) (2013) 25 - 38
+
+Y.A., Shukla, S.A., Jaskelioff, M., Martin, Applications, 38, 5958-5966.
+E.S., Heffernan, T.P., Protopopov, A.,
+Ivanova, E., Mahoney, J.E., Kost-Alimova,
+M., Perry, S.R., Bronson, R., Liao, R.,
+Mulligan, R., Shirihai, O.S., Chin, L.,
+DePinho, R.A. (2011). Telomere dysfunction
+induces metabolic and mitochondrial
+compromise. Nature, 470 (7334), 359-365.
+Santacatalina , M., Carratala, A., Mantilla,
+E. (2011). Influence of local and regional
+Mediterranean meteorology on SO2 groundlevel concentration in SE Spain. Journal of
+Environmental Monitoring, 13, 1634-1645.
+Takagi, T., Sugeno, M. (1985). Fuzzy
+identification of systems and its application
+to modeling and control. IEEE Trans.,
+Systems, Man and Cybernetics, 15 (1), 116132.
+WHO (2006). Air quality guidelines for
+particulate matter, ozone, nitrogen dioxide
+and sulfur dioxide. Summary of risk
+assessment, Global Update 2005.
+Wong, G.W., Ko, F.W., Lau, T.S., Li, S.T.,
+Hui, D., Pang, S.W., Leung, R., Fok, T.F.,
+Lai, C.K. (2001). Temporal relationship
+between air pollution and hospital
+admissions for asthmatic children in Hong
+Kong. Clinical and Experimental Allergy, 31,
+565-569.
+Web reference: www.sepa.srbija
+Yetilmezsoy, K., Ozkaya, B., Cakmakci,
+M. (2011). Artificial intelligence-based
+prediction models for environmental
+engineering. Neural Network World, 3 (11),
+193-218.
+Yildirim, Y., Bayramoglu, M., (2006).
+Adaptive neuro-fuzzy based modelling for
+prediction of air pollution daily levels in city
+of Zonguldak. Chemosphere, 63, 1575-1582.
+Yilmaz, I., Kaynar, O. (2011). Multiple
+regression, ANN (RBF, MLP) and ANFIS
+models for prediction of swell potential of
+clayey soils. Expert Systems with
+
+

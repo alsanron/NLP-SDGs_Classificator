@@ -1,0 +1,575 @@
+Proceedings of the
+2007 IEEE Intelligent Vehicles Symposium
+Istanbul, Turkey, June 13-15, 2007
+
+ThE1.25
+
+Design of Autonomous Underwater Vehicles for
+Cage Aquafarms
+JongAn Lee, MooTaek Roh, KyungMan Kim and Doheon Lee*
+
+Abstract  Aquaculture systems need to provide artificial
+monitoring and control functions to maintain essential
+environmental factors within the high productivity ranges. This
+paper suggests that autonomous underwater vehicles (AUV)
+equipped with various sensors, communication devices, and
+navigational intelligence can perform effective and broad-range
+monitoring missions of cage-based aquaculture system
+surroundings. After explaining the target aquaculture system, we
+describe functional and performance requirements of AUVs for
+surveillance of costal cage aquafarms. It also describes several
+design options considered for this ongoing project as well as
+artificial immune-based intelligence features.
+
+T
+
+I. INTRODUCTION
+
+hough the consumption of fishery products has been
+ever increasing, fishery amounts from open wild
+habitats have encountered serious challenges due to several
+reasons including overfishing and environmental changes
+[1]. One of solutions is to establish aquaculture facilities
+where fisheries are bred, raised, and caught under high
+productivity settings. It has been known that the
+proliferation, survival and growth of marine fishes are very
+sensitive to environmental factors such as temperature,
+acidity, dissolved oxygen concentration, and pathogenic
+microbes [2]. Unlikely to the open wild habitats where the
+fishes could migrate to their preferable regions
+autonomously, the aquaculture systems need to provide
+artificial monitoring and control functions to maintain such
+environmental factors within high productivity ranges.
+Among several types of aquaculture systems, this paper
+focuses on cage-based aquaculture systems operated in
+coastal areas. Though cultivated fishes are kept inside the
+cages, the afore-mentioned environmental factors are highly
+
+Manuscript received January 14, 2007. This work was supported in part
+by the Korea Ministry of Information and Communication under Grant
+C109006020001
+JongAn Lee is with the Department of Bio and Brain Engineering,
+KAIST, 373-1, Guseong-dong, Yuseong-gu, Daejeon 305-701, Korea
+MooTaek Roh is with the Department of Bio and Brain Engineering,
+KAIST, 373-1, Guseong-dong, Yuseong-gu, Daejeon 305-701, Korea
+KyungMan Kim is with the Department of Bio and Brain Engineering,
+KAIST, 373-1, Guseong-dong, Yuseong-gu, Daejeon 305-701, Korea
+Doheon Lee is with the Department of Bio and Brain Engineering,
+KAIST, 373-1, Guseong-dong, Yuseong-gu, Daejeon 305-701,
+Korea(Phone:
++82-42-869-4316;
+Fax:+82-42-869-8680;
+E-mail:
+dhlee@kaist.ac.kr).
+
+1-4244-1068-1/07/$25.00 2007 IEEE.
+
+affected by surrounding oceanic regions since the sea water
+is allowed to flow through the cages. For example, mass
+outbreaks of death can happen if cold water suddenly flows
+into the cages from the sea floor. Proliferation of pathogens
+inside or outside cages can put critical dangers on the
+aquafarms while the early detection is almost impossible.
+The current solution is the necropsy of dead fishes to
+identify pathogens after the dead outbreak prevails. Since
+the ranges of affecting oceanic regions amount to several
+thousand meters depending on the factors, it is hard to
+deploy sufficient number of fixed sensors over the regions
+both in technical and economical aspects.
+This paper suggests that autonomous underwater vehicles
+(AUV) equipped with essential sensors, communication
+devices, and navigational intelligence can provide
+acceptable solutions to this problem. After explaining the
+target aquaculture systems, we describe functional and
+performance requirements of autonomous underwater
+vehicles for surveillance of costal cage aquafarms. It also
+describes several design options considered for this ongoing
+project.
+II. COASTAL CAGE AQUAFARMS
+A. Aquaculture Types
+Aquaculture is defined as the practice of using the sea,
+lakes, and rivers for cultivating aquatic animals and plants,
+especially for consumption as food. It is distinguished from
+fishing by active human efforts in maintaining or increasing
+the species involved, as opposed to simply taking them from
+the wild habitats. Aquaculture systems for marine products
+can be classified into three types according to the cultivation
+areas. (i) The indoor tank systems are using plastic or
+concrete tanks to raise fishes. The tank water is slowly
+circulated through pipes with pathogen filters, which are
+connected from the coast to the aquafarms, so that fishes can
+be provided with natural sea water regularly. (ii) The cage
+systems are using synthetic fiber cages installed several
+kilometers apart from the coasts. Fishes are kept inside the
+cages while natural sea water flows through the cages freely.
+Free flow of natural sea water is critical for cultivation of
+special fish species such as flat fishes. However, these fishes
+are always exposed to danger under water. (iii) Open marine
+ranches are designated areas in the middle of the sea where
+
+938
+
+ThE1.25
+
+artificially enriched ecosystems are fostered. For example,
+massive marine plants and submarine structures are
+implanted to provide cultivated fishes with nutrients and
+shelters.
+B. Cage Aquaculture Systems
+This paper focuses on a specific type of cage aquaculture
+systems being used predominantly in Korea. Each farm
+consists of tens of beds, and each bed consists of four cells.
+The dimension of the cell is typically 5*5*5 meters. It is
+recommended that around 15 beds are deployed in a unit
+region of 10k square meters (Figure 1).
+
+Figure 1. The typical Layout of Cage Aquafarms
+
+C. Environmental Factors
+We should consider several problems for cultivating
+fishes. Among them, growth promotion and prevention of
+mass death of fishes are absolutely important. For that, we
+should observe water quality at all times. To estimate water
+quality, we check temperature, dissolved oxygen (DO),
+ammonia, nitrites, nitrates, and pH and alkalinity of water.
+Between them, temperature is the important factor because
+fishes live within the optimal temperature range. If the
+temperature is below the threshold, they could not live any
+more.
+The red tide is frequently occurred in Korea for June
+through August. They are usually not harmful. However, the
+excessive proliferation of zooplankton results in extensive
+damage to fishes caught in gill nets. Thus, it triggers mass
+death of fishes.
+Recently, we acquire water quality data through the data
+logger system. It has several sensors to measure water
+quality. It is convenient to use within limited areas. However,
+we should cover relatively large area around aquafarms.
+Thus, it is inconvenient because users should move
+frequently to measure data around aquafarms.
+III. DESIGN REQUIREMENTS AND PRINCIPLES
+Autonomous underwater vehicles (AUVs) have been
+utilized for scientific, commercial and military underwater
+applications [3]. These vehicles require autonomous
+guidance and control systems to perform missions under
+water. For that, AUVs have their own energy sources and
+have many electrical devices. REMUS and GAVIA is
+
+well-known AVUs. They are used for oceanic exploration
+and military applications. They are used for hydrographic
+surveys, environmental monitoring and scientific samplings
+[4]. Although, these state-of-the-art AUVs have excellent
+functions and performance, it is inadequate to apply cage
+aquafarm surveillance. They are expensive approximately
+half million dollars and their design objective is not
+appropriate to ours as described below.
+A. Requirements of AUVs for Cage Aquafarms
+We divide Unmanned Underwater Vehicles (UUVS) into
+two parts according to their autonomy. One is autonomous
+underwater vehicles (AUVs) which can navigate under
+water without assistance from supervisors. The other is
+remotely operated vehicles (ROVs) which are supported by
+mother ship through a cable. Between them, AUVs are more
+adequate than ROVs because we need intelligent vehicles
+navigating autonomously around aquafarms. For that, we
+should consider several requirements of AUVs for
+surveillance of coastal cage aquafarms.
+First, the accuracy of AUVs should be sustained.
+(1) Exact handling in low speeds is important because AUVs
+should measure water quality at the target spot in low
+speeds.
+(2) The accurate transmission of position is necessary. We
+do not know whether AUVs navigate adequately or not.
+Second, the stability of AUVs should be obtained.
+(3) AUVs turn frequently their direction to perform their
+mission around aquafarms. As a result, they are affected by
+drag force or pressure and lose their attitude. It is important
+to keep attitude and position stable.
+Third, the efficiency of AUVs should be attained
+(4) Basically, AUVs need sufficient space to equip electrical
+devices and batteries. In addition, they need various sensors
+to measure water quality and control attitude. Thus, the
+adequate arrangement of device is important to reduce the
+unnecessary space.
+(5) AUVs should optimally move to the aiming point to
+minimize the consumption of batteries.
+Fourth, the invariability of AUVs should be maintained.
+(6) The deeper AUVs go under water the more pressure is
+exerted on the whole craft. The minimal shape change of the
+hull is important to keep inner devices safe because they
+have an important role to manage AUVs.
+Fifth, the tenacity of communication systems is needed.
+(7) The communication system of AUVs should be robust
+against noise signals to minimize error rate. It is important
+delivering the exact data to users.
+Sixth, the accessibility of AUVs should be easy.
+(8) We frequently modify control program according to
+missions. We adjust operational depth, pathway and sensing
+rate. Thus, we should easily access control system.
+Seventh, the riskiness of AUVs is minimized.
+(9) When AUVs navigate around aquafarms, the fishes can
+get stress from the light or sound of AUVs.
+
+939
+
+ThE1.25
+
+B. Cost Aspects of Design Principles
+Existing AUVs have excellent performance. They can
+navigate under water from 100 to 6,000 meters. Expensive
+devices are equipped to navigate faster and deeper under
+water. However, we need not high-end AUVs for
+surveillance of aquafarms because our operational depth is
+approximately 10 meters. Thus, we can make AUVs by
+using devices of low price. In addition, we can minimize the
+cost of the waterproof hull fabrication.
+IV. THE DESIGN OF SYSTEMS
+A. Overall Surrounding of the Aquafarm AUV System
+AUVs collect data during their missions with respect to
+temperature, DO, PH. These data are delivered from the
+intelligent vehicle to the optimal buoy communication
+system. Buoy communication systems transfer these data to
+the underwater station (Figure 2). After data processing, the
+underwater station sends a message to fishermen. Thus,
+fishermen can cope with problems which are extraordinary
+low temperature or low dissolved oxygen through migration
+of aquafarms to another place.
+
+Figure 3. Pressure resistance according to shape of the hull
+
+The streamlining hull helps decrease the drag and lowers the
+amount of power needed to move the vehicle at a certain
+speed [5].
+b)
+
+Thrusters
+
+We will equip twin thrusters with AUVs. However, they
+are less effective than one thruster because they need more
+energy sources to cruise under water. Nevertheless, we use
+twin thrusters because they promise the high quality of
+rotation. In case of our systems, we should move frequently
+to measure the water quality data. Thus, two thrusters are
+more efficient than one thruster regardless of the weak point.
+c)
+
+Electrical devices
+
+We need several sensors for the control of attitude and
+position of AUVs and the measurement of water quality
+around aquafarms. Pressure sensors are used to calculate
+depth along with water pressure. Sonar sensors are used to
+detect obstacle and topography. The magnetic compass is
+used to detect attitude of AUVs. These sensors are contained
+the electronics housing (Figure 4).
+
+Figure 4. Internal Arrangements of Aquafarm AUVs
+
+The microcontroller and On board PC are also contained
+in electronics housing. We describe the circuit of the
+pressure sensor whose signals are conditioned by power and
+operational amp (Figure 5).
+
+Figure 2. Overall Surrounding of Aquafarm AUVs
+
+B. AUV/SCA systems
+1) Design of AUVs
+a)
+
+a)
+
+External shape of the hull
+
+Generally, AUVs have several shapes sphere, cube or
+cylinder. According to their hull shape, they are affected
+differently by water. The best shape is a sphere to resist
+water pressure because water pushes equally from all sizes
+of the sphere (Figure 3).
+
+Control of AUVs
+
+There are several complex factors and nonlinear forces
+under water. Thus, it is difficult to design the accurate
+control model of AUVs. Their attitude information is
+processed by On-board PC and AUVs can correct their
+attitude based on information. They need control algorithms
+to process information. Advanced control systems have
+shown that autonomous diving and steering of unmanned
+underwater vehicles can be controlled by multivariable
+sliding mode control [6]. Recently, discrete-time
+
+940
+
+ThE1.25
+
+Quasi-sliding mode systems have been adapted for control
+of autonomous underwater vehicles [7]. However, these
+control methods have several difficulties to apply
+autonomous underwater vehicles. Hence, we utilize the
+classicalcontrol method which is PID controllers for the
+control of the attitude and position of the underwater
+vehicles.
+
+Base Line (SSBL). Among them, Long Base Line (LBL) is a
+basic method to estimate AUVs position [8]. The mother
+ship calculates a relative position of AUVs comparing to
+three transponders. However, this method needs more
+equipment than others and it contains position error because
+of the movement of mother ship. Thus, we design the RLBL
+(Reverse Long Base Line) method to minimize errors and
+maximize efficiency. Position information is transferred by
+satellites to buoy systmes. Based on this information, each
+buoy system calculates relative position of AUVs. After that,
+this information is delivered to the underwater station and
+users know the current position of AUVs.
+3) Software
+a)
+
+The underwater vehicle control program directs the
+movement of AUVs. Users select the vehicle operation
+parameters such as speed and depth, and to control the data
+collection rate of sensors. Users give instructions to the
+Driving AUV Block and Sensing Block through TCP/IP
+protocol. The Driving Block control thrusters and a rudder.
+Sensors measure the attitude of AUV and water quality.
+These data are delivered to the Sensing Block through
+RS232 protocol. Water quality data are transferred to
+underwater station. The microcontroller gives instructions to
+the Driving AUV Block by using attitude data (Figure 7).
+
+Figure 5. The circuit of the pressure sensor
+
+2) Communication systems
+a)
+
+AUVs Control program
+
+Underwater Buoy Systems
+
+We design underwater communication systems. We
+combine wireless communication systems with underwater
+communication systems. AUVs deliver acquired data to
+underwater buoy systems through ultrasound waves. These
+data are transferred to underwater stations (Figure 6).
+
+Figure 6. Underwater Buoy Systems for Communication
+
+b)
+
+Underwater Stations
+
+Figure 7. Architecture of the Control program
+
+They receive data from underwater buoy systems. These
+data are analyzed by monitoring systems. After that, they
+transfer necessary information to fishermen by the mobile
+phone.
+c)
+
+Underwater vehicles position tracking system
+
+There are several methods to detect position of AUVs.
+According to the length of transponder we classify them
+Long Base Line (LBL), Short Base Line (SBL), Super Short
+
+b)
+
+Simulation for the control of AUVs
+
+The Simulation is important because it give users chances
+to test the performance of AUVs. It can reduce the gap
+between the desired output and actual output. For example,
+PDI controller is the classical control method. It is difficult
+to find optimal Proportional, Integral and Derivative gain.
+
+941
+
+ThE1.25
+
+TABLE I
+SPECIFICATIONS OF OUR AUVS
+
+Thus, we can acquire adequate gain values through the
+simulation of attitude and position of AUVs.
+C. System development alternative & method
+1) Electrical devices
+Basically, we use existing electrical devices or modify
+devices for our purpose. For example, there are many kinds
+of pressure sensors. Among them, the pressure sensor should
+satisfy high accuracy and stability against noise. In addition,
+it should be operated at sealed underwater vehicles. Thus,
+the M5100 pressure sensor of the Schaevitz firm is useful for
+our systems. It can be worked all-metal sealed system and
+supports extended temperature range, 1% total error band
+and has compact outline [9].
+Ahlborn firm has various sensors to measure humidity,
+water quality, air velocity, and temperature [10]. Among
+them, we select water analysis and temperature sensors.
+However, we have difficulties to equip sensors with AUVs
+because sensors are bar shape. Thus, we need reconstruction
+of sensors to embed them with underwater vehicles.
+2) Hull design
+In designing the hull, we should consider pressure resistance
+and drag force. They are determined by the hull shape sphere,
+cube or cylinder. The sphere shape has the best pressure
+resistance and the cylinder shape with dome ends has low
+drag force. We should consider the design along with their
+purpose. For instance, if you want low drag force, you
+should choose cylinder shape. On the other hand, you need
+more robust hull against water, you should select cube shape.
+Thus, we choose the streamlining hull shape because it has
+low drag force and moderate pressure resistance (Figure 8).
+We describe rough specifications of our AUVs (Table 1).
+
+Figure 8. The hull design of AUVs
+
+3) Thrusters
+We select the Model 300 thruster of Technadyne firm [11].
+To determine thrusters, we assume the value of CD
+(coefficient used in integrating forces and moments along
+hull due to local cross-flow), A (projection area of hull in
+xy-plane) according to the design.
+From equation (3), we need 12kg bollard output to satisfy
+a maximum velocity 2m/s. The Model 300 thruster has 8.2kg
+
+Item
+Dimension
+Weight
+Maximum Speed
+Operation Depth
+
+Specifications
+0.3(D)*1.5(L) m
+25~30 kg
+2 m/s
+0 ~ 10 m
+
+m = meter, kg = kilogram, m/s = meter/second
+
+forward thrust force and we will use two thrusters. Thus, we
+can accomplish a maximum velocity by using two thrusters.
+Maximum _ Velocity = 2m / s
+1
+Thrust = Drag =   C D  A  V 2 = 118.2kg
+2
+Bollard _ output = Thrust / 9.81 = 12kg
+Thrust _ Power = Thrust  V = 236.3W
+
+(1)
+(2)
+(3)
+(4)
+
+4) Energy sources
+We use Lithium Polymer batteries which are rechargeable
+and convenient. They are more expensive than lead storage
+batteries. On the other hand, they guarantee both lower
+weight and increased run times. In addition, they can be
+protected from overcharging.
+5) AUVs control program
+We will develop control program by using C++ for the
+microcontroller. The C++ language possesses property of
+both the C language and the object oriented concept. The C
+language is adequate in the system programming
+Input-Output (I/O) control and object oriented concept help
+us more convenient. Object-Oriented Programming (OOP)
+provides reuse of code and minimizes time loss in debugging.
+Thus, the C++ language is more reasonable than C language.
+6) Communication Systems
+We divide underwater buoy systems into two parts. The
+upper device takes charge of wireless communication. It will
+be equipped with the Wireless Ethernet transceiver for data
+transmission to underwater stations. The lower device takes
+charge of underwater communication. It has been
+developing by ultrasound waves. We focus on the
+development of underwater communication systems. We
+should overcome some difficulties in developing systems.
+Scattering, diffraction and interference of waves exist under
+water. However, the operational depth of our system is up to
+10 meters. We can minimize weak points of the wave under
+water. After considering that, the lower device will be
+equipped with Ultra sound receiver for data reception from
+AUVs.
+
+942
+
+D. Design of Intelligent navigation methods adapted
+Clonal Selection Algorithms (CSA)
+1) Clonal Selection Algorithms (CSA)
+The CSA is based on the artificial immune system. The
+
+ThE1.25
+
+CSA is used in the field of optimization and pattern
+recognition. It establishes the idea that only those cells that
+recognize the antigens are selected to proliferate. The
+selected cells are subject to an affinity maturation process,
+which improves their affinity to the selective antigens [12].
+2) Intelligent navigation
+AUVs should move to the every target point to measure
+water quality and they occasionally move to the same tpoint.
+There exist many kinds of possible pathways to move
+around aquafarms. However, it is difficult to find the optimal
+pathway. Thus, we can find the best solution through CAS.
+First, generate possible pathways randomly from start point
+and calculate all affinities with respect to navigation time.
+Then, select pathways of high affinity. Make a lot of clones
+of them, and mutate. Recalculate affinities and select
+pathways of high affinity. Some randomly generated
+parameters are mixed together at this moment. These
+processes are iteratively performed until it converges.
+Finally, pathways are optimally selected by CSA. It will
+minimize time of navigation and the consumption of energy
+sources of AUVs.
+
+REFERENCES
+[1]
+
+P. B. MOYLE, Fishes : An introduction to ichthyology. USA: Prentice
+Hall, 1982, pp. 607636.
+[2] V. L. Nero, Fish-environment associations in the coastal waters of
+Andros Island, The Bahamas, Environmental Bilogy of Fishes, vol.
+75, no. 2, pp. 223236, 2006
+[3] G. Griffiths, Technology and applications of autonomous underwater
+vehicles. London & New york: Taylor & Francis, 2003, pp. 1-35.
+[4] REMUS, http://www.hydroidinc.com / GAVIA, http://www.gavia.is
+[5] H. Bohm, V. Jensen, Build Your Own Underwater Robot. Canada :
+Westcoast Words, 1954, pp. 110-112.
+[6] A. J. Healey, D. Lienard, Multivariable Sliding Mode Control for
+Autonomous Diving and Steering of Unmanned Underwater
+Vehicles, IEEE Journal of Oceanic Eng Vol. 18, No. 3, 1993
+[7] P. M. Lee, S. W. Hong, Y. K. lim, C. M. Lee, B. H. Jeon, J. W. Park,
+Discrete-Time Quasi-Sliding Mode Control of an Autonomous
+Underwater Vehicle, IEEEE Journal of Oceanic Eng, Vol. 24 No.3,
+pp. 388-395 ,1999
+[8] N. Kussat, Absolute positioning of autonomous underwater vehicle
+using GPS and acoustic measurements, IEEE JOURNAL OF
+Oceanic Eng, vol. 30 NO.1, Jan. 2005
+[9] M5100,http://www.meas-spec.com/myMeas/download/pdf/english/
+msp/MSP-5100.pdf
+[10] Ahlborn, http://www.ahlborn.com
+[11] Model 300, http://www.tecnadyne.com/thrusters.htm
+[12] L. N. Castro, F. J. Zuben, The Clonal Selection Algorithm with
+Engineering Applications, Workshop Proceeding of GECCO, pp
+36-37 ,2000
+
+Figure 9. Intelligent navigation adapted CSA
+
+V. CONCLUDING REMARKS
+This paper has suggested autonomous underwater vehicle
+(AUV)-based surveillance systems for effective and
+broad-range monitoring missions of cage-based aquaculture
+system surroundings. Unlikely to the state-of-the-art AUVs,
+originally developed for military missions, the AUVs for
+aquafarms have their own engineering compromises and
+opportunities. It has also described artificial immune
+techniques for intelligent navigation and situation
+monitoring of the aquafarm AUVs.
+Successful completion of this project will open new ways
+of aquafarm surveillance as well as provide cost-effective
+models of intelligent underwater vehicles for
+mission-specific applications.
+
+943
+
+

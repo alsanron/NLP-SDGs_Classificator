@@ -1,26 +1,26 @@
 ,SDG1 : 0 - No poverty,SDG2 : 0 - Zero hunger,SDG3 : 0 - Good health and well being,SDG4 : 0 - Quality education,SDG5 : 0 - Gender equality,SDG6 : 0 - Clean water and sanitation,SDG7 : 0 - Affordable and clean energy,SDG8 : 0 - Decent work and economic growth,"SDG9 : 0 - Industry, innovation and infrastructure",SDG10 : 0 - Reduced inequalities,SDG11 : 0 - Sustainable cities and communities,SDG12 : 0 - Responsible consumption and production,SDG13 : 0 - Climate action,SDG14 : 0 - Life below water,SDG15 : 0 - Life on land,"SDG16 : 0 - Peace, justice and strong institutions",SDG17:xx - Partnership for the goals
-0,poverty,food,disease,education,woman,water,energy,labour,manufacturing,country,urban,material,climate,marine,forest,institution,0
-1,extreme poverty,hunger,death,school,girl,sanitation,renewable,growth,value added,developing,city,consumption,climate change,ocean,biodiversity,right,0
-2,extreme,agricultural,health,primary,woman girl,drinking,renewable energy,rate,added,developed country,slum,footprint,change,coastal,area,victim,0
-3,social protection,agriculture,mortality,child,gender,drinking water,electricity,employment,value,developed,urban population,material footprint,adaptation,fishery,land,country,0
-4,social,malnutrition,maternal,secondary,marriage,water sanitation,clean,unemployment,manufacturing value,developing country,population,consumption production,nationally contribution,acidification,specie,human right,0
-5,protection,breed,rate,reading,equality,safely,energy consumption,labour productivity,gdp,development,air,material consumption,contribution,ecosystem,loss,violence,0
-6,disaster,child,communicable,learning,violence,management,technology,unemployment rate,industry,export,waste,production,nationally,ocean acidification,terrestrial,child,0
-7,living,wasting,hiv,proficiency,sexual,facility,fuel,productivity,country,duty,transport,domestic material,disaster,fish,ecosystem,human,0
-8,poor,export,live,primary school,gender equality,water resource,energy efficiency,growth rate,developed,including,public,sustainable consumption,country,stock,mountain,justice,0
-9,benefit,subsidy,communicable disease,teacher,female,wastewater,access,adult,global,policy,space,sustainable,agreement,eutrophication,wildlife,detected,0
-10,vulnerable,genetic,mortality rate,primary secondary,mutilation,basic,cooking,youth,infrastructure,national,urbanization,convention,paris agreement,sustainable,protected,trafficking,0
-11,poor vulnerable,export subsidy,death live,secondary education,married,transboundary,efficiency,worker,employment,partnership,housing,resource,framework convention,fishing,conservation,law,0
-12,world population,price,child,mathematics,work,service,modern,young,emission,tariff,solid waste,waste,national adaptation,pollution,biodiversity area,homicide,0
-13,living extreme,insecurity,tuberculosis,primary education,genital mutilation,water scarcity,consumption,gdp,mobile,technology,public transport,metric,paris,fish stock,degradation,access justice,0
-14,worker,market,malaria,quality,genital,scarcity,energy energy,annual,global manufacturing,state,solid,company,convention,overfishing,protected area,right institution,0
-15,population,producer,reproductive,saharan,female genital,sanitation service,access clean,financial,developed country,sustainable development,public space,domestic,action,area,freshwater,national human,0
-16,poverty rate,food insecurity,adolescent,sub saharan,practice,integrated water,access electricity,annual growth,network,island developing,disaster,footprint developing,convention climate,protected area,forest area,sexual,0
-17,economic,production,incidence,sub,legal,resource management,fuel technology,men,developing,developing state,air pollution,natural resource,adaptation plan,protected,extinction,killed,0
-18,world,food production,vaccine,skill,child marriage,defecation,improvement,informal employment,northern america,island,resident,policy,framework,sea,desertification,public,0
-19,income,undernourished,infection,africa,partner,open defecation,clean energy,informal,carbon,duty free,urban resident,natural,united framework,resource,hectare,information,0
-20,disaster risk,food producer,care,quality education,unpaid,water service,global,pay,research,income,living,hazardous,national,marine resource,poaching trafficking,punishment,0
-21,pension,aid,globally,trained,country,resource,rate improvement,global,europe,free,pollution,pollutant,mitigation,marine environment,poaching,national,0
-22,live extreme,overweight,sub,reading mathematics,right,asia,global energy,working,economic,support,living slum,developing,plan,level,land degradation,physical punishment,0
-23,live,stunting,saharan,saharan africa,intimate partner,country,wind,economic growth,research development,statistical,sprawl,national policy,reduction,biologically sustainable,genetic resource,bribery,0
-24,economic loss,food price,sub saharan,basic,intimate,freshwater,affordable reliable,pay gap,europe northern,flow,settlement,taking,green climate,biologically,land area,psychological,0
+0,poverty,food,death,education,woman,water,energy,labour,manufacturing,country,urban,material,climate,marine,forest,institution,0
+1,extreme poverty,hunger,disease,primary,girl,sanitation,renewable,growth,value added,developing,city,consumption,climate change,ocean,biodiversity,right,0
+2,extreme,agricultural,health,school,woman girl,drinking,renewable energy,rate,added,developing country,slum,footprint,change,coastal,area,victim,0
+3,social protection,agriculture,mortality,child,gender,drinking water,electricity,employment,value,developed country,population,material footprint,adaptation,fishery,land,country,0
+4,social,malnutrition,maternal,secondary,marriage,water sanitation,clean,unemployment,manufacturing value,developed,urban population,material consumption,nationally contribution,acidification,specie,human right,0
+5,protection,breed,rate,reading,equality,safely,technology,labour productivity,gdp,duty,air,consumption production,contribution,ecosystem,loss,violence,0
+6,disaster,export,live,learning,violence,management,energy consumption,unemployment rate,industry,island developing,waste,production,nationally,ocean acidification,terrestrial,child,0
+7,living,child,communicable,proficiency,sexual,facility,fuel,productivity,country,developing state,public,domestic material,country,fish,ecosystem,human,0
+8,poor,wasting,mortality rate,primary school,gender equality,water resource,energy efficiency,growth rate,developed,island,transport,sustainable consumption,disaster,stock,mountain,justice,0
+9,benefit,subsidy,death live,teacher,female,wastewater,access,adult,global,development,space,sustainable,agreement,eutrophication,wildlife,detected,0
+10,vulnerable,genetic,communicable disease,primary secondary,married,basic,cooking,youth,infrastructure,state,housing,convention,paris agreement,sustainable,protected,trafficking,0
+11,poor vulnerable,price,hiv,secondary education,mutilation,service,efficiency,worker,employment,duty free,urbanization,resource,framework convention,fishing,biodiversity area,law,0
+12,world population,market,child,mathematics,work,transboundary,modern,financial,developed country,inequality,solid waste,waste,national adaptation,area,conservation,homicide,0
+13,population,export subsidy,tuberculosis,primary education,genital,water scarcity,consumption,annual,mobile,free,public transport,metric,paris,fish stock,degradation,access justice,0
+14,living extreme,insecurity,malaria,quality,genital mutilation,scarcity,energy energy,young,emission,country island,solid,company,convention,pollution,protected area,right institution,0
+15,worker,producer,reproductive,saharan,female genital,sanitation service,access electricity,gdp,global manufacturing,including,air pollution,domestic,action,overfishing,freshwater,national human,0
+16,poverty rate,aid,incidence,sub saharan,practice,integrated water,access clean,annual growth,network,income,public space,footprint developing,framework,protected area,forest area,public,0
+17,world,production,adolescent,sub,legal,resource management,fuel technology,informal employment,developing,product,disaster,natural resource,convention climate,protected,extinction,sexual,0
+18,economic,food insecurity,neonatal,africa,child marriage,country,improvement,global,northern america,international,pollution,policy,adaptation plan,resource,desertification,killed,0
+19,income,food production,care,skill,partner,resource,clean energy,informal,europe,assistance,urban resident,natural,national,sea,hectare,information,0
+20,disaster risk,undernourished,vaccine,quality education,country,asia,global,men,carbon,policy,resident,hazardous,united framework,level,poaching trafficking,national,0
+21,pension,food producer,sub,trained,unpaid,defecation,rate improvement,pay,economic,cost,living,pollutant,plan,marine environment,poaching,punishment,0
+22,live extreme,overweight,saharan,reading mathematics,right,open defecation,global energy,working,research development,export,living slum,developing,mitigation,marine resource,land degradation,physical punishment,0
+23,live,stunting,sub saharan,saharan africa,intimate partner,water service,wind,economic growth,europe northern,flow,sprawl,national policy,united,biologically sustainable,resource,bribery,0
+24,worker living,food price,saharan africa,child adolescent,intimate,freshwater,reliable,pay gap,research,migration,world,country,reduction,biologically,genetic resource,aggression,0

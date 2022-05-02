@@ -45,8 +45,9 @@ print('######## LOADING TEXTS...')
 
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
-raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-# raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"])
+raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=False, kw=True, intro=True, body=True, concl=True)
+raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
+raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 
 topWords = 25
 
@@ -75,19 +76,30 @@ print('######## TRAINING MODELS...')
 # lda.map_model_topics_to_sdgs(n_top_words=topWords, path_csv="out/topics_lda_global_monogram.csv")
 
 top2vec = model.Top2Vec_classifier(paths)
-trainData = [raw_orgFiles, sdgs_orgFiles]
+trainData = [raw_orgFiles + raw_extraFiles, sdgs_orgFiles + sdgs_extra]
 
-def test_model(model, outTopics):
-    model.map_model_topics_to_sdgs(associated_sdgs=trainData[1], path_csv=outTopics)# out/topics_top2vec.csv"
-    model.test_model(corpus=raw_natureShort, stat_topics=1, associated_SDGs=sdgs_nature)
-    model.test_model(corpus=raw_natureExt, stat_topics=1, associated_SDGs=sdgs_natureAll)
-    # model.test_model(corpus=raw_pathFinder, stat_topics=1, associated_SDGs=sdgs_pathFinder)
-# universal-sentence-encoder
-top2vec.train_global_model(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method="learn", ngram=True, min_count=1, workers=8, embedding_batch_size=10)
-test_model(top2vec, "out/topics_top2vec.csv")
+def test_model(model, path_csv_topics="", path_test_excel=""):
+    model.map_model_topics_to_sdgs(associated_sdgs=trainData[1], path_csv=path_csv_topics, num_docs=-1, normalize=True)# out/topics_top2vec.csv"
 
+    model.test_model(corpus=raw_natureShort, stat_topics=-1, associated_SDGs=sdgs_nature,
+                     path_to_excel=path_test_excel, 
+                     only_bad=True, score_threshold=20
+                     )
+    
+    # model.test_model(corpus=raw_natureExt, stat_topics=-1, associated_SDGs=sdgs_natureAll,
+    #                  path_to_excel=path_test_excel, 
+    #                  only_bad=False, score_threshold=2
+    #                  )
 
-if 1:
+# top2vec.train_global_model(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method="learn", ngram=True, min_count=1, workers=8, embedding_batch_size=10, tokenizer=False, split=False, nSplit=25) #"all-MiniLM-L6-v2", universal-sentence-encoder
+top2vec.load_global_model()
+
+test_model(top2vec, 
+           path_csv_topics="out/topics_top2vec_ext.csv",
+           path_test_excel="out/test_abstract_top2vec_manual.xlsx"
+           )
+
+if 0:
     nmf = model.NMF_classifier(paths)
     nmf.train_individual_model_per_sdg(multigrams=(1,1))
     # nmf.load_individual_model_per_sdg()
@@ -99,11 +111,6 @@ if 1:
 
     # # TESTING SECTION
     print('###### NMF models...')
-    nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, path_to_excel="out/results4.xlsx")
-    nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, path_to_excel="out/results5.xlsx")
+    nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, path_to_excel="out/test_abstract_nmf.xlsx")
+    # nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, path_to_excel="out/results5.xlsx")
     # nmf.test_model(corpus=raw_pathFinder, associated_SDGs=sdgs_pathFinder, path_to_excel="out/results6.xlsx")
-# nmf.test_model(corpus=validFilesPathfinder, associated_SDGs=sdgsPathfinder, path_to_plot="out/test_nmf_fulltext_pathfinder.png")
-# nmf.test_model(database=validationDB, path_excel="out/matrix_classification_abstract_kw.xlsx", abstract=True, kw=True)
-# nmf.test_model(database=validationDB, path_excel="out/matrix_classification_abstract_kw_intro.xlsx", abstract=True, kw=True, intro=True)
-# nmf.test_model(database=validationDB, path_excel="out/matrix_classification_abstract_kw_intro_body.xlsx", abstract=True, kw=True, intro=True, body=True)
-# nmf.test_model(database=validationDB, path_excel="out/matrix_classification_abstract_conclus.xlsx", abstract=True, concl=True)

@@ -1,0 +1,890 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/23455473
+
+Application of a fuzzy logic control system for continuous anaerobic digestion
+of low buffered, acidic energy crops as mono-substrate
+Article in Biotechnology and Bioengineering  February 2009
+DOI: 10.1002/bit.22108  Source: PubMed
+
+CITATIONS
+
+READS
+
+53
+
+343
+
+4 authors, including:
+Paul Scherer
+
+Burak Demirel
+
+Hochschule fr Angewandte Wissenschaften Hamburg
+
+Bogazici University
+
+66 PUBLICATIONS 3,763 CITATIONS
+
+46 PUBLICATIONS 4,240 CITATIONS
+
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+Straw Digestion, see www.messen-profair.de View project
+
+Fate and Behaviour of Nano-ZnO in Conventional and Bioreactor Landfills View project
+
+All content following this page was uploaded by Paul Scherer on 28 February 2017.
+
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+ARTICLE
+Application of a Fuzzy Logic Control System for
+Continuous Anaerobic Digestion of Low Buffered,
+Acidic Energy Crops as Mono-Substrate
+P. Scherer, K. Lehmann, O. Schmidt, B. Demirel
+Hamburg University of Applied Sciences (HAW Hamburg), Research Centre Lifetec Process
+Engineering, Lohbruegger Kirchstrasse 65, 21033 Hamburg, Germany;
+telephone: 49-40-42875-6355; fax: 49-40-42875-6359; e-mail: paul.scherer@haw-hamburg.de
+Received 27 March 2008; revision received 7 July 2008; accepted 20 August 2008
+Published online 29 September 2008 in Wiley InterScience (www.interscience.wiley.com). DOI 10.1002/bit.22108
+
+Introduction
+ABSTRACT: A fuzzy logic control (FLC) system was developed at the Hamburg University of Applied Sciences (HAW
+Hamburg) for operation of biogas reactors running on
+energy crops. Three commercially available measuring parameters, namely pH, the methane (CH4) content, and the
+specific gas production rate (spec. GPR  m3/kg VS/day)
+were included. The objective was to avoid stabilization of pH
+with use of buffering supplements, like lime or manure. The
+developed FLC system can cover most of all applications, such
+as a careful start-up process and a gentle recovery strategy after
+a severe reactor failure, also enabling a process with a high
+organic loading rate (OLR) and a low hydraulic retention time
+(HRT), that is, a high throughput anaerobic digestion process
+with a stable pH and CH4 content. A precondition for a high
+load process was the concept of interval feeding, for example,
+with 8 h of interval. The FLC system was proved to be reliable
+during the long term fermentation studies over 3 years in
+one-stage, completely stirred tank reactors (CSTR) with
+acidic beet silage as mono-input (pH 3.33.4). During
+fermentation of the fodder beet silage (FBS), a stable
+HRT of 6.0 days with an OLR of up to 15 kg VS/m3/day
+and a volumetric GPR of 9 m3/m3/day could be reached. The
+FLC enabled an automatic recovery of the digester after two
+induced severe reactor failures. In another attempt to prove
+the feasibility of the FLC, substrate FBS was changed to sugar
+beet silage (SBS), which had a substantially lower buffering
+capacity than that of the FBS. With SBS, the FLC accomplished a stable fermentation at a pH level between 6.5 and
+6.6, and a volatile fatty acid level (VFA) below 500 mg/L, but
+the FLC had to interact and to change the substrate dosage
+permanently. In a further experiment, the reactor temperature
+was increased from 41 to 508C. Concomitantly, the specific
+GPR, pH and CH4 dropped down. Finally, the FLC automatically enabled a complete recovery in 16 days.
+Biotechnol. Bioeng. 2009;102: 736748.
+ 2008 Wiley Periodicals, Inc.
+KEYWORDS: anaerobic digestion; automation; beet silage;
+biogas; biomass; fuzzy logic control; monitoring
+
+Correspondence to: P. Scherer
+Contract grant sponsor: Fachagentur Nachwachsende Rohstoffe e.V. (FNR)
+Contract grant number: FKZ 220 10405
+
+736
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+Ideal energy crops should be converted to biogas (methane)
+and fertilizer without use of chemicals or manure. A study of
+the Federal Agricultural Research Centre (FAL, Braunschweig)
+has shown that at the end of the year 2007 approximately
+4,000 biogas plants with a total installed electrical capacity of
+almost 1,300 MW were in operation in Germany (Weiland,
+2006; personal communication). It is assumed that nearly
+1520% of these biogas plants in Germany are operated
+without the addition of manure (Weiland, 2007). Acidic
+silage (pH 3.33.4) is a very poor buffered substrate, with an
+alkalinity range of 2,500 to 6,000 mg CaCO3-equivalents/L.
+This could be regarded as a model for anaerobic digestion of
+other low buffered crops with a nitrogen content below 1%,
+like grain (wheat) or maize silage in the absence of manure.
+Manure is not only a source of nutrients (stabilizing the
+anaerobic digestion of energy crops with an extreme C/N
+ratio of >100), but it is also a good buffering agent with up
+to 21,000 mg CaCO3-equivalents/L.
+There also exists the assumption in literature that the
+anaerobic digestion with acidic substrates having an
+alkalinity below 6,000 mg CaCO3/L should not be possible
+(Speece, 1996). Consequently, it was a great challenge to
+digest beet silage as a mono-substrate (Scherer, 2005, 2006;
+Scherer et al., 2003). It should be a precondition for
+extensive use of energy crops in areas without sufficient
+stock farming. A common approach to lower the need of
+manure is to use a recirculation of the effluent to improve
+the buffer capacity, as practiced in most of the two stage
+biogas plants of farmers in Germany with maize as monosubstrate (Banks and Humphreys, 1998; Jarvis et al., 1997).
+However, all these biogas plants still need additionally
+calcium oxide (lime) or occasionally intermittently manure
+as a buffering agent for continuous digestion (Barber, 1978).
+The FLC technique has been validated as a control
+strategy for anaerobic treatment of industrial wastewaters
+(Carrasco et al., 2002; Estaben et al., 1997; Guwy et al., 1997;
+Holubar et al., 2003; Liu et al., 2004; Muller et al., 1997;
+ 2008 Wiley Periodicals, Inc.
+
+Murnleitner et al., 2002; Pullammanappallil et al., 1998;
+Punal et al., 2001; Steyer et al., 1997). However, there exists
+relatively less information about the applications of FLC to
+operate and monitor the anaerobic digestion of particulate
+organic wastes and/or energy crops (Boscolo et al., 1993;
+Holubar et al., 2003). Besides, lab-scale long-term applications of FLC for anaerobic digestion of solid matter lasting
+more than half a year are also seldom.
+The objective of this study was to establish a reliable and
+simple FLC for anaerobic digestion of insufficiently buffered
+energy crops. As the most striking example, the acidic
+beet silage (pH  3.33.4) was chosen. Only 3 widespread
+process measuring parameters were applied; pH, CH4
+content and the spec. GPR. As a specialty, the spec. GPR was
+used instead of the vol. GPR. In this article, the presented
+FLC is used for the first time for a continuously driven longterm fermentation of renewable energy crops (beet silage)
+lasting for more than 560 days under this unique Fuzzy
+control strategy.
+
+Materials and Methods
+Reactors and Substrate
+Laboratory-scale, single-stage continuous anaerobic digesters were used for the experiments, which were constructed
+in the Research Center of Lifetec Process Engineering at
+HAW Hamburg (Demirel and Scherer, 2008; Dobler et al.,
+2002; Scherer et al., 2003). Under different adjustments, the
+digesters were allowed to reach steady-state conditions,
+which meant that at least the threefold of the hypothetical,
+bacterial doubling time of 7 days was allowed for process
+performance, often more. The schematic configuration of
+the anaerobic biogas reactor is given in Figure 1. A separate,
+cooled substrate tank (at 48C) was also included in the
+experimental set-up (not included in Fig. 1). Feeding was
+carried out using a substrate pump, which had a digital
+outlet and was directly connected with the process computer
+by a digital card under LabView (National Instruments,
+Austin, TX). Three simultaneous reactors were automatically fed from the same substrate tank, three times per day.
+Further details about the reactor configuration and
+the automation under LabView were previously reported
+(Dobler et al., 2002; Scherer et al., 2003).
+Biogas production was continuously measured online,
+using a Milligascounter1 type MGC-10 (Ritter GmbH,
+Bochum, Germany). Methane (CH4) and carbon dioxide
+(CO2) compositions (v/v) were measured online, using
+infrared sensors (BlueSens GmbH, Gaz Analyzer, Herten,
+Germany). The volume of gas was corrected for standard
+pressure and 08C (STP, e.g., generally 9% lower values than
+measured). The temperature, pH and the redox potential
+(ORP) were also continuously measured online every 2 min
+(averaged per 8 h). A simultaneous, FLC processed
+fermentation was performed with the same cooled substrate
+tank, to simultaneously test different temperatures in
+parallel (Scherer et al., 2003, data not shown). Before each
+
+Figure 1. The scheme of the laboratory-scale anaerobic biogas digester. Q,
+quality of a measured value; M, motor; T, temperature; R, recorded values; I,
+instrument; C, controller.
+automatic feeding cycle, the reactor was completely stirred
+for about 5 min at 250 rpm. Therefore, the reactor was called
+as a completely stirred tank reactor (CSTR). By the way,
+viscosity problems, which have been solved by now, are
+quite serious during automatically feeding mode. Therefore,
+the feeding tubing was automatically washed by alternating
+the flow direction of the pump.
+The OLR was individually computed by the FLC program
+every 8 h/day, created by the fuzzy rules. A fuzzy tool of
+LabView was used to create the fuzzy rules. The fuzzy tool of
+LabView generated the new OLRadded into relative percentage, individually after each feeding cycle. The percentage of
+substrate addition was compared by the FLC with the
+substrate addition of the last cycle. The new addition was
+called the new OLR and was adjusted in a selected frame,
+for example, 10120% of the last feeding. This adjustment
+influenced the velocity of adaptation to a feeding situation,
+fore example, the start-up period should be performed with
+another adjustment than the recovery after a reactor failure.
+The SBS (without the leaves) and FBS (with the leaves
+and tops) were used as the mono-substrates. The general
+
+Scherer et al.: Application of a Fuzzy Logic Control System
+Biotechnology and Bioengineering
+
+737
+
+characteristics of the beet silages are given in Table I. The
+fodder and sugar beets were washed, smashed, and treated
+by natural lactic acid fermentation for 35 weeks after
+harvest in September and October, and left to stand outside
+at a temperature of 5208C. For further use, this suspension
+was diluted (1:1.5 or 1:2 for period 1,0471,058 days) with
+water.
+Analytical Methods
+The volatile suspended solids (VSS) content was measured
+according to DIN Methods (DIN 38414-8, 1985). Alkalinity
+and ammonium NH
+4  were measured according to the
+Standard Methods (APHA, 1989). Lactate was determined
+using a Merck Lactic Acid Test (1.16127) (Merck,
+Darmstadt, Germany). Volatile fatty acids (VFA, C2C6)
+and alcohols (C1C3) were determined using an Agilent
+Technologies 6890 N (Agilent, Santa Clara, CA) with a flame
+ionization detector (FID).
+Fuzzy Logic Control (FLC)
+In order to make biogas plants for energy crops more
+reliable, a feedback controller for the whole process should
+be connected to the digester system. One of such a process
+controller is the Fuzzy based FLC as firstly proposed by
+Boscolo et al. (1993).
+The FLC can be explained by a scheme in five different
+stages (Fig. 2). The first stage is used to record process
+values. The second stage reveals the fuzzification, to get a
+fuzzy set of fuzzy rules. The fuzzification means that inputs
+have to be converted by fuzzyfication into blurred linguistic
+terms, since the input parameters are too precise for the
+human logic (e.g. the linguistic terms high, medium and low
+for the temperature can be used). The rules of the FLC are
+formulated as a fuzzy set and this is the third stage after
+fuzzification. The numbers of the rules are determined as 3x,
+and x represents the input number. The fourth stage is
+defuzzyfication, to obtain a result. Since the FLC provides
+the conclusion in linguistic terms, the result has to be
+converted to a number. The Centre of Maximum Method was
+Table I.
+
+The characteristics of the fodder and sugar beet silages.
+
+Parameter
+
+Unit
+
+SBS value
+
+FBSa value
+
+pH
+Volatile solids (VS)
+Ammonium NH
+4
+
+Phosphate PO3
+4
+Acetic acid
+Propionic acid
+Isobutyric acid
+Butyric acid
+Isovaleric acid
+Valeric acid
+Lactic acid
+Alcohols (methanol, ethanol, propanol; primarily ethanol)
+
+%
+mg/L
+mg/L
+%
+mg/L
+mg/L
+mg/L
+mg/L
+mg/L
+%
+%
+
+3.34
+18.44
+71
+15
+2.23
+247
+29
+146
+63
+70
+1.09
+1.7
+
+3.30
+14.03
+440
+190
+1.34
+1,141
+<10
+308
+11
+12
+3.67
+2.3
+
+a
+
+Average values are reported here.
+
+738
+
+used in this study as implemented in LabView (Ross, 2004).
+Finally, a numerical sum as output is obtained, which can be
+used by the FLC, to determine the feeding volume of the
+substrate pump of the biogas reactor. The Fuzzy rules could be
+programmed and the control range of the process parameters
+could be adapted to different types of biogas plants.
+The FLC, which was developed at HAW Hamburg,
+determined the OLR, depending on the pH, the spec. GPR,
+together with CH4 content (Scherer, 2006). The pH value is
+particularly an important input parameter for the FLC in the
+case of acidic, weakly buffered silage (pH between 3 and 4).
+The spec. GPR is the second input parameter, which
+describes the biogas production rate, in relation to feeding
+volume. The spec. GPR (m3/kg VS/one day) is originally
+proposed here as a fuzzy control parameter, instead of the
+vol. GPR (m3/m3/day). The vol. GPR seems to be not
+suitable as it increases with increasing OLR and therefore
+can not support the pH control (or it responds too late). If
+an anaerobic reactor produces too much or too less biogas,
+with respect to the feeding volume, the FLC will then direct
+the OLR in the right direction. The CH4 content is the third
+selected input parameter. If yeasts are present in the digester,
+the spec. GPR could lie within the right range, but the CH4
+content of the biogas can be too low (Scherer, 2006). The
+FLC should direct the OLR, enabling a stable process. Based
+on experience, the OLR is given in percentage of a preset
+minimum and maximum volume of the substrate, thereby
+adjusting the range of the coupled HRT. The FLC should be
+separately adjusted for each kind of substrate (maize silage,
+sugar beet silage, etc.), according to the parameters pH, spec.
+GPR and CH4. Furthermore, during continuous run with
+the beet silage, the oxidation reduction potential (ORP)
+values were also measured, but the ORP was not found to be
+a reliable control parameter (Scherer, 2007). If oxidized VFA
+are enriched during fermentation of reduced sugars, the
+ORP reaches more positive values, but this signal is not
+reflected enough, and the signal is also often influenced by
+many sudden, unidentified perturbations. An early warning
+detector for hydrogen (H2) or propionate or other VFA was
+also not considered due to the obtained successful experimental results of this study. The FLC has the advantage that a
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+Figure 2.
+
+The scheme explaining the principle of a Fuzzy logic controller (FLC) for a biogas reactor. AC are the three selected control parameters, CH4, pH and the spec. GPR.
+
+special mathematical model with kinetic data is not required
+for the anaerobic digestion process being difficult to obtain,
+for example, the ADM-1 (Batstone et al., 2002).
+
+selected. The ranges can obviously be changed for every
+different experiment.
+
+Results
+The Set of Ranges for the Beet Silage
+Besides the fuzzy rules, the control ranges of the connected
+sensors (CH4, pH, spec. GPR) should be separately set. The
+basic array of the control parameters should be provided by
+the FLC rules, but the range settings should additionally be
+achieved, which define the input areas against the linguistic
+terms and are part of the fuzzy tool of LabView. For
+example, the low range for the CH4 content in biogas is
+defined to be between 0% and 60% (Fig. 3). In addition, a
+high critical and a less critical range for CH4 should also
+be set. Thereby, the FLC increases or decreases the dosage of
+the substrate pump (Figs. 2 and 3). The high critical (HC)
+range of CH4 lies between 75% and 85%, or even higher
+(normally not possible). Within this range, the FLC should
+increase the substrate dosage to its prefixed maximum value,
+which is related to the OLR of the last feeding rate in the
+previous feeding period. The CH4 values from 0% to 60%
+also lie within a high critical range, but this range means the
+reverse of the high critical range between 75% and 85%.
+The substrate feeding has to be strongly reduced, if this
+range is reached. The medium ranges could be adjusted to be
+between 60% and 70% of CH4, in which the OLR remains
+constant. The low critical control ranges for the CH4 content
+in the biogas are a transient status between the high and the
+medium critical control ranges. In this case, the FLC should
+mildly decrease the OLR percentage, in relation to the
+previous substrate dosage.
+In the same manner as shown for the CH4 content, the
+control ranges for the spec. GPR and pH have to be also
+
+The anaerobic mono-input digestion of FBS and SBS runs for
+more than 6 years, without any break, at both mesophilic
+(428C) and thermophilic (608C) conditions, at HAW
+Hamburg. After a yeast invasion the temperature of 428C
+was selected instead of 378C, which was also later recommended for anaerobic digestion of energy crops (Lindorfer
+et al., 2006). All parameters were monitored online and
+continuously recorded for the whole reactor operation periods,
+
+Figure 3. The adjustment of control ranges for the FLC-derived substrate
+feeding, according to the measured methane (CH4) percentages in the produced
+biogas (HC, high critical; LC, low critical, related to the three ranges of low, medium,
+and high). [Color figure can be seen in the online version of this article, available at
+www.interscience.wiley.com.]
+
+Scherer et al.: Application of a Fuzzy Logic Control System
+Biotechnology and Bioengineering
+
+739
+
+providing a deep insight into the anaerobic digestion process of
+this crop type.
+During this long period of continuous fermentation, no
+manure or sewage sludge was added to the reactors, so that
+the initial ammonium level coming from the inoculum
+decreased from 2,000 to 250300 mg/L. Thereby the direct
+influence of manure on the GPR could be excluded. This
+process of washing out the manure lasted nearly 2 years and
+led to a steady-state condition (Cobb and Hill, 1990). This
+was astonishing as the CSTR was completely mixed three
+times a day for 5 min at 250 rpm. The microbial population
+revealed a VSS of less than 2.5% in the stirred reactor, which
+
+Figure 4.
+
+was strictly related to the input and not to the inoculum,
+thereby providing true gas yields deriving only from the
+incoming substrate.
+The history of biogas CSTR with automatically FLC is
+shown in Figure 4. Two time axes are shown at the bottom
+of the diagrams. The axis below shows the days after
+inoculating the reactor. The upper time scale refers to the
+start of the FLC. As there were a lot of automation problems
+to solve, the digester was continuously run for more than
+2 years by manual feeding, until reactor day 757. The
+digester was fed once a day with an OLR of 2.7 kg VS/m3/
+day, corresponding to a HRT of 26 days. After start of the
+
+The history of a one-stage CSTR to demonstrate the usefulness of the automatic FLC. Two time axes are shown. The bottom axis shows the days after inoculating
+the reactor. The upper time scale above refers to the start of the FLC on day 757. Since the preset HRT of 5. 4 days was too short, and the corresponding OLR of 13. 8 g VS/L/day was
+too much, a severe reactor failure happened. The FLC automatically recovered this failure situation, without manual interaction. [Color figure can be seen in the online version of this
+article, available at www.interscience.wiley.com.]
+
+740
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+FLC on reactor day 710, the substrate was still fed once a day
+by hand, but the automatic FLC was started on reactor day
+757, feeding every 8 h a day. Firstly, the minimum HRT
+in the FLC was adjusted to be 5.4 days, corresponding to an
+OLR of 13.8 g VS/L/day. Promptly, this HRT was reached on
+day 758, but the change was too abrupt for the microbial
+population and caused a reactor failure. The minimum and
+maximum OLR adjustments were not in the right range.
+The pH decreased to 5.3 on reactor day 765, and the
+concentrations of acetic and propionic acids reached about
+
+2,500 and 1,750 mg/L, respectively. Then, the feeding was
+automatically stopped by the FLC (upper diagram of Fig. 4),
+and the HRT increased to more than 400 days. Although
+no substrate was fed, the spec. GPR went further up, above
+1.0 L/g VS/day, indicating that the previously accumulated
+VFA were consumed. For a 100% degradation, a spec. GPR
+of 0.75 L/g VS/day could be calculated (Scherer, 2007).
+The history of the same digester for 84 days later is given in
+Figure 5. In the time between, the fuzzy rules and the frames of
+the sensor ranges were changed. Two completely unexpected
+
+Figure 5. The history of a one-stage CSTR to demonstrate the usefulness of the automatic FLC. A reactor failure happened on day 883/884, as the electronic substrate balance
+was out of order and added too much substrate without control. The upper time scale refers to the FLC operation from 120 to 160 days, started on day 757. The FLC functioned
+perfectly, allowing an OLR of 13.8g VS/L/d and a VFA content below 50 ppm after reactor day 945. [Color figure can be seen in the online version of this article, available at
+www.interscience.wiley.com.]
+
+Scherer et al.: Application of a Fuzzy Logic Control System
+Biotechnology and Bioengineering
+
+741
+
+events also occurred. Firstly, the substrate tube baked the
+electronic balance. Therefore, the pump dosed too much
+substrate into the digester, without any control. Unfortunately, the substrate was the residue in the substrate barrel. It
+came into contact with oxygen and apparently yeasts grew up
+(stored at 38C). On reactor day 889, the spec. GPR seemed to
+be quite high about 0.600.75 L/g VS/day, but CH4 dropped
+down below 50%. By the overdose, the pH decreased to 6.6 on
+reactor day 884. The acetate concentration increased to
+2,338 mg/L. The ORP value also decreased, but the second
+decrease of the redox on day 890 could not be explained. The
+
+microscopic image exhibited a yeast invasion (pictures not
+shown). Therefore, since day 897 the reactor was operated at
+428C, to give the yeasts no chance to grow up again, as later
+recommended for digestion of energy crops at temperatures
+>418C (Lindorfer et al., 2006). On reactor day 905, the
+digester was recovered, only 20 days after the reactor failure on
+reactor days 883884. The FLC functioned completely
+automatic, without any manual interference.
+Further history of the same digester is summarized in
+Figure 6. The scale on the bottom left refers to both VFA
+and alcohols being generally in the ratio of about 60:40.
+
+Figure 6. The history of a one-stage CSTR to demonstrate the usefulness of the FLC. The upper time scale presents the FLC operation from 148 to 208 days. (Arrow 1) refers to
+a singular technical problem. [Color figure can be seen in the online version of this article, available at www.interscience.wiley.com.]
+
+742
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+The FBS was used without any supplements and the
+digester was operated at an OLR of 12.213.2 g VS/L/day,
+and a HRT of only 7.6 days. This resulted in a stable
+pH, CH4, and spec. GPR levels, as indicated by VFA
+concentrations less than 500 mg/L. It must be mentioned
+that many agricultural biogas plants are running also stable,
+with tremendous high VFA levels of 3,0005,000 ppm VFA,
+but alkalinities of more than 12,000 ppm CaCO3-equivalents
+(Scherer, 2007).
+
+A new critical reactor performance is displayed on reactor
+day 1,028 in Figure 7. The frames of the sensor ranges being
+integrated in the Fuzzy tool base were improved in the
+time between. The FLC reacted earlier on a pH change. The
+reactor was now 271 days later than day 757, as the automatic FLC started. The minimum HRT was set to 5.4 days
+and the reactor remained stable, without any failure.
+However, the FLC had to interfere permanently, as the pH
+and CH4 values fluctuated. The VSS content of the reactor
+
+Figure 7. The history of a one-stage biogas digester to demonstrate the usefulness of an automatic FLC. After improving the ranges of the control parameters of the FLC, the
+reactor performance remained stable at retention times of 5.4 days (until 1,048d) and 6.0 days (until 1,058d). The upper time scale presents reactor operation with FLC from 271 and
+301 days. [Color figure can be seen in the online version of this article, available at www.interscience.wiley.com.]
+
+Scherer et al.: Application of a Fuzzy Logic Control System
+Biotechnology and Bioengineering
+
+743
+
+decreased below 1.5% in this period. However, these
+disturbances lasted only 23 days. The HRT was maintained
+by the FLC to 6.0 days as the minimum limit to avoid wash
+out of bacterial cells in the CSTR. The VFA concentration
+decreased below 500 mg/L, indicating stability of the
+digester. The FLC allowed a high throughput mode up to a
+maximum OLR of 15.6 kg VS/m3/day in this period with a
+vol. GPR of 9 m3/m3/day (the substrate was less diluted
+for this limited period). The spec. GPR remained to be
+0.56 L/g VS/day, and the degradation based on total
+organic carbon (TOC) was assumed to be 82% (Fig. 6).
+The real degradation rate could actually be higher, as a part
+of the incoming substrate could be washed out during
+feeding.
+The recorded process parameters of the single-stage CSTR
+from the reactor operation period 1,1021,142 days are
+shown in Figure 8. The substrate had to be changed from
+FBS to SBS on reactor day 1,069, which also had a low pH of
+around 3.4. This variation of substrate caused on the first
+glance only a minor change in the behavior of the fermentation. The pH of the reactor declined from 7.25 to 6.9 in
+3 weeks (Fig. 8). This decrease of pH could be due to an error
+of the pH electrode, as the substrate change seemed to be
+minor. The new substrate (SBS) had nearly the same pH,
+but contained only 5075% of the buffering capacity of
+the old substrate (FBS). The FBS had an alkalinity value
+of 4,0006,000 mg CaCO3 equivalents/L, while the SBS
+had only 2,5003,500 mg CaCO3/L. Therefore, the pH
+decreased permanently from 7.25 to 6.9, in spite of the FLC
+regulated feeding.
+In Figure 9, reactor operation period from 1,259 to
+1,295 days is displayed. The substrate change from FBS to
+SBS was already carried out 35 days before, but it was
+difficult to achieve steady-state conditions. The FLC
+stabilized the acidic (insufficiently buffered) fermentation
+without artificial pH buffering, only by decreasing the OLR
+and by increasing the HRT. The oscillating HRT increased
+from 7.6 days to between 30 and 50 days, by the FLC, in
+order to maintain automatically the process in a stable
+condition. The set point of HRT of 6 days could never be
+reached by the FLC and the new substrate SBS allowed only a
+very deep permanent pH of 6.56.6 (Fig. 6). This reactor
+behavior seemed to be quite unusual as no comparable
+stable biogas process could be encountered in literature. The
+FLC had to interfere enduringly. However, a stable situation
+was also reflected by the low level of VFA, below 500 ppm
+(right scale of the diagram at the bottom of Fig. 7). The
+redox values also remained smooth and were apparently
+not influenced by the pH disturbances of the digester. The
+methane level decreased from about 6255%, at a HRT of
+27 days.
+In further experiments, it was observed that the
+declined CH4 content of the produced biogas was typical
+for less ensilaged sugar beets (without the top and the
+leaves). The final pH of SBS was 3.4, nearly the same for FBS
+(pH 3.3), but the sugar content of the mono-substrate
+was nearly doubled from about 75 g/kg wet matter to 20
+
+744
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+180 g/kg wet matter, limiting the silage process and reducing
+the concomitant CO2 loss. Therefore, the SBS revealed
+significant lower methane content than fodder beets with the
+top. However, the HRT also influenced the CH4 content of
+the biogas. With an HRT of 27 days (startup phase), the
+methane content was about 5860% in the reactor period
+until 710 days (Scherer et al., 2003). On reactor day 910,
+the CH4 content of the biogas was about 62.5% at HRT
+7.6 days, and even 69% at an HRT of 6.0 days (Figs. 5 and 6).
+Simultaneously, the spec. GPR decreased from 0.63 to
+0.500.56 L/g VS/day. Therefore, the specific methane yield
+related both to the OLR and the converted organic matter
+behaved nearly constant. This observation was also made in
+another study, during anaerobic digestion of SBS at different
+HRTs under stationary conditions (Demirel and Scherer,
+2008).
+During the whole test period of more than 2,000 days,
+the content of the organic matter (VSS) of the CSTR was
+regularly measured. As the reactor was completely stirred,
+the organic matter content reflected the microbial biomass
+in the reactor. Although the HRT was drastically reduced
+from 26 to 5.47.6 days, by the automatic FLC starting
+on reactor day 757, the organic dry weight of the CSTR
+increased to 0.93% on reactor day 819, and later on, to
+1.93% (reactor day 1,066, with the same substrate FBS).
+In the last experiment, the reactor temperature was
+increased from 41 to 508C, in 18C steps per day (Fig. 10). As
+shown by the time axis of Figure 9, a new, separate reactor
+was set up with FBS as mono-input. The inoculum derived
+from the former reactor periods. Concomitantly with
+temperature increase, the spec. GPR, pH and the CH4
+decreased, and the FLC automatically decreased the
+substrate feeding (OLR). The OLR decreased to 1.5 g VS/
+L/day, but the HRT increased from 10 to 40 days, and on
+reactor day 502, the pH and the CH4 content of the
+produced biogas declined below 50%. As the temperature
+shock came after a long period of stable and uniform
+fermentation, no real acclimatization was possible on
+reactor day 504. The FLC reacted directly and restricted
+the feeding severely. Thereby, the HRT increased sharply (in
+Fig. 10, the diagram at the bottom). Astonishingly, the
+period of disturbance lasted only 2 weeks. Further increase
+of the digester temperature to 608C did not apparently
+influence the methanogenic population. Therefore, in the
+last period, the FLC regulated automatically down to a
+shorter HRT of 1015 days (Fig. 10).
+
+Discussion
+The FLC, which was developed at HAW Hamburg,
+determined the OLR, only depending on pH, the spec.
+GPR (as m3/kg VS/day) and the CH4 content. The main
+previous work was to find out how many measuring
+parameters and fuzzy rules were necessary to obtain a stable
+and reliable fermentation (Scherer, 2006). The pH value was
+regarded as an important input parameter for the FLC,
+
+particularly in the case of acidic, weakly buffered silage (pH
+34). The sensitivity of control was proved to be high
+enough. If the pH was too low (generally less than 7.0), then
+the reactor became sour, and generally the GPR and the CH4
+content dropped down severely.
+
+The spec. GPR is the second input parameter, which
+outlines the biogas production rate in relation to feeding
+volume. For wastewater treatment it is difficult to relate the
+GPR to the input as generally the incoming water varies,
+but for more or less uniform fermentation of renewable
+
+Figure 8. The history of a one-stage biogas digester to demonstrate the usefulness of an automatic FLC. On reactor day 1,069 (33 days before), the substrate FBS ran out and it
+was continued with the much less buffered SBS. The upper time scale refers to the FLC operation from 396 to 384 days. [Color figure can be seen in the online version of this article,
+available at www.interscience.wiley.com.]
+
+Scherer et al.: Application of a Fuzzy Logic Control System
+Biotechnology and Bioengineering
+
+745
+
+Figure 9.
+
+The history of a one-stage biogas digester to demonstrate the usefulness of an automatic FLC. The upper time axis indicates that the automatic mode of the FLC was
+in operation from 502 to 538 days. As pH fluctuated, the FLC interfered permanently, but the redox value and VFA levels remained stable (<500 mg/L). [Color figure can be seen in the
+online version of this article, available at www.interscience.wiley.com.]
+
+biomass, the sum of dissolved volatile solids and volatile
+suspended solids can be determined as total organic carbon
+(TOC) of one charge or harvest for the input (Scherer,
+2007). It was also found that only the spec. GPR was suitable
+instead of the vol. GPR. If the spec. GPR is too much or too
+less with respect to the feeding volume, the FLC will lead the
+OLR into the right direction.
+The CH4 content is the third input parameter of the
+developed FLC. Yeasts and methanogens should be differentiated, since both produce biogas. If yeasts are present, the
+GPR could lie in the right range, but the methane content
+can be too low (Fig. 4). Therefore, the CH4 content is
+another important input parameter for the FLC. It can
+indicate invaded yeasts, which reduce the methane yield.
+Then, the FLC should correct the OLR.
+Sometimes the redox value is supposed to be a controlling
+parameter (Pind et al., 2003). The redox value should be
+more positive after an increase of fatty acids in the reactor
+medium. During the continuous process with beet silage
+(>50,000 h), the redox value was also measured, but it was not
+observed to be a pronounced and reliable control parameter
+(Figs. 49).
+A hydrogen sensor was used as an early warning system in
+a Fuzzy network for anaerobic wastewater treatment (Guwy
+et al., 1997; Muller et al., 1997; Murnleitner et al., 2002; Pind
+et al., 2003). Other used neuronal networks in addition
+(Holubar et al., 2003; Steyer et al., 1997, 2005). It was
+considered here that such a self-learning network is not
+
+746
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+applicable to a methanogenic long-term fermentation
+process, while there already exists too many abrupt technical
+problems superposing the real effects.
+The FLC enabled a high throughput anaerobic digestion
+process for the used FBS (diluted). A maximum OLR of
+15.6 kg VS/m3/day, at a short HRT of 6.0 days, and with
+a GPR of 9 m3/m3/day could be reached (Fig. 7). The
+minimum HRT seemed to be around 5.3 days. A one-stage
+biogas system, which was manually fed with FBS once a day
+was operated by Maehnert and Linke (2006). It was found
+out that an abrupt inhibition occurred at an of OLR
+4.5 kg VS/m3/day under mesophilic conditions. The effect
+of increasing OLR was minor at 558C, but an inhibition
+occurred at an OLR of 2.5 kg VS/m3/day. Similar results
+were also obtained in another work, with a maximum OLR
+of 4.0 kg VS/m3/day for sugar beet or fodder (forage) beet
+silage under mesophilic conditions (Hassan, 2003).
+
+Conclusions
+This article presents for the first time a detailed long-term
+study about a FLC system developed for anaerobic digestion
+of energy crops with poor buffering capacity as mono-input.
+The lab-scale experiments were carried out with fully
+automated and completely mixed reactors, fed every 8 h a
+day with extremely sour beet silage (pH 3.33.4), to create
+a FLC strategy. Three commercially available measuring
+
+Figure 10. The history of a one-stage biogas digester demonstrating the usefulness of an automatic FLC. In contrast to the previous figures, a new lab-scale reactor was set
+up with FBS as mono-input, operated at 378C instead of 428C. Manually performed temperature increase (1, 3 in the middle diagram) led to a reduced OLR (2, upper diagram),
+corresponding to an increased HRT (3, lower diagram). This again revealed an artificially induced decrease of the spec. GPR (2, upper diagram). Arrow 4 refers to a singular
+technical problem (clogging of tubing). [Color figure can be seen in the online version of this article, available at www.interscience.wiley.com.]
+
+parameters (pH, methane content-CH4 and the spec. GPR)
+can cover most of all applications, including a careful startup process and a gentle recovery strategy after a severe
+reactor fall, as shown in this paper for two reactor failures
+and an attempt to cause a third reactor fall. The feasibility
+of the FLC was also proved by an artificially induced
+temperature shock situation. The FLC with a feeding cycle of
+3 times per day also enabled a process with a high OLR and a
+short HRT (high throughput anaerobic digestion process).
+The developed FLC system did not need any complicated
+detector (e.g. for propionate) or self-learning network or a
+special mathematical model. Similar to an alarm signal, it
+was found sufficient to preset and to limit the hydraulic
+
+retention time by minimum and maximum amounts of
+substrate per feeding cycle in the fuzzy tool base.
+The authors would like to thank Nils Scharfenberg and Christian
+Rosner and Monika Unbehauen for their excellent technical support.
+The author would like to express his deep gratitude to the Fachagentur
+Nachwachsende Rohstoffe e.V. (FNR) for their financial support, FKZ
+220 10405.
+
+References
+APHA. 1989. Standard methods for the examination of water and wastewater, 17th edition. Washington DC: American Public Health. Asso-
+
+Scherer et al.: Application of a Fuzzy Logic Control System
+Biotechnology and Bioengineering
+
+747
+
+ciation/American. Water Works Association/Water Pollution Control
+Federation.
+Banks CJ, Humphreys PN. 1998. The anaerobic treatment of a lingocellulosic substrate offering little natural pH buffering capacity. Wat
+Sci Tech 38:2935.
+Barber NR. 1978. Lime/Sodium Bicarbonate treatment increases sludge
+digester efficiency. J Environ Sci 3:2830.
+Batstone DJ, Keller J, Angelidaki I, Kalyuzhnyi SV, Pavlostathis SG, Rozzi A,
+Sanders WTM, Siegrist H, Vavilin VA. 2002. The IWA anaerobic
+digestion model no 1 (ADM1). Wat Sci Tech 45:6573.
+Boscolo A, Mangiavacchi C, Drius F, Rongione F, Pavan P, Cecchi F. 1993.
+Fuzzy control of an anaerobic digester for the treatment of the organic
+fraction of municipal solid waste (MSW). Wat Sci Tech 272:5768.
+Carrasco EF, Rodriguez J, Punal A, Roca E, Lema JM. 2002. Rule-based
+diagnosis and supervision of a pilot-scale wastewater treatment plant
+using fuzzy logic techniques. Expert Syst Appl 22:1120.
+Cobb SA, Hill DT. 1990. Using nitrogen ratio as an indicator of biomass
+retention and steady-state in anaerobic fermentation. Trans Agric 33:
+282287.
+Demirel B, Scherer PA. 2008. Production of methane from sugar beet silage
+without manure addition by a single-stage anaerobic digestion process.
+Biomass Bioenergy 32:302309.
+DIN 38414-8. 1985. German standard methods for the examination of
+water, waste water and sludge; sludge and sediments (group S); determination of the amenability to anaerobic digestion (S8).
+Dobler S, Rohardt S, Scherer PA. 2002. Messdatenerfassung und automatische Dosiereinrichtung von Feststoffen unter LabVIEW fur eine
+hochinstrumentierte Labor-Biogasanlage. In: D, Beckmann editor.
+Technische Systeme fur Biotechnologie und Umwelt. Heiligenstadt:
+IBA e.V. pp. 297313. ISBN 3-00-011287-1.
+Estaben M, Polit M, Steyer JP. 1997. Fuzzy control of anaerobic digestor.
+Control Eng Pract 5:13031310.
+Guwy AJ, Hawkes FR, Wilcox SJ, Hawkes DL. 1997. Neural network and onoff control of bicarbonate alkalinity in a fluidised-bed anaerobic
+digester. Wat Res 31:20192025.
+Hassan EA. 2003. Biogas production from forage and sugar beets. Process
+control and optimisationecology and economy. Thesis, University of
+Kassel.
+Holubar ZL, Hager M, Froschl W, Radak Z, Braun R. 2003. Start-up and
+recovery of a biogas-reactor using a hierarchical neural network-based
+control tool. J Chem Technol Biotechnol 78:847854.
+Jarvis A, Nordberg A, Jarlsvik T, Mathisen B, Svensson BH. 1997. Improvement of a grass-clover silage-fed biogas process by the addition of
+cobalt. Biomass Bioenergy 12:453560.
+Lindorfer H, Braun R, Kirchmayr R. 2006. Self-heating of anaerobic
+digestion using energy corps. Wat Sci Tech 53:159166.
+Liu J, Olsson G, Mattiasson B. 2004. Control of an anaerobic reactor
+towards maximum biogas production. Wat Sci Tech 50:189198.
+
+748
+View publication stats
+
+Biotechnology and Bioengineering, Vol. 102, No. 3, February 15, 2009
+
+Maehnert P, Linke B. 2006. Biogas production from energy crops cattle
+slurry under meso- and thermophilic conditions. In: 16th CIGR World
+Congress Agricultural Engineering for a Better World. Bonn, Germany:
+VDI Berichte. pp. 709710.
+Muller A, Marsili-Libelli S, Aivasidis A, Lloyd T, Kroner S, Wandrey C.
+1997. Fuzzy control of disturbances in a wastewater treatment process.
+Wat Res 31:31573167.
+Murnleitner E, Becker TM, Delgado A. 2002. State detection and control of
+overloads in the anaerobic wastewater treatment using Fuzzy logic. Wat
+Res 36:201211.
+Pind PE, Angelidaki I, Ahring BK. 2003. Dynamics of the anaerobic process:
+Effects of volatile fatty acids. Biotechnol Bioeng 82:791801.
+Pullammanappallil PC, Svoronos SA, Chynoweth DP, Lyberatos G. 1998.
+Expert system control of anaerobic digesters. Biotechnol Bioeng 58:
+1322.
+Punal A, Rodriguez J, Franco A, Carrasco EF, Roca E, Lema JM. 2001.
+Advanced monitoring and control anaerobic wastewater treatment
+plants: Diagnosis and supervision by a fuzzy-based expert system.
+Wat Sci Tech 43:191198.
+Ross TJ. 2004. Fuzzy logic with engineering applications, 2nd edition. New York:
+Wiley.
+Scherer PA. 2006. Ruben liefern Messdaten: Kombinierte Messtechniken
+und Softwarelosungen. Biogas J 1/06:1216.
+Scherer P. 2007. Operating analytics of biogas plants to improve efficiency
+and to ensure process stability. In: Progress in Biogas StuttgartHohenheim, (IBBK ed.). Kirchberg. pp. 7784 (ISBN 978-3-94070600-3).
+Scherer PA, Dobler S, Rohardt S, Loock R, Buttner B, Noldeke P, Brettschuh
+A. 2003. Continuous biogas production from fodder beet silage as sole
+substrate. Wat Sci Tech 48:229233.
+Speece RE. 1996. Anaerobic biotechnology for industrial wastewaters.
+Nashville, Tennessee, USA: Archae Press.
+Steyer JP, Rolland D, Bouvier JC, Moletta R. 1997. Hybrid Fuzzy neural
+network for diagnosis-application to the anaerobic treatment of
+wine distillery wastewater in a fluidized bed reactor. Wat Sci Tech
+36:209217.
+Steyer JP, Bernard O, Batstone DJ, Angelidaki I. 2005. Lessons learnt from
+15 years of ICA in anaerobic digesters. In: Kim C, Park TJ, Ko JH,
+editors. IWA Instrumentation Control and Automation Conference
+(ICA, 2005). Busan, Korea. pp 267276.
+Weiland P. 2006. Biomass digestion in agriculture: A successful pathway for
+the energy production and waste treatment in Germany. Eng Life Sci
+6:302309.
+Weiland P. 2007. Erste Ergebnisse aus dem Bundesmesmessprogramm II
+zur Anlagentechnik, Substratbewirtschaftung, Betriebsweise und Problemen von NawaRo: Anlagen. In: Biogas im Wandel 16th annual
+conference of the German Biogas Association. Freising, Germany:
+Biogas Association. pp. 113122.
+
+

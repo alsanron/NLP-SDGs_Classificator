@@ -1,0 +1,1056 @@
+A critical examination
+of the pre-conditions
+of learning analytics adoption
+in developing countries
+in Southeast Asia
+Ma. Mercedes T. Rodrigo
+1. Introduction
+Big data analytics is a field of research that uses data
+analysis to make informed decisions (Daniel, 2015). It is
+characterized by large amounts of possibly ambiguous
+or noisy data collected at a high rate of speed from
+a variety of sources. The data is then analyzed to
+generate valuable insights about a specific domain.
+When applied to educational contexts, big data
+analytics has at least three variants  academic
+analytics (AA), learning analytics, and educational
+data mining (EDM). AA usually has the coarsest
+grain size of the three, referring to data collected
+and processed at institutional levels for better
+administration, resource allocation, and management
+(Daniel, 2015). Both learning analytics and EDM, on
+the other hand, begin with finer-grained, transactionlevel data and use them in subtly different ways.
+Baker and Siemens (2014) cite several differences that
+distinguish EDM from learning analytics:
+
+
+EDM focuses on automated methods for
+discovery within data while learning analytics
+makes use of more human-led methods;
+
+44
+
+
+
+
+
+EDM emphasizes modeling of specific
+educational phenomena and their interactions
+while learning analytics emphasizes a more
+integrated, systems-based understanding of
+these same phenomena; and
+EDM seeks to build applications that will
+support personalized learning experiences while
+learning analytics seeks to inform and empower
+administrators, teachers, and learners.
+
+For simplicitys sake and to remain consistent with the
+terminology of Gasevic (2018), to which this paper
+responds, this paper will use learning analytics to
+refer to all these different forms of big data analysis in
+educational contexts.
+In Include us all! Directions for adoption of learning
+analytics in the global south, Gasevic (2018)
+discusses learning analytics potential to increase
+education quality, equity, and efficiency in the
+Global South. He and other researchers (e.g., Daniel,
+2015; Romero & Ventura, 2010) argue that learning
+analytics can help improve educational management
+processes, upgrade learning and learning
+environments, support early identification and
+
+remediation of students-at-risk, provide personalized
+feedback and learning experiences, optimize resource
+use, evaluate courseware quality, and so on.
+Before educational systems can use and benefit from
+learning analytics, however, an ecosystem capable
+of four key activities  data collection and preprocessing, modeling, presentation and visualization,
+and intervention  needs to be in place (Gasevic,
+2018; see Figure 1).
+
+Figure 1. Key activities in the learning analytics process
+(Gasevic, 2018).
+
+1.1 Research questions
+The questions arise: To what extent does Gasevics
+(2018) enabling ecosystem exist in the Global South?
+How ready is the Global South to embrace learning
+analytics and reap its benefits? Does the Global South
+collect enough data from enough sources at a fast
+enough rate to warrant the kinds of deep analyses for
+which learning analytics is known? Do these countries
+have the expertise to process the data, even if they
+had it? How data-driven are decision-makers when
+formulating policy?
+1.2 Scope and limitations
+This paper is an attempt to answer these questions in
+the context of developing countries in Southeast Asia
+
+(SEA), namely, Cambodia, Indonesia, Laos, Malaysia,
+Myanmar, Philippines, Thailand, Timor-Leste, and
+Vietnam (ASEAN member states, n.d.; UNDP, 2016).
+It contrasts findings from these countries from the
+experiences of Singapore, a SEA country that is one of
+the most advanced in the world.
+As learning analytics must be built on top of an
+ecosystem of educational policy, curriculum,
+pedagogy, infrastructure, and professional
+capabilities, this paper assesses the state of readiness
+of these environmental components. The organizing
+framework for this paper is drawn largely from a
+report by the Southeast Asian Ministers of Education
+Organization (SEAMEO, 2010) on the extent of
+information and communications technology (ICT)
+adoption in SEA educational systems. The report
+makes use of UNESCOs (2005 in SEAMEO, 2010)
+four stages of ICT Development: emerging, applying,
+infusing, and transforming. The SEAMEO (2010)
+report maps these stages along several dimensions of
+ICTs in education and describes how each stage would
+manifest. It then plots where each SEA country is
+within this matrix.
+This papers main discussion points, adapted from the
+SEAMEO (2010) matrix, are national-level education
+policies; ICT infrastructure and resources in schools;
+professional development for teachers and school
+leaders; ICT in education curriculum and pedagogy;
+assessment; and evaluation and research. These
+dimensions are the pre-conditions that determine
+the extent to which learning analytics can be applied
+to an educational system. The national-level policy is
+an articulation of a high level commitment to the use
+of ICTs in education. Commitment translates to the
+scale of ICT investments in schools. The ways in which
+these ICTs are used are determined by the curriculum,
+pedagogy, assessment styles, and teacher training.
+Teacher and administrator training also influence
+how data is analyzed. Coming full circle, plans for
+high-level evaluation and research determine what
+data is collected, how it is analyzed to assess policy
+45
+
+effects, and how these results are used to influence
+subsequent decision-making.
+This paper makes use of academic publications for
+theoretical grounding. Most of the inputs for this
+paper, however, were collected from reports from
+institutions such as the Asian Development Bank
+[ADB]; SEAMEO; UNESCO; and government sources.
+Findings from SEAMEO (2010) are used to start each
+discussion point, together with information from
+other, more recent reports and publications. This
+paper focuses primarily on basic education because
+source materials tended to limit their scope to
+primary and secondary school.
+
+On its part, Timor-Leste is in the process of
+rebuilding after recent internal conflicts. Its national
+development plans cite ICT capability as a cornerstone
+of economic development (International Bank for
+Reconstruction and Development [IBRD]/The World
+Bank, 2013). Primary education is a key focus area,
+with projects dedicated to the rehabilitation of
+facilities and the provision of textbooks and other
+instructional materials. These plans, however, are
+silent on ICT education. Indeed, ICT education has
+not yet been identified as a learning goal at any
+educational level.
+
+Cambodia and Myanmar are considered to be at
+the applying stage in which ICT is used to support
+or automate existing culture, policies, and practices
+2. National-Level Education Policies
+(SEAMEO, 2010). Their national governments
+provide funding for hardware and software but ICT
+A national-level ICT in education vision and
+developments are led by specialists. Like countries in
+related education plans and policies articulate the
+governments recognition of the benefits of using ICTs the emerging stage, countries in the applying stage
+in education and its commitment to supporting efforts seem to be focusing most efforts on deploying a
+critical mass of infrastructure as well as supporting
+to realize these benefits. These commitments have
+current educational approaches. Cambodias
+a direct bearing on ICT investments in schools, what
+Education Strategy Plan 2009-2013 and ICT-ineducational data is collected, how it can be accessed
+Education Master Plan prioritize equitable access to
+and processed, by whom, and for what purposes. It
+also determines the extent to which interventions can education services, improvement of education quality,
+and educational staff development, while Myanmars
+be created and deployed.
+ICT Infrastructure Development Plan and ICT Master
+Plan 2011-2015 commit to upgrading their telephone
+SEAMEO (2010) categorizes Laos and Timor-Leste
+networks and Internet backbone (UNESCO, 2013a).
+in the emerging stage of having formulated ICT in
+Some broad priority programs hint at the possible use
+education policies, in that these countries have
+of learning analytics. Cambodias Education Strategy
+limited ICT-driven educational plans or policies.
+Plan 2014-2018 includes a results-based management
+One possible reason for this limitation is that these
+system that is supposed to develop the capacity for
+countries may be prioritizing the establishment of
+evidence- and outcomes-based planning (Cambodia
+basic ICT infrastructure at this time. For example,
+Ministry of Education, Youth, and Sport, 2014) but it
+while Laoss National ICT Policies Education Sector
+does not mention learning analytics explicitly.
+Development Framework 2009-2015 promotes the
+development of infrastructure and access as well as
+Indonesia and the Philippines are squarely categorized
+human resource development in general (UNESCO,
+as infusing (SEAMEO, 2010). ICT is envisioned as
+2013a), a recent government report does not cite
+mediating changes in culture, policies, and practice.
+education as a priority sector for the deployment of
+National-level funding is provided for hardware,
+broadband services (Phissamay, 2016).
+software, and teacher professional development.
+46
+
+Indonesias Five-year Action Plan for the Development
+and Implementation of ICT in Indonesia supports the
+development of ICT networks and the integration of
+ICTs in learning (UNESCO, 2013a). The Philippiness
+Education for All Plan of Action calls for ICT integration
+as well as the use of ICTs to enhance educational
+management at all levels (Philippines National
+Education for All Committee, 2014).
+Thailand and Vietnam straddle the line between
+infusing and transforming (SEAMEO, 2010). Aside
+from envisioning ICT as a driver of change and
+providing support for infrastructure and human
+capacity building, they also show evidence of
+integrating ICTs in overall school development.
+Teachers and students are included in ICT-related
+plans, and funding is broadly available. In Vietnam,
+these commitments to education took root as far
+back as 2001 when they planned the improvement of
+student ICT training and teacher ICT usage (UNESCO,
+2013a). In its Master Plan on ICTs in Education 20072011, Thailand continues its efforts to improve
+access to technology and indeed strives to become
+a creator of technology, not just a user (UNESCO,
+2013a). A more recent OECD/UNESCO (2016) report
+confirms that ICT has been and continues to be one
+of Thailands strategies for economic growth. It notes
+that Thai schools began offering computer courses
+as far back as 1984 and, by the 2000s, Thailand was
+already committed to integrating ICTs in subject areas
+as pedagogical tools.
+Malaysia was the only developing SEA country
+categorized in the transforming stage (SEAMEO,
+2010), i.e., possessing exemplary national-level
+vision and policies that other countries study and
+emulate. In keeping with this status, Malaysias
+Education Blueprint 2013-2025 commits to providing
+students with Internet access and virtual learning
+environments, augmenting online content, and
+creating more opportunities for distance and selfpaced learning (UNESCO, 2013a).
+
+While not directly related to education, SEA
+countries are in the process of developing legislation
+regarding data privacy and protection, which have
+implications on analytics in general. As far back as
+2005, the Asia-Pacific Economic Cooperation (APEC)
+networkwhich includes Indonesia, Malaysia, the
+Philippines, Thailand, and Vietnam (APEC, 2017)
+crafted a framework for the protection of personal
+information. Among the guiding principles of this
+framework were the prevention of harm, informed
+consent, the need for security and accountability,
+and the right to access and correction. Several SEA
+countries have since begun codifying these principles
+(Zicolaw, 2014). Thailand and Indonesia already have
+laws under consideration regarding the protection of
+individual data, while the Philippines and Malaysia
+have enacted data privacy laws that protect the right
+to privacy while ensuring the free flow of information.
+Cambodia, Laos, Myanmar, and Vietnam are still in
+the process of developing similar legislation.
+What do these findings say about the readiness of
+developing countries in SEA to engage in learning
+analytics? The national-level policy seems compatible
+with the use of learning analytics. All countries have
+mandated investment in ICT-related infrastructure,
+curriculum, and skills, and they are formulating laws
+to protect personal data. Policies state the desire
+for evidence-based decision-making, which hints at
+learning analytics without explicitly mentioning it.
+In contrast, Singapore began basic ICT skills and
+literacy training in the 1960s and, in 1997, began
+introducing a series of ICT in Education Masterplans.
+As described in Tan, Cheah, Chen and Choy (2017),
+the first masterplan established a strong ICT
+infrastructure and began intensive teacher training.
+The second empowered schools to make their own
+autonomous judgments about the use of ICTs while
+the third focused on strengthening and scaling in
+order to reach a transformational stage of ICT usage.
+Although the plans do not explicitly mention learning
+analytics, they built-up a healthy IT-oriented mindset,
+47
+
+familiarity with technologies, and a general belief
+in the value of ICT for Singapores development (p.
+35). They also enable the next wave of development,
+which includes the use of analytics to track students
+and respond to individual needs.
+In the succeeding sections, we shall examine other
+component parts that help triangulate the readiness of
+SEA educational systems in the use of learning analytics.
+
+3. ICT Infrastructure and Resources
+in Schools
+ICT infrastructure and resources in schools refer to
+the computers, the Internet, related peripherals, and
+courseware that are available in schools for the use
+of the students, teachers, and administrators. The
+availability of these resources and the ways in which
+they are used determine the volume and variety
+of the data captured and the speed at which it is
+captured, if at all. It also estimates how possible or
+probable it is to deploy educational interventions that
+are borne out of learning analytics outputs.
+SEAMEO (2010) characterizes Timor-Lestes ICT
+infrastructure as emerging. ICT resources are typically
+non-existent to very limited. If schools have ICTs at all,
+they are standalone computers with productivity tools
+for administrators, teachers, and students to use.
+Timor-Leste is taking steps to correct this situation.
+In 2010, the National University of Timor-Leste was
+linked to the School on Internet Project of UNESCO,
+which utilized satellite-based Internet to connect
+higher education and research institutions in SEA
+(UNESCO Bangkok, 2010).
+Cambodia, Indonesia, and the Philippines are
+transitioning from the emerging to applying stages
+(SEAMEO, 2010). Aside from standalone computers
+and productivity tools, schools in these countries also
+have computer laboratories with a limited number of
+printers and other peripherals as well as Internet
+access. The presence of ICTs in schools, however, does
+48
+
+not guarantee access. In Cambodian schools, there
+are over 400 to 500 secondary school students per
+computer (UNESCO, 2014). Seven percent of primary
+schools and less than 1% of secondary schools
+have Internet access. In the Philippines, over 400
+primary school students share a single computer. Like
+Cambodia, only 7% of primary schools have Internet
+access. At the secondary school level, the situation
+is less dire with about 50 students per machine while
+about 40% of schools have Internet access. It is therefore
+unlikely that students in these countries are able to use
+school ICT resources in substantial ways.
+Myanmars ICT infrastructure is categorized as being
+in the applying stage (SEAMEO, 2010). In 2014,
+Myanmar reformed its telecommunications industry
+resulting in more affordable Internet access. UNESCO
+launched an ICT for education project in Myanmar in
+which teachers were trained to use mobile broadband
+services and ICT-based teaching in rural schools
+(Stenbock-Fermor, 2017).
+Malaysia, Thailand, and Vietnam are moving from
+the infusing to transforming stage (SEAMEO, 2010).
+Schools are equipped with networked computers
+in both laboratories and classrooms. Students and
+teachers have access to a wide variety of peripherals
+and a rich variety of learning resources. In some
+cases, schools have access to web-based learning
+spaces, conferencing and collaboration tools, and selfmanagement software. The availability of computers
+and the Internet in Malaysian and Thai schools bear
+this classification out. Malaysia and Thailand provide
+one computer for every 7 to 17 students (UNESCO,
+2014). Over 90% of schools in these countries have
+Internet access.
+Even if institutionally provided ICT access is limited,
+personal access is on the rise with young people leading
+the way. In developing countries, 67% of people aged
+1524 have access to the Internet, thanks in large part
+to the affordability of mobile broadband (ITU, 2017).
+
+Following through on their policy commitments to
+provide schools with more ICT resources, countries
+have invested heavily in computers, the Internet,
+and peripheral devices. Like national-level policies,
+this development is friendly towards the use of
+learning analytics. However, the reality on the ground
+is much more constrained. Access to computers
+and the Internet is uneven both within and among
+countries. For every four broadband subscribers per
+100 people in developed countries, there are two
+subscribers in developing countries and one in the
+least developed countries (ITU, 2017). Global mobile
+access is estimated at 84%, but only 67% of users are
+in rural areas (ITU, 2016). The youngest and oldest
+segments of the population, people living in rural
+areas, and women and girls are less likely to own
+mobile phones (ITU, 2016). Even Thailand, one of the
+more advanced SEA nations in terms of infrastructure,
+reports an internal digital divide in which learner-tocomputer ratios are lower in urban schools than in
+rural schools (OECD/UNESCO, 2016). A study of the
+use of tablet computers in Thai schools (Office of
+the Basic Education Commission, 2012-13 in OECD/
+UNESCO, 2016) showed that hardware distributions
+needed to be accompanied by contextualized
+content and teacher support. At this stage, ICTs do
+not seem diffused enough in SEA schools to enable
+the collection of high-volume, fine-grained data for
+learning analytics.
+As mentioned in the prior section, the Singapore
+experience is notably different (Tan et al, 2017).
+Many schools have already achieved a 1:1
+student-to-computer ratio. Learning management
+systems and digital resources are common and
+broadband Internet access is widely available.
+Many of these environments collect fine-grained,
+student interaction-level data that is used to reach
+educational goals. This will be discussed in greater
+detail in Section 7.
+
+4. Professional Development for
+Teachers and School Leaders
+A skilled workforce is essential to the use of analytics,
+but it is also one of the most difficult resources to
+develop. It is estimated that the global public and
+private sector is only able to capture 30% of the
+value that big data offers (McKinsey Global Institute,
+2016). Organizational inability to train, attract, and
+retain qualified analytics personnel is one of the
+major impediments to the success of analytics within
+organizations of all kinds  government, the private
+sector, and education.
+Laos and Timor-Leste are at the emerging stages
+of professional development for teachers and
+school leaders (SEAMEO, 2010). They are aware of
+the need for professional development but have
+not yet formulated concrete plans to address this
+need. One impediment is a lack of internal capacity
+to support ICTs in education. In Timor-Leste, few
+tertiary institutions offer ICT-related courses, and
+they themselves lack qualified teachers and proper
+teaching and learning facilities (IBRD/The World
+Bank, 2013). Timor-Leste teachers often depend on
+private or religious organizations for ICT training. The
+situation in Laos is slightly more progressive. Teachers
+do receive ICT training, but it is generally limited to
+productivity tools and Internet searching, browsing,
+and communications (Utakrit, 2016).
+Cambodia, Indonesia, and Myanmar are in the
+applying stage in which ICT training tends to be
+unplanned (SEAMEO, 2010). The training that
+teachers and school leaders do receive tends to be
+limited to ICT applications. The dearth of ICT-related
+training for teachers could be caused in part by
+the focus on other aspects of teacher training. For
+example, Indonesia shifted to a new basic education
+curriculum in 2013. It emphasized more interactive
+and team-based teaching to develop higher-order
+
+49
+
+thinking skills (OECD/ADB, 2015). Hence, professional
+development efforts focus on developing these
+specific areas.
+At the infusing stage are Malaysia, the Philippines,
+Thailand, and Vietnam (SEAMEO, 2010). Teachers and
+school leaders receive training in the use of ICTs to
+teach specific subject areas. Pre-service teachers in
+Malaysia and the Philippines take at least one course
+on educational assessment, measurement, and
+evaluation (SEAMEO, 2015). In-service teachers are
+offered classroom assessment training once a year in
+Malaysia and twice a year in the Philippines.
+Of interest regarding this dimension is the absence of
+any mention of training for learning analytics. Based
+on the source documents surveyed, the current focus
+of teacher and administrator training in SEA is, at
+best, at the level of using ICTs for teaching specific
+subjects or for tracking inputs to schools. In the
+Philippines, training supposedly includes item analysis
+and test score analysis (SEAMEO, 2015), but learning
+analytics is not explicitly mentioned in pre-service or
+in-service training programs.
+The same can be said of Singapores teacher
+education and training programs (Tan et al, 2017).
+Singapore invests extensive resources in the
+development of teachers ICT skills, their capacity for
+innovative ICT use, and the creation of ICT resources.
+Capacity building for learning analytics is not explicitly
+included among training goals. However, Singapores
+National Institute for Education regularly engages
+teachers in their ICT development and deployment
+projects and shares the results of data analysis. This
+implies that teachers are kept informed of the effects
+and consequences of these various strategies, and
+they are literate enough to internalize and appreciate
+these findings.
+Several authors identify the development of learning
+analytics expertise as a priority (e.g., Siemens,
+2012) and warn that simplistic data processing may
+50
+
+lead to its misinterpretation and misuse, leading to
+negative consequences on stakeholders (Karnad,
+2014). If learning analytics is to be used correctly and
+effectively in SEA, teachers and administrators need
+training. The reports reviewed suggest, however, that
+this specific type of training is not widely available
+at the pre-service and in-service levels. Hence, the
+education workforce in developing countries in SEA is
+not well-poised to use learning analytics, even if the
+data were available.
+Not all software captures for fine-grained, user-level
+data. Software has to be designed to collect user
+interactions. Computer-based learning environments
+must be built to log student data and to include other
+educationally relevant attributes such as learning
+contexts, correctness, and timing. Curriculum and
+pedagogy determine whether such environments exist
+in schools and the extent to which students use them.
+
+5. ICT in Education Curriculum
+and Pedagogy
+Curriculum can be described at three levels: the
+intended curriculum which refers to high-level
+articulations of educational goals; the implemented
+curriculum, referring to mid-level plans for content,
+time allocations, and instructional strategies;
+and the achieved curriculum, which refers to the
+competencies that students actually develop as a
+result of the educational interventions (Pelgrum,
+1999). This and the succeeding section examine what
+developing countries in SEA state as their educational
+goals, how they implement these goals, and how they
+assess whether they have reached these goals.
+Within the nationally-prescribed ICT in education
+curricula, emerging category countries Cambodia,
+Laos, and Timor-Leste mandate the development of
+ICT literacy skills (SEAMEO, 2010). The pedagogical
+strategies used by emerging category countries
+Laos and Timor-Leste are usually highly teachercentered and didactic (SEAMEO, 2010). Several factors
+
+account for a reluctance to shift to student-centered
+methodologies. Teachers confront  isolation,
+lack of collaboration, and limited support from
+administrators; the constraints of the official syllabus
+or curriculum and examinations that test memory
+instead of understanding; lack of time and resources,
+among others (MacKinnon & Thepphasoulithone,
+2014). These circumstances make innovation difficult
+and traditional teaching methods convenient.
+Cambodia and Myanmar span the emerging to
+applying categories. They are still teacher-centered,
+didactic, and teach ICTs as a separate subject (SEAMEO,
+2010). This is consistent with reports on limited
+student access to computers and the Internet: About
+1% of primary school students and 15% of secondary
+school students in Myanmar are enrolled in classes
+with access to these resources and only 2% of teachers
+were trained to teach with ICTs (UNESCO, 2014).
+Indonesia, Myanmar, the Philippines, and Thailand
+are categorized as applying (SEAMEO, 2010). Their
+national curricula stipulate the use of ICTs in specific
+subject areas but these uses are generally isolated
+from one another. At their best, Indonesian and
+Thai pedagogical practices are characterized as
+infusing, where they introduce more learner-centered
+and collaborative methods (SEAMEO, 2010). The
+categorization of Thailand, however, might be overly
+modest as all Thai students are reportedly enrolled in
+classes that make use of computers and the Internet,
+and 79% of trained Thai teachers teach using ICTs
+(UNESCO, 2014).
+In contrast, the categorization of the Philippines as
+being in the infusing category (SEAMEO, 2010) might
+have been overstated. UNESCOs (2014) report showed
+that only 41% of primary school students and 87% of
+secondary school students were enrolled in classes
+that made use of computers, while 4% of primary
+school students and 28% of secondary school students
+had classes that made use of the Internet. Indeed, the
+
+same report showed that only 2% of teachers in the
+Philippines were trained to teach with ICTs.
+In the infusing category, Malaysia and Vietnam have
+integrated learning systems that encourage students
+to solve problems in authentic contexts (SEAMEO,
+2010). None of the intended curricula of developing
+countries in SEA have reached the transforming
+stage. Teaching and learning strategies in the
+schools in Malaysia and Vietnam are varied; hence,
+these countries span the applying to transforming
+categories (SEAMEO, 2010). There is evidence of both
+teacher-centered and student-centered pedagogies.
+ICTs are taught as separate subjects and they are
+used for experimentation and multi-sensory learning.
+Other data sources imply that Malaysia provides its
+schools with the resources to achieve transformation.
+All Malaysian primary and secondary students are
+reported to be enrolled in classes that use computers
+and the Internet, and 100% of teachers teach with
+ICTs (UNESCO, 2014).
+In the search for information about ICT-based
+curricula and pedagogical practices, it was evident
+that there is a dearth of academic literature regarding
+innovative ways in which ICTs are being applied
+in SEA schools. The International Conference on
+Computers in Education is an annual meta-conference
+hosted by the Asia-Pacific Society for Computers
+in Education. Under this conference are tracks on
+artificial intelligence in education, advanced learning
+technologies, game-based learning, and others. A
+cursory inspection of the proceedings from 2014 (Liu,
+Ogata, Kong, & Kashihara, 2014), 2015 (Ogata, Chen,
+Kong, & Qiu, 2015), and 2016 (Chen, Yang, Murthy,
+Wong, & Iyer, 2016) showed few contributions from
+developing countries in SEA.
+Learning analytics typically leverages on the use of
+highly interactive learning environments such as
+tutorials, games, simulations, and the like. These
+environments produce rich data streams that can be
+
+51
+
+mined for interesting patterns. In Singapore, teachers
+are trained to make use of ICT-based pedagogies and
+are able to implement lessons with ICT components
+(Tan et al, 2017). Indeed, Singaporean teachers are so
+comfortable with ICTs that they are able to contribute
+to the development of ICT-based applications to help
+teach subjects such as Math and Physics. The same
+cannot be said of their counterparts in developing SEA
+countries. The data suggests that teachers in these
+countries are either unable or reluctant to make use
+of these formats; hence, students in SEA do not have
+much exposure to them. The ways in which ICTs are
+used in most SEA classrooms  primarily teachercentric, with a focus on ICTs as subject matter in
+themselves  do not lend themselves to substantial
+data collection and, hence, use of learning analytics.
+
+6. Assessment
+Assessments are used to determine how much
+of the intended and the implemented curriculum
+is actually achieved. They are an indicator of the
+effectiveness of teaching and the readiness of
+learners to progress. They are also indicators of the
+quality of an educational system (SEAMEO, 2015). In
+SEA, assessments usually take place at three levels:
+the classroom level, where teachers give periodic
+tests to gauge student achievement; the national
+level, where high-stakes exams determine promotion
+from primary to secondary school or from secondary
+school to college; and the international level, where
+sample schools take standardized tests as a means
+of diagnosing the entire educational system to help
+formulate or adjust policy (Cambodia Ministry of
+Education, Youth, and Sport, n.d.).
+At the classroom level, teachers in SEA have access to
+a variety of assessment tools: textbooks, workbooks,
+assessment toolkits, scoring rubrics, test item banks,
+and test item data (SEAMEO, 2015). Students in
+emerging countries Cambodia, Indonesia, Laos,
+Myanmar, Philippines, and Timor-Leste tend to be
+
+52
+
+assessed for discrete subjects, using paper-and-pencil
+tests (SEAMEO, 2010). ICT use in assessment tends
+to be limited to the development, encoding, and
+recording of assessments, especially at the primary
+school level (SEAMEO, 2015).
+Thailand and Vietnam fall into the applying stage
+where students are assessed for their skills but the
+overall format is still teacher-centered and subjectfocused (SEAMEO, 2010). As with the emerging-stage
+countries, the use of ICTs for assessment is limited
+because teachers themselves lack confidence, and
+because ICTs are taught as subjects in themselves
+(OCED/UNESCO, 2016).
+Malaysia is the sole entry in the infusing category
+(SEAMEO, 2010). The Malaysian school system
+designs what it views as holistic, authentic assessment
+that measures students cognitive, affective,
+and psychomotor skills (SEAMEO, 2015). These
+assessments are designed to be taken in authentic
+situations as well as during coursework.
+At the national level, all SEA countries give
+summative, high-stakes examinations. The main use
+of the test data is to determine student achievement
+levels against the prescribed curriculum (SEAMEO,
+2015). There is, however, a certain level of mistrust of
+national-level tests. Test validity, sampling methods,
+and quality of test administration are all the subject
+of doubt (SEAMEO, 2013). In Indonesia, for example,
+the national-level examinations are supposed to
+assess learning, serve as criteria for graduation, rank
+students for competitive entry, evaluate the success
+of educational programs, provide information to
+improve teaching and learning, and so on (OECD/ADB,
+2015). However, there is little confidence that the
+exam is able to satisfy any of these purposes.
+At the classroom and national levels, it is clear that
+all developing SEA countries have massive stores of
+student-level assessment data. Much of it though
+
+is not digital and therefore not in a form that can
+be easily mined. ICT-based assessments are not
+commonly used. Furthermore, questions are raised
+about the validity of national-level tests. This is a
+challenging environment for learning analytics.
+Finally, developing countries in SEA make use of largescale international tests as tools to evaluate their
+educational systems. The Programme for International
+Student Assessment, Progress in International
+Reading Literacy Study, and Trends in International
+Mathematics and Science Study are examples of tests
+in which whole countries participate (Assessment,
+Curriculum, and Technology Research Center, 2015).
+Countries generally claim to use test results for
+policymaking (Assessment, Curriculum, and
+Technology Research Center, 2015; UNESCO,
+2017a). The Philippines, for example, uses results to
+rationalize capacity building and skills development
+among teachers. Thailand uses the results to review
+the curriculum and design student intervention
+programs. Like the Philippines, Myanmar uses results
+to design professional development programs. There
+is a sense, however, that large-scale assessment data
+is underutilized (UNESCO, 2017b). As mentioned in
+the section on professional development, teachers
+and administrators are not trained to process large
+data sets; hence, educational systems lack the human
+resources capable of performing the rigorous research
+needed to convert data into information.
+
+7. Evaluation and Research
+At first blush, evaluation and assessment appear
+synonymous. The two areas do overlap, but
+evaluation in this context differs from assessment in
+terms of focus. Evaluation examines the effects of
+broader ICT in education policies on the identified
+areas for improvement, while assessment, as
+discussed in Section 6, investigates the extent to
+which the goals of a curriculum were achieved.
+
+Research, on the other hand, refers to scholarly
+inquiry into an educational problem. Evaluating the
+effects of policy is a research endeavor that can
+result in a cost-benefit analysis of ICT investments,
+refinement of educational theory, and identification
+of best practices (SEAMEO, 2010). It is here that
+learning analytics should be put to work.
+At this point, many developing countries in SEA
+still lack the capacity for evaluation and research.
+Emerging-stage countries Cambodia, Laos, the
+Philippines, and Timor-Leste generally do not include
+evaluation and research in their national-level ICT
+plans (SEAMEO, 2010). There are, however, efforts
+that support the evaluation process. The Philippines,
+for example, has mounted substantial initiatives to
+collect a variety of data on the basic educational
+system in a comprehensive and timely manner
+(Read, 2017). These include enrollment, staffing, ICT
+resources such as computers and the Internet, health
+and nutrition, exit assessment results, and others.
+Data tends to be coarse-grained though. It includes
+all resource inputs  not just ICT  and has a limited
+indication of resource usage.
+Indonesia, Thailand, and Myanmar are in the applying
+stage in which evaluations tend to be summative in
+nature and the capability to make evidence-based
+decisions is limited (SEAMEO, 2010). One of the issues
+surrounding Thailands ICT in education plans is that
+the country lacks the capacity to monitor and assess
+ICT usage in schools (OECD/UNESCO, 2016). Despite
+the substantial investments that Thailand has made in
+this regard, it does not systematically collect data on
+inputs and outcomes; hence, it has limited data upon
+which to build policy.
+In the infusing stage are Malaysia and Vietnam
+(SEAMEO, 2010). They make use of both summative
+and formative assessments and invest in research
+to provide the basis for data-driven policies. These
+claims are not undisputed though. A UNESCO (2013b)
+
+53
+
+study pointed out that Malaysia has fallen behind its
+benchmarking countries because of a lack of policy
+formulation, monitoring, and feedback. In Vietnam,
+a survey of 32 key representatives from 20 public
+and private sector organizations involved in ICT in
+education ranked evaluation and research as a 7th
+priority among 10 ICT in education dimensions (VVOB
+Vietnam, n.d.). Highest among these dimensions are
+the deployment of infrastructure, teacher training, and
+curriculum. Key representatives agreed that research
+was essential for proper policy formulation but only for
+as long as it did not impede change and innovation.
+Learning analytics is one of the tools of evaluation and
+research. At this point, however, developing countries
+in SEA lack a culture of evaluation and research, which
+leads to an underutilization of these tools.
+In contrast, Singapores Learning Sciences Lab within
+the National Institute for Education focuses on the
+use of learning analytics to develop evidence-based
+claims about how people learn to derive practical,
+pedagogical, and theoretical implications (Tan et al.,
+2017). To illustrate: The Rapid Collaborative Knowledge
+Improvement (RCKI) using GroupScribbles (GS) project
+refers to both a product and a practice that supports
+group participation and face-to-face collaboration. GS
+is a shared digital space in which students can share
+ideas in textual or graphical forms. Students scribble
+on a personal window and post their work to a shared
+window when they are ready. The analysis of RCKI
+using GS showed that GS classes performed better
+than non-GS classes because GS facilitated students
+understanding of and attitude towards the subject matter.
+Since its introduction, over 300 RCKI lessons have been
+designed with the help of 15 teachers and 17 classes.
+
+8. Conclusion
+Within developing countries in SEA, there are massive
+opportunities to improve education with the use
+of learning analytics. As Gasevic (2018) argues,
+learning analytics can be used to improve education
+54
+
+quality, equity, and efficiency in many ways and
+at many levels. Rich sources of data such as social
+networking behaviors and discourse can augment
+formal assessments to come to better understandings
+of learners and their needs, and can help learning
+systems direct students to appropriate learning
+activities. Learning analytics can help overcome
+biases in education access by factoring in the effects
+of geography, gender, minority status, and so on
+to lead to more equitable learning environments.
+Finally, learning analytics can help policy makers and
+practitioners better manage educational programs
+and resource allocation.
+The Singaporean experience provides a success
+story. Singapore proves that ICTs in general, and
+learning analytics in particular, have the potential
+to contribute positively to educational change (Tan
+et al, 2017). Examples of Singaporean projects such
+as the RCKI using GS and EduLab, point to increased
+quality, equity, and efficiency, with even greater
+promise ahead. Singaporean researchers anticipate
+that learning analytics will lead to more personalized
+learning environments capable of complex
+interactions and challenge educators to design,
+develop, and study such innovations.
+However, the Singaporean experience is not universal.
+The goal of this paper was to determine the extent to
+which the enabling ecosystem of learning analytics
+existed in developing countries in SEA. The findings
+are somewhat grim. There is a national-level
+commitment to the use of ICTs in education, but
+the priority is on addressing internal digital divides
+through the improvement of telecommunications,
+increased technology deployment, and teacher
+training for ICT literacy and integration.
+The computer-based learning environments in
+schools tend to consist of personal computers with
+productivity tools, with the possible exception of
+schools in infusing and transforming countries such
+as Malaysia. Even in these advanced countries,
+however, there is little evidence that learning systems
+
+automatically collect the kind of fine-grained data
+that drives learning analytics. Rather, most testing
+still uses pen and paper. Even when digitized data
+is available, the teachers and administrative staff
+lack the culture of evaluation and research and
+the specialized training to convert the data into
+meaningful information.
+At this time, none of the pre-conditions to making
+full use of learning analytics seem to be present in
+developing countries within SEA. Countries are still
+in the process of amassing policy, technology, and
+human resources, as well as developing the culture to
+leverage learning analytics for wide-scale educational
+improvements. Fortunately, efforts continue to bolster
+ICT in education and develop related expertise within
+these countries. It is therefore reasonable to expect
+that SEA will become an active participant in the
+learning analytics community in the years to come.
+
+9. Acknowledgements
+I thank Danna Patricia S. Aduna for her assistance
+with finding and evaluating the source documents.
+I also thank the Ateneo Laboratory for the Learning
+Sciences and the Ateneo de Manila University for
+their support.
+
+References
+ASEAN member states. (n.d.). Retrieved from
+http://asean.org/asean/asean-member-states/
+Asia-Pacific Economic Cooperation. (2017). Member
+economies. Retrieved from https://www.apec.org/
+About-Us/About-APEC/Member-Economies
+Assessment, Curriculum and Technology Research Center.
+(2015). Large-scale assessments for use in the
+Philippines. Retrieved from http://www.best.org.ph/
+images/Docs/Report_Docs/Large_Scale_Assessments_
+for_Use_in_Philippines.pdf
+
+Baker, R. & Siemens, G. (2014). Educational data mining
+and learning analytics. In Sawyer, K. (Ed.) Cambridge
+handbook of the learning sciences: 2nd edition,
+pp. 253274.
+Cambodia Ministry of Education, Youth, and Sport. (2014).
+Education strategic plan 2014-2018. Retrieved from
+http://www.moeys.gov.kh/images/moeys/policies-andstrategies/559-en.pdf
+Cambodia Ministry of Education, Youth, and Sport. (n.d.).
+Student assessment. Retrieved from http://www.
+moeys.gov.kh/en/eqa/1949/1949-1949.html#.
+WZ7lNSgjGM8
+Chen, W., Yang, J., Murthy, S., Wong, S. L., & Iyer, S. (2016).
+Proceedings of the 24th International Conference on
+Computers in Education, ICCE 2016. Taoyuan City,
+Taiwan: Asia-Pacific Society for Computers in Education.
+Daniel, B. (2015). Big data and analytics in higher education:
+Opportunities and challenges. British Journal of
+Educational Technology, 46(5), 904920.
+Gasevic, D. (2018). Include us all! Directions for adoption
+of learning analytics in the global south. In C. P.
+Lim, & V. L. Tinio (Eds.), Learning analytics for the
+global south (pp. 1-22). Quezon City, Philippines:
+Foundation for Information Technology
+Education and Development.
+International Bank for Reconstruction and Development/
+The World Bank. (2013). The role of information and
+communications technology in post-conflict
+Timor-Leste. Retrieved from https://www.infodev.org/
+infodev-files/resource/InfodevDocuments_1198.pdf.
+ITU. (2016). Measuring the information society. Retrieved
+from http://www.itu.int/en/ITU-D/Statistics/Pages/
+publications/mis2016.aspx
+ITU. (2017). ICT facts and figures 2017. Retrieved from
+http://www.itu.int/en/ITU-D/Statistics/Pages/
+facts/default.aspx
+Karnad, A. (2014). Trends in educational technologies.
+The London School of Economics and Political Science.
+Retrieved from http://eprints.lse.ac.uk/55965/
+Liu, C., Ogata, H., Kong, S. C., & Kashihara, A. (2014).
+Proceedings of the 22nd International Conference on
+Computers in Education, ICCE 2014. Nomi, Japan:
+Asia-Pacific Society for Computers in Education.
+MacKinnon, A., & Thepphasoulithone, P. (2014).
+Educational reform in Laos: A case study. International
+Journal of Educational Studies, 1(1), 1934.
+
+55
+
+McKinsey Global Institute. (2016). The age of analytics:
+Competing in a data-driven world. Retrieved from
+http://www.mckinsey.combusiness-functions/
+mckinsey-analytics/our-insights/the-age-of-analytics
+-competing-in-a-data-driven-world
+OECD/Asian Development Bank. (2015). Education in
+Indonesia: Rising to the challenge. Paris: OECD.
+OECD/UNESCO. (2016). Education in Thailand: An OECDUNESCO perspective. Paris: OECD.
+Ogata, H., Chen, W., Kong, S. C., & Qiu, F. (2015).
+Proceedings of the 23rd International Conference on
+Computers in Education, ICCE 2015. Nomi, Japan:
+Asia-Pacific Society for Computers in Education.
+Pelgrum, W. J. (1999). Curriculum and pedagogy. In W. J.
+Pelgrum & R. E. Anderson (Eds.). ICT and the emerging
+paradigm for life long learning: A worldwide
+educational assessment of infrastructure, goals, and
+practices. Amsterdam, The Netherlands: International
+Association for the Evaluation of Educational
+Achievement.
+Philippines National Education for All Committee. (2014).
+Philippines Education for All 2015 plan of action: An
+assessment of progress made in achieving the EFA
+goals. Retrieved from http://www.seameo-innotech.
+org/wp-content/uploads/2015/11/EFA%20V30.pdf
+Phissamay, P. (2016). ICT policy & development in Laos.
+Retrieved from http://www.cicc.or.jp/japanese/
+kouenkai/pdf_ppt/pastfile/h28/161026-04la.pdf
+Read, L. (2017). Investigations into using data to improve
+learning: Philippines case study. Retrieved from
+https://www.brookings.edu/wp-content/uploads/
+2017/03/global-20170307-philippines-case-study.pdf
+Romero, C., & Ventura, S. (2010). Educational data mining:
+A review of the state of the art. IEEE Transactions on
+Systems, Man, and Cybernetics, Part C (Applications
+and Reviews), 40(6), 601618.
+Southeast Asian Ministers of Education Organization.
+(2010). Report: Status of ICT integration in education
+in Southeast Asian countries. Retrieved from
+http://www.seameo.org/SEAMEOWeb2/images/stories
+/Publications/Project_Reports/SEAMEO_ICTIntegration-Education2010.pdf
+Southeast Asian Ministers of Education Organization.
+(2013). Experiences of primary learning metrics.
+Retrieved from http://www.seameo.org/SEAMEOWeb2
+/images/stories/Programmes_Projects/SEA-PLM/
+documents/Consolidated_SEAMEO%20EXPERIENCES
+%20OF%20PRIMARY%20LEARNING%20METRICS_
+updatedACER14November.pdf
+
+56
+
+Southeast Asian Ministers of Education Organization.
+(2015). Assessment systems in SEA: Models, successes,
+and challenges. Retrieved from http://www.seameoinnotech.org/wp-content/uploads/2016/08/SIREP_
+Assessment-151021.pdf.
+Siemens, G. (2012). Learning analytics: Envisioning a
+research discipline and a domain of practice.
+In Proceedings of the 2nd International Conference on
+Learning Analytics and Knowledge (pp. 4-8). New York,
+NY: ACM.
+Stenbock-Fermor, A. (2017, March 27). Transforming
+Myanmar rural schools with ICT: One teacher at a time
+ UNESCO [Blog post]. Retrieved from http://www.un.
+org/youthenvoy/2017/03/transforming-myanmarrural-schools-ict-one-teacher-time/
+Tan, S. C., Cheah, H. M., Chen, W., & Choy, D. (2017).
+Pushing the frontier: A cohesive system-wide approach
+to integrating ICT into education. New York,
+NY: Springer.
+UNESCO Bangkok. (2010, November 9). Timor-Leste plugs
+into the right connections. Retrieved from
+http://www.unescobkk.org/education/ict/onlineresources/databases/ict-in-education-database/item/
+article/timor-leste-plugs-into-the-right-connections/
+UNESCO. (2013a). ICT in education: Policy, infrastructure,
+and ODA status in selected ASEAN countries.
+Retrieved from http://www.unescobkk.org/
+fileadmin/user_upload/ict/e-books/ICT_in_Education_
+Policies__Infrastructure_and_ODA.pdf
+UNESCO. (2013b). Malaysia: Education policy review.
+Retrieved from http://unesdoc.unesco.org/images/
+0022/002211/221132e.pdf
+UNESCO. (2014). ICT in education in Asia. Retrieved from
+http://uis.unesco.org/sites/default/files/documents/
+information-communication-technologies-educationasia-ict-integration-e-readiness-schools-2014-en_0.pdf
+UNESCO. (2017a). Analyzing and utilizing assessment
+data for better learning outcomes. Retrieved from
+http://unesdoc.unesco.org/images/0025/
+002529/252975E.pdf.
+UNESCO. (2017b). Large-scale assessment data and
+learning outcomes. Retrieved from http://unesdoc.
+unesco.org/images/0024/002474/247413E.pdf
+UNDP. (2016). Human development reports: Developing
+regions [Data sets]. Retrieved from http://hdr.undp.org
+/en/content/developing-regions
+
+Utakrit, N. (2016). Teaching and learning attitudes,
+readiness, and awareness of science teachers through
+ICTs integration in Lao vocation and technical schools
+towards ASEAN education reform. In Proceedings of the
+4th Global Summit on Education, GSE 2016 (pp. 14-15).
+VVOB Vietnam. (n.d.). Survey on ICT in education in
+Vietnam. Retrieved from http://www.vvob.be/vietnam
+/files/extended_report_on_survey_ict_in_education_
+2nd_round_120906.pdf
+
+Zicolaw. (2014). ASEAN insights IV: Personal data protection.
+Retrieved from http://www. zicolaw.co.id/knowledge/
+asean-insights-personal-data-protection/
+
+57
+
+

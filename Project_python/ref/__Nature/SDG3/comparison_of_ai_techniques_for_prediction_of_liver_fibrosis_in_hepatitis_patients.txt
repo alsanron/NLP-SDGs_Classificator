@@ -1,0 +1,677 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/263355859
+
+Comparison of AI Techniques for Prediction of Liver Fibrosis in Hepatitis
+Patients
+Article in Journal of Medical Systems  August 2014
+DOI: 10.1007/s10916-014-0060-y  Source: PubMed
+
+CITATIONS
+
+READS
+
+20
+
+376
+
+3 authors, including:
+Yuan Lin
+
+Coskun Bayrak
+
+University of Arkansas at Little Rock
+
+Youngstown State University
+
+2 PUBLICATIONS 25 CITATIONS
+
+129 PUBLICATIONS 744 CITATIONS
+
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+Rocket Characterization and Studies View project
+
+Multi Sensor use in Glucose Level measuring View project
+
+All content following this page was uploaded by Coskun Bayrak on 24 September 2014.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Comparison of AI Techniques for Prediction of Liver
+Fibrosis in Hepatitis Patients
+Brain Keltch, Yuan Lin, Coskun Bayrak
+Computer Science Department
+University of Arkansas at Little Rock
+Little Rock, AR
+
+ABSTRACT
+Globally one in twelve people have the Hepatitis B or Hepatitis C virus. Diagnosis and treatment
+of this disease is guided by liver biopsies where a small amount of tissue is removed by a surgeon
+and examined by a pathologist to determine the fibrosis stage from F0 (no damage) to F4
+(cirrhosis). Biopsies are costly and carry some risk for the patient. Non-invasive techniques for
+determining fibrosis stage have been developed and evaluated since 2003. Non-invasive methods
+have utilized serum markers, imaging test, and genetic studies. The accuracy of these noninvasive techniques has not achieved sufficient acceptance and so the invasive biopsy is still
+considered the gold standard.
+Clinical decision support systems (CDSS) use decision support system theory and
+
+technology to assist clinicians in the evaluation and treatment process. Using historical
+clinical data and the relationship processed by Artificial Intelligence (AI) techniques to
+aid physicians in their decision making process is the goal of CDSS. The CDSS provides
+a large number of medical support functions to help clinicians make the most reasonable
+diagnosis and choose the best treatment measures.
+This paper applies four artificial intelligence predictive techniques (decision trees, neural
+networks, naive bayes algorithms, and logistics regression) to publicly available data on
+424 Hepatitis B and Hepatitis C patients. Demographic and standard serum markers are
+utilized to predict fibrosis stage and compare these predictions to known biopsy results.
+A final decision tree evaluation is applied to make a final prediction. We have also have
+developed a publically available web application that can be used as a prototype for
+presenting AI predictive results in a CDSS environment based on these models. This
+technique along with others could mitigate the need for some liver biopsies in the more
+than 500 million Hepatitis B and C patients worldwide with additional validation and
+verification.
+
+Keywords: Fibrosis Stage, Hepatitis, Clinical Decision Support, Artificial Intelligence
+Predictive Techniques,
+
+1. INTRODUCTION
+Hepatitis B or Hepatitis C virus is a common disease throughout the world. Diagnosis and
+treatment of this disease is guided by liver biopsies where a small amount of tissue is removed by
+a surgeon and examined by a pathologist to determine the fibrosis stage from F0 (no damage) to
+F4 (cirrhosis) [1][2]. This disease goes largely untreated in developing countries. Biopsies are
+costly and carry some risk for the patient. Non-invasive techniques for determining fibrosis stage
+have been developed and evaluated since 2003. Non-invasive methods have utilized serum
+markers, imaging test, and genetic studies. The accuracy of these non-invasive techniques has
+not achieved sufficient acceptance and so the invasive biopsy is still considered the gold standard
+[3].
+
+Knowledge of the level of liver damage in a patient with liver disease (particularly
+Hepatitis B and Hepatitis C) is a critical factor in determining the optimal course of
+treatment and to measure the effectiveness of alternative treatments in patients. The effort
+here expands on earlier work [4] by adding three additional artificial intelligence
+techniques to predict the degree of liver damage from blood serum results rather than
+determination from an invasive biopsy [5].
+Clinical Decision Support System (CDSS) provide cost/effective solutions by correlating
+historical data to assist clinicians in treatment of disease. In this case we are developing a
+CDSS focused on predicting Fibrosis Stage from blood serum information. It is an
+information system which uses expert systems and artificial intelligence (AI) technology
+to support clinical decision. It makes integrated diagnostic and medical advice bases on
+the collected patients information, providing reference for the clinical medical physician
+[6]. Clinical Decision Support Systems are "active knowledge systems which use two or
+more items of patient data to generate case-specific advice"[7].
+Clinical decision support systems vary greatly in their complexity, function, and
+application. This effort builds on earlier work [4] and will focus on function and in
+
+particular utilization of historical data laboratory and outcome data processed through
+artificial intelligence tools. The combination of historical data and predictive tools
+provides valuable information in the hands of physicians as they develop a course of
+treatment for a patient.
+
+2. BACKGROUND: AI and CDSS
+Artificial Intelligence and Data Mining techniques have proven themselves useful in a
+wide variety of medical and health information systems [1]. The most direct application
+has been in medical and clinical diagnostic systems but has included productive work in
+signal processing for example in ECG diagnosis [8]. Commonly applied techniques
+include Neural Networks, Fuzzy Logic, Decision Trees, Bayesian Classifiers, Support
+Vector Machines, Genetic Algorithms, and Hybrid Systems. In Clinical and Medical
+Decision Support Systems these techniques have been successfully applied to support the
+process of discovering useful information in large clinical repositories [8].
+
+Future
+
+challenges are to increase the routine use of these techniques in the clinical setting [7].
+We have done the system designed with neural networks and decision tree methods
+because of their successful application in similar problem domains [4] [9] [10]. In this
+paper we use two more techniques Nave Bayes Classifier and Logistics Regression to
+strengthen the system and use Cross Validation to pick up the optimum technique to get
+the best prediction result.
+2.1 Nave Bayes Classifier
+In machine learning and pattern recognition, classification refers to an algorithmic
+procedure for assigning a given piece of input data into one of a given number of
+categories. The term "classifier" sometimes also refers to the mathematical function,
+implemented by a classification algorithm, that maps input data to a category [11].
+Support we have the data consist of fruits described by their color and shape. If we see a
+fruit is red and round then based on the data sample, which type of fruit is it most likely
+to be? The classifier would classify the red and round fruit as that type of fruits.
+
+Nave Bayes classifier has 2 assumptions. NBC assumes that the attributes are
+independent of each other in each class and the importance of the attributes is equal. It is
+made to simplify the computation and in this sense considered to be Nave. Studies
+comparing classification algorithms have found the Nave Bayesian classifier to be
+comparable in performance with classification trees and with neural network classifiers.
+They have exhibited high accuracy and speed when applied to large databases [12]. And
+also it has the decision-making process continued according to the specific cases which is
+really significant for our project. It is effective and simple algorithm but the two central
+assumptions may not represent the facts.
+2.2 Logistics Regression
+Binary (or binomial) logistic regression is a form of regression which is used when the
+dependent is a dichotomy and the independents are of any type. Multinomial logistic
+regression exists to handle the case of dependents with more classes than two, though it is
+sometimes used for binary dependents also since it generates somewhat different output
+[13]. Logistic regression is used for prediction of the probability of occurrence of an
+event by fitting data to a logistic curve. A logistic regression model does not involve
+decision trees and is more akin to nonlinear regression such as fitting a polynomial to a
+set of data values. Logistic regression can be used only with two types of target variables:
+1.
+
+A categorical target variable that has exactly two categories (i.e., a binary or
+
+dichotomous variable).
+2. A continuous target variable that has values in the range 0.0 to 1.0 representing
+probability values or proportions [1].
+It is a stable algorithm and doesnt require the variables to be a normal distribution. But
+the precision of the algorithm is limited.
+2.3 Hepatitis and Fibrosis Stage
+One in 12 people worldwide are living with wither chronic hepatitis B or hepatitis C. This
+equates to an estimated 350 million people with hepatitis B and 170 million people with
+Heapatitis C [3] [14][15]. A liver biopsy is a procedure whereby small pieces of liver
+tissue are removed in order to be sent to a laboratory for examination. It is very helpful in
+
+the diagnosis of diseases that affect the liver [16]. But it is also cost and carries risk for
+the patients. Biopsy is an expensive procedure ranging from $1,500 to $3,000.
+Complications are rare (<3%) but include internal bleeding, infection, air in chest cavity,
+internal organ puncture and so on. Fibrosis Stage [17] guides treatment of Hepatitis
+patients. Stages F0 and F1 are typically categorized as insignificant fibrosis and stages
+greater than F1 are categorized as significant fibrosis. Fibrosis stages are shown in Table
+1. Although hepatitis is a chronic disease, fibrosis is reversible if identified in the early
+stages.
+Table 1 Fibrosis Stage Descriptions [18][19]
+Fibrosis
+
+Description
+
+Stage
+
+0
+
+No fibrosis-Normal connective tissue
+
+1
+
+Portal fibrosis- Fibrous portal expansion
+
+2
+
+Periportal fibrosis- Periportal or rare portal-portal septa
+
+3
+
+Septal fibrosis- Fibrous septa with architectural distortion; no obvious cirrhosis
+
+4
+
+Cirrhosis
+
+The database utilized for this study was collected at Chiba University hospital in Japan,
+and is a Practice of Knowledge Discovery in Databases 2005 Discovery Challenge
+dataset [20]. The data set contains patient data, laboratory, and liver fibrosis biopsy data
+on 771 hepatitis B and C patients. Data was processed to limit serum data within one
+week of biopsy data, reducing the evaluation dataset to 424 patients. The objective is to
+evaluate whether laboratory examinations can be used to estimate the stage of liver
+fibrosis.
+
+3. AI ASSISTEDCLINICAL DECISION SUPPORT SYSTEM
+Another objective of this research is to define an interface that might be useful to
+clinicians and identify what type of web-based tools would be most useful to represent
+the results of AI predictions in a CDSS environment. A beta version of the software
+(CDSS-AI) was developed utilizing the models in this study. We have utilized Visual
+
+Studio
+
+2008
+
+for
+
+our
+
+beta
+
+version
+
+which
+
+is
+
+available
+
+at
+
+http://h202276.dreamsparkhosting.com/Default.aspx . Additionally we are utilizing two
+open source analytic tools for the AI component of our project. Namely, we are using
+Neuro 3 a Visual Basic application for the neural network application and Weka for
+the decision tree portion of our project.
+The methodology and approach of processing data, applying AI techniques, and
+development of the resulting knowledge base can be utilized as a pattern for other
+medical treatment needs represented in a CDSS. The current architectural of the beta
+system is shown in Figure 1.
+
+Figure 1. AI Assisted CDSS
+3.1 Previous Work
+The objective is to use the four algorithms to predict fibrosis stage from patient data and
+laboratory data. The paper Advanced Decision Support for Complex Clinical Decisions
+[4] presents two of the techniques which are Decision Tree and Neural Network. This
+paper adds two other methods which are Nave Bayes Classifier and Logistics Regression.
+We have a data set of 424 historical that will be use to train and validate four kinds of
+models. Table 2 is a map of the data elements utilized in this study.
+Table 2: Data Utilized for Model Building
+
+3.2 Nave Bayes Classifier
+The Nave Bayes classifier assigns an instance sk with attribute values (A1=v1, A2=v2, ,
+Am=vm ) to class Ci with maximum Prob(Ci|(v1, v2, , vm)) for all i. The naive Bayes
+classifier exploits the Bayess rule and assumes independence of attributes.
+Likelihood of sk belonging to Ci
+= Prob(Ci | (v1 , v 2 ,..., v m )) =
+
+P ((v1 , v 2 ,..., v m ) | Ci )P (Ci )
+P ((v1 , v 2 ,..., v m ))
+
+Likelihood of sk belonging to Cj
+= Prob(C j | (v1 , v 2 ,..., v m )) =
+
+P ((v1 , v 2 ,..., v m ) | C j )P (C j )
+P((v1 , v 2 ,..., v m ))
+
+Therefore, when comparing Prob(Ci| (v1, v2, , vm)) and P(Cj |(v1, v2, , vm)), we only
+need to compute P((v1, v2, , vm)|Ci)P(Ci) and P((v1, v2, , vm)|Cj)P(Cj)
+Under the assumption of independent attributes
+P ((v1 , v 2 ,..., v m ) | C j )
+= P ( A1 = v1 | C j )  P ( A2 = v 2 | C j )  K  P ( Am = v m | C j )
+m
+
+=  P ( Ah = v h | C j )
+h =1
+
+Furthermore, P(Cj) can be computed by [14]
+
+number of training samples belonging to C j
+total number of training samples
+
+By using WEKA [21], the model classifies the Fibrosis Stage into 5 classes which
+represent the 5 stages. There are 8 attributes in each class. The model calculates the mean
+value and Stand Deviation value for each attribute. According to the definition of Nave
+Bayes Classifier [22], we can get the probability of Fibrosis Stage in each class base
+formula:
+P(FS1 | Yes) = P(ALB = FS1 | Yes) * P(ALP = FS1 | Yes) * .* P(Heap B = FS1 | Yes)
+(FS1 means Fibrosis stage 1). We assume the 7 Continuous Variables are all Gaussian
+
+
+Distribution. For example, for the ALB: P(ALB | FS1) =  
+
+(
+
+ )
+
+
+And for the
+
+categorical variable (Hepatitis Type), use the actual number of occurrences. For example,
+P(HeapB | FS1) = 59/204. Figure 2 shows the Nave Bayes Classifier model. Classes 0 to
+4 means the Fibrosis stage 0 to 4.
+
+Figure 2. Nave Bayes Classifier model
+With this model, we can calculate the probability of each fibrosis stage then pick up the
+highest one as our predict result.
+
+3.3 Logistics Regression
+A graph of the Logistic Regression function is shown in Figure 3 [23]. The input is z and
+the output is (z). Whereas the output is confined to values between 0 and 1, the function
+can take as an input any value from negative infinity to positive infinity. A represents the
+exposure to some set of independent variables while f(z) represents the probability of a
+particular outcome, given that set of explanatory variables [16]. The definition of
+Logistics Regression can be written as: F(z) =
+
+
+ 
+
+and z = 0 + 1x1 + 2x2 +  + nxn
+
+[21]. By using WEKA, obtained the model shown in Figure 4. We know that Base on the
+coefficient of the model, we can calculate the probability of the Fibrosis Stage in each
+class then select the highest as the final prediction. Let us take class 0 as the example.
+The probability of fibrosis stage 1 is
+F(z) =
+
+
+ 
+
+the z =-1.35+1.22(ALB) -0.28(G_GL) -0.08(AGE) +3.03(TYPE)
+
+Figure 3. Logistic Regressio
+Regression function
+
+Figure 4. Logistic Regression Model
+
+3.4 Cross Validation
+Cross Validation is a technique for assessing how the results of a statistical analysis will
+generalize to an independent data set [24].. We did the cross validation on each of the four
+techniques in the prototype which includes Decision Tree, Neural Network, Nave Bayes
+Classifier and Logistics Regression. The data set is divided int
+into
+o two parts, the training set
+and test data sets. We trained multiple models on the training set then picked up the
+model with the smallest classification error. We divided the data set into 4 parts and cross
+validation will randomly pick 3 parts as the tr
+training
+aining set to predict the 4th part which
+looked as test set. In the end, we can accurate sum of the test sets to improve our
+prediction. The illustration showed
+howed in Figure 5.
+
+Figure 5. Cross Validation
+
+3.5 Decision Tree Averaging
+After using the four different techniques for prediction we applied a final model which
+was simply a decision tree which was trained on the four model fibrosis stage predictions,
+and the biopsy fibrosis stage in hopes of improving the accuracy of the models. As
+showed in Figure 6, the final decision tree increases the accuracy of the four techniques.
+However, it should be noted that this prediction was not cross-validated, making the
+increased accuracy less valuable.
+
+Figure 6. Decision Tree Averaging
+
+3.6 Results and Diagnostic Accuracy
+Several methods were used to predict the accuracy of the predictive models. For each
+model a consistency matrix was prepared, which counts the number of biopsy fibrosis
+stage values vs. the predicted fibrosis stage. The table for the neural network model is
+shown in Table 3.
+Table 3. Neural Network Model Fibrosis Stage Consistency Matrix
+
+(Predicted)
+
+Fibrosis Stage
+
+Neural Network
+
+Biopsy Fibrosis Stage (Actual)
+0
+
+1
+
+2
+
+3
+
+4
+
+0
+
+1
+
+2
+
+0
+
+0
+
+1
+
+1
+
+11
+
+83
+
+12
+
+7
+
+6
+
+2
+
+1
+
+105
+
+63
+
+43
+
+24
+
+3
+
+0
+
+8
+
+15
+
+12
+
+12
+
+4
+
+0
+
+4
+
+1
+
+5
+
+8
+
+From each of these tables counts of the prediction accuracy can be made for correct
+predictions, high predictions, low predictions, and predictions within plus or minus on
+fibrosis stage. Table 4 shows the counts for each model.
+Table 4. Accuracy of Fibrosis Stage Predictions
+
+Count of FS Prediction
+Correct
+Predict High
+Predict Low
+FS +/- 1
+
+Neural
+Network
+167
+150
+107
+372
+
+Decision
+Tree
+191
+88
+145
+342
+
+Nave
+Bayes
+202
+72
+150
+333
+
+Logistics
+DT Regression Average
+205
+255
+162
+48
+57
+121
+335
+391
+
+In addition the results can be grouped by Insignificant Fibrosis (F0 and F1) and
+Significant Fibrosis (F2, F3, and F4) to evaluate the accuracy of models to discriminate
+diseased cases from normal cases. These results are shown in Table 5.
+Table 5. Predictive Sensitivity and Specificity
+
+True Positive Fraction
+False Negative Fraction
+
+Neural Decision
+Network
+Tree
+88%
+49%
+12%
+51%
+
+Nave
+Logistics
+DT Bayes Regression Average
+47%
+34%
+51%
+53%
+66%
+49%
+
+False Postive Fraction
+True Negative Fraction
+
+55%
+45%
+
+24%
+76%
+
+19%
+81%
+
+11%
+89%
+
+10%
+90%
+
+Sensitivity
+Specificity
+Positive Predictive Value
+Negative Predictive Value
+
+88%
+55%
+61%
+78%
+
+49%
+24%
+67%
+60%
+
+47%
+19%
+71%
+60%
+
+34%
+11%
+76%
+57%
+
+51%
+10%
+83%
+65%
+
+These values show where significant disease correctly classified as positive (True
+Positive fraction), and the percent of cases with the disease will be classified negative
+(False Negative fraction). For those cases without the disease some will be correctly
+
+classified as negative (True Negative fraction), but some cases without the disease will be
+classified as positive (False Positive fraction). The Sensitivity provides the probability
+that a test result will be positive when the disease is present. Specificity provides the
+probability that a test result will be negative when the disease is not present. Positive
+predictive value indicates the probability that the disease is present when the test is
+positive. Negative predictive value provides the probability that the disease is not present
+when the test is negative [25].
+
+4. CONCLUSION
+The four artificial intelligence methods presented showed significant variability in their
+accuracy, sensitivity, and specificity in predicting fibrosis stage in data on 424 hepatitis
+patients. Neural network methods show the highest sensitivity and specificity, but were
+relatively poor at predicting the exact fibrosis stage. Logistic regression and nave bayes
+methods were the best a identifying the exact fibrosis stage. Logistic regression had the
+highest Positive Predictive Value, and neural network methods had the highest Negative
+Predictive Value.
+We have completed the development of a web based beta system that utilizes publically
+available patient data to address a single clinical decision  the prediction of fibrosis
+stage for hepatitis patients. The CDSS-AI beta interface is shown in Figure 7. The
+CDSS-AI system presents the four model outputs and the final decisions tree average in a
+thermometer type output showing each prediction as a tick mark on the fibrosis scale
+from 0 to 4. A blue line marks the biopsy value on the output if it is available. In the
+patient example in Figure 7, fibrosis stage reported in the biopsy was F3. The correct
+fibrosis stage was reported by the neural network model, the decision tree model, and the
+decision tree summary model.
+Study results suggest future work in expansion of the patient dataset and inclusion of
+more specific serum markers, and comparison with other commercial non-invasive tests
+including FibroScan, FIBROSpect II , FibroTest, FibroTest-ActiTest, and HCVFibroSure [26]. Also, additional serum markers should be considered such as viral load,
+
+platelet count as well as patient history parameters such as alcohol use and body mass
+index.
+
+Figure 7: Beta Web Application
+
+References
+[1] http://www.dtreg.com/logistic.htm
+[2] Albedawi, M., Ruiz-Rodriguez, E., and Carey, W. D., Hepatitis C virus: Prevention,
+screening,
+and
+interpretation
+of
+assays,
+Cleveland
+Clinic
+Journal
+of
+Medicine 2010; 77(9):616-626;doi:10.3949/ccjm.77a.09162
+[3] http://www.hepfi.org/living/liv_abc.html retrieved from the internet on 3/15/2010
+[4] Keltch, B., Lin, Y., and Bayrak, C. Advanced Decision Support for Complex Clinical
+Decisions, JBiSE, 2010
+[5] Carey, E., and Carey W., Noninvasive tests for liver disease, fibrosis, and cirrhosis: Is liver
+biopsy
+obsolete?
+Cleveland
+Clinic
+Journal
+of
+Medicine 2010; 77(8):519527;doi:10.3949/ccjm.77a.09138
+[6] Begg, R, Artificial Intelligence Techniques in Medicine and Health Care, in Concepts,
+Methodologies, Tools, and Applications by Vijayan Sugumaran (ed) ISBN: 9781599049410,
+2009
+[7] Wyatt J. "Computer-based knowledge systems". The Lancet 1991; 338: 1431-1436
+
+[8] Tan P.N., Steinbach M., and Kumar V., Introduction to Data Mining, Pearson Addison
+Wesley, Boston, MA ISBN 0321321367, 2006
+[9] Krawczyk, B., Woniak, M., Orczyk, T., and Porwik, P., Cost Sensitive Hierarchical
+Classifiers for Non-invasive Recognition of Liver Fibrosis Stage, Proceedings of the 8th
+International Conference on Computer Recognition Systems CORES 2013, Advances in
+Intelligent Systems and Computing Volume 226, 2013, pp 639-647.
+[10] Krawczyk, B., Woniak, M., Orczyk, T., and Porwik, P., Adaptive Splitting and Selection
+Method for Noninvasive Recognition of Liver Fibrosis Stage, Intelligent Information and
+Database Systems, Lecture Notes in Computer Science, Volume 7803, 2013, pp 215-224.
+[11] http://en.wikipedia.org/wiki/Classifier_%28mathematics%29
+[12] Brighton, B. Introduction to Artificial Intelligence 1969
+[13] Burns R. P., and Burns, R., Business Research Methods and Statistics Using SPSS 2008
+[14] Gabr, S. A., and Alghadir, A. H., Prediction of fibrosis in hepatitis C patients: assessment
+using hydroxyproline and oxidative stress biomarkers, Indian Journal of Virology, Volume
+25, Issue 1, pp 91-100 , January 2014
+[15] Tamaki, N., Kurosaki, M., Matsuda, S., Muraoka, M., Yasui, Y., Suzuki, S., Hosokawa, T.,
+Ueda, K., Tsuchiya, K., Nakanishi, H., Itakura, J., Takahashi, Y., Asahina, Y., and Izumi ,
+N., Non-invasive prediction of hepatocellular carcinoma development using serum fibrosis
+marker in chronic hepatitis C patients, Journal of Gastroenterology, December 2013
+[16] http://www.emedicinehealth.com/liver_biopsy/article_em.htm
+[17] http://digestive.niddk.nih.gov/ddiseases/pubs/nash/images/liver_damage.gif
+[18] http://www.sinomedresearch.org/hcv/Biopsy/stage.htm retrieved from the internet on
+3/15/2010
+[19] Batts, K.P. and Ludwig J., Chronic hepatitis. An update on terminology and reporting,
+Am J Surg Pathol. 1995 Dec;19(12):1409-17.
+[20] http://lisp.vse.cz/challenge/ecmlpkdd2005/ECML/PKDD 2005 Discovery Challenge
+[21] http://www.cs.waikato.ac.nz/ml/weka/. Weka Data mining Software
+[22] http://en.wikipedia.org/wiki/Naive_Bayes_classifier
+[23] http://en.wikipedia.org/wiki/Logistic_regression
+[24] http://en.wikipedia.org/wiki/Cross-validation_%28statistics%29
+[25] http://www.medcalc.org/manual/roc-curves.php
+[26]http://www.cigna.com/customer_care/healthcare_professional/coverage_positions/medical/m
+m_0296_coveragepositioncriteria_serum_markers_for_liver_disease.pdf
+
+View publication stats
+
+

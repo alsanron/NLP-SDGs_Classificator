@@ -1,0 +1,699 @@
+LIMNOLOGY
+and
+
+OCEANOGRAPHY: METHODS
+
+Limnol. Oceanogr.: Methods 8, 2010, 394402
+ 2010, by the American Society of Limnology and Oceanography, Inc.
+
+Mobile autonomous process sampling within coastal ocean
+observing systems
+J. P. Ryan1*, S. B. Johnson1, A. Sherman1, K. Rajan1, F. Py1, H. Thomas1, J. B. J. Harvey1, L. Bird1, J. D. Paduan2, and
+R. C. Vrijenhoek1
+1
+2
+
+Monterey Bay Aquarium Research Institute, Moss Landing, California, USA
+Naval Postgraduate School, Monterey, California, USA
+
+Abstract
+Predicting when and where key oceanic processes will be encountered is problematic in dynamic coastal
+waters where diverse physical, chemical, and biological factors interact in varied and rapidly changing combinations. Defining key processes often requires efficient sampling of specific water masses and prompt sample
+return for subsequent analyses. This compound challenge motivated our efforts to develop mobile autonomous
+process sampling (MAPS) for use with autonomous underwater vehicles (AUVs). With this system, features are
+recognized by artificial intelligence that integrates AUV sensor data to estimate probabilistic states for adaptive
+control of survey navigation and triggering of targeted water samplers. To demonstrate the utility of the
+MAPS/AUV system, we focused on intermediate nepheloid layers (INLs), episodic transport events that may play
+a role in zooplankton ecology. During multiple field tests in Monterey Bay, California, the MAPS/AUV system
+recognized, mapped, and sampled INLs. Invertebrate larvae contained in the water samples were subsequently
+characterized with molecular probes developed for high-throughput screening. Preliminary results support the
+hypothesis that INLs function as vehicles for episodic larval transport. Applying MAPS within a greater coastal
+ocean observing system permitted description of regional oceanographic dynamics that influenced the patterns
+and scales of INL and larval transport.
+
+Understanding the hydrodynamic and biological processes
+affecting the connectivity of natural populations is one of the
+great challenges facing scientists and policy-makers involved in
+coastal ocean management, defining marine protected areas,
+and regulating sustainable fisheries (Gawarkiewicz et al. 2007;
+Hare and Walsh 2007; Marinone et al. 2008). The connectivity
+of most benthic organisms is strongly influenced by interactions between pelagic larval stages and hydrodynamics that
+vary spatially, from local to basin-scale, and temporally, from
+episodic to climatic. Identifying larval species, determining
+
+their longevities in the water column, and assessing hydrodynamic processes that transport them, however, are very difficult (Brown and Roughgarden 1985; Garland and Zimmer
+2002; Shanks and Brink 2005). Approaches needed to advance
+this challenging research include in situ molecular detection of
+marine larvae (Goffredi et al. 2006; Jones et al. 2008), adaptive
+sampling methods capable of responding in real-time to eventdriven transport processes (Pineda et al. 2007), and long-term
+studies that examine interactions between hydrodynamic and
+biological processes (Cowen et al. 2007).
+Intermediate nepheloid layers (INLs) have the potential to
+influence geographical connectivity of benthic species having
+pelagic larval stages. Forced by diverse physical processes, INLs
+develop episodically from transport of the turbid bottom
+boundary layer (BBL) (Pak et al. 1980; Hickey et al. 1986;
+Washburn et al. 1993; Houghton and Visbeck 1998; McPheeShaw et al. 2004; Ryan et al. 2005). To effectively study INLs
+and evaluate their potential role in connectivity essentially
+requires the abilities to search for, detect, map, and sample
+unpredictable, episodic phenomena. Here we report on novel
+capabilities to robotically map and obtain water samples from
+INLs with autonomous underwater vehicles (AUVs). Engineering aspects of the water sampling system were previously doc-
+
+*Corresponding author: E-mail: ryjo@mbari.org; 7700 Sandholdt Road,
+Moss Landing, CA 95039, USA; Phone: (831) 775-1978; Fax: (831) 7751620
+
+Acknowledgments
+This research was funded by the David and Lucile Packard
+Foundation. We thank the MBARI AUV and R/V Zephyr teams for support of AUV operations. MODIS Level 1 data were provided by the
+LAADS data system; data processing was enabled by the NASA SeaDAS
+team and the MODIS Ocean Biology Processing Group. HF radar data
+were provided by the Central and Northern California Ocean Observing
+System (CeNCOOS).
+DOI 10:4319/lom.2010.8.394
+
+394
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+umented (Bird et al. 2007). The artificial intelligence (AI) software capable of recognizing oceanic features with AUV sensor
+data and adaptively controlling the AUV has also been documented (Fox et al. 2007; McGann et al. 2008). This study is the
+first demonstrative application of these novel advancements
+to a methods-limited area of marine ecology. We have coupled
+these engineering advancements for AUVs with (1) highthroughput molecular methods for the detection of larval
+invertebrates (Jones et al. 2008), and (2) data from a coastal
+ocean observing system, to illustrate how mobile autonomous
+process sampling (MAPS) can synergistically link emergent
+technologies.
+
+Materials and procedures
+
+Fig. 1. The Dorado AUV and its water sampling system. The AUV (A) is
+4.2 m in length and has a diameter of 0.53 m at its midsection. The
+water-sampling midsection (B) is covered by the AUV fairing during
+deployment. Intake valves of individual Gulper water samplers penetrate
+the lower half of the AUV fairing (empty upper-left sample container slot
+in B).
+
+We employed the MBARI AUV Dorado, an operational system
+with an extensive suite of physical, optical, and chemical sensors
+for interdisciplinary research. Specifics of AUV sensors and methods of data processing have been published (Ryan et al. 2008). A
+custom AUV midsection was developed for Dorado to support
+operation of ten Gulper water samplers (Fig. 1). For a complete
+engineering description of the Gulper sampler design, see Bird et
+al. (2007). Here we describe the science-motivated functional
+requirements of the sampling system design. All sampler materials are non-toxic, and no materials can introduce iron, a limiting
+nutrient for phytoplankton in the study region (Fitzwater et al.
+2003). To avoid source-water mixing that could occur in a shared
+sample-intake duct, each sampler intake valve opens directly to
+the outside the AUV mid-body to ensure discrete sample acquisition. To avoid sample contamination after acquisition, each sampler has a pressure-compensating diaphragm to ensure that pressure oscillations of AUV yoyo surveys do not pump fluid across
+the intake valve. The design supports a depth rating of 1500 m,
+much greater than the typical operating depth of this AUV (< 300
+m, as constrained by the depth rating of one sensor). The relatively large individual sample size of 2 L was motivated by the
+need to sample biological constituents that may be at low concentrations. Rapid (1-2 s) sample intake, which motivated the
+name Gulper, serves two requirements: (1) it ensures that highly
+localized samples can be taken from vertical profiles of a rapidly
+moving AUV, and (2) it minimizes the opportunity for swimming
+plankton to escape capture. Sample acquisition start and end
+times are recorded by the AUV main computer to allow precise
+co-location of water samples with AUV sensor data.
+The AI advancements of this research employ a newly
+developed Teleo-Reactive EXecutive (T-REX) control system
+that integrates probabilistic state estimation, planning, and
+execution (McGann et al. 2008). T-REX is built upon the paradigm of sense-plan-act (Gat 1998) to autonomously synthesize
+control actions. Onboard the AUV, T-REX senses the environment using the vehicles sensors, generates a plan by deliberating about the best way to accomplish specified goals, and
+executes the plan. It automatically re-plans when the perceived environmental or system states do not match expectations encoded in the synthesized plan.
+
+Deliberation in T-REX utilizes methods developed for
+applying mature computational techniques to command
+NASA space missions (Muscettola et al. 1998; Jonsson et al.
+2000; Rajan et al. 2000; Ai-Chang et al. 2004; Bresina et al.
+2005). T-REXs architecture handles deliberation with modules
+called reactors, each of which is a planning and execution
+component. Reactors are differentiated on the basis of functional scope, indicating appropriate variables of interest for
+reasoning, and temporal scope, indicating the horizon over
+which to plan and the speed at which a reactor should reason.
+Each control loop is embodied within a reactor that encapsulates all details of how to accomplish its control objectives,
+with the overall T-REX agent coordinating all concurrent control loops. The agent fielded on the Dorado AUV has three
+reactors, a mission manager (MM) that plans and reasons
+about mission requirements, a navigator that manages the
+MM sub-goals and determines navigation and localization for
+the vehicle, and an executive that dispatches commands to
+the low level functional layer of the vehicle to actuate control.
+The MM can reason about plan alternatives for periods on the
+order of minutes whereas the executive has to resolve its goals
+with little or no delay; the temporal scope of the navigator lies
+in between.
+To detect INLs using T-REX, we use Hidden Markov Models
+(HMM) (Rabiner and Juang 1986) to classify and enable online
+estimation based on offline machine learning techniques (Fox
+et al. 2007). To execute the HMM for feature detection, we
+encode it directly within the unified representational and computational framework of a T-REX reactor, allowing for a seamless integration of state estimation through synchronization
+and planning. The reactor receives the state estimation, and the
+implications are applied by the planner and resolved while considering the entire context of the plan. If the target feature is
+detected with a specified level of certainty, and other sampling
+395
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+constraints are met (such as spatial separation requirements
+between samples), they together initiate a re-planning by TREX. Execution of the new plan results in triggering sample
+acquisition and/or adapting navigational control of the AUV.
+INLs can be detected optically by elevated attenuation and
+backscattering of light caused by their relatively high concentrations of suspended particulate matter (SPM). Although phytoplankton cells also cause elevated attenuation and backscattering, they are distinguishable from INLs by the fluorescence
+of their chlorophyll. Therefore, INLs are characterized by high
+optical backscattering and low chlorophyll fluorescence. We
+used optical backscattering and chlorophyll fluorescence measurements from a HOBI Labs HS2 sensor for training and realtime application of the INL cluster analysis (Fox et al. 2007).
+Training of the INL clustering algorithm used a 5-year (20032007) time-series of approximately monthly AUV vertical sections (Transects T1 and T2 in Fig. 2). This data set was also used
+to identify the location of most frequent and intense INL signals, which defined the domain for autonomous detection,
+mapping, and sampling of INLs in this study (box in Fig. 2).
+Definition of a survey volume for MAPS testing, rather than a
+linear vertical section, was motivated by scientific and operational reasons. Scientifically, a volume survey permits threedimensional resolution of INL patchiness. Operationally, a volume survey introduces more degrees of freedom in
+autonomous control of the AUV. In each MAPS field test, T-REX
+was applied to (1) detect INLs, (2) adapt survey navigation for
+higher (lower) horizontal resolution of vertical sections in the
+presence (absence) of INLs, (3) trigger Gulper water sampling,
+and (4) control spatial allocation of samples within the survey
+volume, using a minimum separation distance of 1 km.
+MAPS missions were conducted on 10 Jan 2008 and 10 and
+13 Nov 2008. Modifications of sample triggering control were
+made between the January and November field tests to acquire
+samples closer to the center of INLs. For the January test, samples were acquired as soon as the minimum probability of INL
+detection (set to 0.4) was reached. For the December tests, the
+learned model was improved by including information on INL
+vertical position, and sample triggering control was separated
+into two steps: (1) activation of a ready state when the minimum probability of INL detection (increased to 0.48) was
+reached, and (2) triggering of the sample acquisition only
+when the INL signal strength began to decrease, as would
+occur when passing the layer peak. Following each ~7-h survey, water samples were immediately returned to shore and
+transferred into clean carboys. Samples were then concentrated to 50 mL using a 100 m mesh filter and sterile seawater for rinsing. All water samples were processed and analyzed
+using previously described molecular probes and sandwichhybridization assays (Scholin et al. 1999; Goffredi et al. 2006;
+Jones et al. 2008). The molecular analyses applied in this study
+allowed detection of crustaceans, polychaetes, and mollusks.
+Remote sensing data from satellite sensors and shore-based
+HF radar were used to examine event-driven transport phe-
+
+Fig. 2. Environmental setting for testing mobile autonomous process
+sampling (MAPS) in Monterey Bay, California. Isobaths (m) are contoured
+in gray. The black box shows the AUV survey domain over Monterey Submarine Canyon (MSC), with dimensions of 7.8 km E-W by 1.2 km N-S.
+Transects T1 and T2 show the surface track of two vertical sections that
+have been repeatedly occupied; examples of intermediate nepheloid layers (INLs) observed along these transects are presented in Fig. 3.
+
+nomena related to the observed INL and larval variability.
+Methods for processing these remote sensing data have been
+published (Paduan et al. 2006; Ryan et al. 2008).
+
+Assessment
+Interpretation and assessment of MAPS results will be aided
+by first examining synoptic examples of INLs in the study
+region. INL observations from two transects in Monterey Bay
+are presented (Fig. 2). Transect T1 extends along Monterey
+Submarine Canyon (MSC), and transect T2 crosses the northern and southern shelves, which are separated by MSC. Each
+transect has been occupied ~ 50 times since 2003. For graphical representation in all examples presented (Fig. 3), areas of
+relatively high particulate backscattering (> 75th percentile) at
+470 nm are shaded gray, and isotherms are contoured. The
+threshold chlorophyll fluorescence level for defining where
+significant phytoplankton populations resided was determined statistically. The stippled areas in Fig. 3 indicate where
+chlorophyll fluorescence intensity was above the level at
+which bio-optical signal can be clearly distinguished from random noise in the chlorophyll fluorescence data.
+396
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+Fig. 3. Examples of intermediate nepheloid layers (INLs) mapped by the Dorado AUV (Fig. 1). A and B are surveys along transect T1 (Fig. 2), with the
+0 km distance mark at 122.2W. Dates of the observations are (A) 21 Jan 2004 and (B) 14-15 Mar 2006. C and D are surveys along transect T2 (Fig. 2).
+Dates of the observations are (C) 13 May 2005, and (D) 17 Dec 2004. In all panels, shaded areas indicate high particulate backscattering, stippled areas
+indicate phytoplankton populations, and contour lines are isotherms (see text for further detail).
+INLs in nature are defined by their structure, specifically a
+layer of elevated concentrations of SPM originating and
+detached from the BBL, and located between the BBL and the
+surface. INLs are represented in Fig. 3 as areas of high optical
+backscattering (shaded) and low chlorophyll fluorescence (no
+stippling). Regions where INLs and phytoplankton populations intersect are ecologically significant because of the
+potential chemical and biological influences of transported
+BBL waters on plankton. For example, an INL that was
+observed extending from ~60 m depth on the southern shelf
+of Monterey Bay up into a phytoplankton layer at ~10 m
+depth revealed a potential chemical influence of the INL on
+the toxicity of a harmful algal bloom (HAB) species (Ryan et
+al. 2005). Vertical transport into the mixed layer in this way
+would also strongly influence the dynamical and biological
+exposure of larvae transported with an INL. Internal tidal
+oscillations of the thermocline over MSC can be up to ~100 m
+
+in amplitude (Shea and Broenkow 1982). This physical forcing
+in our study region may also be important to determining the
+degree of coupling between the surface mixed layer and INLs
+being transported over the canyon.
+In the first example along transect T1 (Fig. 2), an INL was
+observed as a contiguous feature along ~23 km, below 50 m
+depth (Fig. 3A). In the second T1 example, INL patches were
+mapped along ~33 km of the transect (Fig. 3B). While the previous example showed separation of the INL material and the
+phytoplankton populations of the surface layer, this example
+indicates that SPM of the INL patches were evidently intermixed with phytoplankton populations of the surface layer
+(~3 to 20 km and near the end of the transect). In this example, the backscattering by phytoplankton was significantly less
+than that caused by the INL, hence the absence of shading
+throughout the stippled area of phytoplankton populations.
+Without concurrent observations over the adjacent shelf
+397
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+Fig. 4. The first MAPS test. An INL was observed in the pycnocline throughout the survey domain (Fig. 2) on 10 Jan 2008. Mean profiles (dark gray
+lines) are shown relative to all profile data for (A) density, (B) optical backscattering at 470 nm, and (C) fluorometric chlorophyll concentration. The
+dashed line in (B) defines the average optical backscattering level of the mixed layer; the INL is identified as the region of elevated optical backscattering below the homogeneous shallow mixed layer (below ~50 m). Numbers identify the depths and properties of water samples on which molecular
+analyses were conducted; circled numbers indicate detection of polychaete larvae (Table 1).
+
+regions, it is not possible to determine where introduction of
+SPM from the BBL to the mixed layer originated. Surveys
+along transect T2, extending across the shelf and canyon (Fig.
+2), better serve to identify INL source regions on the shelf. In
+the first example (Fig. 3C), INLs were observed over the northern and southern shelves, and an INL patch over the canyon
+evidently originated from the northern shelf (10 to 25 km
+along transect, 40 to 90 m depth). In the second T2 example
+(Fig. 3D), INLs observed over the northern and southern
+shelves both extended over the canyon. Whereas the INLs
+were concentrated in the thermocline, high optical backscattering levels of the INL over the northern shelf extended well
+above the thermocline (~7-14 km along transect). This relatively shallow penetration of the INL coincided with outcropping of the 13C isotherm and sharp upward bending of
+cooler isotherms below 30 m depth. A phytoplankton patch
+also extended deepest in the water column (to ~60 m) immediately adjacent to a finger of the INL that penetrated shal-
+
+lowest (~11-17 km along transect). These physical and biooptical patterns are consistent with enhanced vertical circulation in a frontal zone, and horizontal banding in the salinity
+field (not presented) also indicated frontal dynamics.
+With introductory perspective provided by synoptic examples of INLs, we now turn to assessment of the MAPS testing.
+During the first experiment, INL waters were autonomously
+detected in the pycnocline in all AUV profiles, and five INL
+samples were acquired (Fig. 4). Because the optical properties
+for INL detection in a vertical profile were first encountered
+within the gradients of INL upper and lower boundaries, samples were preferentially acquired as the AUV traversed these
+boundaries (Fig. 4b). The crustacean probe results were significant in all samples, whereas polychaete larvae were detected
+only in the two samples nearest the upper and lower INL
+boundaries (Table 1; Fig. 4b).
+The second experiment advanced INL sampling and
+hypothesis testing. INL samples were acquired on 2 d within a
+398
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+Table 1. Sandwich hybridization assay (SHA) absorbance levels for capture probes (A450) for larval detection in AUV-acquired water
+samples from intermediate nepheloid layers (INLs).
+Date
+10
+10
+10
+10
+10
+10
+10
+10
+10
+10
+13
+13
+13
+13
+13
+
+Jan 2008
+Jan 2008
+Jan 2008
+Jan 2008
+Jan 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+Nov 2008
+
+Sample number Sample volume (L) Crustacean, general Polychaete, general Barnacle, general Mytilus spp.
+1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+
+0.9
+0.9
+0.9
+0.9
+0.9
+4.0
+2.0
+4.0
+4.0
+2.0
+3.0
+2.0
+4.0
+4.0
+4.0
+
+1.20
+0.61
+0.56
+0.86
+0.96
+1.05
+0.42
+3.56
+2.21
+3.11
+1.46
+1.15
+2.44
+0.45
+3.01
+
+
+
+
+0.11
+.14
+
+
+
+
+
+0.12
+
+0.10
+
+0.12
+
+0.12
+
+0.19
+
+0.12
+0.15
+0.13
+0.12
+0.12
+
+
+
+
+
+
+
+
+
+0.13
+
+0.13
+0.17
+0.10
+0.13
+0.11
+0.11
+
+Fig. 5. The second MAPS test. Water mass and INL changes were observed during 10-13 Nov 2008. Data presentation is as in Fig. 4. Gray data points
+show the full data set for 13 Nov only. Solid lines are mean profiles for 13 Nov; dashed lines are mean profiles for 10 Nov. Numbers identify the depths
+and properties of water samples on which molecular analyses were conducted; circled numbers indicate detection of polychaete larvae (Table 1).
+
+4-d period, permitting examination of short-term temporal
+variability, and samples were acquired both within and immediately outside INL patches, permitting biological screening of
+both categories. Modification of the INL model (see Materials
+and procedures) also allowed sample acquisition closer to the
+center of INLs (compare Fig. 4b and 5b). Major changes were
+observed in oceanographic conditions between 10 and 13
+Nov. Decreased temperature and increased salinity resulted in
+
+a significant density increase throughout the upper 100 m
+(mean density profiles in Fig. 5A). Observations from a mooring 3 km west of the AUV survey domain showed intensification of upwelling-favorable (equatorward) winds during 10-13
+Nov, and hydrographic changes like those observed in the
+AUV surveys (mooring data not presented). These changes
+indicated movement of recently upwelled waters into the
+study site.
+399
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+veyed over the canyon shifted strongly over the 3-d period
+between 10 and 13 Nov (mean density profiles in Fig. 5A).
+This indicates that the changes in INLs between 10 and 13
+Nov were linked to the upwelling-forced hydrographic shift.
+To simply illustrate how MAPS may be used more effectively
+within the greater context of coastal ocean observing systems,
+we present remote sensing data from the November experiment. Satellite imagery showed a plume of bright waters emanating from the Point Ao Nuevo upwelling center (large
+arrow in Fig. 6). The coldest waters (label C) were in this bright
+plume, linking the plume to upwelling. From this source
+region, the bright waters extended into Monterey Bay and the
+AUV survey domain, and southward past the bay. Average HF
+radar velocity during 10-13 Nov showed southward transport
+across the study domain (Fig. 6). The data indicate that the
+hydrographic shift and the INLs sampled on 13 Nov originated north of the MAPS testing domain.
+The general crustacean probe results were significant for all
+samples from both November surveys (Table 1). The most interesting larval signal was the absence of polychaetes in INL samples from 10 Nov, before the upwelling pulse, and their presence in INL samples from 13 Nov, coincident with the
+environmental and INL changes linked to the upwelling pulse
+(Figs. 5, 6). Detection of barnacle and mussel larvae also
+increased between 10 and 13 Nov (Table 1). Polychaete larvae
+were detected in the samples having the highest particle
+backscattering, near 15, 35, and 100 m depth (circled in Fig. 5B).
+The samples without significant signal for polychaete larvae
+(Fig. 5B) were sampled immediately outside an INL patch (#2;
+the relationship was determined from the high-resolution profile data), and within a distinct INL patch centered at 60 m
+depth (#4). Of all INL samples, #4 had the lowest red:blue
+backscattering ratio, suggesting a somewhat different color, and
+possibly sediment composition, in this spatially isolated patch.
+Of the organisms targeted with molecular probes, polychaete larvae exhibited the clearest patterns. Polychaetes comprise the largest component of soft-sediment infauna, yet the
+complete life history is known for only about 5% of the > 8000
+described species (Ramey 2008). Presence/absence of polychaete larvae within/outside INL samples suggests that INLs
+function as transport vehicles for their larval stages. Presence/absence of polychaete larvae in INL waters sampled during/before an upwelling pulse suggests that upwelling pulses
+may generate hydrodynamic benthic-pelagic coupling essential to transport of their larval stages. In addition to the strong
+benthic-pelagic coupling that occurs in the upwelling center
+at Point Ao Nuevo (Fig. 6; Fitzwater et al. 2003), benthicpelagic coupling within Monterey Bay may be enhanced by
+strong flow of upwelling filaments across the shelf.
+
+Fig. 6. Remote sensing of coastal ocean dynamics related to the
+observed oceanographic, INL, and larval variability. The true-color satellite image is from the Moderate Resolution Imaging Spectroradiometer
+(MODIS) Aqua sensor on 14 Nov 2008, and surface velocity vectors are
+averaged from hourly CODAR measurements of 11-13 Nov 2008. The
+gray rectangle shows the AUV survey domain, as in Fig. 2. A plume
+emanated from the upwelling center at Point Ao Nuevo (thick gray
+arrow). The labels C and W indicate the locations of the coldest and
+warmest sea surface temperature, which differed by 3C.
+
+Accompanying the 10-13 Nov hydrographic shift were
+changes in the intensity and vertical distribution of INLs. INL
+patches were detected over a greater depth range on 13 Nov,
+when they were found between ~15 and 100 m, than on 10
+Nov, when they were only below 80 m (Fig. 5B). By 13 Nov,
+average optical backscattering (bb) increased significantly
+above 80 m depth, with peaks centered near 15 and 60 m
+depth, and bb decreased below 80 m. Whereas the average
+chlorophyll profile remained very similar between 10 and 13
+Nov (Fig. 5C), average bb increased significantly in parts of the
+water column, by a factor of up to ~ 5 between 15 and 20 m
+(Fig. 5B). These patterns indicate a major increase in SPM of
+the surface mixed layer that was not caused by increased phytoplankton abundance, and it is consistent with the introduction of SPM into the surface mixed layer (e.g., Fig. 3B,D).
+Without AUV data over the shelf (e.g., Fig. 3C,D), we cannot identify the source region for the strong SPM increase in
+the mixed layer. However, the AUV data clearly show that
+hydrographic conditions within the 100-m vertical extent sur-
+
+Discussion
+The aspect of marine ecology that we approached with the
+newly developed MAPS system, population connectivity, is
+extremely challenging. By their very nature as episodic trans400
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+port events that couple near/benthic habitat to the greater
+pelagic environment, INLs have a potentially significant role
+in the population connectivity of benthic species having
+pelagic larval stages. MAPS detected, mapped, and sampled
+INLs in each of the field studies. Recognizing the boundary
+sampling inclination of the initial INL model in the first survey, we improved the model for better sample acquisition control and more consistently acquired samples from INL centers.
+Because of the effective INL sampling by MAPS, we could
+apply molecular methods to precisely targeted water samples
+and identify larval constituents. Because these samples were
+acquired within the environmental context provided by AUV
+sensors and a greater coastal ocean observing system, we could
+link larval patterns to oceanographic processes. The preliminary data set produced by this integration of autonomy,
+oceanography, and molecular ecology yielded insights into
+the constituents, dynamics, and scales of INL transport, and
+thereby a compelling glimpse of the role of INL transport in
+population connectivity. The MAPS system is being applied
+for more extensive INL surveying to more thoroughly study
+this multidisciplinary, multifaceted process.
+The methodological requirements of the MAPS application
+demonstrated here are representative of the requirements for
+advancing studies of many other important coastal ocean
+processes, for example episodic harmful algal blooms (HABs) or
+development of riverine and estuarine plumes that follow
+intense flushing of a land drainage basin. The stochastic nature
+of complex marine ecosystems and the inability to adequately
+sample these dynamic environments necessitate advanced
+methods that intelligently focus limited observing and sampling resources when and where collection of data and samples
+are most needed. The MAPS system represents a widely applicable approach to meeting this fundamental need.
+
+ing multiple target states simultaneously. AUV onboard sample processing will support real-time alert capabilities for
+processes such as HABs that may have immediate human
+health or fisheries impacts. Ongoing development of molecular probes and methods will target a broader spectrum of
+marine life and access more specific genes to identify organisms at lower taxonomic levels and to assess metabolic activities. Incorporation of preservation methods in water sampling
+systems will be required for some biological applications.
+
+References
+Ai-Chang, M. J., and others. 2004. MAPGEN: mixed initiative
+planning and scheduling for the Mars 03 MER Mission.
+IEEE Intell. Sys. 19(1):8-12 [doi:10.1109/MIS.2004.
+1265878].
+Bird, L. E., A. D. Sherman, and J. P. Ryan. 2007. Development
+of an active, large volume, discrete seawater sampler for
+autonomous underwater vehicles. Proc. Oceans MTS/IEEE
+Conference, Vancouver, Canada.
+Bresina, J., A. Jonsson, P. Morris, and K. Rajan. 2005. Activity
+planning for the Mars Exploration Rovers. Proceedings of
+International Conference on Automated Planning and
+Scheduling, Monterey, California. p. 40-49.
+Brown, S., and J. Roughgarden. 1985. Growth, morphology,
+and laboratory culture of larvae of Balanus glandula (Cirripedia: Thoracica). J. Crust. Biol. 5:574-590 [doi:10.2307/
+1548236].
+Cowen, R. K., G. Gawarkiewicz, J. Pineda, S. R. Thorrold, and
+F. E. Werner. 2007. Population connectivity in marine systems: an overview. Oceanography 20:14-19.
+Fitzwater, S. E., and others. 2003. Iron, nutrient and phytoplankton biomass relationships in upwelled waters of the
+California coastal system. Cont. Shelf Res. 23:1523-1544
+[doi:10.1016/j.csr.2003.08.004].
+Fox, M., D. Long, F. Py, K. Rajan, and J. Ryan. 2007. In situ
+analysis for intelligent control. Proceedings of IEEE/OES
+OCEANS Conference, Aberdeen, Scotland.
+Garland, E. D., and C. A. Zimmer. 2002. Techniques for the
+identification of bivalve larvae. Mar. Ecol. Prog. Ser.
+225:299-310 [doi:10.3354/meps225299].
+Gat, E. 1998. On three-layer architectures, p. 195-210. In D.
+Kortenkamp, R. Bonnasso, and R. Murphy [eds.], Artificial
+intelligence and mobile robots. MIT Press.
+Gawarkiewicz, G., S. Monismith, and J. Largier. 2007. Observing larval transport processes affecting population connectivity: progress and challenges. Oceanography 20:40-53.
+Goffredi, S. K., W. J. Jones, C. A. Scholin, R. Marin, and R. C.
+Vrijenhoek. 2006. Molecular detection of marine invertebrate larvae. Mar. Biotechnol. 8:149-160 [doi:10.1007/
+s10126-005-5016-2].
+Hare, J. A., and H. J. Walsh. 2007. Planktonic linkages among
+marine protected areas on the south Florida and southeast
+United States continental shelves. Can. J. Fish. Aquat. Sci.
+64:1234-1247 [doi:10.1139/F07-089].
+
+Comments and recommendations
+The critical requirements for applying MAPS to diverse
+problems in coastal ocean science include (1) a robust AUV
+with a sensor suite sufficient to detect processes of interest, (2)
+a water sampling system with appropriate attributes (sample
+volume, number, avoidance of contamination), (3) a data set
+sufficient to develop an accurate model for target detection,
+and (4) development of adaptive AUV control strategies
+appropriate to the process of interest, e.g., increasing spatial
+resolution of mapping when a target feature is detected.
+Expanding the application of MAPS will benefit from other
+developments. Two-way satellite communication with the
+AUV, a capability recently demonstrated with the MAPS system, allows shore-side scientists to optimize or alter AUV survey characteristics based on real-time information coming
+from the AUV or from other ocean-observing system assets.
+State estimation models used to detect features may be
+improved by continuously refining feature identification as
+new data becomes available, and by incorporating greater
+plasticity for adapting to variable signal intensities and track401
+
+Ryan et al.
+
+Mobile Autonomous Process Sampling (MAPS)
+
+population connectivity. Oceanography 20:22-39.
+Rabiner, L. R., and B. H. Juang. 1986. An introduction to hidden markov models. IEEE ASSP Mag. 3:4-16
+[doi:10.1109/MASSP.1986.1165342].
+Rajan, K., and others. 2000. Remote agent: an autonomous
+control system for the new millennium. proceedings of
+prestigious applications of intelligent systems, 14th European Conference on Artifical Intelligence, Berlin, Germany.
+p. 726-730.
+Ramey, P. 2008. Life history of a dominant polychaete, Polygordius jouinae, in inner continental shelf sands of the
+Mid-Atlantic Bight, USA. Mar. Biol. 154:443-452
+[doi:10.1007/s00227-008-0936-9].
+Ryan, J. P., F. P. Chavez, and J. G. Bellingham. 2005. Physicalbiological coupling in Monterey Bay, California: topographic influences on phytoplankton ecology. Mar. Ecol.
+Prog. Ser. 287:23-32 [doi:10.3354/meps287023].
+, M. A. McManus, J. D. Paduan, and F. P. Chavez. 2008.
+Phytoplankton thin layers within coastal upwelling system
+fronts. Mar. Ecol. Prog. Ser. 354:21-34 [doi:10.3354/
+meps07222].
+Scholin, C. A., and others. 1999. DNA probes and a receptorbinding assay for detection of Pseudo-nitzschia (Bacillariophyceae) species and domoic acid activity in cultured and
+natural samples. J. Phycol. 35:1356-1367 [doi:10.1046/
+j.1529-8817.1999.3561356.x].
+Shanks, A., and L. Brink. 2005. Upwelling, downwelling, and
+cross-shelf transport of bivalve larvae: test of a hypothesis.
+Mar. Ecol. Prog. Ser. 302:1-12 [doi:10.3354/meps302001].
+Shea, R. E., and W. W. Broenkow. 1982. The role of internal
+tides in nutrient enrichment of Monterey Bay, California.
+Estuar. Coast. Shelf Sci. 15:57-66 [doi:10.1016/0272-7714
+(82)90036-1].
+Washburn, L., M. S. Swenson, J. L. Largier, P. M. Korso, and S.
+R. Ramp. 1993. Cross-shelf sediment transport by an anticyclonic eddy off Northern California. Science 26:15601564 [doi:10.1126/science.261.5128.1560].
+
+Hickey, B., E. Baker, and N. Kachel. 1986. Suspended particle
+movement in and around Quinalt Submarine Canyon. Mar.
+Geol. 71:35-83 [doi:10.1016/0025-3227(86)90032-0].
+Houghton, R. W., and M. Visbeck. 1998. Upwelling and convergence in the Middle Atlantic Bight shelfbreak front.
+Geophys. Res. Let. 25:2765-2768 [doi:10.1029/98GL02105].
+Jones, W. J., C. M. Preston, R. Marin III, C. A. Scholin, and R.
+C. Vrijenhoek. 2008. A robotic molecular method for in situ
+detection of marine invertebrate larvae. Mol. Ecol. Res.
+8(3):540-550 [doi:10.1111/j.1471-8286.2007.02021.x].
+Jonsson, A., P. Morris, N. Muscettola, K. Rajan, and B. Smith.
+2000. Planning in interplanetary space: theory and practice. Proceedings of Artificial Intelligence Planning and
+Scheduling 2000, Breckenridge, Colorado. p. 177-186.
+Marinone, S. G., M. J. Ulloa, A. Pares-Sierra, M. F. Lavin, and
+R. Cudney-Bueno. 2008. Connectivity in the northern Gulf
+of California from particle tracking in a three-dimensional
+numerical model. J. Mar. Sys. 71:149-158 [doi:10.1016/
+j.jmarsys.2007.06.005].
+McGann, C., F. Py K. Rajan, J. Ryan, and R. Henthorn. 2008.
+Adaptive control for autonomous underwater vehicles. In
+AAAI 23rd conference on artificial intelligence, integrated
+intelligence special track, Chicago, July 13-17, 2008.
+McPhee-Shaw, E. E., R. W. Sternberg, B. Mullenbach, and A. S.
+Ogston. 2004. Observations of intermediate nepheloid layers on the northern California margin. Cont. Shelf Res.
+24:693-720 [doi:10.1016/j.csr.2004.01.004].
+Muscettola, N., P. Pandurang Nayak, B. Pell, and B. Williams.
+1998. Remote agent: To boldly go where no AI system has
+gone before. Art. Intell. 103(1-2):5-48 [doi:10.1016/S00043702(98)00068-X].
+Paduan, J. D., K. C. Kim, M. S. Cook, and F. P. Chavez. 2006.
+Calibration and validation of direction-finding high frequency radar ocean surface current observations. IEEE J.
+Ocean Eng. 31(4):862-875 [doi:10.1109/JOE.2006.886195].
+Pak, H., J. R. V. Zaneveld, and J. Kitchen. 1980. Intermediate
+nepheloid layers observed off Oregon and Washington. J.
+Geophys. Res. 85(C11):6697-6708 [doi:10.1029/JC085iC11
+p06697].
+Pineda, J., J. A. Hare, and S. Sponaugle. 2007. Larval transport
+and dispersal in the coastal ocean and consequences for
+
+Subitted 11 September 2009
+Revised 19 February 2010
+Accepted 20 May 2010
+
+402
+
+

@@ -1,0 +1,4042 @@
+This is a repository copy of A Human Factors Perspective on Automated Driving.
+White Rose Research Online URL for this paper:
+http://eprints.whiterose.ac.uk/112583/
+Version: Accepted Version
+Article:
+Kyriakidis, M, de Winter, JCF, Stanton, N et al. (11 more authors) (2019) A Human Factors
+Perspective on Automated Driving. Theoretical Issues in Ergonomics Science, 20 (3). pp.
+223-249. ISSN 1463-922X
+https://doi.org/10.1080/1463922X.2017.1293187
+
+ 2017 Informa UK Limited, trading as Taylor & Francis Group. This is an Accepted
+Manuscript of an article published by Taylor & Francis in Theoretical Issues in Ergonomics
+Science on 8th March 2017, available online:
+http://www.tandfonline.com/10.1080/1463922X.2017.1293187
+
+Reuse
+Items deposited in White Rose Research Online are protected by copyright, with all rights reserved unless
+indicated otherwise. They may be downloaded and/or printed for private study, or other acts as permitted by
+national copyright laws. The publisher or other rights holders may allow further reproduction and re-use of
+the full text version. This is indicated by the licence information on the White Rose Research Online record
+for the item.
+Takedown
+If you consider content in White Rose Research Online to be in breach of UK law, please notify us by
+emailing eprints@whiterose.ac.uk including the URL of the record and the reason for the withdrawal request.
+
+eprints@whiterose.ac.uk
+https://eprints.whiterose.ac.uk/
+
+A Human Factors Perspective on Automated Driving
+
+1
+2
+3
+4
+5
+
+M. Kyriakidis1,2*, J. C. F. de Winter1, N. Stanton3, T. Bellet4, B. van Arem5, K. Brookhuis6, M. H.
+
+6
+
+Martens7,8, K. Bengler9, J. Andersson10, N. Merat11, N. Reed12, M. Flament13, M.
+
+7
+
+Hagenzieker5,14, & R. Happee1,5
+
+8
+9
+
+1 Department Biomechanical Engineering, Delft University of Technology, the Netherlands.
+
+10
+
+2 ETH Zurich, Future Resilient Systems, Singapore ETH Centre, Singapore.
+
+11
+12
+
+3 Transportation Research Group, Faculty of Engineering and Environment Department, University
+of Southampton, UK.
+
+13
+14
+
+4 Ergonomics and Cognitive Sciences Laboratory, The French Institute of Science and Technology for
+Transport, Development and Networks, France.
+
+15
+
+5 Transport & Planning Department, Delft University of Technology, the Netherlands.
+
+16
+17
+
+6 Department of Psychology, Faculty of Behavioural and Social Sciences, University of Groningen, the
+Netherlands.
+
+18
+
+7 Centre for Transport Studies, University of Twente, the Netherlands.
+
+19
+
+8 TNO, the Netherlands.
+
+20
+
+9 Institute of Ergonomics, Technical University of Munich, Germany.
+
+21
+
+10 Swedish National Road and Transport Research Institute, Sweden.
+
+22
+
+11 Institute for Transport Studies, University of Leeds, UK.
+
+23
+
+12 Human Factors and Simulation Group, Transport Research Laboratory, UK.
+
+24
+
+13 ERTICO, ITS Europe, Belgium.
+
+25
+
+14 SWOV, Institute for Road Safety Research, the Netherlands.
+
+*
+
+Corresponding author: m.kyriakidis@tudelft.nl, miltos.kyriakidis@frs.ethz.ch
+
+26
+
+Automated driving can fundamentally change road transportation and improve
+
+27
+
+quality of life. However, at present, the role of humans in automated vehicles
+
+28
+
+(AVs) is not clearly established. Interviews were conducted in April and May
+
+29
+
+2015 with twelve expert researchers in the field of Human Factors (HF) of
+
+30
+
+automated driving to identify commonalities and distinctive perspectives
+
+31
+
+regarding HF challenges in the development of AVs. The experts indicated that
+
+32
+
+an AV up to SAE Level 4 should inform its driver about the AVs capabilities and
+
+33
+
+operational status, and ensure safety while changing between automated and
+
+34
+
+manual modes. HF research should particularly address interactions between
+
+35
+
+AVs, human drivers, and vulnerable road users. Additionally, driver training
+
+36
+
+programs may have to be modified to ensure that humans are capable of using
+
+37
+
+AVs. Finally, a reflection on the interviews is provided, showing discordance
+
+38
+
+between the interviewees statementswhich appear to be in line with a long
+
+39
+
+history of work on human factors research, and the rapid development of
+
+40
+
+automation technology. We expect our perspective to be instrumental for
+
+41
+
+stakeholders involved in AV development and instructive to other parties.
+
+42
+
+Keywords: Automated driving; Levels of automation; Human Factors challenges; Interview
+
+43
+
+study; Experts vision
+
+44
+
+Relevance to Human Factors/Ergonomics theory: Automated driving could fundamentally
+
+45
+
+change road transportation and improve quality of life. However, the role of the human driver
+
+46
+
+within the automated vehicle is not yet clearly established. This work presents the results of an
+
+47
+
+interview study among 12 HF scientists involved in automated driving research. A consensus
+
+48
+
+was revealed among the researchers regarding the HF challenges that need to be resolved
+
+49
+
+prior to the deployment of AVs on public roads. Such challenges include the synergy between
+
+50
+
+the human driver and automation, potential changes in driving behaviour due to automation,
+
+51
+
+and the type of information that the human drivers shall be receiving from the automated
+
+52
+
+driving system. On the other hand, a disparity was identified between the researchers
+
+53
+
+concerns regarding the AVs development and deployment and the AVs technological
+
+54
+
+advances: although the researchers expressed that AVs should not be introduced unless
+
+55
+
+proven safe, reality shows that industry is now close to the introduction of Level 3 and Level 4
+
+56
+
+AVs on public roads.
+
+2
+
+Introduction
+
+1
+2
+3
+
+Automated driving technology has the potential to fundamentally change road
+
+4
+
+transportation and improve quality of life. Automated vehicles (AVs) are anticipated to
+
+5
+
+reduce the number of accidents caused by human errors, increase traffic flow efficiency,
+
+6
+
+increase comfort by allowing the driver to perform alternative tasks, and ensure mobility for
+
+7
+
+all, including old and impaired individuals (Fagnant and Kockelman 2015; Mui and Carroll
+
+8
+
+2013).
+
+9
+
+AVs can be classified according to their technological capabilities and human
+
+10
+
+engagement, ranging from manual driving, where the human driver executes all of the
+
+11
+
+driving tasks, to fully automated driving where no human interaction occurs. In this paper,
+
+12
+
+we adopt the SAE levels of automation (SAE International 2014; 2016) shown in Table 1,
+
+13
+
+which is arguably the most well known and broadly used taxonomy in the field of automated
+
+14
+
+driving research (International Transport Forum 2015; NHTSA 2016).
+
+15
+16
+
+Table 1. Levels of automation as defined by the SAE International
+Monitoring of
+driving
+environment
+
+Human driver
+
+Level of
+automation
+
+Description
+
+0: Driver only
+
+The human driver performs all aspects of the dynamic driving
+task
+
+1: Assisted
+automation
+2: Partial
+automation
+
+Automated
+driving system
+
+A driver assistance system performs either steering or
+acceleration/deceleration, while the human driver is expected to
+carry out the remaining aspects of the dynamic driving task
+One or more driver assistance systems perform both steering and
+acceleration/deceleration, while the human driver is expected to
+carry out all remaining aspects of the dynamic driving task
+
+3: Conditional
+automation
+
+An automated driving system performs all aspects of the dynamic
+driving task (in conditions for which it was designed), but the
+human driver is expected to respond appropriately to a request
+to intervene
+
+4: High
+automation
+
+An automated driving system performs all aspects of the dynamic
+driving task (in conditions for which it was designed), even if the
+human driver does not respond appropriately to a request to
+3
+
+intervene
+5: Full
+automation
+
+An automated driving system performs all aspects of the dynamic
+driving task under all roadway and environmental conditions
+
+1
+2
+
+There are suggestions that Levels 3 and 4 automation could be deployed by 2020
+
+3
+
+(ERTRAC Task Force and Connectivity and Automated Driving 2015), while Tesla announced
+
+4
+
+the introduction of an automated feature that will allow individuals to summon their
+
+5
+
+vehicles from a distance by 2018 (Blum 2016; Korosec 2015). Moreover, a recent study
+
+6
+
+suggests that the public expects Level 5 (full) automation in more than 50% of vehicles by
+
+7
+
+around 2030 (Kyriakidis, Happee, and De Winter 2015).
+
+8
+
+Along this accelerating evolution of road vehicle automation, Human Factors (HF)
+
+9
+
+research scientists have warned for a long time that the mere fact that you can automate
+
+10
+
+does not mean that you should (Fitts 1951; Hancock 2014). As early as 1983, Bainbridge
+
+11
+
+(1983) presented several ironies of automation and explained that the more advanced a
+
+12
+
+control system is, so the more crucial may be the contribution of the human operator.
+
+13
+
+Similarly, Parasuraman and Riley (1997) explained the importance of studying how humans
+
+14
+
+may misuse, disuse, and abuse automation technology, and also argued that humans tend to
+
+15
+
+be poor supervisors of automation. With respect to AVs in particular, up to Level 4
+
+16
+
+automation, human drivers will be a key component, because they should operate the
+
+17
+
+vehicle in conditions not supported by the automation, and will be expected (Level 4), even
+
+18
+
+if not liable (Ref for Volvo), or even required (Levels 2 and 3) to resume manual control
+
+19
+
+when needed.
+
+20
+
+Studies indicate that many challenges pertaining to the interaction between human
+
+21
+
+drivers and automated systems are yet to be resolved. Such challenges include the impact of
+
+22
+
+automated systems on drivers mental workload and situation awareness (Brookhuis et al.
+
+23
+
+2008; De Winter et al. 2014; Kaber and Endsley 2004; Merat et al. 2012; Salmon, Stanton,
+
+24
+
+and Young 2012; Stanton and Young 2005; Whitmore and Reed 2015), as well as the human
+
+25
+
+drivers levels of acceptance (Brookhuis et al. 2008), trust, and reliance on the automated
+
+26
+
+systems (Coelingh 2013; De Waard et al. 1999; Fisher, Reed, and Savirimuthu 2015;
+
+27
+
+Verberne, Ham, and Midden 2012).
+
+28
+
+Further challenges are associated with potential changes in human drivers behaviour
+
+29
+
+due to automation (Gouy et al. 2014), the necessary skills that the humans should retain to
+
+4
+
+1
+
+perform the driving task manually (Vlakveld 2015), and the role of the humans in the case of
+
+2
+
+an emergency such as when automation fails or exceeds its functional limits (Levitan,
+
+3
+
+Golembiewski, and Bloomfield 1998). In addition, research has yet to clarify the required
+
+4
+
+level of supervisory control and cooperation (who is performing what part of the driving
+
+5
+
+task) between human drivers and automated systems (Banks and Stanton 2016; Coelingh
+
+6
+
+2013; Hoc, Young and Blosseville 2009; Lu et al. 2016; Marinik et al. 2014).
+
+7
+
+Research challenges also comprise the estimation of the minimum time required by
+
+8
+
+human drivers to resume manual control when instructed by the automated system (Gold et
+
+9
+
+al. 2013, 2016; Merat et al. 2014; Mok et al. 2015; Radlmayr et al. 2014; Schieben et al.
+
+10
+
+2008; Zeeb, Buchner, and Schrauf 2015), and the interaction between AVs and other
+
+11
+
+vehicles and road users (Martens and Van den Beukel 2013, Merat and Lee 2012; Merat et
+
+12
+
+al., submitted; Madigan et al., 2016). Finally, as argued by Hancock (2015, p. 139), one
+
+13
+
+empirical question that necessitates vital research at this present time is the establishment
+
+14
+
+of appropriate epidemiological baselines for the dimensions of current, manually operated
+
+15
+
+vehicle performance such as transit time efficiency, system downtime, injury and fatality.
+
+16
+
+Therefore, HF research can critically contribute to the development and deployment of
+
+17
+
+AVs, by working towards a synergy between the human driver, vehicle, and environment.
+
+18
+
+This paper presents the findings of an interview study with twelve researchers in the field of
+
+19
+
+HF and automated driving. The aim of the study was twofold: first, to define the most critical
+
+20
+
+HF challenges related to AVs, and second, to indicate similarities and distinctive perspectives
+
+21
+
+among the researchers.
+
+22
+
+The remainder of the paper is organised as follows. First, we will describe the methods of
+
+23
+
+the study, with subsequent sections providing a summary of the researchers opinions in
+
+24
+
+the form of twelve narratives. Finally, we discuss parallels and idiosyncrasies regarding the
+
+25
+
+opinions of the interviewees, and provide concluding remarks and suggestions for policy
+
+26
+
+makers and other stakeholders.
+
+27
+28
+
+Methods
+
+29
+30
+
+Using a 35 item questionnaire interview (provided in the Appendix), the twelve
+
+31
+
+researchers articulated their expectations, concerns, and vision about AVs. The
+
+5
+
+1
+
+questionnaire was designed to reflect the researchers experience and expertise, and it
+
+2
+
+addressed four main areas of interest associated with the development of AVs: (1)
+
+3
+
+challenges from a HF perspective, (2) potential strengths and benefits, (3) deployment
+
+4
+
+scenarios and likely changes in the status of road transportation, and (4) public acceptance
+
+5
+
+and expectations. The background and expertise of the participants is provided in the
+
+6
+
+Section About the authors and helps the readers to interpret the twelve narratives. The
+
+7
+
+questionnaire was built on past research that explored the public and subject matter
+
+8
+
+experts opinion on automated driving (Begg 2014; Casley, Jardim, and Quartulli 2013; KPMG
+
+9
+
+2014; Kyriakidis, Happee, and De Winter 2015; Payre, Cestac, and Delhomme 2014;
+
+10
+
+Schoettle and Sivak 2014a, 2014b; Sommer 2013; Underwood 2014).
+
+11
+
+The twelve researchers are currently involved in research activities associated with HF
+
+12
+
+and AVs, and they all have more than 10 years of experience in the field (mean = 19 years).
+
+13
+
+Nine of the researchers participate in the EU project Human Factors of Automated Driving
+
+14
+
+(2014d). To increase diversity, three additional researchers contributed to the study. One of
+
+15
+
+them is involved in the EU projects AdaptiVe (2014a) and CityMobil2, the second in the UK
+
+16
+
+project GATEway (2014c), and the third coordinates the EU support action Vehicle and Road
+
+17
+
+Automation (VRA) (2013).
+
+18
+
+The interviews were carried out individually in April and May 2015, with their duration
+
+19
+
+varying between 45 and 90 minutes. Based on transcripts from audio recordings of each
+
+20
+
+interview, an initial narrative was generated to describe the researchers main insights
+
+21
+
+regarding the four addressed areas of interest. Building upon these narratives, the
+
+22
+
+researchers then recomposed and finalized their statements, as presented in the next
+
+23
+
+section.
+
+24
+Researchers opinions
+
+25
+26
+27
+
+Neville Stanton
+
+28
+
+Decades of research have shown that humans are not particularly good at tasks that
+
+29
+
+require vigilance and sustained attention over long periods of time (Warm, Parasuraman,
+
+30
+
+and Matthews 2008). Today, one of the major challenges in the design of AVs is the
+
+31
+
+expectation that drivers will monitor the system constantly and appropriately intervene
+
+32
+
+when required (Stanton, Young, and McCaulder 1997). Experience from other industries,
+6
+
+1
+
+such as aviation, has shown that automation may actually cause as many problems as it
+
+2
+
+solves. For example, the disconnection of the autopilot on Air France Flight 447 from Rio de
+
+3
+
+Janeiro to Paris (which crashed on 1 June 2009, BEA 2012) failed to communicate the nature
+
+4
+
+of the situation (the blocking of pitot tubes with ice crystals) effectively to the human pilots.
+
+5
+
+The resultant inputs from the pilots led the aircraft into an aerodynamic stall, from which it
+
+6
+
+did not recover. The black box voice recorder makes for chilling reading, as the pilots
+
+7
+
+struggled to regain control of the aircraft.
+
+8
+
+There is concern that AVs could cause similar confusion in drivers, where the drivers
+
+9
+
+understanding of the situation is at odds with reality (Stanton, Dunoyer, and Leatherland
+
+10
+
+2011). Whilst in aviation, people are beginning to wise up to the fact that automation is
+
+11
+
+causing confusion in pilots (which has been called a mode error in the technical literature
+
+12
+
+(Sarter and Woods 1995), there is still an assumption that the driver will be the last line of
+
+13
+
+defence in AVs. Despite two decades of research on AVs, there is still much to be learnt. HF
+
+14
+
+research can play a substantial role in the development of our understanding of driving AVs
+
+15
+
+by reproducing a range of situations in simulators. Here we can observe how drivers are
+
+16
+
+likely to behave as well as get feedback on their experience.
+
+17
+
+Research should be focusing on maintaining the communication and interaction between
+
+18
+
+AVs and the driver. Unless a system can be designed that requires no human input at all (and
+
+19
+
+has no controls within the vehicle) we need to design automation that supports, rather than
+
+20
+
+replaces, human drivers. To some extent, supportive automation is already with us, such as
+
+21
+
+Antilock Braking Systems, Lane Keeping Systems, and Electronic Stability Control (Stanton
+
+22
+
+and Young 2005). These systems can be thought of as a background automation rather than
+
+23
+
+foreground automation (where the latter takes over the driving tasks). Background
+
+24
+
+automation allows the driver to drive the vehicle, but watches over them in case of trouble
+
+25
+
+(Young, Stanton, and Harris 2007). If the driver brakes too hard, strays out of the lane, or
+
+26
+
+steers too hard, the automation will intervene in an attempt to save them. Automated
+
+27
+
+Emergency Braking Systems are an extension of this philosophy, and will brake if the sensors
+
+28
+
+detect an impending accident without any intervention from the driver.
+
+29
+
+As a cautionary note, with creeping automation taking a more active role in driving, there
+
+30
+
+are some very salient lessons to be learnt from aviation. This can be illustrated using the
+
+31
+
+difference between the automation philosophies in Boeing and Airbus. In Boeing the pilot is
+
+32
+
+king. Although there is a protective layer of automation, this can be overridden by the pilots.
+
+33
+
+By way of contrast, in the Airbus the computer is king, and the pilots cannot override this
+7
+
+1
+
+protective layer of automation in normal law mode. Whilst it is acknowledged that the
+
+2
+
+automation does protect pilots, it can also cause problems as shown with the AF447. In this
+
+3
+
+incident, the aircraft entered alternate law mode (although the pilots did not realize this
+
+4
+
+mode change) (BEA 2012). In addition, the flight controls in the Airbus do not have any
+
+5
+
+feedback (they do in the Boeing), so do not move at all when the autopilot is in control
+
+6
+
+(whereas they do in the Boeing). Each pilot did not realize that the other was making control
+
+7
+
+inputs. This would be equivalent to the steering wheel not moving in a car that is being
+
+8
+
+driven automatically, certainly not something I would advise to vehicle manufacturers.
+
+9
+
+Overall, automated vehicles are meaningful only if drivers are freed from the driving
+
+10
+
+tasks, are not anticipated to supervise the system, and are not liable for it. We are, however,
+
+11
+
+rather far from reaching this point (Walker, Stanton, and Salmon 2015). Accordingly, it might
+
+12
+
+be more beneficial for the society if research focuses on background automation, until
+
+13
+
+foreground automation has matured sufficiently.
+
+14
+15
+
+Thierry Bellet
+
+16
+
+Almost twenty five years ago, the US Automated Highway System (AHS) program was
+
+17
+
+launched to conduct long range research on the design of future Intelligent Transportation
+
+18
+
+Systems aimed at aiding driving, enhancing the capacity and efficiency of the highway
+
+19
+
+system, and assisting transportation agencies in managing their facilities and controlling
+
+20
+
+traffic (Bement et al. 1998).
+
+21
+
+One of the programs main findings was the unclear extent to which human drivers
+
+22
+
+would accept reduced manual control of their vehicles or be willing to travel in automated
+
+23
+
+vehicles at close following distances, on narrower lanes, and at higher speeds (Bement et al.
+
+24
+
+1998). The program also showed that improving road safety and increasing road capacity
+
+25
+
+might not be mutually compatible unless society accepts the idea of automation
+
+26
+
+responsibility in the case of accidents (Bellet et al. 2003). If not, the human drivers may be
+
+27
+
+required to remain alert and take back the control of their vehicles in the case of critical
+
+28
+
+situations. Subsequently, increased safety margins and a reduction of vehicle speeds are
+
+29
+
+required to allow drivers to rebuild their situation awareness and adequately resume control
+
+30
+
+of the driving task. However, this would mean that AVs, compared to manual driving, would
+
+31
+
+actually reduce road capacity. Therefore, the program concluded that although there are no
+
+32
+
+technical showstoppers for the overall success of an automated highway system, legal and
+8
+
+1
+
+societal challenges may be more difficult to resolve, including rejecting the founding
+
+2
+
+paradigm of the driving task, where responsibility lies with the human driver (Lay, McHale,
+
+3
+
+and Stevens 1996). Recent developments in AVs have changed the situation. AVs, although
+
+4
+
+in limited numbers, now exist. It is not a question of whether it is possible to have AVs on
+
+5
+
+the public roads. It is a question of how, when, and under which conditions they should be
+
+6
+
+introduced. Of course, the famous Bainbridges (1983) ironies of automation remain
+
+7
+
+exactly the same, but now the time has come to propose solutions to these ironies. Today
+
+8
+
+the main challenge is not to consider the future, but to think about the present. Facing this
+
+9
+
+challenge, HF research has to clearly define the role of humans in AVs (is the human still
+
+10
+
+technically a driver), and to support accordingly the design of a human centred automation.
+
+11
+
+Synthetically, three main options seem promising: (1) developing co piloting systems
+
+12
+
+supporting the driver rather than replacing them, (2) designing solutions to keep humans in
+
+13
+
+the loop of control during automation, in order to support situation awareness, (3) defining
+
+14
+
+dedicated areas for full automation without any responsibility of the driver (e.g., dedicated
+
+15
+
+lane on highways, or platooning for long tunnels).
+
+16
+
+However, to support such human centred design of automation, new simulation tools
+
+17
+
+are required, from realistic AV simulators allowing full scale immersive tests, to traffic flow
+
+18
+
+simulations including realistic human driver models that are able to predict the road safety
+
+19
+
+effects of AVs (Bellet et al. 2012). Such simulation tools could allow us to test different types
+
+20
+
+of AVs, support decision making regarding policy and legislation, and finally permit the
+
+21
+
+introduction of AVs on public roads and their potential deployment during the next 20 years.
+
+22
+23
+
+Bart van Arem
+
+24
+
+The deployment of automated vehicles will eventually change road transportation as it
+
+25
+
+stands today. However, AVs that are able to drive in all situations and at all conditions,
+
+26
+
+without requiring any human supervision or intervention, will not be introduced into the
+
+27
+
+market any time soon.
+
+28
+
+Nevertheless, I believe that within the next 10 years AVs could be deployed on public
+
+29
+
+roads for specific scenarios (e.g., highway driving). The human drivers in those vehicles will
+
+30
+
+then be supervising the system and intervene if required.
+
+31
+
+Research, therefore, should aim at ensuring that the human drivers remain alert and
+
+32
+
+situational aware, even when they are not actively controlling the steering wheel and
+9
+
+1
+
+pedals. This level of automation, however, will not allow the drivers to be engaged in a large
+
+2
+
+variety of non driving tasks. This means that the benefits for the consumers as well as their
+
+3
+
+acceptance and willingness to buy such AVs are limited.
+
+4
+
+Thus, our resources should be focusing on highly automated driving, which will enable a
+
+5
+
+driver to engage in non driving tasks, and which is equipped with fail safe strategies,
+
+6
+
+including a feature that brings the car to a minimal risk condition (cf. SAE, 2016).
+
+7
+8
+
+Karel Brookhuis
+
+9
+
+Human beings notoriously get bad marks in (low frequency) vigilance tasks, that is,
+
+10
+
+detecting occasional mishaps. The poor human ability to monitor and supervise represents a
+
+11
+
+major weakness of automated vehicles in general, and specifically at the SAE Level 2, since it
+
+12
+
+will be mandatory for human drivers to keep monitoring the system and the environment.
+
+13
+
+Since human drivers should primarily be supervising the system, rather than engaging in any
+
+14
+
+other activities, the benefits of AVs and in turn their acceptance and the public willingness to
+
+15
+
+use them, let alone buy them, are debatable, whilst driver training and licensing will change
+
+16
+
+dramatically. In order to maintain driving skills, human drivers should keep having the
+
+17
+
+opportunity to drive manually, probably requiring AVs to stay fully equipped.
+
+18
+
+As system failures cannot be excluded, additional research should focus on four topics:
+
+19
+
+(1) to define the way in which human drivers should be informed in case of a system failure,
+
+20
+
+(2) depending on the type of failure, what the human driver is able and allowed to do, (3) to
+
+21
+
+optimize the safe interaction of the new technology with human drivers, and (4) to ensure
+
+22
+
+public acceptance and trust in automated vehicles.
+
+23
+
+The deployment of SAE Level 5, operating without any human intervention in all
+
+24
+
+situations and at all conditions, might even never happen, as people are reluctant to accept
+
+25
+
+any potential harm caused by a machine operating independently. A realistic and fast way to
+
+26
+
+deploy AVs is by employing segregated lanes, which will be controlled and maintained by a
+
+27
+
+separately managed infrastructure. In these lanes only authorized AVs operating at SAE
+
+28
+
+Level 4/5 will be allowed.
+
+29
+
+In conclusion, I am expecting AVs within the next 10 years, but only in a segregated
+
+30
+
+manner such as low speed vehicles on designated tracks for the transportation of goods. For
+
+31
+
+this to happen, the safety levels should be clearly demonstrated, while any potential side
+10
+
+1
+
+effects that may arise from their deployment are adequately communicated to the people
+
+2
+
+involved and to society in general.
+
+3
+4
+
+Marieke Martens
+
+5
+
+Automated vehicles in the next couple of years will have operational limitations, being
+
+6
+
+able to operate only under the specific conditions they can cope with. Once we can prove
+
+7
+
+that AVs are always able to cope with situations in an acceptable, safe, and comfortable
+
+8
+
+manner, the AVs may take over control, and the human drivers will become passengers.
+
+9
+
+Subsequently, liability issues could also be resolved, with the drivers remaining liable for as
+
+10
+
+long as they are in control of their vehicle, and the original equipment manufacturers
+
+11
+
+(OEMs) becoming liable once automation accepts the control of the vehicle.
+
+12
+
+However, if AVs cannot cope with a situation, they will either hand over the control to
+
+13
+
+the human driver or they will come to an alternative solution such as a transition to a
+
+14
+
+minimal risk condition. This may include AV coming to a standstill (e.g., safe stop), which
+
+15
+
+may be dangerous if the AV does not explicitly communicate its intention to other road
+
+16
+
+users or does not come to safe stop in a predictable manner or at a predictable location.
+
+17
+
+HF research should specifically focus on the transitions from automation to manual
+
+18
+
+driving, in order to ensure that the human driver will appropriately respond to the request
+
+19
+
+of their vehicle to take over control. Additionally, HF research should identify the behaviour
+
+20
+
+of AVs vehicles when automation is in control, in order for the passengers to understand the
+
+21
+
+vehicles actions and to feel comfortable (i.e., no motion sickness; cf. Diels and Bos 2016),
+
+22
+
+and for other road users to understand and predict the AVs intentions. This will ensure the
+
+23
+
+maximal benefits in terms of safety, efficiency, comfort and acceptance.
+
+24
+
+By elaborating current technology, the deployment of SAE Level 3 or AVs operating on
+
+25
+
+highways will be feasible within the next 5 years. I do not believe in SAE Level 2 (driver
+
+26
+
+monitoring the environment), since drivers are not able to pay attention to the road and
+
+27
+
+automation status across long periods. SAE Level 2 is suitable for testing and research
+
+28
+
+purposes, with expert drivers or technicians assessing the reliability of the automation, in
+
+29
+
+order to verify readiness for SAE Level 3. Yet, a lot of testing is required to confirm the safe
+
+30
+
+operation of AVs in different types of conditions, and to understand the operational
+
+31
+
+envelope of automation. SAE Level 2 systems as we currently see introduced on the market
+
+32
+
+will only work well if their reliability is actually Level 3 ready.
+11
+
+1
+
+The deployment of SAE Level 5 in mixed traffic conditions may never happen at
+
+2
+
+acceptable levels. AVs may have to operate at very low speeds in order to meet appropriate
+
+3
+
+safety requirements, making these vehicles particularly slow in city environments. However,
+
+4
+
+such AVs could be introduced for specific scenarios and types of operation, such as public
+
+5
+
+transportation.
+
+6
+7
+
+Klaus Bengler
+
+8
+
+Automated driving should not become a hype topic; its presentation nowadays
+
+9
+
+sometimes may be too visionary and confusing/distorting for the public. It is rather
+
+10
+
+unrealistic, for example, to expect SAE Level 5 automated vehicles soon on public roads.
+
+11
+
+However, it could indeed be possible to introduce fully automated driving vehicles operating
+
+12
+
+at low speeds in segregated lanes supported by infrastructure for specific scenarios.
+
+13
+
+Examples of such applications can be found in public transport or the transportation of
+
+14
+
+goods.
+
+15
+
+It is important, therefore, to clearly define the functionalities and the range of
+
+16
+
+applicability of automated vehicles. Based on the current technological and infrastructural
+
+17
+
+capabilities, automated driving could only be a fraction of individuals daily mobility. At
+
+18
+
+present, SAE Levels 4 or 5 AVs can only be applied in very specific scenarios, such as low
+
+19
+
+speeds and specific areas.
+
+20
+
+In the future, AVs may be able to operate at higher SAE automation levels. In such
+
+21
+
+vehicles, the mode of driving can be selected based on the situation and conditions at each
+
+22
+
+particular time of the operation. In other words, the human drivers could remain drivers,
+
+23
+
+supervisors of automation, or passengers, depending on the mode of automation. In those
+
+24
+
+vehicles, new families of input elements can be introduced, yet steering wheels have many
+
+25
+
+advantages, such as clear visual feedback regarding direction.
+
+26
+
+AVs will be designed to obey the traffic rules in all cases, and therefore the fluency of
+
+27
+
+their interaction with other vehicles and road users, as well as their acceptance by the
+
+28
+
+public, is a big topic.
+
+29
+
+Within this context, HF research has four main tasks. First, to define the acceptance
+
+30
+
+criteria of human drivers regarding the automated driving functionalities. Second, to
+
+31
+
+determine the individual capabilities of human drivers when using AVs (e.g., situation
+12
+
+1
+
+awareness, reaction times), and in turn to ensure safety while changing driving modes.
+
+2
+
+Today, for instance, humans driving manually are able to look outside their windows or to
+
+3
+
+the dashboard for a small period of time without a problem. It is unrealistic to expect that
+
+4
+
+human drivers will constantly monitor the automation system. Rather it could make sense,
+
+5
+
+to define a period that the drivers could divert their view away from the automated system.
+
+6
+
+Third, to provide design solutions regarding the interfaces installed in AVs and their
+
+7
+
+interaction with the human drivers. Finally, to investigate the interaction and
+
+8
+
+communication between AVs and conventional cars and other road users. AVs will be
+
+9
+
+deployed on the market only if they are proven to be safe, and all the relevant liability issues
+
+10
+
+are resolved.
+
+11
+12
+
+Jan Andersson
+
+13
+
+Automated vehicles can eventually change the status of road transportation, including
+
+14
+
+the use and ownership of vehicles. From a safety, mobility, and traffic perspective the focus
+
+15
+
+on developing and directly deploying SAE Level 5 AVs would be the most beneficial, as the
+
+16
+
+majority of the human factors and legal challenges associated with the SAE Levels 2, 3 and 4
+
+17
+
+AVs would be avoided. Yet, it is more realistic to expect a gradual deployment of SAE Levels
+
+18
+
+2, 3 and 4 AVs, which will introduce different levels of functionalities and applicability.
+
+19
+
+The main weaknesses of these automation levels, however, are the expectation that
+
+20
+
+human drivers intervene upon a request by the automation, in addition to the liability
+
+21
+
+uncertainties. Who would like to use automation if they remain liable at all times for a
+
+22
+
+system that they partially cannot control?
+
+23
+
+HF researchers need, therefore, to understand how people will be using the automated
+
+24
+
+functionalities, in order to ensure a smooth process for the human drivers to regain control
+
+25
+
+of the vehicle. Research has proven that people are poor in monitoring a technological
+
+26
+
+system (e.g., Endsley 1996), or staying alert when not being engaged to the driving task, and
+
+27
+
+we should be aware of this when the liability criteria are determined by legislators. It is
+
+28
+
+crucial, therefore, to define the minimum time requirements for human drivers to return
+
+29
+
+back in the control loop, for several different driving scenarios. For this, research would first
+
+30
+
+have to define the human drivers mind set, and whether bringing them into the loop is a
+
+31
+
+cognitive or a decision making aspect. Furthermore, it is important to define the type and
+
+13
+
+1
+
+frequency of information that human drivers should be receiving in order to facilitate and
+
+2
+
+maintain their situation awareness, primarily when they are not engaged to the driving task.
+
+3
+
+In addition, HF research must determine how people using other transport modes or
+
+4
+
+conventional vehicles, and vulnerable road users will be interacting with AVs, and to confirm
+
+5
+
+that the human drivers and all road users are aware of the automated systems capabilities
+
+6
+
+and limitations.
+
+7
+8
+
+Natasha Merat
+
+9
+
+The main concerns and worries towards deployment of automated vehicles are currently
+
+10
+
+associated with automation SAE Levels 2 and 3. All relevant stakeholders agree that it is very
+
+11
+
+difficult to establish and ensure whether or not a human driver is aware of the automated
+
+12
+
+system performance, and research suggests that humans may generally be poor supervisors
+
+13
+
+of automation in such circumstances (Parasuraman 1987). Subsequently, it is hard to define
+
+14
+
+the appropriate time that humans need to regain control of a vehicle during a specific
+
+15
+
+situation, and to confirm that upon regaining control they respond in a safe and appropriate
+
+16
+
+manner (Merat et al. 2014). As long as the design of AVs allows human intervention, the
+
+17
+
+impact on safety of road transportation is debatable.
+
+18
+
+The general public should also be aware that we are far from ready to deploy AVs
+
+19
+
+capable of operating in all environments and scenarios without any human intervention. It is
+
+20
+
+therefore more likely that the first AVs will only be operating in dedicated lanes, for specific
+
+21
+
+driving scenarios.
+
+22
+
+One of todays biggest challenges is to verify that the human drivers are aware of the
+
+23
+
+AVs limitations, in order to resume control when required, whilst also remaining free to
+
+24
+
+engage in other activities, beyond driving. Otherwise, if drivers' main task in an AV is to
+
+25
+
+observe and monitor the vehicle and its operation, the benefits of automation to consumers
+
+26
+
+are minimal.
+
+27
+
+Therefore, for the next 5 to 10 years, research is likely to focus more on providing
+
+28
+
+solutions for maintaining human drivers situation awareness, mainly when they are not
+
+29
+
+engaged in the driving task. In addition to ensuring that AVs (including their computers and
+
+30
+
+sensors) are functioning reliably, improvements in the design and performance of HMIs are
+
+14
+
+1
+
+required to establish the type and amount of information that drivers should receive in
+
+2
+
+order to cope with any unexpected situation (Merat and Lee 2012).
+
+3
+
+The long term potential benefits of AVs on safety, time and traffic efficiency, mobility,
+
+4
+
+and pollution can be enormous. Yet, all relevant stakeholders have to be modest and avoid
+
+5
+
+confusing the public by raising unrealistic expectations. Indeed, it might be possible to have
+
+6
+
+vehicles with automated functionalities on public roads within the next 10 to 15 years.
+
+7
+
+However, it is rather likely that the cost and maintenance of such vehicles will be quite high,
+
+8
+
+which will be a major barrier towards their deployment and acceptance by the majority of
+
+9
+
+the public.
+
+10
+11
+
+Nick Reed
+
+12
+
+Today, challenges towards the introduction of automated vehicles are associated with
+
+13
+
+levels of automation that rely on the human drivers. Although it is feasible to deploy
+
+14
+
+conditional automated driving vehicles (SAE Level 3), the expectation that a human driver
+
+15
+
+can remain alert and rapidly regain situational awareness following a request by the system
+
+16
+
+is unrealistic. However, if AVs become capable of safely dealing with a human driver failing
+
+17
+
+to respond to a request to intervene, then fully automated vehicles cannot be far behind.
+
+18
+
+Research has first to determine a safe and effective process for re engaging the driver back
+
+19
+
+in the loop. Second, to educate human drivers on system capabilities and expected actions;
+
+20
+
+and thirdly, to explore tendencies for drivers to use automation and adapt their driving
+
+21
+
+behaviour to particular circumstances of a journey.
+
+22
+
+Current technology suggests that deployment of low speed automated vehicles operating
+
+23
+
+without human intervention on dedicated routes for specific purposes, such as public
+
+24
+
+transport, may be possible within three years. Once the technology is mature enough to
+
+25
+
+support fully automated vehicles, car ownership and vehicle usage patterns will change.
+
+26
+
+Today, a car is often the second biggest investment a person makes yet will typically be
+
+27
+
+parked the majority of the time. There is also a trend for younger people to reject car
+
+28
+
+ownership or license acquisition, probably associated with high insurance costs for driving.
+
+29
+
+SAE Level 4 and (eventually) Level 5 AVs make mass car sharing models much more viable.
+
+30
+
+As an on demand service, people could choose a vehicle that is appropriate for each
+
+31
+
+individual, specific journey rather than owning an individual vehicle that is compromised
+
+32
+
+across an owners various mobility needs. These shared AVs present additional HF
+15
+
+1
+
+challenges such as how to design AVs that provide an enjoyable, personalized travel
+
+2
+
+experience for diverse customers and how vehicle interiors should be redesigned to make
+
+3
+
+journeys comfortable and pleasant without compromising occupant safety.
+
+4
+5
+
+Maxime Flament
+
+6
+
+The automation levels have been formulated as a common language. As technology is
+
+7
+
+advancing, we need to keep a critical eye and avoid getting stuck at an intermediate level of
+
+8
+
+automation. Indeed, todays HF research raises serious doubt as for the handing over of the
+
+9
+
+driving task associated with SAE Level 3. It is human nature that a driver, who is relieved
+
+10
+
+even briefly from their driving task, will engage to other distracting tasks. From a liability
+
+11
+
+standpoint, the industry will not introduce such a distracting system unless the automation
+
+12
+
+can bring the vehicle to a minimal risk condition if no driver response is detected. For this
+
+13
+
+reason, the SAE Level 3 AVs may just never come to the market.
+
+14
+
+Adding confusion to the definitions, the same vehicle, depending on its environment and
+
+15
+
+its access to reliable information, could allow more than one level of automation. The HF
+
+16
+
+challenge in this case will be to clearly inform the driver about the possible levels of
+
+17
+
+automation at any given time and place, and why this is so. This will lead to trust and
+
+18
+
+acceptance of automation, but, too much trust may cause over reliance together with
+
+19
+
+unintended use, misuse, and even abuse. In fact, the difficulty may come from other road
+
+20
+
+users: manual drivers, cyclists and pedestrians; knowing the AVs capabilities, they may take
+
+21
+
+advantage of AVs in mixed traffic. The challenge for AVs will then be to keep their place in
+
+22
+
+traffic while guaranteeing reasonable safety. This should lead to innovative ways to indicate
+
+23
+
+the driving intentions to other road users.
+
+24
+
+AVs should firstly address critical situations caused by boredom and drowsiness, as well
+
+25
+
+as construction sites, intersections and other stressful areas. AVs could be on the market
+
+26
+
+within less than ten years, first on highways then gradually on other main roads,
+
+27
+
+supplemented with valet parking.
+
+28
+29
+
+Marjan Hagenzieker
+
+30
+
+The role of human drivers is one of the main challenges when discussing automated
+
+31
+
+driving vehicles. In vehicles where human drivers are expected to intervene, the human has
+16
+
+1
+
+to be both a driver and a supervisor. However, these two roles require different training and
+
+2
+
+skills, while they are not in tune. For instance, the less human drivers are manually
+
+3
+
+controlling their vehicles, the more their driving skills will deteriorate (e.g., Dragutinovic et
+
+4
+
+al. 2005), which can be critical especially in the case of an emergency.
+
+5
+
+Therefore, HF research should determine the required skills of humans in order to
+
+6
+
+operate AVs, and to identify any changes in their driving behaviour. Moreover, research has
+
+7
+
+to define the necessary (re)action times for the types of situations and interventions that
+
+8
+
+drivers will be asked to perform.
+
+9
+
+In addition, research should assist in redesigning the current driver training programs. On
+
+10
+
+the one hand, the new programs have to ensure that human drivers are always capable of
+
+11
+
+performing the driving task. On the other hand, they must instruct human drivers how to
+
+12
+
+supervise automation, and to maintain their supervisory skills.
+
+13
+
+HF researchers also have to determine ways of communication between AVs with human
+
+14
+
+drivers, other vehicles, and vulnerable road users. In addition, research has to determine the
+
+15
+
+consequences of behaviour of AVs, which is potentially very different compared to the
+
+16
+
+manual driven vehicles. Such large differences in the behaviour of AVs may impose
+
+17
+
+additional demands on people who do not drive or use AVs. This could raise questions on
+
+18
+
+whether we should allow AVs to induce such demands to those who do not own, drive, or
+
+19
+
+use this technology.
+
+20
+
+For fully automated vehicles that do not require any human intervention, research
+
+21
+
+should focus on proving them safe and reliable. However, it is too optimistic to believe that
+
+22
+
+such vehicles will be able to operate in large scale mixed traffic in the foreseeable future.
+
+23
+
+Nevertheless, the deployment of AVs of SAE Levels 3 and 4 on specific stretches, dedicated
+
+24
+
+areas, and driving scenarios, such as highways, is feasible and could in the mid and long term
+
+25
+
+improve the safety of road transportation.
+
+26
+27
+
+Riender Happee
+
+28
+
+Are we ready to deploy automated vehicles on public roads? Certainly not, as we still
+
+29
+
+have to prove them safe. On the one hand, the role of the human driver in AVs has not been
+
+30
+
+clearly defined. On the other hand, neither vehicle technology nor the infrastructure is
+
+17
+
+1
+
+proven to be ready to support the deployment of automated vehicles safely operating in real
+
+2
+
+world traffic conditions.
+
+3
+
+Proving safety requires on road and virtual testing to rigorously assess not only the
+
+4
+
+technology but also the human interaction with automation. The critical aspects of HF to
+
+5
+
+date have almost exclusively been tested in driving simulators (De Winter et al. 2014).
+
+6
+
+Undoubtedly, driving simulators are valuable for gaining insight in human behaviour,
+
+7
+
+especially in safety critical scenarios that cannot be easily tested on the public roads. Yet,
+
+8
+
+the results derived from simulator experiments do not necessarily reflect reality. It is
+
+9
+
+essential, therefore, to compare the behaviour of drivers in simulators with equivalent
+
+10
+
+studies on the public roads, in order to eventually build evaluation methods combining
+
+11
+
+simulator and on road studies.
+
+12
+
+Testing procedures are required for sensing and control systems in order to determine
+
+13
+
+whether they operate reliably in complex real world driving conditions. HF research should
+
+14
+
+focus on establishing procedures to test and determine the safe interaction between human
+
+15
+
+drivers and automation, not only during transitions of control, but also regarding the
+
+16
+
+interaction of automated vehicles with other road users.
+
+17
+
+Hands free driving is already commercially available with restrictions, and eyes off road
+
+18
+
+driving may be possible and legal in the near future, in particular for highway conditions. AVs
+
+19
+
+can provide transitions to minimal risk condition (e.g., safe stop) if human drivers do not
+
+20
+
+take over when this is requested by the AV. Such minimal risk strategies can prevent
+
+21
+
+mishaps in the hopefully rare case that drivers are unfit to resume control. However, as long
+
+22
+
+as such take over requests exists, and as long as drivers have options to resume manual
+
+23
+
+driving, we need to incorporate human factors analysis in the safety assessment of
+
+24
+
+automated driving.
+
+25
+Discussion
+
+26
+27
+
+Comparison of the interviewees statements
+
+28
+29
+
+The interviews revealed a consensus regarding HF challenges that need to be resolved
+
+30
+
+prior to a wide scale deployment of AVs on public roads, with a number of distinctive
+
+31
+
+remarks.
+18
+
+1
+
+In line with recent position papers (Casner, Hutchins, and Norman 2016; Norman 2015;
+
+2
+
+Poulin et al. 2015; Trimble et al. 2014), the experts highlighted a complex interaction
+
+3
+
+between human drivers and SAE Level 2 and 3 automated vehicles. The interviewees
+
+4
+
+stressed that any automated system that removes the human from the driving task, yet
+
+5
+
+requires the human to monitor and supervise the system and regain control when
+
+6
+
+necessary, could be unsafe. In other words, one should not expect that human drivers will
+
+7
+
+always be able to regain control of their vehicles in a safe and appropriate manner.
+
+8
+
+Moreover, SAE Level 2 and 3 systems may not be welcomed by drivers because the range of
+
+9
+
+the permitted secondary tasks will be limited (e.g., NHTSA 2012). Thus, drivers may not be
+
+10
+
+able to benefit from automation to a significant extent (cf. Naujoks, Purucker, and Neukum
+
+11
+
+2016).
+
+12
+
+The researchers underpinned the importance of additional research on public acceptance
+
+13
+
+and trust in automation, the interaction of the AVs with other vehicles and road users, and
+
+14
+
+the amount and type of information that the human drivers shall be receiving by the
+
+15
+
+automated system. Finally, they referred to the need for additional experiments to study
+
+16
+
+human driver behaviour while operating in automated mode and during transitions from
+
+17
+
+manual to automated mode and vice versa, and to validate findings from simulator
+
+18
+
+experiments with equivalent studies on public roads.
+
+19
+
+Besides areas of wide agreement, the twelve researchers expressed distinctive
+
+20
+
+statements on different aspect of AVs, including legislation, cost of AVs, and type approval
+
+21
+
+challenges. The role of human drivers in AVs was discussed, and it was suggested by several
+
+22
+
+of the researchers that unless AVs (permanently) take over all functions of the driving task,
+
+23
+
+drivers should remain in the loop. The issue of driving skill degradation due to automation
+
+24
+
+was raised, stating that training programs will have to be modified, teaching human drivers
+
+25
+
+about the automations capabilities and expected actions.
+
+26
+
+The issue of responsibility in the cases of accidents is a critical factor in AV deployment,
+
+27
+
+yielding a conflict between roadway capacity and roadway safety. Specifically, it was
+
+28
+
+stressed that when human drivers are expected to regain control of their vehicles, large
+
+29
+
+safety margins (i.e., separation between vehicles) will have to be adopted, while engineers
+
+30
+
+are developing platooning systems that operate with short inter vehicle headways.
+
+31
+
+Nevertheless, it was stated that AVs could be broadly deployed within the next 10 years with
+
+32
+
+an operational design domain confined to highways and similar roads, with the expectation
+
+33
+
+that human drivers will resume manual control when leaving the operational design domain.
+19
+
+1
+
+It was stated that automation levels were formulated as a common language, but that in
+
+2
+
+reality the same AV (depending on its environment and access to reliable information) may
+
+3
+
+allow more than one level of automation. Finally, it was pointed out that there is a need for
+
+4
+
+testing procedures regarding sensing and control systems, in order to determine whether
+
+5
+
+AVs operate reliably in complex real world driving conditions. To this end, the Dutch Type
+
+6
+
+Approval Authority has introduced an amendment to the Exceptional Transport
+
+7
+
+(Exemptions) Decree to facilitate testing and development of autonomous vehicles on public
+
+8
+
+roads (RDW 2014).
+
+9
+10
+
+Comparison of the interviewees statements with the current state of AVs deployment
+
+11
+12
+
+In the interviews conducted in April and May 2015, the twelve researchers commented
+
+13
+
+extensively on HF related safety implications of Level 2 and 3 AVs, and some specifically
+
+14
+
+expressed that AVs should not be introduced on public roads unless proven safe. However,
+
+15
+
+reality shows that SAE Level 2 automation systems, and even systems that are close to SAE
+
+16
+
+Level 3 automation, have now been deployed. For example, in October 2015 Tesla
+
+17
+
+introduced an Autopilot feature that allows for minutes of hands free driving, whereas as of
+
+18
+
+October 2016, new cars are equipped with full self driving hardware (Tesla, 2016). These
+
+19
+
+observations illustrate that industry marches forward and that there is a disconnect
+
+20
+
+between academic research and industrial research and development. Furthermore, it
+
+21
+
+shows that even experts who work in the field of AVs may underestimate the pace of
+
+22
+
+development in some industries, regarding the introduction of AVs on the market.
+
+23
+
+The interviewees agreed that we are far from ready to deploy fully (SAE Level 5)
+
+24
+
+automated vehicles on public roads, with several researchers claiming that fully AVs may
+
+25
+
+never operate at acceptable levels (Shladover 2016). Instead, SAE Level 4 vehicles could be
+
+26
+
+introduced on specific routes, under certain conditions, and for distinct applications, such as
+
+27
+
+segregated areas, low speeds or high speeds on highways only, transport of goods, or public
+
+28
+
+transport. In agreement with the reviewers expectations, the projects CityMobil2 (2014b),
+
+29
+
+GATEway (2014c), and WEpods (2014e) are currently demonstrating the integration of
+
+30
+
+autonomous transport systems into complex real world urban environments. Such
+
+31
+
+integration, however, may pose questions concerning the interaction of vulnerable road
+
+20
+
+1
+
+users with AVs (Lundgren et al. 2017; Nez Velasco et al. 2016; Rothenbcher et al. 2016;
+
+2
+
+Merat et al., submitted).
+
+3
+Concluding remarks
+
+4
+5
+6
+
+AVs have the potential to substantially reform road transportation by increasing safety
+
+7
+
+and traffic flow efficiency (SAE Levels 3 to 5), and ensuring mobility for all (SAE Level 5). It is
+
+8
+
+no longer a question of whether it will be possible to have AVs on public roads, but rather a
+
+9
+
+question of how, when, and under which conditions. This paper presents the perspective of
+
+10
+
+twelve researchers in the field of HFs and AVs.
+
+11
+
+Findings indicate that, currently, the main challenge for the deployment of AVs is the
+
+12
+
+expectation of the human driver to intervene, after a period of not controlling the steering
+
+13
+
+wheel and pedals. Thus, research should focus on (a) designing AVs that can inform their
+
+14
+
+occupants about the vehicles capabilities and operational status, as well as about upcoming
+
+15
+
+situations that the vehicles cannot solve. In addition, research should (b) concentrate on
+
+16
+
+defining the automation functionalities that the human drivers would accept and use, and
+
+17
+
+(c) determine the interaction between the human driver and automation during transitions
+
+18
+
+of control. Furthermore, research needs to (d) establish procedures to test, determine, and
+
+19
+
+ensure safety while changing from automated to manual mode, and (e) investigate the
+
+20
+
+interaction between AVs and human drivers, conventional cars, and other road users such as
+
+21
+
+cyclists and pedestrians. Finally, research should (f) explore the modification of the current
+
+22
+
+driver training programs so that drivers are instructed how to use automation in a safe and
+
+23
+
+acceptable manner. We expect that these findings can be instrumental for stakeholders
+
+24
+
+involved in the development of automated driving technology and instructive to other
+
+25
+
+parties.
+
+26
+
+For long term successful deployment of the AVs all the relevant stakeholders including
+
+27
+
+the automotive industry, research institutes, policy makers, and governmental bodies should
+
+28
+
+work together to facilitate a safe deployment of AVs, not only taking technology into
+
+29
+
+account but also the human factors and the end users perspective. As Cummings (2016)
+
+30
+
+stressed, the relevant policy makers and governmental bodies shall provide leadership to
+
+31
+
+overcome todays inadequate testing and evaluation programs of the robotic self driving
+
+32
+
+cars. Cummings suggested that the automated driving community could learn and follow
+21
+
+1
+
+practices from other domains, such as aviation. The Federal Aviation Administration (FAA),
+
+2
+
+for example, has explicit certification processes for certifying aircraft software, and they
+
+3
+
+would never allow commercial aircrafts to execute automatic landings without verifiable
+
+4
+
+test evidence. Similarly, road transport governmental bodies worldwide may have to deny
+
+5
+
+certification to self driving cars, until the industry provides greater transparency and reveals
+
+6
+
+how they are conducting the testing of their cars. Such an action, may hinder short term
+
+7
+
+deployment and innovation, but could be essential for the long term deployment and
+
+8
+
+subsequently for the overall safety improvement on public roads.
+
+9
+
+It may be argued that our concerns and recommendations hardly differ from early HF
+
+10
+
+lessons learned from aviation and other automation domains (e.g., Bainbridge, 1983; Fitts,
+
+11
+
+1951; Parasuraman, 1987; Wickens et al., 1998). For example, an early report on HF for
+
+12
+
+future air traffic control stated: men, on the whole, are poor monitors. We suggest that
+
+13
+
+great caution be exercised in assuming that men can successfully monitor complex
+
+14
+
+automatic machines and take over if the machine breaks down (Fitts, 1951, p. 11, see also
+
+15
+
+De Winter and Dodou, 2014), a statement that closely mirrors the interviewees statements.
+
+16
+
+Why HF researchers seem to convey the same message for decades is a question that
+
+17
+
+deserves further consideration. Does it mean that HF is making little fundamental progress
+
+18
+
+while technology advances apace, or does it mean that HF scientists have a consistent yet
+
+19
+
+crucial role in warning and advising prior to the introduction of disruptive automation
+
+20
+
+technology?
+
+21
+22
+
+Acknowledgments
+
+23
+
+This work was supported by the Marie Curie ITN HFAuto (PITN GA 2013 605817, http://hf
+
+24
+
+auto.eu).
+
+25
+26
+
+About the authors
+
+27
+
+Miltos Kyriakidis received his MSc degree in Mechanical Engineering from ETH Zurich and
+
+28
+
+his PhD degree in Human Factors and Railway Safety from Imperial College London in 2009
+
+29
+
+and 2014 respectively. He investigated legal aspects and market acceptance of automated
+
+30
+
+driving at TU Delft in 2014 and 2015. He is currently working at the Singapore ETH Centre,
+22
+
+1
+
+conducting research in the fields of human performance, human reliability, safety and
+
+2
+
+resilience of critical infrastructure. His research interests include human factors, human
+
+3
+
+performance, human reliability analysis, and safety of complex socio technical systems, such
+
+4
+
+as the energy sector, transportation systems, water and wastewater systems, healthcare
+
+5
+
+and public health, emergency services, and communication services.
+
+6
+7
+
+Joost C. F. de Winter received his MSc degree in aerospace engineering and PhD degree
+
+8
+
+(cum laude) from the Delft University of Technology, Delft, the Netherlands, in 2004 and
+
+9
+
+2009, respectively. He is currently an associate professor at the Department of Mechanical
+
+10
+
+Engineering, Delft University of Technology. His interests include human factors and
+
+11
+
+statistical modelling, including the study of individual differences, driver behaviour
+
+12
+
+modelling, multivariate statistics, and research methodology. Joost de Winter is recipient of
+
+13
+
+the 2014 Human Factors prize awarded by the Human Factors and Ergonomics Society.
+
+14
+15
+
+Neville Stanton, PhD, DSc, is both a chartered psychologist and a chartered engineer and
+
+16
+
+holds the Chair in Human Factors in the Faculty of Engineering and the Environment at the
+
+17
+
+University of Southampton. He has degrees in psychology, applied psychology, and human
+
+18
+
+factors engineering. His research interests include modelling, predicting, and analysing
+
+19
+
+human performance in transport systems as well as designing interfaces between humans
+
+20
+
+and technology. Prof. Stanton has been working on cockpit design in automobiles and
+
+21
+
+aircraft over the past 25 years, in a variety of automation projects. He has published over 30
+
+22
+
+books and 240 journal papers on ergonomics and human factors, and is currently an editor
+
+23
+
+of the peer reviewed journal Ergonomics. The Institution of Ergonomics and Human Factors
+
+24
+
+awarded him The Otto Edholm Medal in 2001, The Presidents Medal in 2008, and The Sir
+
+25
+
+Frederic Bartlett Medal in 2012 for his contribution to basic and applied ergonomics
+
+26
+
+research. The Royal Aeronautical Society awarded him and his colleagues the Hodgson Prize
+
+27
+
+and Bronze Medal in 2006 for research on the design induced flight deck error.
+
+28
+29
+
+Thierry Bellet has 3 master degrees (in Cognitive Psychology, University of Lyon, 1990; in
+
+30
+
+Ergonomics, University of Paris, 1991 and in Artificial Intelligence, Telecom ParisTech, 1993),
+
+31
+
+and received his PhD in Cognitive Ergonomics in 1998 from the University of Paris 5. His
+
+32
+
+research interests mainly embrace cognitive modelling and simulation of the human driver
+
+33
+
+(i.e., COSMODRIVE model) and cognitive engineering for advanced driving aids and vehicle
+
+34
+
+automation. From 1998 to 2008, he collaborated with UC Berkeley (PATH) on the driver
+
+23
+
+1
+
+modelling issue for Automated Highway. Since 2000, he also participated in 20 National and
+
+2
+
+European research projects dedicated to Situational Awareness modelling, embedded
+
+3
+
+systems for driver monitoring, Human Machine Cooperation simulation and the Virtual
+
+4
+
+Human Centred Design of Intelligent Co Piloting systems.
+
+5
+6
+
+Bart van Arem received his MSc and PhD degrees in applied mathematics, specialising on
+
+7
+
+queuing theory from the University of Twente, Enschede, the Netherlands, in 1986 and
+
+8
+
+1990, respectively. From 1992 to 2009, he was a researcher and a programme manager with
+
+9
+
+TNO, working on intelligent transport systems, in which he has been active in various
+
+10
+
+national and international projects. From 2003 to 2012, Bart was a part time full professor
+
+11
+
+Applications of Integrated Driver Assistance (AIDA) at the University of Twente. Since 2009,
+
+12
+
+he has been a full professor of transport modelling with the Department of Transport and
+
+13
+
+Planning, Delft University of Technology, Delft, the Netherlands, focusing on the impact of
+
+14
+
+intelligent transport systems on mobility, in particular cooperative and automated driving.
+
+15
+16
+
+Karel Brookhuis completed his studies in Psychology at the University of Groningen in 1979,
+
+17
+
+specialising in experimental psychology and psychophysiology. He then started as a research
+
+18
+
+fellow (PhD student) at the Institute for Experimental Psychology with a special topic in
+
+19
+
+psychophysiology (ERP). His thesis is titled Event Related Potentials and Information
+
+20
+
+Processing. From 1983 on, he was senior researcher at the Traffic Research Centre of the
+
+21
+
+University of Groningen. In 1986 he became head (section coordinator) of the department of
+
+22
+
+"Biopsychological aspects of driving behaviour, later Task Performance and Cognition.
+
+23
+
+Since 1994 he was additionally appointed the Research Manager of the Institute, responsible
+
+24
+
+for the Centres research planning and quality control. At that time the Centre employed
+
+25
+
+some 50 people. After the Centre was closed on 1st January 2000, he became professor at
+
+26
+
+the department of Experimental and Work Psychology of the University of Groningen and
+
+27
+
+(part time) professor at the Section of Transport Policy and Logistics at Delft University of
+
+28
+
+Technology.
+
+29
+30
+
+Marieke Martens is a Professor in the area of Human Factors and Intelligent Transport
+
+31
+
+Systems. After studying Cognitive Psychologist, she started working at TNO Human Factors
+
+32
+
+in 1996. She holds a PhD degree from the Free University in Amsterdam on the effects of
+
+33
+
+expectations on visual attention and perception in driving. In the last 20 years, she
+
+34
+
+conducted research on driving behaviour, traffic safety, road design, driver support systems,
+
+24
+
+1
+
+driver state (fatigue, workload, attention, expectations) and automated driving. Since 2009
+
+2
+
+she is affiliated with the University of Twente, working in the area of driver support and
+
+3
+
+automation from a human factors point of view. Since 2014, Marieke works as a full
+
+4
+
+Professor of ITS & Human Factors at the Centre for Transport Studies. Her research interests
+
+5
+
+include driver support, Human Machine Interaction, cooperative systems, driving simulators,
+
+6
+
+driving behaviour, and traffic safety, and she guides several PhDs at this topic. She is leading
+
+7
+
+the Human Factors programme of the Dutch Integrated Testsite for Cooperative Mobility
+
+8
+
+(DITCM).
+
+9
+10
+
+Klaus Bengler graduated in psychology at the University of Regensburg in 1991 and received
+
+11
+
+his Doctorate in 1994 in cooperation with BMW. After his diploma he was active on topics of
+
+12
+
+software ergonomics and evaluation of human machine interfaces. He investigated the
+
+13
+
+influence of additional tasks on driving performance in several studies within EMMIS EU
+
+14
+
+project and in contract with BMW. Multifunctional steering wheels, touchscreens, and ACC
+
+15
+
+functionality are examples of his research topics. In 1997 he joined BMW. From several
+
+16
+
+projects he is experienced with experimental research with different kind of driving
+
+17
+
+simulators, as well as field trials. At BMW he was responsible for the HMI project of the
+
+18
+
+MOTIV programme, a national fellow of the PROMETHEUS program. He was work package
+
+19
+
+leader in an actual EU project Speechdat Car, dealing with voice recognition in vehicles.
+
+20
+
+Within BMW Research and Technology, he was responsible for projects on HMI research. He
+
+21
+
+was active as a sub project leader for subproject 2 Evaluation und Methodology within the
+
+22
+
+EU funded integrated project AIDE. He is active member of ISO TC22 SC13 WG8 Road
+
+23
+
+vehicles Ergonomic aspects of transport information and control systems and chairman of
+
+24
+
+the German delegation. Since May 2009 he is leader of the Institute of Ergonomics at
+
+25
+
+Technical University Munich which is active in research areas like digital human modelling,
+
+26
+
+human robot cooperation, driver assistance, automated driving and human reliability.
+
+27
+
+Among intensive industrial cooperation the Institute is engaged in the funded Projects DH
+
+28
+
+Ergo on Digital Human Modeling and ECOMOVE on anticipative driving and H Mode or
+
+29
+
+D3COS on highly automated and cooperative driving. He is project leader in the German
+
+30
+
+research initiative UR:BAN that investigates the potential of driver assistance and active
+
+31
+
+safety systems in the urban area.
+
+32
+33
+
+Jan Andersson received his MSc degree in psychology and PhD degree (cognitive
+
+34
+
+psychology) from the Linkping University, Sweden, in 1991 and 1996, respectively. He is
+
+25
+
+1
+
+currently a professor (in Human System Interaction) at The Swedish Road and Transport
+
+2
+
+Institute (VTI). He is also affiliated to the Behaviour Science department at Linkping
+
+3
+
+University. His interests include human factors and fitness to drive, traffic medicine and self
+
+4
+
+explaining roads, including the study of individual differences and research methodology.
+
+5
+6
+
+Natasha Merat is Professor of Human Factors of Automated Systems, at the Institute for
+
+7
+
+Transport Studies, University of Leeds and Leader of the Human Factors and Safety Group.
+
+8
+
+Her main research interests are in understanding the interaction of road users with new
+
+9
+
+technologies, both in and out of the vehicle. She applies this interest to studying factors such
+
+10
+
+as driver distraction and driver impairment and more recently she has been studying the
+
+11
+
+human factors implications of highly automated vehicles, including the needs of Vulnerable
+
+12
+
+Road Users interacting with AVs.. She has been Principal Investigator or Project Manager to
+
+13
+
+a number of projects on studying human factors and driver behaviour, funded by UK
+
+14
+
+research councils, the European Commission, Highways England and the Department for
+
+15
+
+Transport. Professor Merat has also been guest editor of two journal series publications in
+
+16
+
+recent years (Human Factors Journal, 2012, and Transportation Research Part F, 2014),
+
+17
+
+bringing together the latest results of studies from around the globe on how vehicle
+
+18
+
+automation may affect driver behaviour and performance. She is Chair of the TRB sub
+
+19
+
+committee on Human factors in road vehicle automation, an editorial board member of the
+
+20
+
+European Transport Research Review and the newly established International Journal of
+
+21
+
+Driving Science. She is also expert member of the European Commission H2020 Transport
+
+22
+
+Advisory Group and AutoLiv Inc.
+
+23
+24
+
+Nick Reed joined the Human Factors and Simulation group at TRL in January 2004 following
+
+25
+
+post doctoral work in visual perception at the University of Oxford and in 2014 became
+
+26
+
+director of TRLs Academy, co ordinating scientific activities across the business. He has led a
+
+27
+
+wide variety of research studies using the full mission, high fidelity car and truck simulators
+
+28
+
+with a number of published articles, conference papers, and appearances in national and
+
+29
+
+international media. Nick also championed work in the area of vehicle automation at TRL,
+
+30
+
+culminating in technical leadership of the GATEway (Greenwich Automated Transport
+
+31
+
+Environment) project  a flagship UK Government project to investigate the implications of
+
+32
+
+the introduction of automated vehicles in the urban environment. In 2015, he was awarded
+
+33
+
+a visiting professorship in the Engineering and Physical Sciences faculty at the University of
+
+34
+
+Surrey and is a chartered psychologist and chartered scientist.
+
+26
+
+1
+2
+
+Maxime Flament joined ERTICO ITS Europe in 2003. He is Head of Department for
+
+3
+
+Connectivity and Automation and leading contributor to many European activities on Road
+
+4
+
+Safety, Connected Vehicles, Automated Driving, large scale Field Operational Tests, and
+
+5
+
+Digital Mapping. He is European Chair of the Trilateral EU US Japan WG on Automation in
+
+6
+
+Road Transport. He is also Sherpa expert for the European commission GEAR2030, member
+
+7
+
+of the DG MOVE C ITS platform, co chair of the iMobility Forum Working Group on Probe
+
+8
+
+Data and member of the ERTRAC WG on Connected and Automated Driving. Maxime holds a
+
+9
+
+MSc (1997) and PhD (2002) in Electrical Engineering from Chalmers Technical University,
+
+10
+
+Sweden. He also holds an Ingnieur Civil degree from the Free university of Brussels
+
+11
+
+(1997). In 2001, he was visiting researcher at Stanford University, CA, USA.
+
+12
+13
+
+Marjan Hagenzieker is Professor Traffic Safety at Delft University of Technology and
+
+14
+
+Scientific Advisor at SWOV Institute for Road Safety Research. She graduated in
+
+15
+
+experimental psychology at Leiden University, and received her Doctorate (PhD) on
+
+16
+
+the effects of rewards on road user behavior, also from Leiden University. Her research and
+
+17
+
+education activities focus on the road safety effects of the transport system, with particular
+
+18
+
+interest in road user behavior aspects. Her current research particularly focuses on how to
+
+19
+
+ensure road safety in modern urban environments with many different kinds of road users
+
+20
+
+and divergent interests. Specific research topics include road user interactions with road
+
+21
+
+infrastructure, in vehicle technology, automated vehicles, distraction in traffic, and safety of
+
+22
+
+vulnerable road users (e.g., older persons, bicyclists). She has participated in many EU
+
+23
+
+funded projects in the area of road safety, and is co organizer of the Delft Road
+
+24
+
+Safety Course for road safety professionals in Low and Middle Income Countries.
+
+25
+26
+
+Riender Happee received his MSc in Mechanical Engineering (1986) and PhD (1992) at TU
+
+27
+
+Delft. He investigated crash safety at TNO Automotive (1992 2007), is currently at TU Delft
+
+28
+
+at the Faculties of Mechanical, Maritime and Materials Engineering, and Civil Engineering
+
+29
+
+and Geosciences, and is visiting professor at the Technical University of Munich. He
+
+30
+
+coordinates
+
+31
+
+http://davi.connekt.nl, WEpods, a national project on driverless public transport in urban
+
+32
+
+conditions http://davi.connekt.nl/wepods project and HFAuto
+
+33
+
+Automated Driving, a European project focussing on safe user interaction with automated
+
+34
+
+vehicles in highway conditions http://hf auto.eu.
+
+research
+
+in
+
+the
+
+Dutch
+
+Automated
+
+Vehicle
+
+Initiative
+
+(DAVI)
+
+Human Factors of
+
+27
+
+1
+
+ORCID
+
+2
+3
+4
+5
+6
+
+Joost C.F. de Winter orcid.org/0000 0002 1281 8200
+Neville Stanton orcid.org/0000 0002 8562 3279
+Natasha Merat orcid.org/0000 0003 4140 9948
+Riender Happee orcid.org/0000 0001 5878 3472
+
+7
+
+Appendix
+A Human Factors Perspective on Automated Driving Questionnaire
+
+8
+9
+
+Instructions
+
+10
+11
+
+In these interviews we are investigating expert opinions and vision on automated driving
+focusing on Human Factors challenges.
+
+12
+
+In the interview we are adopting the SAE levels of automation, as shown in Figure 1.
+
+13
+14
+
+This interview will discuss strengths, weaknesses, opportunities and threats of automated
+driving, as well as your vision on the deployment of those vehicles.
+
+15
+
+Short term period: Up to 2020, Medium term: 2020 to 2030, Long term: Beyond 2030.
+
+16
+17
+
+Figure 1: Levels of automation as defined by the SAE International
+
+Narrative definition
+
+NHTSA
+level
+
+Name
+
+Execution of
+Fallback
+System
+steering and Monitoring of performance capability
+acceleration/
+driving
+of dynamic
+(driving
+deceleration environment driving task
+modes)
+
+BASt
+level
+
+Level
+
+Summary of Levels of Driving Automation for On-road Vehicles
+
+Human driver monitors the driving environment
+
+the driving mode-specific execution by one or more driver assistance systems of both
+steering and acceleration/deceleration using information about the driving environment
+Partial
+and with the expectation that the human driver perform all remaining aspects of the
+Automation
+dynamic driving task
+
+Driver
+only
+
+2
+
+Assisted
+
+Driver
+Assistance
+
+1
+
+Partially
+automated
+
+1
+
+0
+
+2
+
+3
+
+Conditional
+Automation
+
+the driving mode-specific performance b y an automated driving system of all aspects of
+the dynamic driving task with the expectation that the human driver will respond
+appropriately to a request to intervene
+
+System
+
+System
+
+Human driver
+
+Some
+driving
+modes
+
+Highly
+automated
+
+the full-time performance by the human driver of all aspects of the dynamic driving task,
+No
+Human driver Human driver Human driver
+even when enhanced by warning or intervention systems
+Automation
+
+3
+
+4
+
+High
+Automation
+
+the driving mode-specific performance b y an automated driving system of all aspects of
+the dynamic driving task, even if a human driver does not respond appropriately to a
+request to intervene
+
+System
+
+System
+
+System
+
+Some
+driving
+modes
+
+Fully
+automated
+
+0
+
+5
+
+the full-time performance by an automated driving system of all aspects of the dynamic
+Full
+driving task under all roadway and environmental conditions that can be manage d by a
+Automation
+human driver
+
+System
+
+All driving
+modes
+
+the driving mode-specific execution by a driver assistance system of either
+steering or acceleration/decelerati on using information about the driving environment
+and with the expectation that the human driver perform all remaining aspects of the
+dynamic driving task
+
+Human driver
+Human driver Human driver
+and system
+
+System
+
+Human driver Human driver
+
+n/a
+
+Some
+driving
+modes
+
+Some
+driving
+modes
+
+Automated driving system (system) monitors the driving environment
+
+18
+
+System
+
+System
+
+-
+
+3/4
+
+Source: SAE Standard J3016 Report
+
+28
+
+Questions
+The first set of questions relates to SAE levels 3 5 of automation (strengths, weaknesses,
+threats)
+(1) In automated vehicles where drivers are expected to respond appropriately to a request
+to intervene, what would you consider as the main strengths and weaknesses (threats)?
+(2) In automated vehicles where drivers are not expected to respond appropriately to a
+request to intervene, what would you consider as the main strengths and weaknesses
+(threats)?
+(3) What are your safety expectations of automated driving? How do you vision public
+acceptance concerning safety expectations of automation induced accidents?
+(4) What are your expectations in law changes regarding automated vehicles? When do you
+think that such changes will take place?
+(5) How much would you expect that an automated vehicle would cost, on top of the price of
+an average vehicle?
+(6) If we assume that all legal issues about automated driving are resolved tomorrow, are we
+ready to deploy automated vehicles? Which Level?
+The second group of questions relates to all levels of automation (vision on automated driving
+technology)
+(1) When are you expecting highly automated driving vehicles to be deployed on public
+roads?
+(2) When are you expecting most of the cars to be driven fully automated on public roads?
+(3) In which driving scenario are you expecting the first automated vehicles to be introduced
+(e.g. highways, parking, maybe asking about passenger cars or trucks)
+(4) When are you expecting highly (and fully) automated vehicles to be operating in cities?
+(5) How do you vision the role of drivers in the future? Supervisor, driver, passenger?
+(6) Do you think that the highly levels of automation are needed? Why not jumping directly
+to FAD?
+(7) What do you think on Google's decision to directly introduce FAD vehicles?
+(8) The Vienna Convention on Road Traffic requires that every moving vehicle or
+combination of vehicles shall have a driver and that every driver shall at all times, be
+able to control his vehicle. The Convention is currently in the process of being amended
+to allow a car to drive itself so long as the system can be overridden or switched off by the
+driver. Do you think that this amendment is sufficient? Do we need the Vienna
+Convention? Do you think that we could abolish it (after all the US or the UK have never
+ratified it).
+(9) AVs have the potential to reduce crashes and improve roadway efficiency significantly.
+Yet, AVs will occasionally be crashing and being involved into accidents. Subsequently, a
+number of ethical dilemmas arise, e.g. what decision a FAD will take when detecting an
+imminent, unavoidable accident? How should such dilemmas be addressed? For instance,
+should a HAD or FAD vehicle stop before hitting a cat, even if this could be dangerous for
+its passengers?
+
+(10) Do you consider the Human Factors research important for the development and
+deployment of automated driving vehicles? Why do you consider it important? Why dont
+you consider it important?
+(11) What would you consider the most important Human Factors issues for the different
+levels of automation? Why?
+(12) How could HFs science contribute to overcome the legal barriers towards the deployment
+of AVs?
+(13) Towards the deployment of AVs, which are the most critical challenges, the technological
+or the HFs? An example?
+(14) In automated (non fully) vehicles should drivers be allowed not to supervise their vehicle
+for more than a defined period of time? Could you define this period?
+(15) How should a driver be informed about a failure in the system of an automated? Should
+the car directly come to a stop?
+(16) Today, simulation studies investigate the behaviour of drivers for the different levels of
+automation. Do you think that results from those studies replicate the behaviour of
+drivers on real life traffic conditions? How could we overcome this problem?
+(17) How the HFs science should tackle the issues about driver's workload in CAD and HAD
+modes? How to deal with high workload to boredom and complacency?
+(18) How HFs scientist can define the sufficient time that a driver needs to safely take over
+control at any situation? Do we need to precisely define this time before deploying AVs on
+the public roads?
+(19) Once fully automated vehicles are introduced would we need HFs scientists any longer?
+Why? Why not?
+(20) In fully automated vehicles would steering wheels be necessary? If yes, how do you vision
+wheels design, e.g. round or F1 type wheels? Should the wheels be moving or staying
+still? If not, what could replace the steering wheels?
+(21) In highly automated vehicles what kind of secondary tasks could drivers be engaged in?
+What kind of secondary tasks should not be allowed?
+(22) In fully automated vehicles what kind of secondary tasks could drivers be engaged in?
+What kind of secondary tasks should not be allowed?
+(23) While driving in a fully automated vehicle could we be sleeping? Or being drunk? Or
+should people under 18 or over 90 be allowed to drive them?
+(24) Would you send your fully automated vehicle to pick your kid up from school?
+(25) Should a fully automated vehicle have any marks to indicate its level of automation?
+(26) Do we need complex dashboards in fully automated driving vehicles? Could a "Function" /
+"Non function" indicator be just sufficient? Any other suggestions?
+(27) How would you expect the status quo of the current car ownership to change in the short
+/ medium / long term? Will people continue buying vehicles when fully automated
+vehicles are deployed or will sharing?
+(28) Do you think that people will ever be ready to completely relinquish the control over
+their vehicles to a computer?
+(29) What do you think of the current description of automated driving in the media?
+
+30
+
+References
+AdaptiVe. 2014a. AdaptiVe Automated Driving. https://www.adaptive ip.eu/.
+Bainbridge, L. 1983. "Brief paper: Ironies of automation." Automatica 19 (6): 775 779. doi:
+10.1016/0005 1098(83)90046 8.
+Banks, Victoria A., and Neville A. Stanton. 2016. "Keep the driver in control: Automating
+automobiles of the future." Applied Ergonomics 53, Part B:389 395. doi:
+http://dx.doi.org/10.1016/j.apergo.2015.06.020.
+BEA. 2012. Final report on the accident on 1st June 2009 to the Airbus A330 203 registered F
+GZCP operated by Air France flight AF 447 Rio de Janeiro  Paris. Paris: Bureau
+dEnqutes et dAnalyses pour la scurit de laviation civile.
+Begg, D. (2014). A 2050 vision for London: What are the implications of driveless transport.
+London, UK.
+Bellet, T., P. Mayenobe, J. C. Bornard, D. Gruyer, and B. Claverie. 2012. "A computational
+model of the car driver interfaced with a simulation platform for future virtual human
+centred design applications: COSMO SIVIC." Engineering Applications of Artificial
+Intelligence 25 (7): 1488 1504. doi: 10.1016/j.engappai.2012.05.010.
+Bellet, T., H. Tattegrain Veste, A. Chapon, M. P. Bruyas, G. Pachiaudi, P. Deleurence, and V.
+Guilhon. 2003. "Ingnierie cognitive dans le contexte de l'assistance  la conduite
+automobile." In Ingnierie cognitive: IHM et Cognition, edited by G. Boy, 323 414.
+Paris: Herms Science Lavoisier.
+Bement, A. L. Jr., H. H. Richardson, L. D. Dahms, T. B. Deen, J. J. Fearnsides, M. M. Finkelstein,
+T. D. Larson et al. 1998. Review of the national automated highway system research
+program. Washington, DC: National Academy of Sciences.
+Blum, S. 2016. "Tesla Owners 'Summon' Cars to Their Exact Location with New Feature."
+Inverse. https://www.inverse.com/article/10067 tesla owners summon cars to their
+exact location with new feature.
+Brookhuis, K. A., C. J. G. van Driel, T. Hof, B. van Arem, and M. Hoedemaeker. 2008. "Driving
+with a congestion assistant; mental workload and acceptance." Applied Ergonomics 40
+(6): 1019 1025. doi: 10.1016/j.apergo.2008.06.010.
+Casley, S. V., A. S. Jardim, and A. M. Quartulli. 2013. A Study of Public Acceptance of
+Autonomous Cars. Worcester, MA, USA, Worcester Polytechnic Institute. Bachelor of
+Science.
+Casner, S.M., E. L. Hutchins, and D. A. Norman. 2016. The challenges of partially automated
+driving. Commun. ACM 59 (5): 70 77.doi: 10.1145/2830565.
+
+31
+
+CityMobil. 2014b. http://www.citymobil project.eu/.
+Coelingh, E. 2013. Autonomous driving: The SARTRE project and beyond. Presented at
+AUVSI 2013 Driverless Car Summit, Detroit, MI.
+Cummings, M.L. 2016. Hands Off: The Future of Self Driving Cars. U.S. Senate Committee on
+Commerce,
+
+Science,
+
+and
+
+Transportation,
+
+Washington
+
+DC.
+
+Retrieved
+
+from
+
+http://www.commerce.senate.gov/public/index.cfm/2016/3/hands off the future of
+self driving cars.
+De Waard, D., M., Van der Hulst, M. Hoedemaeker, and K. A. Brookhuis. 1999. "Driver behavior
+in an emergency situation in the automated highway system." Transportation Human
+Factors 1 (1): 67 82. doi: 10.1207/sthf0101_7.
+De Winter, J. C. F., R. Happee, M. H. Martens, and N. A. Stanton. 2014. "Effects of adaptive
+cruise control and highly automated driving on workload and situation awareness: A
+review of the empirical evidence." Transportation Research Part F: Traffic Psychology
+and Behaviour 27, Part B (0): 196 217. doi: 10.1016/j.trf.2014.06.016.
+De Winter, J. C. F., and Dodou, D. 2014. "Why the Fitts list has persisted throughout the history
+of function allocation. " Cognition, Technology & Work 16: 111. doi: 10.1007/s10111
+011 0188 1.
+Diels, C., and Bos, J. E. 2016. "Self driving carsickness. " Applied ergonomics 53: 374 382. doi:
+http://dx.doi.org/10.1016/j.apergo.2015.09.009.
+Dragutinovic, N., K. A. Brookhuis, M. Hagenzieker, and V. A. W. J. Marchau. 2005. "Behavioural
+effects of the advanced cruise control use  a meta analytic approach." European
+Journal of Transport and Infrastructure Research 5: 267 280.
+Endsley, M. R. 1996. "Automation and situation awareness." In Automation and human
+performance: Theory and applications, edited by R. Parasuraman and M. Mouloua,
+163 181. Mahwah, NJ: Lawrence Erlbaum.
+ERTRAC Task Force Connectivity and Automated Driving. 2015. Automated Driving Roadmap
+Status: 3rd Draft for public consultation. Brussels: ERTRAC.
+Fagnant, D. J., and K. Kockelman. 2015. "Preparing a nation for autonomous vehicles:
+opportunities, barriers and policy recommendations." Transportation Research Part A:
+Policy and Practice 77: 167 181. doi: 10.1016/j.tra.2015.04.003.
+Fisher, M., N. Reed, and J. Savirimuthu. 2015. "Misplaced Trust?" Engineering and Technology
+Reference:1 7. doi: 10.1049/etr.2014.0054.
+Fitts, P. M. 1951. "Human engineering for an effective air navigation and traffic control
+system. " Washington, DC: National Research Council.
+
+32
+
+GATEway.2014c. GATEway, Greenwich automated transport environment.
+http://www.GATEway project.org.uk.
+Gold, C., D. Dambck, L. Lorenz, and K. Bengler. 2013. "Take over! How long does it take to get
+the driver back into the loop?" Proceedings of the Human Factors and Ergonomics
+Society Annual Meeting 57 (1): 1938 1942. doi: 10.1177/1541931213571433.
+Gold, C., Krber, M., Lechner, D., and Bengler, K. 2016. "Taking Over Control From Highly
+Automated Vehicles in Complex Traffic Situations The Role of Traffic Density." Human
+Factors: The Journal of the Human Factors and Ergonomics Society, 58 (4): 642 652.
+doi: 10.1177/0018720816634226.
+Gouy, M., K. Wiedemann, A. Stevens, G. Brunett, and N. Reed. 2014. "Driving next to
+automated vehicle platoons: How do short time headways influence non platoon
+drivers longitudinal control?" Transportation Research Part F: Traffic Psychology and
+Behaviour 27, Part B: 264 273. doi: 10.1016/j.trf.2014.03.003.
+Hancock, P. A. 2014. "Automation: how much is too much?" Ergonomics 57 (3): 449 454. doi:
+10.1080/00140139.2013.816375.
+Hancock, P.A. 2015. Automobility: The Coming Use of Fully Automated On Road Vehicles.
+2015 IEEE International Multi Disciplinary Conference on Cognitive Methods in
+Situation Awareness and Decision, Orlando, USA, March 9 12.
+Hoc, J M., M. S. Young, and J M. Blosseville. 2009. "Cooperation between drivers and
+automation: implications for safety." Theoretical Issues in Ergonomics Science 10 (2):
+135 160. doi: 10.1080/14639220802368856.
+HFauto.2014d. Human factors of automated driving. http://hf auto.eu/.
+International Transport Forum. 2015. Automated and Autonomous Driving Regulation under
+uncertainty. OECD, Paris, France.
+Kaber, D. B., and M. R. Endsley. 2004. "The effects of level of automation and adaptive
+automation on human performance, situation awareness and workload in a dynamic
+control task." Theoretical Issues in Ergonomics Science 5 (2):113 153. doi:
+10.1080/1463922021000054335.
+Kaber, D. B., Y. Liang, Y. Zhang, M. L. Rogers, and S. Gangakhedkar. 2012. "Driver performance
+effects of simultaneous visual and cognitive distraction and adaptation behavior."
+Transportation Research Part F: Traffic Psychology and Behaviour 15 (5):491 501. doi:
+10.1016/j.trf.2012.05.004.
+Korosec, K. 2015. "Elon Musk Says Tesla Vehicles Will Drive Themselves in Two Years." Fortune.
+http://fortune.com/2015/12/21/elon musk interview/.
+
+33
+
+KPMG.
+
+2013.
+
+"Self Driving
+
+Cars:
+
+Are
+
+We
+
+Ready?"
+
+KPMG
+
+LLP.
+
+http://www.kpmg.com/us/en/issuesandinsights/articlespublications/pages/self
+driving cars are we ready.aspx.
+Kyriakidis, M., R. Happee, and J. C. F. de Winter. 2015. "Public opinion on automated driving:
+Results of an international questionnaire among 5000 respondents." Transportation
+Research
+
+Part
+
+F:
+
+Traffic
+
+Psychology
+
+and
+
+Behaviour
+
+32:
+
+127 140.
+
+doi:
+
+10.1016/j.trf.2015.04.014.
+Lay, R. K., G. M. McHale, and W. B. Stevens. 1996. The United States department of
+transportation status report on the automated highway system program. Washington,
+DC: Department of Transportation, Federal Highway Administration.
+Levitan, L., G. Golembiewski, and J. R. Bloomfield. 1998. "Human Factors Issues for Automated
+Highway Systems." ITS Journal Intelligent Transportation Systems Journal 4 (1 2): 21
+47. doi: 10.1080/10248079808903735.
+Lu, Z., Happee, R., Cabrall, C. D. D., Kyriakidis, M., & De Winter, J. C. F. (2016). Human factors
+of transitions in automated driving: A general framework and literature survey.
+Transportation Research Part F: Traffic Psychology and Behaviour, 43, 183198. doi:
+10.1016/j.trf.2016.10.007.
+Lundgren, V. M., Habibovic, A., Andersson, J., Lagstrm, T., Nilsson, M., Sirkka, A., ... & Salur,
+D. (2017). Will there be new communication needs when introducing automated
+vehicles to the urban context? In N. A. Stanton, S. Landry, G. Di Bucchianico, & A.
+Vallicelli (Eds.), Advances in human aspects of transportation (pp.485 497). Springer
+International Publishing.
+Madigan, R., Louw, T., Dziennus, M., Graindorge, T., Ortega, E., Graindorge, M. & Merat, N.
+(2016). Acceptance of Automated Road Transport Systems (ARTS): an adaptation of
+the UTAUT model, Transportation Research Procedia, 14:2217 2226 December 2016.
+doi: 10.1016/j.trpro.2016.05.237.
+Marinik, A., R. Bishop, V. Fitchett, J. F. Morgan, T. E. Trimble, and M. Blanco. 2014. Human
+factors evaluation of level 2 and level 3 automated driving concepts: Concepts of
+operation. (Report No. DOT HS 812 044). Washington, DC: National Highway Traffic
+Safety Administration.
+Martens, M.H., and A.P. van den Beukel. 2013. "The road to automated driving: dual mode and
+human factors considerations." 16th International IEEE Conference on Intelligent
+Transportation Systems (ITSC 2013), The Hague, the Netherlands, October 6 9.
+
+34
+
+Merat, N., A. H. Jamson, F. C. Lai, and O. Carsten. 2012. "Highly automated driving, secondary
+task performance, and driver state." Human Factors: The Journal of the Human Factors
+and Ergonomics Society 54 (5): 762 771. doi: 10.1177/0018720812442087.
+Merat, N., and J. D. Lee. 2012. "Preface to the special section on human factors and
+automation in vehicles designing highly automated vehicles with the driver in mind."
+Human Factors: The Journal of the Human Factors and Ergonomics Society 54 (5): 681
+686. doi: 10.1177/0018720812461374.
+Merat, N., A. H. Jamson, F. C. H. Lai, M. Daly, and O. M. J. Carsten. 2014. "Transition to manual:
+Driver behaviour when resuming control from a highly automated vehicle."
+Transportation Research Part F: Traffic Psychology and Behaviour 27, Part B: 274 282.
+doi: 10.1016/j.trf.2014.09.005.
+Merat, N. Louw, T., Madigan, R., Dziennus, M., & Scheiben, A. (under review) Communication
+Between VRUs and Fully Automated Road Transport Systems: Whats important?
+(AAP).
+Mui, C., and Carroll, P. B. 2013. Driverless cars. Trillions are up for grabs. Seattle, WA:
+Cornerloft Press.
+Mok, B. K. J., M. Johns, K. J. Lee, H. P. Ive, D. Miller, and W. Ju. 2015. Timing of unstructured
+transitions of control in automated driving. 2015 IEEE Intelligent Vehicles Symposium
+(IV), pp. 1167 1172.
+Naujoks, F., C. Purucker, and A. Neukum. 2016. "Secondary task engagement and vehicle
+automation
+
+Comparing the effects of different automation levels in an on road
+
+experiment." Transportation Research Part F: Traffic Psychology and Behaviour 38:67
+82. doi: 10.1016/j.trf.2016.01.011.
+NHTSA. 2012. Visual manual NHTSA driver distraction guidelines for in vehicle electronic
+devices. Retrieved from https://www.distraction.gov/downloads/pdfs/visual manual
+nhtsa driver distraction guidelines for in vehicle electronic devices.pdf
+NHTSA. 2016. Federal automated vehicles policy: Accelerating the next Revolution in roadway
+safety. Retrieved from https://www.hsdl.org/?view&did=795644.
+Norman, D. A. 2015. "The Human Side of Automation." In Road Vehicle Automation 2, edited
+by G. Meyer and S. Beiker. 73 79. Springer International Publishing.
+NTSB.
+
+2016.
+
+Preliminary
+
+Report
+
+Highway
+
+HWY16FH018.
+
+Retrieved
+
+from:
+
+https://www.ntsb.gov/investigations/AccidentReports/Pages/HWY16FH018
+preliminary.aspx.
+Nez Velasco, J. P., Rodriguez, P., Farah, H. and Hagenzieker, M. (2016). Safety of
+pedestrians and cyclists when interacting with self driving vehicles: A case study of the
+35
+
+WEpods. ITRL Conference on Integrated Transport 2016: Connected & Automated
+Transport Systems. KTH Royal Institute of Technology, Stockholm, Sweden. 29 30th of
+November 2016.
+Parasuraman, R. 1987. "Human Computer Monitoring." Human Factors: The Journal of the
+Human
+
+Factors
+
+and
+
+Ergonomics
+
+Society
+
+29
+
+(6):
+
+695 706.
+
+doi:
+
+10.1177/001872088702900609.
+Parasuraman, R., and V. Riley. 1997. "Humans and Automation: Use, Misuse, Disuse, Abuse."
+Human Factors: The Journal of the Human Factors and Ergonomics Society 39 (2): 230
+253. doi: 10.1518/001872097778543886.
+Payre, W., J. Cestac, and P. Delhomme. 2014. "Intention to use a fully automated car: Attitudes
+and a priori acceptability." Transportation Research Part F: Traffic Psychology and
+Behaviour 27:252 263. doi: 10.1016/j.trf.2014.04.009.
+Poulin, C., N. A. Stanton, D. Cebon, and W. Epple. 2015. Responses to Autonomous vehicles.
+Ingenia
+
+62:
+
+8 11.
+
+Retrieved
+
+from:
+
+http://www.ingenia.org.uk/Content/ingenia/issues/issue62/Issue62_Letters.pdf.
+Radlmayr, J., C. Gold, L. Lorenz, M. Farid, and K. Bengler. 2014. "How Traffic Situations and
+Non Driving Related Tasks Affect the Take Over Quality in Highly Automated Driving."
+Proceedings of the Human Factors and Ergonomics Society Annual Meeting 58 (1):
+2063 2067. doi: 10.1177/1541931214581434.
+RDW. 2014. Zelfrijdende auto.
+https://www.internetconsultatie.nl/zelfrijdendevoertuigen.
+Rothenbcher, D., Li, J., Sirkin, D., Mok, B., & Ju, W. (2016). Ghost driver: A field study
+investigating the interaction between pedestrians and driverless vehicles.
+Proceedings of the 25th IEEE International Symposium on Robot and Human Interactive
+Communication. New York, NY.
+SAE International. 2014. Taxonomy and Definitions for Terms Related to On Road Motor
+Vehicle Automated Driving Systems.
+SAE International. 2016. Taxonomy and Definitions for Terms Related to Driving Automation
+Systems for On Road Motor Vehicles.
+Salmon, P. M., N. A. Stanton, and K. L. Young. 2012. "Situation awareness on the road: review,
+theoretical and methodological issues, and future directions." Theoretical Issues in
+Ergonomics Science 13 (4): 472 492. doi: 10.1080/1463922X.2010.539289.
+Sarter, N. B., and D. D. Woods. 1995. "How in the World Did We Ever Get into That Mode?
+Mode Error and Awareness in Supervisory Control." Human Factors: The Journal of the
+
+36
+
+Human
+
+Factors
+
+and
+
+Ergonomics
+
+Society
+
+37
+
+(1):
+
+5 19.
+
+doi:
+
+10.1518/001872095779049516.
+Schieben, A., F. Flemish, M. Martens, E. Wilschut, A. Rambaldini, A. Tofetti, G. Turi, C. Arduino,
+N. Merat, and H. Jamson. 2008. Test results of HMI in use on cars and with simulators.
+CityMobil Deliverable 3.2.2 EU DG Research.
+Shladover, S. E. 2016. The truth about self driving cars. Scientific American 314 (6): 52 57.
+doi: 10.1038/scientificamerican0616 52.
+Schoettle, B., and M. Sivak. 2014a. "A survey of public opinion about autonomous and self
+driving vehicles in the U.S., the U.K., and Australia." The University of Michigan
+Transportation Research Institute, Michigan, USA.
+Schoettle, B., and M. Sivak. 2014b. "Public Opinion About Self Driving Vehicles in china, India,
+Japan, the US, the UK and Australia." The University of Michigan Transportation
+Research Institute, Michigan, USA.
+Sommer, K. 2013. Continental Mobility Study 2013. Continental AG.
+Stanton, N. A., and M. Young. 2005. "Driver behaviour with Adaptive Cruise Control."
+Ergonomics 48 (10): 1294 1313. doi: 10.1080/00140130500252990.
+Stanton, N. A., M. Young, and B. McCaulder. 1997. "Drive by wire: The case of driver workload
+and reclaiming control with adaptive cruise control." Safety Science 27 (23): 149 159.
+doi: 10.1016/S0925 7535(97)00054 4.
+Stanton, N. A., A. Dunoyer, and A. Leatherland. 2011. "Detection of new in path targets by
+drivers using Stop & Go Adaptive Cruise Control." Applied Ergonomics 42 (4): 592 601.
+doi: 10.1016/j.apergo.2010.08.016.
+Tesla, 2016. All Tesla cars being produced now have full self driving hardware. Retrieved from
+https://www.tesla.com/blog/all tesla cars being produced now have full self driving
+hardware.
+Trimble, T. E., R. Bishop, J. F. Morgan, and M. Blanco. 2014. Human factors evaluation of level 2
+and level 3 automated driving concepts: Past research, state of automation
+technology, and emerging system concepts. (Report No. DOT HS 812 043).
+Washington, DC: National Highway Traffic Safety Administration.
+Underwood, S. E. 2014. Automated Vehicles Forecast Vehicle Symposium Opinion Survey.
+Automated Vehicles Symposium 2014, San Francisco, CA.
+Vehicle and Road Automation. 2013. VRA
+
+Support action for vehicle and road automation.
+
+http://vra net.eu/.
+Verberne, F. M. F., J. Ham, and C. J. H. Midden. 2012. Trust in smart systems: Sharing driving
+goals and giving information to increase trustworthiness and acceptability of smart
+37
+
+systems in cars. Human Factors: The Journal of the Human Factors and Ergonomics
+Society, 54 (5), 799 810. doi: 10.1177/0018720812443825.
+Vlakveld, W. 2015. Transition of control in highly automated vehicles. (Report No. 22). The
+Hague: SWOV.
+Walker, G. H., N. A. Stanton, and P. M. Salmon. 2015. Human Factors in Automotive
+Engineering and Technology. Aldershot: Ashgate.
+Warm, J. S., R. Parasuraman, and G. Matthews. 2008. "Vigilance Requires Hard Mental Work
+and Is Stressful." Human Factors: The Journal of the Human Factors and Ergonomics
+Society 50 (3): 433 441. doi: 10.1518/001872008x312152.
+WEpods.2014e. WEpods project. http://davi.connekt.nl/wepods project/.
+Whitmore, A., and N. Reed. 2015. "The Role of Physiological Monitoring in the Implementation
+of Vehicle Automation." Engineering and Technology Reference: 1 9. doi:
+10.1049/etr.2014.0057.
+Wickens C., Mavor A. S., Parasuraman R., and McGee J. P. (1998) The future of air traffic
+control. Human operators and automation. National Academy Press, Washington, DC.
+Young, M. S., N. A. Stanton, and D. Harris. 2007. "Driving automation: Learning from aviation
+about design philosophies." International Journal of Vehicle Design 45 (3): 323 338.
+doi: 10.1504/IJVD.2007.014908.
+Zeeb, K., Buchner, A., and Schrauf, M. 2015. "What determines the take over time? An
+integrated model approach of driver take over after automated driving." Accident
+Analysis & Prevention, 78, 212 221. doi: 10.1016/j.aap.2015.02.023.
+
+38
+
+View publication stats
+
+

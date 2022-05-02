@@ -1,0 +1,835 @@
+Intelligent Transportation Systems
+
+Artificial Societies for
+Integrated and Sustainable
+Development of Metropolitan
+Systems
+
+Editor: Fei-Yue Wang
+University of Arizona and
+Chinese Academy of Science
+feiyue@sie.arizona.edu
+
+Fei-Yue Wang, Chinese Academy of Sciences and the University of Arizona
+Shuming Tang, Shandong Academy of Sciences, China
+
+O
+
+ver the past 15 years, Chinas urbanization has almost
+doubled, with approximately 31 percent of the popu-
+
+lation now living in one of the countrys 660 cities or 19,000
+towns. This rapid increase in metropolitan population and
+other urbanization activities has imposed a huge demand
+on Chinese metropolitan transportation systems, most of
+which werent prepared for such development. For example, in 2003, the number of passenger vehicles increased
+by 85 percent, compared to an average of 1.5 percent in
+the rest of the world.1 Additionally, 667,507 traffic accidents were reported, causing 104,372 deaths and 494,174
+injuries and making traffic accidents the number-two
+cause of accidental deaths of children in China.1
+Pollution is another transportation-related problem in
+China, contributing to over 90 percent of the total noise
+intensity and 60 percent carbon monoxide emissions, 50
+percent nitrogen oxide emissions, and 30 percent hydrocarbon emissions in the metropolitan areas.1 According to
+the UNDP Chinas National Human Development Report,
+
+Editors Perspective
+This issues article is based on a discussion at the IEEE/CAS Workshop on Artificial Transportation Systems, held 2526 April 2004 in
+Shanghai and on objectives of the Technical Committee on Artificial
+Transportation Systems (ATS), recently established by the IEEE Intelligent Transportation Systems Council. The ATS Technical Committee will develop standard techniques beyond computer simulations
+to analyze, evaluate, control, and manage transportation systems.
+The goal is to use concepts and methods in artificial and complex
+systems in ITS, and clearly artificial intelligence, life, and societies
+will play a key role in this new direction of ITS research.
+Feel free to contact me if you have any comments about this
+department. I also seek contributions on the status of ITS projects
+worldwide and on innovative ideas and trends in future transportation systems. Contact me at feiyue@sie.arizona.edu.
+Fei-Yue Wang
+
+82
+
+in 2001 China had 16 of the worlds top 20 most airpolluted cities.2 Additionally, China has been reducing
+its land resource (developed lands) at a rate of 2 to 3
+percent owing to transportation-infrastructure construction, further intensifying the pollution problem.1
+Finally, weak and unreliable urban transportation systems
+have significantly increased the cost of logistic activities in
+China, currently at a level of 20 percent GDP. This is much
+higher than the average (10 percent) in developed countries.1
+Although China has made significant efforts over the past
+two decades to solve its transportation problems, traffic
+congestion, pollution, accidents, and other related problems
+are only getting worse. So, a team of over 70 researchers
+from 10 universities and research institutes in China and the
+US is developing a framework of platforms based on concepts and methods in artificial societies and complex systems (see Figure 1). Our goal is to study integrated and
+sustainable development of metropolitan transportation,
+logistics, and ecosystems.
+
+Research issues
+Unfortunately, we cant solve transportation problems
+by focusing on transportation systems alone. Rather, we
+must consider the combined effects with other metropolitan systems. Artificial systems, based on artificial societies
+and agent-modeling technology, are effective tools for this
+purpose.3
+Another issue is that no once-and-for-all solutions exist.
+Metropolitan transportation, logistics, and ecosystems are
+intrinsically open, dynamic, unpredictable, and complex
+in their behaviors and effects. We must adopt a management and control strategy for those systems based on continuous investigation and improvement and should use
+computational experiments with artificial systems to overcome the difficulty of experimenting with real systems.4
+Finally, no optimal solutions exist. We must consider the
+sensitivity of so-called optimal solutions to their assumed
+ideal conditions and the unavoidable disparity between
+ideal and actual conditions. We should adapt our thinking to
+consider multiple effective solutions in dealing with urban
+development problems. In such cases, we should apply the
+
+1541-1672/04/$20.00  2004 IEEE
+Published by the IEEE Computer Society
+
+IEEE INTELLIGENT SYSTEMS
+
+concept of parallel systems, which consists
+of real and artificial systems and uses computational experiments and adaptive-control
+methods to seek adaptive, dynamic, and
+effective solutions.5
+
+Addressing the problems
+Our team consists of researchers from
+systems engineering, computer science,
+transportation, logistics, operations research,
+plant science, economics, population studies,
+management science, and social studies.
+This effort represents an important application of artificial societies6,7 and will further development of the activity-based
+TRANSIMS project8 and artificial transportation systems.9,10 Supported by the Knowledge Innovation Program of the Chinese
+Academy of Sciences and a pending grant
+from the Ministry of Science and Technology of Chinas National Key Fundamental
+Research Program (the 973 projects), weve
+already started work.
+Were addressing several key problems,
+the first of which is the modeling problem. Effective methods for modeling and
+analyzing complex systems dont exist.
+Were inclined to be agreeable with simple
+objects or relationshipsits easy to reach
+an agreement over simple matters, but this
+isnt as easy with complicated matters.
+So, building agent models based on agreeable simple objects or relationships is
+useful. Then we can develop a bottom-up
+approach to grow complex systems and
+observe their behaviors through the interaction of simple but autonomous agents
+according to specified rules in given environments. We can use this approach to develop agent-based models that focus on
+behavior generation for integrated artificial systems for transportation, logistics,
+and ecosystems.
+Second is the experimenting problem.
+Experimenting with complex systems is difficultoften even infeasibleespecially
+when it involves human or societal subjects. So, artificial systems are helpful for
+computational experiments, which are a
+natural extension of computer simulations.
+Artificial systems and computational experiments are ideal tools to validate goals and
+objectives or evaluate strategies and decisions for coordinated and sustainable development of metropolitan transportation, logistics, and ecosystems.
+Next is the decision-making problem.
+Through the interaction between real and
+JULY/AUGUST 2004
+
+Problems
+Techniques
+
+Metropolitan
+transportation
+
+Strategic decision
+validation/evaluation
+Technical decision
+validation/evaluation
+Other support for
+decision execution
+Online support for
+system operation
+
+Metropolitan
+logistics
+
+Metropolitan
+ecosystems
+
+Other urbanization
+problems
+
+Validation/evaluation/analysis
+platform for complex systems
+ Artificial systems
+ Computational experiments
+ Parallel systems
+ Metasynthesis and halls of workshops
+ Parallel and distributed computing and data platforms
+
+Other metropolitan
+applications
+
+Figure 1. A complex-systems platform for integrated and sustainable development of
+metropolitan transportation, logistics, and ecosystems.
+
+Area 1
+
+Area 2
+
+Artificial systems + computational experiments + parallel systems
+
+Artificial
+ecosystems
+
+Metasynthesis and halls of workshops
+
+Area 3
+
+Area 4
+
+Artificial
+logistical
+systems
+
+Artificial
+transportation
+systems
+
+Parallel and
+distributed
+computing
+platforms
+
+Prototype
+systems and
+application
+platforms
+
+Figure 2. Key issues and tasks for integrated, sustainable development of metropolitan
+systems using artificial systems.
+
+artificial systems, we can construct parallel
+systems to perform computational experiments, test different strategies and decisions,
+and evaluate their effects for solving complex
+problems. Ideas and methods developed in
+adaptive-control systems can be used effectively in the framework of parallel systems
+for decision-making in complex systems.
+Furthermore, artificial systems, computational experiments, and parallel systems provide both data sources and proving grounds
+for decision support and analysis of complex
+systems using metasynthesis.11 Fusing those
+methods offers a possible direction for establishing a computational framework for facilitating integrated, coordinated, and sustainable development of metropolitan systems
+www.computer.org/intelligent
+
+under the principle of continuous investigation and improvement.
+Finally, to solve the problems weve
+described, we must also address the computing problem. How can we best use new
+and advanced computing architectures and
+environments, especially networked computing such as grid computing and peer-topeer computing?
+To address these problems, the team
+has specified seven major tasks in four
+areas and assigned them to various team
+members (see Figure 2) for a five-year
+period. Figure 3 gives a roadmap for integrating those tasks into an effective, coherent framework for modeling, analysis, and
+management of complex systems.
+83
+
+Metropolitan
+transportation
+
+Metropolitan
+logistics
+
+Metropolitan
+ecosystems
+Real systems
+
+Problems and
+difficulties
+
+Parallel and
+distributed
+computing
+methods
+
+ Clustering analysis
+Agent-based systems
+ Typical process analysis
+Rule-based systems
+ Individuals and activity-based
+networks
+Self-organizing systems
+ Metasynthesis and
+decision-making
+Systems and environments
+Interconnected systems
+Transportation
+
+Concepts and
+methods of
+artificial
+systems
+
+ Clusters, functionalities
+Agent-based systems
+ Generation, purification
+Rule-based systems
+ Ecological activities
+Self-organizing systems
+ Human-ecosystem interaction
+Systems and environments
+Interconnected systems
+Ecosystems
+
+Logistics
+Integrated transportation and logistics
+
+Parallel and
+distributed
+computing
+platforms
+
+Data
+processing
+and data
+mining
+
+Artificial
+logistics
+systems
+
+Artificial
+systems and
+computational
+experiments
+Artificial
+ecosystems
+
+Artificial systems
+
+Metasynthesis
+Artificial
+systems
+
+Computational
+experiments
+
+The second subtask is to develop methods and procedures for computational experiments, which will require
+ Transition of computer simulations to
+computational experiments
+ Accelerated tests for pressure, limit,
+failures, or disasters
+ Emergence-based observation and explanation for computational experiments
+ Multiscale behavior analysis based on
+computational experiments
+ Design, calibration, and verification of
+computational experiments
+The final subtask is to consider a theory
+and methods for parallel systems, which
+will involve
+
+Interaction and
+synchronization
+
+Artificial
+transportation
+systems
+
+ Cellular automata and their generalization for modeling agents
+ Linguistic dynamic systems for describing agent behaviors
+ Multiresolution observation and analysis
+of agent behaviors
+ Petri nets for specifying networking and
+cooperation among agents
+ Computational-intelligence methods and
+game-theoretic strategies for decisionmaking by agents
+
+Parallel
+systems
+and halls of
+workshops
+
+Real
+systems
+Parallel systems
+
+ Developing a framework of parallel systems and protocols and processes of
+interaction between real and artificial
+systems
+ Validating and evaluating strategies and
+decisions using parallel systems
+ Installing internal feedback mechanisms
+for control and adaptation
+ Performing perturbation analysis and
+ordinal optimization for effective operation based on parallel systems
+ Identifying behavior patterns using computational experiments and parallel systems
+
+Validation by prototype systems and application platforms
+
+Figure 3. Roadmap for integrated, sustainable development of metropolitan systems
+using artificial systems. (Dashed lines represent information that leads to modification
+in the directed box; solid lines represent other information or decision flows.)
+
+Area 1: Artificial systems for real
+complex systems
+The first areas goal is to establish a
+computational theory that uses artificial
+systems as alternatives to real complex
+systems for validating or evaluating computational experiments (see Figure 4) and
+84
+
+for managing or controlling parallel systems (see Figure 5). Accomplishing this
+task involves three subtasks.
+The first subtask is the agent-based
+modeling, design, analysis, and synthesis
+of artificial systems. This subtask will
+require
+www.computer.org/intelligent
+
+Area 2: Artificial systems for
+metropolitan transportation, logistics,
+and ecosystems
+Using artificial systems to study complex systems is a natural extension of computer simulations as computational power
+grows. To maintain coherence and achieve
+integration of different artificial systems
+for transportation, logistics, and ecosystems, the systems use and share common
+agent models. Figure 6 presents the major
+components for artificial systems.
+This area involves three tasks. The first
+IEEE INTELLIGENT SYSTEMS
+
+task is designing, constructing, and analyzing artificial transportation systems, which
+will require
+ Using agent models to model traffic
+behaviors in terms of selecting trips,
+destinations, times, means, and routes
+ Having interaction between transportation and social systems, economic systems, population, resources, environments, and information
+ Estimating and analyzing transportation
+capacities in different situations
+ Validating and evaluating transportation
+strategies and decisions using computational experiments and parallel systems
+ Using artificial transportation systems
+to create a standardized performanceevaluation procedure for traffic management and control systems
+The second task is designing, constructing, and analyzing artificial logistical systems, which will require
+ Using agent models and their calibration
+for logistical activities
+ Creating self-organizing and learning artificial systems based on supply chains and
+service chains for logistical operations
+ Performing emergence-based observation of logistical behaviors and their
+interaction with transportation systems
+ Validating and evaluating logistical
+strategies and decisions using computational experiments and parallel systems
+ Using artificial logistical systems to create a standardized performance-evaluation procedure for logistical management and control systems
+The third task is designing, constructing,
+and analyzing artificial ecosystems, which
+will require
+ Using agent models for plant growth and
+plant-environment interaction
+ Regulating ecosystems and transportation systems and ensuring proper interaction between them
+ Estimating and analyzing the ecosystems
+carrying capacities in terms of population,
+transportation, and logistical development
+ Sampling and generating synthetic human
+population and plant distribution
+ Validating and evaluating ecological
+strategies and decisions using computational experiments and parallel systems
+JULY/AUGUST 2004
+
+Proposals and modifications of solutions
+for complex systems
+
+Validation of
+objectives
+
+Specification of
+objectives
+Agent-based
+artificial systems
+
+Evaluation of
+decisions
+
+Decisions and
+task assignment
+
+Agents Environments Rules
+
+Emergence-based
+observation
+
+Computational
+experiment design
+
+Figure 4. Computational experiments for behavior analysis and decision evaluation of
+complex systems.
+
+Real systems
+
+Artificial systems
+
+Management
+and control
+
+Management
+and control
+Observation and
+evaluation
+
+Control and
+observation
+
+Management
+and control
+
+Observation and
+evaluation
+
+Experiments and
+evaluation
+
+Learning and
+training
+
+Figure 5. Parallel systems for management and control of complex systems.
+
+Legal and
+regulation
+subsystem
+
+Infrastructure
+subsystem
+
+Logistical
+subsystem
+
+Social and
+economic
+subsystem
+
+Transportation
+subsystem
+
+Parallel and distributed
+computing subsystem
+Metasynthesis subsystem
+
+Weather and
+environmental
+subsystem
+
+Ecological and
+resource subsystem
+
+Decision and
+objective subsystem
+Figure 6. Integrated artificial systems for transportation, logistics, and ecosystems.
+
+Area 3: Metasynthesis and halls of
+workshops
+Metasynthesis and halls of workshops are
+methods and tools proposed and developed
+www.computer.org/intelligent
+
+in the late 1980s by a research group led by
+Hsue-Shen Tsien, the founder of engineering cybernetics11 and the Chinese Space
+Program, and Ru-Wei Dai for dealing with
+85
+
+Experts
+
+Experts
+
+Experts
+
+Experts
+
+Workshop interface
+
+Workshop interface
+
+Workshop interface
+
+Workshop interface
+
+Internet/intranet
+
+Metasynthesis and hall of workshops for decision support and analysis
+Interface for workshop supporting services
+
+Data Model Artificial
+Information
+Analysis/evaluation/synthesis based on
+mining bases systems synchronization computational experiments and parallel systems
+
+Databases for transportation,
+logistics, and ecosystems
+
+Qualitative and
+Qualitative and Qualitative and
+quantitative
+quantitative
+quantitative
+analysis system analysis system analysis system
+for transportation
+for logistics
+for ecosystems
+
+Figure 7. Metasynthesis and halls of workshops for decision support and analysis of
+metropolitan systems.
+
+open, complex, and huge systems.11,12 This
+areas task is to use artificial systems, computational experiments, and parallel systems
+to develop application-specific metasynthesis and halls of workshops for decision support and analysis of metropolitan transportation, logistics, and ecosystems (see Figure
+7). This task will require
+ Human-machine interaction-based metasynthesis for decision support and analysis
+ Architectures and strategies of halls of
+workshops for decision support and
+analysis
+ Workflows of halls of workshops for
+decision-making support
+ Software support and network environment for halls of workshops
+ An integrated validation and evaluation
+environment based on metasynthesis,
+computational experiments, and parallel
+systems
+Area 4: Computing platforms and
+prototypes
+Powerful, effective computing and dataprocessing platforms are essential to the success of this team endeavor. The final two
+86
+
+tasks are to develop two types of computing
+platforms: a grid-computing platform for
+management and control, and a peer-to-peer
+platform for research and development.
+Prototype systems and field applications in
+three major cities (Shanghai, Shenzhen,
+and Jinan) will be conducted to validate
+and evaluate the theory and framework developed in this project.
+The platform for managing and controlling parallel systems will require
+ Open computing architectures and processes for artificial systems and their
+parallel and distributed models
+ Petri nets for specifying and modeling
+parallel and distributed computing processes of artificial systems
+ Data management, mining, fusion, and
+reduction for artificial systems
+ Effective parallel and distributed algorithms and synchronization methods for
+computational experiments, parallel systems, and halls of workshops
+ Computing environments, tools, and
+intelligent user interfaces for computational experiments, parallel systems, and
+halls of workshops
+www.computer.org/intelligent
+
+The platform for creating prototype systems and applications will require
+ Prototype systems for field applications
+in Shanghai, Shenzhen, and Jinan
+ An integrated control and management
+platform for traffic systems
+ An integrated scheduling and management platform for logistical systems
+ An integrated analysis and management
+platform for ecosystems
+ Validation and evaluation of field testing
+and applications
+
+B
+
+y fusing field-specific knowledge from
+the disciplines of individual researchers, we
+aim to use a multidisciplinary approach to
+reevaluate R&D strategies in transportation,
+logistics, and ecosystems. We also plan to
+establish a computational theory and framework with artificial systems, computational
+experiments, parallel systems, and metasynthesis for decision support and analysis
+of complex systems in general, and for
+integrated, coordinated, and sustainable
+development of metropolitan transportation, logistics, and ecosystems in specific.
+Eventually, we hope to develop a computational framework that lets us model, analyze, and synthesize complex urban and
+metropolitan social systems from qualitative validation to quantitative evaluation.
+
+Acknowledgments
+This work is funded partly by the Outstanding
+Young Scientist Research Fund (Grant 60125310)
+and the Key Project on Networked Systems (Grant
+60334020) from the National Natural Science
+Foundation, a Shandong 863 project (Grant
+030335) from Shandong Provincial Government,
+and a 973 project (Grant 2002CB312200) from the
+Ministry of Science and Technology of China.
+We greatly appreciate support from the ATLAS
+(Advanced Traffic and Logistics Algorithms and
+Systems) center at the University of Arizona,
+PARCS (Program for Advanced Research in Complex Systems), and Ruwei Dai of the Chinese
+Academy of Sciences.
+
+References
+1. F.Y. Wang et al., A Complex Systems
+Approach for Studying Integrated Development of Transportation, Logistics, and
+Ecosystems, J. Complex Systems and Complexity Science, vol. 1, no. 2, 2004, pp. 6069.
+2. K. Leitner and R. Kasperson, Making Green
+IEEE INTELLIGENT SYSTEMS
+
+Development a Choice, UNDP Chinas
+National Human Development Report, 2002.
+3. F.Y. Wang and S.J. Lansing, From Artificial
+Life to Artificial Societies: New Methods in
+Studying Social Complex Systems, J. Complex Systems and Complexity Science, vol. 1,
+no. 1, 2004, pp. 3341.
+4. F.Y. Wang, Computational Experiments for
+Behavior Analysis and Decision Evaluation
+of Complex Systems, J. System Simulations,
+vol. 16, no. 5, 2004, pp. 893898.
+
+Fei-Yue Wang is a professor at the University of Arizona and the director of the universitys
+Program for Advanced Studies in Complex Systems. Hes also a research scientist at, and the
+director of, the Key Laboratory of Complex Systems and Intelligence Science at the Chinese
+Academy of Sciences. Contact him at feiyue@sie.arizona.edu.
+Shuming Tang is a research scientist at the Shandong Academy of Sci-
+
+ences. She received her PhD from the Intelligent Control and Systems
+Engineering Center at the Chinese Academy of Sciences. Contact her at
+shuming.tang@mail.ia.ac.cn.
+
+5. F.Y. Wang, Parallel Systems for Management and Control of Complex Systems, J.
+Control and Decision, vol. 19, no. 3, 2004,
+pp. 485490.
+
+report LA-1658, Los Alamos Natl Lab, 1999.
+
+6. C.H. Builder and S.C. Bankes, Artificial Societies: A Concept for Basic Research on the
+Societal Impacts of Information Technology,
+RAND Report P-7740, RAND Corp., 1991.
+
+9. F.Y. Wang et al., Toward Intelligent Transportation Systems for the 2008 Olympics,
+IEEE Intelligent Systems, vol. 18, no. 6, 2003,
+pp. 811.
+
+7. J.M. Epstein and R.L. Axtell, Growing Artificial Societies: Social Science from the Bottom
+Up, Brooking Inst. Press and MIT Press, 1996.
+
+10. F.Y. Wang and S.M. Tang, Concept and
+Framework of Artificial Transportation Systems, J. Complex Systems and Complexity
+Science, vol. 1, no. 2, 2004, pp. 5259.
+
+8. C.L. Barrett et al., Transportation Analysis Simulation System (TRANSIMS): Overview, tech.
+
+11. D.L. Wang and R.W. Dai, Behavior Proto-
+
+PURPOSE The IEEE Computer Society is the
+worlds largest association of computing professionals, and is the leading provider of technical
+information in the field.
+
+Term Expiring 2004: Jean M. Bacon, Ricardo
+Baeza-Yates, Deborah M. Cooper, George V. Cybenko,
+Haruhisha Ichikawa, Thomas W. Williams, Yervant
+Zorian
+Term Expiring 2005: Oscar N. Garcia, Mark A.
+Grant, Michel Israel, Stephen B. Seidman, Kathleen M.
+Swigger, Makoto Takizawa, Michael R. Williams
+Term Expiring 2006: Mark Christensen, Alan
+Clements, Annie Combelles, Ann Gates, Susan Mengel, James W. Moore, Bill Schilit
+Next Board Meeting: 5 Nov. 2004, New Orleans
+
+IEEE OFFICERS
+President: ARTHUR W. WINSTON
+President-Elect: W. CLEON ANDERSON
+Past President: MICHAEL S. ADLER
+Executive Director: DANIEL J. SENESE
+Secretary: MOHAMED EL-HAWARY
+Treasurer: PEDRO A. RAY
+VP, Educational Activities: JAMES M. TIEN
+VP, Pub. Services & Products: MICHAEL R.LIGHTNER
+VP, Regional Activities: MARC T. APTER
+VP, Standards Association: JAMES T. CARLO
+VP, Technical Activities: RALPH W. WYNDRUM JR.
+IEEE Division V Director: GENE H. HOFFNAGLE
+IEEE Division VIII Director: JAMES D. ISAAK
+President, IEEE-USA: JOHN W. STEADMAN
+
+12. H.S. Tsien, Engineering Cybernetics,
+McGraw-Hill, 1954.
+13. X.S. Qian (H.S. Tsien), J.Y. Yu, and R.W.
+Dai, A New Field of Science? Open Complex Giant Systems and Their Methodology, Nature Magazine, vol. 13, no. 1, 1991,
+pp. 310.
+
+EXECUTIVE COMMITTEE
+
+MEMBERSHIP Members receive the monthly magazine Computer, discounts, and opportunities to serve (all activities are led by volunteer
+members). Membership is open to all IEEE
+members, affiliate society members, and others
+interested in the computer field.
+COMPUTER SOCIETY WEB SITE
+The IEEE Computer Societys Web site, at
+www.computer.org, offers information and
+samples from the societys publications and conferences, as well as a broad range of information
+about technical committees, standards, student
+activities, and more.
+BOARD OF GOVERNORS
+
+col of Expert Groups for Meta-Synthesis and
+Halls of Workshops, Management Sciences,
+vol. 4, no. 2, 2001, pp. 16.
+
+COMPUTER SOCIETY OFFICES
+Headquarters Office
+1730 Massachusetts Ave. NW
+Washington, DC 20036-1992
+Phone: +1 202 371 0101
+Fax: +1 202 728 9614
+E-mail: hq.ofc@computer.org
+Publications Office
+10662 Los Vaqueros Cir., PO Box 3014
+Los Alamitos, CA 90720-1314
+Phone:+1 714 821 8380
+E-mail: help@computer.org
+Membership and Publication Orders:
+Phone: +1 800 272 6657
+Fax: +1 714 821 4641
+E-mail: help@computer.org
+Asia/Pacific Office
+Watanabe Building
+1-4-2 Minami-Aoyama,Minato-ku
+Tokyo107-0062, Japan
+Phone: +81 3 3408 3118
+Fax: +81 3 3408 3553
+E-mail: tokyo.ofc@computer.org
+
+President:
+CARL K. CHANG*
+Computer Science Dept.
+Iowa State University
+Ames, IA 50011-1040
+Phone: +1 515 294 4377
+Fax: +1 515 294 0258
+c.chang@computer.org
+President-Elect: GERALD L. ENGEL*
+Past President: STEPHEN L. DIAMOND*
+VP, Educational Activities: MURALI VARANASI*
+VP, Electronic Products and Services:
+LOWELL G. JOHNSON (1ST VP)*
+VP, Conferences and Tutorials:
+CHRISTINA SCHOBER
+VP, Chapters Activities:
+RICHARD A. KEMMERER (2ND VP)*
+VP, Publications: MICHAEL R. WILLIAMS*
+VP, Standards Activities: JAMES W. MOORE*
+VP, Technical Activities: YERVANT ZORIAN*
+Secretary: OSCAR N. GARCIA*
+Treasurer:RANGACHAR KASTURI
+20032004 IEEE Division V Director:
+GENE H. HOFFNAGLE
+20032004 IEEE Division VIII Director:
+JAMES D. ISAAK
+2004 IEEE Division VIII Director-Elect:
+STEPHEN L. DIAMOND*
+Computer Editor in Chief:DORIS L. CARVER
+Executive Director: DAVID W. HENNAGE
+* voting member of the Board of Governors
+ nonvoting member of the Board of Governors
+
+EXECUTIVE
+
+STAFF
+
+Executive Director: DAVID W. HENNAGE
+Assoc. Executive Director: ANNE MARIE KELLY
+Publisher: ANGELA BURGESS
+Assistant Publisher: DICK PRICE
+Director, Administration:
+VIOLET S. DOAN
+Director, Information Technology & Services:
+ROBERT CARE
+
+

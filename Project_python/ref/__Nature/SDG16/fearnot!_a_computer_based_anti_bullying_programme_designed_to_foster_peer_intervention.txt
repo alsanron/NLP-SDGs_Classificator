@@ -1,0 +1,1366 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/225206207
+
+"FearNot!": A computer-based anti-bullying-programme designed to foster
+peer intervention
+Article in European Journal of Psychology of Education  March 2011
+DOI: 10.1007/s10212-010-0035-4
+
+CITATIONS
+
+READS
+
+79
+
+1,374
+
+12 authors, including:
+Natalie Vannini
+
+Maria Sapouna
+
+University of Wuerzburg
+
+University of the West of Scotland
+
+14 PUBLICATIONS 402 CITATIONS
+
+16 PUBLICATIONS 678 CITATIONS
+
+SEE PROFILE
+
+Dieter Wolke
+The University of Warwick
+564 PUBLICATIONS 27,395 CITATIONS
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+CoReader View project
+
+LEIF "Lernausgangslagen erheben - individuell frdern" View project
+
+All content following this page was uploaded by Ruth Aylett on 20 May 2014.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Eur J Psychol Educ
+DOI 10.1007/s10212-010-0035-4
+
+FearNot!: a computer-based anti-bullying-programme
+designed to foster peer intervention
+Natalie Vannini & Sibylle Enz & Maria Sapouna & Dieter Wolke & Scott Watson &
+Sarah Woods & Kerstin Dautenhahn & Lynne Hall & Ana Paiva & Elizabeth Andr &
+Ruth Aylett & Wolfgang Schneider
+
+Received: 5 June 2009 / Revised: 8 January 2010
+# Instituto Superior de Psicologia Aplicada, Lisboa, Portugal and Springer Science+Business Media BV 2010
+
+Abstract Bullying is widespread in European schools, despite multiple intervention
+strategies having been proposed over the years. The present study investigates the
+effects of a novel virtual learning strategy (FearNot!) to tackle bullying in both UK
+and German samples. The approach is intended primarily for victims to increase their
+coping skills and further to heighten empathy and defence of victims by non-involved
+bystanders. This paper focuses on the defender role. Applying quantitative as well as
+qualitative methodology, the present study found that FearNot! helped non-involved
+children to become defenders in the German sub-sample while it had no such effect in
+the UK sub-sample. German New Defenders (children who are initially uninvolved
+N. Vannini (*) : W. Schneider
+Institute of Psychology, University of Wuerzburg, Wuerzburg, Germany
+e-mail: natalie.vannini@psychologie.uni-wuerzburg.de
+W. Schneider
+e-mail: schneider@psychologie.uni-wuerzburg.de
+S. Enz
+Gruppe fuer Interdisziplinaere Psychologie, Universitaet Bamberg, Bamberg, Germany
+e-mail: sibylle.enz@uni-bamberg.de
+M. Sapouna : D. Wolke
+Department of Psychology, University of Warwick, Coventry, UK
+M. Sapouna
+e-mail: maria.sapouna@scotland.gsi.gov.uk
+D. Wolke
+e-mail: D.Wolke@warwick.ac.uk
+S. Watson : S. Woods
+School of Psychology, University of Hertfordshire, Hatfield, UK
+S. Watson
+URL: http://adapsys.feis.herts.ac.uk/
+S. Woods
+e-mail: s.n.woods@herts.ac.uk
+
+N. Vannini et al.
+
+but are nominated as defenders by their peers after the intervention period) were found
+to be significantly more popular at baseline, and to show more cognitive empathy
+(Theory of Mind) for the virtual victims as compared to permanently non-involved
+pupils. Moreover, gender interacts with becoming a defender in its effects on affective
+empathy, with emotional contagion being particularly associated with New Defender
+status among girls. The findings are discussed in relation to previous research on antibullying intervention strategies and cultural differences in bullying prevalence rates and
+intervention outcomes.
+Keywords Empathy . Peer intervention . Role-play . School bullying .
+Virtual learning environment
+
+Introduction
+Bullying is of widespread interest for teachers, parents, pupils and researchers alike.
+Effective intervention approaches are needed given the high prevalence rates across
+countries worldwide and the serious consequences of bullying. Worldwide prevalence
+estimations ranging from 4% to 32% (see Stassen Berger 2007), however, it is important to
+note that there are large variations in prevalence rates between countries depending among
+others on focus of study, data source and methodological approach of assessment as well as
+applied definition of bullying, The negative impact bullying has on the development and
+further life condition of children involved in this sub-category of aggressive behaviour
+range from behaviour and school adjustment problems, poor physical health, high levels of
+depression and anxiety to even psychotic symptoms (see, e.g. Arseneault et al. 2006; Bond
+et al. 2001; Fekkes et al. 2006; Nansel et al. 2004; Schreier et al. 2009). Moreover, the
+impact of school bullying goes beyond those directly involved (i.e. victims and bullies) and
+affects most members of the relevant social group (i.e. classes, schools). For instance,
+Hazler (1996) noted that bystanders are not immune to the negative consequences of
+bullying because their self-respect decreases every time they witness bullying but do not
+engage in stopping it.
+
+K. Dautenhahn
+School of Computer Science, University of Hertfordshire, Hatfield, UK
+URL: http://homepages.feis.herts.ac.uk/comqkd/
+L. Hall
+Department of Computing, Engineering and Technology, University of Sunderland, Sunderland, UK
+e-mail: lynne.hall@sunderland.ac.uk
+A. Paiva
+INESC-ID, Instituto Superior Tcnico, Lisbon, Portugal
+e-mail: ana.paiva@inesc-id.pt
+E. Andr
+Institut fuer Informatik, Universitaet Augsburg, Augsburg, Germany
+e-mail: andre@informatik.uni-augsburg.de
+R. Aylett
+School of Maths and Computer Science, Heriot-Watt University, Edinburgh, UK
+e-mail: ruth@macs.hw.ac.uk
+
+FearNot!
+
+Bullying
+The phenomenon of school bullying is defined as intentional and repeated aggression
+towards weaker peers: A student is being bullied or victimised when he or she is exposed,
+repeatedly and over time, to negative actions on the part of one or more other students.
+(Olweus 2001, p. 56). Typical characteristics for this sub-category of aggressive behaviour
+are the real or perceived power imbalance between perpetrators and victims, and its
+systematic repetition over time. Bullying can become apparent in different behaviours such
+as direct verbal (blackmailing, calling names, etc.), physical (hitting, kicking, stealing, etc.)
+behaviour, as well as indirect behaviour including the manipulation of social relations, e.g.
+spreading rumours or the deliberate ending of friendships (Bjrkqvist et al. 1994; Crick and
+Grotpeter 1995). The forms of bullying seem to vary by gender: boys are more engaged in
+direct physical bullying while girls are rather victims or bullies of indirect forms (Olweus
+1996; Scheithauer et al. 2006; Whitney and Smith 1993). However, no differences between
+boys and girls are found when it comes to direct verbal bullying (Scheithauer et al. 2003).
+Like other forms of aggression, bullying has to be seen largely in relation to the social or
+group context in which it occurs: in the vast majority of bullying episodes, peers take over
+various roles ranging from active participants to passive bystanders (Hawkins et al. 2001;
+OConnell et al. 1999; Salmivalli et al. 1996; Sutton and Smith 1999). The majority of
+presented peers are passive onlookers who in fact disapprove of bullying (Charach et al.
+1995; Rigby and Slee 1992) but at the same time often underestimate their responsibility
+within the bullying process (Salmivalli 1999; 2001). Even though bystanders sometimes
+show the courage to stand up for the victim, which is the case in about 1020% of the
+bullying events (Hawkins et al. 2001; Salmivalli et al. 1996), the most common response is
+to ignore what is going on or even to sympathise with the bully rather than with the victim
+(Tapper and Boulton 2005). By providing attention and assistance to those who are bullies,
+bystanders contribute to the problem by inadvertently reinforcing the bully, and the bullying
+is more likely perpetuated (Jeffrey et al. 2001; Rodkin 2004). The outcome is different
+when bystanders do intervene: Hawkins et al. (2001) reported that in 57% of all cases the
+bullying actually stops. This reflects the important role peers are playing in the process of
+bullying and implies their importance as target group of intervention programmes (Stassen
+Berger 2007; OConnell et al. 1999), which according to Espelage et al. (2003) is an often
+disregarded aspect of aggression prevention efforts.
+Peer intervention approach: pedagogical role-play
+There is reason to assume that an effective programme targeted at peer intervention has to
+account for the variety of aspects why bystanders may hesitate to intervene during the
+aggressive interaction. Following social psychological research these aspects include, i.e.
+responsibility diffusion (Latan and Darley 1968). A second aspect might be the fear of
+retaliation (OConnell et al. 1999): children will not risk becoming the next victim. A third
+aspect relates to an inappropriate comprehension of the bullying dynamics, and finally the
+insecurity of what to do to counteract bullying effectively might be another important
+reason for bystanders apathy when faced with bullying episodes (Craig et al. 2000;
+OConnell et al. 1999). Hazler (1996) concluded that the audience of bullying are those
+who are recognising what is going on but at the same time are not aware of the importance
+of their role including the responsibility to take practical actions. Therefore, effective
+intervention that aims at involving the peer group needs to increase the awareness of ones
+own role with its individual responsibility and the empathy for the victims, as well as the
+
+N. Vannini et al.
+
+understanding of the ongoing bullying process. Moreover, it should provide children with
+effective strategies to intervene (Frey et al. 2005). Given that bystanders often justify their
+lack of empathy by blaming the victim (Stassen Berger 2007) encouraging empathy
+towards the victims therefore seems particularly important.
+Empathy is defined by contemporary researchers as a bi-component construct,
+embracing affective and cognitive aspects. While some researchers include both aspects
+in their empathy definitions (Davis 1994; Steinmetz and Holz-Ebeling 1995), others
+emphasise either the one or the other. According to Hogan (1969, p.308) empathy
+means the intellectual or imaginative apprehension of anothers condition or state of mind
+without actually experiencing that persons feelings (cognitive empathy), whereas
+Hoffman (1977, p.169) posits that empathy [is] a vicarious affective response to
+others (affective empathy). In the present study, empathy is defined as an observers
+understanding of the internal state of a target (cognitive empathy or Theory of Mind;
+Flavell 2004) as well as the observers emotional reaction to what he/she perceives as being
+the internal state of a target (affective empathy).
+A method that facilitates understanding and empathy in social interaction is pedagogical
+role-play (Hollin and Tower 1986; LAbate and Milan 1985; Van Mets 1991). Role-play
+provides a safe as-if framework for exploring experiences of self and other: taking over
+the roles of others and acting out their actions provides a first-person experience of the
+thoughts and feelings that lead to and result from these other actions. Role-play thus
+ultimately helps to modify own behaviour and attitudes in order to better adjust to the
+challenges of social interaction, because it helps to understand better the thoughts, feelings,
+and action tendencies of others and how they are tied to our own thoughts, feelings, and
+actions. The explicit as-if mode results from the fact that role-play is introduced and
+implemented as game-like and unreal, but offers real social experiences and insights that
+are transferable to real social interactions. For instance, by focusing on the holistic
+experience of another person, role-play has proved to be an effective tool in the context of
+social skills trainings applied in schools and therapeutical settings (Hungerige and BorgLaufs 2001; Jupp and Griffiths 1990; Wright 2006). However, role-play is a rather timeconsuming and staff-intensive pedagogical technique which frequently coincides with a
+school reality that is driven by curriculum needs. Furthermoreand perhaps more
+importantit requires groups of pupils that are involved in real-life social situations. This
+may cause problems because victimised children might be less able to express their
+suffering and anxieties in front of the whole class, even more so if their perpetrators are
+present as well. This notion reflects the importance for intervention strategies to
+differentially acknowledge and tackle the active and passive roles of children involved in
+the bullying process. An approach which seems to provide the required assets and
+minimises the aforementioned drawbacks of pedagogical role-play is the use of computerbased simulations of complex social realities.
+FearNot!intervention
+FearNot! version 2.0 (Fun with Empathic Agents to Achieve Novel Outcomes in
+Teaching; Aylett et al. 2005) is a prototype of a virtual simulation designed to mirror a
+primary school environment, peopled with cartoon-like virtual characters who take on the
+different bullying roles (bully, victim, bully-assistants, defenders of victims, bystanders).
+Figure 1 shows a screenshot of the German FearNot! version.
+In this virtual learning environment, episodes of bullying in which sequences of direct
+and indirect bullying actions occur between the virtual characters are observed by the
+
+FearNot!
+Fig. 1 Screenshot of a bullying
+episode within FearNot!
+(German version)
+
+children. In between these episodes, children take over an active part in the ongoing story
+by counselling the victim regarding coping strategies to handle the repeated bullying. Thus
+children take over the role of an invisible friend to the victimised character and can watch
+how the story further develops as a result of their advices. As a consequence, the users can
+affectively engage with what happens and at the same time benefit from the as-if mode of
+the virtual drama, not being involved directly but being able to distance themselves when
+needed (Hall et al. 2005). Recent pilot studies investigating a one-time use of FearNot!
+could show that the virtual characters are believable and evoke sympathy for the victimised
+character (Watson et al. 2007; Woods et al. 2003). FearNot! consists of male or female
+bullying episodes (with male episodes including more physical bullying and female
+episodes more relational bullying), and English and German language versions are available
+(for more details on the technical framework of FearNot! see e.g. Dias and Paiva 2005).
+For the present study, FearNot! was implemented at primary schools in the UK and
+Germany. For three consecutive weeks, children of the intervention group worked with
+FearNot! for the duration of 30 min per week. During each session, children interacted
+individually with the programme and returned to the same computer in order to continue
+their particular story in subsequent sessions. Class teachers were briefed on the purposes
+and methodology of the study and were provided with instructions to supervise the
+interaction sessions. All children first played the episodes matching their own gender. After
+having completed these episodes they could switch to the other gender scenarios if they
+liked, with the majority of children using this option. Other publications have presented
+results of this study which demonstrate that FearNot! is a safe intervention in so far as it
+does not increase bullying as well as that the intervention with FearNot! had a short-term
+effect on escaping victimization for a priori identified victims (for details, see Sapouna et al.
+2009). Moreover, within the combined sample of UK and German participants it could be
+found that in general UK pupils in comparison to German pupils possessed higher coping
+strategy knowledge when faced with bullying incidences, but German childrens coping
+strategy knowledge improved as a result of the FearNot! intervention (for details see
+Watson et al. 2010).
+Taking up the idea that inactive bystanders play an important role in perpetuating the
+bullying, the present study examines whether FearNot! may foster peer intervention by
+getting bystanders involved through raising their awareness of the bullying problem and
+
+N. Vannini et al.
+
+encouraging them to become pro-active when faced with bullying incidences (defenders).
+To investigate this hypothesised effect on bystanders, the study analysed interaction
+sequences with FearNot! such as coping strategies suggested to the virtual victim, as well
+as empathic reactions to the victimised characters situation. FearNot! is designed to
+foster empathy with the victimised character and to enhance the understanding of bullying
+as a complex social phenomenon. Thus, any indication that empathy or Theory of Mind is
+displayed during the interaction might serve as a sign that the learning goals of FearNot!
+were achieved.
+
+Method
+Overall design and participants
+The intervention evaluation employed a quasi-experimental, pre/post-test control group
+design. Due to the technical requirements of the FearNot! software, it was not possible to
+randomly allocate participants to experimental conditions (see Sapouna et al. 2009, for
+details). Instead, classes were allocated to the intervention group whenever the software ran
+properly on their schools computers, and allocated to the control group if it did not. This
+increased the potential for successful implementation of the intervention in classes that
+received FearNot!.
+Twenty-six Key Stage 2 (year 5) primary school classes from the UK (Hertfordshire
+and Warwickshire) and 22 third-grade primary school classes from Germany (Bavaria and
+Hesse) took part, totalling 1,186 children. These primary schools were recruited by mailing
+letters describing the study to the school principals, followed up by telephone calls and/or
+personal visits to present the software and the study design in more detail to the school
+staff. Schools were suitable to take part if they were state schools, mixed sex, and were not
+already implementing another particular anti-bullying programme. The study was approved
+by the Ethical Committees of the University of Warwick and the University of
+Hertfordshire (UK), and the Bavarian and Hesse Ministry of Education (Germany). Class
+teachers of eligible classes (childrens age 711 years) decided if their classes took part in
+the study. Parents were informed by letters describing the study in detail, and had to give
+their consent in written form before the study began. Forty-nine children had no parental
+consent and four children joined the study during or after the intervention period and
+therefore were excluded from the data set. The remaining sample of N=1,133 included 530
+(47%) children in the intervention group and 603 (53%) children in the control group; 642
+(57%) pupils from the UK and 491 (43%) from Germany. The sample consisted of 587
+(52%) boys and 546 (48%) girls, with an age range between 7 and 11 years (M=8.9; SD=
+0.7; n=9 missing data). There was a significant age difference between both countries [t
+(1,122)=30.91; p <0.001]: UK pupils were about 1 year older (M=9.36, SD=0.52) than the
+pupils from Germany (M=8.35, SD=0.55).
+Materials
+Class-level measures included the class size (total number of pupils in each class) and a
+dichotomous measure of class socio-economic status (SES). SES was computed based on
+teachers responses to a single item asking the teachers to indicate the percentage of
+children in their class that were eligible for welfare benefits. Classes with less than 10% of
+students entitled to welfare benefits were coded as high SES classes.
+
+FearNot!
+
+Children reported on their gender, age, number of siblings and gave information on the
+family situation (e.g. indicating with whom they lived at home: mother, father, step mother,
+step father, foster parents) in a standard questionnaire. Socio-demographic information of
+the pupils was assessed by two questions: following Coie et al. (1982), the Like Most
+assessment was represented by the question who are your friends in the class, and the
+question who do like the least in your class represented the Like Least assessment.
+Bullying involvement was assessed by four peer nomination items adapted from Wolke et
+al. (2001) that asked participants to name up to three classmates whom they knew to be
+victims of bullying, both either direct (children who get hit/beaten up, having things stolen,
+get threatened/blackmailed, are being called nasty names and having nasty tricks played on
+them) or relational (children who are being left out of games; are having other children
+telling them they do not want to be their friends anymore; are having nasty lies or stories
+told about them) or to bully others, also both either direct (hit other children/beat other
+children up, steal things, threaten/blackmail others, call nasty names, play nasty tricks on
+others), or relational (leave others out of games, tell others that they will not be their friends
+anymore, tell nasty stories or lies about others) in the past month. An additional peer
+nomination item (adapted from Schfer and Korn 2004; Salmivalli et al. 1996, respectively)
+asked the children to name up to six classmates who tell bullies to stop the harassments of
+others, reflecting an assertive and active form of peer intervention (defender nomination).
+All questions (questionnaires) were available in German and English, and were back- and
+forward-translated (van de Vijver and Hambleton 1996) to ensure comparability of the
+questions between both countries. Pupils were equipped with a list of all pupils in each
+class to fill in these questions.
+Moreover, data from different sourcescollected during and directly after the first
+interaction with FearNot!included:
+
+
+
+
+Number of Coping Strategies: during the interaction with FearNot!, pupils engaged
+as invisible friends to the victimised character and tried to help them offering their
+advice. Pupils provided suggestions of coping strategies as well as justifications for
+these suggestions by typing in freely via the keyboard which was recorded by the
+system. The coping strategies were categorised using the 18 categories specified in
+Table 1.
+Theory of Mind: justifications were categorised regarding childrens Theory-of-Mindrelated content of statements (0 = no signs of ToM; 1 = statements that take
+
+Table 1 Coping strategies
+categories
+
+Coping strategies
+Ignore the bully
+
+Avoid the bully
+
+Start crying
+
+Change yourself
+
+Walk away/run away
+
+Confront the bully assistant
+
+Blame yourself
+
+Make a new friend
+
+Stay off school/feign illness
+
+Tell someone/ask someone
+for help
+
+Stand up to the bully/tell him to stop Tell teacher/ask teacher for help
+Fight back
+
+Tell parents/ask parents for help
+
+Call the bully names
+
+Tell/Ask bystander/defender
+for help
+
+Laugh it off
+
+Other
+
+N. Vannini et al.
+
+
+
+consequences of coping strategies into account; 2=statements that take consequences
+of coping strategies into account which affect the internal mental state of others).
+Affective Empathy: directly after each interaction with FearNot!, pupils filled in a
+form where they rated the affective state of the victimised character as well as their
+own affective state on five adjectives: anxious, sad, angry, happy, and aggressive on a
+four-point scale (not at all, somewhat, pretty much, very much). Affective empathy
+scores were computed from these data transforming the raw scores into binary variables
+(0=no match; 1=match). Matches of emotions for self and victimised character were
+summed, yielding an empathy index with a maximum of 5 (matches in all five
+emotions) and a minimum of 0 (no matches).
+
+Procedure
+At three time points (T1, T2, T3) the questionnaire battery was administered on a class by
+class basis by the authors. Intervention and control groups received two questionnaire
+administration sessions (T1 and T2) before and after a 3-week period during which the
+children of the intervention group worked with the FearNot! software, whereas the
+children of the control group continued with their standard school lessons. A further
+questionnaire administration (T3) was conducted 5 weeks later. As the questions of the
+bullying involvement at each time point referred to the past four weeks, the administration
+at T1 (baseline) reflects the 4-week period before the intervention, questions administered
+at T2 assess bullying involvement during the intervention period, whereas T3 is an
+assessment of the four weeks after the intervention period.
+To provide participants with a common definition of bullying, researchers conducted an
+educational session at the beginning of the first questionnaire administration (T1)
+presenting definitions of direct and relational forms of bullying in the intervention and
+control group, and ensured with a discussion (question and answer) section that the children
+had a common sense of the study subject.
+
+Statistical analyses
+Allocation bias analysis
+As schools could not be allocated randomly in the intervention or control group condition,
+we initially analysed if there were significant differences of core characteristics between
+pupils (gender, age, living arrangements at home) and classes (class size, socio-economic
+status) of both groups, respectively. For this purpose, a series of chi-square tests for the
+categorical variables and T tests for the continuous variables were conducted.
+Prevalence of bullying involvement at baseline
+In a first step of analysis, we examined the bullying involvement at baseline (T1). The two
+bully nomination items as well as the two victim nomination items correlated strongly
+(direct and relational victim nomination Cronbach's alpha=0.85; direct and relational bully
+nomination Cronbach's alpha=0.87). Accordingly, children were categorised as (pure)
+victim or (pure) bully if they had received nominations at least one standard deviation (SD)
+
+FearNot!
+
+above the class mean nomination score in at least one of each category (see von Mares and
+Petermann 2008), and at least a 0.5 SD difference between victim versus bully nomination,
+respectively. Z scores were used to account for different class sizes within the sample. We
+assigned children to the bully/victim (aggressive victim) role if they had received average
+nominations (at least one SD above the mean nomination within the class) in at least one of
+the bully peer nomination items (direct or relational) as well as in at least one of the victim
+peer nomination items (direct or relational), and the difference between both (bully versus
+victim nomination) was lower than 0.5 SD. Pupils were identified as (pure) defenders if
+they had their highest nomination score (at least one SD above the class mean nomination
+value) on the defender nomination item, and at least a 0.5 SD difference between defender
+nomination score and victim and/or bully nomination score.
+To test for differences in overall bullying involvement between the intervention and the
+control groups, countries, and genders, respectively, chi-square tests were applied.
+To examine if the children of the different bullying involvement groups differ with
+regard to their Social Preferences values we conducted a between-subject ANOVA, using
+bullying roles as independent and Social Preference as the dependent variable. As
+suggested by Peery (1979), Social Preference (SP) was determined by subtracting the z-like
+least values from the z-like most values (zLMzLL=SP).
+FearNot! intervention and New Defender status
+The two samplesUK and German samplewere analysed separately with regard to their
+New Defender status during the intervention period (T2) and four weeks after the
+FearNot! intervention (T3). Children were assigned to New Defender T2 (and/or New
+Defender T3)-category, if they had their highest (at least one SD above the mean
+nomination within the class) z score in the defender nomination category, and if that
+defender nomination z score was at least 0.5 SD above the nominations in any other (bully
+and/or victim) category. To test for differences between the intervention and the control
+groups, chi-square tests were applied. Furthermore, we fitted a multilevel logistic regression
+model to test intervention effects on the odds of becoming a New Defender at T2 and T3,
+while controlling for gender and age. Multilevel models account for the lack of
+independence introduced by hierarchically nested data (i.e. students nested within classes)
+by allowing effects to vary randomly across level-2 units (i.e. classes). Hierarchical linear
+modelling analyses were conducted with HLM 6.0 (Bryk et al. 1996).
+New Defender status and Social Preference
+To test for differences in Social Preference values between pupils categorised as New
+Defenders and permanently non-involved children as well as between the genders within
+the group of New Defenders, t tests were applied. Furthermore, to investigate whether
+popularity of New Defenders increases from T1 to T2 and T3, an analysis of variance
+(ANOVA, with repeated measurements) with the Social Preference scores at T1, T2 and T3
+was conducted including the New Defender and permanently non-involved status,
+respectively, as between-subject factor.
+New Defender status and FearNot! interaction styles
+In order to investigate whether New Defenders and permanently non-involved pupils
+differed in their interaction with the software application, a between-subject MANOVA
+
+N. Vannini et al.
+
+was conducted, with defender status (permanently non-involved children versus New
+Defenders) and gender as independent variables and four dependent variables that
+represent the interaction style:
+
+
+
+
+
+Number of episodes the pupil has worked through during the FearNot! session;
+Number of coping strategies suggested to the victimised character;
+Affective empathy in the sense of emotional contagion, assessed by match of emotional
+states ascribed to the victimised character and the self;
+Theory of Mind in the justifications offered for their suggested coping strategies
+
+The first of three interaction sessions was chosen for these analyses, following the
+assumption that it imposed the most powerful impression on the pupils. Moreover, sample
+sizes were largest for the first compared to the other interaction sessions.
+
+Results
+Allocation bias analysis
+The allocation bias analysis indicated that there were no significant baseline differences
+between the pupils of the intervention and the control group in terms of gender, age or
+living arrangement (family composition) at home. Moreover, intervention and control
+classes were similar with respect to size and SES. Table 2 gives an overview of the
+details.
+Table 2 Baseline pupils and class-level characteristics
+Experimental condition
+Characteristica
+
+Interventionb
+
+Controlb
+
+Gender,% femalec
+
+266 (50%)
+
+280 (46%)
+
+Agec
+
+8.93 (0.8)
+
+8.91 (0.7)
+
+493 (98%)
+389 (77%)
+
+543 (97%)
+438 (79%)
+
+Family living arrangements
+% living with motherc
+% living with fatherc
+% living with step-motherc
+
+6 (1%)
+
+9 (2%)
+
+% living with step-fatherc
+
+29 (6%)
+
+36 (7%)
+
+% living with foster parentsc
+% having siblingsc
+
+4 (1%)
+463 (91%)
+
+8 (1%)
+497 (89%)
+
+Class characteristics
+Class sizec
+% High SESc
+
+23.17 (6.7)
+14 (70%)
+
+26.17 (3.6)
+10 (50%)
+
+SES socio-economic status
+Intervention group: N=530; control group: N=603
+a
+
+Data are mean (SD) or number (%)
+
+b
+
+Numbers may not sum to sample totals because of missing values
+
+c
+
+There were no significant differences between the two groups at the.05 level (chi-square test for categorical
+variables and t-test for continuous variables)
+
+FearNot!
+
+Prevalence of bullying involvement at baseline
+Overall, the bullying involvement based on the peer nomination data included 279 children
+(25%, nominated as either [direct or relational] bully, victim or bullyvictim) at baseline.
+More specifically, n=103 (9%) children were nominated as bully, n=134 (12%) pupils were
+nominated as victims, and n=42 (4%) children were nominated as bullyvictims. Analysing
+the nominations of the sub-sample of both countries separately indicated that n=64 UK
+children (10% of total UK sub-sample, n=642) versus n=39 German children (8% of total
+German sub-sample, n=491) were named as bullies by their classmates, n=100 (16%)
+children from the UK versus n=34 (7%) German pupils were nominated as victims, and n=
+39 (6%) UK pupils versus n=3 (1%) children from Germany assigned to the bullyvictim
+category.
+There were no significant differences in overall bullying involvement between the
+intervention and the control groups (n=127 versus n=152, respectively). There was no
+significant difference in overall bullying involvement between both genders (n=123 girls
+versus n=156 boys) but examining bullying involvement separately by bullying type (direct
+versus relational versus direct/relational bullying) a significant difference was found:
+more girls (n=94) were nominated to be involved in relational bullying than boys (n=65)
+[2 (1)=8.85, p<0.01]; more boys (n=33) than girls (n=9) were involved in direct
+bullying [2 (1)=12.51, p<0.001] and more boys (n=58) than girls (n=20) were
+nominated to be involved in relational as well as in direct bullying [2 (1)=17.06, p<
+0.001]. Furthermore, we found a significant difference in bullying involvement between
+both sub-samples: significantly more UK pupils (n=203) were nominated in either of the
+bullying categories than German pupils (n=76) [2 (1)=39.05, p<0.001].
+Of the 1,133 children assessed at baseline, n=84 were identified as defenders (7.4%).
+Significant differences were found between defender status and countries as well as
+between defender status and gender. More UK (n=59) than German (n=25) pupils were
+nominated as defenders by their classmates [2 (1)=6.81, p<0.01], whereas significantly
+more girls (n=52) than boys (n=32) received nominations in this category [2 (1)=8.83,
+p=0.01].
+The conducted ANOVA regarding the Social Preference values of the different
+bullying involvement groups revealed a significant main effect of bullying roles [F (4,
+1,128)=38.62, p<0.001]. Post hoc analyses (Bonferroni comparisons) showed that
+defenders were significantly more popular than all other groups (for means and standard
+deviations see Table 3).
+
+Table 3 Mean and standard deviation of Social Preference per bullying role
+Baseline bullying roles
+
+Social Preference (SP)
+N
+
+Mean
+
+SD
+
+Bully
+
+103
+
+0.98
+
+2.25
+
+Victim
+
+134
+
+0.75
+
+1.89
+
+42
+
+0.61
+
+1.73
+
+770
+
+0.20
+
+1.35
+
+Defender
+
+84
+
+1.30
+
+1.25
+
+Summary
+
+1133
+
+0.03
+
+1.63
+
+Bullyvictim
+Non-involved children
+
+N. Vannini et al.
+
+FearNot! intervention and New Defender status
+To examine whether FearNot! has the potential to foster peer intervention, we conducted
+further analyses with the baseline sample of non-involved children, focusing on their
+nomination as New Defender at the second and third assessment time points (T2 & T3).
+This sample of N=770 (68%) not directly involved children included 369 (48%) pupils in
+the intervention and 401 (52%) pupils in the control group; of these children, 380 (49%)
+children came from the UK and 390 (51%) children from Germany. There were 399 (52%)
+boys and 371 (48%) girls with an age range from 7 to 11 years (M=8.84; SD=0.74). Given
+the significant differences in age and bullying involvement between the UK and German
+sub-samples at baseline, we analysed both samples separately with regard to their New
+Defender status during the intervention period (T2) and four weeks after the FearNot!
+intervention (T3). Table 4 presents the numbers of New Defenders at both time points
+separately for the UK and German sub-samples.
+As Table 4 shows, in the UK sub-sample there were more New Defenders in the control
+than intervention group at T2 and T3. However, these differences were not significant. Within
+the German sub-sample, there were more New Defenders in the intervention than in the
+control group at both assessments (T2 and T3). Also, a significant association between
+experimental group and New Defender status could be found at T3 [2 (1)=5.079, p<0.05],
+indicating that within the German sub-sample more children of the intervention than of the
+control group became New Defenders within the 4-week period after the FearNot!
+intervention. Furthermore, we fitted a multilevel logistic regression model to test intervention
+effects on the odds of becoming a New Defender at T2 and T3, while controlling for gender
+and age. Results revealed a marginally significant effect of experimental group membership
+on New Defender status at T3 (OR, 3.07; CI, 0.8710.86; p=0.08), indicating that noninvolved children in the intervention group tended to be more likely to be classified as New
+Defenders at T3 compared to non-involved children in the control group.
+New Defender status and Social Preference
+To test whether Social Preference at baseline is an important determinant factor of the New
+Defender nomination at T2 and T3, we compared the baseline Social Preference values of
+the 19 German children (12 girls and 7 boys; age M=8.32; SD=0.48) who were identified
+as New Defenders at T2 and T3 (ten of those 19 children were nominated as New Defender
+
+Table 4 New defender at T2 & T3 in each experimental group for UK and German sub-sample
+New Defender
+
+New Defender
+
+New Defender
+
+at T2
+
+at T3
+
+at T3
+
+Baseline to T2
+
+Baseline to T3
+
+T2 to T3
+
+Intervention Group
+
+24
+
+28
+
+15
+
+Country
+
+UK:11: GE:13
+
+UK:15; GE:13
+
+UK 9; GE:6
+
+Control Group
+
+21
+
+26
+
+15
+
+Country
+
+UK:15;GE:6
+
+UK:22; GE:4
+
+UK 14; GE:1
+
+Total
+
+45
+
+54
+
+30
+
+Country
+
+UK:26;GE:19
+
+UK:37;GE:17
+
+UK:23,GE:7
+
+UK United Kingdom, GE Germany
+
+FearNot!
+
+at both time points) with a randomly chosen group of 19 permanently non-involved
+children of the German intervention group (n=19; 12 girls and seven boys; age M=8.32;
+SD=0.48). The New Defenders and controls were matched regarding gender and age. We
+found a significant group difference [t (36)=4.616, p>0.001] indicating that the children
+who were identified as New Defenders at T2 and T3 were more popular (M=1.62; SD=
+1.01) at the baseline assessment than children who stayed non-involved at T2 and T3 (M=
+0.10; SD=1.03). There was no significant difference in popularity within the group of New
+Defenders with regard to gender, although the seven boys (M=1.86; SD=1.02) scored
+slightly higher than the 12 girls (M=1.49; SD=1.02) at baseline. Furthermore, an ANOVA,
+with repeated measurements to test for increases in popularity of New Defenders from
+baseline to T2 and T3 showed that there was neither a significant interaction effect of time
+and status nor a significant within group change of Social Preference over time.
+New defender status and FearNot! interaction styles
+After having shown that in the German sample interacting with FearNot! increased
+the number of previously uninvolved pupils that became defenders, and that these New
+Defenders were more popular than permanently uninvolved pupils, the next step of our
+analyses was to investigate whether pupils who became defenders during and after the
+interaction with FearNot! differed in their interaction with the software application
+from those children who remained bystanders throughout the testing period. Thus, we
+categorised and analysed data assessed during the interaction regarding the number of
+episodes played, the number of coping strategies suggested, and cognitive and affective
+empathy. If systematic differences were found between groups, the conclusion that
+FearNot! plays a role in stimulating role change would be strengthened. For the
+German sample, n=119 pupils aged 79 years (M=8.29; SD =0.49) were included in this
+sub-sample of which complete sets of data existed for the intervention as well as for the
+bullying status nominations; of these children, 53 were male (45%) and 66 were female
+(55%). A MANOVA was conducted testing for differences between New Defenders and
+permanently non-involved pupils (between-subject factor) regarding their qualitative
+interaction styles with the software (four dependent variables: Number of Episodes;
+Number of Coping Strategies; Affective Empathy; Theory of Mind). It yielded a
+significant main effect of Defender Status on Theory of Mind (ToM) represented in the
+interaction data [F (3, 95)=5.53; p <0.05] showing that New Defenders displayed
+significantly more ToM in the first interaction session with FearNot! than pupils who
+remained non-involved throughout the study. We also found a significant main effect for
+gender on the number of coping strategies [F (3, 95)=4.82; p<0.05], indicating that girls
+suggest less coping strategies, but do work through equally many episodes (insignificant
+effect of gender on number of episodes).
+We furthermore found a significant interaction effect of GenderDefender Status on
+emotional contagion [F (3, 95)=15.42; p<0.01], with New Defender girls reporting highest
+scores of emotional contagion and New Defender boys reporting the lowest scores of
+emotional contagion (see Fig. 2).
+
+Discussion
+The aim of the present study was to investigate the utility of the virtual learning
+environment FearNot! with regard to fostering peer intervention in the framework of
+
+N. Vannini et al.
+Fig. 2 Interaction of gender and
+defender status on affective
+empathy scores (ND New
+defender; NI permanently
+non-involved pupils)
+
+3
+
+2,5
+
+2
+
+1,5
+
+1
+
+0,5
+ND
+NI
+0
+female
+
+male
+
+school bullying. For this purpose, we examined (new) defender peer nomination data of
+non-involved children at two assessment time points, that is, during (T2) and after (T3) a 3week intervention period with the programme. Data were analysed for a sample of UK and
+German primary school children. At the baseline assessment (T1), we found common
+prevalence rates based on bullying roles peer nomination scales for both countries (see, e.g.
+for Germany: Scheithauer et al. 2006; for the UK: Whitney and Smith 1993; for the UK and
+Germany: Wolke et al. 2001), with more UK than German children being involved in
+bullying as either bully and/or victims of direct and relational bullying. The sub-samples
+also differed with regard to age: pupils from the UK were older than German pupils.
+Confirming recent findings suggesting that not the overall bullying involvement (e.g. Craig
+and Pepler 1997; Schuster 1997) but the bullying types vary by gender (e.g. Scheithauer et
+al. 2006) we found no differences between genders with regard to the overall bullying
+involvement but more girls than boys were involved in relational bullying whereas more
+boys than girls were identified as bullies and/or victims of physical bullying.
+An examination of baseline nominated defender status revealed that defender status
+varied by country, gender, and also with respect to Social Preference: more UK than
+German children and more girls than boys were nominated by their classmates as defenders
+at baseline. The latter is in accord with previous findings on defender nomination indicating
+that more girls than boys are nominated as defenders (Salmivalli et al. 1996). Furthermore,
+in line with prior studies suggesting an association between pro-social behaviour and
+popularity (Coie et al. 1990), we found that pupils who were nominated as defenders were
+the most popular children within their classes.
+Given these differences between both countries, we further examined both sub-samples
+separately, and found that within the UK sample of baseline non-involved children there
+was no significant distinction regarding the New Defender nomination between the
+intervention and the control group at second and third assessment time points, whereas a
+significant association between New Defender nomination and experimental group at the
+third time point could be found for the German sample. A multilevel logistic regression
+model suggested that at the third assessment point, German participants in the intervention
+group tended to be more likely than control group participants to be classified as New
+Defenders. Please note, however, that this finding was just short of being significant.
+These results indicate that German children who were not directly involved in bullying
+episodes before but had worked with FearNot! counteracted to bullying incidences in
+
+FearNot!
+
+their classes within the 4 weeks period after the intervention, reflecting the potential of
+FearNot! for the German sub-sample to foster peer intervention when facing bullying
+events.
+An analysis of the data collected during and directly after the first interaction with
+FearNot! provided some interesting insights into the differences between non-involved
+pupils who ultimately became New Defenders and pupils who remained uninvolved in
+bullying incidents. These results suggest that even though the number of episodes and the
+number of coping strategies suggested to the victim character did not differ significantly
+between New Defenders and permanently uninvolved pupils, cognitive empathy was
+significantly higher for New Defenders as compared to permanently uninvolved pupils.
+Thus, New Defenders initially showed more readiness to transpose themselves into those
+involved in a (virtual) bullying incident than other pupils, suggesting that a high initial
+tendency to take the perspectives of the bullies, the victims, and potential (adult) helpers
+can lead to augmented responsibility when faced with real-life bullying incidents. This
+result holds for both genders.
+While cognitive empathy was operationalised by the ToM-related justifications provided
+for cognitive strategy suggestions, affective empathy was operationalised as emotional
+contagion in the present study. Regarding affective empathy, gender made a difference:
+New Defender girls showed highest empathy scores, whereas New Defender boys showed
+lowest empathy scores. This pattern of results indicates that for girls, affective reactions to
+the plight of the bullied victim might add to their becoming active fighters against bullying,
+whereas a clear lack of emotional contagion is associated with becoming active fighters
+against bullying for boys. The cognitive understanding or Theory of Mind regarding the
+victims situation is obviously not sufficient to make girls become active defenders, while
+boys might even be hindered in becoming defenders by too much emotional contagion. The
+reason for this different associations of emotional contagionor sympathising with the
+victimfor boys and girls may imply differences in some aspects of emotional intelligence,
+e.g. the ability to manage (potentially negative) emotions (Mayer and Salovey 1997), a
+facet that might prove worthwhile to assess in future studies of the effects of bullying
+intervention programmes on peer intervention.
+Another interesting outcome of the study showed that children who became New
+Defenders after the intervention were more popular than children who stayed non-involved
+throughout and afterwards the intervention period. A higher social status could be a kind of
+precondition with regard to ones successful or notable change from non-involved
+participant of bullying episodes to an active defender. Therefore, our results support
+previous notations including thatat least for boysa good standing within the social
+group is necessary to successfully intervene in bullying incidences (Salmivalli et al. 1998).
+We could not find that Social Preference of New Defenders increase throughout the
+assessments, which may be due to the overall small sample size of New Defenders.
+However, given the small size of the New Defender group, we did not investigate the role
+of Social Preference any further but recommend that this issue is taken into account in
+future studies of peer intervention programmes.
+Unexpectedly, FearNot! could not unfold its potential within the UK sub-sample. The
+study of Watson et al. (2010) which examined the educational impact of FearNot!
+regarding the best and worst ways to cope with bullying within the present sample already
+showed a cultural difference between both sub-samples. The German sample increased their
+coping strategy knowledge in response to the intervention while the UK sample did not,
+whereas the UK sample reported more knowledge regarding how to cope with bullying
+than the German sub-sample all the way through the three assessments. The authors
+
+N. Vannini et al.
+
+concluded that this reflects the difference between both countries regarding the awareness
+of bullying due to higher prevalence in the UK than in Germany (Watson et al. 2010; Wolke
+et al. 2001). Indeed, in the present study, we found not only differences with regard to
+bullying involvement of both countries at baseline but also regarding the level of previously
+applied approaches to handle bullying within the schools. A short interview conducted with
+the teachers who participated in the study showed that 18 of the 28 schools (16 UK schools
+and two German schools) follow an anti-bullying school policy; seven UK schools had
+participated in specific anti-bullying programmes before (e.g. SEALsay no to bullying
+programme), whereas only one German school did so (Faustlos [engl. second step];
+Cierpka 2001). Perhaps within the UK sample there is some ceiling effect with respect to
+intervention approaches: the FearNot! softwarealthough being an innovative approach
+with notable potentialmight not have provided any dramatically new insights for the UK
+pupils and therefore did not make a difference in fostering neither peer intervention nor
+coping strategy knowledge in UK pupilsan interesting assumption future studies will
+have to investigate.
+While the difference in effectiveness between the two countries under investigation is
+obvious, apparently some limitations of the present study have also to be taken into account
+when we discuss the previous considerations. First, defender status was measured using
+only one item that reflects an assertive approach of peer intervention. The picture might
+change if other forms of defender behaviour, i.e. comforting the victim after a bullying
+episode, are assessed. Furthermore, the generalisability of the present results is limited due
+to the fact that schools were not completely randomly assigned to both experimental
+conditions because of technical requirements. Hence, differences between the intervention
+and the control group might be attributable to differences that caused the variance in
+schools technological equipment, even though this seems rather unlikely. Constraints
+regarding the intervention itself include the limited interaction time with FearNot! (only
+3 weeks): a longer period of working with FearNot! should have a greater impact, given
+that other research has shown that long-term anti-bullying interventions achieve greater
+success (see e.g. Olweus 2004; Smith et al. 2004). Another limitation of the present
+intervention regards the lack of supplementing materials (e.g. lesson materials to induce
+reflection, etc.). Effective real-life role-play approaches or other training approaches to
+foster any social skills commonly include modules that trigger reflection which are
+considered as necessary ingredients to support learning and transformational achievement
+(Dewey 1993; Hatton and Smith 1995).
+FearNot! isto the best of our knowledgethe first virtual learning environment
+designed as an anti-bullying intervention in the field and the present study investigates the
+impact of this novel approach on bystanders by testing the effect of repeated interaction.
+The results indicate that the programme has potential fostering peer intervention among
+primary school pupils given the limitations mentioned above. It is left to future studies to
+provide insight in whether this potential of FearNot! also unfolds if other operationalisations of peer intervention are used, or in case FearNot! is directly compared to real-life
+role-play approaches to investigate whether the assumed advantages of virtual role-play can
+be supported.
+Acknowledgments We would like to thank all the schools, teachers, and children who have taken part in
+this study. In addition we would like to thank the following researchers, without whom this study would not
+have been possible: Stefanie Brosch, Rafal Dawidowicz, Megan Davis, Joao Dias, Rui Figueiredo, Adrian
+Gordon, Marc Hall, Wan Ching Ho, Michael Kriegel, Karin Leichtenstern, Mey Yii Lim, Sandy Louchart,
+Asad Nazir, Chystopher Nehaniv, Luis Oliveira, Malcolm Padmore, Matthias Rehm, Paola Rizzo, Harald
+Schaub, Tim Tisdale, Isabel Transoco, Marco Vala, Thurid Vogt, Marc Webster, and Carsten Zoll. Many
+
+FearNot!
+thanks also to Katja Berberich, Anna-Verena Zeiser, Peter Kluge und Christian Welz for their assistance with
+data collection and entry.
+Funding This work was partially supported by the European Community (EC) and was funded by the
+eCIRCUS project IST-4-027656-STP with university partners Heriot-Watt, Hertfordshire, Sunderland,
+Warwick, Bamberg, Augsburg, Wuerzburg plus INESC-ID and Interagens. The authors are solely responsible
+for the content of this publication. It does not represent the opinion of the EC, and the EC is not responsible
+for any use that might be made of data appearing therein.
+
+References
+Arseneault, L., Walsh, E., Trzesniewski, K., Newcombe, R., Caspi, A., & Moffitt, T. E. (2006). Bullying
+victimization uniquely contributes to adjustment problems in young children: a nationally representative
+cohort study. Pediatrics, 118(1), 130138.
+Aylett, R. S., Louchart, S., Dias, J., Paiva, A., & Vala, M. (2005). FearNot! - an experiment in emergent
+narrative. In T. Panayiotopoulos, J. Gratch, R. Aylett, D. Ballin, P. Olivier, & T. Rist (Eds.), Intelligent
+virtual agents proceedings (pp. 305316). Berlin: Springer.
+Bjrkqvist, K., sterman, K., & Lagerspetz, K. M. J. (1994). Sex differences in covert aggression among
+adults. Aggressive Behavior, 20, 2733.
+Bond, L., Carlin, J. B., Thomas, L., Rubin, K., & Patton, G. (2001). Does bullying cause emotional
+problems? A prospective study of young teenagers. British Medical Journal, 323(7311), 480484.
+Bryk, A. S., Raudenbush, S., & Congdon, R. (1996). HLM hierarchical linear and non-linear modeling with
+HLM/2 L and HLM/3 L programs. Chicago: Scientific Software International.
+Charach, A., Pepler, D., & Ziegler, S. (1995). Bullying at school: a Canadian perspective. Education Canada,
+35, 1218.
+Cierpka, M. (Ed.). (2001). FAUSTLOS - Ein Curriculum zur Prvention von aggressivem und gewaltbereitem
+Verhalten bei Kindern der Klassen 1 bis 3 [FAUSTLOS  a curriculum to prevent aggressive and violent
+behaviour among school children of classes 1 to 3]. Gttingen: Hogrefe.
+Coie, J. D., Dodge, K. A., & Coppotelli, H. (1982). Dimensions and types of social status: a cross-age
+perspective. Developmental Psychology, 18(4), 557570.
+Coie, J. D., Dodge, K. A., & Kupersmidt, J. B. (1990). Peer group behaviours and social status. In S. R.
+Asher & J. C. Coie (Eds.), Peer rejection in childhood (pp. 1759). New York: Cambridge University
+Press.
+Craig, W. M., & Pepler, D. (1997). Observations of bullying and victimization in the schoolyard. Canadian
+Journal of School Psychology, 13, 4159.
+Craig, W. M., Pepler, D., & Atlas, R. (2000). Observations of bullying in the playground and in the
+classroom. School Psychology International, 21, 2236.
+Crick, N. R., & Grotpeter, J. K. (1995). Relational aggression, gender, and social-psychological adjustment.
+Child Development, 66, 710722.
+Davis, M. H. (1994). Empathy. A social psychological approach. Boulder CO: Westview.
+Dewey, J. (1993). How we think: a restatement of the relation of reflective thinking to the educative process.
+Lexington: Heath.
+Dias, J., & Paiva, A. (2005). Feeling and reasoning: a computational model for emotional agents. Paper presented
+at 12th Portuguese conference on artificial intelligence (EPIA), December 5-8, in Covilh, Portugal.
+Espelage, D. L., Holt, M. K., & Henkel, R. R. (2003). Examination of peer-group contextual effects on
+aggression during early adolescence. Child Development, 74, 205220.
+Fekkes, M., Pijpers, F. I. M., Fredriks, A. M., Vogels, T., & Verloove-Vanhorick, S. P. (2006). Do bullied
+children get ill, or do ill children get bullied? a prospective cohort study on the relationship between
+bullying and health-related symptoms. Pediatrics, 117(5), 15681574.
+Flavell, J. H. (2004). Theory-of-mind development: retrospect and prospect. Merrill-Palmer Quarterley
+Journal of Developmental Psychology, 50, 274290.
+Frey, K. S., Hirschstein, M. K., Snell, J. L., Van Schoiack Edstrom, L., MacKenzie, E. P., & Broderick, C. J.
+(2005). Reducing playground bullying and supporting beliefs: an experimental trail of the steps to
+respect program. Developmental Psychology, 41(3), 479491.
+Hall, L., Woods, S., Aylett, R., Newall, L., & Paiva, A. (2005). Achieving empathic engagement through
+affective interaction with synthetic characters. Paper presented at Affective Computing and Intelligent
+Interaction (ACII), October 2224, in Beijing, China.
+Hatton, N., & Smith, D. (1995). Reflection in teacher education: towards definition and implementation.
+Teaching & Teacher Education, 11, 3349.
+
+N. Vannini et al.
+Hawkins, D., Pepler, D. J., & Craig, W. M. (2001). Naturalistic observations of peer interventions in
+bullying. Social Development, 10, 512527.
+Hazler, R. J. (1996). Bystanders: an overlooked factor in peer on peer abuse. The Journal for the
+Professional Counsellor, 11(2), 1123.
+Hoffman, M. L. (1977). Empathy, its development and prosocial implications. In C. B. Kaesy (Ed.),
+Nebraska Symposium on Motivation (Vol. 25, pp. 169217). Lincoln: University of Nebraska Press.
+Hogan, R. (1969). Development of an empathy scale. Journal of Consulting and Clinical Psychology, 35, 307316.
+Hollin, C. R., & Tower, P. (Eds.). (1986). Handbook of social skill training (vols. 1 and 2). Oxford: Pergamon.
+Steinmetz, M., & Holz-Ebeling, F. (1995). Wie brauchbar sind die vorliegenden Fragebogen zur Messung
+von Empathie? Kritische Analyse unter Bercksichtigung der Iteminhalte. [How useful are current
+questionnaires of empathy measurement? a critical analysis considering the contents of items]. Zeitschrift
+fr Differentielle und Diagnostische Psychologie, 16, 1132.
+Hungerige, H., & Borg-Laufs, M. (2001). Rollenspiel. [Role-play]. In M. Borg-Laufs (Ed.), Lehrbuch der
+Verhaltenstherapie mit Kindern und Jugendlichen, Band II: Methoden (pp. 247299). Tbingen: dgvt.
+Jeffrey, L. R., Miller, D., & Linn, M. (2001). Middle school bullying as a context for the development of
+passive observers to the victimization of others. Journal of Emotional Abuse, 2, 143156.
+Jupp, J. J., & Griffiths, M. D. (1990). Self-concept changes in shy, socially isolated adolescents following
+social skills training emphasising role-plays. Australian Psychologist, 25, 165177.
+LAbate, L., & Milan, M. A. (Eds.). (1985). Handbook of social skill training and research. New York: Wiley.
+Latan, B., & Darley, J. (1968). Group inhibition of bystander intervention in emergencies. Journal of
+Personality and Social Psychology, 10, 215221.
+Mayer, J. D., & Salovey, P. (1997). What is emotional intelligence? In P. Salovey & D. Sluyter (Eds.), Emotional
+development and emotional intelligence: implications for educators (pp. 331). New York: Basic.
+Nansel, T. R., Craig, W., Overpeck, M. D., Saluja, G., Ruan, W. J., & The Health Behaviour in School-aged
+Children Bullying Analyses Working Group. (2004). Cross-national consistency in the relationship
+between bullying behaviors and psychosocial adjustment. Archives of Pediatrics & Adolescent Medicine,
+158(8), 730736.
+OConnell, P., Pepler, D., & Craig, W. (1999). Peer involvement in bullying: insights and challenges for
+intervention. Journal of Adolescence, 22, 437452.
+Olweus, D. (1996). Gewalt in der Schule [Bullying at Schools]. Bern: Huber.
+Olweus, D. (2001). Peer harassment: A critical analysis and some important issues. In J. Juvonen & S. Graham (Eds.),
+Peer harassment in school: The plight of the vulnerable and victimized (pp. 320). New York: Guilford.
+Olweus, D. (2004). The Olweus bullying prevention programme: design and implementation issues and a
+new national initiative in Norway. In P. K. Smith, D. Pepler, & K. Rigby (Eds.), Bullying in schools: how
+successful can interventions be? (pp. 1336). Cambridge: Cambridge University Press.
+Peery, J. (1979). Popular, amiable, isolated, rejected: a reconceptualization of sociometric status in preschool
+children. Child Development, 50, 12311234.
+Rigby, K., & Slee, P. T. (1992). Bullying among Australian school children: reported behaviour and attitudes
+towards victims. The Journal of Social Psychology, 131(5), 615627.
+Rodkin, P. C. (2004). Peer ecologies of aggression and bullying. In D. L. Espelage & S. M. Swearer (Eds.),
+Bullying in American schools (pp. 87106). Mahwah, NJ: Erlbaum.
+Salmivalli, C. (1999). Participant role approach to school bullying: implications for interventions. Journal of
+Adolescence, 22, 453459.
+Salmivalli, C. (2001). Group view on victimization: Empirical findings and their implications. In J. Juvonen
+& S. Graham (Eds.), Peer harassment in school: The plight of the vulnerable and victimized (pp. 398
+419). New York: Guilford.
+Salmivalli, C., Lagerspetz, K., Bjrkqvist, K., sterman, K., & Kaukiainen, A. (1996). Bullying as a
+group process: participant roles and their relations to social status within the group. Aggressive
+Behavior, 22, 115.
+Salmivalli, C., Lappalainen, M., & Lagerspetz, K. M. J. (1998). Stability and change of behaviour in
+connection with bullying in schools: a two-year follow-up. Aggressive Behavior, 24, 205218.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., et al. (2009). Virtual learning
+intervention to reduce bullying victimization in primary school: a controlled trial. Journal of Child
+Psychology and Psychiatry, 51(1), 104112.
+Schfer, M., & Korn, S. (2004). Bullying als Gruppenphnomen: Eine Adaption des Participant RoleAnsatzes. [Bullying as group phenomenon: an adaptation of the participant-roleapproach]. Zeitschrift
+fr Entwicklungspsychologie und Pdagogische Psychologie, 36(1), 1929.
+Scheithauer, H., Hayer, T., & Petermann, F. (2003). Bullying unter Schlern. Erscheinungsformen,
+Risikobedingungen und Interventionskonzepte. Gttingen: [Bullying among pupils: forms, risk factors
+and intervention approaches]. Hogrefe.
+
+FearNot!
+Scheithauer, H., Hayer, T., Petermann, F., & Jugert, G. (2006). Physical, verbal, and relational forms of
+bullying among German students: age trends, gender differences, and correlates. Aggressive Behavior,
+32, 261275.
+Schreier, A., Wolke, D., Thomas, K., Horwood, J., Hollis, C., Gunnell, D., et al. (2009). Prospective study of
+peer victimization in childhood and psychotic symptoms in a nonclinical population at age 12 years.
+Archives of General Psychiatry, 66(5), 527536.
+Schuster, B. (1997). Bullying in der Schule: Ein berblick ber die Forschung. und Anregungen aus
+verwandten Forschungstraditionen [Bullying at school: an overview of research results and suggestions
+of related research traditions]. Empirische Pdagogik, 11, 315325.
+Smith, P. K., Sharp, S., Eslea, M., & Thompson, D. (2004). England: The Sheffield Project. In P. K. Smith,
+D. Pepler, & K. Rigby (Eds.), Bullying in schools: How successful can interventions be? (pp. 99124).
+Cambridge: Cambridge University Press.
+Stassen Berger, K. (2007). Update on bullying at school: science forgotten? Developmental Review, 27(1),
+90126.
+Sutton, J., & Smith, P. K. (1999). Bullying as a group process: an adaptation of the participant role approach.
+Aggressive Behavior, 25, 97111.
+Tapper, K., & Boulton, M. J. (2005). Victim and peer group responses to different forms of aggression
+among primary school children. Aggressive Behavior, 31, 238253.
+van de Vijver, F. J. R., & Hambleton, R. K. (1996). Translating tests: some practical guidelines. European
+Psychologist, 1(2), 8999.
+Van Mets, M. (1991). Rollenspiel effektiv [Effective role play]. Mnchen: Ehrenwirth.
+von Mares, N., & Petermann, F. (2008). Erhebung von Bullying im Kindergarten- und Grundschulalter: Ein
+Review [assessment of bullying in kindergarten and primary school age: a review]. Psychologie in
+Erziehung und Unterricht, 55, 161174.
+Watson, S., Vannini, N., Davis, M., Woods, S., Hall, M., Hall, L., & Dautenhahn, K. (2007). FearNot! an
+anti-bullying intervention: Evaluation of an interactive virtual learning environment. Paper presented at
+Artificial Intelligence and Simulation of Behaviour (AISB), April 24. Newcastle, UK.
+Watson, S., Vannini, N., Woods, S., Dautenhahn, K., Sapouna, M., Enz, S., et al. (2010). Inter-cultural differences
+in response to a computer based anti-bullying intervention. Educational Research, 52(1), 6180.
+Whitney, I., & Smith, P. K. (1993). A survey of the nature and extent of bullying in junior/middle and
+secondary schools. Educational Research, 35, 325.
+Wolke, D., Woods, S., Standford, K., & Schulz, H. (2001). Bullying and victimization of primary school
+children in England and Germany: prevalence and school factors. British Journal of Psychology, 92(4),
+673696.
+Woods, S., Hall, L., Sobral, D., Dautenhahn, K., & Wolke, D.(2003). Animated characters in bullying
+intervention. Paper presented at Intelligent Virtual Agents (IVA), September 1517, in Irsee, Germany.
+Wright, P. R. (2006). Drama education and development of self: myth or reality? Social Psychology of
+Education, 9, 4365.
+
+Natalie Vannini. Institute of Psychology, Department of Educational Psychology, University of Wuerzburg,
+Roentgenring 10, D-97070 Wuerzburg. E-mail: natalie.vannini@psychologie.uni-wuerzburg.de; Web
+site: http://www.i4.psychologie.uni-wuerzburg.de/en/
+Current themes of research:
+Social and emotional learning (SEL). Bullying. Evaluation.
+Most relevant publications in the field of Psychology of Education:
+Watson, S., Vannini, N., Woods, S., Dautenhahn, K., Sapouna, M., Enz, S., Schneider, W., Wolke, D., Hall,
+L., Paiva, A., Andre, E., & Aylett, R. (2010). Inter-cultural differences in response to a computer-based
+anti-bullying intervention. Educational Research, 52(1), 6180.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A., Andre, E.,
+Dautenhahn, K., & Aylett, R. (2009). Virtual learning intervention to reduce bullying victimization in Primary
+School: a controlled trial. Journal of Child Psychology & Psychiatry, 51(1), 104112.
+
+N. Vannini et al.
+Enz, S., Zoll, C., Vannini, N., Schneider, W., Hall, L., Paiva, A., & Aylett, R. (2008). e  Motional Learning
+in Primary Schools: FearNot! An Antibullying Intervention Based on Virtual Role-play with Intelligent
+Synthetic Characters. Electronic Journal e-Learning, 6(2), 111118.
+
+Dr. Sibylle Enz. Gruppe fuer Interdisziplinaere Psychologie, Universitaet Bamberg, Kapuzinerstrasse 16, D96045 Bamberg. E-mail:sibylle.enz@uni-bamberg.de; Web: http://www.uni-bamberg.de/grip/
+Current themes of research:
+Empathy. Social relationships at the workplace. Social relationships with artificial companions. Evaluation.
+Most relevant publications in the field of Psychology of Education:
+Enz, S., Zoll, C., Vannini, N., Lim, M., Schneider, W., Hall, L., Paiva, A., Aylett, R. (2010). ORIENT: The
+Intercultural Empathy Through Virtual Role-Play. In S. Mukerji & P. Tripathi (Eds.), Cases on
+Transnational Learning and Technologically Enabled Environments (pp. 6588). Hershey: IGI Global.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A., Andre,
+E., Dautenhahn, K., & Aylett, R. (2009). Virtual learning intervention to reduce bullying victimization in
+Primary School: a controlled trial. Journal of Child Psychology & Psychiatry, 51(1), 104112.
+Ho, W.C., Dautenhahn, K., Lim, M., Enz, S., Zoll, C., & Watson, S. (2009). Towards Learning Self and
+Emotional Knowledge in Social and Cultural Human-Agent Interactions. International Journal of Agent
+Technologies and Systems 1(3), 5178.
+Enz, S., Zoll, C., Vannini, N., Schneider, W., Hall, L., Paiva, A., & Aylett, R. (2008). e-Motional Learning in
+Primary Schools: FearNot! An Antibullying Intervention Based on Virtual Role-play with Intelligent
+Synthetic Characters. Electronic Journal e-Learning, 6(2), 111118.
+
+Dr Maria Sapouna. Department of Psychology, University of Warwick, Coventry, CV4 7AL. E-mail: maria.
+sapouna@scotland.gsi.gov.uk; Web site: www.warwick.ac.uk
+Current themes of research:
+Bullying. Offender rehabilitation and resettlement.
+Most relevant publications in the field of Psychology of Education:
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A., Andre,
+E., Dautenhahn, K. & Aylett, R. (2009). Virtual learning intervention to reduce bullying victimization in
+primary school: A controlled trial. Journal of Child Psychology and Psychiatry, 51(1), 104112.
+Sapouna, M. (in press). Collective efficacy in the school context: Does it help explain victimisation and
+bullying among Greek primary and secondary school students? Journal of Interpersonal Violence.
+Sapouna, M. (2008). Bullying in Greek primary and secondary schools. School Psychology International, 29
+(2), 199213.
+
+Dieter Wolke. Professor of Developmental Psychology and Individual Differences, The University of
+Warwick, Department of Psychology and Health Sciences Research Institute, Coventry CV4 7AL, UK.
+E-mail: D.Wolke@warwick.ac.uk; Web site: http://www2.warwick.ac.uk/fac/sci/psych/people/academic/
+dwolke/, http://www2.warwick.ac.uk/?external
+Current themes of research:
+Development and consequences of childhood bullying and social defeat. Precursors and consequences of
+early regulatory problems in infancy. Early brain development (natural experiment prematurity) and longterm consequences on cognitive development and psychopathology.
+
+FearNot!
+Most relevant publications in the field of Psychology of Education:
+Schreier, A., Wolke, D., Thomas, K., Horwood, J., Hollis, C., Gunnell, D., et al. (2009). Prospective Study of
+Peer Victimization in Childhood and Psychotic Symptoms in a Nonclinical Population at Age 12 Years.
+Arch Gen Psychiatry, 66(5), 527536.
+Wolke, D., Woods, S., & Samara, M. (2009). Who escapes or remains a victim of bullying in primary
+school? British Journal of Developmental Psychology, 27, 835851.
+Johnson, S., Hollis, C., Kochhar, P., Hennessy, E., Wolke, D., & Marlow, N. (2010). Psychiatric Disorders in
+Extremely Preterm Children: Longitudinal Finding at Age 11 Years in the EPICure Study. Journal of the
+American Academy of Child and Adolescent Psychiatry, 49(5), 453463.e451.
+Wolke, D., Samara, M., Bracewell, M., & Marlow, N. (2008). Specific Language Difficulties and School
+Achievement in Children Born at 25 Weeks of Gestation or Less. The Journal of Pediatrics, 152(2),
+256262.e251.
+Wolke, D., Schmid, G., Schreier, A., & Meyer, R. (2009). Crying and Feeding Problems in Infancy and
+Cognitive Outcome in Preschool Children Born at Risk: A Prospective Population Study. Journal of
+Developmental & Behavioral Pediatrics, 30(3), 226238.
+
+Scott Watson. Adaptive Systems Research Group, University of Hertfordshire, College Lane, Hatfield,
+Hertfordshire, AL10 9AB, UK. Web site: http://adapsys.feis.herts.ac.uk/
+Most relevant publications in the field of Psychology of Education:
+Watson, S., Vannini, N., Woods, S., Dautenhahn, K., Sapouna, M., Enz, S., Schneider, W., Wolke, D., Hall,
+L., Paiva, A., Andre, E., & Aylett, R. (2010). Inter-cultural differences in response to a computer-based
+anti-bullying intervention. Educational Research, 52(1), 6180.
+Watson, S., Dautenhahn, K., Ho; W.C., & Dawidowicz, R. (2009). Developing relationships between
+autonomous agents: Promoting pro-social behaviour through virtual learning environments Part I. In G.
+Trajkovski, & S.G. Collins (Eds.). Handbook of Research on Agent Based Societies. Information
+Reference Science. pp 125138.
+Watson, S., Dautenhahn, K., Ho, W. C., & Dawidowicz, R. (2009). Developing relationships between
+autonomous agents: Promoting pro-social behaviour through virtual learning environments Part II In G.
+Trajkovski, & S.G. Collins (Eds.). Handbook of Research on Agent Based Societies. Information
+Reference Science. pp 229242.
+
+Dr Sarah Woods. School of Psychology, University of Hertfordshire, College Lane, Hatfield, Herts, AL10
+9AB, UK. E-mail: s.n.woods@herts.ac.uk; Web site: www.go.herts.ac.uk/psychology
+Current themes of research:
+Bullying Behaviour. Friendship. Peer Relations. Cyberbullying. Online Relationships & Disclosure. RolePlay & Individual Differences.
+Most relevant publications in the field of Psychology of Education:
+Woods, S., & Wolke, D. (2004). Direct and relational bullying experiences among primary school children,
+and academic achievement. Journal of School Psychology, 42(2), 135155.
+Woods, S., & Wolke, D. (2003). Does the content of anti-bullying policies inform us about the prevalence of
+direct and relational bullying behaviour in primary schools? Educational Psychology, 23(4), 381
+401.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S. Hall, L., Paiva, A.,
+Andre, E., Dautenhahn, K., Aylett., R. (2009) Virtual learning intervention to reduce bullying
+victimization in primary school: A controlled trial. Journal of Child Psychology & Psychiatry, 51(1),
+104112.
+Wolke, D., Woods, S., Samara, M., (2009). Who escapes or remains a victim of bullying in primary school?
+British Journal of Developmental Psychology, 27, 835851.
+
+N. Vannini et al.
+Prof. Dr. Kerstin Dautenhahn. Adaptive Systems Research Group, School of Computer Science, University
+of Hertfordshire, College Lane, Hatfield Herts AL10 9AB, United Kingdom. Web site: http://homepages.
+feis.herts.ac.uk/comqkd/
+Current themes of research:
+Humanrobot interaction. Social robotics. Assistive technology. Intelligent virtual environments.
+Most relevant publications in the field of Psychology of Education:
+Watson, S., Vannini, N., Woods, S., Dautenhahn, K., Sapouna, M., Enz, S., Schneider, W., Wolke, D., Hall,
+L., Paiva, A., Andre, E., & Aylett, R. (2010). Inter-cultural differences in response to a computer-based
+anti-bullying intervention. Educational Research, 52(1), 6180.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A.,
+Andre, E., Dautenhahn, K. & Aylett, R. (2009). Virtual learning intervention to reduce bullying
+victimization in primary school: A controlled trial. Journal of Child Psychology and Psychiatry, 51(1),
+104112.
+Woods, S., Hall, L., Dautenhahn, K., & Wolke, D. (2007). Implications of gender differences for the
+development of animated characters for the study of bullying behavior, Computers in Human Behavior
+23(1), 770786.
+Robins, B., Dautenhahn, K., & Dubowski, J. (2006). Does appearance matter in the interaction of children
+with autism with a humanoid robot? Interaction Studies 7(3), 509542.
+
+Dr Lynne Hall. Department of Computing, Engineering and Technology, University of Sunderland, St.
+Peter's Campus, Sunderland, SR6 0DD, UK. E-mail: lynne.hall@sunderland.ac.uk; Web site: www.
+sunderland.ac.uk
+Current themes of research:
+In context evaluation for technology enhanced learning. User experience design and evaluation for low
+carbon vehicles.
+
+Prof. Dr. Ana Paiva. Associate Professor at IST (Instituto Superior Tcnico) and Group Coordinator at
+INESC-ID (Instituto de Engenharia de Sistemas e Computadores  Investigao e Desenvolvimento em
+Lisboa), IST Taguspark, Av. Prof. Dr. Cavaco Silva, 2744-016, Porto Salvo, Oeiras, Portugal. E-mail:
+ana.paiva@inesc-id.pt; Web site: http://www.inesc-id.pt/
+Current themes of research:
+Artificial Intelligence and Intelligent Agents. Synthetic characters. Affective interactions. Emotion based
+architectures for intelligent agents.
+Most relevant publications in the field of Psychology of Education:
+Prada, R., & Paiva, A. (2009). Teaming up humans with autonomous synthetic characters. Artificial
+Intelligence,173, 80103.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A., Andre,
+E., Dautenhahn, K. & Aylett, R. (2009). Virtual learning intervention to reduce bullying victimization in
+primary school: A controlled trial. Journal of Child Psychology and Psychiatry, 51(1), 104112.
+Paiva, A., Dias, J., Sobral, D., Aylett, R., Woods, S., Hall, L., & Zoll, C. (2005). Learning By Feeling:
+Evoking Empathy With Synthetic Characters. Applied Artificial Intelligence, 19, 235266.
+
+FearNot!
+Prof. Dr. Elisabeth Andr. Lehrstuhl fr Multimedia-Konzepte und Anwendungen, Institut fr Informatik,
+Universitaet Augsburg, Universitaetsstr. 6a, D-86159 Augsburg, Germany. E-mail: andre@informatik.
+uni-augsburg.de; Web site: http://mm-werkstatt.informatik.uni-augsburg.de
+Current themes of research:
+Experimental learning environments with animated characters. Computer-based role play. Serious games and
+edutainment. Intelligent tutoring systems. Affective computing. Interactive multimodal user interfaces.
+Human-centred multimedia.
+Most relevant publications in the field of Psychology of Education:
+Andr, E. (2008). Design and Evaluation of Embodied Conversational Agents for Educational and Advisory
+Software. In R. Luppicini (ed). Handbook of Conversation Design for Instructional Applications.
+Information Science Reference.
+Leichtenstern, K., & Andr, E. (2009). Studying multi-user settings for pervasive games. In: MobileHCI 09
+Proceedings of the 11th International Conference on Human- Computer Interaction with Mobile Devices
+and Services, New York, NY, USA, ACM (2009) 110.
+Johnson, L., Mayer, R., Andr, E., & Rehm, M. (2005). Cross-cultural evaluation of politeness in tactics for
+pedagogical agents. In: Proc. of the 12th Int. Conf. on Artificial Intelligence in Education (AIED).
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A.,
+Andre, E., Dautenhahn, K. & Aylett, R. (2009). Virtual learning intervention to reduce bullying
+victimization in primary school: A controlled trial. Journal of Child Psychology and Psychiatry, 51(1),
+104112.
+
+Prof. Dr. Ruth Aylett. MACS, Heriot-Watt University, Riccarton, Edinburgh EH14 4AS, UK. E-mail:
+ruth@macs.hw.ac.uk; Web site: www.macs.hw.ac.uk/ruth
+Current themes of research:
+Affective agent architectures. Interactive narrative. Humanrobot interaction.
+Most relevant publications in the field of Psychology of Education:
+Aylett, R., Paiva, A., Vannini, N., Enz, S., & Andre, E. (2009). But that was in another country: agents and
+intercultural empathy. Proceedings, 8th International conference, AAMAS 2009, vol 1, 329336.
+Lim, M. Y., & Aylett, R. (2009). An emergent emotion model for an affective mobile guide with attitude,
+Applied Artificial Intelligence Journal, 2, 835854.
+Sapouna, M., Wolke, D., Vannini, N., Watson, S., Woods, S., Schneider, W., Enz, S., Hall, L., Paiva, A.,
+Andre, E., Dautenhahn, K. & Aylett, R. (2009). Virtual learning intervention to reduce bullying
+victimization in primary school: A controlled trial. Journal of Child Psychology and Psychiatry, 51(1),
+104112.
+
+Prof. Dr. Wolfgang Schneider. Institute of Psychology, Department of Educational Psychology, University
+of Wuerzburg, Roentgenring 10, D-97070 Wuerzburg. E-mail: schneider@psychologie.uni-wuerzburg.
+de; Web site: http://www.i4.psychologie.uni-wuerzburg.de/en/
+Current themes of research:
+Memory Development, Metacognition. Reading Research. Prevention of Developmental Dyslexia.
+Developmental Dyslexia vs. Garden Variety Poor Readers. Media Psychology. The Influence of
+Televsision on the Development of Language and Reading Competence.
+
+N. Vannini et al.
+Most relevant publications in the field of Psychology of Education:
+Schneider, W., Stefanek, J., & Niklas, F. (2009). Development of intelligence and thinking. In W. Schneider
+& M. Bullock (Eds.), Human development from early childhood to early adulthood: Evidence from the
+Munich Longitudinal Study on the Genesis of Individual Competencies (LOGIC) (pp. 734). New York,
+NY: Psychology.
+Schneider, W. (2008). The development of metacognitive knowledge in children and adolescents: Major
+trends and implications for education. Mind, Brain, and Education, 2, 114121.
+Ennemoser, M. & Schneider, W. (2007). Relations of television viewing and reading: Findings from a 4-year
+longitudinal study.Journal of Educational Psychology, 99, 349368.
+Schneider, W., Lockl, K. & Fernandez, O. (2005). Interrelationships among theory of mind, executive
+control, language development, and working memory in young children: A longitudinal analysis. In W.
+Schneider, R. Schumann-Hengsteler, & B. Sodian (Eds.), Young children's cognitive development:
+Interrelations among executive functioning, working memory, verbal ability, and theory of mind (pp.
+259284).Hillsdale, NJ: Erlbaum.
+Schneider, W., Wolke, D., Schlagmller, M. & Meyer, R. (2004). Pathways to school achievement in very
+preterm and full-term children: The Bavarian Longitudinal Study. European Journal of Psychology in
+Education, 19, 385406.
+
+View publication stats
+
+

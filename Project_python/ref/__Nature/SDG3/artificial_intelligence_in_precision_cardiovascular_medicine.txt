@@ -1,0 +1,1462 @@
+JOURNAL OF THE AMERICAN COLLEGE OF CARDIOLOGY
+
+VOL. 69, NO. 21, 2017
+
+ 2017 BY THE AMERICAN COLLEGE OF CARDIOLOGY FOUNDATION
+PUBLISHED BY ELSEVIER
+
+ISSN 0735-1097/$36.00
+http://dx.doi.org/10.1016/j.jacc.2017.03.571
+
+REVIEW TOPIC OF THE WEEK
+
+Articial Intelligence in
+Precision Cardiovascular Medicine
+Chayakrit Krittanawong, MD,a,b HongJu Zhang, PHD,c Zhen Wang, PHD,d,e Mehmet Aydar, PHD,b,f
+Takeshi Kitai, MD, PHDb,g
+
+ABSTRACT
+Articial intelligence (AI) is a eld of computer science that aims to mimic human thought processes, learning
+capacity, and knowledge storage. AI techniques have been applied in cardiovascular medicine to explore novel
+genotypes and phenotypes in existing diseases, improve the quality of patient care, enable cost-effectiveness, and
+reduce readmission and mortality rates. Over the past decade, several machine-learning techniques have been
+used for cardiovascular disease diagnosis and prediction. Each problem requires some degree of understanding of
+the problem, in terms of cardiovascular medicine and statistics, to apply the optimal machine-learning algorithm. In
+the near future, AI will result in a paradigm shift toward precision cardiovascular medicine. The potential of AI in
+cardiovascular medicine is tremendous; however, ignorance of the challenges may overshadow its potential clinical
+impact. This paper gives a glimpse of AIs application in cardiovascular clinical care and discusses its potential role
+in facilitating precision cardiovascular medicine. (J Am Coll Cardiol 2017;69:265764)  2017 by the American
+College of Cardiology Foundation.
+
+I
+
+n the near future, articial intelligence (AI) tech-
+
+to be stored, analyzed, and used. AI has the potential
+
+niques, such as machine learning, deep learning,
+
+to exploit big data and be used in advanced patient
+
+and cognitive computing, may play a critical role
+
+care. In fact, cardiovascular diseases (CVDs) are com-
+
+in the evolution of cardiovascular (CV) medicine to
+
+plex and heterogeneous in nature, as they are caused
+
+facilitate precision CV medicine. CV clinical care
+
+by multiple genetic, environmental (e.g., air pollu-
+
+currently faces practical challenges pertaining to
+
+tion), and behavioral factors (e.g., diet and gut micro-
+
+cost reductions in prevention and treatment, low
+
+biome). At present, many more advancements need
+
+cost-effectiveness, overutilization, inadequate pa-
+
+to be made to predict outcomes accurately and effec-
+
+tient care, and high readmission and mortality rates.
+
+tively, rather than assessing a simple score system or
+
+Productive interactions between physicians and data
+
+traditional CV risk factors. Deep-learning AI is a new
+
+scientists are needed to enable clinically meaningful
+
+machine-learning technique that plays a vital role in
+
+automated and predictive data analysis. To date, big
+
+areas such as image recognition (e.g., Facebooks
+
+data, such as omics data, human gut microbiome
+
+facial recognition system [Menlo Park, California],
+
+sequencing, social media, and cardiac imaging, are
+
+self-driving cars, speech recognition (e.g., Apples
+
+too large and heterogeneous, and change too quickly,
+
+Siri [Cupertino, California], Google Brain [Mountain
+
+Listen to this manuscripts
+audio summary by
+
+From the aDepartment of Internal Medicine, Icahn School of Medicine at Mount Sinai St. Lukes and Mount Sinai West, New York,
+
+JACC Editor-in-Chief
+
+New York; bDepartment of Cardiovascular Medicine, Heart and Vascular Institute, Cleveland Clinic, Cleveland, Ohio; cDivision of
+
+Dr. Valentin Fuster.
+
+Cardiovascular Disease, Department of Medicine, Mayo Clinic, Rochester, Minnesota; dRobert D. and Patricia E. Kern Center for
+the Science of Health Care Delivery; eDivision of Health Care Policy and Research, Department of Health Sciences Research, Mayo
+Clinic, Rochester, Minnesota; fDepartment of Computer Science at Kent State University, Kent, Ohio; and the gDepartment of
+Cardiovascular Medicine, Kobe City Medical Center General Hospital, Kobe, Japan. The authors have reported that they have no
+relationships relevant to the contents of this paper to disclose. Bijoy K. Khandheria, MD, served as Guest Editor for this paper.
+Manuscript received March 12, 2017; accepted March 22, 2017.
+
+2658
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+ABBREVIATIONS
+
+View, California], Amazons Alexa Voice
+
+processing of big data to make predictions or decisions
+
+AND ACRONYMS
+
+[Seattle, Washington]), Google DeepMind
+
+using AI has the potential to transform the current
+
+AlphaGo, mobile apps (e.g., Cardiogram app
+
+practice of clinical care. Big data analytics using AI
+
+[San Francisco, California]), machine vision
+
+may potentially facilitate identication of novel ge-
+
+software in cameras, IBM Watson (North
+
+notypes or phenotypes of heterogeneous syndromes,
+
+Castle,
+
+Deep-
+
+such as HFpEF, Takotsubo cardiomyopathy, hyper-
+
+learning AI using big data can be used in
+
+trophic cardiomyopathy, primary pulmonary hyper-
+
+pattern recognition in heterogeneous syn-
+
+tension (PH), hypertension (HTN), and coronary artery
+
+dromes and image recognition in CV imaging.
+
+disease, leading to personalized, targeted therapy. Big
+
+For example, AI can classify new genotypes
+
+data analytics using AI can also support important
+
+CVD = cardiovascular disease
+
+or phenotypes of heart failure (HF) with pre-
+
+clinical decisions, such as selection of antiplatelet
+
+ECG = electrocardiographic
+
+served ejection fraction (HFpEF), and novel
+
+agents in individuals who are postpercutaneous
+
+EHR = electronic health record
+
+diagnostic
+
+parameters
+
+coronary intervention, anticoagulant agents in in-
+
+HF = heart failure
+
+could potentially lead to novel targeted ther-
+
+dividuals with nonvalvular atrial brillation (AF), and
+
+HFpEF = heart failure with
+
+apy. In addition, to date, 2-dimensional
+
+pharmacogenomics in individuals. Furthermore, big
+
+preserved ejection fraction
+
+speckle-tracking echocardiography (2D-STE)
+
+data analytics has the potential to identify unknown
+
+HTN = hypertension
+
+quantitation cannot sufciently assess left
+
+risk factors for acute coronary syndrome (ACS),
+
+RNN = recurrent neural
+
+ventricular ejection fraction because left ven-
+
+spontaneous coronary artery dissection (SCAD), or
+
+network
+
+tricular ejection fraction is commonly calcu-
+
+Brugada syndrome, and even the controversial issue
+
+SCAD = spontaneous coronary
+
+lated by manually tracing boundaries or via
+
+of statins in the older population (age >75 years).
+
+artery dissection
+
+the time-honored eyeball method, which
+
+Although big data utilization in CV medicine is still in
+
+lack reproducibility and precision. Therefore,
+
+its infancy, big data analytics have recently been
+
+AI may improve the accuracy of 2D-STE
+
+implemented in CV medicine.
+
+ACS = acute coronary
+syndrome
+
+AF = atrial brillation
+AI = articial intelligence
+ANN = articial neural network
+AUC = area under the curve
+CV = cardiovascular
+
+STE = speckle-tracking
+echocardiography
+
+SVM = support vector machine
+
+New
+
+York),
+
+and
+
+robots.
+
+echocardiographic
+
+quantitation
+
+and
+
+other
+
+cardiac
+
+imaging
+
+methods. In the 21st century, the paradigm is shifting
+from traditional statistical tools to the use of AI in CV
+medicine to enable precision CV medicine. Big data
+can be used to automatically generate new hypotheses, instead of physicians having to initiate hypotheses. In our opinion, rather than replacing physicians,
+AI will assist them in making better clinical decisions.
+The objective of this paper is to outline the role of AI
+applications,
+
+such
+
+as
+
+machine
+
+learning,
+
+deep
+
+learning, and cognitive computing, in enabling precision CV medicine, and discuss the potential future direction of AI in clinical practice. Going forward,
+future studies in CV research should focus on more
+complex and heterogeneous diseases using AI by
+moving beyond traditional statistical tools. To illustrate some of the points addressed here, this paper focuses on examples of AI algorithms in CV medicine.
+
+BIG DATA
+
+TRADITIONAL
+
+STATISTICS
+
+VERSUS
+
+MACHINE
+
+LEARNING. In the big data realm, AI techniques, such
+
+as machine learning, are revolutionizing the way
+physicians make clinical decisions and diagnosis, and
+have the potential to improve the estimated CVD risk
+scores to automate prediction. In traditional statistics, such as the logistic regression model, the
+c-statistic is a standard measure of predictive accuracy. However, current predictive scores, such as
+congestive HF, hypertension, age $75 years, diabetes
+mellitus, and prior stroke, vascular disease, age 65 to
+74 years, and sex category (CHA 2DS2-VASc), dual antiplatelet therapy, and the Framingham risk score,
+were developed using large trials or cohorts with
+ill-dened moderated values of c-statistics (e.g., 0.79
+for men in Framingham risk score, 0.83 for women in
+Framingham risk score, 0.65 for CHA2DS2 -VASc score,
+0.66 for Anticoagulation and Risk Factors in Atrial
+Fibrillation, 0.70 and 0.68, respectively, in the
+ischemic and bleeding models in dual antiplatelet
+
+The term big data refers to extremely large datasets
+
+therapy) (14). Although the dual antiplatelet therapy
+
+that cannot be analyzed, searched, interpreted, or
+
+study involved 25,682 patients at 452 sites in 11
+
+stored using traditional data-processing methods. Big
+
+countries, big data analytics using precision medicine
+
+data include data from mobile phone applications,
+
+platforms could involve millions of patients for
+
+wearable technology, social media, environmental
+
+exploration and validation. In 2013, the American
+
+and
+
+sociodemographics,
+
+Heart Association/American College of Cardiology
+
+omic data (e.g., genomics, metabolomics, prote-
+
+guideline was developed by estimating atheroscle-
+
+omics), and data from standardized electronic health
+
+rotic CVD using the pooled cohort equations from
+
+records (EHRs) or precision medicine platforms.
+
+sex- and race-specic proportional hazards models,
+
+Whereas big data by themselves are useless, the
+
+but its c-statistics are not well-dened in African
+
+lifestyle-related
+
+factors,
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+Americans (0.713 in men and 0.818 in women) (5).
+
+known as sample size in traditional statistics) and the
+
+Cook et al. (6) reviewed the guideline and found
+
+right algorithms to optimize its performance on the
+
+overestimation of the pooled cohort equations in
+
+training dataset before testing. In traditional statis-
+
+primary prevention external cohorts. They subse-
+
+tics, alpha should not be more than 0.05, whereas in
+
+quently suggested that real-time calibration of risk
+
+machine learning, there should be no undertting
+
+prediction equations is feasible with big data ana-
+
+(suboptimal data) or overtting (noisy data). Over-
+
+lytics (6). Therefore, the increasing availability of
+
+tting commonly occurs when a model is excessively
+
+automated real-time decision support tools using AI
+
+complex relative to the size of the training dataset
+
+applications in EHRs will likely reduce the need for
+
+(i.e., too many parameters) that may not be valid for
+
+simple scoring systems such as these.
+
+the testing dataset. For example, for a machine trying
+to learn what SCAD or acute myocardial infarction is,
+
+MACHINE LEARNING
+
+we start by training it with keywords such as chest
+
+Machine learning, a popular subdiscipline of AI, rep-
+
+factors, and h/o bromuscular dysplasia; the ma-
+
+resents various techniques for solving complicated
+
+chine detects in the initial phase that all SCAD fea-
+
+problems with big data by identifying interaction
+
+tures have chest pain, female, age 30 to 50,
+
+patterns among variables. In contrast to traditional
+
+physical/emotional factors, and h/o bromuscular
+
+statistics, machine learning is focused on building
+
+dysplasia. If training continues with the same key
+
+automated clinical decision systems (such as read-
+
+words, the machine may also falsely deduce that all
+
+pain, female, age 30 to 50, physical/emotional
+
+mission and mortality score systems) that help phy-
+
+SCAD features must have chest pain, female,
+
+sicians make more accurate predictions, rather than
+
+age 30 to 50, and h/o bromuscular dysplasia,
+
+simple estimated score systems.
+
+and that all chest pain, female, age 30 to 50,
+
+Machine learning can be categorized into 3 learning
+
+and history bromuscular dysplasia are SCAD. This
+
+types: supervised; unsupervised; and reinforcement.
+
+may
+
+In supervised learning, algorithms use a dataset
+
+myocardial infarction or Takotsubo cardiomyopathy,
+
+labeled by humans to predict the desired and
+
+which is called overtting to data. In contrast, AI may
+
+known outcome. Supervised learning is great for
+
+potentially exclude SCAD in men, SCAD without
+
+classication and regression problems, but it requires
+
+bromuscular dysplasia, or 51-year-old women with
+
+a lot of data and is time-consuming because the data
+
+SCAD. This problem is called undertting to data.
+
+potentially
+
+include
+
+atherosclerotic
+
+acute
+
+have to be labeled by humans. Conversely, unsuper-
+
+An excellent example of the use of machine
+
+vised learning seeks to identify novel disease mecha-
+
+learning is the prediction of the survival of patients
+
+nisms,
+
+hidden
+
+with HFpEF. Shah et al. (7) created an unsupervised
+
+patterns present in the data. In unsupervised learning,
+
+genotypes,
+
+or
+
+phenotypes
+
+from
+
+learning model across 46 different variables to
+
+the objective is to nd the hidden patterns in the data
+
+identify intrinsic structures within patients with
+
+without feedback from humans. For example, teach-
+
+HFpEF; they identied 3 distinct groups. Subse-
+
+ing medical residents (labels) before they see the pa-
+
+quently, they performed supervised learning to pre-
+
+tients can be termed supervised learning. In contrast,
+
+dict the difference in desired outcomes (mortality and
+
+allowing medical residents to see patients (no labels),
+
+hospitalization) among the groups. However, the
+
+then allowing them to learn from their mistakes (er-
+
+limitation of unsupervised learning is that the initial
+
+rors) and come up with their own plans (optimize) can
+
+cluster pattern needs to be corrected without bias;
+
+be termed unsupervised learning. Some algorithms,
+
+therefore, the study needs to be validated with other
+
+such as articial neural networks (ANNs), can be
+
+cohorts.
+
+trained using supervised or unsupervised learning to
+optimize the accuracy of automated prediction. Last,
+
+SUPERVISED LEARNING. Supervised learning algo-
+
+reinforcement learning can be viewed as a hybrid of
+
+rithms have been successfully applied to problems in
+
+supervised and unsupervised learning. The aim of
+
+the prediction, diagnosis, and treatment of CVD as
+
+reinforcement learning is to maximize the accuracy of
+
+well as image analysis in CV imaging. Various algo-
+
+algorithms using trial and error.
+
+rithms can be trained using supervised learning. For
+
+Learning curves and area under the curve (AUC)
+
+example, we trained a machine for 30 potential var-
+
+are important considerations in the choice of a
+
+iables (such as C-reactive protein, erythrocyte sedi-
+
+machine-learning algorithm, whereas c-statistics are
+
+mentation rate, cysteine, QTc interval, E/A ratio, and
+
+important in the choice of traditional data-processing
+
+SYNTAX score [an angiographic tool]). Subsequently,
+
+methods. As with traditional statistics, machine
+
+the algorithms generated a prediction model using
+
+learning requires sufcient training datasets (also
+
+weighted variables from the training dataset. Next,
+
+2659
+
+2660
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+we applied the algorithms to a new dataset (testing
+
+forest, have lower accuracy than ANN and SVM, but
+
+dataset) to predict ACS risk; the machine then
+
+are relatively easy to use and can be used with small
+
+calculated the ACS risk from the 30 potential vari-
+
+datasets. The decision tree algorithm is easy to un-
+
+ables in the new dataset. The prediction accuracy
+
+derstand and is unlikely to encounter overtting
+
+depends on the algorithm, dataset, and hypothesis.
+
+because of the relatively small dataset. It can be used
+
+Different algorithms are appropriate for different
+
+with a series of yes/no questions to classify data into
+
+hypotheses, and so an understanding of the advan-
+
+categories and also be used in clinical decision-
+
+tages and disadvantages of each algorithm is required
+
+making or CV risk prediction in simple tasks (12).
+
+to apply it in the optimal manner and potentially test
+
+The random forest algorithm is an extension of the
+
+the hypotheses. Knowing the goals and the appro-
+
+decision tree algorithm, in which decision trees are
+
+priate techniques for hypotheses is critical for ma-
+
+combined and each decision tree is independently
+
+chine learning to be carried out effectively and
+
+trained. Random forest algorithms have been used in
+
+accurately.
+
+coronary computed tomography angiography, read-
+
+Algorithms that can be used in supervised learning
+
+mission for HF patients, and HF risk and survival
+
+include ANN, support vector machine (SVM), decision
+
+prediction
+
+tree, random forests, naive Bayes classier, fuzzy
+
+forests can easily perform leave-1-out predictions
+
+logic, and K-nearest neighbor (KNN). Each algorithm
+
+(i.e., sensitivity analysis in meta-analysis) and are
+
+has its own advantages and disadvantages. Super-
+
+relatively robust to selection bias.
+
+models
+
+(1317).
+
+In
+
+addition,
+
+random
+
+vised learning problems can be categorized into clas-
+
+The naive Bayes classier is a simple probabilistic
+
+sication (predict categories), regression (predict
+
+classier derived from Bayes theorem. It performs
+
+values), and anomaly detection (predict unusual pat-
+
+very well on small training datasets and can be used in
+
+terns) problems. Factors for selecting optimal algo-
+
+text classication problems, such as in CV risk factor
+
+rithms include data characteristics, training time,
+
+identication and decision-making systems (18,19).
+
+learning curves, and number of parameters and fea-
+
+Fuzzy logic functions are similar to human reasoning
+
+tures. ANN and SVM are the 2 most popular algorithms
+
+and decision-making in which logic returns values
+
+because they are compatible with large and complex
+
+(e.g., 10% possibility of SCAD, 30% possibility of acute
+
+data (e.g., omic data) and can process data with
+
+myocardial infarction, 15% possibility of pericarditis)
+
+higher accuracy than other supervised learning
+
+instead of straight true/false or yes/no answers (e.g.,
+
+algorithms.
+
+denitely SCAD and not SCAD). Fuzzy logic has been
+
+ANNs, which mimic the human neuron concept,
+
+used in various areas, such as for prediction of early-
+
+perform well for image processing of electrocardio-
+
+stage coronary artery disease, mortality prediction
+
+graphic (ECG) and echocardiographic data. ANNs: 1)
+
+after cardiac surgery, and cardiac arrhythmia detec-
+
+can be used in nonlinear relations; 2) conditions
+
+tion (2023). K-nearest neighbor is one of the simplest
+
+where traditional statistical analyses fail; 3) have a
+
+nonparametric methods. It executes quickly on small
+
+higher predictive accuracy than linear or logistic
+
+training datasets and can be used in ECG interpreta-
+
+regression; 4) are very exible in various data types;
+
+tion problems (24,25); however, K-nearest neighbor
+
+and 5) can be used with deep-learning algorithms.
+
+requires more space and time for large datasets.
+
+Their limitations include: 1) data overtting; 2)
+lengthy computation time; and 3) having more parameters than most supervised learning algorithms.
+In contrast to ANNs, SVMs are less prone to overtting and need less memory. They have been shown
+to perform well for text classication in EHRs and
+pattern recognition in echocardiographic imaging to
+stratify CV risk and help physicians make decisions
+(8,9). In addition, an SVM is feasible for nonlinear
+data or large and complex data, such as omic data,
+because kernel functions, a shortcut to expedite
+learning process, can be applied to SVMs to enhance
+their accuracy and reduce processing time (10,11).
+However, selection of kernel functions is very
+important, as the wrong choice can lead to an in-
+
+LIMITATIONS OF SUPERVISED LEARNING. In super-
+
+vised learning, small training datasets can lead to
+inaccurate decisions in testing datasets if the training
+datasets are biased; therefore, supervised learning
+requires large datasets to train the model and validation by other datasets. Supervised learning also requires the training datasets to be manually labeled to
+predict only known output results (e.g., mortality and
+readmission rate). Furthermore, even though multiple
+functions can t a given training dataset on which
+supervised learning subsequently makes assumptions
+about the best function that ts the data, it can
+cause bias that guides the learning algorithm to prefer
+to one hypothesis or function over another.
+
+crease in the error percentage. Other algorithms, such
+
+UNSUPERVISED
+
+as decision tree, naive Bayes classier, and random
+
+learning, unlabeled data are used to predict unknown
+
+LEARNING. In
+
+unsupervised
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+results and the algorithm has to determine how to
+
+promising. Deep learning can be very powerful in im-
+
+discover the hidden patterns in the dataset. Unsu-
+
+age recognition (e.g., facial recognition in Facebook,
+
+pervised learning is often used in deep learning, and
+
+image search in Google), and can potentially be used in
+
+has been implemented in self-driving vehicles and
+
+CV imaging (e.g., 2D-STE, 3D-STE, angiography, car-
+
+robots as well as being used in speech- and pattern-
+
+diac magnetic resonance). It can also be trained in an
+
+recognition applications. In CV clinical care, unsu-
+
+unsupervised manner for unsupervised learning tasks
+
+pervised deep learning with 2D- and 3-dimensional
+
+(e.g., novel drug-drug interaction). Furthermore, there
+
+(3D)-STE data may enable identication of novel
+
+is no limitation on working memory. It also works well
+
+phenotypes of cardiomyopathy or HFpEF, and can
+
+with noisy data, such as strain imaging and 3D-STE
+
+potentially be used in precision medicine platforms or
+
+data. Deep-learning algorithms will facilitate use of
+
+the National Heart, Lung, and Blood Institutes Trans-
+
+articial real-time CV imaging with better spatial and
+
+Omics for Precision Medicine program to identify
+
+temporal resolution, potentially improving the quality
+
+genotypes of HTN or ACS. The algorithms used
+
+of care and reducing costs.
+
+in unsupervised learning can be classied into:
+
+Deep learning has recently been implemented in
+
+1) clustering algorithms; and 2) association rule-
+
+CV medicine, more specically, in CV imaging. Deep
+
+learning algorithms. Clustering algorithms can be
+
+learning with neuronal network algorithms can be
+
+used to cluster unlabeled data into different groups.
+
+recurrent neural networks (RNN), convolutional, and
+
+A cluster is a collection of data items that are similar
+
+deep neural networks. Wang and Kong (26) used a
+
+to 1 cluster and dissimilar to other clusters and is
+
+supervised convolutional neural network model to
+
+used when there are no obvious natural groupings, in
+
+predict end-systolic and end-diastolic volumes in
+
+which case the data may be difcult to explore. For
+
+cardiac magnetic resonance. Convolutional neural
+
+example, Google News can be shown to customers in
+
+networks and RNN are dominant in image and speech
+
+different ways to match their online lifestyles.
+
+recognition. RNNs have proven effective in many
+
+Association rule-learning algorithms help to uncover
+
+difcult machine-learning tasks, such as image
+
+relationships between seemingly unrelated data
+
+captioning (27) and language translation (28). Choi
+
+items. For example, 70% of patients who had angioe-
+
+et al. (29) used an RNN to predict HF 9 months before
+
+dema with angiotensin-converting enzyme inhibitors
+
+diagnosis made by physicians and found that the RNN
+
+also have angioedema with angiotensin receptor-
+
+(AUC: 0.777) was superior to supervised machine-
+
+neprilysin inhibitors. Another example of an associa-
+
+learning algorithms. Google developed a deep neural
+
+tion rule is novel drug-drug interaction.
+
+network known as Google DeepMind AlphaGo that
+
+LIMITATIONS OF UNSUPERVISED LEARNING. One
+
+defeated human champions in the Go game in March
+
+major limitation of unsupervised learning is difculty
+
+2016. Kannathal et al. (30) used a deep neural
+
+identifying the initial cluster pattern, which could
+
+network to classify the ECG signals of cardiac patients
+
+potentially lead to biases. Because the nal cluster
+
+into normal, abnormal, and life-threatening states,
+
+pattern is dependent on the initial cluster pattern,
+
+and found the classication to be correct in approxi-
+
+this could result in inaccurate decisions. Therefore, it
+
+mately 99% of test cases.
+
+needs validation in several cohorts. In addition, some
+
+Deep learning has proven to be better than other
+
+complex problems lead to limitations that are not
+
+machine-learning techniques, such as SVM, because
+
+easily overcome without supervised training; thus, it
+
+deep learning can use multiple layers and trans-
+
+may require manually labeled data to identify the
+
+formations, compared with the 2 layers used by SVM.
+
+optimal algorithm. For example, noisy data, such as
+3D-STE images, have to be manually denoised before
+
+LIMITATIONS OF DEEP LEARNING. Deep learning is
+
+predictions can be successful. Thus, for the best re-
+
+usually nonlinear analysis and has many parameters
+
+sults, unsupervised learning may require manual
+
+and multiple layers; thus, overtting may be a major
+
+hand coding in some parts, unsupervised algorithms
+
+challenge that could lead to poor predictive perfor-
+
+in other parts, and subsequent validation.
+
+mance. Increasing the size of the training dataset or
+decreasing the number of hidden layers may help to
+
+DEEP LEARNING
+
+avoid overtting. Deep learning also requires a large
+training dataset, which necessitates collaboration
+
+Deep learning mimics the operation of the human brain
+
+between institutions and EHR linkage (e.g., the
+
+using multiple layers of articial neuronal networks
+
+American Heart Association Precision Medicine Plat-
+
+that can generate automated predictions from input
+
+form). Furthermore, deep-learning analysis requires
+
+(training datasets). Deep learning has become a hot
+
+deep-learningcapable machines, such as graphics
+
+topic in AI because it is a growing eld and appears
+
+processing unit-accelerated computing, for example,
+
+2661
+
+2662
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+C E NT R AL IL L U STR AT IO N Articial Intelligence in Precision Cardiovascular Medicine
+
+Krittanawong, C. et al. J Am Coll Cardiol. 2017;69(21):265764.
+
+Big data (genetics, social media, environmental, and lifestyle-related factors, or omic data) can be stored through EHRs or precision medicine platforms, and can be
+shared for data analysis with other physicians or researchers through secure cloud systems. Big data analytics using articial intelligence (machine learning, deep
+learning, or cognitive computing) and 3 main types of learning algorithms (supervised, unsupervised, and reinforcement learning) will enable precision cardiovascular
+medicine. EHR  electronic health record.
+
+NVIDIA DIGITS DevBox (Santa Clara, California) and
+
+unsupervised deep learning may facilitate explora-
+
+Amazon EC2. Setting up a neural network using deep-
+
+tion of novel factors in score systems or add hidden
+
+learning algorithms is also time-consuming. Finally,
+
+risk factors to existing models. Second, deep learning
+
+deep learning with multiple layers may increase the
+
+can be used to classify novel genotypes and pheno-
+
+training time without improvement in precision.
+
+types from heterogeneous CVDs, such as HFpEF,
+
+CLINICAL IMPLICATIONS OF DEEP LEARNING. Deep
+
+HTN, pulmonary hypertension, and cardiomyopathy.
+
+learning can perform tasks without human assistance
+
+Third, automated deep-learning prediction models
+
+in industry (e.g., self-driving, playing Go, learning
+
+can predict risk of bleeding and stroke by weighting
+
+math to write math textbooks, reading scientic
+
+between
+
+publications to answer questions, watching movies to
+
+abnormal renal function, abnormal liver function,
+
+answer questions, machine vision software in cam-
+
+stroke, bleeding, labile international normalized ra-
+
+eras, phones, and robots). Implementation of deep
+
+tios, elderly, drug therapy, and alcohol intake (known
+
+learning in CV medicine includes the following. First,
+
+as HAS-BLED) scores to facilitate optimal doses and
+
+CHA 2DS2-VASc
+
+and
+
+the
+
+hypertension,
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+anticoagulant therapy duration in nonvalvular AF
+
+extend models with new pieces. Cognitive computing
+
+patients. Fourth, deep learning may also help to
+
+can leverage machine learning to extend the ability of
+
+identify additional stroke risk factors (e.g., left atrial
+
+HF
+
+appendage, left atrial strain on echocardiography,
+
+discover diagnosis patterns that they may not observe
+
+real-time risks from wearables) and incorporate those
+
+by themselves. Therefore, implementation of deep
+
+factors into new models for anticoagulant therapy.
+
+learning in cognitive computing systems can be used
+
+Last, with deep learning, left ventricular ejection
+
+for classication of novel diseases, genotypes, phe-
+
+fraction may be predicted from ECG patterns or cor-
+
+notypes, or unknown drug-drug interaction.
+
+onary calcium score from echocardiography.
+
+diagnosis
+
+efciently
+
+by
+
+helping
+
+physicians
+
+CONCLUSIONS
+
+COGNITIVE COMPUTING
+The implementation of deep learning with unsuperCognitive computing involves self-learning systems
+
+vised features for big data analytics holds signicant
+
+using machine learning, pattern recognition, and
+
+potential for identifying novel genotypes and pheno-
+
+natural language processing to mimic the operation
+
+types in heterogeneous CV diseases, such as Brugada
+
+of human thought processes. In cognitive computing,
+
+syndrome,
+
+a system or device is trained by machine-learning or
+
+white-coat hypertension, HTN, pulmonary hyperten-
+
+deep-learning algorithms. The goal of cognitive
+
+sion, familial AF, and metabolic syndrome. Further-
+
+computing is to create automated computerized
+
+more, the development of AI application and precision
+
+models that can solve problems without human
+
+medicine platforms will facilitate precision CV medi-
+
+assistance (Central Illustration).
+
+cine. In the future, cognitive computers, such as IBM
+
+HFpEF,
+
+Takotsubo
+
+cardiomyopathy,
+
+IBM Watson, a well-known example of cognitive
+
+Watson, will be standard in health care facilities and
+
+computing, continuously learns from datasets (e.g.,
+
+assist physicians with their decision making and pre-
+
+EHR, social media, stock market) and can predict out-
+
+diction of patient outcomes. Many technology com-
+
+comes using multiple algorithms more accurately than
+
+panies, such as IBM, Apple, and Google, are investing
+
+humans. Sengupta et al. (31) developed an associative
+
+heavily in health care analytics to facilitate precision
+
+memory classier, a cognitive computing machine-
+
+medicine. We believe that AI will not replace physi-
+
+learning algorithmic approach, to classify constric-
+
+cians, but it is important that physicians know how to
+
+tive pericarditis from restrictive cardiomyopathy, and
+
+use AI sufciently to generate their hypotheses,
+
+demonstrated its feasibility for automated interpre-
+
+perform big data analytics, and optimize AI applica-
+
+tation of STE data. An associative memory classier
+
+tions in clinical practice to bring on the era of precision
+
+(accuracy: 93.7%; AUC: 96.2%) proved to be better than
+
+CV medicine. However, ignorance of the challenges of
+
+random forest (accuracy: 88.3%; AUC: 94.2%) and SVM
+
+AI may overshadow the impact of AI on CV medicine.
+
+(accuracy: 87.4%; AUC: 92.2%). With a set of select STE
+
+Machine learning, deep learning, and cognitive
+
+variables, the associative memory classier achieved
+
+computing are promising and can potentially change
+
+an AUC of 89.2%. Four echocardiographic variables (e 0 ,
+
+the way in which medicine is practiced, but physicians
+
+E/e 0 , and septal and posterior wall thickness) had an
+
+need to be prepared for the upcoming AI era.
+
+AUC of 94.2%. Fifteen STE and 4 echocardiographic
+variables (e0 , E/e0 , septal, and posterior left ventricle
+
+ADDRESS FOR CORRESPONDENCE: Dr. Chayakrit
+
+wall thickness) showed incremental diagnostic value
+
+Krittanawong, Department of Internal Medicine,
+
+in
+
+Icahn School of Medicine at Mount Sinai, St. Lukes
+
+distinguishing
+
+constrictive
+
+pericarditis
+
+from
+
+and Mount Sinai West, 1000 10th Avenue, New York,
+
+restrictive cardiomyopathy.
+Cognitive computing systems can also reason
+creatively about data, patterns, and situations, and
+
+New York 10019. E-mail: Chayakrit.Krittanawong@
+Mountsinai.org.
+
+REFERENCES
+1. Harrell FE Jr., Lee KL, Mark DB. Multivariable
+prognostic models: issues in developing models,
+evaluating assumptions and adequacy, and
+
+3. van den Ham HA, Klungel OH, Singer DE,
+Leufkens HG, van Staa TP. Comparative performance of ATRIA, CHADS2, and CHA2DS2-VASc
+
+measuring and reducing errors. Stat Med 1996;15:
+36187.
+
+risk scores predicting stroke in patients with
+atrial brillation: results from a national
+primary care database. J Am Coll Cardiol 2015;
+66:18519.
+
+2. DAgostino RB Sr., Pencina MJ, Massaro JM,
+Coady S. Cardiovascular disease risk assessment:
+insights from Framingham. Glob Heart 2013;8:
+1123.
+
+4. Yeh RW, Secemsky EA, Kereiakes DJ, et al.,
+DAPT Study Investigators. Development and
+
+validation of a prediction rule for benet and harm
+of dual antiplatelet therapy beyond 1 year after
+percutaneous coronary intervention. JAMA 2016;
+315:173549.
+5. Goff DC Jr., Lloyd-Jones DM, Bennett G, et al.
+2013 ACC/AHA guideline on the assessment of
+cardiovascular risk: a report of the American College of Cardiology/American Heart Association
+Task Force on Practice Guidelines. [Published
+
+2663
+
+2664
+
+Krittanawong et al.
+
+JACC VOL. 69, NO. 21, 2017
+MAY 30, 2017:265764
+
+Precision Cardiovascular Medicine
+
+correction appears in J Am Coll Cardiol 2014;63:
+3026.]. J Am Coll Cardiol 2014;63:293559.
+
+heart failure survival analysis. Stud Health Technol
+Inform 2015;216:404.
+
+6. Cook NR, Ridker P. Calibration of the pooled
+cohort equations for atherosclerotic cardiovascular disease: an update. Ann Intern Med 2016;165:
+
+15. Guidi G, Pettenati MC, Melillo P, Iadanza E.
+A machine learning system to improve heart failure patient assistance. IEEE J Biomed Health
+
+78694.
+
+Inform 2014;18:17506.
+
+7. Shah SJ, Katz DH, Selvaraj S, et al. Phenomapping for novel classication of heart failure with
+preserved ejection fraction. Circulation 2015;131:
+26979.
+
+16. Ishwaran H, Kogalur UB, Blackstone EH,
+Lauer MS. Random survival forests. Ann Appl Stat
+2008;2:84160.
+
+8. Berikol GB, Yildiz O, zcan IT. Diagnosis of
+acute coronary syndrome with a support vector
+machine. J Med Syst 2016;40:84.
+9. Balasubramanian V, Gouripeddi R, Panchanathan S, Vermillion J, Bhaskaran A, Siegel R.
+Support vector machine based conformal predictors for risk of complications following a coronary drug eluting stent procedure. 2009 36th
+Annual Computers in Cardiology Conference
+(CinC), Park City, UT; 2009:58.
+10. Furey TS, Cristianini N, Duffy N, Bednarski DW,
+Schummer M, Haussler D. Support vector machine
+classication and validation of cancer tissue samples using microarray expression data. Bioinformatics 2000;16:90614.
+11. Brown MP, Grundy WN, Lin D, et al. Knowledge-based analysis of microarray gene expression data by using support vector machines. Proc
+Natl Acad Sci U S A 2000;97:2627.
+12. Wang Y, Simon MA, Bonde P, et al. Decision
+tree for adjuvant right ventricular support in patients receiving a left ventricular assist device.
+J Heart Lung Transplant 2012;31:1409.
+13. Motwani M, Dey D, Berman DS, et al. Machine
+learning for prediction of all-cause mortality in
+patients with suspected coronary artery disease: a
+5-year multicentre prospective registry analysis.
+Eur Heart J 2017;38:5007.
+14. Panahiazar M, Taslimitehrani V, Pereira N,
+Pathak J. Using EHRs and machine learning for
+
+17. Zolfaghar K, Meadem N, Teredesai A, Roy
+SB, Chin SC, Muckian B. Big data solutions for
+predicting risk-of-readmission for congestive
+heart failure patients. 2013 IEEE International
+Conference on Big Data, Silicon Valley, CA;
+2013:6471.
+18. Miranda E, Irwansyah E, Amelga AY,
+Maribondang MM, Salim M. Detection of cardiovascular disease risks level for adults using naive Bayes
+classier. Healthc Inform Res 2016;22:196205.
+19. Letian W, Han L, Zhang L, Guo S. GW27-e0397:
+an analysis and diagnosis system of coronary heart
+disease based on big data platform. J Am Coll
+Cardiol 2016;68:C82.
+20. Pal D, Mandana KM, Pal S, Sarkar D,
+Chakraborty C. Fuzzy expert system approach
+for coronary artery disease screening using
+clinical parameters. Knowl-Based Syst 2012;36:
+16274.
+21. Borracci RA, Arribalzaga EB. Fuzzy logic-based
+model to stratify cardiac surgery risk. Rev Argent
+Cardiol 2015;83. Available at: http://ppct.caicyt.
+gov.ar/index.php/rac/article/view/6730. Accessed
+March 23, 2017.
+22. Anuradha B, Reddy VCV. Cardiac arrhythmia
+classication using fuzzy classiers. JATIT 2008;4:
+3539.
+23. Muthukaruppan S, Er MJ. A hybrid particle
+swarm optimization based fuzzy expert system for
+the diagnosis of coronary artery disease. Expert
+Syst Appl 2012;39:1165765.
+
+24. Arif M, Malagore IA, Afsar FA. Detection and
+localization of myocardial infarction using Knearest neighbor classier. J Med Syst 2012;36:
+27989.
+25. Saini I, Singh D, Khosla A. QRS detection using
+K-nearest neighbor algorithm (KNN) and evaluation on standard ECG databases. J Adv Res 2013;4:
+33144.
+26. Wang K, Kong Y. Diagnosis of heart disease
+via CNNs (CS231n). Stanford University.
+Available at: https://www.studocu.com/en-au/
+document/stanford-university/convolutional-neuralnetworks-for-visual-recognition/practical/practicaldiagnosis-of-heart-disease-via-cnns/751944/
+view?auth0&auth_prem0&new_title0&has_
+ashcardstrue. Accessed March 26, 2017.
+27. Karpathy A, Li FF. Deep visual-semantic
+alignments for generating image descriptions.
+CVPR 2015:312837.
+28. Cho K, Van Merrinboer B, Gulcehre C, et al.
+Learning phrase representations using RNN
+encoder-decoder for statistical machine translation. arXiv 2014:1406.1078.
+29. Choi E, Schuetz A, Stewart WF, Sun J. Using
+recurrent neural network models for early detection of heart failure onset. J Am Med Inform Assoc
+2017;24:36170.
+30. Kannathal N, Acharya UR, Lim CM,
+Sadasivan PK, Krishnan SM. Classication of cardiac patient states using articial neural networks.
+Exp Clin Cardiol 2003;8:20611.
+31. Sengupta PP, Huang YM, Bansal M, et al.
+Cognitive machine-learning algorithm for cardiac
+imaging: a pilot study for differentiating
+constrictive pericarditis from restrictive cardiomyopathy.
+e004330.
+
+Circ
+
+Cardiovasc
+
+Imaging
+
+2016;9:
+
+KEY WORDS big data, cognitive
+computing, deep learning, machine learning
+
+

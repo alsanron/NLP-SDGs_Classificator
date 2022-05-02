@@ -1,0 +1,554 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/253386773
+
+Intelligent Cities: R&D offshoring, web 2.0 product development and
+globalization of innovation systems
+Article  January 2009
+CITATIONS
+
+READS
+
+42
+
+390
+
+2 authors:
+Nicos Komninos
+
+Eleni Sefertzi
+
+Aristotle University of Thessaloniki
+
+Aristotle University of Thessaloniki
+
+87 PUBLICATIONS 4,436 CITATIONS
+
+9 PUBLICATIONS 131 CITATIONS
+
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+PhD on Regional Innovation systems measurement and evaluation View project
+
+Online S3: a H2020 project on digital platforms for smart specialisation View project
+
+All content following this page was uploaded by Nicos Komninos on 01 October 2014.
+
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Intelligent Cities: R&D offshoring, web 2.0 product development and
+globalization of innovation systems
+N. Komninos1 and E. Sefertzi2
+
+Abstract: In the cities and regions of the twentieth first century a radical turn is taking place as information and
+communication technologies are converging with the innovation-led regional economies, innovative clusters and
+agglomerations. Intelligent cities are part of the orientation towards the creation of environments that improve
+our cognitive skills, our ability to learn, foresee, and innovate. The paper discusses the driving forces sustaining
+the rise of intelligent cities, such as the globalization of innovation clusters and networks, open innovation, and
+web-based collaborative environments. Then we look at the movements shaping them - local initiatives around
+the world, European Living Labs, and applications developed by large companies like IBM, MS and CISCO.
+The last part of the paper focuses on the planning challenges for building intelligent cities and interactive
+systems of innovation. We discuss the problem of integration among the physical, institutional and digital
+dimensions of intelligent cities and the bridges that connect these three spatialities.
+
+Key words: Intelligent cities; innovation systems; global innovation; collective intelligence; web 2.0
+
+1. Introduction
+Cities are changing. A new paradigm of city development and planning has arisen from the actual wave of
+globalization, emerging technologies, virtuality, and the collective intelligence of the web. Cities in Europe,
+USA, and Asia respond to these trends by a set of new strategies, namely intelligent city strategies. Well known
+cases are Living Labs in Europe, Singapores iN 2015 strategy, Malaysia Multimedia Super Corridor, Floridas
+high tech corridor, and a series of innovation clusters / global hubs such as Arabianranta, Zaragoza Milla
+Digital, Seoul Digital Media City.
+Intelligent cities highlight a key aspect of this new paradigm relating to the creation of environments that
+improve the cognitive and learning skills of the population and the knowledge and innovation capabilities of
+organizations located within them. Intelligent cities are territories in which the local system of innovation is
+enhanced by digital collaboration spaces, interactive tools, and embedded systems. Digital spaces, electronic
+devices, information systems and online services sustain a series of new urban functions related to knowledge
+creation, technology transfer, innovation, and global marketing and delivery. Virtual spaces and embedded
+systems are generating a wave of hybrid environments (global digital ecosystems, Living Labs, i-hubs, COINs,
+smart cities, e-gov, digital cities, U-communities, intelligent environments, etc.) which in turn amplify local
+creativities, networking, experimentation and innovation. The city gains innovation capability, which is
+translated into increased competitiveness, a better environment, more jobs and wealth.
+
+2. Intelligent cities and globalization of innovation
+For more than 20 years innovation has been a central driving force of urban and regional development. A rich
+literature corroborates this orientation; already the 6th Periodic Report on the social and economic situation and
+development of the regions of the European Union (1999) documented that the actual regional development of
+Europe is based on factors of knowledge, innovation, and geographical accessibility. Innovation-led or
+knowledge-based development of cities and regions has become the model which most cities and regions try to
+adopt and adapt it to their particular conditions. Central element in linking innovation and regional development
+is the concept of the regional system of innovation, which denotes the cooperation nexus among R&D,
+1
+2
+
+URENIO Research Unit, Aristotle University, 54124 Thessaloniki, Greece
+URENIO Research Unit, Aristotle University, 54124 Thessaloniki, Greece
+
+Paper presented at the Second Knowledge Cities Summit 2009, Shenzhen, China, 5-7 November 2009
+(http://www.kcsummit2009.com/eng/index.html)
+
+1
+
+technology institutions, innovation funding, and production organizations located closely, as driving force of
+innovation and regional development.
+However, recent trends reveal a profound transformation of regional systems of innovation towards more
+outward and global profiles. Several factors contribute to this change: a new geographical mobility of R&D,
+R&D offshoring, new supply chain architectures shaped by flagship networks of multinational companies, rise
+of global clusters of excellence, people-led product innovation, web 2.0 and participatory product development.
+Altogether these changes create a new spatiality of innovation systems, shaped by global innovation networks
+and digital collaboration networks, and reveal a new way of innovation, more global, open, and participatory.
+Intelligent cities is a planning paradigm which corresponds to this type of innovation spatiality shaped by
+global innovation networks and web-based collaboration.
+The globalization of innovation networks is a contemporary trend deeply influencing local innovation clusters
+and regional systems of innovation. Decentralizing business units and operations to every corner of the world
+has become routine practice, but now companies are also redistributing their product innovation, even basic and
+applied research, across global R&D networks (Ernst 2006; United Nations 2005). Cisco has R&D facilities in
+Bangalore; Toyota in Thailand; Nokia operates nine satellite design studios located within targeted nations like
+India (Bangalore), China (Beijing), Brazil, where researchers and designers work to customize products to each
+market (BusinessWeek 2007). The UNCTAD survey on the internationalization of R&D shows that China has
+become the most attractive destination for non-equity R&D collaboration (UNCTAD 2005). The majority of the
+new R&D centers that multinational companies plan to open during the next years are to be located in India and
+China. A recent survey conducted by the Economist Intelligent Unit (2004) documents the many reasons that
+drive the actual relocation of R&D. Reduced R&D costs and the ability to take advantage of local pools of
+skilled labor are among the most important delocalization factors. However, new factors have also appeared
+alongside the classical factors of FDI attraction (proximity to local markets and bypass of tariff barriers):
+tapping into pools of local know-how; taking advantage of local creativities; avoiding relocation expenses; and
+shrinking of R&D budgets.
+The global decentralization of R&D and innovation has a direct impact on local and innovation clusters and
+regional innovation systems as well. It is well documented that innovation activities tend to cluster. In Europe,
+for instance, R&D laboratories and companies active in R&D are concentrated to a great extent in a series of
+urban islands of innovation and innovative regions in north-west Europe and Scandinavia. This spatial
+polarization of innovation is explained by the horizontal and vertical knowledge interaction within the clusters,
+local knowledge spillovers, and the embedded tacit knowledge thesis. Recent evidence however maintains that
+international relationships and global knowledge flows are crucial sources of creativity and innovativeness
+within local innovation clusters. Successful clusters are building and managing resources from around the globe
+(Bathelt et al. 2004; Owen-Smith and Powell 2004). There is growing evidence that even in the most innovative
+clusters an important proportion of their knowledge and customer bases are not local (Gertler and Wolfe 2005).
+Local clusters and innovative cities are going global to take advantage of external resources (supply chains and
+knowledge inputs), market opportunities (suppliers and customers), and the attractiveness of global funds and
+investments (Uhlmann 2008). In developing countries, innovation offshoring tends also to cluster. Offshoring
+takes place in a limited number of cities and regions in India, China, Malaysia, and in global city-regions like
+Singapore and Hong-Kong, giving birth to agglomerations of high-tech activities and innovative clusters.
+Confronting these trends of intense R&D mobility and innovation globalization, many communities and cities
+have launched intelligent city strategies. Public authorities in Singapore, Taipei (China), Spokane (US), Seoul
+and Songdo (S. Korea), Cyberjaya and Putrajaya (Malaysia), in many cities of Europe, and in smart
+communities in the US have implemented plans to make their cities more intelligent, open, global and
+innovative. In the planning discourse of these cases, the connection between innovation, broadband, and
+globalization is more than evident (IDA 2009, Bunnell 2002).
+
+3. Movements shaping intelligent cities
+Fragments of intelligent cities are emerging all over the world, but still we are very far from the creation of
+amazing intelligent environments that open minds and transform radically human skills and mental capabilities.
+This is a weakness both of technology in the field of intelligent environments and of integration of technologies
+with innovation institutions and city activities. However, some major shaping movements have already
+appeared.
+
+2
+
+Local initiatives  The ICF awards: An extremely valuable source of current applications and local
+experimentations in the field is to be found in the Intelligent Community Forum and the cities selected by ICF
+since 2001 as top intelligent cities (ICF 2009). Forty cities and regions appear on this list covering a variety of
+sizes and roles: small cities like Pirai with 23 thousand people to multimillion cities like Tianjin with a
+population of 11 million; global metropolis like New York and small rural communities like Bario, Malaysia;
+industrial cities and city suburbs (Table 1). Among them, awards for Top Intelligent Communities were received
+by LaGrange, US (2000); New York, US (2001); Calgary, Canada (2002); Glasgow, UK (2004) Mitaka, Japan
+(2005); Taipei, Taiwan (2006), Waterloo, Ontario, Canada (2007), Gagnam District-Seoul, S. Korea (2008), and
+Stockholm, Sweden (2009).
+Table 1: Top-seven intelligent communities selected by the ICF 2001-2009
+
+2001
+
+2002
+200304
+2005
+2006
+2007
+
+Asia  Australia
+(11)
+-Bario, Malaysia
+-Singapore
+-Bangalore, India
+-Seoul, S. Korea
+-Taipei, Taiwan
+-Victoria, Australia
+-Yokosuka, Japan
+-Mitaka, Japan
+-Tianjin, China
+-Gagnam District Seoul
+-Ichikawa, Japan
+
+Americas
+(18)
+-LaGrange, Georgia, US
+-Nevada, Missouri, US
+-New York, US
+-Calgary, Alberta, CA
+-Florida, high tech corridor, US
+-Spokane, Washington, US
+-Western Valley, N. Scotia, CA
+
+Europe
+(9)
+-Ennis, Ireland
+-Sunderland, UK
+
+-Pirai, Brazil
+-Toronto, Ontario, CA
+-Cleveland, Ohio, US
+-Waterloo, Ontario, CA
+-Ottawa-Gatineau, Ontario, CA
+
+-Issy-les-Moulineux, France
+
+2008
+
+-Fredericton, New Brunswick, CA
+-Northeast Ohio, US
+-Westchester, New York, US
+-Winston-Salem, N. Carolina, US
+
+2009
+
+-Bristol, Virginia, US
+-Moncton, New Brunswick, CA
+
+-Glasgow, UK
+
+-Manchester, UK
+-Dundee, Scotland, UK
+-Tallinn, Estonia
+
+-Eindhoven, Netherlands
+-Stockholm, Sweden
+
+* Each community appears one time only, the year of its first selection
+Source: http://www.intelligentcommunity.org
+These cities were characterized as intelligent communities with respect to five criteria of excellence in
+information and communication technology, knowledge and innovation: Broadband infrastructure, which
+evaluates the local capacity for digital communication. Knowledge workforce, which measures the capacity of
+the population for qualified work in knowledge-intensive activities. Innovation, which assesses how far
+communities have gone in creating an innovation-friendly environment that attracts creative people and creative
+businesses. Digital democracy, which assesses the government and private sector programs to overcome the
+digital divide. Marketing, this assesses the attractiveness of a community and its competitive offerings with
+respect to other cities and regions.
+In the cities which received ICF prizes, two strategies can be discerned. The first is a purely IT strategy focused
+on information technology with core elements broadband, IT training, and e-services. Characteristic
+examples are Singapore, Seoul and Taipei. The second is a strategy focused on knowledge-based development
+and the local innovation economy and combines new economy structures (clusters, high-tech districts,
+innovation centers, venture capital funds) with broadband infrastructure and e-services. Characteristic examples
+here are New York, Florida, Glasgow, Yokosuka, Waterloo, and Stockholm.
+EU Living Labs: Another major initiative in promoting the integration of localities, ICTs, and innovation is the
+EU Living Labs movement. LLs started as a European platform for collaboration and opening innovative
+
+3
+
+markets in the field of mobile applications and technologies to European citizens, companies, and researchers. It
+is targeted at cities and regions advancing their telecom infrastructure and digital services in view of becoming
+significant transaction points for global flows of goods, services, people and ideas. Infrastructures are improved;
+public policies are adapted to firm-specific assets; clusters of competencies are maintained and advanced by
+applied research and experimental development, education and training. The entire urban environment becomes
+a living laboratory for prototyping and testing new technology application and new methods of generating and
+fostering innovation processes in real time.
+The definition of Living Lab given by the European Network of Living Labs (ENOLL) is that a Living Lab is
+an open innovation environment in real-life settings in which user-driven innovation is the co-creation process
+for new services, products and societal infrastructures. Living Labs encompass societal and technological
+dimensions simultaneously in a business-citizens-government-academia partnership (Bergvall-Kreborn and
+Sthlbrst 2009). A Living Lab can be a city area in which operates a full-scale urban laboratory and proving
+ground for inventing, prototyping and marketing new technology applications; it may include interactive testing,
+but is managed as an innovation environment well beyond the test bed functions. As a city-based innovation
+environment the Living Lab can take advantage of the pools of creative talent, the affluence of socio-cultural
+diversity, and the unpredictability of inventiveness and imagination in the urban setting (Komninos 2008).
+Ongoing Living Labs initiatives can be found in most major cities of Europe. ENoLL is now based on a total of
+129 Living Labs, including 10 affiliated Living Labs from non European Countries. In these places, a real-life
+open innovation environment has been set in which user-driven innovation takes place and co-creation processes
+in many different sectors of economic activity, not only mobile devices and ICTs.
+Big three: Large IT and telecommunication companies such as CISCO, IBM, MS, have also developed
+solutions for intelligent cities. In February 2009, CISCO, launched the global Intelligent Urbanization initiative
+from Bangalore and signed a MoU with the local government to develop a roadmap for an intelligent and
+sustainable Bangalore City. The global Intelligent Urbanization initiative was designed to help cities around the
+world using the network as the fourth utility for integrated city management, better quality of life for citizens,
+and economic development. Bringing together a broad portfolio of products, services, partners and solutions
+across CISCO, the initiative is initially focused on intelligent, sustainable solutions for public safety and
+security, transportation, buildings, energy, health care and education. As an example of how technology can be
+used to improve security operations, Cisco proposed its own internal Security Operations Centre. Real-time
+security monitoring and alerts, video surveillance tools, acoustic sensors, card-readers with biometric
+recognition, automatic alerts and security activation systems were the highlights of this environment.
+Microsoft is working with Coventry University and Birmingham City Council to establish Birmingham as the
+first UK Intelligent City able to showcase new and innovative applications. The Intelligent City Proof of
+Concept is about an interoperable technology platform focusing on transport. The objectives include
+demonstrating the intelligent city vision for Birmingham and creating a service layer platform integrated with
+existing data / services, managing journeys across devices and modes of transport, empowering individuals to
+make more informed, smarter choices, and describing the impact on travel patterns, and economic and
+environmental issues.
+IBM announced its SmarterCities program as part of the companys initiative for an Intelligent Planet. The
+program was created to stimulate economic growth and quality of life in cities and metropolitan areas with the
+activation of new approaches of thinking and acting in the urban ecosystem. Interconnected and instrumented
+smart technologies offer a real-time integrated view of complex city systems, enabling administrators to monitor
+operations, improve performance and respond to the needs of their jurisdictions each day. IBMs initiative
+focuses on seven areas, education, health, safety, transport, water management, energy, and public governance
+in each of which the company described a series of best practices, strategies, technologies and applications
+(IBM 2009). The approach is comprehensive, as the problems are not addressed only in terms of technology, but
+management practices and institutional arrangements are also taken into consideration.
+
+4. Planning challenges
+The above movements bring on the surface a number of planning challenges linked to the multi-dimensional
+spatiality and architecture of intelligent cities, which is simultaneously social, physical, institutional, and digital.
+
+4
+
+Integration: Intelligent cities are organized as multi-layer territorial systems of innovation, bringing together
+knowledge-intensive activities, innovation institutions, and digital communication spaces. These layers reflect
+both the different dimensions of intelligence (human, collective, artificial) and the deployment of innovation on
+physical, institutional and digital spaces.
+ The first layer includes the citys knowledge-intensive activities in manufacturing and services that are
+usually organized into clusters. The population of the city, knowledge workers, and innovative
+companies are the fundamental elements upon which intelligent cities are constructed. Proximity in
+physical space is important, integrating enterprises, production units, and service providers into a
+coherent innovation system. Critical factor at this level is the intellectual capital of the city population.
+ The second layer includes institutional mechanisms for knowledge creation and social co-operation in
+technology and innovation. Characteristic examples are institutions enhancing R&D, strategic
+intelligence, venture capital financing, technology transfer, and collaborative new product
+development. These are mechanisms that promote cooperation within the clusters comprising the city,
+between different clusters in the city, and between innovation processes taking place on physical and
+digital space. Critical factors at this level are institutional thickness and collective intelligence of the
+community.
+ The third layer includes digital networks and e-services that enable online cooperation. These tangible
+and intangible infrastructures create virtual innovation environments based on multimedia tools and
+interactive technologies, which facilitate different innovation processes from market and technology
+intelligence to collaborative new product development and process innovation based on transactionsaving technologies. Critical factor at this level is content management, information automation,
+intelligent agents, virtual networking and web 2.0 technologies.
+A major challenge for building intelligent cities is integration among the above three layers and the making of
+bridges that connect their physical, institutional, and digital spatiality. Analysis of intelligent places shows that
+most bridges are organizational and institutional in nature and highly dependent on the digital technologies
+implemented.
+Technology: Computer Aided Design (CAD) and Geographical Information Systems (GIS) are major
+technologies enabling a digital management of urban space. Intelligent cities, however, rely on a different set of
+technologies, web-based applications, virtual collaboration tools, and u-communities (Anttiroiko, 2009). Main
+difference of web-based tools with respect to CAD and GIS are that they help creating digital operational
+spatialities instead of representing digitally physical space. Furthermore, instead of two technologies we are
+dealing with an ocean of applications and virtual tools. On the website of URENIO we created a collection of
+representative collaborative tools for intelligent cities (http://www.urenio.org/digital-collaboration-tools/). These
+tools are organized in four categories (content management, technology transfer, collaborative product
+development, and digital marketing) and highlight how digital collaboration may contribute to main innovation
+processes. Web 2.0 offered additional means in mobilizing and organizing collective intelligence with
+application like Innocentive, iBridge, CrowdSpirit, IdeaScale, Peer-to-Patent, and other.
+The dominant software stacks used in such collaborative environments are open source. The integrated,
+optimized, open-source Apache, MySQL, PHP/Perl/Python (AMP) stack seems to be the preferred platform for
+building and deploying new Web applications and services.
+Today cloud computing makes a new step of efficiency and economy to this environment, delivering IT
+resources on demand and opening up new business models and market opportunities. In some ways cloud
+computing is a metaphor for Internet-based services and the increasing movement of virtual computing and
+hosting data resources onto the Web. It abstracts the software application platform from the underlying
+hardware infrastructure, freeing developers and users from the need to poses hardware. In cloud computing, the
+users data and software execution are in the cloud (the Internet) and the network becomes the computer, while
+the use of resources follows the model a utility pricing (Sun 2009). Cloud computing by delivering higher
+efficiency, massive scalability, and faster, easier software development, with lower costs opens new windows
+for the massive involvement of people in the creation of digital spaces and e-services, and further development
+of intelligent cities as collaborative environments.
+Sectoral and district-based strategies: In a previous paper (Komninos 2009) we argued that three types of
+strategies predominate in the making of intelligent cities. By developing sector-focused, cluster-based, or large
+scale intelligent city strategies, administrations set in motion mechanisms that enhance substantially the
+innovation system in their territory. Working recently on the project Intelligent Thessaloniki we found that e-
+
+5
+
+services and IT applications for collaboration and innovation vary considerably from one city district to another.
+The project concerned the design of broadband networks and digital services in six districts of the city of
+Thessaloniki: the port area, the commercial city centre, the university campus, the Technopolis IT business park,
+the museum of science and technology, and the airport. The objective was to enhance the innovation potential of
+these districts through the deployment of digital services and collaborative spaces. In each district we tried
+connecting its particular activities with innovation support processes and online collaborative spaces and tools.
+The difference of applications from one district to another is impressive, which advocates in favor of a sectoral
+approach and strategy enabling economies of scope and transferability of practices and applications.
+Measuring: Defining metrics in the field of intelligent cities is driven by two principles: (1) to compare
+localities between themselves and learn from the best, and (2) to understand the internal dynamics of intelligent
+cities, define weaknesses, and recognize the effort needed to overcome them. Two methodologies predominate
+in these attempts: benchmarking and modeling. Comparing localities that have implemented intelligent cities
+strategies is the scope of territorial benchmarking. We may benchmark any type of organization, institution or
+geographical entity, provided that we have comparative data from other similar entities. Modeling is more
+advanced methodology and requires deeper analysis, testing, and understanding. It is mainly about the
+relationships of the variables that characterize intelligent cities, analyzing how different structuring aspects of
+the city interrelate; and to what extent performance variables of innovation are dependent on the structuring
+variables of human skills, institutions, and digital infrastructure. Both, benchmarking and modeling are based on
+the use of quantitative indicators, which have to cover the entire field of intelligent cities activities and
+functions. In Table 2 we have selected around 40 indicators organized into four blocks corresponding to
+fundamental building blocks of intelligent cities.
+Table 2: Forty indicators for capturing intelligent cities performance
+Education and skills
+Knowledge and innovation
+Digital infrastructure
+of the population
+institutions
+and e-services
+1. Population with tertiary1. Number of university
+1. City area covered by
+level education (% of 25-64
+students (% of total
+cable networks (% of
+years age class)
+population)
+total area)
+2. Participation in life-long
+2. Number of university staff
+2. City area covered by Wilearning ( % of 25-64 years
+(per million of population)
+Fi networks (% of total
+age class)
+area)
+3. New S&E graduates (% of 3. Total R&D expenditure ( % 3. City area covered by
+20-29 years age class)
+of GDP)
+xDSL networks (% of
+total area)
+4. Researchers in industry and 4. Public R&D expenditure
+4. Computers (per million
+services (% of total
+(GERD as % of GDP)
+of population)
+workforce)
+5. Researchers in the public
+5. Business R&D expenditure 5. Internet connections (%
+sector (% of total
+(BERD as % of GDP)
+of population)
+researchers)
+6. Researchers in the private
+6. Business spending for
+6. Broadband connections
+sector (% of total
+licensing (% of turnover)
+(% of population)
+researchers)
+7. Employment of tertiary7. Number of incubators (per
+7. Users of e-gov services
+level graduates (% of total
+million of population)
+(% of population)
+employment)
+8. Employment in medium
+8. Number of S&T Parks (per 8. City enterprises owning a
+and high-tech
+million of population)
+website (% of total
+manufacturing (% of total
+enterprises)
+workforce)
+9. Employment in high-tech
+9. Number of Technology
+9. City enterprises involved
+services (% of total
+Transfer and Innovation
+in B2B or B2C (% of
+workforce)
+Centers (per million of
+total enterprises)
+population)
+10. Creative class (% of
+10. Venture capital funding
+10. Digital services
+employment in creative
+(% of total business
+providers (% of ICT
+industries)
+funding)
+companies)
+
+Innovation performance
+1. EPO patent applications
+(per million of population)
+2. New trade marks (per
+million of population)
+3. Innovative enterprisesmanufacturing (% of all
+manufacturing enterprises)
+4. Innovative enterprisesservices (% of all services
+enterprises)
+5. Enterprises having internal
+R&D department (% of all
+enterprises)
+6. Sales of new-to-market
+products (% of turnover)
+7. Sales of new-to-firm not
+new-to-market products (%
+of turnover)
+8. New companies creation (%
+of total enterprises)
+
+9. Exports high-tech products
+(% of total exports)
+
+10. Exports high-tech services
+(% total exports)
+
+Out of these metrics four axis of intelligent city development can be defined. Three of them deal with input
+factors (skills, knowledge institutions, digital spaces), while the fourth measures outputs (innovation). A 4dimensions radar chart thus may be defined measuring the progress made in each of the four fundamental
+
+6
+
+dimensions of an intelligent city. We should, however, keep in mind that intelligent city strategies successfully
+followed within a particular region may not necessarily generate the relevant results if copied to another region.
+Future directions: Today intelligent cities offer an attractive prospect, a strategy and a vision for the future,
+rather than an actuality that has been realized. Key issue in making such environments is to understand and
+manage the linkages between the physical, institutional and digital aspects of innovation and how these
+interconnections activate knowledge functions, release creativities and transform knowledge into new products.
+Intelligent cities can achieve more global and interactive systems of innovation enabling, through the digital
+interaction, an extension of innovation collaboration networks and the participation of users. These are two
+novel elements (global innovation networks / user participation to innovation) that broadband communication
+and digital collaborative spaces bring into local / regional systems of innovation.
+However, the precise way that digital collaboration enables the participation of overseas researchers, suppliers,
+innovators, customers, and end-users to innovation processes has to be defined with respect to the functional
+differentiation and complexity of the city. Different forms of IT applications, virtual spaces and novel e-services
+have to be defined in different city districts of industry, technology, university, CBD, shopping, port, and airport
+areas. Intelligent cities are emerging as dynamic re-arrangement of networks, nodes and clusters. The creation of
+intelligent innovation ecosystems is a major challenge for the future.
+
+References
+Anttiroiko, A-V. (2009) Urban u-community: a new dimension of urban development, Int. J. Innovation and
+Regional Development, Vol. 1, No. 4, 464483.
+Bathelt, H., Malmberg, A. and Maskell, P. (2004) Clusters and knowledge: local buzz, global pipelines and the
+process of knowledge creation, Progress in Human Geography, Vol. 28, No. 1, 3156.
+Bergvall-Kreborn, B. and Sthlbrst, A. (2009) Living Lab: an open and citizen-centric approach for
+innovation, Int. J. Innovation and Regional Development, Vol. 1, No. 4, 356370.
+Bunnell, T. (2002) Multimedia Utopia? A Geographical Critique of High-Tech Development in Malaysias
+Multimedia Super Corridor, Antipode, 34 (2), 265295.
+BusinessWeek (2007) Inside Innovation - Special Report, Business Week August 10, 2007. Online
+<http://www.businessweek.com/innovate/di_special/20070830insideinnov.htm>.
+Economist Intelligence Unit (2004) Scattering the Seeds of Invention: The globalization of research and
+development. Online <http://graphics.eiu.com/files/ad_pdfs/RnD_GLOBILISATION_WHITEPAPER.pdf>.
+Ernst, D. (2006) Innovation Offshoring: Asias emerging role in global innovation networks, East-West Center
+Special Reports, No 10, online <http://www.eastwestcenter.org/fileadmin/stored/pdfs/SR010.pdf>.
+European Commission (1999) 6th Periodic Report on the social and economic situation and development of the
+regions of the European Union, Luxembourg, Official Publications of the European Communities.
+Gertler, M. and Wolfe D. (2005) Spaces of knowledge flows: clusters in a global context paper presented at
+the DRUID Tenth Anniversary Summer Conference 2005 on Dynamics of Industry and Innovation:
+Organizations, Networks and Systems, Copenhagen, June 27-29, 2005.
+ (2009)  smarter planet  smarter cities. Online <http://www05.ibm.com/uk/smarterplanet/topics/cities/index1.html >.
+IDA (2009) Innovation. Integration. Internationalisation - Singapore: An intelligent nation, a global city,
+powered by infocomm, iN2015 Steering Committee. Online
+<http://www.ida.gov.sg/doc/About%20us/About_Us_Level2/20071005103551/01_iN2015_Main_Report.pdf>.
+
+7
+
+ICF (2009) Intelligent Community Awards. Online
+<http://www.intelligentcommunity.org/index.php?submenu=Awards&src=gendocs&ref=Top7&category=Event
+s >.
+Komninos N. (2008) Intelligent Cities and Globalisation of Innovation Networks, London and New York:
+Routledge.
+Komninos, N. (2009) Intelligent cities: towards interactive and global innovation environments, Int. J.
+Innovation and Regional Development, Vol. 1, No. 4, 337355.
+Owen-Smith, J. and Powell, W.W. (2004) Knowledge networks as channels and conduits: the effects of
+spillovers in the Boston biotechnology community, Organisation Science, 15, 5-21.
+Sun (2009) Open source and cloud computing: on-demand, innovative IT on a massive scale, online
+<http://www.newformat.se/documents/ose/sun-open-source-and-cloud-computing-white-paper-2009-06.pdf>
+Uhlmann, R. (2008) Global integration of regional clusters IRE conference, Rennes June 2008.
+United Nations (2005) UNCTAD survey on the internationalization of R&D. Occasional note. Online
+<http://www.unctad.org/en/docs/webiteiia200512_en.pdf>.
+
+8
+
+View publication stats
+
+

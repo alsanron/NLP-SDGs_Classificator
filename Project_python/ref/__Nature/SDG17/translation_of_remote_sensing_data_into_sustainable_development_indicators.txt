@@ -1,0 +1,63 @@
+Translation of Remote Sensing data into Sustainable Development Indicators
+(TRISDI)
+Lead Supervisor: Stephen Morse, University of Surrey, Centre for Environment and Sustainability (CES)
+Email: s.morse@surrey.ac.uk
+Co-supervisors: Richard Murphy (University of Surrey), John Fonweban (UN Food and Agriculture
+Organisation, Ghana), Emma Woolliams (National Physical Laboratory), Jim Lynch (University of
+Surrey)
+Earth Observation (EO) is an important means by which changes can be observed on the Earth's surface. EO is
+an exciting technology of the 21st century and as satellite build and launch costs fall and other EO vehicles are
+available (drones, aircraft LIDAR etc) an increasing diversity of developed and developing countries have access
+and ownership of these rapidly advancing technologies. For example, Nigeria has launched three observation
+satellites - Nigeria Sat-1, Nigeria Sat-2 and Nigeria Sat-X - having a high-resolution (2m/pixel) imaging
+capability and intended application in a variety of tasks such as planning and monitoring of resource use. The
+National Space Research and Development Agency (NSRDA) of Nigeria is responsible for these satellites.
+However, anecdotal evidence suggests that the application of EO information in shaping and monitoring policy
+and management practices in Nigeria is far short of its potential. Surprisingly, there have not been any systematic
+analyses of the utility of EO data by government departments, agencies or research in Africa, although a current
+SCENARIO PhD student is currently exploring this topic in Brazil.
+An obvious linkage between EO data and application lies in the calibration of indicators and indices (where an
+index is a collection of indicators). This has considerable potential in, for example, delivery and measurement
+and evaluation (M&E) of progress towards the UNs 17 Sustainable Development Goals (SDGs). A specific field
+with much relevance to sustainable development is the REDD+ (Reducing Emissions from Deforestation and
+Forest Degradation) programme of the UN; designed to ensure that forests are protected and continue to support
+the livelihoods of people who depend upon them. Nigeria is a signatory to REDD+ and has (since 2012) selected
+Cross River State in the south-east of the country as a test-bed. The team also has access to test sites connected
+with ongoing Bill & Melinda Gates Foundation (BMGF) sponsored research on food security in Nigeria and
+these provide the proposed project with areas where agricultural land use is changing in repose to diverse social
+and developmental pressures of great relevance to the SDGs.
+The aim of the project would be to critically analyse the potential for applying EO data to
+populate SDG indicators and links to policy, management and M&E.
+
+REDD+ policy generation
+Monitoring
+Management
+
+RS Data
+
+REDD+ Indicators
+
+REDD+ Index =  (REDD+ Indicators)
+
+Model for translation of Earth Observation data into a set of REDD+ Indicators and index
+
+Training opportunities:
+The student would be based at the University of Surrey and take part in the training available at the university.
+She/he would also be able to attend modules in CES and other departments, including the Surrey Space Centre.
+As an NPL-sponsored CASE student she/he would also be part of NPLs Post Graduate Research Institute, which
+provides links between students at NPL. The student will learn a variety of skills in processing EO data, GIS,
+landscape ecology, indicator development, forest management, institutional dynamics and policy
+development/implementation. Of especial relevance in terms of skills development would be the communication
+of complex scientific data into forms that non-specialists can use to help make informed decisions. The student
+would gain fieldwork experience in Nigeria (Cross River State and the Federal Capital Territory).
+Student profile:
+This project would be suitable for students with an undergraduate and postgraduate degree in geography,
+environmental science/management, agricultural science, ecology or conservation with a strong interest in Earth
+Observation, indicator/index development and the social sciences. Experience of natural resource management,
+forestry, Earth Observation and/or agriculture/food security in Africa would certainly provide an advantage.
+Funding particulars:
+This project has CASE co-sponsorship provided by the National Physical Laboratory (NPL).
+
+http://www.reading.ac.uk/nercdtp
+
+

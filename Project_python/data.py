@@ -29,6 +29,8 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
     for file, index in zip(database, range(len(database))):
         text = ""
         sdgs = database[file]["SDG"]
+        if 17 in sdgs:
+            continue
         if abstract:
             if len(database[file]["abstract"]) > 50:
                 text += database[file]["abstract"]
@@ -56,6 +58,8 @@ def get_nature_abstracts():
     corpus = []; associatedSDGs = []; indexes = []
     for (file, index) in zip(database, range(len(database))):
         sdgs = database[file]["SDG"]
+        if 17 in sdgs:
+            continue
         if len(database[file]["abstract"].split(' ')) > 50:
             corpus.append(database[file]["abstract"])
             associatedSDGs.append(sdgs)
@@ -110,12 +114,43 @@ def get_previous_classified_abstracts(refPath):
             abstracts.append(text)   
             
 # DATASET: https://sdg-pathfinder.org/ files related to each SDG
-def get_sdgs_pathfinder(refPath):
+def get_sdgs_pathfinder(refPath, min_words=150):
     csv = pd.read_csv(refPath + "ds_sdg_path_finder.csv")
     corpus = []; sdgs = []
     for text, sdgsAscii in zip(csv["text"], csv["SDGs"]):
         sdgsInt = [int(sdg) for sdg in (sdgsAscii.replace("[","").replace("]","")).split(",")]
-        corpus.append(text)
-        sdgs.append(sdgsInt)
+        if 17 in sdgsInt:
+            continue
+        if len(text.split(' ')) > min_words:
+            corpus.append(text)
+            sdgs.append(sdgsInt)
     print("- {} texts in the pathfinder dataset".format(len(corpus)))
     return [corpus, sdgs]
+
+
+# MANUAL SELECTED files
+def get_extra_manual_files(refPath):
+    # Returns an array where each elements consist of an array with the fields:
+    # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
+        
+    sdgsPaths = [refPath + "Manual_selected/"]
+    corpus = []; associatedSDGs = []
+    for path in sdgsPaths:
+        for file in os.listdir(path):
+            try:
+                f = open(path + file, 'r')
+                text = f.read()
+            except UnicodeError:
+                f = open(path + file, 'r', encoding="utf8")
+                text = f.read()
+            f.close()
+            fileSDG = []
+            for sdg in file.split("_"):
+                if sdg.isdigit():
+                    fileSDG.append(int(sdg))
+            corpus.append(text)
+            associatedSDGs.append(fileSDG)
+        
+    nFiles = len(corpus)
+    print("- {} manual files were found".format(nFiles))    
+    return [corpus, associatedSDGs]

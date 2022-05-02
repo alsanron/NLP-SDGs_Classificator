@@ -1,0 +1,509 @@
+Int J Artif Intell Educ (2016) 26:160169
+DOI 10.1007/s40593-015-0055-y
+A RT I C L E
+
+Research-Based Design of Pedagogical Agent Roles:
+a Review, Progress, and Recommendations
+Yanghee Kim 1 & Amy L. Baylor 2
+
+Published online: 7 July 2015
+# International Artificial Intelligence in Education Society 2015
+
+Abstract In this paper we review the contribution of our original work titled BSimulating Instructional Roles Through Pedagogical Agents^ published in the International
+Journal of Artificial Intelligence and Education (Baylor and Kim in Computers and
+Human Behavior, 25(2), 450457, 2005). Our original work operationalized three
+instructional roles as simulated through pedagogical agents, and demonstrated the
+effectiveness of these agent roles on learning and motivation. Since the publication
+of our work, pedagogical agent research has expanded its scope from the provision of
+intelligent guidance to a broad interest in agents social and affective support for
+learners. We discuss current progress in pedagogical agent roles and capabilities, and
+speculate about the future of agent role design. We expect that optimizing the roles of
+artificial beings including on-screen agents and robots will continue to interest the
+educational technology community as these technologies continue to evolve.
+Keywords Pedagogical agents . Experimental research . Virtual humans . Interface design
+
+Overview of Original Paper
+Motivation
+In the early 2000s, there was some empirical support that the presence of a pedagogical
+agent facilitated deeper learning and enhanced motivation (Atkinson 2002; Moreno
+
+* Amy L. Baylor
+amy.baylor@gmail.com
+Yanghee Kim
+yanghee.kim@usu.edu
+1
+
+Department Instructional Technology and Learning Sciences, Utah State University, Logan,
+UT, USA
+
+2
+
+http://amybaylor.com
+
+Int J Artif Intell Educ (2016) 26:160169
+
+161
+
+et al. 2001). But questions arose about how to create lifelike agents that would be
+natural and believable (Cassell et al. 2001), and what types of instructional roles and
+personas could be rendered to impact learning and motivation. These questions were of
+increasing interest during this time period given that advances in interface technology
+facilitated easier development of believable 3D animated agents that had synchronized
+speech and nonverbal communication (e.g., gestures and emotional expressions).
+At that time, many intelligent tutoring systems had been focusing largely on facilitating
+the cognitive processes of learning. Anthropomorphic agents provided a unique opportunity to add a social and emotional quality to the tutoring environments (Graesser et al.
+2001; Johnson et al. 2000; Picard et al. 2001) to expand the purview of intelligent tutoring
+systems research. Given that the use of the interface agents for learning purposes was still
+new, the AI research community questioned whether a pedagogical agent could add value
+or if it might distract learners. At the time, there was also great interest in defining an
+agents instructional role or persona, and a variety of roles had been explored, such as
+tutor, butler, learning companion, collaborator, competitor, trouble maker, etc. (Aimeur
+and Frasson 1996; Baylor 2000; Chan and Chou 1997; Dillenbourg and Self 1992; Hietala
+and Niemirepo 1998). None of these studies prior to our work examined the effectiveness
+of specific agent design features on specific learning outcomes.
+Our Approach: Baylor and Kim (2005)
+In the original paper BSimulating Instructional Roles through Pedagogical Agents^
+(Baylor and Kim 2005), we investigated through two experiments whether it was
+possible to effectively simulate human instructional roles in anthropomorphic pedagogical agents. We grounded the work in social-cognitive perspectives of learning
+where the affective experiences of learners influence their cognitive engagement
+leading to deeper learning (Bandura 1986; Damasio 1994; Picard 1997). Based on
+human literature for effective motivational and instructional support, we designed three
+instructional roles for pedagogical agents: Expert, Motivator, and Mentor. Table 1
+Table 1 Characterizing agent roles in Baylor and Kim (2005)
+Expert
+
+Motivator
+
+Mentor
+
+Emotional
+
+Deictic & Emotional
+
+Appearance (image)
+
+Animation
+
+Deictic
+
+Voice
+
+Authoritative & Monotone Effusive & Enthusiastic Confident & Calm
+
+Affect
+
+None
+
+ Acknowledgment
+ Confusion
+ Disapproval
+ Excitement
+ Pleasure
+ Surprise
+
+ Acknowledgment
+ Confusion
+ Disapproval
+ Excitement
+ Pleasure
+ Surprise
+
+Script
+
+Information
+
+Encouragement
+
+Information & Encouragement
+
+162
+
+Int J Artif Intell Educ (2016) 26:160169
+
+illustrates how we operationalized the three roles with respect to appearance (image),
+nonverbal communication (animation), voice, affect and messaging (script).
+For an anthropomorphized agent to be effective, it was important that learners first
+perceive the agent as intended. We examined the effectiveness of these role instantiations in Experiment 1, with 78 undergraduate students learning computer literacy skills.
+Each student was randomly assigned to one of the three agent roles (Expert, Motivator,
+Mentor). In Experiment 2, we further examined the effectiveness of each of the three
+roles on actual motivation and learning outcomes, with 71 undergraduate pre-service
+teachers learning instructional design skills. Detailed descriptions of the methodology
+and dependent measures can be found in the original paper.
+For both studies, agent gender, lip synchronization, and script length were controlled
+to eliminate confounding effects. Additionally, the agent-learner interactions were
+designed so that each learner received all of the agent guidance. While this limited
+the Bintelligence^ of the agents, it ensured that each learner had a similar experience and
+was necessary for the experimental approach.
+The Expert Agent
+The Expert was designed to exhibit mastery in the field (e.g., Ericsson 1996; Gonzales
+et al. 2001). He was operationalized to appear as a mid-life professor. His nonverbal
+communication (animation) was limited to deictic gestures, and he spoke in a formal
+and professional manner, with authoritative speech. Being emotionally detached from
+the learners, his function was to provide accurate information and clearly and
+succinctly.
+The Motivator Agent
+The Motivator was designed based on social modeling research that indicated the
+importance of learners efficacy beliefs (Bandura 1997). Given that models with
+attribute similarity support self-efficacy (Schunk 1989), this agent was designed to
+represent a peer. He spoke enthusiastically and energetically, while sometimes using
+colloquial expressions. He was not presented as particularly knowledgeable but as an
+eager participant who suggested his own ideas, verbally encouraged the learner to
+sustain at the tasks, and, by asking questions, stimulated the learners to reflect on their
+thinking. He expressed emotion that commonly occurs in learning, such as frustration,
+confusion, and enjoyment (Kort et al. 2001); thus, he was not always positive and
+supportive, but at times demonstrated his difficulty with the content to model coping
+strategies.
+The Mentor Agent
+The Mentor agent was designed to represent a guide or coach with advanced experience
+and knowledge to work collaboratively with the learners to achieve goals. As a mentor,
+this agent was designed to demonstrate competence to the learner while simultaneously
+developing a social relationship to motivate the learner (Baylor 2000). Consequently,
+the appearance of the Mentor was less formal than the Expert, yet older than the peerlike Motivator. The Mentors gestures were designed to be identical to the Motivator,
+
+Int J Artif Intell Educ (2016) 26:160169
+
+163
+
+incorporating both deictic and emotional expressions. His voice was friendly and
+approachable, yet more professional and confident than the Motivator. We operationalized the Mentors functionality to incorporate the characteristics of both the Expert
+and Motivator, (i.e., to provide information and motivation); thus, his script was a
+concatenation of the content of the Expert and Motivator scripts.
+Findings
+Overall, the results of the two experiments revealed that the agent instructional roles
+were not only perceived by the students to reflect their intended purposes (Experiment
+1), but also led to significant changes in learning and motivation, as designed (Experiment 2). Specifically, the motivational agents (Motivator and Mentor) were perceived
+as more human-like and led to improved learner self-efficacy. However, the affective
+encouragement and support were not sufficient for the learners to achieve the learning
+goals (i.e., to facilitate learning). The agents with expertise (Expert and Mentor) led to
+improved learning outcomes and were perceived as more credible and more facilitating
+learning. Of the two agents with expertise, the Mentor was perceived to be more
+engaging and also led to improved self-efficacy, thus having the overall best impact
+on learning and motivation. This finding paralleled desirable human instructors, in that
+both students and teachers desired good human instructors to be both supportive and
+knowledgeable in the domain (Beishuizen et al. 2001; Kim 2007).
+
+Contributions, Impact, and Limitations
+Core Contributions
+We believe that our original work made three important contributions: 1) providing an
+example of how three agent instructional roles could be systematically constructed and
+validated; 2) showing that non-intelligent agents could significantly impact the desired
+learning and motivational goals; and 3) confirming that learners perceived an agent as a
+whole persona and responded to the agent socially. Prior to our work, a number of
+pedagogical agents were employed in intelligent systems without systematic assessment of agent features on specific educational outcomes (Johnson et al. 2000; Lester
+et al. 1999; Moreno et al. 2001). The underlying assumption of these studies was that
+learners would perceive the agent features as intended by the designers. However,
+perceptions of realism or attractiveness, for example, differ even among learner groups
+depending on their ages (Krmer 2010), not to mention the differential expectations
+between adult designers and younger learners. Accordingly, the results of those studies
+presented mixed effects. A key contribution of our work is that agents can effectively
+simulate instructional roles when designed with the appropriate persona and associated
+media features.
+Often, being intelligent was essential in the definition of pedagogical agents in the
+research pioneered by the AI community (Johnson et al. 2000). At that time, the
+implementation of intelligent agents was particularly challenging technologically and
+resource-intensive. The pre-scripted agents in our original study, however, effectively
+played their intended instructional roles without being particularly Bintelligent.^
+
+164
+
+Int J Artif Intell Educ (2016) 26:160169
+
+Perhaps, agent intelligence was an advantageous but not necessary condition for
+achieving desired learning outcomes. This finding stimulated us and other researchers
+to further inquire into various factors of pedagogical-agent-based learning without the
+requirement of developing intelligent systems (Haake and Gulz 2009; Kim 2007;
+Rosenberg-Kima et al. 2008; Veletsianos et al. 2010).
+Lastly, we intended to create the agents as whole beings that could approximate
+qualities of human instructors, as best as we could, within the limit of technologies at
+that time. We often observed that researchers and designers paid attention solely to
+media features of pedagogical agents (i.e., image, voice, animation, and non-verbal
+communication). They compared the impact of each feature, with the intent to single
+out the most effective media feature. Through our work, it was clear that the agents
+embodied with a role and persona successfully instilled a sense of human-like instructional presence and elicited social responses from college students, which may not be
+possible for a single media feature.
+Practical Impact
+Since the publication of the original paper, researchers have increasingly implemented
+pedagogical agents with corresponding interest in how the agents can enact human-like
+roles within a learning system. Building upon this initial work, we found the splitpersona effect, indicating that splitting agent functionality into two distinct agent roles
+(i.e., Expert and Motivator) is preferable to combining into one agent role (Mentor)
+(Baylor and Ebbers 2003). Students learned significantly more and had significantly
+greater motivation when working with the two agents as compared to working with the
+one mentor agent. It seemed that it was easier for students to figuratively compartmentalize the agent information when it was delivered by two distinct sources. In motivational design, this effect suggests that having an affective or motivational coach
+implemented as a distinct agent may be preferable to having its functionality rolled
+up into a more inclusive help or training agent (Baylor 2011).
+In addition, without a priori assumptions about agent roles from the perspective of
+grounded theory (Patton 2002), we conducted in-depth interviews to further explore
+college students expectations of agent roles (Kim 2007). In this inquiry, we viewed
+learners as active meaning-makers of their environments, bringing their own perspectives and expectations to the learning contexts and, perhaps, developing social bonds
+with the agent that matched their expectations. The results showed that the most salient
+qualities that students desired were the roles of teaching (knowledgeable) and motivating (friendly and kind).
+Next, given the effectiveness of the peer-like motivator, the use of a peer metaphor
+in agent design became popular, designing agents as learning companions or virtual
+peers. In subsequent research, we emphasized the motivating role of agent peers for
+students who were learning challenging topics (Kim and Baylor 2006; Kim et al.
+2007a). One important development in the area of peer-like agents was the design of
+teachable agents and co-learner agents. Based on Blearning by teaching,^ in a teachable
+agent environment (Schwartz et al. 2007), learners taught their agents and mastered the
+topic while teaching. A teachable agent (or co-learner) asked challenging questions to
+promote students reflective thinking while learning (Pareto 2014). Empirical results
+supported the effectiveness of teachable agents on achieving deeper learning and
+
+Int J Artif Intell Educ (2016) 26:160169
+
+165
+
+transfer. More importantly, peer-like agents effectively served as coping models for
+females who learned STEM topics, helping enhance positive affect and motivation.
+(Kim and Baylor 2007; Kim and Lim 2013).
+In addition, the media features we used to define the agent roles gained attention
+from the agent research community. When carefully coordinated, these features might
+increase an agents believability and naturalness. Several studies have investigated to
+what degree each of the media features could contribute to improved learning and
+motivation. For example, if the agents appearance and voice were perceived as likable,
+this positively contributed to motivation and transfer of learning (Domagk 2010; Mayer
+2005). Some argued that agent voice was the most important feature in the effectiveness
+of agent (Atkinson et al. 2005; Bente et al. 2008); however, other research indicated
+that the visual presence of an agent was significantly better than voice alone (Rosenberg-Kima et al. 2007). Further, other research revealed that the agents nonverbal
+communication (deictic gestures and emotional expression) differentially influenced
+the learning of procedural knowledge as compared to attitudinal information (Baylor
+and Kim 2009). Overall, by carefully designing the agents appearance, voice, nonverbal communication, and messaging, the agent can differentially impact specific learning
+and motivational outcomes (see Baylor 2011).
+
+Progress and Recommendations
+Current Progress
+Pedagogical agent research has made great progress, expanding its scope from the
+focus on agents provision of expert guidance to a broader interest in agents social and
+affective capabilities to support learners (Veletsianos and Russell 2014). Initially the
+focus was on building intelligent agent-based systems to guide the learning processes,
+with the expectation of some motivational benefit through visual presence. Over the
+last ten years, the research community has grown, including involvement by researchers from diverse disciplines, such as instructional design, educational technology
+and psychology, human computer interaction, media communication, and social psychology. The research issues have expanded, particularly including interest in the social
+and relational aspect of agent-learner interactions. An agent who presented polite
+feedback increased the learning outcomes of college students more than an agent
+who presented direct feedback (Wang et al. 2008). Female students chose as their
+learning companion an agent that focused on developing social relationship during the
+learning task over an agent that was strictly task-oriented (Haake and Gulz 2009). Also,
+attribute similarities in human relations were consistently applied to agent/learner
+relations. High school students chose to work with a peer-like agent over a teacherlike agent (Kim et al. 2007b) and also preferred to work with an agent with the same
+ethnicity more than with a different one (Kim and Wei 2011; Moreno and Flowerday
+2006; Plant et al. 2009). Female students chose Bcool^ and younger agents as their ideal
+social model agents; however, agents with expertise (although older and uncool) were
+as effective as the young and cool agents (Rosenberg-Kima et al. 2008). Collectively,
+we observed more empirical evidence that embodied pedagogical agents acted socially.
+Learners treated their agent in a social way as if the agent were a real human, expecting
+
+166
+
+Int J Artif Intell Educ (2016) 26:160169
+
+it to be pleasant and also feeling hurt by its criticism. Apparently, this illusion was
+attributable not to an agents intelligent behaviors but more to our routine habit of
+treating media socially (Reeves and Nass 1996) and also to our natural tendency to
+animate or anthropomorphize artifacts (Norman 1997; Stern 2002).
+With the growing understanding of the integral relationship between emotions and
+cognition, some researchers have been striving to provide a supportive environment by
+equipping tutoring systems with affective capabilities (Boulay et al. 2010; Graesser
+et al. 2008). Similarly, much work was been done in the area of investigating emotional
+interactions between an agent and a learner. An agents empathetic responses to the
+learners emotional states while learning had a positive influence on learner selfefficacy in the task and positive attitudes whereas an agents happy smiles per se did
+not have such influence (Kim et al. 2007a). The AutoTutor group equipped the tutor
+with affect sensing capabilities and has been continuously refining a model of learner
+affective states while learning complex skills (DMello et al. 2006; DMello and
+Graesser 2012).
+The examination of agent impact in terms of learner characteristics is also noteworthy. We found, in general, that females across age groups were more in favor of agentbased interactive learning environments than males (Arroyo et al. 2003, 2013; Kim and
+Baylor 2006; Kim et al. 2007a). College-aged students of color were more positive to a
+similar agent than to a dissimilar agent (Moreno and Flowerday 2006). Middle grade
+females and ethnic minorities expressed their comfort in learning from an agent,
+improved their self-efficacy in learning algebraic concepts and positive attitudes, and
+increased learning significantly after working with the agent, compared to white males
+(Kim and Lim 2013). The positive impact of the agent on those students was largely
+attributable to their occasional marginalized learning experiences in everyday classrooms. Lastly, a meta-analysis reported agent presence seemed to have a more positive
+influence on K-12 students than on college-level students (Schroeder et al. 2013).
+Future Recommendations
+Over the last decade, agent design tools and AI technologies have significantly
+advanced. The technologies for designing media features and emotional interactions
+enable designers and researchers to create more believable agents. Natural language
+processing coupled with speech recognition technology allows for a more natural
+tutorial dialogue between learner and agent and better simulates human-to-human
+conversationsfor example, refer to the virtual humans developed by the Institute
+for Creative Technologies (http://ict.usc.edu) and Project Listen (http://www.
+projectlisten.org). The instructional and motivational messages that were pre-scripted
+and controlled in our study now can be more easily adapted to students instructional
+needs in real-time. Along this line, revisiting our study with agents that have more
+natural and interactive speech is warranted. Such research could take into account the
+needs of the learners, particularly with diverse student populations who might have
+unique challenges in motivation and learning.
+We expect that designing the optimal instructional role for artificial beings will
+continue to be of interest in the AI research community and more broadly the
+educational technology community as well. As multi-agent systems are implemented
+more easily, the definition of agent roles has become fine-tuned. Agents have taken on
+
+Int J Artif Intell Educ (2016) 26:160169
+
+167
+
+a range of roles, from proactively teaching and guiding, through collaborating and colearning, to even existing subtly in the background (e.g., in multi-agent educational
+games and combat training simulations). Also, with the advances in online technology,
+learning platforms have become increasingly personalized, and a growing number of
+people choose online learning over classrooms. The personalized service provided by
+pedagogical agents might enrich these learning experiences both socially and cognitively. Lastly, pedagogical agents have taken the form of on-screen characters in many
+recent studies. It is very plausible that the agents will expand in their representations,
+such as humanoid robots (Fridin 2014; Kim et al. 2014) or holographic figures as these
+technologies evolve in the future. The interaction dynamics between the learner and
+each of these technologies will need to be explored. It is important to continue to
+expand our understanding of the roles and functionalities of pedagogical agents as well
+as other technology-based instructional personas. This freedom to create idealized
+artificial instructors is a freedom not possible with human instructors. Researchinformed design provides exciting possibilities for developing virtual instructors that
+are increasingly more personalized and effective.
+
+References
+Aimeur, E., & Frasson, C. (1996). Analyzing a new learning strategy according to different knowledge levels.
+Computers & Education, 27(2), 115127.
+Arroyo, I., Murray, T., Woolf, B. P., Beal, C. R. (2003). Further results on gender and cognitive differences in
+help effectiveness. Paper presented at the International Conference of Artificial Intelligence in Education,
+Sydney, Australia.
+Arroyo, I., Burleson, W., Tai, M., Muldner, K., & Woolf, B. P. (2013). Gender differences in the use and
+benefit of advanced learning technologies for mathematics. Journal of Educational Psychology, 105(4),
+957969.
+Atkinson, R. K. (2002). Optimizing learning from examples using animated pedagogical agents. Journal of
+Educational Psychology, 94, 416427.
+Atkinson, R. K., Mayer, R. E., & Merrill, M. M. (2005). Fostering social agency in multimedia learning:
+examining the impact of an agents voice. Contemporary Educational Psychology, 30, 117139.
+Bandura, A. (1986). Social foundations of thought and action: A social-cognitive theory. Englewood Cliffs:
+Prentice Hall.
+Bandura, A. (1997). Self-efficacy: The exercise of control. New York: W. H. Freeman.
+Baylor, A. L. (2000). Beyond butlers: intelligent agents as mentors. Journal of Educational Computing
+Research, 22(4), 373382.
+Baylor, A. L. (2011). The design of motivational agents and avatars. Educational Technology Research and
+Development, 59, 291300.
+Baylor, A. L., & Ebbers, S. (2003). Evidence that multiple agents facilitate greater learning. In U. Hoppe, M.
+F. Verdejo, & J. Kay (Eds.), Artificial intelligence in education: Shaping the future of learning through
+intelligent technologies (pp. 377379). Amsterdam: Ios Press.
+Baylor, A. L., & Kim, Y. (2005). Simulating instructional roles through pedagogical agents. International
+Journal of Artificial Intelligence in Education, 15, 95115.
+Baylor, A. L., & Kim, S. (2009). Designing nonverbal communication for pedagogical agents: when less is
+more. Computers in Human Behavior, 25(2), 450457.
+Beishuizen, J. J., Hof, E., Van Putten, C. M., Bouwmeester, S., & Asscher, J. J. (2001). Students and teachers
+cognitions about good teachers. British Journal of Educational Psychology, 71, 185201.
+Bente, G., Rggenberg, S., Krmer, N. C., & Eschenburg, F. (2008). Avatar-assisted net-working. Increasing
+social presence and interpersonal trust in net-based collaborations. Human Communication Research,
+34(2), 287318.
+
+168
+
+Int J Artif Intell Educ (2016) 26:160169
+
+Boulay, B. D., Avramides, K., Luckin, R., martinez-Miron, E., Mendez, G. R., Carr, A. (2010). Towards
+systems that care: a conceptual framework based on motivation, metacognition, and affect. International
+Journal of Artificial Intelligence in Education, 20(3).
+Cassell, J., Sullivan, J., Prevost, S., & Churchill, E. (Eds.). (2001). Embodied conversational agents (Vol. 22).
+Cambridge: The MIT Press.
+Chan, T. W., & Chou, C. Y. (1997). Exploring the design of computer supports for reciprocal tutoring systems.
+International Journal of Artificial Intelligence in Education, 8, 129.
+DMello, S., & Graesser, A. (2012). Dynamics of affective states during complex learning. Learning and
+Instruction, 22, 145157.
+Damasio, A. (1994). Descartes error: Emotion, reason, and the human brain. New York: Putnam.
+Dillenbourg, P., & Self, J. (1992). People power: A human-computer collaborative learning system. In G. G.
+C. Frasson & G. McCalla (Eds.), The 2nd international conference of intelligent tutoring systems, lecture
+notes in computer science (Vol. 608, pp. 651660). Berlin: Springer.
+DMello, S., Craig, S. D., Sullins, J., & Graesser, A. (2006). Predicting affective states through an emote-aloud
+procedure from AutoTutors mixed-initiative dialogue. International Journal of Artificial Intelligence in
+Education, 16, 328.
+Domagk, S. (2010). Do pedagogical agents facilitate learner motivation and learning outcomes? The role of
+the appeal of agents appearance and voice. Journal of Media Psychology, 22(2), 8497.
+Ericsson, K. A. (1996). The acquisition of expert performance: An introduction to some of the issues. In K. A.
+Ericksson (Ed.), The road to excellence: The acquisition of expert performance in the arts, sciences,
+sports, and games (pp. 150). Hillsdale: Erlbaum.
+Fridin, M. (2014). Storytelling by a kindergarten social assistive robot: a tool for constructive learning in
+preschool education. Computers & Education, 70, 5364.
+Gonzales, M., Burdenski, T. K., Jr., Stough, L. M., & Palmer, D. J. (2001, April 1014). Identifying teacher
+expertise: an examination of researchers decision-making. Paper presented at the American Educational
+Research Association, Seattle, WA.
+Graesser, A. C., Person, N. K., Harter, D., & TRG. (2001). Teaching tactics and dialog in AutoTutor.
+International Journal of Artificial Intelligence in Education, 12, 257279.
+Graesser, A. C., DMello, S. K., Craig, S. D., Witherspoon, A., Sullins, J., McDaniel, B., & Gholson, B.
+(2008). The relationship between affective states and dialog patterns during interactions with AutoTutor.
+Journal of Interactive Learning Research, 19(2), 293312.
+Haake, M., & Gulz, A. (2009). A look at the roles of look & roles in embodied pedagogical agentsa user
+preference perspective. International Journal of Artificial Intelligence in Education, 19(1).
+Hietala, P., & Niemirepo, T. (1998). The competence of learning companion agents. International Journal of
+Artificial Intelligence in Education, 9, 178192.
+Johnson, W. L., Rickel, J. W., & Lester, J. C. (2000). Animated pedagogical agents: face-to-face interaction in
+interactive learning environments. International Journal of Artificial Intelligence in Education, 11, 4778.
+Kim, Y. (2007). Desirable characteristics of learning companions. International Journal of Artificial
+Intelligence in Education, 17(4), 371388.
+Kim, Y., & Baylor, A. L. (2006). Pedagogical agents as learning companions: the role of competency and type
+of interaction. Educational Technology Research & Development, 54(03), 223243.
+Kim, Y., & Baylor, A. L. (2007). Pedagogical agents as social models to influence learner attitudes.
+Educational Technology, 47(01), 2328.
+Kim, Y., & Lim, J. (2013). Gendered socialization with an embodied agent: creating a social and affable
+mathematics learning environment for middle-grade females. Journal of Educational Psychology, 105(4),
+11641174.
+Kim, Y., & Wei, Q. (2011). The impact of user attributes and user choice in an agent-based environment.
+Computers & Education, 56, 505514.
+Kim, Y., Baylor, A. L., & Shen, E. (2007a). Pedagogical agents as learning companions: the impact of agent
+affect and gender. Journal of Computer Assisted Learning, 23(03), 220234.
+Kim, Y., Wei, Q., Xu, B., Ko, Y. (2007). Creating social affable learning environments. Paper presented at the
+Annucal Conference of Society for Information Technology and Teacher Education (SITE), San Antonio,
+Texas.
+Kim, Y., Smith, D., Kim, N., & Chen, T. (2014). Playing with a robot to learn english vocabulary. KAERA
+Research Forum, 1(2), 38.
+Kort, B., Reilly, R., & Picard, R. W. (2001). An affective model of interplay between emotions and learning:
+Reengineering educational pedagogy-building a learning companion. In Proceedings IEEE International
+Conference on Advanced Learning Technologies, Madison, WI, pp. 4346.
+
+Int J Artif Intell Educ (2016) 26:160169
+
+169
+
+Krmer, N. C. (2010). Psychological research on embodied conversational agents: the case of pedagogical
+agents. Journal of Media Psychology, 22(2), 4751.
+Lester, J. C., Towns, S. G., & FitzGerald, S. G. (1999). Achieving affective impact: visual emotive
+communication in lifelike pedagogical agents. International Journal of Artificial Intelligence in
+Education, 10(34), 278291.
+Mayer, R. E. (2005). Principles of multimedia learning based on social cues: Personalization, voice, and image
+principles. In R. E. Mayer (Ed.), The Cambridge handbook of multimedia learning (pp. 201214).
+Moreno, R., & Flowerday, T. (2006). Students choice of animated pedagogical agents in science learning: a
+test of the similarity attraction hypothesis on gender and ethnicity. Contemporary Educational
+Psychology, 31, 186207.
+Moreno, R., Mayer, R. E., Spires, H. A., & Lester, J. C. (2001). The case for social agency in computer-based
+teaching: do students learn more deeply when they interact with animated pedagogical agents? Cognition
+and Instruction, 19(2), 177213.
+Norman, D. A. (1997). How might people interact with agents. In J. M. Bradshaw (Ed.), Software agents (pp.
+4955). Cambridge: The MIT Press.
+Pareto, L. (2014). A teachable agent game engaging primary school children to learn arithmetic concepts and
+reasoning. International Journal of Artificial Intelligence in Education, 24(3), 251283.
+Patton, M. Q. (2002). Qualitative research and evaluation methods (3rd ed.). London: Sage Publications.
+Picard, R. W. (1997). Affective computing. Cambridge: The MIT Press.
+Picard, R. W., Kort, B., Reilly, R. (2001). Affective learning companion. Retrieved November 2, 2003, from
+http://affect.media.mit.edu/projectpages/lc/nsf1.html
+Plant, E. A., Baylor, A. L., Doerr, C. E., & Rosenberg-Kima, R. B. (2009). Changing middle-school students
+attitudes and performance regarding engineering with computer-based social models. Computers &
+Education, 53, 209215.
+Reeves, B., & Nass, C. (1996). The media equation. Stanford: CSLI Publications.
+Rosenberg-Kima, R. B., Baylor, A. L., Plant, E. A., Doerr, C. (2007). The importance of interface agent visual
+presence: Voice alone is less effective in impacting young womens attitudes toward engineering. Paper
+presented at the Persuasive Technology 2007, Stanford, California.
+Rosenberg-Kima, R. B., Baylor, A. L., Plant, E. A., & Doerr, C. E. (2008). Interface agents as social models
+for female students: the effects of agent visual presence and appearance on female students attitudes and
+beliefs. Computers in Human Behavior, 24, 27412756.
+Schroeder, N. L., Adesope, O. O., & Gilbert, R. B. (2013). How effective are pedagogical agents for learning?
+A meta-analytic review. Journal of Educational Computing Research, 49(1), 139.
+Schunk, D. H. (1989). Social cognitive theory and self-regulated learning. In B. J. Zimmerman & D. H.
+Schunk (Eds.), Self-regulated learning and academic achievement: Theory, research, and practice (pp.
+83110). New York: Springer.
+Schwartz, D. L., Blair, K. P., Biswas, G., Leelawong, K., & Davis, J. (2007). Animations of thought:
+Interactivity in the teachable agent paradigm. In R. Lowe & W. Schnotz (Eds.), Learning with animation:
+Research and implications for design (Vol. 18, pp. 334352). UK: Cambridge University Press.
+Stern, A. (2002). Creating emotional relationships with virtual characters. In R. Trappl, P. Petta, & S. Payr
+(Eds.), Emotions in humans and artifacts (pp. 333365). Cambridge: The MIT Press.
+Veletsianos, G., Heller, R., Overmyer, S., & Procter, M. (2010). Conversational agents in virtual worlds:
+bridging disciplines. British Journal of Educational Technology, 41(1), 123140.
+Veletsianos, G., & Russell, G. (2014). Pedagogical Agents. In M. Spector, D. Merrill, J. Elen, & M. J. Bishop
+(Eds.), Handbook of Research on Educational Communications and Technology, 4th Edition (pp. 759
+769). New York: Springer Academic.
+Wang, N., Johnson, W. L., Mayer, R. E., Rizzo, P., Shaw, E., & Collins, H. (2008). The politeness effect:
+pedagogical agents and learning outcomes. International Journal of Human-Computer Studies, 66, 98
+112.
+
+

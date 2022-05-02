@@ -92,6 +92,7 @@ class NMF_classifier:
     def test_model(self, corpus, associated_SDGs, path_to_plot="", path_to_excel=""):
         predictedSDGs = []
         realSDGs = []
+        raw_SDGs = []
         scoresSDGs = []
         valids = []
         texts = []
@@ -100,7 +101,7 @@ class NMF_classifier:
         countWellPredictionsPerSDG = np.zeros(17)
         
         for text, sdgs in zip(corpus, associated_SDGs):
-            predic, score = self.map_text_to_sdgs(text, top_score=len(sdgs))  
+            predic, score, raw_feats = self.map_text_to_sdgs(text, top_score=len(sdgs))  
             valid = False
             if sorted(sdgs) == sorted(predic):
                 valid = True
@@ -111,7 +112,8 @@ class NMF_classifier:
                     validSingle = True
                     countWellPredictionsPerSDG[sdg - 1] += 1
                     break
-
+            raw_sdgsAscii = ["{:.2f}".format(ii) for ii in raw_feats]
+            raw_SDGs.append(raw_sdgsAscii)
             predictedSDGs.append(predic)
             realSDGs.append(sdgs)
             texts.append(text)
@@ -126,6 +128,7 @@ class NMF_classifier:
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
             df["prediction"] = predictedSDGs
+            df["raw"] = raw_SDGs
             df["texts"] = texts
             df["real"] = realSDGs
             df["scores"] = scoresSDGs
@@ -158,7 +161,7 @@ class NMF_classifier:
             scoreSDG = self.topics_association[index]
             predictSDGs.append(scoreSDG)
             scores.append(topicFeats[index])
-        return [predictSDGs, scores]
+        return [predictSDGs, scores, topicFeats]
         
     def map_model_topics_to_sdgs(self, n_top_words, path_csv=""):
         # Maps each new topic of the general NMF model to an specific SDG obtained from training 17 models
@@ -691,7 +694,7 @@ class Top2Vec_classifier:
     def load_global_model(self):
         self.global_model = Top2Vec.load(self.paths["model"] + "model_top2vec")
             
-    def train_global_model(self, train_data, embedding_model="doc2vec", ngram=True, method="learn", workers=8, min_count=2, embedding_batch_size=17):
+    def train_global_model(self, train_data, embedding_model="doc2vec", ngram=True, method="learn", workers=8, min_count=2, embedding_batch_size=17, tokenizer=False, split=False, nSplit=25):
         # trains the model based on the training files
         # @param train_files corpus of documents as a list of strings
         # @param method "fast-learn", "learn" or "deep-learn"
@@ -704,7 +707,8 @@ class Top2Vec_classifier:
         #         tokens = tools.tokenize_text(text, min_word_length=3, lemmatize=False, stem=False, extended_stopwords=True)
         #         return tokens     
 
-        self.global_model = Top2Vec(documents=corpus, embedding_model=embedding_model, min_count=min_count, ngram_vocab=ngram, speed=method, workers=workers, embedding_batch_size=embedding_batch_size, document_chunker="sequential", chunk_length=25)
+        self.global_model = Top2Vec(documents=corpus, embedding_model=embedding_model, min_count=min_count, ngram_vocab=ngram, speed=method, workers=workers, embedding_batch_size=embedding_batch_size, document_chunker="sequential", split_documents=split, chunk_length=nSplit, use_embedding_model_tokenizer=tokenizer)
+        
         self.print_model_summary()
         self.global_model.save(self.paths["model"] + "model_top2vec")
         # self.map_model_topics_to_sdgs(associated_sdgs=associated_sdgs)
@@ -716,8 +720,8 @@ class Top2Vec_classifier:
         newTopics = self.global_model.hierarchical_topic_reduction(num_topics)
         
         
-    def test_model(self, corpus, associated_SDGs,  stat_topics=10, path_to_plot="", path_to_excel=""):
-        rawSDG = []
+    def test_model(self, corpus, associated_SDGs,  stat_topics=-1, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0):
+        rawSDG = []; raw_scores = []
         predictedSDGs = []
         realSDGs = []
         scoresSDGs = []
@@ -727,23 +731,36 @@ class Top2Vec_classifier:
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
         
+        numTopics = self.global_model.get_num_topics()
+        if stat_topics < 0 or stat_topics > numTopics:
+            print(' - n_stat topics too large... now -> ', numTopics)
+            stat_topics = numTopics
+        
         for text, sdgs in zip(corpus, associated_SDGs):
-            raw_sdgs, predic, score = self.map_text_to_sdgs(text, n_query=stat_topics, n_sdgs=len(sdgs))  
-            valid = False
-            if sorted(sdgs) == sorted(predic):
-                valid = True
-            validSingle = False
+            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, n_query=stat_topics, score_threshold=score_threshold)  
+            
+            validSingle = False; ii = 0
             for sdg in sdgs:
                 countPerSDG[sdg - 1] += 1
                 if sdg in predic:
                     validSingle = True
+                    ii += 1
                     countWellPredictionsPerSDG[sdg - 1] += 1
-                    break
-            rawSDG.append(raw_sdgs)
-            predictedSDGs.append(predic)
-            realSDGs.append(sdgs)
-            scoresSDGs.append(score)
-            texts.append(text)
+            valid = False
+            if ii == len(sdgs):
+                valid = True
+                
+            if (only_bad and not(valid)) or not(only_bad):
+                raw_sdgsAscii = ["{:.2f}".format(ii) for ii in raw_sdgs]
+                rawSDG.append(raw_sdgsAscii)
+                
+                raw_scoresAscii = ["{:.2f}".format(ii) for ii in raw_topicsScores]
+                raw_scores.append(raw_scoresAscii)
+                
+                predictedSDGs.append(predic)
+                realSDGs.append(sdgs)
+                scoresSDGs.append(score)
+                texts.append(text)
             valids.append(valid)
             validsAny.append(validSingle)
             
@@ -754,40 +771,36 @@ class Top2Vec_classifier:
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
             df["text"] = texts
-            df["raw"] = list(rawSDG)
-            df["prediction"] = predictedSDGs
             df["real"] = realSDGs
+            df["raw"] = rawSDG
+            df["raw_topics"] = raw_scores
+            df["prediction"] = predictedSDGs
             df["scores"] = scoresSDGs
-            df["valid"] = valids
-            df["valid_single"] = validsAny
+            # df["valid"] = valids
+            # df["valid_single"] = validsAny
             df.to_excel(path_to_excel)
         
-        # if len(path_to_plot) > 0:
-        #     sdgs = []
-        #     percents = []
-        #     for ii in range(1, 18):
-        #         sdgs.append('{}'.format(ii))
-        #         perc = countWellPredictionsPerSDG[ii - 1] / float(countPerSDG[ii - 1]) * 100.0
-        #         percents.append(perc)
-        #     plt.figure()
-        #     plt.bar(sdgs, percents)
-        #     plt.xlabel('SDGS')
-        #     plt.ylabel("Correctly individual identified [%]")
-        #     plt.savefig(path_to_plot)
-        
-    def map_model_topics_to_sdgs(self, associated_sdgs, path_csv=""):
+    def map_model_topics_to_sdgs(self, associated_sdgs, num_docs=15, path_csv="", normalize=False):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
         nTopics = self.global_model.get_num_topics()
         topic_sizes, topics_num = self.global_model.get_topic_sizes()
         self.topics_association = np.zeros((nTopics, 17))
         for ii in range(nTopics):   
-            documents, document_scores, document_ids = self.global_model.search_documents_by_topic(topic_num=ii, num_docs=15)
+            if num_docs < 0:
+                numDocs = topic_sizes[ii]
+            else:
+                numDocs = num_docs
+            documents, document_scores, document_ids = self.global_model.search_documents_by_topic(topic_num=ii, num_docs=numDocs)
+            if normalize: document_scores = document_scores / sum(document_scores)
             sdgs = np.zeros(17)
-            for id in document_ids:
+            for id, score in zip(document_ids, document_scores):
                 realSDG = associated_sdgs[id]
                 for sdg in realSDG:
-                    sdgs[sdg - 1] += 1
-            self.topics_association[ii] = sdgs / sum(sdgs)
+                    sdgs[sdg - 1] += score * 1
+            self.topics_association[ii] = sdgs
+            # if normalize:
+            #     self.topics_association[ii] = sdgs / sum(sdgs)
+                
             print('Topic{:2d}: '.format(ii), list(self.topics_association[ii]))
             
         if len(path_csv) > 4:
@@ -811,20 +824,19 @@ class Top2Vec_classifier:
                 df["topic{}".format(index)] = list(words)
             df.to_csv(path_csv)
             
-    def map_text_to_sdgs(self, text, n_query, n_sdgs):
-        if n_sdgs > n_query:
-            n_query = n_sdgs
+    def map_text_to_sdgs(self, text, n_query, score_threshold):
         topics_words, word_scores, topic_scores, topic_nums = self.global_model.query_topics(text, num_topics=n_query)
-        predictSDGs = np.zeros(17)
+        predictSDGs = np.zeros(17)  
         for topicIndex, topicScore in zip(topic_nums, topic_scores):
             predictSDGs += topicScore * self.topics_association[topicIndex]
         top = sorted(predictSDGs, reverse=True)
-        sdgs = [0] * n_sdgs; scores = [0] * n_sdgs
-        for ii in range(n_sdgs):
-            sdgs[ii] = list(predictSDGs).index(top[ii]) + 1
-            scores[ii] = top[ii]
+        sdgs = []; scores = []
+        for ii in range(len(topic_scores)):
+            if top[ii] > score_threshold:
+                sdgs.append(list(predictSDGs).index(top[ii]) + 1)
+                scores.append(top[ii])
 
-        return [predictSDGs, sdgs, scores]
+        return [predictSDGs, sdgs, scores, topic_scores]
                
     def print_model_summary(self):
         # print('####### Model summary:')

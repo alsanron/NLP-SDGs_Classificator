@@ -1,0 +1,776 @@
+International Journal of Artificial Intelligence in Education 13 (2003) 156169
+IOS Press
+
+Adaptive and Intelligent Web-based Educational Systems
+Peter Brusilovsky, School of Information Sciences, University of Pittsburgh, 135 North
+Bellefield Avenue, Pittsburgh, PA 15260, USA
+peterb@mail.sis.pitt.edu
+Christoph Peylo, Software Logistik im Artland, Friedrichstr. 30, 49610 Quakenbrck,
+Germany
+christoph.peylo@sla.de
+Adaptive and intelligent Web-based educational systems (AIWBES) provide an alternative to
+the traditional just-put-it-on-the-Web approach in the development of Web-based educational
+courseware (Brusilovsky & Miller, 2001). AIWBES attempt to be more adaptive by building a
+model of the goals, preferences and knowledge of each individual student and using this model
+throughout the interaction with the student in order to adapt to the needs of that student. They
+also attempt to be more intelligent by incorporating and performing some activities traditionally
+executed by a human teacher - such as coaching students or diagnosing their misconceptions. The
+first pioneer intelligent and adaptive Web-based educational systems were developed in 19951996 (Brusilovsky, Schwarz, & Weber, 1996a; Brusilovsky, Schwarz, & Weber, 1996b; De Bra,
+1996; Nakabayashi, et al., 1995; Okazaki, Watanabe, & Kondo, 1996). Since then many
+interesting systems have been developed and reported. An interest to provide distance education
+over the Web has been a strong driving force behind these research efforts. The research
+community was helped by the provision of a sequence of workshops that brought together
+researchers working on AIWBES, let them learn from each other, and then advocate the ideas of
+this research direction via on-line workshop proceedings (Brusilovsky, Henze, & Milln, 2002;
+Brusilovsky, Nakabayashi, & Ritter, 1997; Peylo, 2000; Stern, Woolf, & Murray, 1998). A
+number of interesting AIWBES that were reported at early stages of their development during
+these workshops have since achieved the level of maturity. This double special issue capitalizes
+on the results of these workshops and assembles a collection of papers that represents the state of
+the art in the development of AIWBES.
+The goal of this introductory article is to provide a more systematic view to the variety of
+modern AIWBES and to discuss the role and the place of the AIWBES research stream in the
+field of Artificial Intelligence in Education (AI-Ed). It provides a brief overview of known
+AIWBES technologies classified by the field of their origin. It also attempts to distill the new
+design paradigm behind modern AIWBES and to compare this paradigm with a traditional design
+paradigm that has been dominating the field of AI-Ed for the last 15 years.
+
+ADAPTIVE AND INTELLIGENT TECHNOLOGIES FOR WEB-BASED
+EDUCATIONAL SYSTEMS
+The kind of advanced Web-based educational systems that this introduction attempts to
+review are most often referred to as adaptive Web-based educational systems or intelligent Webbased educational systems. These terms are not really synonyms. Speaking about adaptive
+1560-4292/03/$8.00  2003  IOS Press. All rights reserved
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+157
+
+systems we stress that these systems attempt to be different for different students and groups of
+students by taking into account information accumulated in the individual or group student
+models. Speaking about intelligent systems we stress that these systems apply techniques from
+the field of Artificial Intelligence (AI) to provide broader and better support for the users of
+Web-based educational systems. While the majority of systems mentioned in this introduction
+can be classified as both intelligent and adaptive, a solid number of systems fall in exactly one of
+these categories (Figure 1). For example, many intelligent diagnosis systems including German
+Tutor (Heift, & Nicholson, 2001) and SQL-Tutor (Mitrovic, 2003) are non-adaptive, i.e., they
+will provide the same diagnosis in response to the same solution to a problem regardless of the
+students past experience with the system. From another side, a number of adaptive hypermedia
+and adaptive information filtering systems such as AHA (De Bra, & Calvi, 1998) or
+WebCOBALT (Mitsuhara, Ochi, Kanenishi, & Yano, 2002) use efficient, but very simple
+techniques that can hardly be considered as intelligent. The reason to focus on both intelligent
+and adaptive systems in this issue is that that the intersection is still large, the borders between
+intelligent and non-intelligent are not clear-cut, and both groups are certainly of interest for
+AI in Education (AI-Ed) community.
+
+Intelligent ES
+
+Adaptive ES
+
+Fig. 1. Relationship between adaptive and intelligent educational systems
+
+Existing AIWBES are very diverse. They offer various kinds of support for both students and
+teachers involved in the process of Web-enhanced education. To help in understanding this
+variety of systems and ideas, the authors earlier review of adaptive hypermedia (Brusilovsky,
+1996) suggested focusing on adaptive and intelligent technologies. By adaptive and intelligent
+technologies we mean essentially different ways to add adaptive or intelligent functionality to an
+educational system. A technology usually can be further dissected into finer-grain techniques and
+methods, which correspond to different variations of this functionality and different ways of its
+implementation (Brusilovsky, 1996).
+An earlier review (Brusilovsky, 1999) identified five major technologies used in AIWBES
+(Figure 2). These technologies have immediate roots in two research fields that were well
+established before the Internet age  Adaptive Hypermedia and Intelligent Tutoring Systems
+(ITS). Since their application in the Web context was relatively straightforward, these
+technologies were the first to appear in AIWBES and can be considered as classic AIWBES
+technologies. According to their origin, the review (Brusilovsky, 1999) grouped the five classic
+technologies into Adaptive Hypermedia technologies and Intelligent Tutoring technologies
+(Figure 2). The review also identified and grouped into Web-inspired AIWBES technologies
+some new technologies that appeared on the Web more recently and had almost no direct roots in
+pre-internet educational systems. The lack of examples of Web-inspired technologies at the time
+
+158
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+of writing the review (Brusilovsky, 1999) did not allow further classification of these
+technologies.
+In this introductory article we follow the review (Brusilovsky, 1999) in grouping together
+similar AIWBES technologies and identifying the roots of these technologies. We leave the set of
+classic Adaptive Hypermedia and Intelligent Tutoring technologies intact but subdivide the
+original group of Web-inspired technologies into three groups: Adaptive Information Filtering,
+Intelligent Class Monitoring, and Intelligent Collaboration Support. The five resulting groups of
+technologies and their fields of origin are shown in Figure 3. Table 1 provides a good overview
+of these five groups listing technologies and sample systems for each of the groups. It also helps
+the reader understand the role of the papers presented in this special issue (shown in bold in
+Table 1) in the overall context of work on AIWBES. The remaining part of this section describes
+briefly the technologies group by group while also introducing the papers of this special issue.
+
+Adaptive Hypermedia Systems
+
+Intelligent Tutoring Systems
+
+Adaptive
+Hypermedia
+
+Adaptive Presentation
+Adaptive Navigation Support
+
+Intelligent
+Tutoring
+
+Curriculum Sequencing
+
+Problem Solving Support
+
+Intelligent Solution Analysis
+
+Fig. 2. Classic AIWBES technologies and their origins
+
+Major Intelligent Tutoring technologies are: curriculum sequencing, intelligent solution
+analysis, and problem solving support. All these technologies have been well explored in the
+field of ITS. The goal of curriculum sequencing technology is to provide the student with the
+most suitable individually planned sequence of topics to learn and learning tasks (examples,
+questions, problems, etc.) to work with. It helps the student find an optimal path through the
+learning material. In the context of Web-based education (WBE), curriculum sequencing
+technology becomes very important due to its ability to guide the student through the hyperspace
+of available information. Curriculum sequencing was one of the first to be implemented in such
+early AIWBES as ELM-ART (Brusilovsky, et al., 1996a) and CALAT (Nakabayashi, Maruyama,
+Koike, Fukuhara, & Nakamura, 1996). Among the systems featured in the special issue ELMART (Weber, et al., 2001) and KBS-Hyperbook (Henze, et al., 2001) provide two good examples
+of curriculum sequencing. In ELM-ART sequencing is implemented in the form of a
+recommended link and an adaptive next button. In KBS-Hyperbook it is implemented as a
+suggested learning path.
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+Information Retrieval
+
+CSCL
+
+Machine Learning,
+Data Mining
+
+Adaptive Hypermedia Systems
+
+Adaptive
+Hypermedia
+
+159
+
+Intelligent Tutoring Systems
+
+Adaptive
+Information
+Filtering
+
+Intelligent
+Monitoring
+
+Intelligent
+Collaborative
+Learning
+
+Intelligent
+Tutoring
+
+Fig. 3. Five groups of modern AIWBES technologies
+
+Intelligent solution analysis deals with students' solutions of educational problems (which
+can range from a simple question to a complex programming problem). Unlike non-intelligent
+checkers which can only tell whether the solution is correct or not, intelligent analyzers can tell
+what is wrong or incomplete and which missing or incorrect pieces of knowledge may be
+responsible for the error. Intelligent analyzers can provide the student with extensive error
+feedback and update the student model. Due to its low interactivity and natural match to Web
+form-submission interface, this technology was also one of the first to be implemented on the
+Web in such early AIWBES as ELM-ART (Brusilovsky, et al., 1996a) and WITS (Okazaki, et
+al., 1996). The systems SQL-Tutor (Mitrovic, 2003), German Tutor (Heift, et al., 2001) and the
+most recent version of ELM-ART (Weber, et al., 2001) presented in this special issue
+demonstrate several ways of implementing intelligent solution analysis on the WWW.
+The goal of interactive problem solving support is to provide the student with intelligent help
+on each step of problem solving - from giving a hint to executing the next step for the student.
+Interactive problem solving support technology is not as popular in Web-based systems as in
+standalone intelligent tutoring systems  mainly due to implementation problems. As was
+demonstrated by pioneer systems, pure server-side implementations such as PAT-Online (Ritter,
+1997) can not actively watch the students actions and can only provide help by request. Pure
+client-side implementations such as ADIS (Warendorf, & Tan, 1997) have a complexity limit.
+The proper functionality and level of complexity to implement interactive problem solving
+support require client-server implementation such as AlgeBrain (Alpert, Singley, & Fairweather,
+1999), but such systems are harder to develop. Among the systems featured in this special issue,
+ActiveMath (Melis, et al., 2001) implements interactive problem solving support in its Omega
+proof planer. In addition to that, ELM-ART (Weber, et al., 2001) provides a unique example of
+example-based problem solving support  a different low-interactive support technology that
+became quite promising in Web context.
+
+160
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+Table 1
+AIWBES technologies, their origin, and representative systems. Systems featured in the special issue
+are shown in bold.
+
+Sources of
+AIWBES
+technologies
+Adaptive
+Hypermedia
+
+Adaptive
+Information
+Filtering
+Intelligent
+Class
+Monitoring
+Intelligent
+Collaborative
+Learning
+
+Intelligent
+Tutoring
+
+Technologies
+
+
+
+Adaptive navigation
+support
+Adaptive presentation
+
+
+
+
+Content-based filtering
+Collaborative filtering
+
+
+
+Sample systems
+AHA (De Bra, et al., 1998)
+InterBook (Brusilovsky, Eklund, &
+Schwarz, 1998)
+KBS-Hyperbook (Henze, & Nejdl,
+2001)
+MetaLinks (Murray, 2003)
+ActiveMath (Melis, et al., 2001)
+ELM-ART (Weber, & Brusilovsky,
+2001)
+INSPIRE (Papanikolaou, Grigoriadou,
+Kornilakis, & Magoulas, Submitted)
+MLTutor (Smith, & Blandford, 2003)
+WebCOBALT (Mitsuhara, et al., 2002)
+HyperClassroom (Oda, Satoh, &
+Watanabe, 1998)
+
+
+
+Adaptive group formation
+and peer help
+Adaptive collaboration
+support (coaches and
+monitors)
+Virtual students
+
+
+
+
+
+Curriculum sequencing
+Intelligent solution analysis
+Problem solving support
+
+
+
+
+PhelpS (Greer, et al., 1998)
+HabiPro (Vizcano, Contreras, Favela, &
+Prieto, 2000)
+COLER (Constantino Gonzalez,
+Suthers, & Escamilla De Los Santos,
+2003)
+EPSILON (Soller, & Lesgold, 2003)
+VC-Prolog-Tutor (Peylo, Teiken,
+Rollinger, & Gust, 1999)
+SQL-Tutor (Mitrovic, 2003)
+German Tutor (Heift, et al., 2001)
+ActiveMath (Melis, et al., 2001)
+ELM-ART (Weber, et al., 2001)
+
+Adaptive presentation and adaptive navigation support are two major technologies explored
+by adaptive hypertext and hypermedia systems. The goal of adaptive presentation technology is
+to adapt the content presented in each hypermedia node (page) to student goals, knowledge, and
+other information stored in the student model. In a system with adaptive presentation, the pages
+are not static but adaptively generated or assembled for each user. ActiveMath (Melis, et al.,
+2001) featured in this special issue provides one of the most advanced existing examples of
+adaptive presentation. In addition, ELM-ART (Weber, et al., 2001) demonstrates a special form
+of adaptive presentation - adaptive warnings about the educational status of the current page.
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+161
+
+MetaLinks (Murray, 2003) demonstrates the use of adaptive presentation for "narrative
+smoothing".
+The goal of adaptive navigation support technology is to assist the student in hyperspace
+orientation and navigation by changing the appearance of visible links. For example, an adaptive
+hypermedia system can adaptively sort, annotate, or partly hide the links of the current page to
+make it easier to choose where to go next. Adaptive navigation support shares the same goal with
+curriculum sequencing - to help students find an optimal path through the learning material. At
+the same time, adaptive navigation support is less directive and more cooperative than
+traditional sequencing: it guides students while leaving them the choice of the next knowledge
+item to be learned and next problem to be solved. In the WWW context where hypermedia is a
+basic organizational paradigm, adaptive navigation support becomes both natural and efficient. It
+was among the three earliest AIWBES technologies, explored in such systems as ELM-ART
+(Brusilovsky, et al., 1996a), InterBook (Brusilovsky, Schwarz, & Weber, 1996c), and De Bra's
+adaptive hypertext course (De Bra, 1996) and became arguably the most popular technology in
+AIWBES. Half of the systems presented in this special issue use this technology. KBSHyperbook (Henze, et al., 2001), ActiveMath (Melis, et al., 2001), and ELM-ART (Weber, et al.,
+2001) demonstrate several variants of adaptive link annotation. MLTutor (Smith, et al., 2003)
+uses link sorting and generation.
+Adaptive information filtering (AIF) is a classic technology from the field of Information
+Retrieval. Its goal is finding a few items that are relevant to user interests in a large pool of (textbased) documents. On the Web this technology has been used in both search and browsing
+context. It has been applied to adapt the results of Web search using filtering and ordering and to
+recommend the most relevant documents in the pool using link generation. While the engines
+used by AIF systems are very different from adaptive hypermedia engines, at the interface level
+Web-based AIF most often use adaptive navigation support techniques. There are two essentially
+different kinds of AIF engines that can be considered as two different AIF technologies 
+content-based filtering and collaborative filtering. The former relies on document content while
+the latter ignores the content completely attempting instead to match the users who are interested
+in the same documents. Modern AIF extensively uses machine learning techniques, especially for
+content-based filtering. Being very popular in the field of information systems, AIF has not been
+used in educational context in the past. The amount of learning content was relatively small and
+the need to guide the user to most relevant material was well supported by adaptive sequencing
+and adaptive hypermedia. However, the Web with its abundance of non-indexed open corpus
+educational resources has made AIF very attractive for educationalists. MLTutor (Smith, et al.,
+2003) featured in this special issue presents one of the first interesting examples of applying
+content-based AIF to education. An educational example of collaborative AIF can be found in
+WebCOBALT (Mitsuhara, et al., 2002).
+Intelligent collaborative learning is an interesting group of technologies developed at the
+crossroads of two fields originally quite distant from each other: computer supported
+collaborative learning (CSCL) and ITS. The recent stream of work on using AI techniques to
+support collaborative learning has resulted in an increasing level of interaction between these
+fields. While early work on intelligent collaborative learning was performed in pre-Web context
+(Chan, & Baskin, 1990; Hoppe, 1995), its the Web and WBE that provided both a platform and
+an increasing demand for this kind of technology. In WBE the need for collaboration support
+tools is critical because students rarely (or never) meet in person. Intelligent technologies can
+dramatically extend the power of simple collaboration support tools (such as threaded discussion
+groups and shared whiteboards) provided by various course management systems. Currently we
+
+162
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+can list at least three distinct technologies within the intelligent collaborative learning group:
+adaptive group formation and peer help, adaptive collaboration support, and virtual students. A
+good example of adaptive collaboration support is provided by COLER (Constantino Gonzalez,
+et al., 2003) featured in this special issue.
+Technologies for adaptive group formation and peer help attempt to use knowledge about
+collaborating peers (most often represented in their student models) to form a matching group for
+different kinds of collaborative tasks. Early examples include forming a group for collaborative
+problem solving (Hoppe, 1995; Ikeda, Go, & Mizoguchi, 1997) and finding the most competent
+peer to answer a question (McCalla, et al., 1997). Both streams of work are expanding now. The
+pioneer teams have generalized and expanded their work (Greer, et al., 1998; Mhlenbrock,
+Tewissen, & Hoppe, 1998) and a number of new teams started research in this direction.
+Technologies for adaptive collaboration support attempt to provide an interactive support of
+a collaboration process just like interactive problem support systems assist an individual student
+in solving a problem. Using some knowledge about good and bad collaboration patterns
+(provided by the system authors or mined from communication logs) collaboration support
+systems such as COLER (Constantino Gonzalez, et al., 2003) or EPSILON (Soller, et al., 2003)
+can coach or advise collaborating peers. This is a new but rapidly expanding direction of work
+that draws its ideas from classic ITS, CSCL and machine learning fields.
+In contrast, virtual students technology is comparatively old. Instead of supporting learning
+or collaboration from a position of someone superior to students (a teacher or an advisor), this
+technology attempts to introduce different kinds of virtual peers into a learning environment: a
+learning companion (Chan, et al., 1990), a tutee, or even a troublemaker (Frasson, Mengelle,
+Ameur, & Gouardres, 1996). In the WBE context where students communicate mainly through
+low-bandwidth channels (e-mail, chat, forums) a virtual student becomes a very attractive
+embodiment to implement different support strategies. We expect more research in this direction
+and its further integration with animated agents and intelligent collaboration support streams.
+Intelligent class monitoring is another AIWBES technology motivated by WBE. In the WBE
+context a remote teacher cant see the signs of understanding and confusion on the faces of the
+students. With this severe lack of feedback it becomes hard to identify troubled students who
+need additional attention, bright students who need to be challenged, as well as the parts of
+learning material that are too easy, too hard, or confusing. WBE systems can track every action
+of the student, but its almost impossible for a human teacher to make any sense of the large
+volume of data they are collecting. Intelligent class monitoring systems attempt to use AI to help
+the teacher in this context. This stream of work was pioneered by HyperClassroom (Oda, et al.,
+1998) that used fuzzy technology to identify deadlocked WBE students. Until recently,
+HyperClassroom was the only example in this class, but the last two years have brought a few
+other examples (Merceron, & Yacef, 2003; Romero, Ventura, Bra, & Castro, 2003). The earlier
+review (Brusilovsky, 1999) grouped intelligent class monitoring together with intelligent
+collaboration support. Now we argue that this stream of work has to have a group of its own
+since it focuses on different goals (teacher support) and relies on a different group of AI
+technologies (mainly data mining and machine learning). At the same time, a few systems (Chen,
+& Wasson, 2002; Mbala, Reffay, & Chanier, 2002) that monitor the collaboration process but
+report the problems to the teacher instead of influencing the very collaboration fall between
+intelligent class monitoring and collaboration support. Unfortunately, no examples of intelligent
+class monitoring are presented in this special issue and we are not able yet to identify different
+technologies within this class. We expect, however, that this stream of work will grow in the very
+near future.
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+163
+
+ADAPTIVE AND INTELLIGENT WEB-BASED EDUCATIONAL SYSTEMS: A
+CHANGE OF AI-ED PARADIGM?
+The analysis of adaptive and intelligent Web-based educational systems on the level of
+technologies reveals that they have a lot in common with pre-Web systems. Should we consider
+AIWBES simply as Web implementation of ideas explored earlier? Can we say that the only
+difference between Web and pre-Web adaptive and intelligent educational systems is the
+implementation platform? We claim that the difference between Intelligent Tutoring Systems of
+1980 and 1990 and the new breed of Web-based systems that became popular at the end of 1990
+is qualitative. While on the level of individual technologies we can easily see the similarity
+between Web and pre-Web systems, on the level of complete systems we can observe rather
+large differences in the major focus of these systems, their application context, and the overall set
+of supported features. The new platform and the new application context of Web-based systems
+are causing a major change of the development paradigm. Adaptive and intelligent Web-based
+educational systems are forming a new development paradigm in the field of Artificial Intelligent
+in Education.
+If we analyze the variety of adaptive and intelligent educational systems developed since the
+birth of the AI-Ed field in 1970, we can distinguish at least three major development paradigms
+(Table 2). The motivation behind the earliest AI-Ed systems was to fix the obvious problems of
+the then dominant Computer-Assisted Instruction (CAI): provide more intelligent evaluation of
+student knowledge than traditional yes-no and multiple-choice questions and more adaptive
+sequencing of instructional fragments than traditional linear and branching approaches
+(Carbonell, 1970). These systems were called Intelligent CAI (ICAI) or AI-CAI. ICAI did not
+attempt to change the then well-established application context and major goal of CAI systems,
+that is transferring new knowledge to the student and ensuring its acquisition. Both CAI and
+ICAI were intended to replace all or part of traditional classroom instruction. The major
+intelligent technologies were sequencing (Brown, Burton, & Zdybel, 1973; Carbonell, 1970;
+Koffman, & Perry, 1976) and intelligent solution analysis (Brown, & Burton, 1978). The major
+computing platforms behind original CAI were classic mainframes and (later) mini-computers.
+At the end of 1970 the new tutoring paradigm was established (Burton, & Brown, 1979;
+Clancey, 1979). It was later propagated by John Andersons school and become dominant in
+1980 and early 1990. The champions of the new paradigm claimed that the main job of AI-Ed
+systems is not to replace the teacher in the classroom in presenting new material, but to provide
+an individual tutor that can support the students in the process of solving educational problems
+and procedural knowledge formation. Since the old AI-CAI name was not relevant anymore,
+the new systems and the whole field adopted the name Intelligent Tutoring Systems (ITS). On the
+level of technologies the change was more gradual  the new technology of interactive problem
+solving support quickly became dominant while the relative amount of work on older
+technologies gradually decreased. The interest in sequencing decreased since most ITS refuse to
+deal with presentation of educational material leaving it to the human teacher. As for intelligent
+solution analysis, it was considered inferior to the new problem solving support technology: the
+real challenge was to develop fully interactive support. The change of the application context and
+the dominated technologies were supported (technology advocates may even say driven) by the
+change of the implementation platform from mainframes to personal computers with their
+capabilities to implement attractive problem solving interfaces.
+
+164
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+Table 2
+Major AI-Ed paradigms compared
+
+Time span
+Goal
+Context
+Learning
+material
+
+Technologies
+
+System
+completeness
+Platform
+
+AI-CAI Paradigm
+1970-ies
+
+ITS Paradigm
+1980-1990-ies
+
+Replace primitive CAI
+in transferring
+knowledge
+Classroom without
+teachers
+All learning material
+inside the system,
+most often
+presentations, but also
+exercises and
+problems.
+Curriculum
+sequencing and
+intelligent solution
+analysis are the core
+technologies.
+
+Support problem solving
+
+All systems focus on
+single intelligent
+technology.
+Mainframes and minicomputers.
+
+Most systems focus on
+single intelligent
+technology.
+Personal computers
+
+AIWBES Paradigm
+End of 1990-ies 
+2000-ies
+Comprehensive
+support
+
+Classroom with a
+facilitator or self-study
+No presentation material
+inside the system, but
+problems are often
+included.
+
+Impendent self-study
+
+No course sequencing or
+adaptive hypermedia.
+Interactive problem
+solving support is the
+core technology.
+
+Extensive use of
+adaptive hypermedia.
+Curriculum
+sequencing and
+intelligent solution
+analysis become
+widespread again.
+A range of Webinspired technologies
+appears.
+Most systems focus
+on several intelligent
+technologies.
+WWW
+
+Rich learning
+material on-line:
+presentations,
+examples, problems.
+
+What we observe right now is a new change of the paradigm also driven to some extent by
+the change of the platform and the application context. The motivating application context behind
+Web-based educational (WBE) systems is, naturally, Web-based education. In this context with
+no human teacher, tutor, or even peer nearby, the educational system has to provide a one-stop
+solution for all students needs. The old CAI motivation to deliver knowledge came back into
+focus and even became dominant (though the new generation of WBE systems choose to deliver
+the necessary educational material using flexible hypertext rather than rigid CAI). This is well
+demonstrated by the subset of systems presented in this special issue  the majority of them
+include (or ever focused on) the delivery of on-line course material  with adaptation as in
+MetaLinks, KBS-Hyperbook, ActiveMath, ELM-ART, MLTutor or without it as in German
+Tutor. The need to support problem solving remained in focus. New needs specific to modern
+WBE became critical - such as the need to support collaborative work and the need to support the
+remote teacher working with the invisible class. This context caused the appearance of new
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+165
+
+technologies as well as the change in the usage profile of known technologies. Adaptive
+sequencing became popular again  now together with adaptive hypermedia and adaptive
+information filtering. Intelligent solution analysis became more attractive than interactive
+problem solving support due to its natural fit to low-interactive HTTP protocol. Collaborative
+learning and class monitoring technologies became an interesting new target for the application
+of AI techniques. More important, the set of the needs supported by a single system as well as the
+set of technologies used in a single system has grown quite visibly. While almost all pre-Web
+systems have focused on one specific need championing and extending one of the known
+technologies, almost all AIWBES use several technologies and become more complete as onestop educational systems. This trend is clearly demonstrated by ELM-ART system (Weber, et
+al., 2001) presented in this special issue. While ELM-PE (Weber, & Mllenberg, 1995), the
+prototype of ELM-ART was a purely problem solving support system, ELM-ART driven by
+WBE needs became a very versatile system supporting nearly all the needs of students and
+teachers.
+
+THE PROMISES OF ADAPTIVE AND INTELLIGENT WEB-BASED
+EDUCATIONAL SYSTEMS
+Adaptive and intelligent Web-based educational systems form a new and exciting stream of
+work in AI-Ed field. As demonstrated by the papers included in this special issue, the Web offers
+an opportunity to apply a much larger variety of AI technologies in educational context. It offers
+a number of new research challenges and a number of opportunities to fuse AI-Ed research with
+several neighboring fields. The Web also provides an excellent implementation platform for AIEd researchers. Systems developed on the Web have longer lifespan and better visibility. A
+research idea implemented in a Web-based system has much better chances to influence the
+research community than an idea simply presented in a paper. Moreover, AIWBES with their
+simplicity of access and visibility have much greater chances to influence practitioners working
+in the field of Web-based education. We expect that the ideas developed in these systems and the
+systems themselves will have a growing use in practical Web-based education. This will allow
+AI-Ed as a research field to provide a greater impact on the improvement of everyday educational
+process. As guest editors, we hope that the papers assembled in this special issue provide both a
+good overview of the emerging area and a good inspiration for the newcomers to the field.
+
+REFERENCES
+Alpert, S. R., Singley, M. K., & Fairweather, P. G. (1999). Deploying Intelligent Tutors on the Web: An
+Architecture and an Example. International Journal of Artificial Intelligence in Education, 10,
+183-197. Available online at http://cbl.leeds.ac.uk/ijaied/abstracts/Vol_10/alpert.html.
+Brown, J. S., & Burton, R. R. (1978). Diagnostic models for procedural bugs in basic mathematical skills.
+Cognitive Science, 2, 155-192.
+Brown, J. S., Burton, R. R., & Zdybel, F. (1973). A model-driven question-answering system for mixedinitiative computer-assisted instruction. IEEE Transactions on Systems, Man and Cybernetics,
+3(1), 248-257.
+Brusilovsky, P. (1996). Methods and techniques of adaptive hypermedia. User Modeling and UserAdapted Interaction, 6(2-3), 87-129.
+Brusilovsky, P. (1999). Adaptive and Intelligent Technologies for Web-based Education. Knstliche
+Intelligenz, (4), 19-25. Available online at http://www2.sis.pitt.edu/~peterb/papers/KIreview.html.
+
+166
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+Brusilovsky, P., Eklund, J., & Schwarz, E. (1998). Web-based education for all: A tool for developing
+adaptive courseware. Computer Networks and ISDN Systems, 30(1-7), 291-300.
+Brusilovsky, P., Henze, N., & Milln, E. (Ed.). (2002). Proceedings of the workshop on Adaptive Systems
+for Web-Based Education at the 2nd International Conference on Adaptive Hypermedia and
+Adaptive Web-Based Systems (AH'2002). Mlaga, Spain: University of Malaga.
+Brusilovsky, P., & Miller, P. (2001). Course Delivery Systems for the Virtual University. In T. Tschang, &
+T. Della Senta (Eds.) Access to Knowledge: New Information Technologies and the Emergence of
+the Virtual University, (pp. 167-206.). Amsterdam: Elsevier Science. Available online at
+http://www2.sis.pitt.edu/~peterb/papers/UNU.html.
+Brusilovsky, P., Nakabayashi, K., & Ritter, S. (Eds.). (1997). Proceedings of the Workshop "Intelligent
+Educational Systems on the World Wide Web" at AI-ED'97, 8th World Conference on Artificial
+Intelligence in Education. Kobe, Japan: ISIR.
+Brusilovsky, P., Schwarz, E., & Weber, G. (1996a). ELM-ART: An intelligent tutoring system on World
+Wide Web. In C. Frasson, G. Gauthier, & A. Lesgold (Eds.) Third International Conference on
+Intelligent Tutoring Systems, ITS-96 (Vol. 1086, pp. 261-269). Berlin: Springer Verlag, Available
+online at http://www.contrib.andrew.cmu.edu/~plb/ITS96.html.
+Brusilovsky, P., Schwarz, E., & Weber, G. (1996b). A tool for developing adaptive electronic textbooks on
+WWW. In H. Maurer (Ed.), Proceedings of WebNet'96, World Conference of the Web Society,
+(pp. 64-69). October 15-19, 1996. San Francisco, CA, AACE. Available online at
+http://www.contrib.andrew.cmu.edu/~plb/WebNet96.html.
+Brusilovsky, P., Schwarz, E., & Weber, G. (1996c). A tool for developing hypermedia-based ITS on
+WWW. Proceedings of Workshop "Architectures and Methods for designing Cost-Effective and
+Reusable ITSs" at the Third International Conference on Intelligent Tutoring Systems, ITS-96,
+June 12-14, 1996. Montreal.
+Burton, R. R., & Brown, J. S. (1979). An investigation of computer coaching for informal learning
+activities. International Journal on the Man-Machine Studies, 11, 5-24.
+Carbonell, J. R. (1970). AI in CAI: An artificial intelligence approach to computer aided instruction. IEEE
+Transactions on Man-Machine Systems0.5 MMS-11(4), 190-202.
+Chan, T. W., & Baskin, A. B. (1990). Learning companion systems. In C. Frasson, & G. Gauthier (Eds.),
+Intelligent Tutoring Systems: At the crossroads of artificial intelligence and education (pp. 6-33).
+Norwood: Ablex Publishing.
+Chen, W., & Wasson, B. (2002). An instructional assistant agent for distributed collaborative learning. In
+S. A. Cerri, G. Gouardres, & F. Paraguau (Eds.), 6th International Conference on Intelligent
+Tutoring Systems, ITS'2002 (Vol. 2363, pp. 609-618). Berlin: Springer-Verlag.
+Clancey, W. J. (1979). Tutoring rules for guiding a case method dialog. International Journal on the ManMachine Studies, 11, 25-49.
+Constantino Gonzalez, M. A., Suthers, D., & Escamilla De Los Santos, J. G. (2003). Coaching web-based
+collaborative learning based on problem solution differences and participation. International
+Journal of Artificial Intelligence in Education, 13(2-4), 261-297.
+De Bra, P., & Calvi, L. (1998). AHA! An open Adaptive Hypermedia Architecture. The New Review of
+Hypermedia and Multimedia, 4, 115-139.
+De Bra, P. M. E. (1996). Teaching Hypertext and Hypermedia through the Web. Journal of Universal
+Computer Science, 2(12), 797-804. Available online at
+http://www.iicm.edu/jucs_2_12/teaching_hypertext_and_hypermedia.
+Frasson, C., Mengelle, T., Ameur, E., & Gouardres, G. (1996). An actor-based architecture for intelligent
+tutoring systems. In C. Frasson, G. Gauthier, & A. Lesgold (Eds.), Third International Conference
+on Intelligent Tutoring Systems, ITS-96 (Vol. 1086, pp. 57-65). Berlin: Springer Verlag.
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+167
+
+Greer, J., McCalla, G., Collins, J., Kumar, V., Meagher, P., & Vassileva, J. (1998). Supporting Peer Help
+and Collaboration in Distributed Workplace Environments. International Journal of Artificial
+Intelligence in Education, 9, 159-177. Available online at
+http://cbl.leeds.ac.uk/ijaied/abstracts/Vol_9/greer.html.
+Heift, T., & Nicholson, D. (2001). Web delivery of adaptive and interactive language tutoring.
+International Journal of Artificial Intelligence in Education, 12(4), 310-324.
+Henze, N., & Nejdl, W. (2001). Adaptation in open corpus hypermedia. International Journal of Artificial
+Intelligence in Education, 12(4), 325-350. Available online at
+http://cbl.leeds.ac.uk/ijaied/abstracts/Vol_12/henze.html.
+Hoppe, U. (1995). Use of multiple student modeling to parametrize group learning. In J. Greer (Ed.),
+Artificial Intelligence in Education, Proceedings of AI-ED'95, 7th World Conference on Artificial
+Intelligence in Education (pp. 234-249). 16-19 August 1995. Washington, DC, AACE.
+Ikeda, M., Go, S., & Mizoguchi, R. (1997). Opportunistic group formation. In B. d. Boulay, & R.
+Mizoguchi (Eds.), AI-ED'97, 8th World Conference on Artificial Intelligence in Education
+Amsterdam: IOS.
+Koffman, E. B., & Perry, J. M. (1976). A model for generative CAI and concept selection. International
+Journal on the Man-Machine Studies, 8, 397-410.
+Mbala, A., Reffay, C., & Chanier, T. (2002). Integrating of automatic tools got displaying interaction data
+in computer environments for distance learnings. In S. A. Cerri, G. Gouardres, & F. Paraguau
+(Ed.), 6th International Conference on Intelligent Tutoring Systems, ITS'2002 (Vol. 2363, pp.
+841-850). Berlin: Springer-Verlag.
+McCalla, G. I., Greer, J. E., Kumar, V. S., Meagher, P., Collins, J. A., Tkatch, R., & Parkinson, B. (1997).
+A peer help system for workplace training. In B. d. Boulay, & R. Mizoguchi (Eds.), AI-ED'97, 8th
+World Conference on Artificial Intelligence in Education (pp. 183-190). Amsterdam: IOS.
+Melis, E., Andrs, E., Bdenbender, J., Frishauf, A., Goguadse, G., Libbrecht, P., Pollet, M., & Ullrich, C.
+(2001). ActiveMath: A web-based learning environment. International Journal of Artificial
+Intelligence in Education, 12(4), 385-407.
+Merceron, A., & Yacef, K. (2003). A Web-based tutoring tool with mining facilities to improve learning
+and teaching. In U. Hoppe, F. Verdejo, & J. Kay (Eds.), AI-Ed'2003 (pp. 201-208). Amsterdam:
+IOS Press.
+Mitrovic, A. (2003). An Intelligent SQL Tutor on the Web. International Journal of Artificial Intelligence
+in Education, 13(2-4), 171-195.
+Mitsuhara, H., Ochi, Y., Kanenishi, K., & Yano, Y. (2002). An adaptive Web-based learning system with a
+free-hyperlink environment. In P. Brusilovsky, N. Henze, & E. Milln (Eds.), Proceedings of
+Workshop on Adaptive Systems for Web-Based Education at the 2nd International Conference on
+Adaptive Hypermedia and Adaptive Web-Based Systems, AH'2002 (pp. 81-91). May 28, 2002.
+Mlaga, Spain.
+Mhlenbrock, M., Tewissen, F., & Hoppe, H. U. (1998). A Framework System for Intelligent Support in
+Open Distributed Learning Environments. International Journal of Artificial Intelligence in
+Education, 9, 256-274. Available online at
+http://cbl.leeds.ac.uk/ijaied/abstracts/Vol_9/muehlenbr.html.
+Murray, T. (2003). MetaLinks: Authoring and affordances for conceptual and narrative flow in adaptive
+hyperbooks. International Journal of Artificial Intelligence in Education, 13(2-4), 197-231.
+Nakabayashi, K., Koike, Y., Maruyama, M., Touhei, H., Ishiuchi, S., & Fukuhara, Y. (1995). An
+intelligent tutoring system on World-Wide Web: Towards an integrated learning environment on a
+distributed hypermedia. In H. Maurer (Ed.), Educational Multimedia and Hypermedia,
+Proceedings of ED-MEDIA'95 - World conference on educational multimedia and hypermedia,
+(pp. 488-493). June 17-21, 1995. Graz, Austria, AACE.
+
+168
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+Nakabayashi, K., Maruyama, M., Koike, Y., Fukuhara, Y., & Nakamura, Y. (1996). An intelligent tutoring
+system on the WWW supporting interactive simulation environments with a multimedia viewer
+control mechanism. In H. Maurer (Ed.), Proceedings of WebNet'96, World Conference of the
+Web Society, (pp. 366-371). October 15-19, 1996. San Francisco, CA, AACE. Available online at
+http://www.contrib.andrew.cmu.edu/~plb/WebNet96.html.
+Oda, T., Satoh, H., & Watanabe, S. (1998). Searching deadlocked Web learners by measuring similarity of
+learning activities. Proceedings of Workshop "WWW-Based Tutoring" at 4th International
+Conference on Intelligent Tutoring Systems (ITS'98), August 16-19, 1998. San Antonio, TX.
+Available online at http://www.sw.cas.uec.ac.jp/~watanabe/conference/its98workshop1.ps.
+Okazaki, Y., Watanabe, K., & Kondo, H. (1996). An Implementation of an intelligent tutoring system
+(ITS) on the World-Wide Web (WWW). Educational Technology Research, 19(1), 35-44.
+Papanikolaou, K. A., Grigoriadou, M., Kornilakis, H., & Magoulas, G. D. (Submitted). Personalising the
+interaction in a Web-based Educational Hypermedia System: the case of INSPIRE. User
+Modeling and User Adapted Interaction.
+Peylo, C. (Ed.). (2000). Proceedings of the International Workshop on Adaptive and Intelligent Webbased Education Systems held in conjunction with 5th International Conference on Intelligent
+Tutoring Systems (ITS'2000). snabrck: Institute for Semantic Information Processing,
+University of snabrck.
+Peylo, C., Teiken, W., Rollinger, C., & Gust, H. (1999). Der VC-Prolog-Tutor: Eine Internet-basierte
+Lernumgebung. Knstliche Intelligenz, 13(4), 32-35.
+Ritter, S. (1997). Pat Online: A Model-tracing tutor on the World-wide Web. In P. Brusilovsky, K.
+Nakabayashi, & S. Ritter (Eds.), Proceedings of Workshop "Intelligent Educational Systems on
+the World Wide Web" at AI-ED'97, 8th World Conference on Artificial Intelligence in Education,
+(pp. 11-17). 18 August 1997. Kobe, Japan, ISIR. Available online at
+http://www.contrib.andrew.cmu.edu/~plb/AIED97_workshop/Ritter/Ritter.html.
+Romero, C., Ventura, S., Bra, P. D., & Castro, C. d. (2003). Discovering prediction rules in AHA! courses.
+In P. Brusilovsky, A. Corbett, & F. d. Rosis (Eds.), 9th International User Modeling Conference
+(Vol. 2702, pp. 25-34). Berlin: Springer Verlag.
+Smith, A. S. G., & Blandford, A. (2003). MLTutor: An Application of Machine Learning Algorithms for
+an Adaptive Web-based Information System. International Journal of Artificial Intelligence in
+Education. 13(2-4), 233-260. Available online at
+http://www.cogs.susx.ac.uk/ijaied/abstracts/Vol_13/smith.html.
+Soller, A., & Lesgold, A. (2003). A computational approach to analysing online knowledge sharing
+interaction. In U. Hoppe, F. Verdejo, & J. Kay (Eds.), AI-ED'2003 (pp. 253-260). Amsterdam:
+IOS Press.
+Stern, M., Woolf, B. P., & Murray, T. (Eds.). (1998). Proceedings of the workshop on Intelligent Tutoring
+Systems on the Web at 4th International Conference on Intelligent Tutoring Systems (ITS'98). San
+Antonio, TX: St. Mary University.
+Vizcano, A., Contreras, J., Favela, J., & Prieto, M. (2000). An adaptive collaborative environment to
+develop good habits in programming. In G. Gauthier, C. Frasson, & K. VanLehn (Eds.), 5th
+International Conference on Intelligent Tutoring Systems, ITS'2000 (Vol. 1839, pp. 262-271).
+Berlin: Springer-Verlag.
+Warendorf, K., & Tan, C. (1997). ADIS - An animated data structure intelligent tutoring system or Putting
+an interactive tutor on the WWW. In P. Brusilovsky, K. Nakabayashi, & S. Ritter (Eds.),
+Proceedings of Workshop "Intelligent Educational Systems on the World Wide Web" at AI-ED'97,
+8th World Conference on Artificial Intelligence in Education, (pp. 54-60). 18 August 1997. Kobe,
+Japan, ISIR. Available online at
+http://www.contrib.andrew.cmu.edu/~plb/AIED97_workshop/Warendorf/Warendorf.html.
+
+P. Brusilovsky and C. Peylo/ Adaptive and Intelligent Web-based Educational Systems
+
+169
+
+Weber, G., & Brusilovsky, P. (2001). ELM-ART: An adaptive versatile system for Web-based instruction.
+International Journal of Artificial Intelligence in Education. 12(4), 351-384. Available online at
+http://cbl.leeds.ac.uk/ijaied/abstracts/Vol_12/weber.html.
+Weber, G., & Mllenberg, A. (1995). ELM-Programming-Environment: A Tutoring System for LISP
+Beginners. In K. F. Wender, F. Schmalhofer, & H.-D. Bcker (Eds.), Cognition and Computer
+Programming (pp. 373-408). Norwood, NJ: Ablex.
+
+

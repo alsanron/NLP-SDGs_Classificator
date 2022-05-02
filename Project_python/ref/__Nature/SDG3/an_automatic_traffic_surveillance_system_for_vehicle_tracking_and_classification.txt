@@ -1,0 +1,617 @@
+An Automatic Traffic Surveillance System for Vehicle
+Tracking and Classification
+Shih-Hao Yu, Jun-Wei Hsieh, Yung-Sheng Chen, and Wen-Fong Hu
+Department of Electrical Engineering, Yuan Ze University,
+135 Yuan-Tung Road, Chung-Li 320, Taiwan, R.O.C.
+{shieh,eeyschen}@saturn.edu.tw
+
+Abstract. This paper presents an automatic traffic surveillance system to estimate important traffic parameters from video sequences using only one camera.
+Different from traditional methods which classify vehicles into only cars and
+non-cars, the proposed method has a good capability to categorize cars into
+more specific classes with a new linearity feature. In addition, in order to reduce occlusions of vehicles, an automatic scheme of detecting lane dividing
+lines is proposed. With the found lane dividing lines, not only occlusions of
+vehicles can be reduced but also a normalization scheme can be developed for
+tackling the problems of feature size variations. Once all vehicle features are
+extracted, an optimal classifier is then designed to robustly categorize vehicles
+into different classes even though shadows, occlusions, and other noise exist.
+The designed classifier can collect different evidences from the database and
+the verified vehicle itself to make better decisions and thus much enhance the
+robustness and accuracy of classification. Experimental results show that the
+proposed method is much robust and powerful than other traditional methods.
+
+1 Introduction
+Intelligent Transportation System (ITS) is the application which incorporates electronic, computer, and communication technologies into vehicles and roadways for
+increasing traffic safety, reducing congestion, and thus improving peoples life quality.
+Due to the ease of maintenances and high flexibility in automatic traffic parameter
+extraction via image processing, there have been a number of different vision-based
+systems proposed in the literature [1-5]. For example, Beymer et al. [1] proposed a
+vehicle tracking algorithm to estimate traffic parameters based on corner features.
+Additionally, Gupte et al. [2] proposed a region-based approach to track and classify
+vehicles based on the establishment of correspondences between regions and vehicles.
+However, in their approaches, only two categories, i.e., cars and non-cars, are handled.
+Therefore, Sullivan et al. [3] proposed a 3D model matching scheme to classify vehicles into various types like wagons, sedan, hatchback, etc. Although 3D features obtained from stereo cameras may be useful for categorizing various types of vehicles,
+the inherent correspondence problem makes them unfeasible for real-time applications.
+
+
+To whom all correspondence should be addressed.
+
+J. Bigun and T. Gustavsson (Eds.): SCIA 2003, LNCS 2749, pp. 379386, 2003.
+ Springer-Verlag Berlin Heidelberg 2003
+
+380
+
+S.-H. Yu et al.
+
+Except the correspondence problem, several environmental variations will much affect
+the accuracy of the whole surveillance systems. For examples, shadows will cause two
+vehicles connect together and lead to the failure of vehicle classification. In addition,
+perspective distortion will lead to that the vehicle features such as length, width,
+height are not constant when vehicles move. More importantly, many different vehicle
+types have similar features, which cause that most approaches can classify vehicles
+only into two simple categories, i.e., cars and non-cars.
+In this paper, we propose a novel vehicle surveillance system to detect, track,
+and classify vehicles into different classes. First of all, this system uses a technique of
+image differencing to detect different vehicles from video sequences. Then, a Kalman
+filter is designed for tracking different vehicles and then obtaining their trajectories.
+After that, a new defined linearity feature is extracted from each vehicle. The new
+defined linearity feature is very useful for discriminating bus from track without
+using any 3D information. To reduce the occlusion problem of vehicles, this paper
+presents an automatic scheme to detect all possible lane dividing lines by analyzing
+different vehicles trajectories. Then, the found lane dividing lines can be very effectively used for solving the problems of vehicle occlusions. In practice, due to perspective distortion, the dimension of a vehicle will gradually change when it movements.
+The found lane dividing lines also can provide important information to scale the
+vehicle dimension. After feature extraction, an optimal classifier is then designed for
+accurate vehicle classification. When designing the optimal classifier, we should know
+that vehicle features are easily affected by shadows or light changes. Since a vehicle
+has many appearances when it moves, these appearances can provide quite supports
+for designing the desired classifier. Based on this idea and the spirit of maximum
+likelihood estimation, an optimization classifier is then designed for robust vehicle
+categorization. Experimental results show the proposed method offers great improvements in terms of accuracy, robustness, and stability in traffic surveillance.
+
+2 Overview of the Proposed System
+Image Frames
+Vehicle detection by
+Image Differencing and
+Backgound Updating
+
+Vehicle Tracking by
+Kalman Filter
+
+Lane Center Detection by
+Analyzing Vehicle Trajectories
+
+Lane Dividing Line
+Detection
+
+Image
+Frames
+
+Lane Width and
+Lane Dividing Lines
+
+Vehicle detection by
+Image Differencing and
+Background Updating
+
+Vehicle Tracking by
+Kalman Filter
+
+Feature Extraction
+
+Vehicle Classificaiton
+
+Lane Dividing Lines
+and Lane Widths
+
+Typte of Vehicle
+
+(a) Initialization Stage
+
+(b) Steps of the proposed system
+
+Fig. 1 Details of the proposed system.
+
+An Automatic Traffic Surveillance System
+
+381
+
+In this paper, we propose a novel traffic surveillance system for estimating traffic
+parameters from video sequence. This system includes an initialization stage to obtain
+the information of lane widths and lane dividing lines. Then, traffic parameters can be
+estimated through image differencing, Kalman filter, feature extraction, and classification by an optimal classifier. In what follows, details of each procedure are discussed.
+
+3
+
+Vehicle Segmentation, Tracking, and Lane-Dividing Detection
+
+In order to simplify the problems of vehicle segmentation, this paper assumes the
+analyzed image frames are captured by a still camera.
+3.1 Vehicle Segmentation and Tracking
+When the camera is static, the moving objects can be detected through background
+subtraction. Assume I k and Bk are intensities of the kth frame and the kth background, respectively. The difference image Dk ( x, y ) can be defined as follows:
+
+0, if I k ( x, y )  Bk ( x, y )  Td ;
+Dk ( x, y ) = 
+1, otherwise,
+
+(1)
+
+where Td is the average value of I k ( x, y )  Bk ( x, y ) . After thresholding, each mov-
+
+ing vehicle can be segmented from input video frames. Then, in order to obtain the
+trajectory of each vehicle, a Kalman filter [6] is designed for tracking all possible
+locations of the detected vehicle. Due to the limited space of this paper, details of
+designing the used Kalman filter are not discussed here.
+3.2 Lane-Dividing Detection
+
+In practice, due to shadows, different vehicles will often connect together. Such occlusions will disturb the accuracies of traffic parameter estimation. In what follows,
+we will present an automatic scheme to detect possible lane dividing lines from videos
+for overcoming the occlusion problem of vehicles. Let Oki denote the ith moving
+vehicle at the kth frame. In general, if the vehicle Oki moves regularly, the center of
+Oki should be very close to the center of its corresponding lane. According to this
+idea, a lane-dividing line detection algorithm can be descried as follows.
+Lane-Dividing Line Detection Algorithm
+S1: Create a matrix H vehicle ( x, y ) and initialize all the entries of H vehicle to be zero.
+
+S2: For each vehicle Oki , do H vehicle ( xOi , yOi )+ = 1 .
+k
+
+k
+
+S3: Let A j =  H vehicle (i , j ) / N col . Detect all the peaks of H vehicle along the jth row if
+i
+
+its value in H vehicle is larger than Aj . Collect the largest m peak positions x j ,k as
+
+382
+
+S.-H. Yu et al.
+
+the set X j = {x j ,k }k =1,...,m .
+S4: Let LkC be the kth lane central line.
+
+Then, LkC can be calculated as:
+
+LkC = {( x j ,k , j )t } j =1,.... N row , where x j ,k is the kth element of X j .
+S5: With two adjacent LkC and LkC+1 , the lane dividing line Lkd can be detected as:
+
+Lkd = { pk ( j ) / 2 + pk +1 ( j ) / 2} j =1,.... N row , where pm ( j ) is the jth point in Cm .
+3.3 Occlusion Detection and Eliminaiton
+
+As described before, different vehicles will often connect together and form occlusions due to shadows. In order to accurately estimate traffic parameters, this paper
+take advantages of the found lane-dividing lines to separate occluded vehicles into
+different parts. Like Fig. 2, assume Lkd,i is one of lane dividing lines passing through
+the vehicle V k . We denote xlbk ,i as the x coordinate of the most left-bottom pixel
+appearing both in Lkd,i and V k . With xlbk ,i , we can define a vertical line Lkv ,i as:
+
+Lkv ,i = {( x, y ) | x = xlbk ,i } .
+k ,i
+v
+
+(2)
+
+k
+
+With L , the vehicle V can be divided into two different parts, i.e., the left part
+and the right part VLright
+. In addition, with Lkd,i , V k can be divided into the left
+VLleft
+k ,i
+k ,i
+v
+
+v
+
+and the right part VLright
+. Clearly, if V k has no occlusion with other vehicles,
+part VLleft
+k ,i
+k ,i
+d
+
+d
+
+should be quite different to VLright
+. Otherwise, one of VLleft
+and VLright
+the size of VLleft
+k ,i
+k ,i
+k ,i
+k ,i
+v
+
+v
+
+d
+
+d
+
+should be a shadow region. According to these two conditions, a vehicle whether it
+has occlusions with other vehicles can be detected.
+Lkv ,i +1
+
+Lkv ,i +1
+
+Lkv ,i
+
+Lkv ,i
+
+Lkd,i +1
+
+Lkd,i
+xlbk ,i
+
+Lkd,i +1
+
+Lkd,i
+
+xlbk,i+1
+
+x
+
+xlbk ,i
+
+k ,i +1
+lb
+
+Fig. 2 Different cases of vehicles. (a) Vehicle with no occlusion. (b) Vehicle with
+occlusion.
+
+If occlusions happen, the vehicles should be first separated into different parts
+before classification. In what follows, we will propose a novel algorithm to eliminate
+vehicle occlusions as can as possible. Here, assume V k is an occluded vehicle and
+Lkd,i is the dividing line passing V k .
+Vehicle Occlusion Elimination Algorithm
+and VLright
+.
+S1: With Lkd,i , divide V k into two different parts: VLleft
+k ,i
+k ,i
+d
+
+S2: Let C
+
+left
+k ,i
+
+and C
+
+right
+k ,i
+
+left
+Lkd ,i
+
+be the centrals of V
+
+d
+
+right
+Lkd ,i
+
+and V
+
+, respectively. Determine a
+
+An Automatic Traffic Surveillance System
+
+383
+
+straight line LkC,i passing through Ckleft,i and Ckright
+,i .
+,i , j
+S3: For each p j in LkC,i , decide a vertical line Lkvertical
+with the equation x = x pi and a
+,i , j
+line Lkparallel
+with the form y = mik x + ( mik x pi  y pi ) .
+k ,i , j
+,i , j
+be the set of pixels which appear both in Lkverical
+and V k . Then, we can
+S4: Let Sverical
+k ,i , j
+get an index jv as: jv = arg min | S vertical
+|.
+j
+
+S5: Let S
+
+k ,i , j
+parallel
+
+,i , j
+be the set of pixels which appear both in Lkparallel
+and V k . Then, we
+
+k ,i , j
+|.
+can get an index j p as: j p = arg min | S parallel
+j
+
+k ,i , jv
+k ,i , jv
+p
+
+ Lvertical , if |S parallel |>|S verical |,
+,i
+,i
+by: Lkseparate
+=  k ,i , j
+S6: Obtain the separation line Lkseparate
+p
+Lparallel , otherwise.
+S7: Separate V k into different parts with the rules:
+,i
+,i
+Vl k ,i = { p | p Vk and Lkseparate
+( p ) < 0} and Vrk ,i = { p | p Vk and Lkseparate
+( p ) > 0} .
+k ,i , j
+
+4 Vehicle Classification
+Once all the input vehicles have been extracted, we should classify them into different
+categories for traffic parameter estimation. In this section, the new feature linearity
+of vehicles will be defined and extracted for effective vehicle classification. In what
+follows, details of feature extraction and classifier designing are discussed.
+4.1 Feature Extraction
+
+As described before, this paper uses size and linearity features to classify vehicles
+into categories. For the first feature, due to the perspective effect, the size of a vehicle
+will gradually change when it moves. Therefore, before classification, the size feature
+should be normalized in advance. Assume {Lid } is a set of lane dividing lines found in
+Section 3.2. With the set {Lid } , the width of the ith lane Lid at the jth position can be
+calculated by: WLanei ( j ) =| pLxi ( j )  pLxi +1 ( j ) | , where pLi ( j ) is the jth point in Lid .
+d
+
+d
+
+d
+
+Assume vhi is one vehicle appearing in the ith lane, yvi and Svi are the y coordinate
+h
+
+h
+
+i
+h
+
+and size of v , respectively. Then, Svh can be then normalized as follows:
+2
+Svi = S vi / WLane
+( y vi ) .
+i
+h
+
+h
+
+(3)
+
+h
+
+Through normalization, Svi forms a good feature for vehicle classification. In addih
+
+tion to vehicle size, the linearity feature is also very important for vehicle categorization. Like Fig. 3, the bus and truck have similar sizes and speeds but the up-slanted
+edge of a bus is quite different to that of a truck. If the linearity of an up-slanted
+edge can be defined, classifying vehicles into buses or trucks will become easy. Let
+
+384
+
+S.-H. Yu et al.
+
+U H i be the set of up-slanted edge pixels of a vehicle H i . Assume U H i has N data
+points ( xi , yi ) . It can be fitted to a straight-line model: y = mx + b . The parameters
+N
+
+m and b can be easily obtained by minimizing
+
+ ( yi  b  mxi )2
+
+with a numerical
+
+i =1
+
+method. Then, the linearity of H i is defined as:
+Linearity ( H ) = exp( 
+
+1
+N
+
+N
+
+( yi  mxi  b )
+
+i =1
+
+2
+
+).
+
+Fig. 3 Different up-slanted boundaries of a bus and a truck.
+
+4.2 Classification by Vehicle Library
+
+In this section, an optimal classifier will be designed for categorizing vehicles into
+different classes. In the past, most classification schemes categorized vehicles based
+on only one vehicle sample. If this sample is corrupted by noise, they will often fail to
+work. In fact, we can observe that a vehicle has many different appearances when it
+moves alone one lane. If the designed classifier can integrate more cues from these
+appearances and evidences from the database, much robustness and accuracy can be
+achieved when classifying vehicles. Assume there are K classes in the database and
+the kth class VCk has nk samples. Let V jk be the jth vehicle in VCk and f r (V jk ) the
+
+rth feature of V jk . Then, given a vehicle H i and a sample V jk in VCk , the similarity
+between H i and V jk can be defined as:
+2
+
+Sk ( H i ,V jk ) = exp   ( f s ( H i )  f r (V jk ))2 /  r2,k ,
+
+(4)
+
+r =1
+
+where  r ,k is the variance of f r (V jk ) . Then, given a class VCk , the similarity of H i
+to VCk can be defined as:
+S ( H i | VCk ) =
+
+1
+nk
+
+
+
+Sk ( H i ,V jk ) .
+
+V jk VCk
+
+Furthermore, the probability of H i belonging to VCk can be calculated by:
+P (VCk | H i ) = S ( H i | VCk ) / S sum ( H i ) ,
+
+(5)
+
+where S sum ( H i ) =  S ( H i | VCk ) . Let H it be the detected result of H i at the tth time
+k
+
+An Automatic Traffic Surveillance System
+
+385
+
+frame. All the H it will be integrated together for improving the accuracy of vehicle
+classification. Then, for each H i , the system classifies it into the class l when
+k  l ,
+
+
+
+H i QH i
+
+P(VCl | H i ) 
+
+
+
+H i QH i
+
+P(VCk | H i ) ,
+
+(6)
+
+where QH i is the set of all appearances H it .
+
+5 Experimental Results
+In order to analyze the performance of the proposed method, a series of image sequences were used. Fig. 4(a) shows the detection results of dividing line with two
+thousands of vehicles. Fig. 4(b) shows the results when tracking different occluded
+vehicles. These occluded vehicles are difficultly separated if the information of dividing lines is not used. However, they can be well separated, detected, and tracked with
+our proposed method. Fig. 5 (a) shows the results of vehicle classification. The trajectory of each vehicle is shown by a tail curve line and the plus symbol denotes the
+vehicle is classified as a car. Fig. 5 (b) shows other classification results when various
+vehicles appear in the video frames. Here, the symbols  and  are used to denote a truck and a bus, respectively. If only the vehicle size is used for classification, it is difficult to classify a bus and a truck into different classes.
+
+(a)
+
+(b)
+
+Fig. 4 (a) Results of lane dividing line detection. (b) Results of vehicle tracking when two
+vehicles connect together due to shadows.
+
+(a)
+
+(b)
+
+Fig. 5 (a) Results of tracking and classification at different frames. The vehicle trajectories are
+denoted as tail curves. (b) Results of vehicle classification when various vehicles appear.
+
+On the other hand, when classifying, if only one frame is used, quite classification
+errors will be produced. For example, in Fig. 6, the truck is correctly classified in (a),
+(c), and (d) but misclassified in (b). If the correct results in (a), (c), and (d) can be
+integrated, the error in (b) should be well corrected. Table 1 lists the classification
+results when only one frame is used. Table 2 lists the same classification analysis but
+all the vehicles in the same trajectory are integrated for classification. The superiority
+
+386
+
+S.-H. Yu et al.
+
+of the proposed method can be verified through the preceding experimental results.
+
+(a)
+(b)
+(c)
+(d)
+Fig. 6 Results of truck classification at different frames. (a), (c), and (d) are correctly classified but (b) is misclassified. (b) can be corrected if (a), (c), and (d) are integrated.
+Counts
+Sequence
+Sequence 1
+Sequence 2
+Sequence 3
+
+vehicles in reality Correct Classification
+Car Bus Truck Car Bus
+
+255 62
+252 56
+247 73
+
+50 217 53
+63 223 50
+62 203 60
+
+Accuracy
+
+Truck
+
+50
+61
+54
+
+85%
+90%
+83%
+
+Table 1: Different classification accuracies when only one frame is used.
+Counts
+Sequence
+Sequence 1
+Sequence 2
+Sequence 3
+
+Success
+Vehicles
+Correct
+rate of trackin reality Classification
+ing
+
+377
+371
+382
+
+344
+360
+340
+
+91%
+97%
+89%
+
+Table 2: Different classification accuracies when more frames are used.
+
+References
+1.
+2.
+3.
+
+4.
+
+5.
+6.
+
+D. Beymer, et al., A real-time computer vision system for measure traffic parameters, in Pro. IEEE Conf. CVPR, Puerto Rico, pp. 496-501, June 1997.
+S. Gupte, et al., Detection and classification of vehicles, IEEE Transactions on
+ITS, vol. 3, no. 1, pp. 37-47, March 2002.
+G. D. Sullivan, et al., Model-based vehicle detection and classification using
+orthographic approximations, Image Vision Computing, vol. 15, no. 8, pp.649654, Aug. 1997.
+Y.-K. Jung, K.-W. Lee, and Y.-S. Ho, Content-based event retrieval using semantic scene interpretation for automated traffic surveillance, IEEE Transactions
+on ITS, vol. 2, no. 3, pp.151-163, Sept. 2001.
+A. J. Lipton, et al., Moving target classification and tracking from real-time
+video, in Proc. IEEE Workshop Applications of Computer Vision, 1998, pp.8-14.
+R. E. Kalman, A new approach to linear filtering and prediction problems,
+Transactions of the ASME-Journal of Basic Engineering, vol. 82, pp.35-45,
+March 1960.
+
+

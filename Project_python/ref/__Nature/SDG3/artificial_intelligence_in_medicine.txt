@@ -1,0 +1,568 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/8379547
+
+Articial intelligence in medicine
+Article in Annals of The Royal College of Surgeons of England  October 2004
+DOI: 10.1308/147870804290  Source: PubMed
+
+CITATIONS
+
+READS
+
+469
+
+30,276
+
+4 authors, including:
+Chandra Kambhampati
+
+John RT Monson
+
+University of Hull
+
+Florida Hospital
+
+156 PUBLICATIONS 1,625 CITATIONS
+
+527 PUBLICATIONS 18,416 CITATIONS
+
+SEE PROFILE
+
+Philip Drew
+Royal Cornwall Hospitals NHS Trust
+192 PUBLICATIONS 5,513 CITATIONS
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects:
+
+early cancer View project
+
+Breast cancer View project
+
+All content following this page was uploaded by John RT Monson on 21 May 2014.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Ann R Coll Surg Engl 2004; 86: 334338
+doi 10.1308/147870804290
+
+Review
+
+Artificial intelligence in medicine
+AN Ramesh1, C Kambhampati2, JRT Monson1, PJ Drew1
+1
+
+The University of Hull Academic Surgical Unit, Castle Hill Hospital, Cottingham, UK
+Department of Computer Science, University of Hull, UK
+
+2
+
+Introduction: Artificial intelligence is a branch of computer science capable of analysing complex
+medical data. Their potential to exploit meaningful relationship with in a data set can be used in
+the diagnosis, treatment and predicting outcome in many clinical scenarios.
+Methods: Medline and internet searches were carried out using the keywords artificial
+intelligence and neural networks (computer). Further references were obtained by crossreferencing from key articles. An overview of different artificial intelligent techniques is presented
+in this paper along with the review of important clinical applications.
+Results: The proficiency of artificial intelligent techniques has been explored in almost every field
+of medicine. Artificial neural network was the most commonly used analytical tool whilst other
+artificial intelligent techniques such as fuzzy expert systems, evolutionary computation and hybrid
+intelligent systems have all been used in different clinical settings.
+Discussion: Artificial intelligence techniques have the potential to be applied in almost every field
+of medicine. There is need for further clinical trials which are appropriately designed before these
+emergent techniques find application in the real clinical setting.
+Key words: Artificial intelligence  Neural networks (computer)
+
+A
+
+rtificial intelligence (AI) is defined as a field of science
+and engineering concerned with the computational
+understanding of what is commonly called intelligent
+behaviour, and with the creation of artefacts that exhibit
+such behaviour.1 Aristotle attempted to formalise right
+thinking (logic) through his syllogisms (a three part
+deductive reasoning). Much of the work in the modern era
+was inspired by this and the early studies on the operation
+of mind helped to establish contemporary logical thinking.
+Programs which enable computers to function in the ways,
+that make people seem intelligent are called artificial
+intelligent systems. The British mathematician Alan Turing
+(1950) was one of the founders of modern computer science
+and AI. He defined intelligent behaviour in a computer as
+
+the ability to achieve human-level performance in cognitive
+tasks, this later became popular as the Turing test.2 Since
+the middle of the last century, researchers have explored the
+potential applications of intelligent techniques in every field
+of medicine.3,4 The application of AI technology in the field
+of surgery was first successively investigated by Gunn in
+1976, when he explored the possibility of diagnosing acute
+abdominal pain with computer analysis.5 The last two
+decades have seen a surge in the interest in medical AI.
+Modern medicine is faced with the challenge of
+acquiring, analysing and applying the large amount of
+knowledge necessary to solve complex clinical problems.
+The development of medical artificial intelligence has
+been related to the development of AI programs intended
+
+Correspondence to: Mr PJ Drew, Academic Surgical Unit, Castle Hill Hospital, Cottingham HU16 5JQ, UK
+Tel: +44 (0) 1482 623077; Fax: +44 (0) 1482 623274; E-mail: P.J.Drew@hull.ac.uk
+
+334
+
+Ann R Coll Surg Engl 2004; 86
+
+ARTIFICIAL INTELLIGENCE IN MEDICINE
+
+RAMESH
+
+to help the clinician in the formulation of a diagnosis, the
+making of therapeutic decisions and the prediction of
+outcome. They are designed to support healthcare
+workers in their every day duties, assisting with tasks
+that rely on the manipulation of data and knowledge.
+Such systems include Artificial neural networks (ANNs),
+fuzzy expert systems, evolutionary computation and
+hybrid intelligent systems.
+Artificial neural networks
+Judging by the volume of publication in the last two
+decades, ANN is the most popular AI technique in
+medicine.6 ANNs are computational analytical tools which
+are inspired by the biological nervous system. They consist
+of networks of highly interconnected computer processors
+called neurons that are capable of performing parallel
+computations for data processing and knowledge
+representation. Their ability to learn from historical
+examples, analyse non-linear data, handle imprecise
+information and generalise enabling application of the
+model to independent data has made them a very attractive
+analytical tool in the field of medicine.
+McCulloch and Pitts (1943) invented the first artificial
+neurone using simple binary threshold functions.7 The next
+important milestone came when Frank Rosenblatt, a
+psychologist, developed the Perceptron in 19588 as a
+practical model. Many variations of the basic Perceptron
+network have been proposed but the most popular model
+has been multilayer feedforward Perceptron (Fig. 1). These
+networks are made up of layers of neurons, typically an
+input layer, one or more middle or hidden layers and an
+output layer, each of which are fully connected to other
+layer. The neurons are connected by links, and each link has
+a numerical weight associated with it. A neural network
+learns through repeated adjustments of these weights. One
+of the important characters of ANNs is that they can learn
+from their experience in a training environment. The use of
+multilayer feedforward Perceptron was restricted by the
+lack of a suitable learning algorithm until Paul Werbos
+(1974) a PhD student introduced backpropagation
+learning.9 Some of the other popular network designs
+include Hopfield networks,10 Radial Basis Function11 and the
+Self-Organizing Feature Map.12
+ANNs have already found a wide variety of applications
+in the real world. Their ability to classify and recognise
+patterns accurately has attracted researchers to apply them
+in solving many clinical problems. As we realise that
+diagnosis, treatment and predicting outcome in many
+clinical situations is dependent on a complex interaction of
+many clinical, biological and pathological variables there is a
+growing need for analytical tools like ANNs which can
+exploit the intricate relationships between these variables.
+Ann R Coll Surg Engl 2004; 86
+
+Figure 1 Multilayered feedforward artificial neural networks.
+
+Baxt was one of the first researchers to explore the clinical
+potentials of ANNs.13 He developed a neural network model
+which accurately diagnosed acute myocardial infarction and
+latter prospectively validated his work with similar
+accuracy.14 Since then, ANNs have been applied in almost
+every field of medicine.
+Diagnosis
+ANNs have been used in the clinical diagnosis, image
+analysis in radiology and histopathology, data interpretation in intensive care setting and waveform analysis.
+Stamey et al.15 developed a neural network derived
+classification algorithm called ProstAsure Index which can
+classify prostates as benign or malignant. This model which
+was subsequently validated in prospective studies had a
+diagnostic accuracy of 90%, with a sensitivity of 81% and
+specificity of 92%. Some of the other surgically relevant
+diagnostic applications of ANNs include abdominal pain
+and appendicitis,16 retained common bile duct stones,17
+glaucoma,18 and back pain.19
+ANNs have also been used in diagnosing cytological
+and histological specimens. PAPNET, a computerised
+automated screening system based on neural networks,
+has been developed to assist the cytologist in cervical
+screening and is one of the few ANN models which was
+promoted commercially.20 Breast,21 gastric,22 thyroid,23 oral
+epithelial cells,24 urothelial cells,25 pleural and peritoneal
+effusion cytology26 have all been subjected to analysis by
+neural networks with varying degree of success. In
+radiology, it is possible to use both human observations
+and direct digitised images as inputs to the networks.
+ANNs have been used to interpret plain radiographs,27
+ultrasound,28 CT,29 MRI,30 and radioisotope scans.31
+ANNs pattern recognition ability has been used to
+analyse various wave forms including the interpretation
+335
+
+RAMESH
+
+Figure 2 A typical fuzzy rule system.
+
+of ECGs to diagnose myocardial infarction,32 atrial
+fibrillation,33 and ventricular arrythmias.34 Analysis of
+electro-enchalograms (EEG) by neural networks has led to its
+application in the diagnosis of epilepsy35 and sleep
+disorders.36 They have also been trained to analyse
+electromyographic (EMG)37 and Doppler ultrasound38 wave
+forms as well as haemodynamic patterns in intensive care
+patients.39
+Prognosis
+Prognostication is extremely important in planning
+appropriate treatment strategies and follow-up. Accurate
+identification of high-risk patients may facilitate targeted
+aggressive adjuvant therapy which may help cure the
+disease and prolong survival. ANNs with their ability to
+exploit non-linear relations between variables are
+particularly suitable to analyse complex cancer data. It has
+been demonstrated that neural networks can predict
+survival in patients with breast and colorectal cancer.40,41
+ANNs have also shown to perform better than consultant
+colorectal surgeons in predicting outcome in patients with
+colorectal cancer.42 The authors of this paper have
+demonstrated the generalisability of ANNs, once trained on
+a particular data, the networks were able to predict outcome
+for patients from an independent institution with out
+retraining. ANNs have also been used to predict outcome in
+lung43 and prostate cancers.44 They have been applied to
+predict outcome in intensive care unit and have performed
+better than APACHE II severity of illness scoring system.45
+Fuzzy expert systems
+Fuzzy logic is the science of reasoning, thinking and
+inference that recognises and uses the real world
+phenomenon  that everything is a matter of degree. Instead
+of assuming everything is black and white (conventional
+logic), fuzzy logic recognises that in reality most things
+would fall somewhere in between, that is varying shades of
+grey. It was popularised by Lofti Zadeh (1965) an engineer
+from the University of California.46 It uses continuous set
+membership from 0 to 1 in contrast to Boolean or
+conventional logic which uses sharp distinctions, i.e. 0 for
+false and 1 for true. Medicine is essentially a continuous
+336
+
+ARTIFICIAL INTELLIGENCE IN MEDICINE
+
+domain and most medical data is inherently imprecise.
+Fuzzy logic is a data handling methodology that permits
+ambiguity and hence is particularly suited to medical
+applications. It captures and uses the concept of fuzziness in
+a computationally effective manner. Zadeh wrote in 1969
+that: the most likely area of application for this theory lies in
+medical diagnostics and, to a lesser extent, in the description
+of biological systems.47 Fuzzy expert systems have the
+structure of a series of if  then rules for modelling (Fig. 2).
+The techniques of fuzzy logic have been explored in
+many medical applications. Schneider et al.48 showed that
+fuzzy logic performed better than multiple logistic
+regression analysis in diagnosing lung cancer using tumour
+marker profiles. Similarly, the application of fuzzy logic has
+been explored in the diagnosis of acute leukaemia,49 and
+breast50 and pancreatic51 cancer. They have also been applied
+to characterise ultrasound images of the breast,52
+ultrasound53 and CT scan54 images of liver lesions and MRI55
+images of brain tumours. Fuzzy logic has also been used to
+predict survival in patients with breast cancer.56 Fuzzy
+controllers have been designed for the administration of
+vasodilators to control blood pressure in the peri-operative
+period.57 They have also been used for the administration of
+anaesthetics in the operating room.58
+Evolutionary computation
+Evolutionary computation is the general term for several
+computational techniques based on natural evolution
+process that imitates the mechanism of natural selection
+and survival of the fittest in solving real-world problems.
+The most widely used form of evolutionary computation
+for medical applications are Genetic Algorithms.
+Proposed by John Holland (1975),59 they are a class of
+stochastic search and optimisation algorithms based on
+natural biological evolution. They work by creating many
+random solutions to the problem at hand. This population
+of many solutions will then evolve from one generation to
+the next, ultimately arriving at a satisfactory solution to
+the problem. The best solutions are added to the
+population while the inferior ones are eliminated. By
+repeating this process among the better elements,
+repeated improvements will occur in the population,
+survive and generate new solutions.
+Most medical decisions can be formulated as a search
+in a very large and complex space. For example: a
+cytologist analysing a cytological specimen to decide
+whether they are malignant or not, is searching in the
+space of all possible cell features for a set of features
+permitting him to provide a clear diagnosis. Genetic
+algorithms exploit the mechanism of natural evolution to
+search efficiently in a given space. They are applied to
+perform several types of tasks like diagnosis and
+Ann R Coll Surg Engl 2004; 86
+
+RAMESH
+
+ARTIFICIAL INTELLIGENCE IN MEDICINE
+
+prognosis, medical imaging and signal processing, and
+planning and scheduling. The principles of Genetic
+algorithms have been used to predict outcome in critically
+ill patients,45 lung cancer,60 melanoma61 and response to
+warfarin.62 They have also been used in computerised
+analysis of mammographic microcalcification,63 MRI
+segmentation of brain tumours to measure the efficacy of
+treatment strategies64 and for analysing computerised 2-D
+images to diagnose malignant melanomas.63,65
+Hybrid intelligent systems
+Each AI technique has its own strengths and weaknesses.
+Neural networks are mainly concerned with learning, fuzzy
+logic with imprecision and evolutionary computation with
+search and optimisation. The advantages of these technologies
+can be combined together to produce hybrid intelligent
+systems which can work in a complementary manner. Their
+synergy allows a hybrid system to accommodate common
+sense, extract knowledge from raw data, use human-like
+reasoning mechanisms, deal with uncertainty and imprecision, and learn to adapt to a rapidly changing and unknown
+environment. There are many different hybrid systems
+available and the popular ones are ANNs for designing fuzzy
+systems, fuzzy systems for designing ANNs, and Genetic
+Algorithms for automatically training and generating neural
+network architectures. Once again, the application of hybrid
+intelligent systems has been explored in many diverse clinical
+scenarios. Some examples include breast cancer diagnosis,66
+analysis of microcalcification on digital mammograms,67
+diagnosis of coronary artery stenosis,68 assessment of
+myocardial viability,69 and control of the depth of anaesthesia.70
+Conclusions
+There are many different AI techniques available which are
+capable of solving a variety of clinical problems. However, in
+spite of earlier optimism, medical AI technology has not
+been embraced with enthusiasm. One reason for this is the
+attitude of the clinicians towards technology being used in
+the decision-making process. Paradoxically, there is no
+qualm in accepting the biochemical results generated from
+an auto-analyser or images produced by magnetic
+resonance imaging. However, it is the obligation of
+researchers active in this field to produce evidence that these
+techniques work on a practical level. The need to undertake
+more randomised controlled studies to prove the efficacy of
+AI systems in medicine is, therefore, vital.
+There is compelling evidence that medical AI can play a
+vital role in assisting the clinician to deliver health care
+efficiently in the 21st century. There is little doubt that these
+techniques will serve to enhance and complement the
+medical intelligence of the future clinician.
+Ann R Coll Surg Engl 2004; 86
+
+References
+1. Shapiro SC. Artificial intelligence. In: Shapiro SC. (ed) Encyclopedia of
+Artificial Intelligence, vol. 1, 2nd edn. New York: Wiley, 1992.
+2. Turing AM. Computing machinery and intelligence. Mind 1950; 59: 43360.
+3. Lusted LB. Medical progress  medical electronics. N Engl J Med 1955; 252:
+5805.
+4. Ledley RS, Lusted LB. Reasoning foundations of medical diagnosis. Science
+1959; 130: 921.
+5. Gunn AA. The diagnosis of acute abdominal pain with computer analysis.
+J R Coll Surg Edinb 1976; 21: 1702.
+6. Steimann F. On the use and usefulness of fuzzy sets in medical AI. Artif
+Intell Med 2001; 21: 1317.
+7. McCulloch WS, Pitts W. A logical calculus of the ideas imminent in
+nervous activity. Bull Math Biophys 1943; 5: 11533.
+8. Rosenblatt F. The Perceptron: a probabilistic model for information storage
+and organization in the brain. Psychol Rev 1958; 65: 386408.
+9. Werbos P. Beyond regression: new tools for prediction and analysis in the
+behavioral sciences. PhD Thesis, Harvard University, 1974.
+10. Hopfield JJ. Neural networks and physical systems with emergent
+collective computational abilities. Proc Natl Acad Sci USA 1982; 79: 25548.
+11. Park J, Sandberg IW. Universal approximation using radial-basis-function
+networks. Neural Comput 1991; 3: 24657.
+12. Carpenter GA, Grossberg S. The ART of adaptive pattern recognition by a
+self-organizing neural network. Computer 1988; 21: 7788.
+13. Baxt WG. Use of an artificial neural network for data analysis in clinical
+decision-making: the diagnosis of acute coronary occlusion. Neural Comput
+1990; 2: 4809.
+14. Baxt WG, Skora J. Prospective validation of artificial neural network
+trained to identify acute myocardial infarction. Lancet 1996; 347: 125.
+15. Stamey TA, Barnhill SD, Zang Z. Effectiveness of ProstAsureTM in detecting
+prostate cancer (PCa) and benign prostatic hyperplasia (BPH) in men age
+50 and older. J Urol 1996; 155: 436A.
+16. Pesonen E, Ohmann C, Eskelinen M, Juhola M. Diagnosis of acute
+appendicitis in two databases. Evaluation of different neighborhoods with
+an LVQ neural network. Methods Inf Med 1998; 37: 5963.
+17. Golub R, Cantu Jr R, Tan M. The prediction of common bile duct stones
+using a neural network. J Am Coll Surg 1998; 187: 58490.
+18. Henson DB, Spenceley SE, Bull DR. Artificial neural network analysis of
+noisy visual field data in glaucoma. Artif Intell Med 1997; 10: 99113.
+19. Bounds DG, Lloyd PJ, Mathew BG. A comparison of neural network and
+other pattern recognition approaches to the diagnosis of low back
+disorders. Neural Networks 1990; 3: 58391.
+20. Boon ME, Kok LP. Neural network processing can provide means to catch
+errors that slip through human screening of pap smears. Diagn Cytopathol
+1993; 9: 4116.
+21. Downs J, Harrison RF, Kennedy RL, Cross SS. Application of the fuzzy
+ARTMAP neural network model to medical pattern classification tasks.
+Artif Intell Med 1996; 8: 40328.
+22. Karakitsos P, Stergiou EB, Pouliakis A, Tzivras M, Archimandritis A, Liossi
+AI et al. Potential of the back propagation neural network in the
+discrimination of benign from malignant gastric cells. Anal Quant Cytol
+Histol 1996; 18: 24550.
+23. Karakitsos P, Cochand-Priollet B, Guillausseau PJ, Pouliakis A. Potential of
+the back propagation neural network in the morphologic examination of
+thyroid lesions. Anal Quant Cytol Histol 1996; 18: 495500.
+24. Brickley MR, Cowpe JG, Shepherd JP. Performance of a computer
+simulated neural network trained to categorise normal, premalignant and
+malignant oral smears. J Oral Pathol Med 1996; 25: 4248.
+25. Hurst RE, Bonner RB, Ashenayi K, Veltri RW, Hemstreet 3rd GP. Neural
+net-based identification of cells expressing the p300 tumor-related antigen
+using fluorescence image analysis. Cytometry 1997; 27: 3642.
+26. Truong H, Morimoto R, Walts AE, Erler B, Marchevsky A. Neural
+networks as an aid in the diagnosis of lymphocyte-rich effusions. Anal
+
+337
+
+RAMESH
+
+Quant Cytol Histol 1995; 17: 4854.
+27. Ashizawa K, Ishida T, MacMahon H, Vyborny CJ, Katsuragawa S, Doi K.
+Artificial neural networks in chest radiography: application to the
+differential diagnosis of interstitial lung disease. Acad Radiol 1999; 6: 29.
+28. Tailor A, Jurkovic D, Bourne TH, Collins WP, Campbell S. Sonographic
+prediction of malignancy in adnexal masses using an artificial neural
+network. Br J Obstet Gynaecol 1999; 106: 2130.
+29. Matsuki Y, Nakamura K, Watanabe H, Aoki T, Nakata H, Katsuragawa S et
+al. Usefulness of an artificial neural network for differentiating benign from
+malignant pulmonary nodules on high-resolution CT: evaluation with
+receiver operating characteristic analysis. Am J Roentgenol 2002; 178: 65763.
+30. Lucht R, Delorme S, Brix G. Neural network-based segmentation of
+dynamic MR mammographic images. Magn Reson Imaging 2002; 20: 14754.
+31. Fisher RE, Scott JA, Palmer EL. Neural networks in ventilation-perfusion
+imaging. Radiology 1996; 198: 699706.
+32. Heden B, Edenbrandt L, Haisty Jr WK, Pahlm O. Artificial neural networks
+for the electrocardiographic diagnosis of healed myocardial infarction. Am J
+Cardiol 1994; 74: 58.
+33. Yang TF, Devine B, Macfarlane PW. Artificial neural networks for the
+diagnosis of atrial fibrillation. Med Biol Eng Comput 1994; 32: 6159.
+34. Dassen WR, Karthaus VL, Talmon JL, Mulleneers RG, Smeets JL, Wellens
+HJ. Evaluation of new self-learning techniques for the generation of criteria
+for differentiation of wide-QRS tachycardia in supraventricular tachycardia
+and ventricular tachycardia. Clin Cardiol 1995; 18: 1038.
+35. Walczak S, Nowack WJ. An artificial neural network approach to diagnosing
+epilepsy using lateralized bursts of theta EEGs. J Med Syst 2001; 25: 920.
+36. Schaltenbrand N, Lengelle R, Toussaint M, Luthringer R, Carelli G, Jacqmin
+A et al. Sleep stage scoring using the neural network model: comparison
+between visual and automatic analysis in normal subjects and patients.
+Sleep 1996; 19: 2635.
+37. Abel EW, Zacharia PC, Foster A. Neural network analysis of the EMG
+interference pattern. Med Eng Phys 1996; 18: 127.
+38. Smith JH, Graham J, Taylor RJ. The application of an artificial neural
+network to Doppler ultrasound waveforms for the classification of arterial
+disease. Int J Clin Monit Comput 1996; 13: 8591.
+39. Spencer RG, Lessard CS, Davilla F, Etter B. Self-organising discovery,
+recognition and prediction of haemodynamic patterns in the intensive care
+unit. Med Biol Eng Comput 1997; 35: 11723.
+40. Burke HB, Goodman PH, Rosen DB, Henson DE, Weinstein JN, Harrell Jr
+FE et al. Artificial neural networks improve the accuracy of cancer survival
+prediction. Cancer 1997; 79: 85762.
+41. Burke HB, Hoang A, Iglehart JD, Marks JR. Predicting response to adjuvant
+and radiation therapy in patients with early stage breast carcinoma. Cancer
+1998; 82: 8747.
+42. Bottaci L, Drew PJ, Hartley JE, et al. Artificial neural networks applied to
+outcome prediction for colorectal cancer patients in separate institutions.
+Lancet 1997; 350: 46972.
+43. Marchevsky AM, Patel S, Wiley KJ, Stephenson MA, Gondo M, Brown RW
+et al. Artificial neural networks and logistic regression as tools for
+prediction of survival in patients with stages I and II non-small cell lung
+cancer. Mod Pathol 1998; 11: 61825.
+44. Han M, Snow PB, Epstein, Chan TY, Jones KA, Walsh PC et al. A neural
+network predicts progression for men with Gleason score 3+4 versus 4+3
+tumors after radical prostatectomy. Urology 2000; 56: 9949.
+45. Dybowski R, Weler P, Chang R, Gant V. Prediction of outcome in critically
+ill patients using artificial neural network synthesised by genetic algorithm.
+Lancet 1996; 347: 114650.
+46. Zadeh LA. Fuzzy sets. Inf Control 1965; 8: 33853.
+47. Zadeh LA. Biological application of the theory of fuzzy sets and systems.
+In: Proceedings of the International Symposium on Biocybernetics of the Central
+Nervous System. Boston: Little Brown, 1969; 199212.
+48. Schneider J, Bitterlich N, velcovsky HG, Morr H, Katz N, Eigenbrodt E.
+Fuzzy-logic based tumor-marker profiles improved sensitivity in the
+diagnosis of lung cancer. Int J Clin Oncol 2002; 7: 14551.
+
+338
+
+View publication stats
+
+ARTIFICIAL INTELLIGENCE IN MEDICINE
+
+49. Belacel N, Vincke P, Scheiff JM, Boulassel MR. Acute leukemia diagnosis
+aid using multicriteria fuzzy assignment methodology. Comput Methods
+Programs Biomed 2001; 64: 14551.
+50. Sarkar M, Leong TY. Nonparametric techniques to extract fuzzy rules for
+breast cancer diagnosis problem. Medinfo 2001; 19: 13948.
+51. Halm U, Rohde N, Klapdor R, Reith HB, Thiede A, Etzrodt G et al.
+Improved sensitivity of fuzzy logic based tumor marker profiles for
+diagnosis of pancreatic carcinoma versus benign pancreatic disease.
+Anticancer Res 2000; 20: 495760.
+52. Koyama S, Obata Y, Shimamoto K, Ishigaki T, Ishii N, Isomoto Y et al.
+Breast ultrasonography: computer-aided diagnosis using fuzzy inference. J
+Ultrasound Med 1997; 16: 66572.
+53. Badawi AM, Derbala AS, Youssef AM. Fuzzy logic algorithm for
+quantitative tissue characterization of diffuse liver diseases from
+ultrasound images. Int J Med Inf 1999; 55: 13547.
+54. Klein HM, Eisele T, Klose KC, Stauss I, Brenner M, Ameling W et al. Pattern
+recognition system for focal liver lesions using crisp and fuzzy classifiers.
+Invest Radiol 1996; 31: 610.
+55. Fletcher-Heath LM, Hall LO, Goldgof DB, Murtagh FR. Automatic
+segmentation of non-enhancing brain tumors in magnetic resonance
+images. Artif Intell Med 2001; 21: 4363.
+56. Seker H, Odetayo MO, Petrovic D, Naguib RNG, Bartoli C, Alasio L et al.
+Assessment of nodal involvement and survival analysis in breast cancer
+patients using image cytometric data: statistical, neural network and fuzzy
+approaches. Anticancer Res 2002; 22: 4338.
+57. Ying H, McEachern M, Eddleman DW. Fuzzy control of mean arterial
+pressure in postsurgical patients with sodium nitroprusside infusion. IEEE
+Trans Biomedical Eng 1992; 39: 106070.
+58. Mason DG, Ross JJ, Edwards ND. Self-learning fuzzy control of
+atracurium-induced neuromuscular block during surgery. Med Biol Engin
+Comput 1997; 35: 498503.
+59. Holland JH. Adaptation in Natural and Artificial Systems. Ann Arbor, MI:
+University of Michigan Press, 1975.
+60. Jefferson MF, Pendleton N, Lucas SB, Horan MA. Comparison of a genetic
+algorithm neural network with logistic regression for predicting outcome
+after surgery for patients with nonsmall cell lung carcinoma. Cancer 1997;
+79: 133842.
+61. Sierra B, Larranaga P. Predicting survival in malignant skin melanoma
+using Bayesian networks automatically induced by genetic algorithms. An
+empirical comparison between different approaches. Artif Intell Med 1998;
+14: 21530.
+62. Narayanan MN, Lucas SB. A genetic algorithm to improve a neural
+network to predict a patients response to warfarin. Methods Inf Med 1993;
+32: 558.
+63. Chan HP, Sahiner B, Lam KL. Computerized analysis of mammography
+microcalcifications in morphological and texture feature spaces. Med Phys
+1998; 25: 200719.
+64. Velthuizen RP, Hall LO, Clarke LP. Feature extraction for MRI
+segmentation. J Neuroimaging 1999; 9: 8590.
+65. Handels H, Rop T, Kreusch J, Wolff HH, Poppl SJ. Feature selection for
+optimized skin tumor recognition using genetic algorithms. Artif Intell Med
+1999; 16: 28397.
+66. Pena-Reyes, Sipper M. A fuzzy-genetic approach to breast cancer
+diagnosis. Artif Intell Med 1999; 17: 13155.
+67. Verma B, Zakos J. A computer-aided diagnosis system for digital
+mammograms based on fuzzy-neural and feature extraction techniques.
+IEEE Trans Biomedical Eng 2001; 5: 4654.
+68. Sztandera LM, Goodenday LS, Cios KJ. A neuro-fuzzy algorithm for
+diagnosis of coronary artery stenosis. Comput Biol Med 1996; 26: 97111.
+69. Behloul F, Lelieveldt BP, Boudraa A, Janier MF, Revel D, Reiber JH. Neurofuzzy systems for computer aided myocardial viability assessment. IEEE
+Trans Med Imaging 2001; 20: 130213.
+70. Allen R, Smith D. Neuro-fuzzy closed-loop control of depth of anaesthesia.
+Artif Intell Med 2001; 21: 18591.
+
+Ann R Coll Surg Engl 2004; 86
+
+

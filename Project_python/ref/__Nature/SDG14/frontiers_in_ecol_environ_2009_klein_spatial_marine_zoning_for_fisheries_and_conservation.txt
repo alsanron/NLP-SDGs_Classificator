@@ -1,0 +1,511 @@
+RESEARCH COMMUNICATIONS RESEARCH COMMUNICATIONS
+
+Spatial marine zoning for fisheries and
+conservation
+Carissa Joy Klein1*, Charles Steinback2, Matthew Watts1, Astrid J Scholz2, and Hugh P Possingham1
+Protected areas are an effective tool for reducing biodiversity loss. Current legislation distinguishes various
+types of marine protected areas, each allowing different levels of resource extraction. However, almost all of
+the theory for spatial conservation planning is focused on identifying no-take reserves. The current
+approaches to zoning for multiple types of protected areas could result in suboptimal plans in terms of protecting biodiversity and minimizing negative socioeconomic impacts. We overcame these limitations in the
+first application of the multizone planning tool, Marxan with Zones, to design a network of four types of protected areas in the context of Californias Marine Life Protection Act. We have produced a zoning configuration that entails mean value losses of less than 9% for every fishery, without compromising conservation
+goals. We also found that a spatial numerical optimization tool that allows for multiple zones outperforms a
+tool that can identify one zone (ie marine reserves) in two ways: first, the overall impact on the fishing industry is reduced, and second, a more equitable impact on different fishing sectors is achieved. Finally, we examined the tradeoffs between representing biodiversity features and impacting fisheries. Our approach is applicable to both marine and terrestrial conservation planning, and delivers an ecosystem-based management
+outcome that balances conservation and industry objectives.
+Front Ecol Environ 2010; 8(7): 349353, doi:10.1890/090047 (published online 20 Aug 2009)
+
+W
+
+orldwide, protected areas are a cornerstone of most
+conservation strategies (Soul 1991), because they
+are one of the most effective actions for curbing biodiversity loss (Bruner et al. 2001; Possingham et al. 2006). As a
+result, there are several international mandates for the
+establishment of protected areas (eg the Convention on
+Biological Diversity). In response, national and local governments have developed initiatives for implementing
+marine protected areas (MPAs), including Australias
+Environmental Protection and Biodiversity Conservation
+Act, Massachusetts Ocean Act, New Zealands
+Biodiversity Strategy, and Great Britains Marine Bill.
+Most marine conservation programs involve some form
+of zoning. However, the theory behind spatial conservation planning focuses on selecting one type of protected
+area  no-take reserves. There are many different types of
+MPAs, with different levels of protection, ranging from
+areas that allow selective extraction of resources to those
+that are strictly no-take (see www.unep-wcmc.org/
+protected_areas/categories/ and www.mpa.gov/). One
+long-standing approach in designing reserves is to use
+numerical optimization tools (eg Marxan, Zonation) to
+identify areas that cost-effectively achieve ecological
+objectives, namely comprehensively and adequately representing biodiversity (Kirkpatrick 1983; Possingham et al.
+2006). However, use of these tools is limited in settings
+where planners face the more complex problems of prioritizing for multiple types of MPAs and resource uses. To
+compensate for the lack of an appropriate zoning tool,
+
+1
+
+University of Queensland, The Ecology Centre, St Lucia,
+Queensland, Australia *(c.klein@uq.edu.au); 2Ecotrust, Portland, OR
+ The Ecological Society of America
+
+planners can use an optimization tool to design reserves
+and then build other types of protected areas around them,
+on the basis of ecological, socioeconomic, and political criteria, as is done in the Great Barrier Reef Marine Park and
+Californias Channel Islands Sanctuary (Airame 2005;
+Fernandes et al. 2005). Other spatial zoning approaches
+based on multi-criteria analysis exist (Villa et al. 2002;
+Bruce and Eliot 2006; Portman 2007), but they ignore
+important principles of protected-area design (Margules
+and Pressey 2000; Possingham et al. 2006). The resulting
+zoning plans do not ensure that biodiversity features (ie
+species and habitats) are represented cost effectively and
+are therefore unlikely to be economically viable or to protect biodiversity.
+The current approaches used to design MPAs could
+result in plans that do not equitably minimize negative
+impacts to stakeholders. For example, Klein et al. (2008a)
+used Marxan to identify MPAs that minimize impacts to
+two fishing sectors  commercial and recreational fisheries  while achieving biodiversity targets. In Marxan,
+only one variable can be minimized, which in this case
+was the sum of commercial and recreational fishing effort.
+Although the overall impact was minimized, the commercial and recreational fishing sectors were impacted
+disproportionately, with 17% and 4% of their grounds
+lost, respectively  a socially and politically unfavorable
+outcome where commercial and recreational fishing
+interests frequently conflict. We hypothesized that a
+more equitable outcome could be achieved with a multizone optimization tool that allows for the definition of
+more specific constraints, including setting targets for
+fisheries in areas where fishing is allowed.
+www.frontiersinecology.org
+
+349
+
+Spatial marine zoning
+
+350
+
+(d)
+
+CJ Klein et al.
+
+Best solution, Marxan
+
+California
+
+(c)
+Best solution
+Marxan with Zones
+(b)
+Zone 1
+(a)
+Zone 4
+
+Study region,
+marine
+
+regions have undergone a stakeholder-driven
+design process informed by managers, administrators, and scientists. Our analysis was conducted on the region defined by the 5556-m
+legal limits to Californias state waters from
+Pigeon Point (37.185N latitude, 122.39W
+longitude) to Alder Creek (39.005N,
+123.696W) and around the Farallon Islands
+(37.733N, 123.033W)  exclusive of San
+Francisco Bay  a total area of 1977.5 km2
+(Figure 1). We divided the region into 3610
+planning units, each of which could be allocated to a zone. We addressed two of the
+Initiatives core objectives in designing a network of MPAs: (1) protect representative and
+unique habitats, and (2) minimize negative
+socioeconomic impacts (Klein et al. 2008b).
+Data
+
+We used the same spatial data representing
+habitats, depth zones, and commercial fishing
+value as used in the Initiative. Habitats
+1, no-take reserve
+included coastal marshes, eelgrass, estuaries,
+2, conservation high
+3, conservation high/medium
+hard bottom, kelp forests, soft bottom, surfSelection frequency
+4, conservation medium
+grass, and tidal flats (CDFG 2007). We subdi5, fishing zone
+vided these features into three biogeographic
+regions (North, South, and the Farallon
+Figure 1. The zoning solutions are displayed as the frequency with which sites Islands) and three depth zones (intertidal,
+are selected for an indicated zone (selection frequency) across 100 individual intertidal30 m, and 30100 m). Thirty-two
+solutions and as the best solution (ie achieves targets for the least cost). (a) Zone separate biodiversity features were targeted
+4 selection frequency via Marxan with Zones (Scenario 2); (b) Zone 1 selection for inclusion in a MPA.
+frequency via Marxan with Zones (Scenario 2); (c) best solution via Marxan
+Spatial fishing data were derived from 174
+with Zones (Scenario 2); and (d) best solution via Marxan (without zoning). interviews with fishermen, conducted in
+The study region is located off the northern part of Californias central coast.
+2007 (Scholz et al. 2008). The surveys
+attempted to capture information from at
+Here, we present the first application of such a multi- least 50% of the landings and/or ex-vessel revenue from
+zone numerical optimization tool to design a network of 20002006, and at least five fishermen per fishery. These
+MPAs, using the objectives and zones defined by data include the value in 2006 US dollars of a given planCalifornias Marine Life Protection Act Initiative (here- ning unit to individual fishermen across eight commerafter, Initiative). We identify multiple zoning configu- cial fisheries: California halibut (CH), chinook salmon
+rations for four different types of MPAs with different (CS), coastal pelagic finfish (CPF), dungeness crab (DC),
+fishing restrictions and biodiversity conservation targets. deep nearshore rockfish (DNR), market squid (MS),
+Our aim is to determine what, if any, socioeconomic nearshore rockfish (NR), and sea urchin (SU).
+advantages can be delivered by a tool that allows for mul- Recreational fishing data were not included in our analytiple zones versus a tool that can identify only one type of sis, because high-quality, spatially explicit data for recreMPA. We also examine the tradeoffs between represent- ational fishing were unavailable.
+ing biodiversity features and impacting fisheries.
+Zoning
+Methods
+n
+Marxan (Ball and Possingham 2000; Possingham et al.
+2000), the most commonly used protected-area design
+Policy context and planning region
+tool, was modified so that it can identify solutions with
+Californias Marine Life Protection Act mandates the multiple zones. We used the resulting Marxan with Zones
+design of a network of MPAs. The planning team divided (Watts et al. 2009) to design a network of MPAs. We
+the state waters into five regions, in which planning takes planned for five zones, each restricted to different fishplace in successive stages, from 2004 to 2011. Two eries (in parentheses below), as defined in the Initiative:
+www.frontiersinecology.org
+
+ The Ecological Society of America
+
+CJ Klein et al.
+
+Spatial marine zoning
+
+(1) no-take marine reserve (all fisheries restricted); (2)
+conservation area, high (CH, DC, DNR, NR, MS, SU,
+CS <50 m); (3) conservation area, high/medium (CH,
+DNR, NR, SU); (4) conservation area, medium (DNR,
+NR, SU); and (5) commercial fishing zone (no fishing
+restrictions). Marxan with Zones aims to identify a zoning configuration that achieves a set of targets for a minimum cost. To satisfy the Initiatives objective of minimizing negative socioeconomic impact, we define cost as
+commercial fishing value. The cost of placing a particular
+planning unit (i = 1,,M) into a particular zone (j =
+1,,N) is represented by cij, which is the sum of value for
+all fisheries (k = 1,,P) not allowed to fish in that zone:
+P
+
+cij =  aikbkj ,
+k=1
+
+where aik is the value of the ith planning unit to the kth
+fishery, and bkj indicates if the kth fishery is not allowed to
+fish in the jth zone. If the kth fishery is not allowed to fish
+in the jth zone, bkj = 1; otherwise, bkj is equal to 0.
+Marxan with Zones minimizes the total cost of the zoning plan (C):
+M N
+
+C =   cijxij ,
+i=1 j=1
+
+where xij = 1 if the i planning unit is included in the jth
+zone, subject to the constraint that a set of zone-specific
+targets and a planning unit can only be placed in one
+zone, such that:
+
+addition, we compared the results of our scenarios to
+those produced using Marxan (without zoning), where
+we targeted 30% of each biodiversity feature for inclusion in a no-take reserve. Given that Marxan can select
+areas important for only one type of protected area, we
+assume that selected areas are a cost to all fisheries. We
+did not compare the results with those derived from
+other systematic conservation planning tools (eg
+Zonation, C-Plan), because they solve different mathematical problems.
+Marxan with Zones uses a simulated annealing algorithm to identify near-optimal zoning configurations that
+minimize the sum of planning unit and zone boundary
+costs (Watts et al. 2009). To control for the level of fragmentation of solutions, the user can indicate the relative
+importance of minimizing the boundary of the selected
+areas within a zone, relative to their planning unit cost,
+by adjusting a parameter called the zone boundary cost
+(Watts et al. 2009). We chose a zone boundary cost for
+each zone that produced solutions that represented an
+acceptable tradeoff between boundary length and cost,
+using a method based on that developed by Stewart and
+Possingham (2005). We generated 100 different, nearoptimal solutions with different spatial configurations for
+each scenario.
+
+th
+
+N
+
+xij = 1 .
+
+j=1
+
+n Results
+We compare the solutions to each scenario in terms of
+impact on individual fisheries and the commercial fishery
+as a whole (Figure 2). Fishing targets of up to 91% for
+each fishery could be achieved, while still meeting the
+biodiversity targets. This entails value losses of less than
+9% for every fishery. However, in the scenario without
+fishing targets (Scenario 1), three of the fisheries lost
+
+Fishing value lost (%)
+
+We implemented Marxan with Zones for two different
+scenarios, each with different zone-specific targets
+(Watts et al. 2009). In Scenario 1, we represented 10%
+of the distribution of each biodiversity
+Marxan
+feature in a no-take reserve (Zone 1)
+35
+and an additional 20% in any of the
+Marxan with Zones, no fishing targets
+30
+four protected-area zones (Zones 14).
+Marxan with Zones, 91% fishing targets
+(no more than 9% loss)
+We evaluated the results of Scenario 1
+25
+to determine the proportion of lost
+value overall as well as for each of the
+20
+fisheries. In Scenario 2, in an attempt
+to more equitably affect the fisheries,
+15
+we also targeted a percentage of each
+10
+fisherys total value, where the fishing
+targets could only be achieved in zones
+5
+where the given fishery was not
+restricted. We targeted the same pro0
+Coastal
+Crab
+Halibut Nearshore Salmon
+Squid
+Urchin
+Total
+Deep
+portion for each fishery and incremenpelagics
+rockfish
+nearshore
+rockfish
+tally increased the target by 1% until
+Commercial fishery
+100% of the fishing grounds were
+placed in a zone without spatial fishing Figure 2. Proportion of fishing value lost to each individual fishery, and the
+regulations. We evaluated the results commercial fishery as a whole, in protected-area networks designed via Marxan and
+of Scenario 2 to determine the trade- Marxan with Zones (with and without fishing targets). The average ( standard
+offs between representing biodiversity deviation) value lost across 10 solutions that achieved the planning objectives for the
+features and impacting fisheries. In least cost is displayed.
+ The Ecological Society of America
+
+www.frontiersinecology.org
+
+351
+
+352
+
+Percentage of biodiversity features represented
+
+Spatial marine zoning
+
+30% target, Zones 1 4
+
+100 
+90
+
+CJ Klein et al.
+
+
+
+
+
+ 10% target, Zone 1
+
+
+
+ Not represented
+
+80
+70
+
+
+
+
+
+as the best solution (ie achieves targets
+for the least cost) to Scenario 2.
+
+n Discussion
+
+Zoning of the ocean has captured the
+interest of many, as a means to protect bio50
+diversity, manage fisheries, implement
+
+
+ecosystem-based management, and plan
+40
+for climate change (Douvere 2008). A
+30
+
+major limitation of existing spatial plan
+20
+
+
+
+ning approaches is their inability to simul10
+taneously consider different types of zones
+
+
+
+0
+with different possible uses. We demon92
+93
+94
+95
+96
+97
+98
+99
+100
+strate the first application of the multiFishery target (%)
+zone planning tool, Marxan with Zones
+Figure 3. Tradeoffs made between achieving the zone-specific biodiversity targets (Watts et al. 2009), to design a network of
+and fishing targets for the best solution (ie the solution that achieves targets for the four types of MPAs.
+least cost) to each scenario with different fishing targets. When the fishing target is
+We found that a spatial numerical opti< 92%, the targets for all biodiversity features are achieved.
+mization tool that allows for multiple
+zones outperforms a tool that can identify
+> 9% of their value, with one losing 18% of its value. marine reserves, in two ways. First, the overall impact on
+Although the overall impact across the fisheries between the fishing industry is reduced. Second, there is a more
+scenarios is similar (Figure 2), the addition of fishing tar- equitable impact on different fishing sectors. These
+gets in Scenario 2 ensured a more equitable impact on results confirm that, for any optimization problem,
+individual fisheries. As predicted, solutions produced expanding the control variables results in greater flexibilwith Marxan have greater negative impact on fisheries ity and better outcomes (Tuck and Possingham 2000;
+than those produced using zoning software (Figure 2).
+Grantham et al. 2008). In Marxan with Zones, the addiWhen the fishing target for each fishery is greater than tion of zones and the ability to specify certain costs and
+91%, not all of the biodiversity targets can be achieved. targets for each zone are the control variables that offer
+We examined the tradeoffs between achieving the zone- improved results over Marxan.
+specific biodiversity targets and fishing targets for scenarMarxan with Zones can accommodate more specific
+ios with different fishing targets (Figure 3). As the fishing constraints that can be applied to consider both biodivertarget is increased, the number of biodiversity features sity and socioeconomic considerations. We demonstrate
+that achieve both zone-specific targets declines. If we tar- this functionality by setting two types of zone-specific
+get 93% and 95% of the value for each fishery, the result- constraints: (1) biodiversity targets for MPAs and (2) fishing solution achieves its targets for 90% and 80% of the ery targets in zones where fishing is allowed for a particular
+biodiversity features, respectively. If the fishing targets are fishery. We applied the software both with and without
+> 96%, 1644% of the biodiversity features are not repre- fishing targets and found that the addition of fishing tarsented in a MPA.
+gets produces solutions that affect the individual fishing
+MPA Zones 1 and 4 are frequently selected to achieve sectors more equitably. Although a socially and politically
+the planning objectives (Figure 1). Zones 2 and 3 are not favored outcome in this context (Klein et al. 2008a), this
+often selected for two reasons. First, they have more fish- may not be desirable in other planning processes. Other
+ing restrictions than does Zone 4, thereby making them options for setting fishing targets are to apply a different
+more costly to implement; second, we did not constrain fishing target for each fishery where, for example, the tarbiodiversity targets to these zones, as was done in Zone 1. get is proportional to the overall value of the commercial
+In some planning units, the cost of allocating to more fishing industry. Alternatively, targets could reflect the
+than one zone is equivalent. For example, the cost of allo- minimum value needed for the fishery to remain profcating a planning unit to Zones 3 and 4 is equivalent itable, derived from population modeling that considers a
+where halibut fishing does not occur. This is because the fisherys sustainability. In addition, more specific fishing
+only difference between the zones is that halibut fishing is targets could be set for each fishery at each port, to better
+allowed in Zone 4. In such cases, planning units have an control for the impacts to different fishing communities.
+equal chance of being allocated to zones with equivalent
+Our estimation of impact assumes that each MPA elimcosts. On the other hand, the selection frequency of Zone inates fishing opportunities in areas closed to specific
+4 is high in areas valuable to the halibut fishery, because fisheries and that fishermen are unable to mitigate the
+it is the only MPA zone that allows halibut fishing. Figure impacts in other ways. This assumption is most likely an
+1 shows the selection frequency of Zones 1 and 4, as well overestimation, making our estimation of impact a worst60
+
+www.frontiersinecology.org
+
+
+
+ The Ecological Society of America
+
+CJ Klein et al.
+
+case scenario, because some fishing effort would shift to
+unprotected areas (Scholz et al. 2008). Our cost (fishing
+value) does not represent the true cost to fishermen and
+could be improved by considering the spatial variation of
+fishing costs, other fishing industries (eg recreational),
+benefits of spillover (ie export of fish from inside to outside of a protected area), and redistribution of effort after
+reservation (ie change in fishing location and intensity
+after protected areas are implemented). This is an important area of further research, albeit one that requires substantial amounts of information on fleet behavior, fish
+populations, and other dynamic parameters (Pelletier and
+Mahevas 2005; Branch et al. 2006).
+Designing protected areas that consider both socioeconomic and biodiversity factors has moved to the forefront
+of conservation planning (Stewart and Possingham 2005;
+Klein et al. 2008a). We demonstrate a method for evaluating zoning plans that shows the tradeoffs between
+achieving biodiversity and fishing targets. In any planning process, tradeoffs between conservation and socioeconomic interests will be made; if these tradeoffs are not
+transparent in a planning process, the result may not adequately conserve marine ecosystems. We show results for
+one set of zone-specific conservation targets, although
+there may be utility in analyzing tradeoffs with other targets. Our biodiversity targets do not reflect what is adequate to ensure their protection, and the result of their
+application is not meant for implementation, but rather
+to demonstrate novel approaches to planning for conservation.
+We suggest that the use of planning tools complements,
+rather than replaces, a stakeholder-driven zoning process
+(Klein et al. 2008b). California will design MPAs along the
+entire coast by 2011 to satisfy the states Marine Life
+Protection Act. Adapting ideas from this article into the
+process can help stakeholders and decision makers to
+implement MPAs that balance competing socioeconomic
+and biodiversity interests. Moreover, our approach is
+applicable to both marine and terrestrial conservation
+planning. It delivers an ecosystem-based management outcome that balances conservation and industry objectives.
+
+n Acknowledgements
+We thank the American Australian Association, the
+Centre for Applied Environmental Decision Analysis,
+Ecotrust, and the Resource Legacy Fund Foundation for
+supporting this project.
+
+n References
+
+Airame S. 2005. Channel Islands National Marine Sanctuary:
+advancing the science and policy of marine protected areas. In:
+Scholz A and Wright D (Eds). Place matters: geospatial tools for
+marine science, conservation, and management in the Pacific
+Northwest. Corvallis, OR: Oregon State University Press.
+Ball IR and Possingham HP. 2000. Marxan (v 1.8.6): marine
+reserve design using spatially explicit annealing. User manual.
+
+ The Ecological Society of America
+
+Spatial marine zoning
+Brisbane, Australia: University of Queensland.
+Branch TA, Hilborn R, Haynie AC, et al. 2006. Fleet dynamics and
+fishermen behavior: lessons for fisheries managers. Can J Fish
+Aquat Sci 63: 164768.
+Bruce EM and Eliot IG. 2006. A spatial model for marine park zoning. Coastal Manage 34: 1738.
+Bruner AG, Gullison RE, Rice RE, and da Fonseca GAB. 2001.
+Effectiveness of parks in protecting tropical biodiversity.
+Science 291: 12528.
+CDFG (California Department of Fish and Game). 2007.
+California Marine Life Protection Act Initiative regional profile of the north central coast study region. Sacramento, CA:
+CDFG.
+Douvere F. 2008. The importance of marine spatial planning in
+advancing ecosystem-based sea use management. Mar Policy
+32: 76271.
+Fernandes L, Day J, Lewis A, et al. 2005. Establishing representative no-take areas in the Great Barrier Reef: large-scale implementation of theory on marine protected areas. Conserv Biol
+19: 173344.
+Grantham HS, Petersen S, and Possingham HP. 2008. Reducing
+bycatch in the South African pelagic longline fishery: the utility of different approaches to fisheries closures. Endangered
+Species Res 5: 29199.
+Kirkpatrick JB. 1983. An iterative method for establishing priorities for the selection of nature reserves: an example from
+Tasmania. Biol Conserv 25: 12734.
+Klein C, Chan A, Kircher L, et al. 2008a. Striking a balance
+between biodiversity conservation and socioeconomic viability
+in the design of marine protected areas. Conserv Biol 22:
+691700.
+Klein C, Steinback C, Scholz A, et al. 2008b. Effectiveness of
+marine reserve networks in representing biodiversity and minimizing impact to fishermen: a comparison of two approaches
+used in California. Conser Lett 1: 4451.
+Margules CR and Pressey RL. 2000. Systematic conservation planning. Nature 405: 24353.
+Pelletier D and Mahevas S. 2005. Spatially explicit fisheries simulation models for policy evaluation. Fish Fish 6: 30749.
+Portman ME. 2007. Zoning design for cross-border marine protected areas: the Red Sea Marine Peace Park case study. Ocean
+Coast Manage 50: 499522.
+Possingham HP, Ball I, and Andelman S. 2000. Mathematical
+methods for identifying representative reserve networks. In:
+Ferson S and Burgman M (Eds). Quantitative methods for conservation biology. New York, NY: Springer-Verlag.
+Possingham HP, Wilson KA, Andelman SJ, and Vynne CH. 2006.
+Protected areas: goals, limitations, and design. In: Groom MJ,
+Meffe GK, and Carroll CR (Eds). Principles of conservation
+biology. Sunderland, MA: Sinauer Associates Inc.
+Scholz A, Steinback C, Kruse S, et al. 2008. Commercial fishing
+grounds and their relative importance off the north central
+coast of California. Portland, OR: Ecotrust.
+Soul ME. 1991. Conservation: tactics for a constant crisis. Science
+253: 74450.
+Stewart RR and Possingham HP. 2005. Efficiency, costs and tradeoffs in marine reserve system design. Environ Model Assess 10:
+20313.
+Tuck GN and Possingham HP. 2000. Marine protected areas for
+spatially structured exploited stocks. Mar EcolProg Ser 192:
+89101.
+Villa F, Tunsei L, and Agardy T. 2002. Zoning marine protected
+areas through spatial multiple-criteria analysis: the case of the
+Asinara Island National Marine Reserve of Italy. Conserv Biol
+16: 51526.
+Watts M, Possingham HP, Ball I, et al. 2009. Marxan with Zones:
+software for optimal conservation-based land- and sea-use zoning. Environ Modell Softw 24: 151321.
+
+www.frontiersinecology.org
+
+353
+
+

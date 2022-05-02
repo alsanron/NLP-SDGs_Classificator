@@ -1,0 +1,1066 @@
+ARTICLE
+
+doi:10.1038/nature09440
+
+Global threats to human water security
+and river biodiversity
+C. J. Vorosmarty1*, P. B. McIntyre2*{, M. O. Gessner3, D. Dudgeon4, A. Prusevich5, P. Green1, S. Glidden5, S. E. Bunn6,
+C. A. Sullivan7, C. Reidy Liermann8 & P. M. Davies9
+
+Protecting the worlds freshwater resources requires diagnosing threats over a broad range of scales, from global to local.
+Here we present the first worldwide synthesis to jointly consider human and biodiversity perspectives on water security
+using a spatial framework that quantifies multiple stressors and accounts for downstream impacts. We find that nearly
+80% of the worlds population is exposed to high levels of threat to water security. Massive investment in water
+technology enables rich nations to offset high stressor levels without remedying their underlying causes, whereas
+less wealthy nations remain vulnerable. A similar lack of precautionary investment jeopardizes biodiversity, with
+habitats associated with 65% of continental discharge classified as moderately to highly threatened. The cumulative
+threat framework offers a tool for prioritizing policy and management responses to this crisis, and underscores the
+necessity of limiting threats at their source instead of through costly remediation of symptoms in order to assure global
+water security for both humans and freshwater biodiversity.
+
+Water is widely regarded as the most essential of natural resources, yet
+freshwater systems are directly threatened by human activities13 and
+stand to be further affected by anthropogenic climate change4. Water
+systems are transformed through widespread land cover change, urbanization, industrialization and engineering schemes like reservoirs,
+irrigation and interbasin transfers that maximize human access to
+water1,5. The benefits of water provision to economic productivity2,6 are
+often accompanied by impairment to ecosystems and biodiversity, with
+potentially serious but unquantified costs3,7,8. Devising interventions to
+reverse these trends, including conventions9 and scientific assessments10
+to protect aquatic biodiversity and ensure the sustainability of water
+delivery systems11, requires frameworks to diagnose the primary threats
+to water security at a range of spatial scales from local to global.
+Water issues feature prominently in assessments of economic
+development6, ecosystem services3, and their combination1214.
+However, worldwide assessments of water resources2 rely heavily on
+fragmented data often expressed as country-level statistics, seriously
+limiting efforts to prioritize their protection and rehabilitation15.
+High-resolution spatial analyses have taken understanding of the
+human impact on the worlds oceans16,17 and the human footprint on
+land18 to a new level, but have yet to be applied to the formal assessment
+process for freshwater resources2 despite a recognized need19,20.
+The success of integrated water management strategies depends on
+striking a balance between human resource use and ecosystem protection2,9,10,21. To test the degree to which this objective has been
+advanced globally, and to assess its potential value in the future,
+requires systematic accounting. An important first step is to develop
+a spatial picture of contemporary incident threats to human water
+security and biodiversity, where the term incident refers to exposure
+to a diverse array of stressors at a given location. Many stressors
+threaten human water security and biodiversity through similar
+
+pathways, as for pollution, but they also influence water systems in
+distinct ways. Reservoirs, for example, convey few negative effects on
+human water supply, but substantially impact on aquatic biodiversity
+by impeding the movement of organisms, changing flow regimes and
+altering habitat. Similarly, non-native species threaten biodiversity
+but are typically inconsequential to human water security.
+Here we report the results of a global-scale analysis of threats to fresh
+water that, for the first time, considers human water security and
+biodiversity perspectives simultaneously within a spatial accounting
+framework. Our focus is on rivers, which serve as the chief source of
+renewable water supply for humans and freshwater ecosystems2,3. We
+use river networks to redistribute the distinctive impacts of stressors on
+human water security and biodiversity along a continuum from headwaters to ocean, capturing spatial legacy effects ignored by earlier
+studies. Our framework incorporates all major classes of anthropogenic drivers of stress and enables an assessment of their aggregate
+impact under often divergent value systems for biodiversity and
+human water security. Enhancing the spatial resolution by orders-ofmagnitude over previous studies (using 309 latitude/longitude grids)
+allows us to more rigorously test previous assertions on the state of the
+worlds rivers and to identify key sources of threat at sub-national
+spatial scales that are useful for environmental management. Finally,
+we make the first spatial assessment of the benefits accrued from technological investments aimed at reducing threats to human water security, revealing previously unrecognized, global-scale consequences of
+local water management practices that are used extensively worldwide.
+
+Global patterns of incident threat
+Using a global geospatial framework22, we merged a broad suite of
+individual stressors to produce two cumulative incident threat indices,
+one for human water security and one for biodiversity. The resulting
+
+1
+The Environmental CrossRoads Initiative, City University of New York, The City College of New York, New York, New York 10035, USA. 2School of Natural Resources and Environment, University of Michigan,
+Ann Arbor, Michigan 48109, USA. 3Department of Aquatic Ecology, Eawag: Swiss Federal Institute of Aquatic Science and Technology, and Institute of Integrative Biology (IBZ), ETH Zurich, 8600 Dubendorf,
+Switzerland and Leibniz Institute of Freshwater Ecology and Inland Fisheries (IGB), 16775 Stechlin, Germany. 4Division of Ecology and Biodiversity, School of Biological Sciences, The University of Hong
+Kong, Hong Kong SAR, China. 5Water Systems Analysis Group, University of New Hampshire, Durham, New Hampshire 03824, USA. 6Australian Rivers Institute, Griffith University, Nathan, Queensland
+4111, Australia. 7School of Environmental Science and Management, Southern Cross University, New South Wales 2480, Australia. 8School of Aquatic and Fishery Sciences, University of Washington,
+Seattle, Washington 98195, USA. 9Centre of Excellence in Natural Resource Management, The University of Western Australia, Albany 6330, Australia. {Present address: Center for Limnology, University of
+Wisconsin, Madison, Wisconsin 53706, USA. *These authors contributed equally to this work.
+
+3 0 S E P T E M B E R 2 0 1 0 | VO L 4 6 7 | N AT U R E | 5 5 5
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+RESEARCH ARTICLE
+
+Incident human water
+security threat
+0.2
+0
+
+0.6
+0.4
+
+1
+0.8
+
+No appreciable flow
+
+Incident biodiversity
+threat
+0.2
+0
+
+0.6
+0.4
+
+1
+0.8
+
+No appreciable flow
+
+Figure 1 | Global geography of incident threat to human water security and
+biodiversity. The maps demonstrate pandemic impacts on both human water
+security and biodiversity and are highly coherent, although not identical
+(biodiversity threat 5 0.964 3 human water security threat 1 0.018; r 5 0.97,
+P , 0.001). Spatial correlations among input drivers (stressors) varied, but were
+
+generally moderate (mean | r | 5 0.34; n 5 253 comparisons). Regional maps
+exemplify main classes of human water security threat (see main text and
+Supplementary Fig. 4). Spatial patterns proved robust in a variety of sensitivity
+tests (Supplementary Methods and Supplementary Discussion). Threat indices
+are relative and normalized over discharging landmass.
+
+maps reflect the central role of hydrology in spatially configuring
+environmental impacts, with local stressor loads routed downstream
+through digital river networks23 and adjusted for new sources and
+dilution (Supplementary Methods and Supplementary Fig. 1).
+Similar to an approach used for marine systems16,17, multiple stressors
+were combined using relative weights to derive cumulative threat
+indices. Stressors were expressed as 23 geospatial drivers organized
+under four themes (catchment disturbance, pollution, water resource
+development and biotic factors). Expert assessment of stressor impacts
+on human water security and biodiversity produced two distinct
+weighting sets, which in turn yielded separate maps of incident threat
+reflecting each perspective.
+We find that nearly 80% (4.8 billion) of the worlds population (for
+2000) lives in areas where either incident human water security or
+biodiversity threat exceeds the 75th percentile. Regions of intensive
+agriculture and dense settlement show high incident threat (Fig. 1), as
+exemplified by much of the United States, virtually all of Europe
+(excluding Scandinavia and northern Russia), and large portions of
+central Asia, the Middle East, the Indian subcontinent and eastern
+China. Smaller contiguous areas of high incident threat appear in
+central Mexico, Cuba, North Africa, Nigeria, South Africa, Korea
+and Japan. The impact of water scarcity accentuates threat to drylands, as is apparent in the desert belt transition zones across all
+continents (for example, Argentina, Sahel, Central Asia, Australian
+MurrayDarling basin).
+
+Spatial differentiation of incident threat also arises from the interaction of multiple factors. Chinas arid western provinces would be
+expected to show high threat due to minimal dilution potential, but
+sparse population and limited economic activity combine to keep
+indices low. In contrast, heavily populated and developed eastern
+China shows substantially higher threat, despite greater rainfall and
+dilution capacity, especially within the Yangtze basin. Other large
+rivers are incapable of fully attenuating the impacts of concentrated
+development. Over 30 of the 47 largest rivers, which collectively discharge half of global runoff to the oceans, show at least moderate
+threat levels (.0.5) at river mouth, with eight rivers (for human water
+security) and fourteen (for biodiversity) showing very high threat
+(.0.75).
+A strikingly small fraction of the worlds rivers remain unaffected
+by humans. Remote areas of the world including the high north
+(Siberia, Canada, Alaska) and unsettled parts of the tropical zone
+(Amazonia, northern Australia) show the lowest threat levels.
+Across remote areas (Fig. 1), incident threat arises largely from
+trans-boundary atmospheric pollution. A mere 0.16% of the Earths
+area experiences low scores for every contributing stressor (that is,
+lowest decile globally).
+Upstreamdownstream transects of incident threat yield signatures
+of human water security or biodiversity conditions unique to each
+river that arise from the action of hydrology and networked flow paths
+(Fig. 2). Such transects highlight the diversity of stressors in river
+
+5 5 6 | N AT U R E | VO L 4 6 7 | 3 0 S E P T E M B E R 2 0 1 0
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+ARTICLE RESEARCH
+1
+Lena
+
+Amazon
+0.8
+
+Biodiversity threat index
+
+0.6
+0.4
+0.2
+0
+
+4,500 4,000 3,500 3,000 2,500 2,000 1,500 1,000 500
+
+0
+
+4,000 3,500 3,000 2,500 2,000 1,500 1,000 500
+
+0
+
+1
+Nile
+0.8
+0.6
+
+Lake
+Victoria
+headwaters
+
+0.4
+0.2
+0
+
+Uganda
+3,500 3,000 2,500 2,000 1,500 1,000
+
+Egypt
+
+Sudan
+Natl
+parks
+
+Huang He
+
+500
+0
+5,000
+Distance to ocean (km)
+
+Atbara R.
+
+Mixture of
+White + Blue Settlements
+Nile waters on mainstem
+
+Cairo
+Aswan
+High Dam
+
+Ethiopia
+4,000
+
+3,000
+
+2,000
+
+1,000
+
+0
+
+Figure 2 | Incident biodiversity threat transects from headwaters to ocean.
+Distinctive patterns characterize each river system resulting from complex
+spatial patterns of stressor loadings across the catchment plus mixing of higher
+and lower concentration tributary waters through river networks. Transects
+represent the collective impact of stressors operating within particular
+
+development settings, and thus serve to diagnose the chief factors giving rise to
+threat or to identify critical areas at risk, as shown for the Nile (Natl, National).
+Threat indices depict conditions over the full basin at set distances from river
+mouth, but can be reconfigured to track individual reaches or tributary subbasins.
+
+systems, combining the accumulation of diffuse non-point source
+pollutants with dilution by less impacted tributaries, often punctuated
+by point sources from large urbanized areas. Levels of threat often
+grow in the downstream direction (for example, the Huang He and
+Nile rivers), indicating the accumulation of residual stressor impacts
+generated upstream and augmented by dense development along
+major river corridors. The Amazon shows the reverse, with impacts
+from human-dominated source areas in Peru and Bolivia persisting
+but progressively diluted downstream. Even sparsely settled basins
+like the Lena in Siberia with generally low threat can show the impact
+of development near the river mouth. The proliferation of densely
+settled areas in the coastal zone including mega-cities means that its
+many rivers show high threat over virtually their entire length (for
+example, Paraba do Sul (Sao Paulo state), Pasig (Manila), Ogun
+(Lagos)).
+Our results agree with recent field surveys, underscoring the dire
+state of river health. Recent sampling of rivers across the United States
+showed impairment across 750,000 km (50%) of sampled river length
+and demonstrated the coincidence of multiple stressors, with agricultural factors predominant24. In China, 45% of major river reaches
+surveyed in 2008 were moderately to badly polluted25. Reviews of
+global pollution based on water monitoring26 and modelling studies27
+have shown broadly similar patterns to our threat maps. Our results
+are also congruent with previous threat assessments conducted at the
+coarser catchment and ecoregional scales7,28 (Supplementary
+Discussion), yet provide the much greater levels of spatial detail
+needed for environmental planning and management.
+Despite the variety of stressors that we considered, our study and all
+previous assessments7,28 of anthropogenic impacts are conservative
+owing to insufficient information on pharmaceutical and other synthetic compounds, mining, interbasin water transfers, and other commonplace stressors1,3. Our current inability to account for in-stream
+transformations, stressor synergies21, concentrated impacts during
+low flow periods, and threats to smaller streams (#Strahler order 5;
+1:62,500 scale)23 are additional limitations. Finally, uncertainties in
+stressor data are inevitable, but our standardization procedures limited their influence on our results (Supplementary Information).
+
+strongly correlated with other themes (r # 0.37 for human water
+security, P , 0.001; r # 0.44 for biodiversity, P , 0.001), reflecting
+the spatial decoupling of fish species introductions from human
+population density (Supplementary Table 3) and the broad distribution of inland fisheries. Incident threats to human water security
+and biodiversity are themselves well correlated (Fig. 1), with the highest levels in heavily settled regions.
+In areas of high incident threat (.0.75), water resource development and pollution are dominant contributing themes for both
+human water security and biodiversity (Fig. 3), and they typically
+occur together. Their combined importance derives from the waterborne nature of the stressors: water pollution distributed throughout
+the worlds rivers is broadly coincident with the widespread presence
+of engineering works that enable the overuse and mismanagement of
+water in many locations. Catchment disturbance and biotic factors
+have a secondary role in high incident threat areas as their stressors
+often represent more localized effects.
+High levels of incident human water security and biodiversity
+threat emerge only from the spatial concordance of high scores for
+many stressors (Fig. 3). Stressors within the catchment disturbance
+and pollution themes generally act in unison across human water
+security and biodiversity, highlighting shared sources of impact, with
+cropland the predominant catchment stressor and nutrient, pesticide
+and organic loads dominating pollution sources. For the remaining
+themes, stressors act more independently, reflecting distinctions
+between human water security and biodiversity perspectives.
+Stressors associated with impoundments and flow depletion are the
+clearest sources of biodiversity threat by directly degrading habitat,
+while negligibly affecting human water security. These results highlight the diverse and unique sets of stressor impacts confronting
+rehabilitation efforts in high impact areas, and argue for replacing
+current fragmentary approaches to management with integrative
+strategies that deliberately alleviate multiple sources of threat29.
+
+Chief determinants of global threat
+Globally, the catchment disturbance, pollution, and water resource
+development themes are spatially well correlated (r $ 0.75 for human
+water security, P , 0.001; r $ 0.62 for biodiversity, P , 0.001;
+n 5 46,517 grid cells), reflecting congruent gradients of human activities and their impacts (Supplementary Table 3). Biotic factors are less
+
+Reducing threats to human water security
+Our incident threat maps do not reflect technological investments
+that can improve human water security. To capture this effect, we
+derived an investment benefits factor, depicting supply stabilization,
+improved water services and access to waterways, then used it to
+calculate an adjusted human water security threat. Comparison of
+incident and adjusted human water security threats reveals that technological investments produce globally significant, positive impacts
+on human water security and substantially reconfigure exposure to
+threat (Fig. 4 and Supplementary Information). Highly developed
+3 0 S E P T E M B E R 2 0 1 0 | VO L 4 6 7 | N AT U R E | 5 5 7
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+RESEARCH ARTICLE
+
+3,000
+
+Aggregate score
+
+Watershed disturbance
+
+Human water security
+Biodiversity
+
+2,000
+
+Water resource development
+
+Cropland
+
+Dam density
+
+Impervious surfaces
+
+River fragmentation
+
+Livestock density
+
+Consumptive water loss
+
+Wetland
+disconnectivity
+
+Human water stress
+
+0 1,000 2,000 3,000 Agricultural water stress
+Aggregate score
+Flow disruption
+Pollution
+0 1,000 2,000 3,000
+Aggregate score
+
+Soil salinization
+
+1,000
+
+Nitrogen loading
+Phosphorus loading
+
+Biotic factors
+
+Mercury deposition
+0
+
+Non-native fishes (%)
+
+Pesticide loading
+Watershed
+disturbance
+
+Pollution
+
+Water resource
+development
+
+Biotic
+factors
+
+Sediment loading
+
+Non-native fishes (no.)
+
+Organic loading
+
+Fishing pressure
+
+Potential acidification
+Aquaculture pressure
+
+Thermal alteration
+0 1,000 2,000 3,000
+Aggregate score
+
+0 1,000 2,000 3,000
+Aggregate score
+
+Figure 3 | Theme and driver contributions in areas where incident threat
+exceeds the 75th percentile. High incident threat typically arises from the
+spatial coincidence of multiple themes and/or drivers of stress acting in concert.
+Each aggregate score represents the number of grid cells exceeding the 75th
+percentile for each individual theme or driver over the high incident threat
+
+areas. Influence of each of the four themes (left) is relative to its contribution to
+overall incident threat. For the individual drivers (right), scores are relative to
+other drivers in the same theme. Bars summarize results over the entire
+discharging landmass.
+
+regions with high incident threat (for example, United States, Western
+Europe) often show much lower adjusted threat indices, gaining benefit from massive investments in water infrastructure, the total value of
+which is in the trillions of US dollars2,3,30. Investments by high-income
+countries benefit 850 million people, lowering their exposure to high
+incident threat by 95%, with corresponding values for upper middleincome countries of 140 million and 23% (Table 1). Minimal investment in developing countries means that their vulnerability remains
+high, with 3.4 billion people in these regions residing in areas showing
+the highest adjusted threat category.
+
+Our analysis is a spatial expression of the many water security
+challenges facing the worlds poor, as identified in case studies, documentary evidence and global, although fragmentary, data2,6,12 (Fig. 4).
+Most of Africa, large areas in central Asia and countries including
+China, India, Peru, or Bolivia struggle with establishing basic water
+services like clean drinking water and sanitation31, and emerge here as
+regions of greatest adjusted human water security threat. Lack of
+water infrastructure yields direct economic impacts. Drought- and
+famine-prone Ethiopia, for example, has 150 times less reservoir storage per capita than North America32 and its climate and hydrological
+
+Relative
+re-scaling
+
+
+
+Incident
+HWS threat
+0.2
+0
+
+Investment
+benefits factor
+
+0.6
+0.4
+
+1
+0.8
+
+0.2
+0
+
+Reduced
+HWS threat
+
+0.6
+0.4
+
+0.2
+
+1
+0.8
+
+Adjusted HWS threat
+0.2
+0.6
+1
+0
+0.4
+0.8
+
+0
+
+Adjusted
+HWS threat
+
+0.6
+0.4
+
+1
+
+0.2
+
+0.8
+
+0
+
+0.6
+0.4
+
+1
+0.8
+
+No appreciable flow
+
+Figure 4 | Shifts in spatial patterns of relative human water security threat
+after accounting for water technology benefits. Inset maps illustrate the
+analytical approach and net impact of investment over a northsouth transect
+(top). Incident human water security (HWS) threat is converted to reduced
+threat (inset maps), which is then globally re-scaled into adjusted human water
+
+security threat. The final map shows relative units: areas with substantial
+technology investments have effectively limited exposure to threat whereas
+regions with little or no investment become the most vulnerable in a global
+context. Colour spectra depict three measures of threat (increasing, blue to red)
+and investment benefits (increasing, light to dark).
+
+5 5 8 | N AT U R E | VO L 4 6 7 | 3 0 S E P T E M B E R 2 0 1 0
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+ARTICLE RESEARCH
+Table 1 | Reconfiguring global exposure to incident human water security threat through technology investments
+Income level*
+
+GDP (PPP){
+(103 US dollars per capita)
+
+Global population
+by income level{ (%)
+
+,1
+15
+510
+.10
+
+7
+61
+14
+18
+
+Low
+Lower middle
+Upper middle
+High
+
+Fraction of population within each income level{ where HWS threat .0.75
+Incident HWS threat (%)
+
+Adjusted HWS threat (%)
+
+43
+85
+79
+90
+
+96
+88
+61
+5
+
+Percentages were determined by summing populations within national-scale designations of income that were exposed initially to high levels of incident human water security (HWS) threat and then residual
+adjusted human water security threat, after benefits were tabulated and results re-scaled globally. Differences in the last two columns indicate a major global-scale realignment of relative risk, with human water
+security most assured for wealthy nations and least so for the worlds poor. Investments are represented by existing infrastructure comprising water supply, use and delivery services, plus access to waterways
+(specific driver data sets and calculation procedures used are given in Supplementary Methods Overview).
+* Approximated from World Bank categories50.
+{ Classifications are for 200850.
+{ Computed over the discharging landmass.
+
+variability takes a 38% toll on gross domestic product (GDP)2. The
+number of people under chronically high water scarcity, many of
+whom are poor, is 1.7 billion or more globally2,3,15, with 1.0 billion
+of these living in areas with high adjusted human water security threat
+(.0.75).
+Contrasts between incident and adjusted human water security
+threat are striking when considered relative to national wealth.
+Incident human water security threat is a rising but saturating function of per capita GDP, whereas adjusted human water security threat
+declines sharply in affluent countries in response to technological
+investments (Fig. 5). The latter constitutes a unique expression of
+the environmental Kuznets curve33, which describes rising ambient
+stressor loads during early-to-middle stages of economic growth
+1.0
+Fraction of global population
+
+Incident
+Adjusted
+
+0.5
+
+Nu
+
+ll e
+
+t
+ec
+xp
+
+at
+
+n
+io
+
+0.0
+0.0
+
+<0.25
+
+<0.5
+
+<0.75
+
+<1.0
+
+Relative threat to water security
+
+Threat to human water security
+
+1.0
+Incident threat
+
+Beneficial effect
+of investments
+
+0.5
+
+followed by reduced loading through environmental controls instituted as development proceeds. The concept applies well to air pollutants that directly expose humans to health risks, and which can be
+regulated at their source33. The global investment strategy for human
+water security shows a distinctly different pattern. Rich countries
+tolerate relatively high levels of ambient stressors, then reduce their
+negative impacts by treating symptoms instead of underlying causes
+of incident threat.
+
+The biodiversity dilemma
+We find that 65% of global river discharge, and the aquatic habitat
+supported by this water, is under moderate to high threat (.0.5). Yet,
+we were unable to compute a globally meaningful estimate of adjusted
+biodiversity threat due to the paucity of relevant data but also the
+reality that much less comprehensive investment has been directed
+to biodiversity conservation than to human water security34,35.
+Limited global investment in environmental protection and rehabilitation means that stresses on biodiversity for many locations go
+unabated. In addition, the substantial reductions in incident human
+water security threat through point-of-service strategies emphasizing
+water supply stabilization and delivery incorporate some of the very
+factors that negatively impact biodiversity through flow distortion
+and habitat loss. This helps to explain why environmental Kuznets
+curve benefits that typically rise with increasing levels of affluence do
+not necessarily hold for fish biodiversity36 or water quality33, and why
+river restoration efforts often fail29. Indeed, Europe still suffers significant biodiversity threat despite concerted, high-level efforts aimed
+at achieving the contrary35,37.
+The worldwide pattern of river threats documented here offers the
+most comprehensive explanation so far of why freshwater biodiversity
+is considered to be in a state of crisis3841. Estimates suggest that at least
+10,00020,000 freshwater species are extinct or at risk8,42, with loss
+rates rivalling those of previous transitions between geological epochs
+like the Pleistocene-to-Holocene43. Although we have not established
+causality, our results establish a precursor to future studies that could
+link the role of stressors to biodiversity loss more directly.
+
+Reduced threat
+
+Rising to a dual challenge
+
+1
+
+2
+
+5
+
+5
+
+1
+
+0
+
+0
+
+7.
+
+5
+
+5.
+0
+7.
+5
+
+2.
+5
+5.
+0
+
+1.
+0
+2.
+5
+
+5
+0.
+<
+
+0.
+5
+1.
+0
+
+0.0
+>2
+
+GDP (PPP) 103 US dollars per capita
+
+Figure 5 | Globally aggregated human water security threat indices linked to
+population and level of economic development. Investments in engineering
+infrastructure and services improve water security, with their value expressed
+here in reduced threat units. Net benefits accrue to only a fraction of global
+population (top). Technology investments greatly benefit wealthy nations,
+shifting them from most to least threatened (bottom). The fraction of global
+population is over the discharging landmass. GDP (PPP) refers to annual gross
+domestic product in 2008 at purchasing power parity exchange50, with
+associated grid-cell means of incident human water security threat (red bars)
+and reduced threat (yellow; see Fig. 4). Vertical lines represent ranges.
+
+Given escalating trends in species extinction, human population, climate change, water use and development pressures44, freshwater systems will remain under threat well into the future. Without major
+policy and financial commitments, stark contrasts in human water
+security will continue to separate rich from poor. We remain off-pace
+for meeting the Millennium Development Goals for basic sanitation
+services31, a testament to the lack of societal resolve, when one considers that a century of engineering know-how is available and returns
+on investment in facilities are high2. For Organisation for Economic
+Co-operation and Development (OECD) and BRIC (Brazil, Russia,
+India and China) countries alone, 800 billion US dollars per year will
+be required in 2015 to cover investments in water infrastructure, a
+target likely to go unmet30. The situation is even more daunting for
+biodiversity. International goals for its protection lag well behind
+3 0 S E P T E M B E R 2 0 1 0 | VO L 4 6 7 | N AT U R E | 5 5 9
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+Low
+
+Biodiversity threat
+Low
+High
+
+High
+
+Human water
+security threat
+
+RESEARCH ARTICLE
+
+Figure 6 | Prevailing patterns of threat to human water security and
+biodiversity. Adjusted human water security threat is contrasted against
+incident biodiversity threat. Much of the developed world faces the challenge of
+reducing biodiversity threat and protecting biodiversity, while maintaining
+established water services. The developing world shows tandem threats to
+human water security and biodiversity, posing an arguably more significant
+
+challenge. Large, contiguous areas of low threat to biodiversity and human
+water security remain where dense population and agriculture are absent.
+These contrasts help to identify target regions and investment strategies to
+enhance water stewardship and biodiversity protection34,45. In this Figure, a
+breakpoint of 0.5 delineates low from high threat.
+
+expectation and global investments are poorly enumerated but likely
+to be orders of magnitude lower than those for human water security35,45, leaving at risk animal and plant populations, critical habitat
+and ecosystem services that directly underpin the livelihoods of many
+of the worlds poor46. Left unaddressed, these linked human water
+securitybiodiversity water challenges are forecast to generate social
+instability of growing concern to civil and military planners47.
+Our threat maps enable spatial planning to enhance water security
+for humans and nature16. Although our intent is not to develop formal
+priorities to mitigate risk, we present a final analysis that is instructive
+in considering options. Comparing adjusted human water security to
+incident biodiversity threats highlights regions where either human
+water security or biodiversity challenges, or their conjunction, predominate (Fig. 6). Such patterns are important to identify because the
+main stressors determining human water security and biodiversity
+threat are sometimes distinct, thus requiring different and potentially
+conflicting management solutions (Fig. 3).
+In remote areas with low indices of both human water security and
+biodiversity threat, preserving critical habitat and ecosystem processes may be the single best strategy to contain future risk, yet the
+issue of who will pay for such protection is unresolved34,45. Solutions
+for densely settled regions will be more elusive. Although there may be
+easy consensus on controlling factors that lead to both human water
+security and biodiversity threat (for example, pollution), the decision
+to construct large-scale dams is a prime example of how development
+pressure is often at odds with biodiversity conservation and thus more
+contentious11,48. In populated regions of the developed world, existing
+human water security infrastructure will require re-engineering to
+protect biodiversity while retaining human water services. Across
+the developing world, establishing human water security for the first
+time while preserving biodiversity constitutes a dual challenge, best
+met through integrated water resource management2 that expressly
+balances the needs of humans and nature. Although our results offer
+prima facie evidence that society has failed to institute this principle
+broadly, there are promising, cost-effective approaches to preserve
+and rehabilitate ecosystems29. Engineers, for instance, can re-work
+dam operating rules to maintain economic benefits while simultaneously conveying adaptive environmental flows for biodiversity49.
+Protecting catchments reduces costs for drinking water treatment,
+whereas preserving river floodplains sustains valuable flood protection and rural livelihoods3. Such options offer developing nations the
+opportunity to avoid the high environmental, economic and social
+costs that heavily engineered water development systems have produced elsewhere11.
+
+The need to mobilize financial resources to support integrated
+approaches remains urgent, lest further deterioration of fresh water
+becomes the accepted norm2,34. Habitat monitoring2426 and spatially
+explicit species inventories7 are essential in evaluating the success of
+investments31,34 and detecting the emergence of new challenges. Tradeoffs and difficult choices involving competing stakeholders are already
+commonplace2,3,48 and resolving these dilemmas more effectively
+requires high-resolution spatial approaches that engage policymakers
+and water managers at scales relevant to their decisions, including subnational administrative units, river basins and individual stream
+reaches. Uniting our current approach with ocean-based assessments16,17 will identify areas where improved freshwater and land
+management would benefit the worlds impaired coastal zones. If climate mitigation is any guide, a generational timeframe may be necessary to stimulate sufficient political willpower to address the global
+river health challenge. In the meantime, a substantial fraction of the
+worlds population and countless freshwater species remain imperilled.
+
+METHODS SUMMARY
+Maps of incident threat to river systems were based on spatially explicit data
+depicting 23 stressors (drivers), grouped into four major themes representing
+environmental impact. We chose drivers based on their documented role in
+degrading river systems and the availability of global-scale information with
+sufficient fidelity and spatial resolution. Conceptual and computational details
+are given in Supplementary Methods. Briefly, impacts of individual drivers originated from the spatial distribution of loadings onto 309 (latitude 3 longitude)
+grid cells covering the actively discharging portion of global landmass bearing
+local runoff or major river corridor flow (46,517 cells representing 99.2 million
+km2). Driver loadings were routed down digital river networks23, accounting for
+new stressor inputs, and dilution or concentration from tributary mixing, based
+on spatial changes in river discharge determined from net precipitation and
+abstraction, where appropriate. Global, high-resolution maps of each driver were
+then standardized using a cumulative density function that ranked all grid cells,
+yielding final driver scores between 0 and 1 that reflect the relative stressor level
+on each cell across the globe. The re-scaled driver scores were combined into
+overall incident threat indices using a two-tiered relative weight matrix derived
+from expert opinion (first among drivers within each theme, then among
+themes). We used separate weights to capture differences between human water
+security and biodiversity perspectives on each driver and theme (Supplementary
+Table 1). Separately, we applied the same procedure to an additional set of five
+drivers to derive an index of the beneficial effects of water-related capital and
+engineering investments2,3,6,31 in alleviating threats to human water security. By
+applying this investment benefits factor to the incident human water security
+threat index and re-scaling the global results, we produced the map of relative
+adjusted human water security threat (Fig. 4). There is insufficient information to
+map corresponding adjustments to incident biodiversity threat.
+
+5 6 0 | N AT U R E | VO L 4 6 7 | 3 0 S E P T E M B E R 2 0 1 0
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+ARTICLE RESEARCH
+Received 21 January; accepted 19 August 2010.
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
+
+26.
+27.
+
+28.
+29.
+30.
+
+Meybeck, M. Global analysis of river systems: from Earth system controls to
+Anthropocene syndromes. Phil. Trans. R. Soc. Lond. B, (2003).
+World Water Assessment Programme. Water in a Changing World. The United
+Nations World Water Development Report 3 (UNESCO, 2009).
+Vorosmarty, C. J. et al. in Millennium Ecosystem Assessment Vol. 1, Ch. 7, 165207
+(Island Press, 2005).
+Karl, T. R., Melillo, J. M. & Peterson, T. C. (eds) Global Climate Change Impacts in the
+United States (Cambridge Univ. Press, 2009).
+Framing Committee of the Global Water System Project. Humans transforming
+the global water system. Eos AGU Trans. 85, 513514 (2004).
+United Nations Development Programme. HDR 2006Beyond Scarcity: Power,
+Poverty and the Global Water Crisis (UNDP, 2006).
+Abell, R. et al. Freshwater ecoregions of the world: a new map of biogeographic
+units for freshwater biodiversity conservation. Bioscience 58, 403414 (2008).
+International Union for Conservation of Nature and Natural Resources. The IUCN
+Red List of Threatened Species 2009. 1 http://www.iucnredlist.org (2009).
+Convention on Biological Diversity. Text of the Convention on Biological Diversity
+http://www.biodiv.org/convention/articles.asp (2004).
+United Nations Environment Programme. Report of the third ad hoc
+intergovernmental and multi-stakeholder meeting on an intergovernmental
+science-policy platform on biodiversity and ecosystem services. UNEP/IPBES/3/3
+(2010).
+Gleick, P. H. Global freshwater resources: soft-path solutions for the 21st century.
+Science 302, 15241528 (2003).
+Sullivan, C. & Meigh, J. Targeting attention on local vulnerabilities using an
+integrated index approach: the example of the Climate Vulnerability Index. Water
+Sci. Technol. 51, 6978 (2005).
+Esty, D. et al. The 2005 Environmental Sustainability Index: Benchmarking National
+Environmental Stewardship (Yale Center for Environmental Law and Policy, 2005).
+Esty, D. et al. The Pilot 2006 Environmental Performance Index Report (Yale Center
+for Environmental Law & Policy and CIESIN, 2006).
+Vorosmarty, C. J., Green, P., Salisbury, J. & Lammers, R. Global water resources:
+vulnerability from climate change and population growth. Science 289, 284288
+(2000).
+Halpern, B. S. et al. A global map of human impact on marine ecosystems. Science
+319, 948952 (2008).
+Halpern, B. S. et al. Global priority areas for incorporating landsea connections in
+marine conservation. Conser. Lett. 2, 189196 (2009).
+Sanderson, E. W. et al. The human footprint and the last of the wild. Bioscience 52,
+891904 (2002).
+Food and Agriculture Organization. Water Monitoring: Mapping Existing Global
+Systems & Initiatives (FAO, 2006).
+Vorosmarty, C. J. Global water assessment and potential contributions from earth
+systems science. Aquat. Sci. 64, 328351 (2002).
+Dudgeon, D. et al. Freshwater biodiversity: importance, threats, status and
+conservation challenges. Biol. Rev. Camb. Philos. Soc. 81, 163182 (2006).
+Vorosmarty, C. J., Douglas, E. M., Green, P. A. & Revenga, C. Geospatial indicators of
+emerging water stress: an application to Africa. Ambio 34, 230236 (2005).
+Fekete, B. M., Vorosmarty, C. J. & Lammers, R. B. Scaling gridded river networks for
+macroscale hydrology: development, analysis, and control of error. Wat. Resour.
+Res. 37, 19551967 (2001).
+US-Environmental Protection Agency. The Quality of Our Nations Waters. EPA-841R-02001 (US EPA, 2000).
+Ministry of Environmental Protection. The State of the Environment of China in 2008
+http://english.mep.gov.cn/News_service/news_release/200906/
+t20090618_152932.htm (Ministry of Environmental Protection, The Peoples
+Republic of China, 2009).
+UNEP GEMS/Water Programme. Water Quality for Ecosystem and Human Health
+2nd edn (UNEP GEMS/Water Programme, 2008).
+Seitzinger, S. P., Harrison, J. A., Dumont, E., Beusen, A. H. W. & Bouwman, A. F.
+Sources and delivery of carbon, nitrogen, and phosphorus to the coastal zone: an
+overview of Global Nutrient Export from Watersheds (NEWS) models and their
+application. Glob. Biogeochem. Cycles 19, GB4S01 (2005).
+World Conservation Monitoring Centre. Freshwater Biodiversity: a Preliminary Global
+Assessment. WCMC Biodiversity Series No. 8 (World Conservation Press, 1998).
+Palmer, M. A. & Filoso, S. Restoration of ecosystem services for environmental
+markets. Science 325, 575576 (2009).
+Ashley, R. & Cashman, A. The impacts of change on the long-term future demand
+for water sector infrastructure. In: Infrastructure to 2030: Telecom, Land Transport,
+Water and Electricity Ch. 5 (Organization for Economic Co-operation and
+Development, 2006).
+
+31. WHO/UNICEF. Progress on Sanitation and Drinking-Water: 2010 Update. Joint
+Monitoring Programme for Water Supply and Sanitation (World Health
+Organisation/UNICEF, 2010).
+32. Grey, D. & Sadoff, C. W. Water for Growth and Development. Thematic Documents of
+the IV World Water Forum (Comision Nacional del Agua: Mexico, 2006).
+33. Dinda, S. Environmental Kuznets curve hypothesis: a survey. Ecol. Econ. 49,
+431455 (2004).
+34. The Global Environmental Facility. Financing the Stewardship of Global Biodiversity
+(GEF, 2008).
+35. Butchart, S. H. M. et al. Global biodiversity: indicators of recent declines. Science
+328, 11641168 (2010).
+36. Clausen, R. & York, R. Global biodiversity decline of marine and freshwater fish: a
+cross-national analysis of economic, demographic, and ecological influences. Soc.
+Sci. Res. 37, 13101320 (2008).
+37. Tockner, K., Uehlinger, U. & Robinson, C. T. (eds) Rivers of Europe (Academic, 2009).
+38. Balian, E. V., Leveque, C., Segers, H. & Martens, K. The freshwater animal diversity
+assessment: an overview of the results. Hydrobiologia 595, 627637 (2008).
+39. Ricciardi, A. & Rasmussen, J. B. Extinction rates of North American freshwater
+fauna. Conserv. Biol. 13, 12201222 (1999).
+40. Kottelat, M. & Freyhof, J. Handbook of European Freshwater Fishes (Kottelat and
+Freyhof, 2007).
+41. Jelks, H. L. et al. Conservation status of imperiled North American freshwater and
+diadromous fishes. Fisheries 33, 372407 (2008).
+42. Strayer, D. L. & Dudgeon, D. Freshwater biodiversity conservation: recent progress
+and future challenges. J. N. Am. Benthol. Soc. 29, 344358 (2010).
+43. Zalasiewicz, J. et al. Are we now living in the Anthropocene? GSA Today 18, 48
+(2008).
+44. Steffen, W., Crutzen, P. J. & McNeill, J. R. The Anthropocene: are humans now
+overwhelming the great forces of nature? AMBIO 36, 614621 (2007).
+45. Brooks, T. M. et al. Global biodiversity conservation priorities. Science 313, 5861
+(2006).
+46. Reid, W. V. et al. Millennium Ecosystem Assessment: Ecosystems and Human WellBeingSynthesis Report (World Resources Institute, 2005).
+47. Brown, O. & Crawford, A. Rising Temperatures, Rising Tensions: Climate Change and
+the Risk of Violent Conflict in the Middle East (International Institute for Sustainable
+Development, 2009).
+48. World Commission on Dams. Dams and Development: A New Framework for
+Decision-Making (Earthscan, 2000).
+49. Arthington, A. H., Bunn, S. E., Poff, N. L. & Naiman, R. J. The challenge of providing
+environmental flow rules to sustain river ecosystems. Ecol. Appl. 16, 13111318
+(2006).
+50. The World Bank.. Country Classifications http://data.worldbank.org/about/
+country-classifications (17 May 2010).
+Supplementary Information is linked to the online version of the paper at
+www.nature.com/nature.
+Acknowledgements We thank A. DeSherbinin, L. Poff, C. Revenga, J. Melillo and O.
+Young for comments on the manuscript; D. Allan, R. Abell, J. Bogardi, M. Meybeck, W.
+Wollheim, R. F. Wright, D. Boswell, R. Lacey, N. Schneider and D. Vorosmarty for advice;
+and D. Dube and B. Fekete for technical support. Grant support for database and tool
+development was from NASA Inter-Disciplinary Science Program Grant NNX07AF28G,
+with additional support from the NSF Division of Earth Sciences (Hydrologic Sciences
+Program Award #0854957) and Global Environment Facility (UPI 00345306). P.B.M.
+was supported by a D.H. Smith Fellowship. Financial and logistical support for expert
+group meetings and communications was from the Global Water System Project
+(Bonn), DIVERSITAS-freshwaterBIODIVERSITY (Paris), NSF BestNet, and Australian
+Agency for International Development (AusAID) through the Australian Water Research
+Facility. Conference facilities were provided by the Swiss Federal Institute of Science &
+Technology (Eawag) and The City College of New York/CUNY.
+Author Contributions All authors contributed to project conceptualization during
+workshops led by C.J.V. C.J.V. designed the global analysis, and P.B.M., A.P., P.G. and
+M.O.G. designed and implemented the analytical approach with essential input from
+S.E.B., D.D., C.A.S., P.M.D. and C.R.L. A.P., P.G. and S.G. developed the database and
+mapping tools. Several authors led a separate component of data set development and
+all provided quality assurance. C.J.V., P.B.M. and M.O.G. wrote the manuscript with input
+from all authors.
+Author Information Reprints and permissions information is available at
+www.nature.com/reprints. The authors declare no competing financial interests.
+Readers are welcome to comment on the online version of this article at
+www.nature.com/nature. Correspondence and requests for materials should be
+addressed to C.J.V. (contact@riverthreat.net).
+
+3 0 S E P T E M B E R 2 0 1 0 | VO L 4 6 7 | N AT U R E | 5 6 1
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+CORRECTIONS & AMENDMENTS
+ERRATUM
+doi:10.1038/nature09549
+
+Global threats to human water
+security and river biodiversity
+C. J. Vorosmarty, P. B. McIntyre, M. O. Gessner, D. Dudgeon,
+A. Prusevich, P. Green, S. Glidden, S. E. Bunn, C. A. Sullivan,
+C. Reidy Liermann & P. M. Davies
+Nature 467, 555561 (2010)
+
+In this Article, the full present address for author P. B. McIntyre was
+inadvertently missing from the bottom of the page. The correct present address is: Center for Limnology, University of Wisconsin,
+Madison, Wisconsin 53706, USA. This has been corrected in the
+online PDF.
+
+3 3 4 | N AT U R E | VO L 4 6 8 | 1 1 NO V E M B E R 2 0 1 0
+
+2010 Macmillan Publishers Limited. All rights reserved
+
+
