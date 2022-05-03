@@ -751,7 +751,7 @@ class Top2Vec_classifier:
                 valid = True
                 
             if (only_bad and not(valid)) or not(only_bad):
-                raw_sdgsAscii = ["{:.2f}".format(ii) for ii in raw_sdgs]
+                raw_sdgsAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(raw_sdgs, range(1,18))]
                 rawSDG.append(raw_sdgsAscii)
                 
                 raw_scoresAscii = ["{:.2f}".format(ii) for ii in raw_topicsScores]
@@ -800,8 +800,8 @@ class Top2Vec_classifier:
             self.topics_association[ii] = sdgs
             # if normalize:
             #     self.topics_association[ii] = sdgs / sum(sdgs)
-                
-            print('Topic{:2d}: '.format(ii), list(self.topics_association[ii]))
+            listAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(self.topics_association[ii], range(1,18))]
+            print('Topic{:2d}: '.format(ii), ' | '.join(listAscii))
             
         if len(path_csv) > 4:
             # Then the mapping result is stored in a csv
@@ -828,6 +828,7 @@ class Top2Vec_classifier:
         topics_words, word_scores, topic_scores, topic_nums = self.global_model.query_topics(text, num_topics=n_query)
         predictSDGs = np.zeros(17)  
         for topicIndex, topicScore in zip(topic_nums, topic_scores):
+            if topicScore < 0: break
             predictSDGs += topicScore * self.topics_association[topicIndex]
         top = sorted(predictSDGs, reverse=True)
         sdgs = []; scores = []

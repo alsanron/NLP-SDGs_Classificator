@@ -8,6 +8,7 @@ import pandas as pd
 import json
 import conf
 import preprocess
+import random
 
 def get_sdg_titles(refPath):
     # returns the title of each SDG as a dictionary, with key: SDGx, value = title.
@@ -100,6 +101,16 @@ def get_sdgs_org_files(refPath, sdg=-1):
     nFiles = len(corpus)
     print("- {} sdgs files were found".format(nFiles))    
     return [corpus, associatedSDGs]
+
+# DATASET: https://www.kaggle.com/datasets/xhlulu/medal-emnlp
+def get_health_care_files(refPath, n_files=-1):
+    csv = pd.read_csv(refPath + 'health_care_2000texts.csv')
+    corpus = list(csv["text"])
+    sdgs = [[3] for ii in range(len(corpus))]
+    if n_files < 0 or n_files > len(corpus):
+        n_files = len(sdgs)
+    print("- {} health care texts".format(len(corpus)))
+    return [corpus[:n_files], sdgs[:n_files]]
 
 # DATASET: files from scopus classified as related to a sdg previously by the algorithm
 def get_previous_classified_abstracts(refPath):

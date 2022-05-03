@@ -48,6 +48,7 @@ raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=False, kw=True, intro=True, body=True, concl=True)
 raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
 raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
+raw_healthcare, sdgs_healthcare = data.get_health_care_files(paths["ref"], n_files=100)
 
 topWords = 25
 
@@ -76,7 +77,7 @@ print('######## TRAINING MODELS...')
 # lda.map_model_topics_to_sdgs(n_top_words=topWords, path_csv="out/topics_lda_global_monogram.csv")
 
 top2vec = model.Top2Vec_classifier(paths)
-trainData = [raw_orgFiles + raw_extraFiles, sdgs_orgFiles + sdgs_extra]
+trainData = [raw_orgFiles + raw_extraFiles + raw_healthcare, sdgs_orgFiles + sdgs_extra + sdgs_healthcare]
 
 def test_model(model, path_csv_topics="", path_test_excel=""):
     model.map_model_topics_to_sdgs(associated_sdgs=trainData[1], path_csv=path_csv_topics, num_docs=-1, normalize=True)# out/topics_top2vec.csv"
@@ -91,12 +92,12 @@ def test_model(model, path_csv_topics="", path_test_excel=""):
     #                  only_bad=False, score_threshold=2
     #                  )
 
-# top2vec.train_global_model(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method="learn", ngram=True, min_count=1, workers=8, embedding_batch_size=10, tokenizer=False, split=False, nSplit=25) #"all-MiniLM-L6-v2", universal-sentence-encoder
+# top2vec.train_global_model(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method="learn", ngram=True, min_count=2, workers=8, embedding_batch_size=10, tokenizer=False, split=False, nSplit=25) #"all-MiniLM-L6-v2", universal-sentence-encoder
 top2vec.load_global_model()
 
 test_model(top2vec, 
            path_csv_topics="out/topics_top2vec_ext.csv",
-           path_test_excel="out/test_abstract_top2vec_manual.xlsx"
+           path_test_excel="out/test_abstract_top2vec_ext2.xlsx"
            )
 
 if 0:
