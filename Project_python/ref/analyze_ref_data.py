@@ -66,5 +66,5 @@ def show_data(files_data, sdgs_data, label):
 
 
 # show_data(raw_orgFiles, sdgs_orgFiles, "training")
-show_data(raw_extraFiles, sdgs_extra, "pathfinder")
+show_data(raw_orgFiles, sdgs_orgFiles, "SDGs-UN information")
 

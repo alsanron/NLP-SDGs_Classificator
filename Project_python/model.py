@@ -28,6 +28,7 @@ class NMF_classifier:
     individual_models=[]
     global_model=[]
     topics_association=[]
+    topics_map=[]
     verbose=False
     
     def __init__(self, paths, verbose=False):
@@ -89,11 +90,9 @@ class NMF_classifier:
         tools.save_obj(self.global_model[0], self.paths["model"] + "model_{}topics.pickle".format(n_topics))
         tools.save_obj(self.global_model[1], self.paths["model"] + "vect_{}topics.pickle".format(n_topics))
         
-    def test_model(self, corpus, associated_SDGs, path_to_plot="", path_to_excel=""):
-        predictedSDGs = []
+    def test_model(self, corpus, associated_SDGs, valid_threshold=0.2, path_to_plot="", path_to_excel=""):
         realSDGs = []
         raw_SDGs = []
-        scoresSDGs = []
         valids = []
         texts = []
         validsAny = []
@@ -101,23 +100,22 @@ class NMF_classifier:
         countWellPredictionsPerSDG = np.zeros(17)
         
         for text, sdgs in zip(corpus, associated_SDGs):
-            predic, score, raw_feats = self.map_text_to_sdgs(text, top_score=len(sdgs))  
-            valid = False
-            if sorted(sdgs) == sorted(predic):
-                valid = True
-            validSingle = False
+            sdgs_mapping = self.map_text_to_sdgs(text)  
+            counter = 0
+            validSingle = False; valid = False
             for sdg in sdgs:
                 countPerSDG[sdg - 1] += 1
-                if sdg in predic:
-                    validSingle = True
+                if (sdgs_mapping > valid_threshold)[sdg - 1]:
                     countWellPredictionsPerSDG[sdg - 1] += 1
-                    break
-            raw_sdgsAscii = ["{:.2f}".format(ii) for ii in raw_feats]
+                    validSingle = True; counter += 1
+            if counter == len(sdgs):
+                valid = True
+                
+            raw_sdgsAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(sdgs_mapping, range(1,18))]
+            raw_sdgsAscii = "|".join(raw_sdgsAscii)
             raw_SDGs.append(raw_sdgsAscii)
-            predictedSDGs.append(predic)
             realSDGs.append(sdgs)
             texts.append(text)
-            scoresSDGs.append(score)
             valids.append(valid)
             validsAny.append(validSingle)
             
@@ -127,13 +125,11 @@ class NMF_classifier:
         
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
-            df["prediction"] = predictedSDGs
-            df["raw"] = raw_SDGs
             df["texts"] = texts
             df["real"] = realSDGs
-            df["scores"] = scoresSDGs
-            df["valid"] = valids
-            df["valid_single"] = validsAny
+            df["sdgs_association"] = raw_SDGs
+            df["all ok"] = valids
+            df["any ok"] = validsAny
             df.to_excel(path_to_excel)
         
         if len(path_to_plot) > 0:
@@ -149,19 +145,14 @@ class NMF_classifier:
             plt.ylabel("Correctly individual identified [%]")
             plt.savefig(path_to_plot)
             
-    def map_text_to_sdgs(self, text, top_score):
+    def map_text_to_sdgs(self, text):
         tokens = " ".join(tools.tokenize_text(text, lemmatize=True, extended_stopwords=True))
         query_words_vect = self.global_model[1].transform([tokens])
         topicFeats = self.global_model[0].transform(query_words_vect)[0]
-        sortArgs = topicFeats.argsort()
-        predictSDGs = []
-        scores = []
-        for ii in range(0, top_score):
-            index = sortArgs[-(ii + 1)]
-            scoreSDG = self.topics_association[index]
-            predictSDGs.append(scoreSDG)
-            scores.append(topicFeats[index])
-        return [predictSDGs, scores, topicFeats]
+        sdgs_score = np.zeros(17)
+        for topicScore in topicFeats:
+            sdgs_score += topicScore * self.topics_map[list(topicFeats).index(topicScore)] * 10
+        return sdgs_score
         
     def map_model_topics_to_sdgs(self, n_top_words, path_csv=""):
         # Maps each new topic of the general NMF model to an specific SDG obtained from training 17 models
@@ -174,6 +165,12 @@ class NMF_classifier:
             associated_sdg.append([topic, topic_ind])
         sdgs_coh = [sdg[0] for sdg in associated_sdg]
         topics_association = [sdg[1] for sdg in associated_sdg]
+        self.topics_map = []
+        for sdg in topics_association:
+            tmp = np.zeros(17)
+            tmp[sdg - 1] = 1
+            self.topics_map.append(tmp)
+        
         self.topics_association = topics_association
         sdgs_found = [topics_association.count(sdg) for sdg in range(1,18)]
     
@@ -243,7 +240,6 @@ class NMF_classifier:
     # @return [model, vectorizer]
         vectorizer = TfidfVectorizer(min_df=1, # They have to appear in at least x documents
                                     encoding='utf-8',
-                                    max_df=1.0, 
                                     ngram_range=ngram, # min-max
                                     )
         vectorized_data = vectorizer.fit_transform(trainData)

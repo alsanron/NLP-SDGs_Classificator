@@ -95,12 +95,12 @@ def test_model(model, path_csv_topics="", path_test_excel=""):
 # top2vec.train_global_model(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method="learn", ngram=True, min_count=2, workers=8, embedding_batch_size=10, tokenizer=False, split=False, nSplit=25) #"all-MiniLM-L6-v2", universal-sentence-encoder
 top2vec.load_global_model()
 
-test_model(top2vec, 
-           path_csv_topics="out/topics_top2vec_ext.csv",
-           path_test_excel="out/test_abstract_top2vec_ext2.xlsx"
-           )
+# test_model(top2vec, 
+#            path_csv_topics="out/topics_top2vec_ext.csv",
+#            path_test_excel="out/test_abstract_top2vec_ext2.xlsx"
+#            )
 
-if 0:
+if 1:
     nmf = model.NMF_classifier(paths)
     nmf.train_individual_model_per_sdg(multigrams=(1,1))
     # nmf.load_individual_model_per_sdg()
@@ -108,10 +108,10 @@ if 0:
 
     nmf.train_global_model(orgFiles, n_topics=16, multigrams=(1,2))
     # nmf.load_global_model(n_topics=17)
-    nmf.map_model_topics_to_sdgs(n_top_words=topWords, path_csv="out/topics_nmf_global_bigram.csv")
+    nmf.map_model_topics_to_sdgs(n_top_words=topWords, path_csv="out/topics_nmf_global_bigram2.csv")
 
     # # TESTING SECTION
     print('###### NMF models...')
-    nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, path_to_excel="out/test_abstract_nmf.xlsx")
-    # nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, path_to_excel="out/results5.xlsx")
+    nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, valid_threshold=0.2, path_to_excel="out/test_abstract_nmf2.xlsx")
+    nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, valid_threshold=0.2, path_to_excel="out/test_full_nmf.xlsx")
     # nmf.test_model(corpus=raw_pathFinder, associated_SDGs=sdgs_pathFinder, path_to_excel="out/results6.xlsx")
