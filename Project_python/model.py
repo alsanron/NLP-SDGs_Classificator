@@ -716,14 +716,15 @@ class Top2Vec_classifier:
         newTopics = self.global_model.hierarchical_topic_reduction(num_topics)
         
         
-    def test_model(self, corpus, associated_SDGs,  stat_topics=-1, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0):
-        rawSDG = []; raw_scores = []
+    def test_model(self, corpus, associated_SDGs,  stat_topics=-1, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False):
+        rawSDG = []; 
         predictedSDGs = []
         realSDGs = []
         scoresSDGs = []
         valids = []
         validsAny = []
         texts = []
+        statsGlobal = []
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
         
@@ -733,7 +734,7 @@ class Top2Vec_classifier:
             stat_topics = numTopics
         
         for text, sdgs in zip(corpus, associated_SDGs):
-            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, n_query=stat_topics, score_threshold=score_threshold)  
+            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, n_query=stat_topics, score_threshold=score_threshold, only_positive=only_positive)  
             
             validSingle = False; ii = 0
             for sdg in sdgs:
@@ -748,11 +749,12 @@ class Top2Vec_classifier:
                 
             if (only_bad and not(valid)) or not(only_bad):
                 raw_sdgsAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(raw_sdgs, range(1,18))]
+                raw_sdgsAscii = "|".join(raw_sdgsAscii)
                 rawSDG.append(raw_sdgsAscii)
                 
-                raw_scoresAscii = ["{:.2f}".format(ii) for ii in raw_topicsScores]
-                raw_scores.append(raw_scoresAscii)
-                
+                stats = [min(raw_sdgs), np.mean(raw_sdgs), max(raw_sdgs)]
+                statsAscii = "[{:.2f}, {:.2f}, {:.2f}]".format(stats[0], stats[1], stats[2])
+                statsGlobal.append(statsAscii)
                 predictedSDGs.append(predic)
                 realSDGs.append(sdgs)
                 scoresSDGs.append(score)
@@ -768,12 +770,12 @@ class Top2Vec_classifier:
             df = pd.DataFrame()
             df["text"] = texts
             df["real"] = realSDGs
-            df["raw"] = rawSDG
-            df["raw_topics"] = raw_scores
+            df["topics_association"] = rawSDG
+            df["stats"] = statsGlobal
             df["prediction"] = predictedSDGs
             df["scores"] = scoresSDGs
-            # df["valid"] = valids
-            # df["valid_single"] = validsAny
+            df["all_valid"] = valids
+            df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
         
     def map_model_topics_to_sdgs(self, associated_sdgs, num_docs=15, path_csv="", normalize=False):
@@ -820,16 +822,16 @@ class Top2Vec_classifier:
                 df["topic{}".format(index)] = list(words)
             df.to_csv(path_csv)
             
-    def map_text_to_sdgs(self, text, n_query, score_threshold):
+    def map_text_to_sdgs(self, text, n_query, score_threshold, only_positive=False):
         topics_words, word_scores, topic_scores, topic_nums = self.global_model.query_topics(text, num_topics=n_query)
         predictSDGs = np.zeros(17)  
         for topicIndex, topicScore in zip(topic_nums, topic_scores):
-            if topicScore < 0: break
+            if only_positive and topicScore < 0: break
             predictSDGs += topicScore * self.topics_association[topicIndex]
         top = sorted(predictSDGs, reverse=True)
         sdgs = []; scores = []
         for ii in range(len(topic_scores)):
-            if top[ii] > score_threshold:
+            if top[ii] >= score_threshold:
                 sdgs.append(list(predictSDGs).index(top[ii]) + 1)
                 scores.append(top[ii])
 
