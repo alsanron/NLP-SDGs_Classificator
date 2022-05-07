@@ -151,7 +151,7 @@ class LDA_classifier(LdaModel):
             dfTopics[topicName] = topicsWords[topicIndex]
 
         topic = 0
-        maxTopicsPerLine = 8
+        maxTopicsPerLine = 7
         while(1):
             if topic + maxTopicsPerLine > nTopics:
                 print(dfTopics.iloc[:, topic:])
@@ -186,7 +186,8 @@ class LDA_classifier(LdaModel):
             if verbose:
                 listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
                 print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
-        return sum_per_topic
+        listAscii = ["x{}:{:.2f}".format(xx, sdg) for xx, sdg in zip(range(1,18), sum_per_topic)]
+        return [sum_per_topic, listAscii]
             
         # if len(path_csv) > 4:
         #     # Then the mapping result is stored in a csv
