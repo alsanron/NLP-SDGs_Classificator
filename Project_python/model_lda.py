@@ -17,11 +17,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
 import tools
 import warnings
-import tomotopy as tp
 warnings.filterwarnings('ignore')
 
     
-class LDA_classifier(tp.LDAModel):
+class LDA_classifier(LdaModel):
     paths=[]
     topics_association=[]
     verbose=False

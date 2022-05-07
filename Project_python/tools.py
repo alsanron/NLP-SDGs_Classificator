@@ -1,10 +1,11 @@
 # module that contains the required functions with specific functionalities such as converting texts from pdf to txt or preprocessing input text
 import os
 import subprocess
-from nltk.stem import WordNetLemmatizer
+from nltk.stem.wordnet  import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
 import gensim
 from gensim.parsing.preprocessing import STOPWORDS
+from gensim.models import Phrases
 import pickle
 import conf
 
@@ -18,12 +19,18 @@ def tokenize_text(text, min_word_length=3, lemmatize=True, stem=False, extended_
     # Clears the text from stopwords and lemmatizes the text returning the tokens
     lemmatizer = WordNetLemmatizer()
     stemmer = PorterStemmer()
+    
     tokens = gensim.parsing.strip_tags(text)
     tokens = gensim.parsing.strip_punctuation(tokens)
-    tokens = gensim.parsing.strip_numeric(tokens)
-    # tokens = gensim.parsing.remove_stopwords(tokens, stopwords=STOPWORDS)
     tokens = gensim.parsing.strip_multiple_whitespaces(tokens)
     tokens = gensim.utils.simple_preprocess(tokens, deacc=True, min_len=min_word_length)
+    tokens = [token for token in tokens if not token.isnumeric()]
+    
+    for token in tokens:
+        newToken = token
+        if lemmatize: newToken = lemmatizer.lemmatize(newToken)
+        if stem: newToken = stemmer.stem(newToken)
+        tokens[tokens.index(token)] = newToken
     
     set = STOPWORDS
     if extended_stopwords:
@@ -33,16 +40,11 @@ def tokenize_text(text, min_word_length=3, lemmatize=True, stem=False, extended_
             f.close()
         own_set = frozenset(words)
         set = STOPWORDS.union(own_set)
-    tokens = [token for token in tokens if not(token in set)]
+        tokens = [token for token in tokens if not(token in set)]
     
-    tokenizedText = []
-    for token in tokens:
-        newToken = token
-        if lemmatize: newToken = lemmatizer.lemmatize(newToken)
-        if stem: newToken = stemmer.stem(newToken)
-        tokenizedText.append(newToken)
-    tokenizedText = [token for token in tokenizedText if not(token in set)]
-    return tokenizedText
+    # just in case
+    tokens = [token for token in tokens if not token in set and len(token) > min_word_length]
+    return tokens
 
 def save_obj(obj, path):
     pickle.dump(obj, open(path, 'wb'))

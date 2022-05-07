@@ -80,7 +80,7 @@ def get_nature_abstracts():
 # DATASET: https://sdgs.un.org/
 # - Goals definition
 # - Goals progress - evolution section
-def get_sdgs_org_files(refPath, sdg=-1):
+def get_sdgs_org_files(refPath, sdg=-1, compact=False):
     # Returns an array where each elements consist of an array with the fields:
     # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
     if sdg > 0:
@@ -93,20 +93,45 @@ def get_sdgs_org_files(refPath, sdg=-1):
                 refPath + "SDGs_targets/"
                 ]
     corpus = []; associatedSDGs = []
-    for path in sdgsPaths:
-        for file in os.listdir(path):
-            if file.endswith(".txt") and file.startswith(sdgStart):
-                try:
-                    f = open(path + file, 'r')
-                    text = f.read()
-                except UnicodeError:
-                    f = open(path + file, 'r', encoding="utf8")
-                    text = f.read()
-                f.close()
-                fileSDG = [int(file.partition("_")[0])]
-                corpus.append(text)
-                associatedSDGs.append(fileSDG)
-        
+    if not compact:
+        for path in sdgsPaths:
+            for file in os.listdir(path):
+                if file.endswith(".txt") and file.startswith(sdgStart):
+                    try:
+                        f = open(path + file, 'r')
+                        text = f.read()
+                    except UnicodeError:
+                        f = open(path + file, 'r', encoding="utf8")
+                        text = f.read()
+                    f.close()
+                    fileSDG = [int(file.partition("_")[0])]
+                    corpus.append(text)
+                    associatedSDGs.append(fileSDG)
+    else:
+        counters = [0 for ii in range(1,18)]
+        texts = ["" for ii in range(1,18)]
+        for path in sdgsPaths:
+            for file in os.listdir(path):
+                if file.endswith(".txt") and file.startswith(sdgStart):
+                    try:
+                        f = open(path + file, 'r')
+                        text = f.read()
+                    except UnicodeError:
+                        f = open(path + file, 'r', encoding="utf8")
+                        text = f.read()
+                    f.close()
+                    fileSDG = [int(file.partition("_")[0])]
+                    
+                    for sdg in fileSDG:
+                        ind = sdg - 1
+                        counters[ind] += 1
+                        texts[ind] += " " + text
+                        if counters[ind] >= 3:
+                            corpus.append(texts[ind])
+                            associatedSDGs.append(fileSDG)
+                            counters[ind] = 0
+                            texts[ind] = ""
+                            
     nFiles = len(corpus)
     print("- {} sdgs files were found".format(nFiles))    
     return [corpus, associatedSDGs]
