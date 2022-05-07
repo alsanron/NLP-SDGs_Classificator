@@ -21,7 +21,7 @@ import tomotopy as tp
 warnings.filterwarnings('ignore')
 
     
-class PAM_classifier(tp.PAModel):
+class LDA_classifier(tp.LDAModel):
     paths=[]
     topics_association=[]
     verbose=False
@@ -150,41 +150,40 @@ class PAM_classifier(tp.PAModel):
         self.train(iter=iterations, workers=workers)
         
     def print_summary(self, top_words, path_csv=""):
-        count = self.get_count_by_super_topic()
-        count_ascii = ["x{}: {}".format(list(count).index(nWords), nWords) for nWords in count]
-        count_ascii = "Words per supertopic -> " + "|".join(count_ascii)
-        print(count_ascii)
-        
         count = self.get_count_by_topics()
         count_ascii = ["x{}: {}".format(list(count).index(nWords), nWords) for nWords in count]
-        count_ascii = "Words per subtopic -> " + "|".join(count_ascii)
+        count_ascii = "Words per topic -> " + "|".join(count_ascii)
         print(count_ascii)
         
-        nSubTopics = self.k2
-        topicsWords = [[] for ii in range(nSubTopics)]
+        nTopics = self.k
+        topicsWords = [[] for ii in range(nTopics)]
         dfTopics = pd.DataFrame()
-        for topicIndex in range(nSubTopics):
+        for topicIndex in range(nTopics):
             words_prob = self.get_topic_words(topicIndex, top_n=top_words)
             for elem in words_prob:
                 topicsWords[topicIndex].append("{:.3f}:{}".format(elem[1], elem[0]))
             topicName = "Topic{}".format(topicIndex)
             dfTopics[topicName] = topicsWords[topicIndex]
-        # print(dfTopics)
+        print(dfTopics)
         
         if len(path_csv) > 0:
-            dfTopics.to_csv(path_csv)
+            try:
+                dfTopics.to_csv(path_csv)
+            except:
+                print('CSV IS OPENED... ABORTING TOPICS EXPORT')
             
     def map_model_topics_to_sdgs(self, path_csv="", normalize=False):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
-        self.topics_association = np.zeros((self.k2, 17))
+        self.topics_association = np.zeros((self.k, 17))
         for text, labeled_sdgs in zip(self.train_data[0], self.train_data[1]):
-            topicDistribution, subTopicDistribution = self.infer_text(text, iterations=1000)
-            meanSub = np.mean(subTopicDistribution)
-            for (subIndex, subScore) in zip(range(self.k2), subTopicDistribution):
+            topicDistribution = self.infer_text(text, iterations=100)
+            meanSub = np.mean(topicDistribution)
+            for (subIndex, subScore) in zip(range(self.k), topicDistribution):
                 if 15 in labeled_sdgs:
                     a=32
-                if subScore < meanSub: continue
+                # if subScore < meanSub: continue
                 for sdg in labeled_sdgs:
+                    print(topicDistribution[sdg - 1])
                     tmp = np.zeros(17)
                     tmp[sdg - 1] = 1
                     self.topics_association[subIndex] += subScore * tmp
@@ -239,7 +238,7 @@ class PAM_classifier(tp.PAModel):
     def infer_text(self, text, iterations=100):
         doc = self.make_doc(text)
         result = self.infer(doc, iter=iterations)
-        topicDistribution = result[0][0]; subTopicDistribution = result[0][1]
-        return (topicDistribution, subTopicDistribution)
+        topicDistribution = result[0]
+        return topicDistribution
         
         
