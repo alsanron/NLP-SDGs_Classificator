@@ -55,26 +55,26 @@ id2word = dict.id2token
 corpus = [dict.doc2bow(text) for text in trainData[0]]
 
 num_topics = 16
-chunksize = 200
-passes = 20
+chunksize = 20
+passes = 50
 iterations = 400
 eval_every = None  # Don't evaluate model perplexity, takes too much time.
 lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word, 
                                 chunksize=chunksize,
-                                alpha='auto',
-                                eta='auto',
+                                # alpha='auto',
+                                # eta='auto',
                                 iterations=iterations,
                                 num_topics=num_topics,
                                 passes=passes,
-                                minimum_probability=0.0005,
-                                update_every=10
+                                minimum_probability=0.0001,
+                                update_every=20
                                 # eval_every=eval_every,
                                 # random_state=1
                                 )
-# lda.set_conf(paths)
+lda.set_conf(paths, dict)
 
-pathOut = paths["out"] + "LDA/" + "topics_{}.csv".format(lda.k)
+pathOut = paths["out"] + "LDA/" + "topics_{}.csv".format(num_topics)
 lda.print_summary(top_words=30, 
                   path_csv=pathOut
                   )
-lda.map_model_topics_to_sdgs(path_csv="", normalize=True)
+# lda.map_model_topics_to_sdgs(path_csv="", normalize=True)

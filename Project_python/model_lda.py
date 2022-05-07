@@ -23,11 +23,13 @@ warnings.filterwarnings('ignore')
 class LDA_classifier(LdaModel):
     paths=[]
     topics_association=[]
+    dict=[]
     verbose=False
     train_data=[]
     
-    def set_conf(self, paths, verbose=False):
+    def set_conf(self, paths, dict, verbose=False):
         self.paths = paths
+        self.dict = dict
         self.verbose = verbose
  
     def load_global_model(self, n_topics):
@@ -35,7 +37,7 @@ class LDA_classifier(LdaModel):
         # model = tools.load_obj(self.paths["model"] + "model_{}topics.pickle".format(n_topics))
         # vectorizer = tools.load_obj(self.paths["model"] + "vect_{}topics.pickle".format(n_topics))
         # self.global_model = [model, vectorizer]
-        
+         
     def test_model(self, database, path_excel, abstract=True, kw=False, intro=False, body=False, concl=False):
         predictedSDGs = []
         realSDGs = []
@@ -135,35 +137,28 @@ class LDA_classifier(LdaModel):
                 words.append([coef, word])
             topicsParsed.append(words)
         return topicsParsed
-           
-    def train_model(self, train_data, iterations=100, workers=8):
-        # Trains a PAM model
-        # @param trainData corpus of texts (array). They must be passed as texts, they are tokenized internally
-        # @param n_topics number of topics for the model
-        # @return model
-        self.train_data = train_data
-        corpus = train_data[0]; associated_sdgs = train_data[1]
-        for text in corpus:
-            self.add_doc(text.split(' '))
-            
-        self.train(iter=iterations, workers=workers)
-        
+
     def print_summary(self, top_words, path_csv=""):
-        count = self.get_count_by_topics()
-        count_ascii = ["x{}: {}".format(list(count).index(nWords), nWords) for nWords in count]
-        count_ascii = "Words per topic -> " + "|".join(count_ascii)
-        print(count_ascii)
-        
-        nTopics = self.k
+        nTopics = len(self.get_topics())
         topicsWords = [[] for ii in range(nTopics)]
         dfTopics = pd.DataFrame()
+        words_prob = self.show_topics(num_topics=nTopics, num_words=top_words, log=False, formatted=False)
         for topicIndex in range(nTopics):
-            words_prob = self.get_topic_words(topicIndex, top_n=top_words)
-            for elem in words_prob:
+            distribution = words_prob[topicIndex]
+            for elem in distribution[1]:
                 topicsWords[topicIndex].append("{:.3f}:{}".format(elem[1], elem[0]))
             topicName = "Topic{}".format(topicIndex)
             dfTopics[topicName] = topicsWords[topicIndex]
-        print(dfTopics)
+
+        topic = 0
+        maxTopicsPerLine = 8
+        while(1):
+            if topic + maxTopicsPerLine > nTopics:
+                print(dfTopics.iloc[:, topic:])
+                break
+            else:
+                print(dfTopics.iloc[:, topic:(topic + maxTopicsPerLine)])
+            topic += maxTopicsPerLine
         
         if len(path_csv) > 0:
             try:
@@ -173,71 +168,72 @@ class LDA_classifier(LdaModel):
             
     def map_model_topics_to_sdgs(self, path_csv="", normalize=False):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
-        self.topics_association = np.zeros((self.k, 17))
+        nTopics = len(self.get_topics())
+        self.topics_association = np.zeros((nTopics, 17))
         for text, labeled_sdgs in zip(self.train_data[0], self.train_data[1]):
-            topicDistribution = self.infer_text(text, iterations=100)
-            meanSub = np.mean(topicDistribution)
-            for (subIndex, subScore) in zip(range(self.k), topicDistribution):
+            topics, probs = self.infer_text(text, iterations=100)
+            for (topicIndex, score) in zip(topics, probs):
                 if 15 in labeled_sdgs:
                     a=32
                 # if subScore < meanSub: continue
                 for sdg in labeled_sdgs:
-                    print(topicDistribution[sdg - 1])
+                    print(probs[sdg - 1])
                     tmp = np.zeros(17)
                     tmp[sdg - 1] = 1
-                    self.topics_association[subIndex] += subScore * tmp
+                    self.topics_association[topicIndex] += score * tmp
         for ii in range(self.k2):
             # if normalize:
             # self.topics_association[ii] = self.topics_association[ii] / sum(self.topics_association[ii])
             listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
             print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
             
-        nTopics = self.global_model.get_num_topics()
-        topic_sizes, topics_num = self.global_model.get_topic_sizes()
-        self.topics_association = np.zeros((nTopics, 17))
-        for ii in range(nTopics):   
-            if num_docs < 0:
-                numDocs = topic_sizes[ii]
-            else:
-                numDocs = num_docs
-            documents, document_scores, document_ids = self.global_model.search_documents_by_topic(topic_num=ii, num_docs=numDocs)
-            if normalize: document_scores = document_scores / sum(document_scores)
-            sdgs = np.zeros(17)
-            for id, score in zip(document_ids, document_scores):
-                realSDG = associated_sdgs[id]
-                for sdg in realSDG:
-                    sdgs[sdg - 1] += score * 1
-            self.topics_association[ii] = sdgs
-            # if normalize:
-            #     self.topics_association[ii] = sdgs / sum(sdgs)
-            listAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(self.topics_association[ii], range(1,18))]
-            print('Topic{:2d}: '.format(ii), ' | '.join(listAscii))
+        # nTopics = self.global_model.get_num_topics()
+        # topic_sizes, topics_num = self.global_model.get_topic_sizes()
+        # self.topics_association = np.zeros((nTopics, 17))
+        # for ii in range(nTopics):   
+        #     if num_docs < 0:
+        #         numDocs = topic_sizes[ii]
+        #     else:
+        #         numDocs = num_docs
+        #     documents, document_scores, document_ids = self.global_model.search_documents_by_topic(topic_num=ii, num_docs=numDocs)
+        #     if normalize: document_scores = document_scores / sum(document_scores)
+        #     sdgs = np.zeros(17)
+        #     for id, score in zip(document_ids, document_scores):
+        #         realSDG = associated_sdgs[id]
+        #         for sdg in realSDG:
+        #             sdgs[sdg - 1] += score * 1
+        #     self.topics_association[ii] = sdgs
+        #     # if normalize:
+        #     #     self.topics_association[ii] = sdgs / sum(sdgs)
+        #     listAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(self.topics_association[ii], range(1,18))]
+        #     print('Topic{:2d}: '.format(ii), ' | '.join(listAscii))
             
-        if len(path_csv) > 4:
-            # Then the mapping result is stored in a csv
-            df = pd.DataFrame()
-            col_names = []
-            col_data = []
-            sdgTitles = data.get_sdg_titles(self.paths["ref"])
-            topic_words, word_scores, topic_nums = self.global_model.get_topics()
-            # for sdg in sdgTitles:
-            #     sdgTitle = sdgTitles[sdg]
-            #     colName = "{} - {}".format(sdg, sdgTitle)
-            #     colWords = []
-            #     sdgInt = list(sdgTitles.keys()).index(sdg) + 1
-            #     for ii, index in zip(self.topics_association, range(nTopics)):
-            #         if ii == sdgInt:
-            #             words = list(topic_words[index])
-            #             colWords.append(words[0:30])
-            #     df[colName] = colWords[0]
-            for words, index in zip(topic_words, topic_nums):
-                df["topic{}".format(index)] = list(words)
+        # if len(path_csv) > 4:
+        #     # Then the mapping result is stored in a csv
+        #     df = pd.DataFrame()
+        #     col_names = []
+        #     col_data = []
+        #     sdgTitles = data.get_sdg_titles(self.paths["ref"])
+        #     topic_words, word_scores, topic_nums = self.global_model.get_topics()
+        #     # for sdg in sdgTitles:
+        #     #     sdgTitle = sdgTitles[sdg]
+        #     #     colName = "{} - {}".format(sdg, sdgTitle)
+        #     #     colWords = []
+        #     #     sdgInt = list(sdgTitles.keys()).index(sdg) + 1
+        #     #     for ii, index in zip(self.topics_association, range(nTopics)):
+        #     #         if ii == sdgInt:
+        #     #             words = list(topic_words[index])
+        #     #             colWords.append(words[0:30])
+        #     #     df[colName] = colWords[0]
+        #     for words, index in zip(topic_words, topic_nums):
+        #         df["topic{}".format(index)] = list(words)
             # df.to_csv(path_csv
             
-    def infer_text(self, text, iterations=100):
-        doc = self.make_doc(text)
-        result = self.infer(doc, iter=iterations)
-        topicDistribution = result[0]
-        return topicDistribution
+    def infer_text(self, text):
+        bow = self.dict.doc2bow(text)
+        result = self.get_document_topics(bow, minimum_probability=None, minimum_phi_value=None)
+        topics = [elem[0] for elem in result]
+        probs = [elem[1] for elem in result]
+        return [topics, probs]
         
         

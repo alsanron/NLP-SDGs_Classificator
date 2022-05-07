@@ -126,7 +126,7 @@ def get_sdgs_org_files(refPath, sdg=-1, compact=False):
                         ind = sdg - 1
                         counters[ind] += 1
                         texts[ind] += " " + text
-                        if counters[ind] >= 3:
+                        if counters[ind] >= 2:
                             corpus.append(texts[ind])
                             associatedSDGs.append(fileSDG)
                             counters[ind] = 0
