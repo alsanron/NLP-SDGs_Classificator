@@ -166,47 +166,27 @@ class LDA_classifier(LdaModel):
             except:
                 print('CSV IS OPENED... ABORTING TOPICS EXPORT')
             
-    def map_model_topics_to_sdgs(self, path_csv="", normalize=False):
+    def map_model_topics_to_sdgs(self, train_data, path_csv="", normalize=False, verbose=False):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
         nTopics = len(self.get_topics())
         self.topics_association = np.zeros((nTopics, 17))
-        for text, labeled_sdgs in zip(self.train_data[0], self.train_data[1]):
-            topics, probs = self.infer_text(text, iterations=100)
+        for text, labeled_sdgs in zip(train_data[0], train_data[1]):
+            topics, probs = self.infer_text(text)
             for (topicIndex, score) in zip(topics, probs):
-                if 15 in labeled_sdgs:
-                    a=32
                 # if subScore < meanSub: continue
                 for sdg in labeled_sdgs:
-                    print(probs[sdg - 1])
                     tmp = np.zeros(17)
                     tmp[sdg - 1] = 1
                     self.topics_association[topicIndex] += score * tmp
-        for ii in range(self.k2):
-            # if normalize:
-            # self.topics_association[ii] = self.topics_association[ii] / sum(self.topics_association[ii])
-            listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
-            print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
-            
-        # nTopics = self.global_model.get_num_topics()
-        # topic_sizes, topics_num = self.global_model.get_topic_sizes()
-        # self.topics_association = np.zeros((nTopics, 17))
-        # for ii in range(nTopics):   
-        #     if num_docs < 0:
-        #         numDocs = topic_sizes[ii]
-        #     else:
-        #         numDocs = num_docs
-        #     documents, document_scores, document_ids = self.global_model.search_documents_by_topic(topic_num=ii, num_docs=numDocs)
-        #     if normalize: document_scores = document_scores / sum(document_scores)
-        #     sdgs = np.zeros(17)
-        #     for id, score in zip(document_ids, document_scores):
-        #         realSDG = associated_sdgs[id]
-        #         for sdg in realSDG:
-        #             sdgs[sdg - 1] += score * 1
-        #     self.topics_association[ii] = sdgs
-        #     # if normalize:
-        #     #     self.topics_association[ii] = sdgs / sum(sdgs)
-        #     listAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(self.topics_association[ii], range(1,18))]
-        #     print('Topic{:2d}: '.format(ii), ' | '.join(listAscii))
+        sum_per_topic = np.zeros(17)
+        for ii in range(nTopics):
+            if normalize:
+                self.topics_association[ii] = self.topics_association[ii] / sum(self.topics_association[ii])
+                sum_per_topic += self.topics_association[ii]
+            if verbose:
+                listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
+                print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
+        return sum_per_topic
             
         # if len(path_csv) > 4:
         #     # Then the mapping result is stored in a csv

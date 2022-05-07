@@ -59,22 +59,29 @@ chunksize = 20
 passes = 50
 iterations = 400
 eval_every = None  # Don't evaluate model perplexity, takes too much time.
-lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word, 
-                                chunksize=chunksize,
-                                # alpha='auto',
-                                # eta='auto',
-                                iterations=iterations,
-                                num_topics=num_topics,
-                                passes=passes,
-                                minimum_probability=0.0001,
-                                update_every=20
-                                # eval_every=eval_every,
-                                # random_state=1
-                                )
+modelPath = paths["model"] + "lda_model"
+
+if 0:
+    lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word, 
+                                    chunksize=chunksize,
+                                    # alpha='auto',
+                                    # eta='auto',
+                                    iterations=iterations,
+                                    num_topics=num_topics,
+                                    passes=passes,
+                                    minimum_probability=0.0001,
+                                    update_every=20
+                                    # eval_every=eval_every,
+                                    # random_state=1
+                                    )
+    lda.save(modelPath)
+else:
+    lda = model_lda.LDA_classifier.load(modelPath)
+    
 lda.set_conf(paths, dict)
 
 pathOut = paths["out"] + "LDA/" + "topics_{}.csv".format(num_topics)
 lda.print_summary(top_words=30, 
                   path_csv=pathOut
                   )
-# lda.map_model_topics_to_sdgs(path_csv="", normalize=True)
+print(lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=False))
