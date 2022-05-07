@@ -18,6 +18,15 @@ def get_sdg_titles(refPath):
     f.close()
     return sdgs_title
 
+
+def get_sdgs_seed_list(refPath):
+    with open(refPath + "seed_list_sdgs.json", 'r') as f:
+        text = f.read()
+        f.close()
+        dict = json.loads(text)
+    return list(dict.values())
+        
+
 # DATASET: the role of artificial intelligence in achieving the sustainable development goals. NATURE PAPER. The user can select independently: abstract, keywords, introduction, body or conclusions.
 def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=False):
     paths = conf.get_paths()
@@ -34,15 +43,15 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
             continue
         if abstract:
             if len(database[file]["abstract"]) > 50:
-                text += database[file]["abstract"]
+                text += " " + database[file]["abstract"]
         if kw:
-            text += database[file]["keywords"]
+            text += " " + database[file]["keywords"]
         if intro:
-            text += database[file]["introduction"]
+            text += " " + database[file]["introduction"]
         if body:
-            text += database[file]["body"]
+            text += " " + database[file]["body"]
         if concl:
-            text += database[file]["conclusions"]
+            text += " " + database[file]["conclusions"]
         corpus.append(text)
         associatedSDGs.append(sdgs)
         indexes.append(index)
