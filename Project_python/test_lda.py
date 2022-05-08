@@ -29,10 +29,18 @@ raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True,
 # raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 # raw_healthcare, sdgs_healthcare = data.get_health_care_files(paths["ref"], n_files=100)
 
+######## GLOBAL CONFIGURATION
+lemmatize = False
+bigrams = True; min_count_bigram = 10
+trigrams = True; min_count_trigram = 5
+min_words_count = 1 # minimum number of times a word must appear in the corpus
+max_words_frequency = 0.7 # max frequency of a word appearing in corpus
+
+######## CODE 
 def prepare_texts(corpus):
     newCorpus = []
     for text in corpus:
-        newCorpus.append(tools.tokenize_text(text, lemmatize=False, stem=False ,extended_stopwords=True))
+        newCorpus.append(tools.tokenize_text(text, lemmatize=lemmatize, stem=False ,extended_stopwords=True))
     return newCorpus
 
 print('- Preparing texts...')        
@@ -44,17 +52,24 @@ natureShort = prepare_texts(raw_natureShort)
 # natureExt = prepare_texts(raw_natureExt)
 
 trainData = [orgFiles, sdgs_orgFiles]
-if 1:
-    print('Creating n-grams vocabulary...')
-    bigram = Phrases(trainData[0], min_count=10)
+
+if bigrams:
+    print('Creating bigrams vocabulary...')
+    bigram = Phrases(trainData[0], min_count=min_count_bigram)
     for idx in range(len(trainData[0])):
         for token in bigram[trainData[0][idx]]:
-            if '_' in token:
-                # Token is a bigram, add to document.
+            if token.count("_") == 1:
                 trainData[0][idx].append(token)
+    if trigrams:
+        print('Creating trigrams vocabulary...')
+        trigram = Phrases(trainData[0], min_count=min_count_trigram)
+        for idx in range(len(trainData[0])):
+            for token in trigram[trainData[0][idx]]:
+                if token.count("_") == 2:
+                    trainData[0][idx].append(token)
 
 dict = Dictionary(trainData[0])
-dict.filter_extremes(no_below=1, no_above=0.7)
+dict.filter_extremes(no_below=min_words_count, no_above=max_words_frequency)
 dict[0] # just to load the dict
 id2word = dict.id2token
 corpus = [dict.doc2bow(text) for text in trainData[0]]
@@ -62,6 +77,7 @@ corpus = [dict.doc2bow(text) for text in trainData[0]]
 update_model = 1
 optmize_model = 0
 
+print('Training model...')
 if update_model:   
     if optmize_model:
         optimData = pd.read_excel(paths["ref"] + "optimization_lda.xlsx")
@@ -129,7 +145,9 @@ else:
                   #path_csv=pathOut
                 )
     sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=True)
-lda.test_model(natureShort, sdgs_nature, path_to_plot="", path_to_excel=(paths["out"] + "LDA/test.xlsx"), 
+    
+print('Testing model...')
+lda.test_model(natureShort, sdgs_nature, path_to_plot="", path_to_excel=(paths["out"] + "LDA/test2.xlsx"), 
                only_bad=False, 
                score_threshold=0.1,
                only_positive=True)
