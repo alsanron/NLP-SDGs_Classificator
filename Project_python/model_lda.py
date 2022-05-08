@@ -80,7 +80,8 @@ class LDA_classifier(LdaModel):
             
         oks = [ok for ok in valids if ok == True]
         oksSingle = [ok for ok in validsAny if ok == True]
-        print("- {:.2f} % valid global, {:.2f} % valid any, of {} files".format(len(oks) / len(valids) * 100, len(oksSingle) / len(valids) * 100, len(valids)))
+        perc_valid_global = len(oks) / len(valids) * 100; perc_valid_any = len(oksSingle) / len(valids) * 100
+        print("- {:.2f} % valid global, {:.2f} % valid any, of {} files".format(perc_valid_global, perc_valid_any, len(valids)))
         
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
@@ -92,6 +93,8 @@ class LDA_classifier(LdaModel):
             df["all_valid"] = valids
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
+            
+        return [rawSDG, perc_valid_global, perc_valid_any]
 
     def print_summary(self, top_words, path_csv=""):
         nTopics = len(self.get_topics())
@@ -137,12 +140,20 @@ class LDA_classifier(LdaModel):
         sum_per_topic = np.zeros(17)
         for ii in range(nTopics):
             if normalize:
-                self.topics_association[ii] = self.topics_association[ii] / sum(self.topics_association[ii])
+                norm_topics = self.topics_association[ii] / sum(self.topics_association[ii])
+                for nn in norm_topics:
+                    if nn < 0.1: 
+                        norm_topics[list(norm_topics).index(nn)] = 0.0
+                norm_topics = norm_topics / sum(norm_topics)
+                self.topics_association[ii] = norm_topics
+                
                 sum_per_topic += self.topics_association[ii]
             if verbose:
                 listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
                 print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
         listAscii = ["x{}:{:.2f}".format(xx, sdg) for xx, sdg in zip(range(1,18), sum_per_topic)]
+        if verbose:
+            print('GLOBAL: ' + listAscii)
          
         if len(path_csv) > 4:
             # Then the mapping result is stored in a csv
