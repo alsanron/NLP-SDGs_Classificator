@@ -15,11 +15,9 @@ from gensim.corpora.dictionary import Dictionary
 # To adjust list:
 # TODO EXPAND THE STOPWORDS LIST
 # TODO Test with different training data
-# TODO ADD BIGRAMS, TRIGRAMS, CHANGE LIMITS OF LIST
 # TODO ADJSUT FILTER EXTREMES
 # TODO Tune HP: n_topics, chunksize, passes, iterations, alpha, eta,
 # TODO FILTRAR SCORES < 0.05?
-# TODO Implementar la clasificacion
 
 paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"], compact=True)
@@ -36,6 +34,24 @@ trigrams = True; min_count_trigram = 5
 min_words_count = 1 # minimum number of times a word must appear in the corpus
 max_words_frequency = 0.7 # max frequency of a word appearing in corpus
 
+update_model = 1
+optimize_model = 0; optim_excel = "optimization_lda.xlsx"; out_optim = "out_optimization1text_final.xlsx"
+
+# model configuration
+num_topics = 17
+chunksize = 2000
+passes = 400
+iterations = 1000
+update_every = 1
+eval_every = None  # Don't evaluate model perplexity, takes too much time.
+topics_csv = "lda_topics.csv"
+
+# testing configuration
+only_bad = False 
+only_positive = True
+score_threshold = 0.1,
+out_test_excel = "test2.xlsx"
+        
 ######## CODE 
 def prepare_texts(corpus):
     newCorpus = []
@@ -74,13 +90,10 @@ dict[0] # just to load the dict
 id2word = dict.id2token
 corpus = [dict.doc2bow(text) for text in trainData[0]]
 
-update_model = 1
-optmize_model = 0
-
 print('Training model...')
 if update_model:   
-    if optmize_model:
-        optimData = pd.read_excel(paths["ref"] + "optimization_lda.xlsx")
+    if optimize_model:
+        optimData = pd.read_excel(paths["ref"] + optim_excel)
         out_sum_per_topic = []; out_stats = []
         for ii in range(len(optimData)):
             print('# Case: {} of {}'.format(ii, len(optimData)))
@@ -112,18 +125,10 @@ if update_model:
             out_stats.append("mean: {:.2f}, std: {:.2f}".format(np.mean(sumPerTopic), np.std(sumPerTopic)))
         optimData["sum_per_topic"] = out_sum_per_topic
         optimData["stats"] = out_stats
-        optimData.to_excel(paths["out"] + "LDA/" + "out_optimization1text_final.xlsx")
+        optimData.to_excel(paths["out"] + "LDA/" + out_optim)
     else:
-        num_topics = 17
-        chunksize = 2000
-        passes = 400
-        iterations = 1000
-        update_every = 1
-        eval_every = None  # Don't evaluate model perplexity, takes too much time.
-        lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word, 
+        lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word,
                                         chunksize=chunksize,
-                                        # alpha='auto',
-                                        # eta='auto',
                                         iterations=iterations,
                                         num_topics=num_topics,
                                         passes=passes,
@@ -134,8 +139,8 @@ if update_model:
                                         )
         lda.set_conf(paths, dict)
         lda.print_summary(top_words=30, 
-#                   #path_csv=pathOut
-                )
+                          path_csv=(paths["out"] + "LDA/" + topics_csv)
+                        )
         sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=True)
         lda.save_model()
 else:
@@ -147,7 +152,7 @@ else:
     sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=True)
     
 print('Testing model...')
-lda.test_model(natureShort, sdgs_nature, path_to_plot="", path_to_excel=(paths["out"] + "LDA/test2.xlsx"), 
-               only_bad=False, 
-               score_threshold=0.1,
-               only_positive=True)
+lda.test_model(natureShort, sdgs_nature, path_to_plot="", path_to_excel=(paths["out"] + "LDA/" + out_test_excel), 
+               only_bad=only_bad, 
+               score_threshold=score_threshold,
+               only_positive=only_positive)
