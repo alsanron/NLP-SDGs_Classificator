@@ -38,8 +38,8 @@ class LDA_classifier(LdaModel):
     def load_model():
         return LDA_classifier.load(conf.get_paths()["model"] + "lda")
          
-    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False):
-        rawSDG = []
+    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False,     segmentize=-1):
+        rawSDG = []; rawSDGseg = []
         predictedSDGs = []
         realSDGs = []
         valids = []
@@ -50,7 +50,38 @@ class LDA_classifier(LdaModel):
         countWellPredictionsPerSDG = np.zeros(17)
         
         for text, labeled_sdgs in zip(corpus, sdgs):
-            raw_sdgs = self.map_text_to_sdgs(text, only_positive=only_positive)  
+            if segmentize > 0:
+                # then the documents are divided
+                text_segments = [text]
+                textLength = len(text)
+                if textLength > segmentize:
+                    text_segments = []; index = 0
+                    while(1):
+                        if index + segmentize > textLength:
+                            text_segments.append(text[index:])
+                            break
+                        else:
+                            if index + segmentize + 200 > textLength:
+                                text_segments.append(text[index:])
+                                break
+                            else:
+                                text_segments.append(text[index:(index + segmentize)])
+                        index += segmentize
+                raw_sdgs = np.zeros(17)
+                for segment in text_segments:
+                    raw_sdgs += self.map_text_to_sdgs(segment, only_positive=only_positive)  
+                raw_sdgs /= len(text_segments)
+                raw_sdgs_seg = raw_sdgs
+            else: 
+                raw_sdgs_seg = np.zeros(17) 
+                raw_sdgs = self.map_text_to_sdgs(text, only_positive=only_positive) 
+            raw_sdgs_filt = raw_sdgs < 0.05
+            for prob, index, filt in zip(raw_sdgs, range(len(raw_sdgs)), raw_sdgs_filt):
+                if filt: 
+                    prob = raw_sdgs[index]
+                    raw_sdgs[index] = 0.0
+                    raw_sdgs += prob * raw_sdgs / sum(raw_sdgs)
+                    
             predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
             validSingle = False; ii = 0
             for sdg in labeled_sdgs:
@@ -67,10 +98,14 @@ class LDA_classifier(LdaModel):
                 raw_sdgsAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(raw_sdgs, range(1,18))]
                 raw_sdgsAscii = "|".join(raw_sdgsAscii)
                 
+                raw_sdgsAsciiseg = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(raw_sdgs_seg, range(1,18))]
+                raw_sdgsAsciiseg = "|".join(raw_sdgsAsciiseg)
+                
                 stats = [min(raw_sdgs), np.mean(raw_sdgs), max(raw_sdgs)]
                 statsAscii = "[{:.2f}, {:.2f}, {:.2f}]".format(stats[0], stats[1], stats[2])
                 
                 rawSDG.append(raw_sdgsAscii)
+                rawSDGseg.append(raw_sdgsAsciiseg)
                 statsGlobal.append(statsAscii)
                 predictedSDGs.append(predic_sdgs)
                 realSDGs.append(labeled_sdgs)
@@ -88,6 +123,7 @@ class LDA_classifier(LdaModel):
             df["text"] = texts
             df["labeled_sdgs"] = realSDGs
             df["sdgs_association"] = rawSDG
+            df["sdgs_segmentated"] = rawSDGseg
             df["stats"] = statsGlobal
             df["predict_sdgs"] = predictedSDGs
             df["all_valid"] = valids
@@ -153,17 +189,19 @@ class LDA_classifier(LdaModel):
                 print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
         listAscii = ["x{}:{:.2f}".format(xx, sdg) for xx, sdg in zip(range(1,18), sum_per_topic)]
         if verbose:
-            print('GLOBAL: ' + listAscii)
+            print('GLOBAL: ' + '|'.join(listAscii))
          
         if len(path_csv) > 4:
             # Then the mapping result is stored in a csv
             df = pd.DataFrame()
-            topics_words = [words for words in self.get_topic_terms(ii, topn=top_n_words) for ii in range(nTopics)]
+            topics_words = []
+            for ii in range(nTopics):
+                topics_words.append(self.get_topic_terms(ii, topn=top_n_words))
             topic_words_ascii = [[] for ii in range(nTopics)]
             for words in topics_words:
                 topicIndex = topics_words.index(words)
                 for word in words:
-                    topic_words_ascii[topicIndex].append(self.dict.id2word(word))
+                    topic_words_ascii[topicIndex].append("{:.3f}:{}".format(word[1], self.dict.id2token[word[0]]))
             
             # all the top SDGs with an score > 0.1 are considered for that topic
             for topicIndex in range(nTopics):
@@ -172,8 +210,8 @@ class LDA_classifier(LdaModel):
                 for sdg in topSDGs:
                     if sdg < 0.1: break
                     sdgIndex = list(self.topics_association[topicIndex]).index(sdg)
-                    realSDG = self.topics_association[topicIndex][sdgIndex]
-                    title.append("{:.2f}*SDG{}".format(sdg, realSDG))
+                    ass_sdg = self.topics_association[topicIndex][sdgIndex]
+                    title.append("{:.2f}*SDG{}".format(ass_sdg, sdgIndex + 1))
                 title = ",".join(title)
                 df[title] = topic_words_ascii[topicIndex]
 

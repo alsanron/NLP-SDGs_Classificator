@@ -14,7 +14,6 @@ from gensim.corpora.dictionary import Dictionary
 
 # To adjust list:
 # TODO EXPAND THE STOPWORDS LIST
-# TODO FILTRAR SCORES < 0.05?
 
 paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"], compact=True)
@@ -26,7 +25,7 @@ raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True,
 
 ######## GLOBAL CONFIGURATION
 optim_excel = "optimization_lda.xlsx"; out_optim = "out_optimization.xlsx"
-optimize = True
+optimize = 0
 
 lemmatize = False
 bigrams = True; min_count_bigram = 10
@@ -73,45 +72,67 @@ id2word = dict.id2token
 corpus = [dict.doc2bow(text) for text in trainData[0]]
 
 print('Training model...')
-optimData = pd.read_excel(paths["ref"] + optim_excel)
-out_perc_global = []; out_perc_any = []
-for ii in range(len(optimData)):
-    print('# Case: {} of {}'.format(ii + 1, len(optimData)))
-    num_topics = optimData["num_topics"][ii]
-    chunksize = optimData["chunksize"][ii]
-    passes = optimData["passes"][ii]
-    iterations = optimData["iterations"][ii]
-    update_every = optimData["update_every"][ii]
-    topics_csv = optimData["topics_csv"][ii]
-    out_test_excel = optimData["out_test_excel"][ii]
-    score_threshold = optimData["score_threshold"][ii]
-    only_bad = optimData["only_bad"][ii]
-    only_positive = optimData["only_positive"][ii]
-    
-    lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word,
-                                    chunksize=chunksize,
-                                    iterations=iterations,
-                                    num_topics=num_topics,
-                                    passes=passes,
-                                    minimum_probability=0.0001,
-                                    update_every=update_every,
-                                    eval_every=None,
-                                    random_state=1
-                                    )
-    print('Model postprocessing...')
+if optimize:
+    optimData = pd.read_excel(paths["ref"] + optim_excel)
+    out_perc_global = []; out_perc_any = []
+    for ii in range(len(optimData)):
+        print('# Case: {} of {}'.format(ii + 1, len(optimData)))
+        num_topics = optimData["num_topics"][ii]
+        chunksize = optimData["chunksize"][ii]
+        passes = optimData["passes"][ii]
+        iterations = optimData["iterations"][ii]
+        update_every = optimData["update_every"][ii]
+        topics_csv = optimData["topics_csv"][ii]
+        out_test_excel = optimData["out_test_excel"][ii]
+        score_threshold = optimData["score_threshold"][ii]
+        only_bad = optimData["only_bad"][ii]
+        only_positive = optimData["only_positive"][ii]
+        
+        lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word,
+                                        chunksize=chunksize,
+                                        iterations=iterations,
+                                        num_topics=num_topics,
+                                        passes=passes,
+                                        minimum_probability=0.0001,
+                                        update_every=update_every,
+                                        eval_every=None,
+                                        random_state=1
+                                        )
+        print('Model postprocessing...')
+        lda.set_conf(paths, dict)
+        lda.print_summary(top_words=30, 
+                            # path_csv=""
+                        )
+        sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(paths["out"] + "LDA/" + topics_csv), 
+                                                            normalize=True, verbose=True)
+        lda.save_model()
+        
+        print('Testing model...')
+        rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
+                                                                path_to_excel=(paths["out"] +     "LDA/" + out_test_excel), only_bad=only_bad, 
+                                                                score_threshold=score_threshold,
+                                                                only_positive=False)
+        out_perc_global.append(perc_valid_global); out_perc_any.append(perc_valid_any)
+    optimData["perc_global"] = out_perc_global
+    optimData["perc_any"] = out_perc_any
+    optimData.to_excel(paths["out"] + "LDA/" + out_optim)
+else: 
+    lda = model_lda.LDA_classifier.load_model()
     lda.set_conf(paths, dict)
-    lda.print_summary(top_words=30, 
-                        path_csv=(paths["out"] + "LDA/" + topics_csv)
-                    )
-    sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=True)
-    # lda.save_model()
-    
-    print('Testing model...')
+    sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(""), 
+                                                            normalize=True, verbose=True)
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
-                                                               path_to_excel=(paths["out"] +     "LDA/" + out_test_excel), only_bad=only_bad, 
-                                                               score_threshold=score_threshold,
-                                                               only_positive=only_positive)
-    out_perc_global.append(perc_valid_global); out_perc_any.append(perc_valid_any)
-optimData["perc_global"] = out_perc_global
-optimData["perc_any"] = out_perc_any
-optimData.to_excel(paths["out"] + "LDA/" + out_optim)
+                                                            path_to_excel=(paths["out"] + "LDA/test_short.xlsx"), 
+                                                            only_bad=False, 
+                                                            score_threshold=0.1,
+                                                            only_positive=True,
+                                                            segmentize=-1
+                                                            )
+    
+    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
+                                                            path_to_excel=(paths["out"] + "LDA/test_ext.xlsx"),
+                                                            only_bad=False, 
+                                                            score_threshold=0.1,
+                                                            only_positive=True,
+                                                            segmentize=200)
+    
