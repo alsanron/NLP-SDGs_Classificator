@@ -12,6 +12,15 @@ import model_lda
 from gensim.models import Phrases
 from gensim.corpora.dictionary import Dictionary
 
+# To adjust list:
+# TODO EXPAND THE STOPWORDS LIST
+# TODO Test with different training data
+# TODO ADD BIGRAMS, TRIGRAMS, CHANGE LIMITS OF LIST
+# TODO ADJSUT FILTER EXTREMES
+# TODO Tune HP: n_topics, chunksize, passes, iterations, alpha, eta,
+# TODO FILTRAR SCORES < 0.05?
+# TODO Implementar la clasificacion
+
 paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"], compact=True)
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
@@ -23,49 +32,38 @@ raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True,
 def prepare_texts(corpus):
     newCorpus = []
     for text in corpus:
-        newCorpus.append(tools.tokenize_text(text, lemmatize=True, stem=False ,extended_stopwords=True))
+        newCorpus.append(tools.tokenize_text(text, lemmatize=False, stem=False ,extended_stopwords=True))
     return newCorpus
-        
+
+print('- Preparing texts...')        
 # trainFiles = prepare_texts(raw_trainFiles)
 orgFiles = prepare_texts(raw_orgFiles)
 # extraFiles = prepare_texts(raw_extraFiles)
 # healthcareFiles = prepare_texts(raw_healthcare)
 natureShort = prepare_texts(raw_natureShort)
-natureExt = prepare_texts(raw_natureExt)
-
-# %%
-# lda = model_lda.LDA_classifier(k=16, min_cf=0, min_df=3, seed=1)
-# lda.set_conf(paths)
+# natureExt = prepare_texts(raw_natureExt)
 
 trainData = [orgFiles, sdgs_orgFiles]
 if 1:
+    print('Creating n-grams vocabulary...')
     bigram = Phrases(trainData[0], min_count=10)
     for idx in range(len(trainData[0])):
         for token in bigram[trainData[0][idx]]:
             if '_' in token:
                 # Token is a bigram, add to document.
                 trainData[0][idx].append(token)
-# for text in trainData[0]:
-#     print(' | '.join(text))
-#     a=input()
-# PREPARE TRAINING DATA
+
 dict = Dictionary(trainData[0])
 dict.filter_extremes(no_below=1, no_above=0.7)
 dict[0] # just to load the dict
 id2word = dict.id2token
 corpus = [dict.doc2bow(text) for text in trainData[0]]
 
-# num_topics = 16
-# chunksize = 30
-# passes = 200
-# iterations = 500
+update_model = 1
+optmize_model = 0
 
-eval_every = None  # Don't evaluate model perplexity, takes too much time.
-
-modelPath = paths["model"] + "lda_model"
-
-if 1:   
-    if 1:
+if update_model:   
+    if optmize_model:
         optimData = pd.read_excel(paths["ref"] + "optimization_lda.xlsx")
         out_sum_per_topic = []; out_stats = []
         for ii in range(len(optimData)):
@@ -75,16 +73,18 @@ if 1:
             passes = optimData["passes"][ii]
             iterations = optimData["iterations"][ii]
             update_every = optimData["update_every"][ii]
+            eval_every = None  # Don't evaluate model perplexity, takes too much time.
             lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word, 
                                             chunksize=chunksize,
                                             # alpha='auto',
                                             # eta='auto',
+                                            distributed=True,
                                             iterations=iterations,
                                             num_topics=num_topics,
                                             passes=passes,
                                             minimum_probability=0.0001,
                                             update_every=update_every,
-                                            # eval_every=eval_every,
+                                            eval_every=eval_every,
                                             random_state=1
                                             )
             lda.set_conf(paths, dict)
@@ -100,9 +100,10 @@ if 1:
     else:
         num_topics = 17
         chunksize = 2000
-        passes = 100
+        passes = 400
         iterations = 1000
         update_every = 1
+        eval_every = None  # Don't evaluate model perplexity, takes too much time.
         lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word, 
                                         chunksize=chunksize,
                                         # alpha='auto',
@@ -112,7 +113,7 @@ if 1:
                                         passes=passes,
                                         minimum_probability=0.0001,
                                         update_every=update_every,
-                                        # eval_every=eval_every,
+                                        eval_every=eval_every,
                                         random_state=1
                                         )
         lda.set_conf(paths, dict)
@@ -120,13 +121,15 @@ if 1:
 #                   #path_csv=pathOut
                 )
         sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=True)
+        lda.save_model()
 else:
-    lda = model_lda.LDA_classifier.load(modelPath)
-    
-
-pathOut = paths["out"] + "LDA/" + "topics_{}.csv".format(num_topics)
-# lda.print_summary(top_words=30, 
-#                   #path_csv=pathOut
-#                   )
-# sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=False)
-# print(listAscii)
+    lda = model_lda.LDA_classifier.load_model()
+    lda.set_conf(paths, dict)
+    lda.print_summary(top_words=30, 
+                  #path_csv=pathOut
+                )
+    sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv="", normalize=True, verbose=True)
+lda.test_model(natureShort, sdgs_nature, path_to_plot="", path_to_excel=(paths["out"] + "LDA/test.xlsx"), 
+               only_bad=False, 
+               score_threshold=0.1,
+               only_positive=True)

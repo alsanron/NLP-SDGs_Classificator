@@ -32,111 +32,66 @@ class LDA_classifier(LdaModel):
         self.dict = dict
         self.verbose = verbose
  
-    def load_global_model(self, n_topics):
-        pass
-        # model = tools.load_obj(self.paths["model"] + "model_{}topics.pickle".format(n_topics))
-        # vectorizer = tools.load_obj(self.paths["model"] + "vect_{}topics.pickle".format(n_topics))
-        # self.global_model = [model, vectorizer]
+    def save_model(self):
+        self.save(self.paths["model"] + "lda")
+        
+    def load_model():
+        return LDA_classifier.load(conf.get_paths()["model"] + "lda")
          
-    def test_model(self, database, path_excel, abstract=True, kw=False, intro=False, body=False, concl=False):
+    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False):
+        rawSDG = []
         predictedSDGs = []
         realSDGs = []
-        texts = []
-        scoresSDGs = []
         valids = []
         validsAny = []
-        files = []
-        abstracts = []
+        texts = []
+        statsGlobal = []
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
         
-        for file in database:
-            text = ""
-            sdgs = database[file]["SDG"]
-            for sdg in sdgs:
-                countPerSDG[sdg - 1] += 1 # increments the SDGs counter
-            if abstract:
-                text += database[file]["abstract"]
-            if kw:
-                text += database[file]["keywords"]
-            if intro:
-                text += database[file]["introduction"]
-            if body:
-                text += database[file]["body"]
-            if concl:
-                text += database[file]["conclusions"]
-                
-            predic, score = self.map_text_to_sdgs(text, top_score=len(sdgs))  
-            valid = False
-            if sorted(sdgs) == sorted(predic):
-                valid = True
-            validSingle = False
-            for sdg in sdgs:
-                if sdg in predic:
+        for text, labeled_sdgs in zip(corpus, sdgs):
+            raw_sdgs = self.map_text_to_sdgs(text, only_positive=only_positive)  
+            predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
+            validSingle = False; ii = 0
+            for sdg in labeled_sdgs:
+                countPerSDG[sdg - 1] += 1
+                if sdg in predic_sdgs:
                     validSingle = True
+                    ii += 1
                     countWellPredictionsPerSDG[sdg - 1] += 1
-                    break
-
-            predictedSDGs.append(predic)
-            texts.append(text)
-            realSDGs.append(sdgs)
-            scoresSDGs.append(score)
+            valid = False
+            if ii == len(labeled_sdgs):
+                valid = True
+                
+            if (only_bad and not(valid)) or not(only_bad):
+                raw_sdgsAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(raw_sdgs, range(1,18))]
+                raw_sdgsAscii = "|".join(raw_sdgsAscii)
+                
+                stats = [min(raw_sdgs), np.mean(raw_sdgs), max(raw_sdgs)]
+                statsAscii = "[{:.2f}, {:.2f}, {:.2f}]".format(stats[0], stats[1], stats[2])
+                
+                rawSDG.append(raw_sdgsAscii)
+                statsGlobal.append(statsAscii)
+                predictedSDGs.append(predic_sdgs)
+                realSDGs.append(labeled_sdgs)
+                texts.append(text)
             valids.append(valid)
             validsAny.append(validSingle)
-            files.append(file)
-            abstracts.append(abstracts)
             
-        df = pd.DataFrame()
-        df["file"] = files
-        # df["abstract"] = abstracts
-        df["texts"] = texts
-        df["prediction"] = predictedSDGs
-        df["real"] = realSDGs
-        df["scores"] = scoresSDGs
-        df["valid"] = valids
-        df["valid_single"] = validsAny
-        
         oks = [ok for ok in valids if ok == True]
         oksSingle = [ok for ok in validsAny if ok == True]
-        configStr = "Abstract {} - Kw - {} Intro - {} Body - {} Concl - {}".format(int(abstract), int(kw), int(intro), int(body), int(concl))
-        print("#### Config:" + configStr)
         print("- {:.2f} % valid global, {:.2f} % valid any, of {} files".format(len(oks) / len(valids) * 100, len(oksSingle) / len(valids) * 100, len(valids)))
-        df.to_excel(path_excel)
         
-        sdgs = []
-        percents = []
-        for ii in range(1, 18):
-            # sdgs.append('SDG{}'.format(ii))
-            sdgs.append('{}'.format(ii))
-            perc = countWellPredictionsPerSDG[ii - 1] / float(countPerSDG[ii - 1]) * 100.0
-            percents.append(perc)
-        plt.figure()
-        plt.bar(sdgs, percents)
-        plt.xlabel('SDGS')
-        plt.ylabel("Correctly individual identified [%]")
-        plt.savefig('out/percentage_valid_' + configStr.replace('-','').replace(' ', '_').replace('__','_') + ".png")
-        
-        plt.figure()
-        plt.bar(sdgs, countPerSDG)
-        plt.xlabel('SDGS')
-        plt.ylabel("Number papers associated to each SDG")
-        plt.savefig("out/counter_files_per_sdg.png")
-        
-    def get_topics_from_model(self, model, n_top_words):
-        # Returns the n_top_words for each of the n_topics with which a model has been trained
-        word_dict = dict()
-        topicsRaw = model.show_topics(num_topics=model.num_topics, num_words=n_top_words)
-        topicsParsed = []
-        for topic in topicsRaw:
-            topicStr = topic[1]
-            words = []
-            for comb in topicStr.split(' + '):
-                coef, word = comb.split('*')
-                coef = float(coef)
-                word = word.replace('"','')
-                words.append([coef, word])
-            topicsParsed.append(words)
-        return topicsParsed
+        if len(path_to_excel) > 0:
+            df = pd.DataFrame()
+            df["text"] = texts
+            df["labeled_sdgs"] = realSDGs
+            df["sdgs_association"] = rawSDG
+            df["stats"] = statsGlobal
+            df["predict_sdgs"] = predictedSDGs
+            df["all_valid"] = valids
+            df["any_valid"] = validsAny
+            df.to_excel(path_to_excel)
 
     def print_summary(self, top_words, path_csv=""):
         nTopics = len(self.get_topics())
@@ -166,8 +121,9 @@ class LDA_classifier(LdaModel):
             except:
                 print('CSV IS OPENED... ABORTING TOPICS EXPORT')
             
-    def map_model_topics_to_sdgs(self, train_data, path_csv="", normalize=False, verbose=False):
+    def map_model_topics_to_sdgs(self, train_data, top_n_words=30, path_csv="", normalize=False, verbose=False):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
+        self.train_data = train_data
         nTopics = len(self.get_topics())
         self.topics_association = np.zeros((nTopics, 17))
         for text, labeled_sdgs in zip(train_data[0], train_data[1]):
@@ -187,29 +143,41 @@ class LDA_classifier(LdaModel):
                 listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
                 print('Topic{:2d}: '.format(ii), '|'.join(listAscii))
         listAscii = ["x{}:{:.2f}".format(xx, sdg) for xx, sdg in zip(range(1,18), sum_per_topic)]
+         
+        if len(path_csv) > 4:
+            # Then the mapping result is stored in a csv
+            df = pd.DataFrame()
+            topics_words = [words for words in self.get_topic_terms(ii, topn=top_n_words) for ii in range(nTopics)]
+            topic_words_ascii = [[] for ii in range(nTopics)]
+            for words in topics_words:
+                topicIndex = topics_words.index(words)
+                for word in words:
+                    topic_words_ascii[topicIndex].append(self.dict.id2word(word))
+            
+            # all the top SDGs with an score > 0.1 are considered for that topic
+            for topicIndex in range(nTopics):
+                topSDGs = sorted(self.topics_association[topicIndex], reverse=True)
+                title = []
+                for sdg in topSDGs:
+                    if sdg < 0.1: break
+                    sdgIndex = list(self.topics_association[topicIndex]).index(sdg)
+                    realSDG = self.topics_association[topicIndex][sdgIndex]
+                    title.append("{:.2f}*SDG{}".format(sdg, realSDG))
+                title = ",".join(title)
+                df[title] = topic_words_ascii[topicIndex]
+
+            df.to_csv(path_csv)
+                      
         return [sum_per_topic, listAscii]
             
-        # if len(path_csv) > 4:
-        #     # Then the mapping result is stored in a csv
-        #     df = pd.DataFrame()
-        #     col_names = []
-        #     col_data = []
-        #     sdgTitles = data.get_sdg_titles(self.paths["ref"])
-        #     topic_words, word_scores, topic_nums = self.global_model.get_topics()
-        #     # for sdg in sdgTitles:
-        #     #     sdgTitle = sdgTitles[sdg]
-        #     #     colName = "{} - {}".format(sdg, sdgTitle)
-        #     #     colWords = []
-        #     #     sdgInt = list(sdgTitles.keys()).index(sdg) + 1
-        #     #     for ii, index in zip(self.topics_association, range(nTopics)):
-        #     #         if ii == sdgInt:
-        #     #             words = list(topic_words[index])
-        #     #             colWords.append(words[0:30])
-        #     #     df[colName] = colWords[0]
-        #     for words, index in zip(topic_words, topic_nums):
-        #         df["topic{}".format(index)] = list(words)
-            # df.to_csv(path_csv
-            
+    def map_text_to_sdgs(self, text, min_threshold=0, only_positive=True):
+        topics, probs = self.infer_text(text)
+        sdgs = np.zeros(17)
+        for topic, prob in zip(topics, probs):
+            if (prob < min_threshold) or (prob < 0 and only_positive): continue
+            sdgs += prob * self.topics_association[topic]
+        return sdgs
+    
     def infer_text(self, text):
         bow = self.dict.doc2bow(text)
         result = self.get_document_topics(bow, minimum_probability=None, minimum_phi_value=None)
