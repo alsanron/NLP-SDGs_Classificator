@@ -65,6 +65,12 @@ if bigrams:
                     if token.count("_") == 2:
                         trainData[0][idx].append(token)
 
+dict = Dictionary(trainData[0])
+dict.filter_extremes(no_below=1, no_above=0.7)
+dict[0] # just to load the dict
+id2word = dict.id2token
+corpus = [dict.doc2bow(text) for text in trainData[0]]
+        
 print('Training model...')
 if optimize:
     optimData = pd.read_excel(paths["ref"] + optim_excel)
@@ -81,14 +87,6 @@ if optimize:
         score_threshold = optimData["score_threshold"][ii]
         only_bad = optimData["only_bad"][ii]
         only_positive = optimData["only_positive"][ii]
-        min_words_count = optimData["min_words_count"][ii]
-        max_words_frequency = optimData["max_words_frequency"][ii]
-        
-        dict = Dictionary(trainData[0])
-        dict.filter_extremes(no_below=min_words_count, no_above=max_words_frequency)
-        dict[0] # just to load the dict
-        id2word = dict.id2token
-        corpus = [dict.doc2bow(text) for text in trainData[0]]
         
         lda = model_lda.LDA_classifier(corpus=corpus, id2word=id2word,
                                         chunksize=chunksize,
@@ -127,7 +125,7 @@ else:
     sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(""), 
                                                             normalize=True, verbose=True)
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_short.xlsx"), 
+                                                            path_to_excel=(paths["out"] + "LDA/test_abstract.xlsx"), 
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
@@ -136,7 +134,7 @@ else:
                                                             )
     
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_ext.xlsx"),
+                                                            path_to_excel=(paths["out"] + "LDA/test_full.xlsx"),
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
