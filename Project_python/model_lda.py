@@ -4,17 +4,8 @@ import tools
 import pandas as pd
 import numpy as np
 import conf
-import data
-import gensim
-import gensim.corpora as corpora
 from gensim.models import LdaModel
-from gensim.models import CoherenceModel
-from gensim.corpora.dictionary import Dictionary
-from sklearn.decomposition import NMF
 from sklearn.preprocessing import normalize
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.feature_extraction.text import TfidfVectorizer
-import matplotlib.pyplot as plt
 import tools
 import warnings
 warnings.filterwarnings('ignore')
