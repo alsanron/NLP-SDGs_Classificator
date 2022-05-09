@@ -66,7 +66,12 @@ nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, score_threshold=
                path_to_excel=(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx")
                )
 
-nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.2,
+# nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.2,
+#                segmentize=-1, filter_low=True,
+#                path_to_excel=(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
+#                )
+
+nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=0.2,
                segmentize=-1, filter_low=True,
-               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
+               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_training_files.xlsx")
                )

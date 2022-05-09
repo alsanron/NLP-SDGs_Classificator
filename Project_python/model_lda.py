@@ -29,7 +29,7 @@ class LDA_classifier(LdaModel):
     def load_model():
         return LDA_classifier.load(conf.get_paths()["model"] + "lda")
          
-    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False,     segmentize=-1, filter_low=False):
+    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False,     segmentize=-1, filter_low=False, expand_factor=1.0):
         rawSDG = []; rawSDGseg = []
         predictedSDGs = []
         realSDGs = []
@@ -73,7 +73,7 @@ class LDA_classifier(LdaModel):
                         prob = raw_sdgs[index]
                         raw_sdgs[index] = 0.0
                         raw_sdgs += prob * raw_sdgs / sum(raw_sdgs)
-                raw_sdgs *= 2
+                raw_sdgs *= expand_factor
                     
             predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
             validSingle = False; ii = 0

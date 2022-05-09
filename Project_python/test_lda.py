@@ -19,7 +19,7 @@ paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"], compact=True)
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-# raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
+raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
 # raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 # raw_healthcare, sdgs_healthcare = data.get_health_care_files(paths["ref"], n_files=100)
 
@@ -125,20 +125,31 @@ else:
     sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(""), 
                                                             normalize=True, verbose=True)
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_abstract.xlsx"), 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_abstracts0.xlsx"), 
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
                                                             segmentize=-1,
-                                                            filter_low=True
+                                                            filter_low=True,
+                                                            expand_factor=1.5
                                                             )
     
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_full.xlsx"),
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_path_files0.xlsx"),
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
                                                             segmentize=300,
                                                             filter_low=True
+                                                            )
+    
+    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_training_files0.xlsx"),
+                                                            only_bad=False, 
+                                                            score_threshold=0.2,
+                                                            only_positive=True,
+                                                            segmentize=-1,
+                                                            filter_low=True,
+                                                            expand_factor=1.5
                                                             )
     
