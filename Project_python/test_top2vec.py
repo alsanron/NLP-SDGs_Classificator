@@ -59,6 +59,12 @@ if optimize:
                       path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_abstracts{}.xlsx".format(ii)), 
                       only_bad=False, expand_factor=2.0, version=1
                       )
+    
+    perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureExt, associated_SDGs=sdgs_natureAll,
+                    filter_low=True, score_threshold=0.2, only_positive=False,
+                      path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_full{}.xlsx".format(ii)), 
+                      only_bad=False, expand_factor=2.0, version=1
+                      )
 
     perc_global_train, perc_single_train, probs_per_sdg_train = top2vec.test_model(corpus=trainData[0], associated_SDGs=trainData[1],
                       filter_low=True, score_threshold=0.2, only_positive=False,

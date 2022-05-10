@@ -135,21 +135,31 @@ else:
                                                             )
     
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_lda_path_files0.xlsx"),
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_full0.xlsx"), 
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
                                                             segmentize=300,
-                                                            filter_low=True
-                                                            )
-    
-    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_lda_training_files0.xlsx"),
-                                                            only_bad=False, 
-                                                            score_threshold=0.2,
-                                                            only_positive=True,
-                                                            segmentize=-1,
                                                             filter_low=True,
                                                             expand_factor=1.5
                                                             )
+    
+    # rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
+    #                                                         path_to_excel=(paths["out"] + "LDA/test_lda_path_files0.xlsx"),
+    #                                                         only_bad=False, 
+    #                                                         score_threshold=0.2,
+    #                                                         only_positive=True,
+    #                                                         segmentize=300,
+    #                                                         filter_low=True
+    #                                                         )
+    
+    # rawSDG, perc_valid_global, perc_valid_any = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
+    #                                                         path_to_excel=(paths["out"] + "LDA/test_lda_training_files0.xlsx"),
+    #                                                         only_bad=False, 
+    #                                                         score_threshold=0.2,
+    #                                                         only_positive=True,
+    #                                                         segmentize=-1,
+    #                                                         filter_low=True,
+    #                                                         expand_factor=1.5
+    #                                                         )
     

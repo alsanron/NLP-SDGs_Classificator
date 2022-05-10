@@ -10,8 +10,10 @@ import time
 paths = conf.get_paths()
 pathFolder = paths["out"] + "Global/"
 
-training_set = 0
-model = 4
+training_set = 0 # 0: training files, 1: validation files
+abstracts = 0 # 0: abstracts, 1: full texts
+model = 4 # 1:nmf, 2:lda, 3:top2vec, 4: all
+plot = 0 # 0:no plot, 1: plot
 
 print('######### Loading texts...')
 def parse_ascii_sdgs_association(sdgs_ascii):
@@ -27,10 +29,16 @@ if training_set:
     nmf = pd.read_excel(paths["out"] + "NMF/" + "test_nmf_training_files.xlsx")
     lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_training_files0.xlsx")
 else:
-    nmf = pd.read_excel(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx")
-    lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_abstracts0.xlsx")
-    top2vec = pd.read_excel(paths["out"] + "Top2vec/" + "test_top2vec_abstracts0.xlsx")
+    if abstracts:
+        nmf = pd.read_excel(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx")
+        lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_abstracts0.xlsx")
+        top2vec = pd.read_excel(paths["out"] + "Top2vec/" + "test_top2vec_abstracts0.xlsx")
+    else:
+        nmf = pd.read_excel(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
+        lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_full0.xlsx")
+        top2vec = pd.read_excel(paths["out"] + "Top2vec/" + "test_top2vec_full0.xlsx")
     
+# Abstracts data
 texts = list(top2vec["text"])
 labeledSDGs = list(top2vec["real"])
 
@@ -81,53 +89,66 @@ def identify_sdgs(sdgs_nmf, sdgs_lda, sdgs_top2vec):
             sdgs_new[index] = np.mean(tmp)
         else:
             count1 = [ii for ii in sdgs if ii >= 0.2]
-            count2 = [ii for ii in sdgs if ii >= 0.1]
+            count2 = [ii for ii in sdgs if ii >= 0.15]
             if len(count1) >= 1 and len(count2) >= 2:
                 tmp = [ii for ii in sdgs if ii >= 0.2]
                 sdgs_new[index] = np.mean(tmp)
     return sdgs_new
         
-
 xlabel_sdgs = range(1,18)
 xlabel_np = np.array(xlabel_sdgs)
 valid_any = 0; valid_all = 0; count_any = 0; count_all = 0
+identified_sdgs = []; scores_sdgs = []
 for textIndex in range(len(sdgs_ascii_top2vec)):
     print('Text {} of {}'.format(textIndex + 1, len(sdgs_ascii_top2vec)))
-    plt.figure(figsize=(8, 8))
+    if plot: plt.figure(figsize=(8, 8))
     
     if model == 1:
         potential_sdgs, discarded_sdgs = filter_nmf(sdgs_nmf[textIndex], min_valid=0.10)
-        plt.bar(xlabel_np - 0.1, potential_sdgs, width=0.15, label='valid-nmf')
-        plt.bar(xlabel_np + 0.1, discarded_sdgs, width=0.15, label='disc-nmf')
         path_save = pathFolder + "Images/NMF/"
+        if plot:
+            plt.bar(xlabel_np - 0.1, potential_sdgs, width=0.15, label='valid-nmf')
+            plt.bar(xlabel_np + 0.1, discarded_sdgs, width=0.15, label='disc-nmf')
+        
     elif model == 2:
-        plt.bar(xlabel_np, sdgs_lda[textIndex], width=0.15, label='lda')
+        if plot: plt.bar(xlabel_np, sdgs_lda[textIndex], width=0.15, label='lda')
         path_save = pathFolder + "Images/LDA/"
     elif model == 3:
         potential_sdgs, discarded_sdgs = filter_top2vec(sdgs_top2vec[textIndex], min_valid=0.15)
-        plt.bar(xlabel_np - 0.1, potential_sdgs, width=0.15, label='valid-top2vec')
-        plt.bar(xlabel_np + 0.1, discarded_sdgs, width=0.15, label='disc-top2vec')
         path_save = pathFolder + "Images/TOP2VEC/"
+        if plot:
+            plt.bar(xlabel_np - 0.1, potential_sdgs, width=0.15, label='valid-top2vec')
+            plt.bar(xlabel_np + 0.1, discarded_sdgs, width=0.15, label='disc-top2vec')
+        
     elif model == -1:
-        plt.bar(xlabel_np - 0.15, sdgs_nmf[textIndex], width=0.15, label='nmf')
-        plt.bar(xlabel_np + 0.0, sdgs_lda[textIndex], width=0.15, label='lda')
-        plt.bar(xlabel_np + 0.15, sdgs_top2vec[textIndex], width=0.15, label='top2vec')
         path_save = pathFolder + "Images/ALL/"
+        if plot:
+            plt.bar(xlabel_np - 0.15, sdgs_nmf[textIndex], width=0.15, label='nmf')
+            plt.bar(xlabel_np + 0.0, sdgs_lda[textIndex], width=0.15, label='lda')
+            plt.bar(xlabel_np + 0.15, sdgs_top2vec[textIndex], width=0.15, label='top2vec')
     else:
         potential_sdgs = identify_sdgs(sdgs_nmf[textIndex], sdgs_lda[textIndex], sdgs_top2vec[textIndex])
-        plt.bar(xlabel_np, potential_sdgs, width=0.3, label='all')
-        path_save = pathFolder + "Images/ALL_FILTER/"
-    plt.xticks(xlabel_sdgs)
-    plt.xlabel('SDGS')
-    plt.ylabel("Score")
-    plt.ylim(top=0.5)
-    plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
-    plt.legend()
-    # plt.savefig(path_save + "text{}.png".format(textIndex))
-    # print('################# \r')
-    # print(texts[textIndex])
-    # plt.show()
-    plt.close()
+        filtered_sdgs = ["{:.2f}".format(sdg) for sdg in potential_sdgs if sdg > 0.1]
+        id_sdgs = [list(potential_sdgs).index(sdg) + 1 for sdg in potential_sdgs if sdg > 0.1]
+        identified_sdgs.append(id_sdgs)
+        scores_sdgs.append('|'.join(filtered_sdgs))
+        if abstracts:
+            path_save = pathFolder + "Images/ALL_FILTER_ABSTRACTS/"
+        else:
+            path_save = pathFolder + "Images/ALL_FILTER_FULL/"
+        if plot: plt.bar(xlabel_np, potential_sdgs, width=0.3, label='all')
+    if plot:
+        plt.xticks(xlabel_sdgs)
+        plt.xlabel('SDGS')
+        plt.ylabel("Score")
+        plt.ylim(top=0.5)
+        plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
+        plt.legend()
+        plt.savefig(path_save + "text{}.png".format(textIndex))
+        # print('################# \r')
+        # print(texts[textIndex])
+        # plt.show()
+        plt.close()
      
     tmp = 0
     count_all += 1
@@ -148,3 +169,15 @@ for textIndex in range(len(sdgs_ascii_top2vec)):
 perc_any = valid_any / count_any * 100
 perc_all = valid_all / count_all * 100
 print('Summary -> any: {:.2f} %, all: {:.2f} %'.format(perc_any, perc_all))
+
+df = pd.DataFrame()
+for case in range(len(texts)):
+    df["texts"] = texts
+    df["labeled_Sdgs"] = labeledSDGs
+    df["identified_sdgs"] = identified_sdgs
+    df["scores_sdgs"] = scores_sdgs
+if abstracts:
+    pathOut = paths["out"] + "Global/" + "test_results_filtered_abstracts.xlsx"
+else:
+    pathOut = paths["out"] + "Global/" + "test_results_filtered_full.xlsx"
+df.to_excel(pathOut)
