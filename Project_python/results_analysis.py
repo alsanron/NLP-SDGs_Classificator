@@ -1,6 +1,7 @@
 # Analysis of the results obtained separately with the NMF, LDA and Top2Vec models
 # from cProfile import label
 # from curses import raw
+from turtle import color
 import pandas as pd
 import numpy as np
 import conf
@@ -11,7 +12,7 @@ paths = conf.get_paths()
 pathFolder = paths["out"] + "Global/"
 
 training_set = 0 # 0: training files, 1: validation files
-abstracts = 0 # 0: abstracts, 1: full texts
+abstracts = 1 # 0: abstracts, 1: full texts
 model = 4 # 1:nmf, 2:lda, 3:top2vec, 4: all
 plot = 0 # 0:no plot, 1: plot
 
@@ -30,13 +31,13 @@ if training_set:
     lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_training_files0.xlsx")
 else:
     if abstracts:
-        nmf = pd.read_excel(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx")
-        lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_abstracts0.xlsx")
-        top2vec = pd.read_excel(paths["out"] + "Top2vec/" + "test_top2vec_abstracts0.xlsx")
+        nmf = pd.read_excel(paths["out"] + "Send/" + "test_nmf_abstracts.xlsx")
+        lda = pd.read_excel(paths["out"] + "Send/" + "test_lda_abstracts.xlsx")
+        top2vec = pd.read_excel(paths["out"] + "Send/" + "test_top2vec_abstracts.xlsx")
     else:
-        nmf = pd.read_excel(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
-        lda = pd.read_excel(paths["out"] + "LDA/" + "test_lda_full0.xlsx")
-        top2vec = pd.read_excel(paths["out"] + "Top2vec/" + "test_top2vec_full0.xlsx")
+        nmf = pd.read_excel(paths["out"] + "Send/" + "test_nmf_full.xlsx")
+        lda = pd.read_excel(paths["out"] + "Send/" + "test_lda_full.xlsx")
+        top2vec = pd.read_excel(paths["out"] + "Send/" + "test_top2vec_full.xlsx")
     
 # Abstracts data
 texts = list(top2vec["text"])
@@ -52,13 +53,18 @@ sdgs_ascii_top2vec = list(top2vec["sdgs_association"])
 sdgs_top2vec = [parse_ascii_sdgs_association(sdgs_ascii) for sdgs_ascii in sdgs_ascii_top2vec]
 
 def filter_nmf(raw_sdgs, min_valid):
-    # threshold = np.mean(raw_sdgs) 
-    threshold = np.median(sorted(raw_sdgs))
-    validSDGs = (raw_sdgs - threshold) > 0.0
-    
     potential_sdgs = np.zeros(17)
     for sdg, sdgIndex in zip(raw_sdgs, range(17)):
-        if sdg >= min_valid or (validSDGs[sdgIndex] and sdg >= min_valid):
+        if sdg >= min_valid:
+            potential_sdgs[sdgIndex] = sdg
+    discarded_sdgs = raw_sdgs - potential_sdgs
+
+    return (potential_sdgs, discarded_sdgs)
+
+def filter_lda(raw_sdgs, min_valid):
+    potential_sdgs = np.zeros(17)
+    for sdg, sdgIndex in zip(raw_sdgs, range(17)):
+        if sdg >= min_valid:
             potential_sdgs[sdgIndex] = sdg
     discarded_sdgs = raw_sdgs - potential_sdgs
 
@@ -66,12 +72,10 @@ def filter_nmf(raw_sdgs, min_valid):
 
 def filter_top2vec(raw_sdgs, min_valid):
     # threshold = np.mean(raw_sdgs) 
-    threshold = np.median(sorted(raw_sdgs))
-    validSDGs = (raw_sdgs - threshold) > 0.0
     
     potential_sdgs = np.zeros(17)
     for sdg, sdgIndex in zip(raw_sdgs, range(17)):
-        if sdg >= min_valid or (validSDGs[sdgIndex] and sdg >= min_valid):
+        if sdg >= min_valid:
             potential_sdgs[sdgIndex] = sdg
     discarded_sdgs = raw_sdgs - potential_sdgs
 
@@ -79,14 +83,15 @@ def filter_top2vec(raw_sdgs, min_valid):
 
 def identify_sdgs(sdgs_nmf, sdgs_lda, sdgs_top2vec):
     sdgs_new = np.zeros(17)
+    
     for index, nmf, lda, top2vec in zip(range(len(sdgs_nmf)), sdgs_nmf, sdgs_lda, sdgs_top2vec):
         sdgs = np.array([nmf, lda, top2vec])
         if (sdgs >= 0.3).any():
             tmp = [ii for ii in sdgs if ii >= 0.3]
             sdgs_new[index] = np.mean(tmp)
-        elif index == 2 and top2vec >=0.2:
-            tmp = [ii for ii in sdgs if ii >= 0.2]
-            sdgs_new[index] = np.mean(tmp)
+        # elif index == 2 and top2vec >=0.2:
+        #     tmp = [ii for ii in sdgs if ii >= 0.2]
+        #     sdgs_new[index] = np.mean(tmp)
         else:
             count1 = [ii for ii in sdgs if ii >= 0.2]
             count2 = [ii for ii in sdgs if ii >= 0.15]
@@ -99,23 +104,40 @@ xlabel_sdgs = range(1,18)
 xlabel_np = np.array(xlabel_sdgs)
 valid_any = 0; valid_all = 0; count_any = 0; count_all = 0
 identified_sdgs = []; scores_sdgs = []
+count_per_sdg = np.zeros(17); id_ok_per_sdg = np.zeros(17)
+
 for textIndex in range(len(sdgs_ascii_top2vec)):
     print('Text {} of {}'.format(textIndex + 1, len(sdgs_ascii_top2vec)))
     if plot: plt.figure(figsize=(8, 8))
     
     if model == 1:
-        potential_sdgs, discarded_sdgs = filter_nmf(sdgs_nmf[textIndex], min_valid=0.10)
+        potential_sdgs, discarded_sdgs = filter_nmf(sdgs_nmf[textIndex], min_valid=0.20)
         path_save = pathFolder + "Images/NMF/"
+        if abstracts:
+            path_resume = pathFolder + "Images/n_files_classified_ok_nmf_abstracts.png"
+        else:
+            path_resume = pathFolder + "Images/n_files_classified_ok_nmf_full.png"
         if plot:
             plt.bar(xlabel_np - 0.1, potential_sdgs, width=0.15, label='valid-nmf')
             plt.bar(xlabel_np + 0.1, discarded_sdgs, width=0.15, label='disc-nmf')
         
-    elif model == 2:
+    elif model == 2:    
+        potential_sdgs, discarded_sdgs = filter_lda(sdgs_lda[textIndex], min_valid=0.20)
         if plot: plt.bar(xlabel_np, sdgs_lda[textIndex], width=0.15, label='lda')
         path_save = pathFolder + "Images/LDA/"
+        if abstracts:
+            path_resume = pathFolder + "Images/n_files_classified_ok_lda_abstracts.png"
+        else:
+            path_resume = pathFolder + "Images/n_files_classified_ok_lda_full.png"
+
     elif model == 3:
-        potential_sdgs, discarded_sdgs = filter_top2vec(sdgs_top2vec[textIndex], min_valid=0.15)
+        potential_sdgs, discarded_sdgs = filter_top2vec(sdgs_top2vec[textIndex], min_valid=0.2)
         path_save = pathFolder + "Images/TOP2VEC/"
+        if abstracts:
+            path_resume = pathFolder + "Images/n_files_classified_ok_top2vec_abstracts.png"
+        else:
+            path_resume = pathFolder + "Images/n_files_classified_ok_top2vec_full.png"
+
         if plot:
             plt.bar(xlabel_np - 0.1, potential_sdgs, width=0.15, label='valid-top2vec')
             plt.bar(xlabel_np + 0.1, discarded_sdgs, width=0.15, label='disc-top2vec')
@@ -128,15 +150,17 @@ for textIndex in range(len(sdgs_ascii_top2vec)):
             plt.bar(xlabel_np + 0.15, sdgs_top2vec[textIndex], width=0.15, label='top2vec')
     else:
         potential_sdgs = identify_sdgs(sdgs_nmf[textIndex], sdgs_lda[textIndex], sdgs_top2vec[textIndex])
-        filtered_sdgs = ["{:.2f}".format(sdg) for sdg in potential_sdgs if sdg > 0.1]
-        id_sdgs = [list(potential_sdgs).index(sdg) + 1 for sdg in potential_sdgs if sdg > 0.1]
-        identified_sdgs.append(id_sdgs)
-        scores_sdgs.append('|'.join(filtered_sdgs))
+        if abstracts:
+            path_resume = pathFolder + "Images/n_files_classified_ok_abstracts.png"
+        else:
+            path_resume = pathFolder + "Images/n_files_classified_ok_full.png"
+
         if abstracts:
             path_save = pathFolder + "Images/ALL_FILTER_ABSTRACTS/"
         else:
             path_save = pathFolder + "Images/ALL_FILTER_FULL/"
         if plot: plt.bar(xlabel_np, potential_sdgs, width=0.3, label='all')
+        
     if plot:
         plt.xticks(xlabel_sdgs)
         plt.xlabel('SDGS')
@@ -149,14 +173,24 @@ for textIndex in range(len(sdgs_ascii_top2vec)):
         # print(texts[textIndex])
         # plt.show()
         plt.close()
-     
+        
+    filtered_sdgs = ["{:.2f}".format(sdg) for sdg in potential_sdgs if sdg > 0.1]    
+    scores_sdgs.append('|'.join(filtered_sdgs))
+    id_sdgs = [list(potential_sdgs).index(sdg) + 1 for sdg in potential_sdgs if sdg > 0.1]
+    identified_sdgs.append(id_sdgs)
+    labeledSDGs_int = [int(labeled) for labeled in labeledSDGs[textIndex][1:-1].split(',')]
+    for label in labeledSDGs_int:
+        count_per_sdg[label - 1] += 1
+        if label in id_sdgs:
+            id_ok_per_sdg[label - 1] += 1
+    
     tmp = 0
     count_all += 1
     ass_sdgs = labeledSDGs[textIndex][1:-1].split(',')
     ass_sdgs = [int(sdg) for sdg in ass_sdgs]
     predict_sdgs = []
     for sdg in potential_sdgs:
-        if sdg > 0:
+        if sdg > 0.1:
             predict_sdgs.append(list(potential_sdgs).index(sdg) + 1)
     for sdg in ass_sdgs:
         count_any += 1
@@ -169,6 +203,25 @@ for textIndex in range(len(sdgs_ascii_top2vec)):
 perc_any = valid_any / count_any * 100
 perc_all = valid_all / count_all * 100
 print('Summary -> any: {:.2f} %, all: {:.2f} %'.format(perc_any, perc_all))
+
+plt.figure(figsize=(8, 8))
+no_identified = np.array(count_per_sdg) - np.array(id_ok_per_sdg)
+plt.bar(xlabel_np - 0.1, id_ok_per_sdg, width=0.2, label='nmf', color="green")
+plt.bar(xlabel_np + 0.1, no_identified, width=0.2, label='nmf', color="red")
+plt.xticks(xlabel_sdgs)
+plt.xlabel('SDGS')
+plt.ylabel("Number of texts")
+if abstracts:titleStart = "Abstracts. "
+else: titleStart = "Full paper. "
+if model == 4:
+    plt.title(titleStart + 'Voted method. Green: ok, Red: not identified')
+else:
+    plt.title(titleStart + 'Threshold = 0.2. Green: ok, Red: not identified')
+plt.savefig(path_resume)
+# print('################# \r')
+# print(texts[textIndex])
+plt.show()
+plt.close()
 
 df = pd.DataFrame()
 for case in range(len(texts)):

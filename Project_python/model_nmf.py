@@ -42,7 +42,7 @@ class NMF_classifier:
                                     ngram_range=ngram, # min-max
                                     )
         vectorized_data = self.vectorizer.fit_transform(train_data[0])
-        self.model = NMF(n_components=n_topics, random_state=5, verbose=self.verbose)
+        self.model = NMF(n_components=n_topics, random_state=5, verbose=False)
         self.model.fit(vectorized_data) 
         
     def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel=""):
@@ -173,6 +173,14 @@ class NMF_classifier:
     
         if len(path_csv) > 4:
             # Then the mapping result is stored in a csv
+            dfMap = pd.DataFrame()
+            rows = []
+            for ii in range(nTopics):
+                listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
+                rows.append('|'.join(listAscii))
+            dfMap["topics_association_map"] = rows
+            dfMap.to_excel(self.paths["out"] + "NMF/" + "topics_map.xlsx")
+            
             df = pd.DataFrame()
             topic_words_ascii = []
             for ii in range(nTopics):

@@ -25,9 +25,9 @@ raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_wor
 
 ######## GLOBAL CONFIGURATION
 optim_excel = "optimization_lda.xlsx"; out_optim = "out_optimization.xlsx"
-optimize = 0
+optimize = 1
 
-lemmatize = False
+lemmatize = True
 bigrams = True; min_count_bigram = 10
 trigrams = True; min_count_trigram = 5
 min_words_count = 1 # minimum number of times a word must appear in the corpus. It should be small since the training set is small
@@ -77,7 +77,7 @@ if optimize:
     out_perc_global = []; out_perc_any = []
     for ii in range(len(optimData)):
         print('# Case: {} of {}'.format(ii + 1, len(optimData)))
-        num_topics = optimData["num_topics"][ii]
+        num_topics = 16
         chunksize = optimData["chunksize"][ii]
         passes = optimData["passes"][ii]
         iterations = optimData["iterations"][ii]
@@ -110,10 +110,11 @@ if optimize:
         print('Testing model...')
         rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
                                                                 path_to_excel=(paths["out"] +     "LDA/" + out_test_excel), only_bad=only_bad, 
-                                                                score_threshold=score_threshold,
-                                                                only_positive=False,
+                                                                score_threshold=0.2,
+                                                                only_positive=True,
                                                                 segmentize=-1,
-                                                                filter_low=True
+                                                                filter_low=True,
+                                                                expand_factor=1.5
                                                                 )
         out_perc_global.append(perc_valid_global); out_perc_any.append(perc_valid_any)
     optimData["perc_global"] = out_perc_global
@@ -122,10 +123,11 @@ if optimize:
 else: 
     lda = model_lda.LDA_classifier.load_model()
     lda.set_conf(paths, dict)
-    sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(""), 
+    sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, 
+                                                          path_csv=(paths["out"] + "LDA/topics.csv"), 
                                                             normalize=True, verbose=True)
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_lda_abstracts0.xlsx"), 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_abstracts.xlsx"), 
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
@@ -135,11 +137,11 @@ else:
                                                             )
     
     rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_lda_full0.xlsx"), 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_full.xlsx"), 
                                                             only_bad=False, 
                                                             score_threshold=0.2,
                                                             only_positive=True,
-                                                            segmentize=300,
+                                                            segmentize=-1,
                                                             filter_low=True,
                                                             expand_factor=1.5
                                                             )
@@ -153,13 +155,13 @@ else:
     #                                                         filter_low=True
     #                                                         )
     
-    # rawSDG, perc_valid_global, perc_valid_any = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
-    #                                                         path_to_excel=(paths["out"] + "LDA/test_lda_training_files0.xlsx"),
-    #                                                         only_bad=False, 
-    #                                                         score_threshold=0.2,
-    #                                                         only_positive=True,
-    #                                                         segmentize=-1,
-    #                                                         filter_low=True,
-    #                                                         expand_factor=1.5
-    #                                                         )
+    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_training_files.xlsx"),
+                                                            only_bad=False, 
+                                                            score_threshold=0.2,
+                                                            only_positive=True,
+                                                            segmentize=-1,
+                                                            filter_low=True,
+                                                            expand_factor=1.5
+                                                            )
     

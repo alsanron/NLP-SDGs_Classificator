@@ -192,6 +192,7 @@ def get_extra_manual_files(refPath):
             fileSDG = []
             for sdg in file.split("_"):
                 if sdg.isdigit():
+                    if int(sdg) == 17: continue
                     fileSDG.append(int(sdg))
             corpus.append(text)
             associatedSDGs.append(fileSDG)

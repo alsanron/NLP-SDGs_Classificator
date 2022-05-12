@@ -45,36 +45,31 @@ if optimize:
     else:
       trainData = [raw_orgFiles, sdgs_orgFiles]
   
-    # top2vec.train(train_data=trainData, embedding_model=embedding_model[ii], method=speed[ii], 
+    # top2vec.train(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method=speed[ii], 
     #               ngram=ngram[ii], min_count=min_count[ii], workers=8, tokenizer=use_embedding_model_tokenizer[ii]) # "doc2vec", "all-MiniLM-L6-v2", universal-sentence-encoder
     # top2vec.save()
     top2vec.load(train_data=trainData)
     [sum_per_topic_raw, sum_per_topic_ascii] = top2vec.map_model_topics_to_sdgs(normalize=True,
-                                  # path_csv=(paths["out"] + "Top2vec/" + "topics.csv")
-                                  version=1
+                                  path_csv=(paths["out"] + "Top2vec/" + "topics.csv"),
+                                  version=2
                                  )
     
     perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureShort, associated_SDGs=sdgs_nature,
-                    filter_low=True, score_threshold=0.2, only_positive=False,
+                    filter_low=True, score_threshold=0.2, only_positive=True,
                       path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_abstracts{}.xlsx".format(ii)), 
-                      only_bad=False, expand_factor=2.0, version=1
+                      only_bad=False, expand_factor=2, version=1
                       )
     
     perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureExt, associated_SDGs=sdgs_natureAll,
-                    filter_low=True, score_threshold=0.2, only_positive=False,
+                    filter_low=True, score_threshold=0.2, only_positive=True,
                       path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_full{}.xlsx".format(ii)), 
-                      only_bad=False, expand_factor=2.0, version=1
+                      only_bad=False, expand_factor=2, version=1
                       )
 
     perc_global_train, perc_single_train, probs_per_sdg_train = top2vec.test_model(corpus=trainData[0], associated_SDGs=trainData[1],
-                      filter_low=True, score_threshold=0.2, only_positive=False,
+                      filter_low=True, score_threshold=0.2, only_positive=True,
                         path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_training_files{}.xlsx".format(ii)), 
-                        only_bad=False, expand_factor=2.0
-                        )
-    perc_global_train, perc_single_train, probs_per_sdg_train = top2vec.test_model(corpus=trainData[0], associated_SDGs=trainData[1],
-                      filter_low=True, score_threshold=0.2, only_positive=False,
-                        path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_training_files{}.xlsx".format(ii)), 
-                        only_bad=False, expand_factor=2.0
+                        only_bad=False, expand_factor=2
                         )
     
     tops_ascii.append(sum_per_topic_ascii)

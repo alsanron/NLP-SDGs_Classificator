@@ -34,6 +34,7 @@ raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
 # raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
+# raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 
 topWords = 30
 def prepare_texts(corpus):
@@ -46,6 +47,7 @@ def prepare_texts(corpus):
 orgFiles = prepare_texts(raw_orgFiles)
 natureShort = prepare_texts(raw_natureShort)
 natureExt = prepare_texts(raw_natureExt)
+# extraFiles = prepare_texts(raw_extraFiles)
 
 trainData = [orgFiles, sdgs_orgFiles]
 

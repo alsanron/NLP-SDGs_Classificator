@@ -59,17 +59,7 @@ class Top2Vec_classifier:
         numTopics = self.model.get_num_topics()
         stat_topics = numTopics
         for text, sdgs in zip(corpus, associated_SDGs):
-            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=version)  
-            
-            raw_sdgs *= expand_factor
-            if filter_low:
-                raw_sdgs_filt = raw_sdgs < 0.05
-                for prob, index, filt in zip(raw_sdgs, range(len(raw_sdgs)), raw_sdgs_filt):
-                    if filt: 
-                        prob = raw_sdgs[index]
-                        raw_sdgs[index] = 0.0
-                        raw_sdgs += prob * raw_sdgs / sum(raw_sdgs)
-            
+            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=version, expand_factor=expand_factor, filter_low=filter_low)  
             validSingle = False; ii = 0
             for sdg in sdgs:
                 countPerSDG[sdg - 1] += 1
@@ -190,6 +180,18 @@ class Top2Vec_classifier:
                 print(final_sum) 
             
         if len(path_csv) > 4:
+            dfMap = pd.DataFrame()
+            rows = []
+            sum_per_sdg = np.zeros(17)
+            for ii in range(nTopics):
+                listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
+                sum_per_sdg += self.topics_association[ii]
+                rows.append('|'.join(listAscii))
+            sum_ascii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), sum_per_sdg)]
+            rows.append('|'.join(sum_ascii))
+            dfMap["topics_association_map"] = rows
+            dfMap.to_excel(self.paths["out"] + "Top2vec/" + "topics_map.xlsx")
+            
             # Then the mapping result is stored in a csv
             topic_words, word_scores, topic_nums = self.model.get_topics()
             df = pd.DataFrame()
@@ -210,10 +212,11 @@ class Top2Vec_classifier:
                     title.append("{:.2f}*SDG{}".format(ass_sdg, sdgIndex + 1))
                 title = ",".join(title)
                 df[title] = topic_words_ascii[topicIndex]
+            df.to_csv(path_csv)
                 
         return [sum_per_topic, final_sum]
             
-    def map_text_to_sdgs(self, text, score_threshold, only_positive=False, version=1):
+    def map_text_to_sdgs(self, text, score_threshold, only_positive=False, version=1, expand_factor=3, filter_low=True):
         if version == 1: # then map with topics
             numTopics = self.model.get_num_topics()
             topics_words, word_scores, probabilities, topic_nums = self.model.query_topics(text, num_topics=numTopics)
@@ -231,7 +234,16 @@ class Top2Vec_classifier:
                 for sdg in labeled_sdgs:
                     sdgs[sdg - 1] = 1
                 predictSDGs += docScore * sdgs
-            
+        if filter_low:
+            raw_sdgs_filt = predictSDGs < 0.05
+            for prob, index, filt in zip(predictSDGs, range(len(predictSDGs)), raw_sdgs_filt):
+                if filt: 
+                    prob = predictSDGs[index]
+                    predictSDGs[index] = 0.0
+                    predictSDGs += prob * predictSDGs / sum(predictSDGs)
+                    
+        predictSDGs *= expand_factor
+        
         top = sorted(predictSDGs, reverse=True)
         sdgs = []; scores = []
         for ii in range(len(top)):

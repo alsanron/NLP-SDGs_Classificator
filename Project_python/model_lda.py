@@ -73,7 +73,7 @@ class LDA_classifier(LdaModel):
                         prob = raw_sdgs[index]
                         raw_sdgs[index] = 0.0
                         raw_sdgs += prob * raw_sdgs / sum(raw_sdgs)
-                raw_sdgs *= expand_factor
+            raw_sdgs *= expand_factor
                     
             predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
             validSingle = False; ii = 0
@@ -185,6 +185,18 @@ class LDA_classifier(LdaModel):
             print('GLOBAL: ' + '|'.join(listAscii))
          
         if len(path_csv) > 4:
+            dfMap = pd.DataFrame()
+            rows = []
+            sum_per_sdg = np.zeros(17)
+            for ii in range(nTopics):
+                listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
+                sum_per_sdg += self.topics_association[ii]
+                rows.append('|'.join(listAscii))
+            sum_ascii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), sum_per_sdg)]
+            rows.append('|'.join(sum_ascii))
+            dfMap["topics_association_map"] = rows
+            dfMap.to_excel(self.paths["out"] + "LDA/" + "topics_map.xlsx")
+            
             # Then the mapping result is stored in a csv
             df = pd.DataFrame()
             topics_words = []
