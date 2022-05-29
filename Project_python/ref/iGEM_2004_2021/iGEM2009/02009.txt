@@ -1,0 +1,113 @@
+1	Aberdeen_Scotland	Wiki	Europe	United Kingdom	New Application	Collegiate	Accepted
+2	Alberta	Wiki	North America	Canada	Foundational Advance	Collegiate	Accepted
+3	ArtScienceBangalore	Wiki	Asia	India	New Application	Collegiate	Accepted
+4	BCCS-Bristol	Wiki	Europe	United Kingdom	Foundational Advance	Collegiate	Accepted
+5	Berkeley_Software	Wiki	North America	United States	Software Tools	Collegiate	Accepted
+6	Berkeley_Wetlab	Wiki	North America	United States	Foundational Advance	Collegiate	Accepted
+7	BIOTEC_Dresden	Wiki	Europe	Germany	Manufacturing	Collegiate	Accepted
+8	Bologna	Wiki	Europe	Italy	Foundational Advance	Collegiate	Accepted
+9	British_Columbia	Wiki	North America	Canada	Foundational Advance	Collegiate	Accepted
+10	Brown	Wiki	North America	United States	Health/Medicine	Collegiate	Accepted
+11	Calgary	Wiki	North America	Canada	Foundational Advance	Collegiate	Accepted
+12	Cambridge	Wiki	Europe	United Kingdom	Environment	Collegiate	Accepted
+13	CBNU-Korea	Wiki	Asia	Korea, Republic Of	Software Tools	Collegiate	Accepted
+14	Chiba	Wiki	Asia	Japan	Manufacturing	Collegiate	Accepted
+15	CityColSanFrancisco	Wiki	North America	United States	Food/Energy	Collegiate	Accepted
+16	Cornell	Wiki	North America	United States	Environment	Collegiate	Accepted
+17	DTU_Denmark	Wiki	Europe	Denmark	Manufacturing	Collegiate	Accepted
+18	Duke	Wiki	North America	United States	Manufacturing	Collegiate	Accepted
+19	Edinburgh	Wiki	Europe	United Kingdom	Environment	Collegiate	Accepted
+20	EPF-Lausanne	Wiki	Europe	Switzerland	Foundational Advance	Collegiate	Accepted
+21	Freiburg_bioware	Wiki	Europe	Germany	Foundational Advance	Collegiate	Accepted
+22	Freiburg_software	Wiki	Europe	Germany	Software Tools	Collegiate	Accepted
+23	Gaston_Day_School	Wiki	North America	United States	Environment	Collegiate	Accepted
+24	Groningen	Wiki	Europe	Netherlands	Environment	Collegiate	Accepted
+25	Harvard	Wiki	North America	United States	New Application	Collegiate	Accepted
+26	Heidelberg	Wiki	Europe	Germany	Foundational Advance	Collegiate	Accepted
+27	HKU-HKBU	Wiki	Asia	Hong Kong	Manufacturing	Collegiate	Accepted
+28	HKUST	Wiki	Asia	Hong Kong	New Application	Collegiate	Accepted
+29	IBB_Pune	Wiki	Asia	India	Information Processing	Collegiate	Accepted
+30	IIT_Bombay_India	Wiki	Asia	India	Foundational Advance	Collegiate	Accepted
+31	IIT_Madras	Wiki	Asia	India	New Application	Collegiate	Accepted
+32	Illinois	Wiki	North America	United States	Information Processing	Collegiate	Accepted
+33	Illinois-Tools	Wiki	North America	United States	Software Tools	Collegiate	Accepted
+34	Imperial College London	Wiki	Europe	United Kingdom	Manufacturing	Collegiate	Accepted
+35	IPN-UNAM-Mexico	Wiki	Latin America	Mexico	Foundational Advance	Collegiate	Accepted
+36	IPOC1-Colombia	Wiki	Latin America	Colombia	Environment	Collegiate	Accepted
+37	IPOC2-Colombia	Wiki	Latin America	Colombia	Environment	Collegiate	Accepted
+38	Johns_Hopkins-BAG	Wiki	North America	United States	New Application	Collegiate	Accepted
+39	KULeuven	Wiki	Europe	Belgium	Manufacturing	Collegiate	Accepted
+40	KU_Seoul	Wiki	Asia	Korea, Republic Of	Environment	Collegiate	Accepted
+41	Kyoto	Wiki	Asia	Japan	Foundational Advance	Collegiate	Accepted
+42	LCG-UNAM-Mexico	Wiki	Latin America	Mexico	New Application	Collegiate	Accepted
+43	Lethbridge	Wiki	North America	Canada	Foundational Advance	Collegiate	Accepted
+44	McGill	Wiki	North America	Canada	New Application	Collegiate	Accepted
+45	METU-Gene	Wiki	Europe	Turkey	Health/Medicine	Collegiate	Accepted
+46	Michigan	Wiki	North America	United States	Environment	Collegiate	Accepted
+47	Minnesota	Wiki	North America	United States	Software Tools	Collegiate	Accepted
+48	Missouri_Miners	Wiki	North America	United States	Food/Energy	Collegiate	Accepted
+49	MIT	Wiki	North America	United States	Foundational Advance	Collegiate	Accepted
+50	MoWestern_Davidson	Wiki	North America	United States	Information Processing	Collegiate	Accepted
+51	NCTU_Formosa	Wiki	Asia	Taiwan	New Application	Collegiate	Accepted
+52	Nevada	Wiki	North America	United States	Health/Medicine	Collegiate	Accepted
+53	Newcastle	Wiki	Europe	United Kingdom	Environment	Collegiate	Accepted
+54	NTU-Singapore	Wiki	Asia	Singapore	Health/Medicine	Collegiate	Accepted
+55	NYMU-Taipei	Wiki	Asia	Taiwan	Health/Medicine	Collegiate	Accepted
+56	Osaka	Wiki	Asia	Japan	New Application	Collegiate	Accepted
+57	Paris	Wiki	Europe	France	Foundational Advance	Collegiate	Accepted
+58	PKU_Beijing	Wiki	Asia	China	Information Processing	Collegiate	Accepted
+59	Purdue	Wiki	North America	United States	Health/Medicine	Collegiate	Accepted
+60	Queens	Wiki	North America	Canada	Health/Medicine	Collegiate	Accepted
+61	SDU-Denmark	Wiki	Europe	Denmark	Health/Medicine	Collegiate	Accepted
+62	Sheffield	Wiki	Europe	United Kingdom	Foundational Advance	Collegiate	Accepted
+63	SJTU-BioX-Shanghai	Wiki	Asia	China	Information Processing	Collegiate	Accepted
+64	Slovenia	Wiki	Europe	Slovenia	Manufacturing	Collegiate	Accepted
+65	Southampton	Wiki	Europe	United Kingdom	Information Processing	Collegiate	Accepted
+66	Stanford	Wiki	North America	United States	Health/Medicine	Collegiate	Accepted
+67	SupBiotech-Paris	Wiki	Europe	France	Health/Medicine	Collegiate	Accepted
+68	Sweden	Wiki	Europe	Sweden	Information Processing	Collegiate	Accepted
+69	Tianjin	Wiki	Asia	China	Environment	Collegiate	Accepted
+70	Todai-Tokyo	Wiki	Asia	Japan	Health/Medicine	Collegiate	Accepted
+71	Tokyo-Nokogen	Wiki	Asia	Japan	Manufacturing	Collegiate	Accepted
+72	Tokyo_Tech	Wiki	Asia	Japan	Environment	Collegiate	Accepted
+73	TorontoMaRSDiscovery	Wiki	North America	Canada	New Application	Collegiate	Accepted
+74	Tsinghua	Wiki	Asia	China	Health/Medicine	Collegiate	Accepted
+75	TUDelft	Wiki	Europe	Netherlands	Information Processing	Collegiate	Accepted
+76	TzuChiU_Formosa	Wiki	Asia	United States	Food/Energy	Collegiate	Accepted
+77	UAB-Barcelona	Wiki	Europe	Spain	Environment	Collegiate	Accepted
+78	UChicago	Wiki	North America	United States	Environment	Collegiate	Accepted
+79	UCL_London	Wiki	Europe	United Kingdom	Foundational Advance	Collegiate	Accepted
+80	UCSF	Wiki	North America	United States	Health/Medicine	Collegiate	Accepted
+81	UC_Davis	Wiki	North America	United States	New Application	Collegiate	Accepted
+82	ULB-Brussels	Wiki	Europe	Belgium	Manufacturing	Collegiate	Accepted
+83	UNICAMP-Brazil	Wiki	Latin America	Brazil	Food/Energy	Collegiate	Accepted
+84	UNIPV-Pavia	Wiki	Europe	Italy	Food/Energy	Collegiate	Accepted
+85	uOttawa	Wiki	North America	Canada	Health/Medicine	Collegiate	Accepted
+86	Uppsala-Sweden	Wiki	Europe	Sweden	Food/Energy	Collegiate	Accepted
+87	UQ-Australia	Wiki	Asia	Australia	Environment	Collegiate	Accepted
+88	USTC	Wiki	Asia	China	Foundational Advance	Collegiate	Accepted
+89	USTC_Software	Wiki	Asia	China	Software Tools	Collegiate	Accepted
+90	Utah_State	Wiki	North America	United States	Manufacturing	Collegiate	Accepted
+91	Valencia	Wiki	Europe	Spain	New Application	Collegiate	Accepted
+92	VictoriaBC	Wiki	North America	Canada	Manufacturing	Collegiate	Accepted
+93	Victoria_Australia	Wiki	Asia	Australia	Manufacturing	Collegiate	Accepted
+94	Virginia	Wiki	North America	United States	Environment	Collegiate	Accepted
+95	Virginia_Commonwealth	Wiki	North America	United States	Foundational Advance	Collegiate	Accepted
+96	Warsaw	Wiki	Europe	Poland	Health/Medicine	Collegiate	Accepted
+97	Washington	Wiki	North America	United States	Manufacturing	Collegiate	Accepted
+98	Washington-Software	Wiki	North America	United States	Software Tools	Collegiate	Accepted
+99	Wash_U	Wiki	North America	United States	Food/Energy	Collegiate	Accepted
+100	Waterloo	Wiki	North America	Canada	Foundational Advance	Collegiate	Accepted
+101	Wisconsin-Madison	Wiki	North America	United States	Food/Energy	Collegiate	Accepted
+102	Yeshiva_NYC	Wiki	North America	United States	Foundational Advance	Collegiate	Accepted
+103	Amsterdam	Wiki	Europe	Netherlands		Collegiate	Withdrawn
+104	Bay_Area_RSI	Wiki	North America	United States	Health/Medicine	Collegiate	Withdrawn
+105	BrownTwo	Wiki	North America	United States		Collegiate	Withdrawn
+106	ESBS-Strasbourg	Wiki	Europe	France		Collegiate	Withdrawn
+107	IGIB-Delhi	Wiki	Asia	India		Collegiate	Withdrawn
+108	Indiana	Wiki	North America	United States	Foundational Advance	Collegiate	Withdrawn
+109	Johns_Hopkins	Wiki	North America	United States		Collegiate	Withdrawn
+110	NYU	Wiki	North America	United States		Collegiate	Withdrawn
+111	Rice	Wiki	North America	United States		Collegiate	Withdrawn
+112	TU_Munich	Wiki	Europe	Germany		Collegiate	Withdrawn
+113	UNC_Chapel_Hill	Wiki	North America	United States		Collegiate	Withdrawn

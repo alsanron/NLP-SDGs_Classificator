@@ -1,0 +1,1 @@
+Tokyo_Alliance:::Asia:::Japan::: :::Collegiate:::Accepted:::About Noughts-and-Crosses:::Noughts-and-Crosses (a.k.a. Tic-Tac-Toe) is widely known board game. We call this "Sanmoku-Narabe"「三目並べ」 in Japanese. Our project is to make this Noughts-and-Crosses in vivo.:::2006

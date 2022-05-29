@@ -1,0 +1,1 @@
+ETHZ:::Europe:::Switzerland::: :::Collegiate:::Accepted:::Counter:::Design of a finite state machine that counts concentration changes of a protein. Counting to 2 can be achieved by building a device out of two switches. By combining n such devices counting to 2 to the power of n can be achieved.:::2005

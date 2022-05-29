@@ -1,0 +1,14 @@
+1	Berkeley	Wiki	North America	Unspecified		Collegiate	Accepted
+2	Caltech	Wiki	North America	Unspecified		Collegiate	Accepted
+3	Cambridge	Wiki	Europe	Unspecified		Collegiate	Accepted
+4	Davidson	Wiki	North America	Unspecified		Collegiate	Accepted
+5	ETHZ	Wiki	Europe	Unspecified		Collegiate	Accepted
+6	Harvard	Wiki	North America	Unspecified		Collegiate	Accepted
+7	MIT	Wiki	North America	Unspecified		Collegiate	Accepted
+8	Oklahoma	Wiki	North America	Unspecified		Collegiate	Accepted
+9	Penn_State	Wiki	North America	Unspecified		Collegiate	Accepted
+10	Princeton	Wiki	North America	Unspecified		Collegiate	Accepted
+11	Registry_Example	Wiki	North America	Unspecified		Collegiate	Accepted
+12	Toronto	Wiki	Europe	Unspecified		Collegiate	Accepted
+13	UCSF	Wiki	North America	Unspecified		Collegiate	Accepted
+14	UTAustin	Wiki	North America	Unspecified		Collegiate	Accepted

@@ -1,0 +1,1 @@
+Bologna:::Europe:::Italy:::Foundational Research:::Collegiate:::Accepted::: :::Our goal is the realization of a genetic circuit able to implement the functionality typical of an electronic device called Schmitt Trigger.:::2007

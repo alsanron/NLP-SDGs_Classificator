@@ -1,0 +1,59 @@
+1	Alberta	Wiki	North America	Canada	Energy	Collegiate	Accepted
+2	Bangalore	Wiki	Asia	India	Foundational Research	Collegiate	Accepted
+3	Bay_Area_RSI	Wiki	North America	Usa	Medical	Collegiate	Accepted
+4	Berkeley_LBL	Wiki	North America	Usa	Energy	Collegiate	Accepted
+5	Berkeley_UC	Wiki	North America	Usa	Medical	Collegiate	Accepted
+6	Bologna	Wiki	Europe	Italy	Foundational Research	Collegiate	Accepted
+7	Boston_University	Wiki	North America	United States Of America	Energy	Collegiate	Accepted
+8	Brown	Wiki	North America	Usa	Environment	Collegiate	Accepted
+9	Calgary	Wiki	North America	Canada	Foundational Research	Collegiate	Accepted
+10	Caltech	Wiki	North America	Us	Foundational Research	Collegiate	Accepted
+11	Cambridge	Wiki	Europe	Uk	Foundational Research	Collegiate	Accepted
+12	Chiba	Wiki	Asia	Japan	Foundational Research	Collegiate	Accepted
+13	Colombia_Israel	Wiki	Latin America	Colombia And Israel	Environment	Collegiate	Accepted
+14	CSHL	Wiki	North America	Usa	Foundational Research	Collegiate	Accepted
+15	Davidson_Missouri_W	Wiki	North America	Usa	Information Processing	Collegiate	Accepted
+16	Duke	Wiki	North America	Usa	Foundational Research	Collegiate	Accepted
+17	Edinburgh	Wiki	Europe	Uk	Foundational Research	Collegiate	Accepted
+18	ETHZ	Wiki	Europe	Switzerland	Information Processing	Collegiate	Accepted
+19	Freiburg	Wiki	Europe	Germany	Foundational Research	Collegiate	Accepted
+20	Glasgow	Wiki	Europe	United Kingdom	Environment	Collegiate	Accepted
+21	Harvard	Wiki	North America	Usa	Foundational Research	Collegiate	Accepted
+22	Imperial	Wiki	Europe	Uk	Medical	Collegiate	Accepted
+23	Lethbridge	Wiki	North America	Canada	Environment	Collegiate	Accepted
+24	Ljubljana	Wiki	Europe	Slovenia	Medical	Collegiate	Accepted
+25	McGill	Wiki	North America	Canada	Foundational Research	Collegiate	Accepted
+26	Melbourne	Wiki	Asia	Australia	Medical	Collegiate	Accepted
+27	Mexico	Wiki	Latin America	México D.f.	Information Processing	Collegiate	Accepted
+28	Michigan	Wiki	North America	Usa	Foundational Research	Collegiate	Accepted
+29	Mississippi_State	Wiki	North America	Usa	Energy	Collegiate	Accepted
+30	Missouri_Miners	Wiki	North America	Usa	Energy	Collegiate	Accepted
+31	Naples	Wiki	Europe	Italy	Environment	Collegiate	Accepted
+32	Paris	Wiki	Europe	France	Foundational Research	Collegiate	Accepted
+33	Peking	Wiki	Asia	People's Republic Of China	Information Processing	Collegiate	Accepted
+34	Penn_State	Wiki	North America	Usa	Energy	Collegiate	Accepted
+35	Prairie_View	Wiki	North America	Usa	Environment	Collegiate	Accepted
+36	Princeton	Wiki	North America	Usa	Medical	Collegiate	Accepted
+37	Purdue	Wiki	North America	Usa	Foundational Research	Collegiate	Accepted
+38	Rice	Wiki	North America	United States	Medical	Collegiate	Accepted
+39	Saint_Petersburg	Wiki	Asia	Russia	Environment	Collegiate	Accepted
+40	Southern_Utah	Wiki	North America	Us	Environment	Collegiate	Accepted
+41	Taipei	Wiki	Asia	Taiwan	Medical	Collegiate	Accepted
+42	Tianjin	Wiki	Asia	P.r. China	Information Processing	Collegiate	Accepted
+43	Tokyo_Tech	Wiki	Asia	Japan	Foundational Research	Collegiate	Accepted
+44	Toronto	Wiki	North America	Canada	Information Processing	Collegiate	Accepted
+45	Tsinghua	Wiki	Asia	China	Information Processing	Collegiate	Accepted
+46	Turkey	Wiki	Europe	Turkey	Environment	Collegiate	Accepted
+47	UCSF	Wiki	North America	Usa	Information Processing	Collegiate	Accepted
+48	USTC	Wiki	Asia	China	Information Processing	Collegiate	Accepted
+49	Valencia	Wiki	Europe	Spain	Foundational Research	Collegiate	Accepted
+50	Virginia	Wiki	North America	Usa	Energy	Collegiate	Accepted
+51	Virginia_Tech	Wiki	North America	Usa	Medical	Collegiate	Accepted
+52	Waterloo	Wiki	North America	Canada	Information Processing	Collegiate	Accepted
+53	Wisconsin	Wiki	North America	Usa	Foundational Research	Collegiate	Accepted
+54	Cape_Peninsula	Wiki	Africa	South Africa		Collegiate	Withdrawn
+55	Dundee	Wiki	Europe	United Kingdom		Collegiate	Withdrawn
+56	Minnesota	Wiki	North America	Usa		Collegiate	Withdrawn
+57	UMD	Wiki	North America	Usa		Collegiate	2007-08-15
+58	chicago	Wiki	North America	United States		Collegiate	2007-08-22
+59	CPU	Wiki	Asia	China		Collegiate	2008-03-19

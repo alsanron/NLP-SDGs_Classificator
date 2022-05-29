@@ -1,0 +1,88 @@
+1	Alberta_NINT	Wiki	North America	Canada		Collegiate	Accepted
+2	Bay_Area_RSI	Wiki	North America	United States		Collegiate	Accepted
+3	BCCS-Bristol	Wiki	Europe	United Kingdom		Collegiate	Accepted
+4	Beijing_Normal	Wiki	Asia	China		Collegiate	Accepted
+5	Bologna	Wiki	Europe	Italy		Collegiate	Accepted
+6	Brown	Wiki	North America	United States		Collegiate	Accepted
+7	BrownTwo	Wiki	North America	United States		Collegiate	Accepted
+8	Calgary_Ethics	Wiki	North America	Canada		Collegiate	Accepted
+9	Calgary_Software	Wiki	North America	Canada		Collegiate	Accepted
+10	Calgary_Wetware	Wiki	North America	Canada		Collegiate	Accepted
+11	Caltech	Wiki	North America	United States		Collegiate	Accepted
+12	Cambridge	Wiki	Europe	United Kingdom		Collegiate	Accepted
+13	Chiba	Wiki	Asia	Japan		Collegiate	Accepted
+14	Colombia	Wiki	Latin America	Colombia		Collegiate	Accepted
+15	CPU-NanJing	Wiki	Asia	China		Collegiate	Accepted
+16	Davidson-Missouri_Western	Wiki	North America	United States		Collegiate	Accepted
+17	Duke	Wiki	North America	United States		Collegiate	Accepted
+18	Edinburgh	Wiki	Europe	United Kingdom		Collegiate	Accepted
+19	EPF-Lausanne	Wiki	Europe	Switzerland		Collegiate	Accepted
+20	ESBS-Strasbourg	Wiki	Europe	France		Collegiate	Accepted
+21	ETH_Zurich	Wiki	Europe	Switzerland		Collegiate	Accepted
+22	Freiburg	Wiki	Europe	Germany		Collegiate	Accepted
+23	Groningen	Wiki	Europe	Netherlands		Collegiate	Accepted
+24	Guelph	Wiki	North America	Canada		Collegiate	Accepted
+25	Harvard	Wiki	North America	United States		Collegiate	Accepted
+26	Hawaii	Wiki	North America	United States		Collegiate	Accepted
+27	Heidelberg	Wiki	Europe	Germany		Collegiate	Accepted
+28	HKUSTers	Wiki	Asia	Hong Kong		Collegiate	Accepted
+29	iHKU	Wiki	Asia	Hong Kong		Collegiate	Accepted
+30	IIT_Madras	Wiki	Asia	India		Collegiate	Accepted
+31	Illinois	Wiki	North America	United States		Collegiate	Accepted
+32	Imperial_College	Wiki	Europe	United Kingdom		Collegiate	Accepted
+33	Johns_Hopkins	Wiki	North America	United States		Collegiate	Accepted
+34	KULeuven	Wiki	Europe	Belgium		Collegiate	Accepted
+35	Kyoto	Wiki	Asia	Japan		Collegiate	Accepted
+36	LCG-UNAM-Mexico	Wiki	Latin America	Mexico		Collegiate	Accepted
+37	Lethbridge_CCS	Wiki	North America	Canada		Collegiate	Accepted
+38	Melbourne	Wiki	Asia	Australia		Collegiate	Accepted
+39	METU_Turkey	Wiki	Europe	Turkey		Collegiate	Accepted
+40	Mexico-UNAM-IPN	Wiki	Latin America	Mexico		Collegiate	Accepted
+41	Michigan	Wiki	North America	United States		Collegiate	Accepted
+42	Minnesota	Wiki	North America	United States		Collegiate	Accepted
+43	Mississippi_State	Wiki	North America	United States		Collegiate	Accepted
+44	Missouri_Miners	Wiki	North America	United States		Collegiate	Accepted
+45	MIT	Wiki	North America	United States		Collegiate	Accepted
+46	Newcastle_University	Wiki	Europe	United Kingdom		Collegiate	Accepted
+47	NTU-Singapore	Wiki	Asia	Singapore		Collegiate	Accepted
+48	NYMU-Taipei	Wiki	Asia	Taiwan		Collegiate	Accepted
+49	Paris	Wiki	Europe	France		Collegiate	Accepted
+50	Peking_University	Wiki	Asia	China		Collegiate	Accepted
+51	PennState	Wiki	North America	United States		Collegiate	Accepted
+52	Prairie_View	Wiki	North America	United States		Collegiate	Accepted
+53	Princeton	Wiki	North America	United States		Collegiate	Accepted
+54	Purdue	Wiki	North America	United States		Collegiate	Accepted
+55	Rice_University	Wiki	North America	United States		Collegiate	Accepted
+56	Slovenia	Wiki	Europe	Slovenia		Collegiate	Accepted
+57	Tianjin	Wiki	Asia	China		Collegiate	Accepted
+58	Tokyo_Tech	Wiki	Asia	Japan		Collegiate	Accepted
+59	Tsinghua	Wiki	Asia	China		Collegiate	Accepted
+60	TUDelft	Wiki	Europe	Netherlands		Collegiate	Accepted
+61	UCSF	Wiki	North America	United States		Collegiate	Accepted
+62	UC_Berkeley	Wiki	North America	United States		Collegiate	Accepted
+63	UC_Berkeley_Tools	Wiki	North America	United States		Collegiate	Accepted
+64	UNIPV-Pavia	Wiki	Europe	Italy		Collegiate	Accepted
+65	University_of_Alberta	Wiki	North America	Canada		Collegiate	Accepted
+66	University_of_Chicago	Wiki	North America	United States		Collegiate	Accepted
+67	University_of_Lethbridge	Wiki	North America	Canada		Collegiate	Accepted
+68	University_of_Ottawa	Wiki	North America	Canada		Collegiate	Accepted
+69	University_of_Sheffield	Wiki	Europe	United Kingdom		Collegiate	Accepted
+70	University_of_Washington	Wiki	North America	United States		Collegiate	Accepted
+71	USTC	Wiki	Asia	China		Collegiate	Accepted
+72	Utah_State	Wiki	North America	United States		Collegiate	Accepted
+73	Valencia	Wiki	Europe	Spain		Collegiate	Accepted
+74	Virginia	Wiki	North America	United States		Collegiate	Accepted
+75	Warsaw	Wiki	Europe	Poland		Collegiate	Accepted
+76	Waterloo	Wiki	North America	Canada		Collegiate	Accepted
+77	Wisconsin	Wiki	North America	United States		Collegiate	Accepted
+78	Istanbul	Wiki	Europe	Turkey		Collegiate	Withdrawn
+79	Montreal	Wiki	North America	Canada		Collegiate	Withdrawn
+80	Peru	Wiki	Latin America	Peru		Collegiate	Withdrawn
+81	Polytech	Wiki	North America	United States		Collegiate	Withdrawn
+82	Rensselaer	Wiki	North America	United States		Collegiate	Withdrawn
+83	Sofia_BG	Wiki	Europe	Bulgaria		Collegiate	Withdrawn
+84	Toronto_Bluegenes	Wiki	North America	Canada		Collegiate	Withdrawn
+85	TU_Munchen	Wiki	Europe	Germany		Collegiate	Withdrawn
+86	WEGO_Taipei	Wiki	Asia	Taiwan		Collegiate	Withdrawn
+87	LED	Wiki	Europe	Latvia		Collegiate	2008-07-09
+88	Gaston Day School	Wiki	North America	United States		Collegiate	2009-02-13

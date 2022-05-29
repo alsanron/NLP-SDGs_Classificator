@@ -1,0 +1,5 @@
+1	BU	Wiki	North America	Unspecified		Collegiate	Accepted
+2	Caltech	Wiki	North America	Unspecified		Collegiate	Accepted
+3	MIT	Wiki	North America	Unspecified		Collegiate	Accepted
+4	Princeton	Wiki	North America	Unspecified		Collegiate	Accepted
+5	UTAustin	Wiki	North America	Unspecified		Collegiate	Accepted

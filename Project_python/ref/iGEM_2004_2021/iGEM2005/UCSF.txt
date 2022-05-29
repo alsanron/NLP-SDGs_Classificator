@@ -1,0 +1,1 @@
+UCSF:::North America:::United States::: :::Collegiate:::Accepted:::Bacterial Thermometer:::Our goal is to build a genetic circuit that enables a lawn of bacteria to respond to a temperature gradient. Inspiration came in the form of those early 1990's T-shirts with the thermosensitive dye that change color that can record palm prints.:::2005

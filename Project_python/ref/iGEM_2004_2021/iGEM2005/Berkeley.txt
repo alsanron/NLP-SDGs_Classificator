@@ -1,0 +1,1 @@
+Berkeley:::North America:::United States::: :::Collegiate:::Accepted:::Biological Internet::: Fabrication of a cell-to-cell “encrypted” communication system. Communication was achieved through passing genetic mRNA messages on a plasmid between cells using the process of bacterial conjugation. Encryption was achieved through the use of RNA “locks”.:::2005

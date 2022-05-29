@@ -1,0 +1,1 @@
+Melbourne:::Asia:::Australia::: :::Collegiate:::Accepted::: :::We want to build a biological clock that can count up when it is "ticked" by input light pulse signals. As the signal "ticks" the clock, the clock changes color and observer can use the color or combination of colors to tell what "time" it is.:::2008

@@ -1,0 +1,1 @@
+HKUSTers:::Asia:::Hong Kong::: :::Collegiate:::Accepted:::Making the dice:::We "tell" our cells to start making the "dice"--T7 polymease by applying a pulse of IPTG. IPTG can activate the araC/pBAD promoter which leads to transcription of T7 polymerase.:::2008

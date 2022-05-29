@@ -1,0 +1,41 @@
+1	Africa	Wiki	Africa	Unspecified		Collegiate	Accepted
+2	Arizona	Wiki	North America	Unspecified		Collegiate	Accepted
+3	Bangalore	Wiki	Asia	Unspecified		Collegiate	Accepted
+4	Berkeley	Wiki	North America	Unspecified		Collegiate	Accepted
+5	Brown	Wiki	North America	Unspecified		Collegiate	Accepted
+6	BU	Wiki	North America	Unspecified		Collegiate	Accepted
+7	Calgary	Wiki	North America	Unspecified		Collegiate	Accepted
+8	Caltech	Wiki	North America	Unspecified		Collegiate	Accepted
+9	Cambridge	Wiki	Europe	Unspecified		Collegiate	Accepted
+10	Chiba	Wiki	Asia	Unspecified		Collegiate	Accepted
+11	ColdSpringHarbor	Wiki	North America	Unspecified		Collegiate	Accepted
+12	Davidson	Wiki	North America	Unspecified		Collegiate	Accepted
+13	Duke	Wiki	North America	Unspecified		Collegiate	Accepted
+14	Edinburgh	Wiki	Europe	Unspecified		Collegiate	Accepted
+15	ETHZ	Wiki	Europe	Unspecified		Collegiate	Accepted
+16	Freiburg	Wiki	Europe	Unspecified		Collegiate	Accepted
+17	Harvard	Wiki	North America	Unspecified		Collegiate	Accepted
+18	Imperial	Wiki	Europe	Unspecified		Collegiate	Accepted
+19	Instructors	Wiki	North America	Unspecified		Collegiate	Accepted
+20	IPN_UNAM_Mexico	Wiki	Latin America	Unspecified		Collegiate	Accepted
+21	Irvine	Wiki	North America	Unspecified		Collegiate	Accepted
+22	LatinAmerica	Wiki	Latin America	Unspecified		Collegiate	Accepted
+23	McGill	Wiki	North America	Unspecified		Collegiate	Accepted
+24	Michigan	Wiki	North America	Unspecified		Collegiate	Accepted
+25	Mississippi	Wiki	North America	Unspecified		Collegiate	Accepted
+26	Missouri	Wiki	North America	Unspecified		Collegiate	Accepted
+27	MIT	Wiki	North America	Unspecified		Collegiate	Accepted
+28	Oklahoma	Wiki	North America	Unspecified		Collegiate	Accepted
+29	PennState	Wiki	North America	Unspecified		Collegiate	Accepted
+30	PrairieView	Wiki	North America	Unspecified		Collegiate	Accepted
+31	Princeton	Wiki	North America	Unspecified		Collegiate	Accepted
+32	Purdue	Wiki	North America	Unspecified		Collegiate	Accepted
+33	Rice	Wiki	North America	Unspecified		Collegiate	Accepted
+34	Slovenia	Wiki	Europe	Unspecified		Collegiate	Accepted
+35	SouthKorea	Wiki	Asia	Unspecified		Collegiate	Accepted
+36	Tokyo_Alliance	Wiki	Asia	Unspecified		Collegiate	Accepted
+37	Toronto	Wiki	Europe	Unspecified		Collegiate	Accepted
+38	Turkey	Wiki	Europe	Unspecified		Collegiate	Accepted
+39	UCSF	Wiki	North America	Unspecified		Collegiate	Accepted
+40	UTAustin	Wiki	North America	Unspecified		Collegiate	Accepted
+41	Valencia	Wiki	Europe	Unspecified		Collegiate	Accepted
