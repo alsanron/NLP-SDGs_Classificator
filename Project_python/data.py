@@ -200,3 +200,37 @@ def get_extra_manual_files(refPath):
     nFiles = len(corpus)
     print("- {} manual files were found".format(nFiles))    
     return [corpus, associatedSDGs]
+
+def get_iGEM_files(ref_path, verbose=True):
+    path = ref_path + "iGEM_2004_2021/"
+    fieldsSeparator = ":::"
+    with open(path + "00Header.txt", 'r') as hd:
+        text = hd.read()[:-1]; hd.close()
+        fields = text.split(fieldsSeparator)
+        
+    abstracts = []; extInformation = []
+    for folder in os.listdir(path=path):
+        if folder.startswith("iGEM"):
+            for file in os.listdir(path=(path + folder)):
+                if file.startswith("0"): continue # it is not a valid file
+                fp = open(path + folder + "/" +  file, 'r', encoding='utf8')
+                text = fp.read()[:-1]; fp.close()
+                fieldsValue = text.split(fieldsSeparator)
+                data = dict()
+                for fieldValue, fieldName in zip(fieldsValue, fields):
+                    data[fieldName] = fieldValue
+                
+                # append the data to the lists if OK
+                if data['Application'] == 'Accepted' and len(data['Abstract'].split(' ')) > 10:
+                    abstracts.append(data["Abstract"])
+                    extInformation.append(data)
+    if verbose:
+        print('## {} accepted texts with abstract were found'.format(len(abstracts)))                
+    
+    return [abstracts, extInformation]
+                
+
+    
+paths = conf.get_paths()
+abstracts, information = get_iGEM_files(ref_path=paths["ref"])
+a= 2

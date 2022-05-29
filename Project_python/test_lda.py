@@ -12,9 +12,6 @@ import model_lda
 from gensim.models import Phrases
 from gensim.corpora.dictionary import Dictionary
 
-# To adjust list:
-# TODO EXPAND THE STOPWORDS LIST
-
 paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"], compact=True)
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
