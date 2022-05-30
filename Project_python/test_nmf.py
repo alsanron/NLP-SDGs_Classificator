@@ -4,9 +4,7 @@ import conf
 import pandas as pd
 import tools
 import model_nmf
-import json
-import os
-
+ 
 
 def test_text_preprocess(texts, n_texts=20):
 
@@ -36,7 +34,7 @@ raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True,
 # raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
 # raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 
-topWords = 30
+topWords = 40
 def prepare_texts(corpus):
     newCorpus = []
     for text in corpus:
@@ -49,17 +47,23 @@ natureShort = prepare_texts(raw_natureShort)
 natureExt = prepare_texts(raw_natureExt)
 # extraFiles = prepare_texts(raw_extraFiles)
 
+# trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
 trainData = [orgFiles, sdgs_orgFiles]
+
+# store the training files in csv
+df = pd.DataFrame()
+df["files"] = trainData[0]
+df.to_csv("out/NMF/training_texts.csv")
 
 # TRAINING SECTION
 print('######## TRAINING MODELS...')
-nmf = model_nmf.NMF_classifier(paths,verbose=False)
+nmf = model_nmf.NMF_classifier(paths, verbose=False)
 
 # nmf.train(train_data=trainData, n_topics=16, ngram=(1,2), min_df=1)
 # nmf.save()
 nmf.load(n_topics=16)
 nmf.train_data = trainData
-nmf.map_model_topics_to_sdgs(n_top_words=topWords, normalize=True, path_csv="out/topics_nmf_global_bigram3.csv")
+nmf.map_model_topics_to_sdgs(n_top_words=topWords, normalize=True, path_csv="out/NMF/topics_nmf_global_bigram.csv")
 
 # TESTING SECTION
 print('######## TESTING MODELS...')

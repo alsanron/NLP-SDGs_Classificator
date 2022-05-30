@@ -16,8 +16,8 @@ paths = conf.get_paths()
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"], compact=True)
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
-# raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
+# raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
+raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 # raw_healthcare, sdgs_healthcare = data.get_health_care_files(paths["ref"], n_files=100)
 
 ######## GLOBAL CONFIGURATION
@@ -25,7 +25,7 @@ optim_excel = "optimization_lda.xlsx"; out_optim = "out_optimization.xlsx"
 optimize = 1
 
 lemmatize = True
-bigrams = True; min_count_bigram = 10
+bigrams = True; min_count_bigram = 5
 trigrams = True; min_count_trigram = 5
 min_words_count = 1 # minimum number of times a word must appear in the corpus. It should be small since the training set is small
 max_words_frequency = 0.7 # max frequency of a word appearing in corpus
@@ -40,12 +40,12 @@ def prepare_texts(corpus):
 print('- Preparing texts...')        
 # trainFiles = prepare_texts(raw_trainFiles)
 orgFiles = prepare_texts(raw_orgFiles)
-# extraFiles = prepare_texts(raw_extraFiles)
+extraFiles = prepare_texts(raw_extraFiles)
 # healthcareFiles = prepare_texts(raw_healthcare)
 natureShort = prepare_texts(raw_natureShort)
 natureExt = prepare_texts(raw_natureExt)
 
-trainData = [orgFiles, sdgs_orgFiles]
+trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
 
 if bigrams:
         print('Creating bigrams vocabulary...')
@@ -62,6 +62,11 @@ if bigrams:
                     if token.count("_") == 2:
                         trainData[0][idx].append(token)
 
+# store the training files in csv
+df = pd.DataFrame()
+df["files"] = trainData[0]
+df.to_csv("out/LDA/training_texts.csv")
+
 dict = Dictionary(trainData[0])
 dict.filter_extremes(no_below=1, no_above=0.7)
 dict[0] # just to load the dict
@@ -74,7 +79,7 @@ if optimize:
     out_perc_global = []; out_perc_any = []
     for ii in range(len(optimData)):
         print('# Case: {} of {}'.format(ii + 1, len(optimData)))
-        num_topics = 16
+        num_topics = optimData["num_topics"][ii]
         chunksize = optimData["chunksize"][ii]
         passes = optimData["passes"][ii]
         iterations = optimData["iterations"][ii]

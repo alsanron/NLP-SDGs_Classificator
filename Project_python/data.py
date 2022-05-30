@@ -181,12 +181,8 @@ def get_extra_manual_files(refPath):
     corpus = []; associatedSDGs = []
     for path in sdgsPaths:
         for file in os.listdir(path):
-            try:
-                f = open(path + file, 'r')
-                text = f.read()
-            except UnicodeError:
-                f = open(path + file, 'r', encoding="utf8")
-                text = f.read()
+            f = open(path + file, 'r')
+            text = f.read()
             f.close()
             fileSDG = []
             for sdg in file.split("_"):
@@ -230,6 +226,6 @@ def get_iGEM_files(ref_path, verbose=True):
                 
 
     
-paths = conf.get_paths()
-abstracts, information = get_iGEM_files(ref_path=paths["ref"])
-a= 2
+# paths = conf.get_paths()
+# abstracts, information = get_iGEM_files(ref_path=paths["ref"])
+# a= 2

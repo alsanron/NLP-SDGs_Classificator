@@ -10,7 +10,7 @@ import tools
 import warnings
 from top2vec import Top2Vec
 warnings.filterwarnings('ignore')
-        
+         
 class Top2Vec_classifier:
     paths=[]
     model=[]

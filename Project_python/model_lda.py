@@ -9,7 +9,7 @@ from sklearn.preprocessing import normalize
 import tools
 import warnings
 warnings.filterwarnings('ignore')
-
+ 
     
 class LDA_classifier(LdaModel):
     paths=[]
@@ -162,10 +162,10 @@ class LDA_classifier(LdaModel):
             topics, probs = self.infer_text(text)
             for (topicIndex, score) in zip(topics, probs):
                 # if subScore < meanSub: continue
+                tmp = np.zeros(17)
                 for sdg in labeled_sdgs:
-                    tmp = np.zeros(17)
                     tmp[sdg - 1] = 1
-                    self.topics_association[topicIndex] += score * tmp
+                self.topics_association[topicIndex] += score * tmp
         sum_per_topic = np.zeros(17)
         for ii in range(nTopics):
             if normalize:
