@@ -177,7 +177,6 @@ def get_sdgs_pathfinder(refPath, min_words=150):
 def get_extra_manual_files(refPath):
     # Returns an array where each elements consist of an array with the fields:
     # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
-        
     sdgsPaths = [refPath + "Manual_selected/"]
     corpus = []; associatedSDGs = []
     for path in sdgsPaths:
