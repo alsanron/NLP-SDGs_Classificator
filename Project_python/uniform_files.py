@@ -8,20 +8,23 @@ pathRef = conf.get_paths()["ref"]
 
 def parse_directory(path):
     for file in os.listdir(path):
-        if isdir(file):
+        if isdir(path + file):
             newPath = path + file + "/"
             parse_directory(newPath)
         else:
-            fp = open(path + file)
-            txt = fp.read(); fp.close()
-            txt = txt.lower()
-            txt = txt.replace("'", " ")
-            txt = txt.replace("-", " ")
-            txt = txt.replace("\n", " ")
-            
-            fp = open(path + file, "w")
-            fp.write(txt)
-            fp.close()
+            try: 
+                fp = open(path + file)
+                txt = fp.read(); fp.close()
+                txt = txt.lower()
+                txt = txt.replace("'", " ")
+                txt = txt.replace("-", " ")
+                txt = txt.replace("\n", " ")
+                
+                fp = open(path + file, "w")
+                fp.write(txt)
+                fp.close()
+            except:
+                print('## not parsed: ' + path + file)
 
 for folder in folder2clear:
     parse_directory(pathRef + folder)
