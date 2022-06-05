@@ -3,8 +3,6 @@ from signal import valid_signals
 import tools
 import pandas as pd
 import numpy as np
-import conf
-import data
 from sklearn.preprocessing import normalize
 import tools
 import warnings

@@ -137,14 +137,20 @@ def get_sdgs_org_files(refPath, sdg=-1, compact=False):
     return [corpus, associatedSDGs]
 
 # DATASET: https://www.kaggle.com/datasets/xhlulu/medal-emnlp
-def get_health_care_files(refPath, n_files=-1):
-    csv = pd.read_csv(refPath + 'health_care_2000texts.csv')
-    corpus = list(csv["text"])
-    sdgs = [[3] for ii in range(len(corpus))]
-    if n_files < 0 or n_files > len(corpus):
-        n_files = len(sdgs)
-    print("- {} health care texts".format(len(corpus)))
-    return [corpus[:n_files], sdgs[:n_files]]
+def get_health_care_files(refPath):
+    sdgsPath = [refPath + "Extra_files/SDG3/"]
+    corpus = []; associatedSDGs = []
+    for path in sdgsPath:
+        for file in os.listdir(path):
+            f = open(path + file, 'r')
+            text = f.read()
+            f.close()
+            fileSDG = [3]
+            corpus.append(text)
+            associatedSDGs.append(fileSDG)
+    nFiles = len(corpus)
+    print("- {} health care files (SDG3) were found".format(nFiles))   
+    return [corpus, associatedSDGs]
 
 # DATASET: files from scopus classified as related to a sdg previously by the algorithm
 def get_previous_classified_abstracts(refPath):
@@ -171,7 +177,6 @@ def get_sdgs_pathfinder(refPath, min_words=150):
             sdgs.append(sdgsInt)
     print("- {} texts in the pathfinder dataset".format(len(corpus)))
     return [corpus, sdgs]
-
 
 # MANUAL SELECTED files
 def get_extra_manual_files(refPath):
