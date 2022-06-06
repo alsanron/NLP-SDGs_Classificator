@@ -41,7 +41,7 @@ class Top2Vec_classifier:
         self.print_model_summary()
         
     def test_model(self, corpus, associated_SDGs, path_to_plot="", path_to_excel="", only_bad=False,
-                   score_threshold=3.0,  only_positive=False, filter_low=False, expand_factor=1.0, version=1):
+                   score_threshold=3.0,  only_positive=False, filter_low=False, expand_factor=1.0, version=1, normalize=True, normalize_threshold=0.25):
         rawSDG = []; rawSDGseg = []
         predictedSDGs = []
         realSDGs = []
@@ -57,7 +57,7 @@ class Top2Vec_classifier:
         numTopics = self.model.get_num_topics()
         stat_topics = numTopics
         for text, sdgs in zip(corpus, associated_SDGs):
-            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=version, expand_factor=expand_factor, filter_low=filter_low)  
+            raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=version, expand_factor=expand_factor, filter_low=filter_low, normalize=normalize, normalize_threshold=normalize_threshold)  
             validSingle = False; ii = 0
             for sdg in sdgs:
                 countPerSDG[sdg - 1] += 1
@@ -214,7 +214,7 @@ class Top2Vec_classifier:
                 
         return [sum_per_topic, final_sum]
             
-    def map_text_to_sdgs(self, text, score_threshold, only_positive=False, version=1, expand_factor=3, filter_low=True):
+    def map_text_to_sdgs(self, text, score_threshold, only_positive=False, version=1, expand_factor=3, filter_low=True, normalize=True, normalize_threshold=0.25):
         if version == 1: # then map with topics
             numTopics = self.model.get_num_topics()
             topics_words, word_scores, probabilities, topic_nums = self.model.query_topics(text, num_topics=numTopics)
@@ -223,7 +223,8 @@ class Top2Vec_classifier:
                 if only_positive and (topicScore < 0): break
                 predictSDGs += topicScore * self.topics_association[topicIndex]
         elif version == 2: # then map with documents
-            documents , probabilities , doc_ids = self.model.query_documents(text, num_docs=100)
+            maxDocs = len(self.train_data[0])  # number of texts with which it was trained
+            documents , probabilities , doc_ids = self.model.query_documents(text, num_docs=maxDocs)
             predictSDGs = np.zeros(17)  
             for docIndex, docScore in zip(doc_ids, probabilities):
                 if only_positive and (docScore < 0): break
@@ -232,15 +233,22 @@ class Top2Vec_classifier:
                 for sdg in labeled_sdgs:
                     sdgs[sdg - 1] = 1
                 predictSDGs += docScore * sdgs
+        # POST-PROCESSING OF THE MEASURES
         if filter_low:
             raw_sdgs_filt = predictSDGs < 0.05
             for prob, index, filt in zip(predictSDGs, range(len(predictSDGs)), raw_sdgs_filt):
                 if filt: 
-                    prob = predictSDGs[index]
+                    # prob = predictSDGs[index]
                     predictSDGs[index] = 0.0
-                    predictSDGs += prob * predictSDGs / sum(predictSDGs)
-                    
-        predictSDGs *= expand_factor
+                    # predictSDGs += prob * predictSDGs / sum(predictSDGs)
+        # predictSDGs *= expand_factor
+        
+        if normalize:
+            # raw_sdgs_filt = predictSDGs < normalize_threshold
+            # for index, filt in zip(range(len(predictSDGs)), raw_sdgs_filt):
+            #     if filt: 
+            #         predictSDGs[index] = 0.0
+            predictSDGs = predictSDGs / sum(predictSDGs)
         
         top = sorted(predictSDGs, reverse=True)
         sdgs = []; scores = []

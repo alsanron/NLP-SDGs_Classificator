@@ -12,6 +12,7 @@ paths = conf.get_paths()
 print('######## LOADING TEXTS...')
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
+raw_natureShortFilt, sdgs_natureFilt = data.get_nature_abstracts_filtered()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
 # raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
 raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
@@ -40,14 +41,14 @@ if optimize:
       trainData = [raw_orgFiles + raw_extraFiles + raw_healthcare, sdgs_orgFiles + sdgs_extra + sdgs_healthcare]
     else:
       trainData = [raw_orgFiles, sdgs_orgFiles]
-  
+      
     # store the training files in csv
     df = pd.DataFrame()
     df["files"] = trainData[0]
     df.to_csv(paths["out"] + "Top2vec/training_texts.csv")
 
     # top2vec.train(train_data=trainData, embedding_model="all-MiniLM-L6-v2", method=speed[ii], 
-                  # ngram=ngram[ii], min_count=min_count[ii], workers=8, tokenizer=use_embedding_model_tokenizer[ii]) # "doc2vec", "all-MiniLM-L6-v2", universal-sentence-encoder
+    #               ngram=ngram[ii], min_count=min_count[ii], workers=8, tokenizer=use_embedding_model_tokenizer[ii]) # "doc2vec", "all-MiniLM-L6-v2", universal-sentence-encoder
     # top2vec.save()
     top2vec.load(train_data=trainData)
     [sum_per_topic_raw, sum_per_topic_ascii] = top2vec.map_model_topics_to_sdgs(normalize=True,
@@ -55,35 +56,41 @@ if optimize:
                                   version=2
                                  )
     
-    perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureShort, associated_SDGs=sdgs_nature,
-                    filter_low=True, score_threshold=0.2, only_positive=True,
-                      path_to_excel=(paths["out"] + "Top2vec/"-+ "test_top2vec_abstracts{}.xlsx".format(ii)), 
-                      only_bad=False, expand_factor=2, version=1
+    perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureShortFilt, associated_SDGs=sdgs_natureFilt,
+                    filter_low=True, score_threshold=0.1, only_positive=True,
+                      path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_abstractsLow{}.xlsx".format(ii)), 
+                      only_bad=False, expand_factor=2, version=1, normalize=True, normalize_threshold=0.2
                       )
     
-    perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureExt, associated_SDGs=sdgs_natureAll,
-                    filter_low=True, score_threshold=0.2, only_positive=True,
-                      path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_full{}.xlsx".format(ii)), 
-                      only_bad=False, expand_factor=2, version=1
-                      )
+    perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureShortFilt, associated_SDGs=sdgs_natureFilt,
+                filter_low=True, score_threshold=0.5, only_positive=True,
+                  path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_abstractsHigh{}.xlsx".format(ii)), 
+                  only_bad=False, expand_factor=2, version=1, normalize=True, normalize_threshold=0.25
+                  )
+    
+    # perc_global, perc_single, probs_per_sdg_test = top2vec.test_model(corpus=raw_natureExt, associated_SDGs=sdgs_natureAll,
+    #                 filter_low=True, score_threshold=0.2, only_positive=True,
+    #                   path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_full{}.xlsx".format(ii)), 
+    #                   only_bad=False, expand_factor=2, version=1
+    #                   )
 
-    perc_global_train, perc_single_train, probs_per_sdg_train = top2vec.test_model(corpus=trainData[0], associated_SDGs=trainData[1],
-                      filter_low=True, score_threshold=0.2, only_positive=True,
-                        path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_training_files{}.xlsx".format(ii)), 
-                        only_bad=False, expand_factor=2
-                        )
+    # perc_global_train, perc_single_train, probs_per_sdg_train = top2vec.test_model(corpus=trainData[0], associated_SDGs=trainData[1],
+    #                   filter_low=True, score_threshold=0.2, only_positive=True,
+    #                     path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_training_files{}.xlsx".format(ii)), 
+    #                     only_bad=False, expand_factor=2
+    #                     )
     
-    tops_ascii.append(sum_per_topic_ascii)
-    tops_raw.append(list(sum_per_topic_raw))
-    stats.append("{:.3f}, {:.3f}".format(np.mean(sum_per_topic_raw), np.std(sum_per_topic_raw)))
-    perc_test.append("{:.3f}, {:.3f}".format(perc_global, perc_single))
-    perc_train.append("{:.3f}, {:.3f}".format(perc_global_train, perc_single_train))
+  #   tops_ascii.append(sum_per_topic_ascii)
+  #   tops_raw.append(list(sum_per_topic_raw))
+  #   stats.append("{:.3f}, {:.3f}".format(np.mean(sum_per_topic_raw), np.std(sum_per_topic_raw)))
+  #   perc_test.append("{:.3f}, {:.3f}".format(perc_global, perc_single))
+  #   perc_train.append("{:.3f}, {:.3f}".format(perc_global_train, perc_single_train))
     
-  optim_param["ascii"] = tops_ascii
-  optim_param["stats"] = stats
-  optim_param["perc_test"] = perc_test
-  optim_param["perc_train"] = perc_train
-  optim_param.to_excel(paths["out"] + "Top2vec/" + "optimization_out.xlsx")
+  # optim_param["ascii"] = tops_ascii
+  # optim_param["stats"] = stats
+  # optim_param["perc_test"] = perc_test
+  # optim_param["perc_train"] = perc_train
+  # optim_param.to_excel(paths["out"] + "Top2vec/" + "optimization_out.xlsx")
   
 else:
     top2vec.load(trainData)

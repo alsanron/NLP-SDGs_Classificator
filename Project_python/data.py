@@ -26,7 +26,6 @@ def get_sdgs_seed_list(refPath):
         dict = json.loads(text)
     return list(dict.values())
         
-
 # DATASET: the role of artificial intelligence in achieving the sustainable development goals. NATURE PAPER. The user can select independently: abstract, keywords, introduction, body or conclusions.
 def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=False):
     paths = conf.get_paths()
@@ -76,6 +75,17 @@ def get_nature_abstracts():
             indexes.append(index)
     print("- {} nature abstracts were found".format(len(corpus)))
     return [corpus, associatedSDGs, indexes]
+
+def get_nature_abstracts_filtered():
+    paths = conf.get_paths()
+    excel = pd.read_excel(paths["ref"] + "test2set_thresholds.xlsx")
+    texts = list(excel["text"]); sdgsAscii = list(excel["sdgs"])
+    sdgs = []
+    for sdgAscii in sdgsAscii:
+        tmp = [int(sdg) for sdg in sdgAscii[1:-1].split(',')]
+        sdgs.append(tmp)
+    return [texts, sdgs]
+
 
 # DATASET: https://sdgs.un.org/
 # - Goals definition
