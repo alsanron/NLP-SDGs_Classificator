@@ -234,6 +234,7 @@ class Top2Vec_classifier:
                     sdgs[sdg - 1] = 1
                 predictSDGs += docScore * sdgs
         # POST-PROCESSING OF THE MEASURES
+       
         if filter_low:
             raw_sdgs_filt = predictSDGs < 0.05
             for prob, index, filt in zip(predictSDGs, range(len(predictSDGs)), raw_sdgs_filt):
@@ -242,7 +243,6 @@ class Top2Vec_classifier:
                     predictSDGs[index] = 0.0
                     # predictSDGs += prob * predictSDGs / sum(predictSDGs)
         # predictSDGs *= expand_factor
-        
         if normalize:
             # raw_sdgs_filt = predictSDGs < normalize_threshold
             # for index, filt in zip(range(len(predictSDGs)), raw_sdgs_filt):

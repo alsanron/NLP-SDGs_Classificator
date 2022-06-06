@@ -67,9 +67,10 @@ nmf.map_model_topics_to_sdgs(n_top_words=topWords, normalize=True, path_csv="out
 
 # TESTING SECTION
 print('######## TESTING MODELS...')
-nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, score_threshold=0.2,
-               segmentize=-1, filter_low=True,
-               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx")
+nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, score_threshold=0.1,
+               segmentize=-1, 
+               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx"),
+               normalize=True, filter_low=True
                )
 
 nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.2,

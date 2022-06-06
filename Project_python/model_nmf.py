@@ -45,7 +45,7 @@ class NMF_classifier:
         self.model = NMF(n_components=n_topics, random_state=5, verbose=False)
         self.model.fit(vectorized_data) 
         
-    def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel=""):
+    def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel="", normalize=True):
         rawSDG = []; rawSDGseg = []
         predictedSDGs = []
         realSDGs = []
@@ -76,20 +76,12 @@ class NMF_classifier:
                         index += segmentize
                 raw_sdgs = np.zeros(17)
                 for segment in text_segments:
-                    raw_sdgs += self.map_text_to_sdgs(segment)  
+                    raw_sdgs += self.map_text_to_sdgs(segment, filter_low=filter_low, normalize=normalize)  
                 raw_sdgs /= len(text_segments)
                 raw_sdgs_seg = raw_sdgs
             else: 
                 raw_sdgs_seg = np.zeros(17) 
-                raw_sdgs = self.map_text_to_sdgs(text) 
-            if filter_low:
-                raw_sdgs_filt = raw_sdgs < 0.05
-                for prob, index, filt in zip(raw_sdgs, range(len(raw_sdgs)), raw_sdgs_filt):
-                    if filt: 
-                        prob = raw_sdgs[index]
-                        raw_sdgs[index] = 0.0
-                        raw_sdgs += prob * raw_sdgs / sum(raw_sdgs)
-                # raw_sdgs *= 10
+                raw_sdgs = self.map_text_to_sdgs(text, filter_low=filter_low, normalize=normalize) 
                     
             predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
             validSingle = False; ii = 0
@@ -200,13 +192,22 @@ class NMF_classifier:
 
             df.to_csv(path_csv)
 
-    def map_text_to_sdgs(self, text):
+    def map_text_to_sdgs(self, text, filter_low=True, normalize=True):
         query_words_vect = self.vectorizer.transform([text])
         topicFeats = self.model.transform(query_words_vect)[0]
         sdgs_score = np.zeros(17)
         for topicScore in topicFeats:
             sdgs_score += topicScore * self.topics_association[list(topicFeats).index(topicScore)] 
         sdgs_score *= 10
+        
+        if filter_low:
+            raw_sdgs_filt = sdgs_score < 0.05
+            for index, filt in zip(range(len(sdgs_score)), raw_sdgs_filt):
+                if filt: sdgs_score[index] = 0.0
+        
+        if normalize:
+            sdgs_score = sdgs_score / sum(sdgs_score)
+        
         return sdgs_score
     
     def infer_text(self, text):
