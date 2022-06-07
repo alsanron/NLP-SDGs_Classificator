@@ -29,24 +29,24 @@ paths = conf.get_paths()
 print('######## LOADING TEXTS...')
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
-raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
+# raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
+raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"], sdg_query=[1,10])
 
-topWords = 40
+topWords = 50
 def prepare_texts(corpus):
     newCorpus = []
     for text in corpus:
-        newCorpus.append(" ".join(tools.tokenize_text(text, lemmatize=True, stem=False ,extended_stopwords=True)))
+        newCorpus.append(" ".join(tools.tokenize_text(text, lemmatize=True, stem=False ,extended_stopwords=True, punctuation=True)))
     return newCorpus
         
 # trainFiles = prepare_texts(raw_trainFiles)
 orgFiles = prepare_texts(raw_orgFiles)
 natureShort = prepare_texts(raw_natureShort)
-natureExt = prepare_texts(raw_natureExt)
+# natureExt = prepare_texts(raw_natureExt)
 # extraFiles = prepare_texts(raw_extraFiles)
 
 # trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
-trainData = [orgFiles, sdgs_orgFiles]
+trainData = [orgFiles + natureShort, sdgs_orgFiles + sdgs_nature]
 
 # store the training files in csv
 df = pd.DataFrame()
@@ -55,11 +55,11 @@ df.to_csv("out/NMF/training_texts.csv")
 
 # TRAINING SECTION
 print('######## TRAINING MODELS...')
-nmf = model_nmf.NMF_classifier(paths, verbose=False)
+nmf = model_nmf.NMF_classifier(paths, verbose=True)
 
-# nmf.train(train_data=trainData, n_topics=16, ngram=(1,2), min_df=1)
-# nmf.save()
-nmf.load(n_topics=16)
+nmf.train(train_data=trainData, n_topics=17, ngram=(1,3), min_df=2)
+nmf.save()
+# nmf.load(n_topics=17)
 nmf.train_data = trainData
 nmf.map_model_topics_to_sdgs(n_top_words=topWords, normalize=True, path_csv="out/NMF/topics_nmf_global_bigram.csv")
 
@@ -83,8 +83,8 @@ nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, score_threshold=
                normalize=normalize, filter_low=filter, expand_factor=expandFactor
                )
 
-nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.1,
-               segmentize=-1, filter_low=filter, normalize=normalize, expand_factor=expandFactor,
-               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
-               )
+# nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.1,
+#                segmentize=-1, filter_low=filter, normalize=normalize, expand_factor=expandFactor,
+#                path_to_excel=(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
+#                )
 

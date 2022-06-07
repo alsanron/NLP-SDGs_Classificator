@@ -42,7 +42,7 @@ class NMF_classifier:
                                     ngram_range=ngram, # min-max
                                     )
         vectorized_data = self.vectorizer.fit_transform(train_data[0])
-        self.model = NMF(n_components=n_topics, random_state=5, verbose=False)
+        self.model = NMF(n_components=n_topics, random_state=5, verbose=False, max_iter=2000)
         self.model.fit(vectorized_data) 
         
     def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel="", normalize=True, expand_factor=1.0):
@@ -138,9 +138,10 @@ class NMF_classifier:
         for ii in range(nTopics):
             if normalize:
                 norm_topics = self.topics_association[ii] / sum(self.topics_association[ii])
-                for nn in norm_topics:
-                    if nn < 0.1: 
-                        norm_topics[list(norm_topics).index(nn)] = 0.0
+                topics_to_delete = norm_topics < 0.1
+                for nn, delete, index in zip(norm_topics, topics_to_delete, range(len(norm_topics))):
+                    if delete: 
+                        norm_topics[index] = 0.0
                 norm_topics = norm_topics / sum(norm_topics)
                 self.topics_association[ii] = norm_topics
                 

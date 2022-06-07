@@ -80,61 +80,26 @@ def get_nature_abstracts_filtered():
     sdgs = tools.parse_sdgs_ascii_list(sdgsAscii)
     return [texts, sdgs]
 
-
 # DATASET: https://sdgs.un.org/
 # - Goals definition
 # - Goals progress - evolution section
-def get_sdgs_org_files(refPath, sdg=-1, compact=False):
+def get_sdgs_org_files(refPath, sdg_query=-1):
     # Returns an array where each elements consist of an array with the fields:
     # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
-    if sdg > 0:
-        sdgStart = "{:02d}".format(sdg)
-    else:
-        sdgStart = "" # it's always true
-        
-    sdgsPaths = [refPath + "SDGs_description/",
-                refPath + "SDGs_progress/",
-                refPath + "SDGs_targets/"
-                ]
+    path = refPath + "sdg_texts.xlsx"
+    df = pd.read_excel(path)
+    texts = list(df["text"]); sdgs = tools.parse_sdgs_ascii_list(list(df["sdg"]))
+    
     corpus = []; associatedSDGs = []
-    if not compact:
-        for path in sdgsPaths:
-            for file in os.listdir(path):
-                if file.endswith(".txt") and file.startswith(sdgStart):
-                    try:
-                        f = open(path + file, 'r')
-                        text = f.read()
-                    except UnicodeError:
-                        f = open(path + file, 'r', encoding="utf8")
-                        text = f.read()
-                    f.close()
-                    fileSDG = [int(file.partition("_")[0])]
-                    corpus.append(text)
-                    associatedSDGs.append(fileSDG)
-    else:
-        counters = [0 for ii in range(1,18)]
-        texts = ["" for ii in range(1,18)]
-        for path in sdgsPaths:
-            for file in os.listdir(path):
-                if file.endswith(".txt") and file.startswith(sdgStart):
-                    try:
-                        f = open(path + file, 'r')
-                        text = f.read()
-                    except UnicodeError:
-                        f = open(path + file, 'r', encoding="utf8")
-                        text = f.read()
-                    f.close()
-                    fileSDG = [int(file.partition("_")[0])]
-                    
-                    for sdg in fileSDG:
-                        ind = sdg - 1
-                        counters[ind] += 1
-                        texts[ind] += " " + text
-                        if counters[ind] >= 1:
-                            corpus.append(texts[ind])
-                            associatedSDGs.append(fileSDG)
-                            counters[ind] = 0
-                            texts[ind] = ""
+    for text, sdg in zip(texts, sdgs):
+        if sdg[0] == 17: continue # not included
+        if sdg_query > 0:
+            if  sdg_query == sdg[0]:
+                corpus.append(text)
+                associatedSDGs.append(sdg)
+        else:
+            corpus.append(text)
+            associatedSDGs.append(sdg)
                             
     nFiles = len(corpus)
     print("- {} sdgs files were found".format(nFiles))    
@@ -183,7 +148,7 @@ def get_sdgs_pathfinder(refPath, min_words=150):
     return [corpus, sdgs]
 
 # MANUAL SELECTED files
-def get_extra_manual_files(refPath):
+def get_extra_manual_files(refPath, sdg_query=[]):
     # Returns an array where each elements consist of an array with the fields:
     # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
     sdgsPaths = [refPath + "Manual_selected/"]
@@ -198,8 +163,15 @@ def get_extra_manual_files(refPath):
                 if sdg.isdigit():
                     if int(sdg) == 17: continue
                     fileSDG.append(int(sdg))
-            corpus.append(text)
-            associatedSDGs.append(fileSDG)
+            ok = 0
+            if len(sdg_query) > 0:
+                for sdg in fileSDG:
+                    if sdg in sdg_query: ok += 1
+            else: ok = 1
+            
+            if ok > 0:
+                corpus.append(text)
+                associatedSDGs.append(fileSDG)
         
     nFiles = len(corpus)
     print("- {} manual files were found".format(nFiles))    

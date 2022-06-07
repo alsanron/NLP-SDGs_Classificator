@@ -1,41 +1,51 @@
-,1.00*SDG10,1.00*SDG3,1.00*SDG15,1.00*SDG7,1.00*SDG6,1.00*SDG5,1.00*SDG1,1.00*SDG13,1.00*SDG4,1.00*SDG14,1.00*SDG11,1.00*SDG2,1.00*SDG8,1.00*SDG9,1.00*SDG12,1.00*SDG16
-0,country,death,forest,energy,water,woman,poverty,climate,education,marine,urban,food,labour,manufacturing,material,right
-1,developing,disease,biodiversity,renewable,sanitation,girl,extreme poverty,climate change,primary,ocean,city,hunger,growth,value added,consumption,institution
-2,developing country,health,area,renewable energy,drinking,woman girl,extreme,change,school,coastal,slum,agricultural,unemployment,added,consumption production,victim
-3,developed country,mortality,land,electricity,drinking water,gender,social protection,adaptation,child,fishery,population,agriculture,rate,value,material consumption,country
-4,developed,maternal,specie,clean,water sanitation,marriage,social,nationally contribution,secondary,acidification,urban population,malnutrition,employment,manufacturing value,production,violence
-5,duty,communicable,loss,technology,safely,equality,protection,disaster,learning,ecosystem,waste,export,labour productivity,industry,footprint,human right
-6,inequality,rate,terrestrial,fuel,management,violence,living,contribution,primary secondary,ocean acidification,public,breed,unemployment rate,country,sustainable,child
-7,duty free,live,mountain,energy consumption,facility,sexual,disaster,nationally,reading,eutrophication,space,subsidy,productivity,developed,material footprint,justice
-8,income,mortality rate,wildlife,energy efficiency,water resource,gender equality,poor,country,teacher,fish,transport,child,growth rate,infrastructure,domestic material,human
-9,free,death live,ecosystem,access,basic,married,worker,agreement,proficiency,sustainable,urbanization,export subsidy,adult,global,resource,homicide
-10,island,communicable disease,protected,cooking,transboundary,work,living extreme,paris agreement,primary school,stock,housing,wasting,worker,developed country,waste,access justice
-11,island developing,child,biodiversity area,efficiency,wastewater,female,vulnerable,paris,secondary education,fishing,solid waste,market,youth,developing,sustainable consumption,trafficking
-12,developing state,reproductive,conservation,access electricity,service,mutilation,benefit,framework convention,mathematics,overfishing,solid,genetic,annual growth,mobile,convention,sexual
-13,state,tuberculosis,degradation,fuel technology,sanitation service,genital,world population,national adaptation,primary education,pollution,disaster,price,financial,emission,domestic,detected
-14,product,malaria,extinction,energy energy,water scarcity,female genital,poor vulnerable,convention,quality,resource,public transport,insecurity,annual,network,natural resource,public
-15,international,vaccine,protected area,modern,country,genital mutilation,population,action,saharan,fish stock,resident,food insecurity,young,research,natural,right institution
-16,development,adolescent,freshwater,consumption,scarcity,country,poverty rate,national,skill,marine resource,urban resident,producer,region,employment,policy,national human
-17,assistance,neonatal,forest area,access clean,integrated water,legal,world,framework,africa,level,public space,undernourished,global,global manufacturing,company,psychological
-18,cost,incidence,desertification,improvement,resource management,practice,worker living,convention climate,trained,biologically,living,production,informal employment,research development,hazardous,punishment
-19,export,care,hectare,global,open defecation,child marriage,live extreme,adaptation plan,quality education,biologically sustainable,sprawl,food production,economic growth,northern america,taking,aggression
-20,money,saharan,genetic resource,rate improvement,defecation,unpaid,lived,united framework,reading mathematics,area,living slum,food producer,informal,europe,metric,national
-21,country island,saharan africa,poaching,clean energy,resource,partner,economic,disaster risk,saharan africa,coastal eutrophication,world,overweight,working,economic,pattern,psychological aggression
-22,tariff,coverage,poaching trafficking,wind,freshwater,right,income,reduction,country,protected,pollution,stunting,developed,region,production pattern,physical punishment
-23,financial,suicide,covered,global energy,water service,parliament,pension,emission,basic,marine environment,settlement,food price,financial service,carbon,chemical,information
-24,treatment,infection,land degradation,reliable,integrated,intimate,lived extreme,plan,child adolescent,protected area,open public,government,economic,researcher,framework,access
-25,development assistance,hepatitis,resource,affordable reliable,asia,intimate partner,live,strategy,scholarship,marine ecosystem,convenient,world,global unemployment,development,hazardous waste,country territory
-26,donor,africa,sharing,population access,hygiene,care,living poverty,greenhouse,literacy,biodiversity,convenient access,stunted,access financial,europe northern,impact,territory
-27,free treatment,globally,biodiversity loss,solar,sector,empowerment,poverty dimension,risk reduction,school teacher,sustainable level,area,plant,woman,transport,environmental,available
-28,flow,tobacco,genetic,clean fuel,sanitation facility,aged,global poverty,united,development,water,urban sprawl,investment,work,america,pollutant,conflict
-29,migrant,neonatal mortality,land area,modern renewable,access,girl woman,rate,mitigation,level,ocean resource,access public,productivity,unemployed,sector,accordance,registration
-30,country developing,infectious,degraded,sustainable energy,open,discrimination,vulnerability,record,adolescent,acidity,safe,sustainable food,grew,reached,developing,bribery
-31,market,maternal mortality,trafficking,modern energy,lacked,harmful practice,worlda,developed country,enrolment,national jurisdiction,city country,fell,trade,innovation,reduce,compliant
-32,migration,treatment,terrestrial freshwater,affordable,water sector,girl aged,reduce,developed,proficiency level,jurisdiction,access,agricultural productivity,country,dioxide,information,access information
-33,including,infectious disease,management,progress,supply,physical sexual,family,green climate,youth,scale,dweller,livestock,decent,carbon dioxide,development,crime
-34,policy,risk,area covered,access affordable,population,political,working poor,climate fund,access,scale fishery,number,agricultural market,gender,northern,national,budget
-35,access,estimated,halt,energy service,improved,harmful,dimension,reduction strategy,secondary school,stock biologically,proportion,including,child labour,developing country,practice,proportion
-36,national,declined,benefit,cooking fuel,water efficiency,domestic,ending poverty,risk,proficiency reading,marine biodiversity,urban area,distortion,globally,volume,basel,principle
-37,reduce,worldwide,list,clean cooking,safely drinking,equal,disaster risk,fund,electricity,impact,open,hunger malnutrition,engaged,economic infrastructure,rotterdam convention,inclusive
-38,transfer,burden,sustainably,energy global,safely sanitation,reproductive,child,global,rate,sustainably,population growth,seed,developed region,infrastructure developing,rotterdam,sexual violence
-39,bank,global,cover,improvement energy,water source,national parliament,economic loss,developing,achieving,marine pollution,global urban,child stunted,median,developed region,extraction,society
+,1.00*SDG15,1.00*SDG5,1.00*SDG7,1.00*SDG6,"0.63*SDG3,0.37*SDG11",1.00*SDG3,1.00*SDG9,1.00*SDG13,1.00*SDG4,1.00*SDG1,1.00*SDG14,1.00*SDG12,1.00*SDG11,"0.79*SDG10,0.21*SDG9",1.00*SDG16,1.00*SDG2,1.00*SDG8
+0,forest,woman,energy,water,model,death,manufacturing,climate,education,poverty,ocean,material,city,country,right,food,labour
+1,biodiversity,girl,renewable,sanitation,learning,disease,value added,climate change,primary,extreme poverty,marine,consumption,urban,developing,country,hunger,employment
+2,area,woman girl,renewable energy,drinking,technique,health,added,change,school,extreme,coastal,consumption production,slum,developed country,victim,agricultural,growth
+3,land,gender,electricity,drinking water,network,mortality,value,adaptation,child,social,fishery,production,population,developing country,institution,agriculture,rate
+4,specie,equality,clean,safely,method,maternal,manufacturing value added,disaster,secondary,social protection,sustainable,sustainable,urban population,developed,violence,malnutrition,unemployment
+5,loss,violence,access,management,study,rate,manufacturing value,paris agreement,primary school,protection,acidification,material consumption,transport,island,child,insecurity,worker
+6,protected,gender equality,fuel,water sanitation,artificial,communicable,industry,paris,primary secondary,living,resource,sustainable consumption,public,island developing,human right,export,labour productivity
+7,ecosystem,marriage,technology,facility,approach,live,country,agreement,learning,poor,fish,footprint,space,developing state,human,wasting,productivity
+8,terrestrial,sexual,energy efficiency,service,paper,child,global,contribution,secondary education,worker,marine environment,sustainable consumption production,urbanization,island developing state,territory,food insecurity,youth
+9,mountain,female,cooking,basic,based,communicable disease,emission,nationally contribution,primary education,world,stock,material footprint,housing,state,country territory,child,global
+10,protected area,married,energy consumption,water resource,decision,mortality rate,developed,country,proficiency,world population,pollution,domestic material consumption,living,duty,justice,price,unemployment rate
+11,conservation,genital mutilation,access clean,sanitation service,algorithm,death live,employment,nationally,reading,vulnerable,eutrophication,domestic material,public space,income,sexual,breed,adult
+12,biodiversity area,female genital,efficiency,access,research,tuberculosis,infrastructure,action,teacher,disaster,fishing,resource,disaster,development,trafficking,subsidy,economic
+13,degradation,mutilation,access electricity,water service,process,malaria,developed country,emission,quality,population,ecosystem,waste,waste,country island,homicide,food production,financial
+14,freshwater,genital,fuel technology,transboundary,result,incidence,global manufacturing,framework convention,mathematics,benefit,ocean acidification,metric,public transport,country island developing,access justice,export subsidy,growth rate
+15,forest area,female genital mutilation,energy energy,water scarcity,application,care,carbon,convention,saharan,poverty rate,fish stock,domestic,living slum,duty free,national,production,economic growth
+16,desertification,child marriage,modern,scarcity,intelligence,vaccine,dioxide,reduction,quality education,living extreme poverty,marine resource,consumption production pattern,settlement,inequality,national human right,market,informal
+17,wildlife,practice,global,lack,machine,saharan,carbon dioxide,national adaptation,africa,living extreme,level,production pattern,convenient access,free,human right institution,undernourished,young
+18,land degradation,country,improvement,resource,neural network,adolescent,developing,national,primary secondary education,poor vulnerable,overfishing,company,convenient,developed country island,right institution,genetic,informal employment
+19,biodiversity loss,partner,renewable energy energy,sector,neural,neonatal,research development,framework,saharan africa,child,conservation,natural resource,open public space,assistance,national human,nutritious,working
+20,land area,legal,consumption,freshwater,analysis,saharan africa,europe,convention climate,skill,lived,biologically sustainable,pattern,open public,international,principle,world,annual
+21,extinction,work,global energy,hygiene,different,africa,northern america,convention climate change,access,income,biologically,natural,pollution,including,sexual violence,food price,decent
+22,hectare,parliament,affordable reliable,country,prediction,reproductive,mobile,framework convention climate,basic,pandemic,biodiversity,convention,world,product,aggression,overweight,annual growth
+23,management,right,clean energy,asia,artificial intelligence,globally,development,disaster risk,country,rate,environment,development,urban resident,tariff,punishment,producer,region
+24,halt,discrimination,reliable,water resource management,deep,hepatitis,europe northern,global,rate,lived extreme,coastal eutrophication,policy,resident,cost,income,stunting,trade
+25,covered,intimate partner,affordable,lacked,present,risk,europe northern america,greenhouse,child adolescent,lived extreme poverty,protected area,taking,safe,national,psychological,nutrition,developed
+26,deforestation,intimate,rate improvement,open defecation,image,coverage,sector,mitigation,reading mathematics,live,protected,framework,access,particular,available,sustainable food,child labour
+27,resource,empowerment,clean cooking,defecation,conservation,global,america,plan,secondary school,economic,area,economic,open,flow,physical punishment,sector,decent work
+28,terrestrial freshwater,care,cooking fuel,safely drinking,field,treatment,global manufacturing value,national adaptation plan,level,family,biologically sustainable level,metric metric,solid waste,development assistance,psychological aggression,hunger malnutrition,financial service
+29,genetic,unpaid,modern energy,safely drinking water,machine learning,neonatal mortality,research,adaptation plan,adolescent,reduction,sustainable level,country,solid,policy,access,nearly,work
+30,degraded,aged,access affordable reliable,safely sanitation,information,infectious,region,united framework convention,student,live extreme poverty,water,environmental,city country,donor,income country,globally,country
+31,genetic resource,equal,access clean cooking,integrated water,performance,infectious disease,network,united framework,trained,live extreme,national jurisdiction,hazardous,dweller,particular developed country,society,plant,woman
+32,protecting,violence woman,access affordable,integrated water resource,feature,maternal mortality,northern,disaster risk reduction,primary secondary school,need,jurisdiction,national,proportion,particular developed,public,fell,crisis
+33,cover,girl woman,wind,resource management,deep learning,declined,carbon dioxide emission,strategy,scholarship,reduce,scale fishery,framework programme sustainable,eastern,country developing,africa,investment,global unemployment rate
+34,sustainable,national parliament,population access,wastewater,human,number,dioxide emission,risk reduction,young,poverty reduction,impact,framework programme,number,technology,detected,sustainable food production,global unemployment
+35,loss forest,physical sexual,clean cooking fuel,supply,problem,worldwide,reached,united,school child,inequality,ocean resource,programme sustainable consumption,sustainable,access,conflict,food producer,secure
+36,area covered,child,clean fuel,sanitation facility,behavior,life,economic,risk,learning outcome,service,world,programme sustainable,challenge,export,compliant,food security,income
+37,sustainably,harmful,cooking fuel technology,population,tool,infection,technology,impact,girl,poverty world,percent,impact,convenient access public,duty free treatment,freedom,hungry,globally
+38,term,girl aged,need,drinking water service,clinical,progress,transport,risk reduction strategy,enrolment,worker living,scale,sustainability,access public,free treatment,killed,agricultural productivity,access financial service
+39,poaching,political,progress,integrated,classification,neglected,researcher,local,equitable quality,reduce poverty,management,national policy,access public transport,country particular,subjected psychological aggression,africa,access financial
+40,poaching trafficking,harmful practice,solar,water sector,potential,maternal death,growth,reduction strategy,electricity,ending poverty,carbon dioxide,practice,population living,treatment,aggression physical punishment,farmer,inclusive
+41,area protected,domestic,primary energy,water efficiency,technology,estimated,manufacturing industry,greenhouse emission,training,global poverty,dioxide,global,sprawl,money,psychological aggression physical,severe,annual growth rate
+42,earth,position,infrastructure,fresh water,work,traffic,added manufacturing,resilience,ensure,living poverty,global,developing,rapid urbanization,migration,subjected psychological,productivity,developed country
+43,mountain area,empowerment woman,energy global,water supply,social,road traffic,value added manufacturing,warming,asia,global,carbon,footprint developing,urban population living,developed country developing,aggression physical,rise,youth employment
+44,target,reproductive,increase,fresh,fuzzy,died,service,temperature,school teacher,global extreme poverty,marine ecosystem,lifestyle,population living slum,increase,information,government,sustainable economic
+45,restore,progress,rate,river,applied,tropical disease,industrial,related,primary school teacher,global extreme,marine pollution,chemical,grow,migrant,latin america,worldwide,promote
+46,effort,sexual violence,goal,open,detection,neglected tropical disease,manufacturing production,secretariat,worldwide,worker family,stock biologically,sustainable development,south,financial,access information,affected,sustained inclusive
+47,green,experienced,energy energy consumption,handwashing,review,neglected tropical,developing country,record,literacy,disability,stock biologically sustainable,country taking,human settlement,market,crime,access,pandemic
+48,natural,world,investment,handwashing facility,multiple,tobacco,compared,developed,achieved,health,ocean marine resource,reduce,land,reduce,paris principle,allocable,developed region
+49,habitat,globally woman,hydropower,global population,vehicle,health care,covered,carbon,outcome,working poor,ocean marine,growth,slum dweller,developing country particular,subjected,sector allocable,gender
