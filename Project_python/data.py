@@ -1,14 +1,10 @@
 # File that contains the functions for accesing the required data: training and validation
 
 import os
-import difflib
-from attr import assoc
 from numpy import empty
 import pandas as pd
 import json
 import conf
-import preprocess
-import random
 import tools
 
 def get_sdg_titles(refPath):
