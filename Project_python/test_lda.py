@@ -1,5 +1,6 @@
 # %%
 # script for testing the bertopic functionality and classes
+from locale import normalize
 from logging import error
 import data
 import conf
@@ -108,14 +109,16 @@ if optimize:
         sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(paths["out"] + "LDA/" + topics_csv), 
                                                             normalize=True, verbose=True)
         lda.save_model()
+        tools.save_obj(lda, paths["model"] + "lda.pickle")
         
         print('Testing model...')
-        rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
+        rawSDG, perc_valid_global, perc_valid_any, sdgMax = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
                                                                 path_to_excel=(paths["out"] +     "LDA/" + out_test_excel), only_bad=only_bad, 
-                                                                score_threshold=0.2,
+                                                                score_threshold=0.1,
                                                                 only_positive=True,
                                                                 segmentize=-1,
                                                                 filter_low=True,
+                                                                normalize=True,
                                                                 expand_factor=1.5
                                                                 )
         out_perc_global.append(perc_valid_global); out_perc_any.append(perc_valid_any)
@@ -128,42 +131,42 @@ else:
     sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, 
                                                           path_csv=(paths["out"] + "LDA/topics.csv"), 
                                                             normalize=True, verbose=True)
-    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_lda_abstracts.xlsx"), 
-                                                            only_bad=False, 
-                                                            score_threshold=0.2,
-                                                            only_positive=True,
-                                                            segmentize=-1,
-                                                            filter_low=True,
-                                                            expand_factor=1.5
-                                                            )
     
-    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
-                                                            path_to_excel=(paths["out"] + "LDA/test_lda_full.xlsx"), 
-                                                            only_bad=False, 
-                                                            score_threshold=0.2,
-                                                            only_positive=True,
-                                                            segmentize=-1,
-                                                            filter_low=True,
-                                                            expand_factor=1.5
-                                                            )
-    
-    # rawSDG, perc_valid_global, perc_valid_any = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
-    #                                                         path_to_excel=(paths["out"] + "LDA/test_lda_path_files0.xlsx"),
-    #                                                         only_bad=False, 
-    #                                                         score_threshold=0.2,
-    #                                                         only_positive=True,
-    #                                                         segmentize=300,
-    #                                                         filter_low=True
-    #                                                         )
-    
-    rawSDG, perc_valid_global, perc_valid_any = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
+    rawSDG, perc_valid_global, perc_valid_any, maxSDG = lda.test_model(trainData[0], trainData[1], path_to_plot="", 
                                                             path_to_excel=(paths["out"] + "LDA/test_lda_training_files.xlsx"),
                                                             only_bad=False, 
-                                                            score_threshold=0.2,
+                                                            score_threshold=0.1,
                                                             only_positive=True,
                                                             segmentize=-1,
                                                             filter_low=True,
-                                                            expand_factor=1.5
+                                                            expand_factor=1.0,
+                                                            normalize=False
                                                             )
+    expandFactor = 1 / maxSDG
+    print('Expand factor: {:.2f}'.format(expandFactor))
+    
+    rawSDG, perc_valid_global, perc_valid_any, maxLocal = lda.test_model(natureShort, sdgs_nature, path_to_plot="", 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_abstracts.xlsx"), 
+                                                            only_bad=False, 
+                                                            score_threshold=0.1,
+                                                            only_positive=True,
+                                                            segmentize=-1,
+                                                            filter_low=True,
+                                                            expand_factor=expandFactor,
+                                                            normalize=False
+                                                            )
+    
+    rawSDG, perc_valid_global, perc_valid_any, maxLocal = lda.test_model(natureExt, sdgs_natureAll, path_to_plot="", 
+                                                            path_to_excel=(paths["out"] + "LDA/test_lda_full.xlsx"), 
+                                                            only_bad=False, 
+                                                            score_threshold=0.1,
+                                                            only_positive=True,
+                                                            segmentize=-1,
+                                                            filter_low=True,
+                                                            expand_factor=expandFactor,
+                                                            normalize=False
+                                                            )
+    
+    
+    
     

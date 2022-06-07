@@ -29,7 +29,7 @@ class LDA_classifier(LdaModel):
     def load_model():
         return LDA_classifier.load(conf.get_paths()["model"] + "lda")
          
-    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False,     segmentize=-1, filter_low=False, expand_factor=1.0):
+    def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False,     segmentize=-1, filter_low=False, expand_factor=1.0, normalize=True):
         rawSDG = []; rawSDGseg = []
         predictedSDGs = []
         realSDGs = []
@@ -39,41 +39,24 @@ class LDA_classifier(LdaModel):
         statsGlobal = []
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
-        
+        maxSDG = 0.0
         for text, labeled_sdgs in zip(corpus, sdgs):
             if segmentize > 0:
                 # then the documents are divided
-                text_segments = [text]
-                textLength = len(text)
-                if textLength > segmentize:
-                    text_segments = []; index = 0
-                    while(1):
-                        if index + segmentize > textLength:
-                            text_segments.append(text[index:])
-                            break
-                        else:
-                            if index + segmentize + 200 > textLength:
-                                text_segments.append(text[index:])
-                                break
-                            else:
-                                text_segments.append(text[index:(index + segmentize)])
-                        index += segmentize
+                text_segments = tools.segmentize_text(text, segment_size=segmentize)
                 raw_sdgs = np.zeros(17)
                 for segment in text_segments:
-                    raw_sdgs += self.map_text_to_sdgs(segment, only_positive=only_positive)  
+                    raw_sdgs += self.map_text_to_sdgs(segment, only_positive=only_positive, filter_low=filter_low, normalize=normalize, expand_factor=expand_factor) 
                 raw_sdgs /= len(text_segments)
                 raw_sdgs_seg = raw_sdgs
             else: 
                 raw_sdgs_seg = np.zeros(17) 
-                raw_sdgs = self.map_text_to_sdgs(text, only_positive=only_positive) 
-            if filter_low:
-                raw_sdgs_filt = raw_sdgs < 0.05
-                for prob, index, filt in zip(raw_sdgs, range(len(raw_sdgs)), raw_sdgs_filt):
-                    if filt: 
-                        prob = raw_sdgs[index]
-                        raw_sdgs[index] = 0.0
-                        raw_sdgs += prob * raw_sdgs / sum(raw_sdgs)
-            raw_sdgs *= expand_factor
+                raw_sdgs = self.map_text_to_sdgs(text, only_positive=only_positive, filter_low=filter_low, normalize=normalize, expand_factor=expand_factor) 
+
+            # raw_sdgs *= expand_factor
+            
+            maxLocal = max(raw_sdgs)
+            if maxLocal > maxSDG: maxSDG = maxLocal
                     
             predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
             validSingle = False; ii = 0
@@ -110,6 +93,7 @@ class LDA_classifier(LdaModel):
         oksSingle = [ok for ok in validsAny if ok == True]
         perc_valid_global = len(oks) / len(valids) * 100; perc_valid_any = len(oksSingle) / len(valids) * 100
         print("- {:.2f} % valid global, {:.2f} % valid any, of {} files".format(perc_valid_global, perc_valid_any, len(valids)))
+        print('Max found: {:.3f}'.format(maxSDG))
         
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
@@ -123,7 +107,7 @@ class LDA_classifier(LdaModel):
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [rawSDG, perc_valid_global, perc_valid_any]
+        return [rawSDG, perc_valid_global, perc_valid_any, maxSDG]
 
     def print_summary(self, top_words, path_csv=""):
         nTopics = len(self.get_topics())
@@ -224,12 +208,27 @@ class LDA_classifier(LdaModel):
                       
         return [sum_per_topic, listAscii]
             
-    def map_text_to_sdgs(self, text, min_threshold=0, only_positive=True):
+    def map_text_to_sdgs(self, text, min_threshold=0, only_positive=True, filter_low=True, normalize=True, expand_factor=1.0):
+        if isinstance(text, str): text = text.split(' ')
+        elif isinstance(text, list): text = text
+        else: print('Error')
         topics, probs = self.infer_text(text)
         sdgs = np.zeros(17)
         for topic, prob in zip(topics, probs):
             if (prob < min_threshold) or (prob < 0 and only_positive): continue
             sdgs += prob * self.topics_association[topic]
+        sdgs *= expand_factor
+        if filter_low:
+            raw_sdgs_filt = sdgs < 0.05
+            for prob, index, filt in zip(sdgs, range(len(sdgs)), raw_sdgs_filt):
+                if filt: 
+                    prob = sdgs[index]
+                    sdgs[index] = 0.0
+                    sdgs += prob * sdgs / sum(sdgs)  
+                
+        if normalize:
+            sdgs = sdgs / sum(sdgs)
+            
         return sdgs
     
     def infer_text(self, text):

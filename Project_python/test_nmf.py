@@ -65,20 +65,28 @@ nmf.load(n_topics=16)
 nmf.train_data = trainData
 nmf.map_model_topics_to_sdgs(n_top_words=topWords, normalize=True, path_csv="out/NMF/topics_nmf_global_bigram.csv")
 
+tools.save_obj(nmf, paths["model"] + "nmf.pickle")
+
 # TESTING SECTION
 print('######## TESTING MODELS...')
+filter = True; normalize = False
+
+[rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=0.2,
+               segmentize=-1, filter_low=filter, normalize=normalize,
+               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_training_files.xlsx")
+               )
+expandFactor = 1 / maxSDG
+expandFactor = 4
+print('Expand factor: {:.2f}'.format(expandFactor))
+
 nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, score_threshold=0.1,
                segmentize=-1, 
                path_to_excel=(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx"),
-               normalize=True, filter_low=True
+               normalize=normalize, filter_low=filter, expand_factor=expandFactor
                )
 
-nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.2,
-               segmentize=-1, filter_low=True,
+nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.1,
+               segmentize=-1, filter_low=filter, normalize=normalize, expand_factor=expandFactor,
                path_to_excel=(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
                )
 
-nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=0.2,
-               segmentize=-1, filter_low=True,
-               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_training_files.xlsx")
-               )

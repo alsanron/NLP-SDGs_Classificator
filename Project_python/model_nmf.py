@@ -45,7 +45,7 @@ class NMF_classifier:
         self.model = NMF(n_components=n_topics, random_state=5, verbose=False)
         self.model.fit(vectorized_data) 
         
-    def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel="", normalize=True):
+    def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel="", normalize=True, expand_factor=1.0):
         rawSDG = []; rawSDGseg = []
         predictedSDGs = []
         realSDGs = []
@@ -55,33 +55,19 @@ class NMF_classifier:
         statsGlobal = []
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
-        
+        maxSDG = 0.0
         for text, labeled_sdgs in zip(corpus, associated_SDGs):
             if segmentize > 0:
                 # then the documents are divided
-                text_segments = [text]
-                textLength = len(text)
-                if textLength > segmentize:
-                    text_segments = []; index = 0
-                    while(1):
-                        if index + segmentize > textLength:
-                            text_segments.append(text[index:])
-                            break
-                        else:
-                            if index + segmentize + 200 > textLength:
-                                text_segments.append(text[index:])
-                                break
-                            else:
-                                text_segments.append(text[index:(index + segmentize)])
-                        index += segmentize
+                text_segments = tools.segmentize_text(text, segment_size=segmentize)
                 raw_sdgs = np.zeros(17)
                 for segment in text_segments:
-                    raw_sdgs += self.map_text_to_sdgs(segment, filter_low=filter_low, normalize=normalize)  
+                    raw_sdgs += self.map_text_to_sdgs(segment, filter_low=filter_low, normalize=normalize, expand_factor=expand_factor)  
                 raw_sdgs /= len(text_segments)
                 raw_sdgs_seg = raw_sdgs
             else: 
                 raw_sdgs_seg = np.zeros(17) 
-                raw_sdgs = self.map_text_to_sdgs(text, filter_low=filter_low, normalize=normalize) 
+                raw_sdgs = self.map_text_to_sdgs(text, filter_low=filter_low, normalize=normalize, expand_factor=expand_factor) 
                     
             predic_sdgs = [list(raw_sdgs).index(sdgScore) + 1 for sdgScore in raw_sdgs if sdgScore > score_threshold]
             validSingle = False; ii = 0
@@ -94,6 +80,8 @@ class NMF_classifier:
             valid = False
             if ii == len(labeled_sdgs):
                 valid = True
+            maxLocal = max(raw_sdgs)
+            if maxLocal > maxSDG: maxSDG = maxLocal
                 
             raw_sdgsAscii = ["x{}: {:.2f}".format(xx, topic) for topic, xx in zip(raw_sdgs, range(1,18))]
             raw_sdgsAscii = "|".join(raw_sdgsAscii)
@@ -117,6 +105,7 @@ class NMF_classifier:
         oksSingle = [ok for ok in validsAny if ok == True]
         perc_valid_global = len(oks) / len(valids) * 100; perc_valid_any = len(oksSingle) / len(valids) * 100
         print("- {:.2f} % valid global, {:.2f} % valid any, of {} files".format(perc_valid_global, perc_valid_any, len(valids)))
+        print('Max found: {:.3f}'.format(maxSDG))
         
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
@@ -130,7 +119,7 @@ class NMF_classifier:
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [rawSDG, perc_valid_global, perc_valid_any]
+        return [rawSDG, perc_valid_global, perc_valid_any, maxSDG]
             
     def map_model_topics_to_sdgs(self, n_top_words, normalize=True, path_csv=""):
         # Maps each new topic of the general NMF model to an specific SDG obtained from training 17 models
@@ -192,18 +181,21 @@ class NMF_classifier:
 
             df.to_csv(path_csv)
 
-    def map_text_to_sdgs(self, text, filter_low=True, normalize=True):
+    def map_text_to_sdgs(self, text, filter_low=True, normalize=True, expand_factor=1.0):
         query_words_vect = self.vectorizer.transform([text])
         topicFeats = self.model.transform(query_words_vect)[0]
         sdgs_score = np.zeros(17)
         for topicScore in topicFeats:
             sdgs_score += topicScore * self.topics_association[list(topicFeats).index(topicScore)] 
-        sdgs_score *= 10
+        sdgs_score *= expand_factor
         
         if filter_low:
             raw_sdgs_filt = sdgs_score < 0.05
-            for index, filt in zip(range(len(sdgs_score)), raw_sdgs_filt):
-                if filt: sdgs_score[index] = 0.0
+            for prob, index, filt in zip(sdgs_score, range(len(sdgs_score)), raw_sdgs_filt):
+                if filt: 
+                    prob = sdgs_score[index]
+                    sdgs_score[index] = 0.0
+                    sdgs_score += prob * sdgs_score / sum(sdgs_score)
         
         if normalize:
             sdgs_score = sdgs_score / sum(sdgs_score)

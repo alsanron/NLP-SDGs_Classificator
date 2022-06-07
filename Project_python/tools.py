@@ -52,3 +52,21 @@ def save_obj(obj, path):
 def load_obj(path):
     obj = pickle.load(open(path, 'rb'))
     return obj
+
+def segmentize_text(text, segment_size):
+    text_segments = [text]
+    textLength = len(text)
+    if textLength > segment_size:
+        text_segments = []; index = 0
+        while(1):
+            if index + segment_size > textLength:
+                text_segments.append(text[index:])
+                break
+            else:
+                if index + segment_size + 200 > textLength:
+                    text_segments.append(text[index:])
+                    break
+                else:
+                    text_segments.append(text[index:(index + segment_size)])
+            index += segment_size
+    return text_segments

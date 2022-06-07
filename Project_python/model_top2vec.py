@@ -53,11 +53,16 @@ class Top2Vec_classifier:
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
         probs_per_sdg = [[] for ii in range(1,18)]
+        maxSDG = 0.0
         
         numTopics = self.model.get_num_topics()
         stat_topics = numTopics
         for text, sdgs in zip(corpus, associated_SDGs):
             raw_sdgs, predic, score, raw_topicsScores = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=version, expand_factor=expand_factor, filter_low=filter_low, normalize=normalize, normalize_threshold=normalize_threshold)  
+            
+            maxLocal = max(raw_sdgs)
+            if maxLocal > maxSDG: maxSDG = maxLocal
+            
             validSingle = False; ii = 0
             for sdg in sdgs:
                 countPerSDG[sdg - 1] += 1
@@ -90,6 +95,7 @@ class Top2Vec_classifier:
         perc_global = len(oks) / len(valids) * 100
         perc_single = len(oksSingle) / len(valids) * 100
         print("- {:.2f} % valid global, {:.3f} % valid any, of {} files".format(perc_global, perc_single, len(valids)))
+        print('Max found: {:.3f}'.format(maxSDG))
         
         for probs, index in zip(probs_per_sdg, range(len(probs_per_sdg))):
             probs_per_sdg[index] = np.mean(probs_per_sdg[index])
@@ -106,7 +112,7 @@ class Top2Vec_classifier:
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [perc_global, perc_single, probs_per_sdg]
+        return [perc_global, perc_single, probs_per_sdg, maxSDG]
         
     def map_model_topics_to_sdgs(self, path_csv="", normalize=False, version=1):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
@@ -234,15 +240,16 @@ class Top2Vec_classifier:
                     sdgs[sdg - 1] = 1
                 predictSDGs += docScore * sdgs
         # POST-PROCESSING OF THE MEASURES
+        predictSDGs *= expand_factor
        
         if filter_low:
             raw_sdgs_filt = predictSDGs < 0.05
             for prob, index, filt in zip(predictSDGs, range(len(predictSDGs)), raw_sdgs_filt):
                 if filt: 
-                    # prob = predictSDGs[index]
+                    prob = predictSDGs[index]
                     predictSDGs[index] = 0.0
-                    # predictSDGs += prob * predictSDGs / sum(predictSDGs)
-        # predictSDGs *= expand_factor
+                    predictSDGs += prob * predictSDGs / sum(predictSDGs)
+        
         if normalize:
             # raw_sdgs_filt = predictSDGs < normalize_threshold
             # for index, filt in zip(range(len(predictSDGs)), raw_sdgs_filt):
