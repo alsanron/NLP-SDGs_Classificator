@@ -9,6 +9,7 @@ import json
 import conf
 import preprocess
 import random
+import tools
 
 def get_sdg_titles(refPath):
     # returns the title of each SDG as a dictionary, with key: SDGx, value = title.
@@ -80,10 +81,7 @@ def get_nature_abstracts_filtered():
     paths = conf.get_paths()
     excel = pd.read_excel(paths["ref"] + "test2set_thresholds.xlsx")
     texts = list(excel["text"]); sdgsAscii = list(excel["sdgs"])
-    sdgs = []
-    for sdgAscii in sdgsAscii:
-        tmp = [int(sdg) for sdg in sdgAscii[1:-1].split(',')]
-        sdgs.append(tmp)
+    sdgs = tools.parse_sdgs_ascii_list(sdgsAscii)
     return [texts, sdgs]
 
 
@@ -210,6 +208,7 @@ def get_extra_manual_files(refPath):
     nFiles = len(corpus)
     print("- {} manual files were found".format(nFiles))    
     return [corpus, associatedSDGs]
+ 
 
 def get_iGEM_files(ref_path, verbose=True):
     path = ref_path + "iGEM_2004_2021/"

@@ -20,29 +20,33 @@ class Global_Classifier:
  
     def load_models(self):
         self.nmf = tools.load_obj(self.paths["model"] + "nmf.pickle")
-        self.lda = tools.load_obj(self.paths["model"] + "lda.pickle")
-        self.top2vec = tools.load_obj(self.paths["model"] + "top2vec.pickle")
+        print('# Loaded nmf...')
         
-    def test_model(self, corpus, associated_SDGs, path_to_plot="", path_to_excel="", only_bad=False,
+        self.lda = tools.load_obj(self.paths["model"] + "lda.pickle")
+        print('# Loaded lda...')
+        
+        self.top2vec = tools.load_obj(self.paths["model"] + "top2vec.pickle")
+        print('# Loaded top2vec...')
+        
+    def test_model(self, raw_corpus, corpus, associated_SDGs=[], path_to_plot="", path_to_excel="", only_bad=False,
                    score_threshold=3.0,  only_positive=False, filter_low=False):
-        rawSDG = []; realSDGs = []; predic = []; texts = []
+        rawSDG = []; realSDGs = []; predic = []; scores = []; texts = []
        
         def parse_line(sdgs):
             sdgsAscii = ["x{}: {:.3f}".format(xx, topic) for topic, xx in zip(sdgs, range(1,18))]
             sdgsAscii = "|".join(sdgsAscii)
             sdgsAscii += "\n"
             return sdgsAscii
+        if len(associated_SDGs) == 0: associated_SDGs = [[-1] for ii in range(len(corpus))]
         
-        for text, sdgs in zip(corpus, associated_SDGs):
+        for raw_text, text, sdgs in zip(raw_corpus, corpus, associated_SDGs):
             [nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs] = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=1, filter_low=filter_low, normalize=False, normalize_threshold=-1)  
-            predict_sdgs = self.get_identified_sdgs(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs)
+            predict_sdgs, scores_sdgs = self.get_identified_sdgs(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs)
             
             rawSDG.append("NMF -> "+ parse_line(nmf_raw_sdgs) + "LDA -> " + parse_line(lda_raw_sdgs) + "TOP2VEC -> " + parse_line(top_raw_sdgs))
-            predic.append(predict_sdgs)
+            predic.append(predict_sdgs); scores.append(scores_sdgs)
             realSDGs.append(sdgs)
-            texts.append(text)
-            
-            
+            texts.append(raw_text)
 
         # oks = [ok for ok in valids if ok == True]
         # oksSingle = [ok for ok in validsAny if ok == True]
@@ -60,22 +64,24 @@ class Global_Classifier:
             df["real"] = realSDGs
             df["predict"] = predic
             df["sdgs_association"] = rawSDG
+            df = df.applymap(lambda x: x.encode('unicode_escape').decode('utf-8') if isinstance(x, str) else x)
             df.to_excel(path_to_excel)
             
-        return [1]
+        return predic, scores
         
     def get_identified_sdgs(self, nmf, lda, top2vec):
-        identified = []
+        identified = []; scores = []
         for sdg in range(1, 18):
             index = sdg - 1; 
             predic = np.array([nmf[index], lda[index], top2vec[index]])
-            if any(predic >= 0.3):
+            # if any(predic >= 0.3):
+            #     identified.append(sdg)
+            if np.count_nonzero(predic >= 0.15) >= 2:
+                values = [value for value in predic if value >= 0.15]
                 identified.append(sdg)
-            elif np.count_nonzero(predic >= 0.15) >= 2:
-                identified.append(sdg)
+                scores.append(np.mean(values))
             else: pass # not identified
-        return identified
-            
+        return identified, scores
             
            
     def map_text_to_sdgs(self, text, score_threshold, only_positive=False, version=1, filter_low=True, normalize=True, normalize_threshold=0.25):

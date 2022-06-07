@@ -4,7 +4,6 @@ import conf
 import pandas as pd
 import tools
 import model_nmf
- 
 
 def test_text_preprocess(texts, n_texts=20):
 
@@ -31,8 +30,7 @@ print('######## LOADING TEXTS...')
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-# raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
-# raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
+raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 
 topWords = 40
 def prepare_texts(corpus):
