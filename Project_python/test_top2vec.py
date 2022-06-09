@@ -50,7 +50,7 @@ for jj in range(20):
       print('Optimizing case: {} of {}'.format(ii + 1, len(optim_param)))
       
       if ext_dataset[ii]:
-        if parsed[ii]: trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
+        if parsed[ii]: trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra ]
         else: 
           trainData = [raw_orgFiles + raw_extraFiles, sdgs_orgFiles + sdgs_extra]
       else:

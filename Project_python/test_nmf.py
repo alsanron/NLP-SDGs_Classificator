@@ -43,10 +43,10 @@ def prepare_texts(corpus):
 orgFiles = prepare_texts(raw_orgFiles)
 natureShort = prepare_texts(raw_natureShort)
 # natureExt = prepare_texts(raw_natureExt)
-# extraFiles = prepare_texts(raw_extraFiles)
+extraFiles = prepare_texts(raw_extraFiles)
 
 # trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
-trainData = [orgFiles + natureShort, sdgs_orgFiles + sdgs_nature]
+trainData = [orgFiles + extraFiles + natureShort, sdgs_orgFiles + sdgs_extra + sdgs_nature]
 
 # store the training files in csv
 df = pd.DataFrame()
