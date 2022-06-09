@@ -6,8 +6,6 @@ import data
 import conf
 import pandas as pd
 import tools
-import json
-import os
 import numpy as np
 import model_lda
 from gensim.models import Phrases

@@ -13,11 +13,9 @@ paths = conf.get_paths()
 print('######## LOADING TEXTS...')
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
-raw_natureShortFilt, sdgs_natureFilt = data.get_nature_abstracts_filtered()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
 # raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
-raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
-raw_healthcare, sdgs_healthcare = data.get_health_care_files(paths["ref"])
+raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"], sdg_query=[1,10,15])
 
 def prepare_texts(corpus):
     newCorpus = []
@@ -27,10 +25,8 @@ def prepare_texts(corpus):
         
 orgFiles = prepare_texts(raw_orgFiles)
 natureShort = prepare_texts(raw_natureShort)
-natureShortFilt = prepare_texts(raw_natureShortFilt)
 natureExt = prepare_texts(raw_natureExt)
 extraFiles = prepare_texts(raw_extraFiles)
-healthcare = prepare_texts(raw_healthcare)
 
 optimize = 1
 
@@ -38,7 +34,7 @@ optimize = 1
 print('######## TRAINING MODELS...')
 top2vec = model_top2vec.Top2Vec_classifier(paths, verbose=True)
 
-for jj in range(1):
+for jj in range(20):
   if optimize:
     optim_param = pd.read_excel(paths["ref"] + "Top2vec/" + "optimization_top2vec.xlsx")
     min_count = list(optim_param["min_count"])
@@ -54,10 +50,9 @@ for jj in range(1):
       print('Optimizing case: {} of {}'.format(ii + 1, len(optim_param)))
       
       if ext_dataset[ii]:
-        if parsed[ii]: trainData = [orgFiles + healthcare, sdgs_orgFiles + sdgs_healthcare]
+        if parsed[ii]: trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
         else: 
-          trainData = [raw_orgFiles + raw_healthcare + raw_extraFiles, sdgs_orgFiles + sdgs_healthcare + sdgs_extra]
-          # trainData = [raw_orgFiles + raw_healthcare, sdgs_orgFiles + sdgs_healthcare]
+          trainData = [raw_orgFiles + raw_extraFiles, sdgs_orgFiles + sdgs_extra]
       else:
         if parsed[ii]: trainData = [orgFiles, sdgs_orgFiles]
         else: trainData = [raw_orgFiles, sdgs_orgFiles]
@@ -87,9 +82,9 @@ for jj in range(1):
       expandFactor = 1 / maxSDG
       print('Expand factor: {:.2f}'.format(expandFactor))
     
-      if parsed[ii]: testTexts = natureShortFilt
-      else: testTexts = raw_natureShortFilt
-      perc_global, perc_single, probs_per_sdg_test, maxSDG = top2vec.test_model(corpus=testTexts, associated_SDGs=sdgs_natureFilt,
+      if parsed[ii]: testTexts = natureShort
+      else: testTexts = raw_natureShort
+      perc_global, perc_single, probs_per_sdg_test, maxSDG = top2vec.test_model(corpus=testTexts, associated_SDGs=sdgs_nature,
                       filter_low=filter, score_threshold=0.1, only_positive=False,
                         path_to_excel=(paths["out"] + "Top2vec/" + "test_top2vec_abstractsLow_it{}_{}.xlsx".format(jj, ii)), 
                         only_bad=False, expand_factor=expandFactor, version=1, normalize=normalize, normalize_threshold=0.2
@@ -120,6 +115,10 @@ for jj in range(1):
     # optim_param["perc_test"] = perc_test
     # optim_param["perc_train"] = perc_train
     # optim_param.to_excel(paths["out"] + "Top2vec/" + "optimization_out.xlsx")
+    
+    usr = input('Continue? (y/n): ')
+    usr = usr.lower()
+    if usr == "n": break
     
   else:
       top2vec.load(trainData)
