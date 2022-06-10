@@ -3,11 +3,9 @@ from logging import error
 import data
 import conf
 import pandas as pd
-import model_top2vec
-import model_nmf
-import model_lda
 import numpy as np
 import tools
+from scipy.special import softmax
          
 class Global_Classifier:
     paths=[]
@@ -48,17 +46,22 @@ class Global_Classifier:
                 counter = 0.0; tmp = 0.0
                 for val in concat_array[:, ii]:
                     if val >= 0.0:
+                        if val >= 0.5: val = 0.5
                         counter += 1; tmp += val
                 if counter > 0: tmp /= counter
                 filt_mean[ii] = tmp
                 
             # predict_sdgs, scores_sdgs = self.get_identified_sdgs(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs)
             predict_sdgs, scores_sdgs = self.get_identified_sdgs_mean(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, filt_mean)
+            
+            filt_mean_softmax = softmax(filt_mean)
                        
-            rawSDG.append("NMF -> "+ parse_line(nmf_raw_sdgs) + "LDA -> " + parse_line(lda_raw_sdgs) + "TOP2VEC -> " + parse_line(top_raw_sdgs) + "MEAN -> " + parse_line(filt_mean))
+            rawSDG.append("NMF -> "+ parse_line(nmf_raw_sdgs) + "LDA -> " + parse_line(lda_raw_sdgs) + "TOP2VEC -> " + parse_line(top_raw_sdgs) + "MEAN -> " + parse_line(filt_mean) + "SOFTMAX -> " + parse_line(filt_mean_softmax))
             predic.append(predict_sdgs); scores.append(scores_sdgs)
             realSDGs.append(sdgs)
-            texts.append(raw_text)
+            
+            if len(raw_corpus) == 0: texts.append(text)
+            else: texts.append(raw_text)
 
         # oks = [ok for ok in valids if ok == True]
         # oksSingle = [ok for ok in validsAny if ok == True]
@@ -116,7 +119,8 @@ class Global_Classifier:
             flag_count_low = np.count_nonzero(tmp >= 0.2) >= 2
             flag_coun_high = np.count_nonzero(tmp >= 0.35) >= 1 and np.count_nonzero(tmp >= 0.1) >= 2
             
-            if flag_mean or flag_count_low or flag_coun_high:
+            # if flag_mean or flag_count_low or flag_coun_high:
+            if flag_mean:
                 identified.append(sdg)
                 scores.append(predic)
             else: pass # not identified

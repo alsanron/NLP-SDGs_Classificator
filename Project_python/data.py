@@ -185,24 +185,31 @@ def get_iGEM_files(ref_path, verbose=True):
         text = hd.read()[:-1]; hd.close()
         fields = text.split(fieldsSeparator)
         
-    abstracts = []; extInformation = []
+    abstracts = []; extInformation = []; not_valid = []
     for folder in os.listdir(path=path):
         if folder.startswith("iGEM"):
             for file in os.listdir(path=(path + folder)):
                 if file.startswith("0"): continue # it is not a valid file
-                fp = open(path + folder + "/" +  file, 'r', encoding='utf8')
-                text = fp.read()[:-1]; fp.close()
-                fieldsValue = text.split(fieldsSeparator)
-                data = dict()
-                for fieldValue, fieldName in zip(fieldsValue, fields):
-                    data[fieldName] = fieldValue
+                try: 
+                    fp = open(path + folder + "/" +  file, 'r', encoding='utf8')
+                    text = fp.read()[:-1]; fp.close()
+                    fieldsValue = text.split(fieldsSeparator)
+                    data = dict()
+                    for fieldValue, fieldName in zip(fieldsValue, fields):
+                        data[fieldName] = fieldValue
+                    
+                    # append the data to the lists if OK
+                    if data['Application'] == 'Accepted' and len(data['Abstract'].split(' ')) > 10:
+                        data["Abstract"] =  data["Abstract"].encode("ascii", "ignore")
+                        abstracts.append(data["Abstract"])
+                        extInformation.append(data)
+                except: 
+                    not_valid.append(path + folder + "/" +  file)
                 
-                # append the data to the lists if OK
-                if data['Application'] == 'Accepted' and len(data['Abstract'].split(' ')) > 10:
-                    abstracts.append(data["Abstract"])
-                    extInformation.append(data)
     if verbose:
-        print('## {} accepted texts with abstract were found'.format(len(abstracts)))                
+        print('## {} accepted texts with abstract were found'.format(len(abstracts)))   
+        for file in not_valid:
+            print('# Revise: ' + file)       
     
     return [abstracts, extInformation]
                 
