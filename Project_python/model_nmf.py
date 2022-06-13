@@ -185,6 +185,11 @@ class NMF_classifier:
     def map_text_to_sdgs(self, text, filter_low=True, normalize=True, expand_factor=1.0):
         query_words_vect = self.vectorizer.transform([text])
         topicFeats = self.model.transform(query_words_vect)[0]
+        
+        for word in text.split(' '):
+            query_words_vect = self.vectorizer.transform([word])
+            topicFeats = self.model.transform(query_words_vect)[0]
+        
         sdgs_score = np.zeros(17)
         for topicScore in topicFeats:
             sdgs_score += topicScore * self.topics_association[list(topicFeats).index(topicScore)] 

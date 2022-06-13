@@ -24,7 +24,7 @@ def prepare_texts(corpus):
         
 ig_abstract = prepare_texts(raw_ig_abstract)
 
-flag_new_identification = 0 # 0: plot results, 1: new identification
+flag_new_identification = 1 # 0: plot results, 1: new identification
 show_plots = 1
 
 if flag_new_identification:
