@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import warnings
 
 paths = conf.get_paths()
-raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
-raw_natureShort, sdgs_nature, index_natureAbstracts = data.get_nature_abstracts()
-raw_natureExt, sdgs_natureAll, index_natureFull = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
+# raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
+# raw_natureShort, sdgs_nature, index_natureAbstracts = data.get_nature_abstracts()
+# raw_natureExt, sdgs_natureAll, index_natureFull = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
+# raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
 raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"])
 
 
@@ -64,7 +64,16 @@ def show_data(files_data, sdgs_data, label):
     plt.ylabel("Number of {} files".format(label))
     plt.show()
 
+def analize_corpus(corpus, sdgs):
+    countPerSdg = np.zeros(17)
+    for sdgG in sdgs:
+        for sdg in sdgG:
+            countPerSdg[sdg - 1] += 1
+    countPerSdgStr = ["SDG{}:{}".format(sdg, int(count)) for sdg, count in zip(range(1,18), countPerSdg)]
+    countPerSdgStr = " | ".join(countPerSdgStr)
+    print(countPerSdgStr)
 
 # show_data(raw_orgFiles, sdgs_orgFiles, "training")
-show_data(raw_orgFiles, sdgs_orgFiles, "SDGs-UN information")
+#show_data(raw_orgFiles, sdgs_orgFiles, "SDGs-UN information")
 
+analize_corpus(corpus=raw_extraFiles, sdgs=sdgs_extra)

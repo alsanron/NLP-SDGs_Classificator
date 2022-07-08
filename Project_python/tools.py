@@ -2,6 +2,7 @@
 import os
 from string import punctuation
 import subprocess
+from turtle import color
 import nltk
 from nltk.stem.wordnet  import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
@@ -10,6 +11,8 @@ from gensim.parsing.preprocessing import STOPWORDS
 from gensim.models import Phrases
 import pickle
 import conf
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def pdfs2txt(pdfPath): 
@@ -83,6 +86,28 @@ def parse_sdgs_ascii_list(sdgs_ascii):
         if len(tmp) > 0: sdgs.append(tmp)
     return sdgs
 
+def save_figure(fig:plt, path):
+    if os.path.exists(path): 
+            os.remove(path) # otherwise, old figures are not overwritten
+    fig.savefig(path)     
+
+def analyze_predict_real_sdgs(real_sdgs, predic_sdgs, path_out="", case_name="default", show=True):
+    ok = np.zeros(17); wrong = np.zeros(17)
+    for real, predic in zip(real_sdgs, predic_sdgs):
+        for rr in real:
+            if rr in predic: ok[rr - 1] += 1
+            else: wrong[rr - 1] += 1
+                  
+    label_ticks = range(1,18)
+    plt.figure(figsize=(8, 8))
+    plt.bar(label_ticks, ok + wrong, color="red")
+    plt.bar(label_ticks, ok, color="green")
+    plt.xlabel('SDG')
+    plt.ylabel("Number of times identified")
+    plt.xticks(label_ticks)
+    save_figure(plt, path_out + case_name + ".png")
+    if show: plt.show()
+    
 
 # text = "goal 1: end poverty in all its forms everywhere. more than 700 million people, or 10% of the world population, still live in extreme poverty and is struggling to fulfil the most basic needs like health, education, and access to water and sanitation, to name a few. the majority of people living on less than $1.90 a day live in sub saharan africa. worldwide, the poverty rate in rural areas is 17.2 per cent more than three times higher than in urban areas. having a job does not guarantee a decent living. in fact, 8 per cent of employed workers and their families worldwide lived in extreme poverty in 2018. poverty affects children disproportionately. one out of five children live in extreme poverty. ensuring social protection for all children and other vulnerable groups is critical to reduce poverty. poverty has many dimensions, but its causes include unemployment, social exclusion, and high vulnerability of certain populations to disasters, diseases and other phenomena which prevent them from being productive."
 

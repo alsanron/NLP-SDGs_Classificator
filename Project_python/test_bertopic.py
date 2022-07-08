@@ -14,13 +14,13 @@ print('######## LOADING TEXTS...')
 raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
 raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"], sdg_query=[1,3,10,15])
+raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"], sdg_query=[1]) #[1,3,10,15]
 topics_seed_list = data.get_sdgs_seed_list(refPath=paths["ref"])
 
 def prepare_texts(corpus):
     newCorpus = []
     for text in corpus:
-        newCorpus.append(" ".join(tools.tokenize_text(text, lemmatize=True, stem=False ,extended_stopwords=True)))
+        newCorpus.append(" ".join(tools.tokenize_text(text, lemmatize=True, stem=False, extended_stopwords=True)))
     return newCorpus
         
 orgFiles = prepare_texts(raw_orgFiles)
@@ -96,7 +96,10 @@ for jj in range(1):
       filter = True; normalize = False
       
       print('## Testing training files')
-      perc_global_train, perc_single_train, probs_per_sdg_train, maxSDG = bertopic.test_model(corpus=trainData[0], associated_SDGs=trainData[1], filter_low=filter, score_threshold=0.2, only_positive=True, path_to_excel=(paths["out"] + "Bertopic/" + "test_training_files_it{}case_{}.xlsx".format(jj, ii)), only_bad=False, expand_factor=1.0, normalize=normalize)
+      predic, maxSDG = bertopic.test_model(corpus=trainData[0], associated_SDGs=trainData[1], filter_low=filter, score_threshold=0.2, only_positive=True, path_to_excel=(paths["out"] + "Bertopic/" + "test_training_files_it{}case_{}.xlsx".format(jj, ii)), only_bad=False, expand_factor=1.0, normalize=normalize)
+      
+      tools.analyze_predict_real_sdgs(trainData[1], predic, path_out=paths["out"] + "Bertopic/", case_name="training_files_it{}case_{}".format(jj, ii), show=False)
+      
       expandFactor = 1 / maxSDG
       print('Expand factor: {:.2f}'.format(expandFactor))
       
@@ -104,7 +107,9 @@ for jj in range(1):
       else: testTexts = raw_natureShort
       
       print('## Testing test files')
-      perc_global_test, perc_single_test, probs_per_sdg_test, maxSDG = bertopic.test_model(corpus=testTexts, associated_SDGs=sdgs_nature, filter_low=filter, score_threshold=0.15, only_positive=True, path_to_excel=(paths["out"] + "Bertopic/" + "test_nature_short_it{}case_{}.xlsx".format(jj, ii)), only_bad=False, expand_factor=1.0, normalize=normalize)
+      predic, maxSDG = bertopic.test_model(corpus=testTexts, associated_SDGs=sdgs_nature, filter_low=filter, score_threshold=0.15, only_positive=True, path_to_excel=(paths["out"] + "Bertopic/" + "test_nature_short_it{}case_{}.xlsx".format(jj, ii)), only_bad=False, expand_factor=1.0, normalize=normalize)
+      
+      tools.analyze_predict_real_sdgs(sdgs_nature, predic, path_out=paths["out"] + "Bertopic/", case_name="nature_short_it{}case_{}".format(jj, ii), show=False)
       
       # perc_global, perc_single, probs_per_sdg_test, maxSDG = top2vec.test_model(corpus=raw_natureShortFilt, associated_SDGs=sdgs_natureFilt,
       #             filter_low=filter, score_threshold=0.5, only_positive=True,
@@ -118,8 +123,8 @@ for jj in range(1):
       #                   only_bad=False, expand_factor=2, version=1
       #                   )
       
-      perc_test.append("{:.3f}, {:.3f}".format(perc_global_test, perc_single_test))
-      perc_train.append("{:.3f}, {:.3f}".format(perc_global_train, perc_single_train))
+      # perc_test.append("{:.3f}, {:.3f}".format(perc_global_test, perc_single_test))
+      # perc_train.append("{:.3f}, {:.3f}".format(perc_global_train, perc_single_train))
       
     optim_param["perc_test"] = perc_test
     optim_param["perc_train"] = perc_train

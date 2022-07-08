@@ -148,14 +148,16 @@ def get_sdgs_pathfinder(refPath, min_words=150):
     return [corpus, sdgs]
 
 # MANUAL SELECTED files
-def get_extra_manual_files(refPath, sdg_query=[]):
+def get_extra_manual_files(refPath, sdg_query=[], verbose=True):
     # Returns an array where each elements consist of an array with the fields:
     # [0] abstract or text related to a SDG, [1]: array with the associated SDGs.
     sdgsPaths = [refPath + "Manual_selected/"]
     corpus = []; associatedSDGs = []
     for path in sdgsPaths:
         for file in os.listdir(path):
-            f = open(path + file, 'r')
+            filePath = path + file
+            if not os.path.isfile(filePath): continue
+            f = open(filePath, 'r')
             text = f.read()
             f.close()
             fileSDG = []
@@ -174,7 +176,7 @@ def get_extra_manual_files(refPath, sdg_query=[]):
                 associatedSDGs.append(fileSDG)
         
     nFiles = len(corpus)
-    print("- {} manual files were found".format(nFiles))    
+    if verbose: print("# {} manual files were found".format(nFiles))    
     return [corpus, associatedSDGs]
  
 

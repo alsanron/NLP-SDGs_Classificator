@@ -133,7 +133,7 @@ class BERTopic_classifier:
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [perc_global, perc_single, probs_per_sdg, maxSDG]
+        return predictedSDGs, maxSDG
         
     def map_model_topics_to_sdgs(self, associated_sdgs, topics, probs, path_csv="", normalize=True, verbose=True):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
