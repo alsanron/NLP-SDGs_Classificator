@@ -268,4 +268,20 @@ def update_datasets():
     with open(outPath + 'dataset.json', 'w') as outfile:
         json.dump(dc, outfile)
     
-update_datasets()
+def get_dataset():
+    # Gets the database where all the texts are stored
+    # @return Dictionary with all the data: 
+    # "standard" -> raw texts
+    # "lem" -> lemmatized texts
+    # "lem_stem" -> lemmatized + stemmed texts
+    # "sdgs" -> associates sdgs to each text
+    # "identfier" -> source of each text
+    databasePath = "databases/database.json"
+    print("# Opening " + databasePath)
+    with open(databasePath, "r") as f:
+        json_dump = f.read()
+        f.close()
+    database = json.loads(json_dump)
+    
+    return database
+# update_datasets()
