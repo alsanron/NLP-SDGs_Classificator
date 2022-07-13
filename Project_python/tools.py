@@ -15,28 +15,38 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def pdfs2txt(pdfPath): 
-    # Changes the environment to the powershell for windows
+def pdfs2txt(pdfPath:str): 
+    # Converts all the PDFs located in the $pdfPath$ into txt format
+    # @param pdfPath path where the pdfs should be located
     os.environ["COMSPEC"] = r"C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe"
     bashCommand = "bash pdftotxt.sh {} {}".format(pdfPath, pdfPath)
     subprocess.call(bashCommand, shell=True)
 
-def tokenize_text(text, min_word_length=3, punctuation=True, lemmatize=True, stem=False, stopwords=True, extended_stopwords=False):
-    # Clears the text from stopwords and lemmatizes the text returning the tokens
+def tokenize_text(text:str, min_word_length:int=3, punctuation:bool=True, lemmatize:bool=True, stem:bool=True, stopwords:bool=True, extended_stopwords:bool=True):
+    # Tokenizes the input text. First, it applies all the options.
+    # @param text Input text to clear and tokenize
+    # @param min_word_length Minimum length of the works to keep
+    # @param punctuation  Remove ASCII punctuation characters with spaces in s
+    # @param lemmatize Wordnetlemmatizer
+    # @param stem PorterStemmer
+    # @param stopwords Remove the frequent stopwords
+    # @param extended_stopwords Use the list stop_words.txt
+    
     lemmatizer = WordNetLemmatizer()
-    stemmer = PorterStemmer()
+    # stemmer = PorterStemmer()
     
     tokens = gensim.parsing.strip_tags(text)  
     if punctuation: tokens = gensim.parsing.strip_punctuation(tokens)
+    tokens = gensim.parsing.strip_numeric(tokens)
+    tokens = gensim.parsing.strip_non_alphanum(tokens)
+    if stem: tokens = gensim.parsing.stem_text(tokens)
     tokens = gensim.parsing.strip_multiple_whitespaces(tokens)
-    tokens = gensim.utils.simple_preprocess(tokens, deacc=True, min_len=1)
-    tokens = [token for token in tokens if not token.isnumeric()]
-    
-    for token in tokens:
+    tokens = gensim.utils.simple_preprocess(tokens, deacc=punctuation, min_len=min_word_length)
+    for token, tokenIndex in zip(tokens, range(len(tokens))):
         newToken = token
         if lemmatize: newToken = lemmatizer.lemmatize(newToken)
-        if stem: newToken = stemmer.stem(newToken)
-        tokens[tokens.index(token)] = newToken
+        # if stem: newToken = stemmer.stem(newToken)
+        tokens[tokenIndex] = newToken
         
     if stopwords:
         set = STOPWORDS
@@ -47,20 +57,29 @@ def tokenize_text(text, min_word_length=3, punctuation=True, lemmatize=True, ste
                 f.close()
             own_set = frozenset(words)
             set = STOPWORDS.union(own_set)
-            tokens = [token for token in tokens if not(token in set)]
-        # just in case
+            # tokens = [token for token in tokens if not(token in set)]
         tokens = [token for token in tokens if not token in set]
-    tokens = [token for token in tokens if len(token) > min_word_length]
+        
+    # tokens = [token for token in tokens if len(token) > min_word_length]
     return tokens
 
-def save_obj(obj, path):
+def standarize_raw_text(text:str):
+    # Preprocess a raw text so that all have the same format.
+    # @warning It does not tokenize or apply any process for cleaning the text
+    # @param text
+    outText = text
+    outText = outText.replace("_", " ").replace("-", " ").replace("“", " ").replace("”", " ").replace("'", "")
+    outText = gensim.parsing.strip_multiple_whitespaces(outText)
+    return outText
+    
+def save_obj(obj, path:str):
     pickle.dump(obj, open(path, 'wb'))
     
-def load_obj(path):
+def load_obj(path:str):
     obj = pickle.load(open(path, 'rb'))
     return obj
 
-def segmentize_text(text, segment_size):
+def segmentize_text(text:str, segment_size):
     text_segments = [text]
     textLength = len(text)
     if textLength > segment_size:
@@ -78,15 +97,17 @@ def segmentize_text(text, segment_size):
             index += segment_size
     return text_segments
 
-def parse_sdgs_ascii_list(sdgs_ascii):
-    
+def parse_sdgs_ascii_list(sdgs_ascii:list):
+    # Parses a list of SDGs from ascii to int
+    # @param sdgs_ascii List of sdgs in ascii -> "[1,2,4]" = SDG1,2,4
+    # return sdgs List of sdgs in int -> [1,2,4]
     sdgs = []
     for sdgAscii in sdgs_ascii:
         tmp = [int(sdg) for sdg in sdgAscii[1:-1].split(',') if len(sdg) > 0]
         if len(tmp) > 0: sdgs.append(tmp)
     return sdgs
 
-def save_figure(fig:plt, path):
+def save_figure(fig:plt, path:str):
     if os.path.exists(path): 
             os.remove(path) # otherwise, old figures are not overwritten
     fig.savefig(path)     
@@ -108,7 +129,3 @@ def analyze_predict_real_sdgs(real_sdgs, predic_sdgs, path_out="", case_name="de
     save_figure(plt, path_out + case_name + ".png")
     if show: plt.show()
     
-
-# text = "goal 1: end poverty in all its forms everywhere. more than 700 million people, or 10% of the world population, still live in extreme poverty and is struggling to fulfil the most basic needs like health, education, and access to water and sanitation, to name a few. the majority of people living on less than $1.90 a day live in sub saharan africa. worldwide, the poverty rate in rural areas is 17.2 per cent more than three times higher than in urban areas. having a job does not guarantee a decent living. in fact, 8 per cent of employed workers and their families worldwide lived in extreme poverty in 2018. poverty affects children disproportionately. one out of five children live in extreme poverty. ensuring social protection for all children and other vulnerable groups is critical to reduce poverty. poverty has many dimensions, but its causes include unemployment, social exclusion, and high vulnerability of certain populations to disasters, diseases and other phenomena which prevent them from being productive."
-
-# print(len(tokenize_text(text, punctuation=True, stopwords=True)))

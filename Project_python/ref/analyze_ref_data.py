@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import warnings
 
 paths = conf.get_paths()
-# raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
+raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
 # raw_natureShort, sdgs_nature, index_natureAbstracts = data.get_nature_abstracts()
 # raw_natureExt, sdgs_natureAll, index_natureFull = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
 # raw_pathFinder, sdgs_pathFinder = data.get_sdgs_pathfinder(paths["ref"], min_words=200)
@@ -75,5 +75,5 @@ def analize_corpus(corpus, sdgs):
 
 # show_data(raw_orgFiles, sdgs_orgFiles, "training")
 #show_data(raw_orgFiles, sdgs_orgFiles, "SDGs-UN information")
-
-analize_corpus(corpus=raw_extraFiles, sdgs=sdgs_extra)
+print("## ORG Files: "); analize_corpus(corpus=raw_orgFiles, sdgs=sdgs_orgFiles)
+# print("## Manual Files: ");  analize_corpus(corpus=raw_extraFiles, sdgs=sdgs_extra)

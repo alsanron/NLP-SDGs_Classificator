@@ -7,6 +7,7 @@ import json
 import conf
 import tools
 
+
 def get_sdg_titles(refPath):
     # returns the title of each SDG as a dictionary, with key: SDGx, value = title.
     # for example: "SDG1":"No poverty"
@@ -216,7 +217,6 @@ def get_iGEM_files(ref_path, verbose=True):
     return [abstracts, extInformation]
                 
 
-    
 # paths = conf.get_paths()
 # abstracts, information = get_iGEM_files(ref_path=paths["ref"])
 # a= 2
