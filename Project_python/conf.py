@@ -1,5 +1,6 @@
 
 def get_paths():
+    # Returns the paths
     paths = dict()
     paths["ref"] = "ref/"
     paths["Abstracts"] = paths["ref"] + "Abstracts/"

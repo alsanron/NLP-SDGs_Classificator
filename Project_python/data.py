@@ -268,20 +268,34 @@ def update_datasets():
     with open(outPath + 'dataset.json', 'w') as outfile:
         json.dump(dc, outfile)
     
-def get_dataset():
-    # Gets the database where all the texts are stored
+def get_dataset(requires_update:bool=False, filter:list=[]):
+    # Gets the dataset where all the texts are stored
     # @return Dictionary with all the data: 
     # "standard" -> raw texts
     # "lem" -> lemmatized texts
     # "lem_stem" -> lemmatized + stemmed texts
     # "sdgs" -> associates sdgs to each text
-    # "identfier" -> source of each text
-    databasePath = "databases/database.json"
-    print("# Opening " + databasePath)
-    with open(databasePath, "r") as f:
+    # "identifier" -> source of each text. "org", "manual_extra", "nature_abstract", "nature_all"
+    if requires_update: update_datasets()
+    
+    datasetPath = "datasets/dataset.json"
+    print("# Opening " + datasetPath)
+    with open(datasetPath, "r") as f:
         json_dump = f.read()
         f.close()
-    database = json.loads(json_dump)
+        
+    dataset = json.loads(json_dump)
     
-    return database
+    if len(filter) > 0:
+        newDataset = dict(); keys = dataset.keys()
+        for key in keys: newDataset[key] = [] # empty initializations
+        
+        for id, index in zip(dataset["identifier"], range(len(dataset["identifier"]))):
+            if id in filter:
+                for key in keys: newDataset[key].append(dataset[key][index])
+        dataset = newDataset
+        
+    return dataset
+
 # update_datasets()
+# db = get_dataset()

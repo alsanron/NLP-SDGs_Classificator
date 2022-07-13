@@ -4,6 +4,7 @@ from string import punctuation
 import subprocess
 from turtle import color
 import difflib
+from typing import List
 from nltk.stem.wordnet  import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
 import gensim
@@ -13,6 +14,7 @@ import pickle
 import conf
 import numpy as np
 import matplotlib.pyplot as plt
+from difflib import SequenceMatcher
 
 def preprocess_files(folderPath):
     pdfs = [file for file in os.listdir(folderPath) if file.endswith(".pdf")]
@@ -162,3 +164,47 @@ def analyze_predict_real_sdgs(real_sdgs, predic_sdgs, path_out="", case_name="de
     save_figure(plt, path_out + case_name + ".png")
     if show: plt.show()
     
+
+def count_words(text:str):
+    return len(text.split(' '))
+
+def count_texts_per_sdg(sdgs:list[list[int]]):
+    # Gets the count per sdg
+    # @param sdgs List[List[int]]
+    # @return List[int(17)], Str (formatted)
+    countPerSdg = np.zeros(17)
+    for sdgG in sdgs:
+        for sdg in sdgG:
+            countPerSdg[sdg - 1] += 1
+    countPerSdgStr = ["SDG{}:{}".format(sdg, int(count)) for sdg, count in zip(range(1,18), countPerSdg)]
+    countPerSdgStr = " | ".join(countPerSdgStr)
+    
+    return countPerSdg, countPerSdgStr
+
+def count_meanwords_per_sdg(texts:list[str], sdgs:list[list[int]]):
+    meanWords = np.zeros(17); count = np.zeros(17)
+    for text, sdgG in zip(texts, sdgs):
+        nWords = count_words(text)
+        for sdg in sdgG: 
+            meanWords[sdg - 1] += nWords
+            count[sdg - 1] += 1
+    for ii in range(17): 
+        if count[ii] > 0: meanWords[ii] /= count[ii] # the mean
+        else: meanWords[ii] = 0
+    meanWordsStr = ["SDG{}:{}".format(sdg, int(count)) for sdg, count in zip(range(1,18), meanWords)]
+    meanWordsStr = " | ".join(meanWordsStr)
+    
+    return meanWords, meanWordsStr
+
+def search_for_repeated_texts(texts:list[str], ratio:float=0.8):
+    textsOut = texts.copy(); textsIn = texts.copy(); it=0
+    for text1 in textsOut:
+        it += 1
+        print("# Checked: {} out of {}".format(it, len(textsOut)))
+        
+        for text2, index in zip(textsIn, range(len(textsIn))):
+            similarityRatio = SequenceMatcher(text1, text2).ratio()
+            if similarityRatio > ratio:
+                print("# Similarity {:.2f} between: \r\n Text1: {} \r\n Text2{}".format(similarityRatio, text1, text2))
+        
+        textsIn.pop(0) # the first text can be removed...
