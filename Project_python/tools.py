@@ -3,7 +3,7 @@ import os
 from string import punctuation
 import subprocess
 from turtle import color
-import nltk
+import difflib
 from nltk.stem.wordnet  import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
 import gensim
@@ -14,6 +14,38 @@ import conf
 import numpy as np
 import matplotlib.pyplot as plt
 
+def preprocess_files(folderPath):
+    pdfs = [file for file in os.listdir(folderPath) if file.endswith(".pdf")]
+    for pdf in pdfs:
+        newPdf = standarize_file_name(pdf)
+        oldPath = folderPath + pdf
+        newPath = folderPath + newPdf
+        os.renames(oldPath, newPath)
+    # Converts the pdfs to txt
+    pdfs2txt(folderPath)
+    
+def check_dictionary_valid(filesDict):
+    # Checks if 2 files have a very close name. This generally avoids having to compare all texts
+    for file in filesDict.keys():
+        closestName = difflib.get_close_matches(file, filesDict.keys(),n=2,cutoff=0.8)
+        if len(closestName) > 1:
+            showStr = "File with name: {} close to {}, should the process continue? (Y/N): ".format(file, closestName[1:])
+            userInput = input(showStr)
+            userInput = userInput.lower()
+            if userInput == "y":
+                continue
+            else:
+                raise Exception("Process exited by user...")
+                     
+def standarize_file_name(file_name, n_iter=3):
+    # removes the rare caracters from the file name
+    symbols = [",", " ", "&", ":", "-","__","___","?","¿","$"]
+    newName = file_name.lower()
+    for iteration in range(0, n_iter):
+        for symbol in symbols:
+            newName = newName.replace(symbol, "_")
+
+    return newName
 
 def pdfs2txt(pdfPath:str): 
     # Converts all the PDFs located in the $pdfPath$ into txt format
@@ -68,7 +100,8 @@ def standarize_raw_text(text:str):
     # @warning It does not tokenize or apply any process for cleaning the text
     # @param text
     outText = text
-    outText = outText.replace("_", " ").replace("-", " ").replace("“", " ").replace("”", " ").replace("'", "")
+    outText = outText.lower()
+    outText = outText.replace("_", " ").replace("-", " ").replace("“", " ").replace("”", " ").replace("'", "").replace("’","").replace("–", " ")
     outText = gensim.parsing.strip_multiple_whitespaces(outText)
     return outText
     

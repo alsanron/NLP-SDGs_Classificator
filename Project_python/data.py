@@ -1,6 +1,7 @@
 # File that contains the functions for accesing the required data: training and validation
 
 import os
+from typing import Dict
 from numpy import empty
 import pandas as pd
 import json
@@ -15,7 +16,6 @@ def get_sdg_titles(refPath):
     sdgs_title = json.load(f)
     f.close()
     return sdgs_title
-
 
 def get_sdgs_seed_list(refPath):
     with open(refPath + "seed_list_sdgs.json", 'r') as f:
@@ -52,7 +52,7 @@ def get_nature_files(abstract=True, kw=False, intro=False, body=False, concl=Fal
         corpus.append(text)
         associatedSDGs.append(sdgs)
         indexes.append(index)
-    print("- {} nature files were found".format(len(corpus)))
+    print("# {} nature files were found".format(len(corpus)))
     return [corpus, associatedSDGs, indexes]
 
 def get_nature_abstracts():
@@ -71,7 +71,7 @@ def get_nature_abstracts():
             corpus.append(database[file]["abstract"])
             associatedSDGs.append(sdgs)
             indexes.append(index)
-    print("- {} nature abstracts were found".format(len(corpus)))
+    print("# {} nature abstracts were found".format(len(corpus)))
     return [corpus, associatedSDGs, indexes]
 
 def get_nature_abstracts_filtered():
@@ -103,7 +103,7 @@ def get_sdgs_org_files(refPath, sdg_query=-1):
             associatedSDGs.append(sdg)
                             
     nFiles = len(corpus)
-    print("- {} sdgs files were found".format(nFiles))    
+    print("# {} sdgs files were found".format(nFiles))    
     return [corpus, associatedSDGs]
 
 # DATASET: https://www.kaggle.com/datasets/xhlulu/medal-emnlp
@@ -158,7 +158,7 @@ def get_extra_manual_files(refPath, sdg_query=[], verbose=True):
         for file in os.listdir(path):
             filePath = path + file
             if not os.path.isfile(filePath): continue
-            f = open(filePath, 'r')
+            f = open(filePath, 'r', encoding='utf8')
             text = f.read()
             f.close()
             fileSDG = []
@@ -180,7 +180,6 @@ def get_extra_manual_files(refPath, sdg_query=[], verbose=True):
     if verbose: print("# {} manual files were found".format(nFiles))    
     return [corpus, associatedSDGs]
  
-
 def get_iGEM_files(ref_path, verbose=True):
     path = ref_path + "iGEM_2004_2021/"
     fieldsSeparator = ":::"
@@ -216,7 +215,57 @@ def get_iGEM_files(ref_path, verbose=True):
     
     return [abstracts, extInformation]
                 
-
-# paths = conf.get_paths()
-# abstracts, information = get_iGEM_files(ref_path=paths["ref"])
-# a= 2
+def update_datasets():
+    # Updates the datasets that can be used for training, validation or analysis
+    print("# Updating datasets...")
+    
+    paths = conf.get_paths()
+    raw_orgFiles, sdgs_orgFiles = get_sdgs_org_files(paths["SDGs_inf"])
+    raw_extraFiles, sdgs_extra = get_extra_manual_files(paths["ref"],
+                                                        sdg_query=[] # queries all the sdgs, not filter
+                                                        )
+    raw_natureShort, sdgs_nature, index_abstracts = get_nature_abstracts()
+    raw_natureExt, sdgs_natureAll, index_full = get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
+    
+    # 1. Clears all the texts, standarizing them
+    print("# 1. Clearing texts...")
+    corpus = raw_orgFiles + raw_extraFiles + raw_natureShort + raw_natureExt
+    sdgs = sdgs_orgFiles + sdgs_extra + sdgs_nature + sdgs_natureAll
+    identifiers = ["org" for ii in range(len(raw_orgFiles))] \
+                + ["manual_extra" for ii in range(len(raw_extraFiles))] \
+                + ["nature_abstract" for ii in range(len(raw_natureShort))] \
+                + ["nature_all" for ii in range(len(raw_natureExt))]
+    print("# Total number of texts in datasets: ", len(identifiers))
+    
+    # 2. Generates stem and lem datasets
+    print("# 2. Creating datasets...")
+    stand_texts = []; lem_texts = []; lem_stem_texts = []
+    for text in corpus:
+        standarized = tools.standarize_raw_text(text) # all the texts should be based on the standarized version
+        
+        stand_texts.append(standarized)
+        lem_texts.append(" ".join(tools.tokenize_text(standarized, min_word_length=3, punctuation=True, lemmatize=True, stem=False, stopwords=True, extended_stopwords=True)))
+        lem_stem_texts.append(" ".join(tools.tokenize_text(standarized, min_word_length=3, punctuation=True, lemmatize=True, stem=True, stopwords=True, extended_stopwords=True)))
+    
+    # 3. Stores the datasets
+    outPath = "datasets/"
+    print("# 3. Storing datasets in " + outPath + "...")
+    df = pd.DataFrame()
+    df["standard"] = stand_texts
+    df["lem"] = lem_texts
+    df["lem_stem"] = lem_stem_texts
+    df["sdgs"] = sdgs
+    df["identifier"] = identifiers
+    df.to_csv(outPath + "dataset.csv")
+    
+    dc = dict()
+    dc["standard"] = stand_texts
+    dc["lem"] = lem_texts
+    dc["lem_stem"] = lem_stem_texts
+    dc["sdgs"] = sdgs
+    dc["identifier"] = identifiers
+    
+    with open(outPath + 'dataset.json', 'w') as outfile:
+        json.dump(dc, outfile)
+    
+update_datasets()
