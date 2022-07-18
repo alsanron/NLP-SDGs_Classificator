@@ -89,5 +89,10 @@ def analyze_texts(texts:list[str], sdgs:list[list[int]], label:str="", show:bool
 #     analyze_texts(texts=dataset["standard"], sdgs=dataset["sdgs"], label=label, show=False)
     
 labels = ["org", "manual_extra"]
-dataset = data.get_dataset(filter=labels, requires_update=True)
+dataset = data.get_dataset(filter=labels, requires_update=False)
 analyze_texts(texts=dataset["standard"], sdgs=dataset["sdgs"], label="training", show=False)
+
+
+labels = ["nature_abstract"]
+dataset = data.get_dataset(filter=labels, requires_update=False)
+analyze_texts(texts=dataset["standard"], sdgs=dataset["sdgs"], label="validation", show=False)

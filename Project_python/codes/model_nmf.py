@@ -1,17 +1,15 @@
-# functions used for testing different model configurations
+from cmath import isnan
 from signal import valid_signals
 import tools
 import pandas as pd
 import numpy as np
-import data
 from sklearn.decomposition import NMF
 from sklearn.preprocessing import normalize
 from sklearn.feature_extraction.text import TfidfVectorizer
-import matplotlib.pyplot as plt
-import tools
 import warnings
 warnings.filterwarnings('ignore')
  
+# Class associated to the Non-Negative Matrix classifier.
 class NMF_classifier:
     paths=[]
     model=[]
@@ -23,34 +21,20 @@ class NMF_classifier:
     def __init__(self, paths, verbose=False):
         self.paths = paths
         self.verbose = verbose
-    
-    def load(self, n_topics):
-        self.model = tools.load_obj(self.paths["model"] + "model_nmf_{}topics.pickle".format(n_topics))
-        self.model.verbose = self.verbose
-        self.vectorizer = tools.load_obj(self.paths["model"] + "vect_nmf_{}topics.pickle".format(n_topics))
-         
-    def save(self):
-        nTopics = self.model.n_components
-        tools.save_obj(self.model, self.paths["model"] + "model_nmf_{}topics.pickle".format(nTopics))
-        tools.save_obj(self.vectorizer, self.paths["model"] + "vect_nmf_{}topics.pickle".format(nTopics))
             
-    def train(self, train_data, n_topics, ngram, min_df=1):
+    def train(self, train_data, n_topics, ngram, min_df=1, max_iter=2000, l1=0.0, alpha_w=0.0, alpha_h=0.0):
         self.train_data = train_data
         # the corpus should be preprocessed before
-        self.vectorizer = TfidfVectorizer(min_df=min_df, # They have to appear in at least x documents
-                                    encoding='utf-8',
-                                    ngram_range=ngram, # min-max
-                                    )
+        self.vectorizer = TfidfVectorizer(min_df=min_df, encoding='utf-8', ngram_range=ngram)                                   
         vectorized_data = self.vectorizer.fit_transform(train_data[0])
-        self.model = NMF(n_components=n_topics, random_state=5, verbose=False, max_iter=2000)
+        self.model = NMF(n_components=n_topics, random_state=5, verbose=False, max_iter=max_iter,
+                         alpha_W=alpha_w, alpha_H=alpha_h, l1_ratio=l1)
         self.model.fit(vectorized_data) 
         
     def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel="", normalize=True, expand_factor=1.0):
         rawSDG = []; rawSDGseg = []
-        predictedSDGs = []
-        realSDGs = []
-        valids = []
-        validsAny = []
+        predictedSDGs = []; realSDGs = []
+        valids = []; validsAny = []
         texts = []
         statsGlobal = []
         countPerSDG = np.zeros(17)
@@ -129,7 +113,6 @@ class NMF_classifier:
         for text, labeled_sdgs in zip(self.train_data[0], self.train_data[1]):
             topicScores = self.infer_text(text)
             for topicIndex, score in zip(range(nTopics), topicScores):
-                # if subScore < meanSub: continue
                 for sdg in labeled_sdgs:
                     tmp = np.zeros(17)
                     tmp[sdg - 1] = 1
@@ -142,7 +125,8 @@ class NMF_classifier:
                 for nn, delete, index in zip(norm_topics, topics_to_delete, range(len(norm_topics))):
                     if delete: 
                         norm_topics[index] = 0.0
-                norm_topics = norm_topics / sum(norm_topics)
+                ss = sum(norm_topics) 
+                if ss > 0: norm_topics = norm_topics / ss
                 self.topics_association[ii] = norm_topics
                 
                 sum_per_topic += self.topics_association[ii]
@@ -166,7 +150,9 @@ class NMF_classifier:
             df = pd.DataFrame()
             topic_words_ascii = []
             for ii in range(nTopics):
-                topic_words_ascii.append(self.get_topic_terms(ii, topn=n_top_words))
+                terms, scores = self.get_topic_terms(ii, topn=n_top_words)
+                scoreTerm = ["{:.3f}:{}".format(sc, tm) for sc, tm in zip(scores, terms)]
+                topic_words_ascii.append(scoreTerm)
             
             # all the top SDGs with an score > 0.1 are considered for that topic
             for topicIndex in range(nTopics):
@@ -186,13 +172,9 @@ class NMF_classifier:
         query_words_vect = self.vectorizer.transform([text])
         topicFeats = self.model.transform(query_words_vect)[0]
         
-        for word in text.split(' '):
-            query_words_vect = self.vectorizer.transform([word])
-            topicFeats = self.model.transform(query_words_vect)[0]
-        
         sdgs_score = np.zeros(17)
-        for topicScore in topicFeats:
-            sdgs_score += topicScore * self.topics_association[list(topicFeats).index(topicScore)] 
+        for topicScore, topicIndex in zip(topicFeats, range(len(topicFeats))):
+            sdgs_score += topicScore * self.topics_association[topicIndex] 
         sdgs_score *= expand_factor
         
         if filter_low:
@@ -214,9 +196,10 @@ class NMF_classifier:
         return topicScores
       
     def get_topic_terms(self, topic, topn):
-        # Returns the n_top_words for each of the n_topics with which a model has been trained
+        # Returns the n_top_words for each of the n_topics for the topic that is queried
         feat_names = self.vectorizer.get_feature_names_out()
         words_ids = self.model.components_[topic].argsort()[:-topn - 1:-1]
         words = [feat_names[key] for key in words_ids]
-        return words
+        scores = [self.model.components_[topic][key] for key in words_ids]
+        return words, scores
       

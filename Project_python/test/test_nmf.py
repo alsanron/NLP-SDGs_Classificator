@@ -1,90 +1,114 @@
+# Configures the project paths: they can be launched from any code
+import sys, os
+sys.path.append(os.path.realpath('.'))
+import conf
+conf.import_paths()
+
+# CONFIGURATION FLAGS
+flag_optimize = 1
+
+# Real imports required by the file for work properly
+import model_nmf
 from logging import error
 import data
 import conf
 import pandas as pd
 import tools
-import model_nmf
 
-def test_text_preprocess(texts, n_texts=20):
-
-    if len(texts) < n_texts: error("Hey, check input texts")
-    outPath = "test/"
-    texts = texts[0:(n_texts - 1)]
-    
-    print("#### No lemmatize, no stem")
-    with open(outPath + "text_preprocess.txt", "w", encoding="utf-8") as f:
-        for text in texts:
-            f.write("###################################### \r")
-            f.write("##### ORIGINAL: \r" + text + "\r\r")
-            f.write("##### NO_LEM_NO_STEM: \r" + " ".join(tools.tokenize_text(text, lemmatize=False, stem=False)) + "\r\r")
-            f.write("##### LEM_NO_STEM: \r" + " ".join(tools.tokenize_text(text, lemmatize=True, stem=False)) + "\r\r")
-            f.write("##### NO_LEM_STEM: \r" + " ".join(tools.tokenize_text(text, lemmatize=False, stem=True)) + "\r\r")
-            f.write("##### LEM_STEM: \r" + " ".join(tools.tokenize_text(text, lemmatize=True, stem=True)) + "\r\r")
-        f.close()
-    
-#%% Data loading
+# Loads all the datasets
 paths = conf.get_paths()
+ds_train = data.get_dataset(requires_update=False, filter=["org", "manual_extra"])
+ds_valid_short = data.get_dataset(requires_update=False, filter=["nature_abstract"])
+ds_valid_long = data.get_dataset(requires_update=False, filter=["nature_all"])
 
-# PREPROCESS THE INPUT TEXTS
-print('######## LOADING TEXTS...')
-raw_orgFiles, sdgs_orgFiles = data.get_sdgs_org_files(paths["SDGs_inf"])
-raw_natureShort, sdgs_nature, index_abstracts = data.get_nature_abstracts()
-# raw_natureExt, sdgs_natureAll, index_full = data.get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-raw_extraFiles, sdgs_extra = data.get_extra_manual_files(paths["ref"], sdg_query=[1,10])
+path_out = "out/NMF/"
 
-topWords = 50
-def prepare_texts(corpus):
-    newCorpus = []
-    for text in corpus:
-        newCorpus.append(" ".join(tools.tokenize_text(text, lemmatize=True, stem=False ,extended_stopwords=True, punctuation=True)))
-    return newCorpus
+if flag_optimize:
+    optimData = pd.read_excel(paths["ref"] + "optimization_nmf.xlsx")
+    nTopics = optimData["num_topics"]
+    nIterations = optimData["iterations"]
+    nature = optimData["nature"]
+    stemming = optimData["stemming"]
+    score_threshold = optimData["score_threshold"]
+    l1 = optimData["l1"]
+    alpha_w = optimData["alpha_w"]
+    alpha_h = optimData["alpha_h"]
+    
+    res_any = []; res_all = []
+    
+    for ii in range(len(nTopics)):
+        print("# Optimizing case: {}, nTopic: {}, nIterations: {}, nature: {}, Stemming: {}, L1: {:.2f}, Alphaw: :{:.2f}, AlphaH: :{:.2f}".format(ii, nTopics[ii], nIterations[ii], nature[ii], stemming[ii], l1[ii], alpha_w[ii], alpha_h[ii]))
+    
+        if stemming[ii]: type_texts = "lem_stem"
+        else: type_texts = "lem"
+            
+        # all text should have been processed in the same way
+        orgFiles = ds_train[type_texts]; sdgs_org = ds_train["sdgs"]
+        natureShort = ds_valid_short[type_texts]; sdgs_natureShort = ds_valid_short["sdgs"]
+        natureLong = ds_valid_long[type_texts]; sdgs_natureLong = ds_valid_long["sdgs"]
+
+        if nature[ii]: trainData = [orgFiles + natureShort, sdgs_org + sdgs_natureShort]
+        else: trainData = [orgFiles, sdgs_org]
         
-# trainFiles = prepare_texts(raw_trainFiles)
-orgFiles = prepare_texts(raw_orgFiles)
-natureShort = prepare_texts(raw_natureShort)
-# natureExt = prepare_texts(raw_natureExt)
-extraFiles = prepare_texts(raw_extraFiles)
+        try: 
+            print('# Training model...')
+            nmf = model_nmf.NMF_classifier(paths, verbose=True)
 
-# trainData = [orgFiles + extraFiles, sdgs_orgFiles + sdgs_extra]
-trainData = [orgFiles + extraFiles + natureShort, sdgs_orgFiles + sdgs_extra + sdgs_nature]
+            nmf.train(train_data=trainData, n_topics=nTopics[ii], ngram=(1,3), min_df=2, max_iter=nIterations[ii],
+                    l1=l1[ii], alpha_w=alpha_w[ii], alpha_h=alpha_h[ii])
+            nmf.map_model_topics_to_sdgs(n_top_words=50, normalize=True, path_csv=path_out + "topics_map{}.csv".format(ii))
 
-# store the training files in csv
-df = pd.DataFrame()
-df["files"] = trainData[0]
-df.to_csv("out/NMF/training_texts.csv")
+            tools.save_obj(nmf, paths["model"] + "nmf{}.pickle".format(ii))
 
-# TRAINING SECTION
-print('######## TRAINING MODELS...')
-nmf = model_nmf.NMF_classifier(paths, verbose=True)
+            print('# Testing model...')
+            filter = True; normalize = False
 
-nmf.train(train_data=trainData, n_topics=17, ngram=(1,3), min_df=2)
-nmf.save()
-# nmf.load(n_topics=17)
-nmf.train_data = trainData
-nmf.map_model_topics_to_sdgs(n_top_words=topWords, normalize=True, path_csv="out/NMF/topics_nmf_global_bigram.csv")
+            [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score_threshold[ii], segmentize=-1, filter_low=filter, normalize=normalize,
+                        path_to_excel=(path_out + "test_nmf_training{}.xlsx".format(ii)))
+            
+            expandFactor = 4
+            [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score_threshold[ii],
+                        segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS{}.xlsx".format(ii)),
+                        normalize=normalize, filter_low=filter, expand_factor=expandFactor)
+        except:
+            print('# Aborting execution of iteration{}'.format(ii))
+            perc_valid_any = -1; perc_valid_global = -1
+        
+        res_any.append(perc_valid_any); res_all.append(perc_valid_global)
+        
+    outData = optimData
+    outData["any"] = res_any
+    outData["all"] = res_all
+    outData.to_excel(path_out + "optimization{}.xlsx".format(ii))
+else:
+    print('# Using default-user configuration...')
+    
+    type_texts = "lem"
+    nTopics = 20; maxIter = 1000; l1 = 0.0; alpha_w = 0.0; alpha_h = 0.0
+    score = 0.1
+    
+    orgFiles = ds_train[type_texts]; sdgs_org = ds_train["sdgs"]
+    natureShort = ds_valid_short[type_texts]; sdgs_natureShort = ds_valid_short["sdgs"]
+    natureLong = ds_valid_long[type_texts]; sdgs_natureLong = ds_valid_long["sdgs"]
 
-tools.save_obj(nmf, paths["model"] + "nmf.pickle")
+    trainData = [orgFiles, sdgs_org]
+        
+    print('# Training model...')
+    nmf = model_nmf.NMF_classifier(paths, verbose=True)
 
-# TESTING SECTION
-print('######## TESTING MODELS...')
-filter = True; normalize = False
+    nmf.train(train_data=trainData, n_topics=nTopics, ngram=(1,3), min_df=2, max_iter=maxIter,
+            l1=l1, alpha_w=alpha_w, alpha_h=alpha_h)
+    nmf.map_model_topics_to_sdgs(n_top_words=50, normalize=True, path_csv=path_out + "topics_map.csv")
 
-[rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=0.2,
-               segmentize=-1, filter_low=filter, normalize=normalize,
-               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_training_files.xlsx")
-               )
-expandFactor = 1 / maxSDG
-expandFactor = 4
-print('Expand factor: {:.2f}'.format(expandFactor))
+    tools.save_obj(nmf, paths["model"] + "nmf.pickle")
 
-nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_nature, score_threshold=0.1,
-               segmentize=-1, 
-               path_to_excel=(paths["out"] + "NMF/" + "test_nmf_abstracts.xlsx"),
-               normalize=normalize, filter_low=filter, expand_factor=expandFactor
-               )
+    print('# Testing model...')
+    filter = True; normalize = False; expandFactor = 4.0
+    
+    [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score, segmentize=-1, filter_low=filter, normalize=normalize,
+                path_to_excel=(path_out + "test_nmf_training.xlsx"), expand_factor=expandFactor)
 
-# nmf.test_model(corpus=natureExt, associated_SDGs=sdgs_natureAll, score_threshold=0.1,
-#                segmentize=-1, filter_low=filter, normalize=normalize, expand_factor=expandFactor,
-#                path_to_excel=(paths["out"] + "NMF/" + "test_nmf_full.xlsx")
-#                )
+    [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score,
+                segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS.xlsx"),
+                normalize=normalize, filter_low=filter, expand_factor=expandFactor)
 
