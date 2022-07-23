@@ -5,7 +5,7 @@ import conf
 conf.import_paths()
 
 # CONFIGURATION FLAGS
-flag_optimize = 1
+flag_optimize = 0
 
 # Real imports required by the file for work properly
 import model_nmf
@@ -63,13 +63,15 @@ if flag_optimize:
             print('# Testing model...')
             filter = True; normalize = False
 
-            [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score_threshold[ii], segmentize=-1, filter_low=filter, normalize=normalize,
+            [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score_threshold[ii], segmentize=-1, filter_low=filter, normalize=normalize,
                         path_to_excel=(path_out + "test_nmf_training{}.xlsx".format(ii)))
+            tools.plot_ok_vs_nok_SDGsidentified(trainData[1], pred_sdgs, path_out + "sdgs_train{}.png".format(ii))
             
             expandFactor = 4
-            [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score_threshold[ii],
+            [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score_threshold[ii],
                         segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS{}.xlsx".format(ii)),
                         normalize=normalize, filter_low=filter, expand_factor=expandFactor)
+            tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test{}.png".format(ii))
         except:
             print('# Aborting execution of iteration{}'.format(ii))
             perc_valid_any = -1; perc_valid_global = -1
@@ -98,6 +100,7 @@ else:
 
     nmf.train(train_data=trainData, n_topics=nTopics, ngram=(1,3), min_df=2, max_iter=maxIter,
             l1=l1, alpha_w=alpha_w, alpha_h=alpha_h)
+    nmf.print_stopwords(path_out + "stopwords.csv")
     nmf.map_model_topics_to_sdgs(n_top_words=50, normalize=True, path_csv=path_out + "topics_map.csv")
 
     tools.save_obj(nmf, paths["model"] + "nmf.pickle")
@@ -105,10 +108,12 @@ else:
     print('# Testing model...')
     filter = True; normalize = False; expandFactor = 4.0
     
-    [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score, segmentize=-1, filter_low=filter, normalize=normalize,
+    [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score, segmentize=-1, filter_low=filter, normalize=normalize,
                 path_to_excel=(path_out + "test_nmf_training.xlsx"), expand_factor=expandFactor)
-
-    [rawSDG, perc_valid_global, perc_valid_any, maxSDG] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score,
+    tools.plot_ok_vs_nok_SDGsidentified(trainData[1], pred_sdgs, path_out + "sdgs_train.png")
+    
+    [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score,
                 segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS.xlsx"),
                 normalize=normalize, filter_low=filter, expand_factor=expandFactor)
+    tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test.png")
 

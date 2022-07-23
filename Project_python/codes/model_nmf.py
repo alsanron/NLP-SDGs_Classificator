@@ -31,8 +31,15 @@ class NMF_classifier:
                          alpha_W=alpha_w, alpha_H=alpha_h, l1_ratio=l1)
         self.model.fit(vectorized_data) 
         
+    def print_stopwords(self, path_csv=""):
+        stopwords = list(self.vectorizer.stop_words_)
+        df = pd.DataFrame()
+        df["stopwords"] = stopwords
+        if len(path_csv) > 4:
+            df.to_csv(path_csv)   
+        
     def test_model(self, corpus, associated_SDGs, score_threshold=0.2, segmentize=-1, filter_low=False, path_to_plot="", path_to_excel="", normalize=True, expand_factor=1.0):
-        rawSDG = []; rawSDGseg = []
+        rawSDG = []; rawSDGseg = []; pred_sdgs = []
         predictedSDGs = []; realSDGs = []
         valids = []; validsAny = []
         texts = []
@@ -84,6 +91,7 @@ class NMF_classifier:
             texts.append(text)
             valids.append(valid)
             validsAny.append(validSingle)
+            pred_sdgs.append(predic_sdgs)
             
         oks = [ok for ok in valids if ok == True]
         oksSingle = [ok for ok in validsAny if ok == True]
@@ -103,7 +111,7 @@ class NMF_classifier:
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [rawSDG, perc_valid_global, perc_valid_any, maxSDG]
+        return [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs]
             
     def map_model_topics_to_sdgs(self, n_top_words, normalize=True, path_csv=""):
         # Maps each new topic of the general NMF model to an specific SDG obtained from training 17 models
@@ -140,12 +148,12 @@ class NMF_classifier:
         if len(path_csv) > 4:
             # Then the mapping result is stored in a csv
             dfMap = pd.DataFrame()
-            rows = []
             for ii in range(nTopics):
-                listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[ii])]
-                rows.append('|'.join(listAscii))
-            dfMap["topics_association_map"] = rows
-            dfMap.to_excel(self.paths["out"] + "NMF/" + "topics_map.xlsx")
+                listAscii = ["{:.2f}".format(sdg) for sdg in self.topics_association[ii]]
+                dfMap["topic{}".format(ii)] = listAscii
+            dfMap = dfMap.transpose()
+            dfMap.columns = ["SDG{}".format(ii) for ii in range(1,18)]
+            dfMap.to_csv(self.paths["out"] + "NMF/" + "association_matrix.csv")
             
             df = pd.DataFrame()
             topic_words_ascii = []

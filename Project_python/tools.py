@@ -208,3 +208,30 @@ def search_for_repeated_texts(texts:list[str], ratio:float=0.8):
                 print("# Similarity {:.2f} between: \r\n Text1: {} \r\n Text2{}".format(similarityRatio, text1, text2))
         
         textsIn.pop(0) # the first text can be removed...
+        
+def get_ok_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified:list[list[int]]):
+    ok = np.zeros(17); nok = np.zeros(17)
+    for ii in range(len(sdgs_labelled)):
+        for sdg in sdgs_labelled[ii]:
+            if sdg in sdgs_identified[ii]: ok[sdg - 1] += 1
+            else: nok[sdg - 1] += 1
+    return ok, nok
+        
+def plot_ok_vs_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified:list[list[int]], path_out:str="", show:bool=False):
+    ok, nok = get_ok_nok_SDGsidentified(sdgs_labelled, sdgs_identified)
+    
+    xlabel = [ii for ii in range(1, 18)]
+    
+    plt.figure(figsize=(8, 8))
+    for xx in xlabel:
+        plt.bar(xx, ok[xx - 1] + nok[xx - 1], width=0.3, alpha=0.5, color='green',)
+        plt.bar(xx, ok[xx - 1]              , width=0.3, alpha=1.0, color='green')
+        
+    plt.xticks(xlabel)
+    plt.xlabel('SDG')
+    plt.ylabel("Number of texts")
+    # plt.ylim(top=0.5)
+    # plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
+    plt.legend(['Not identified', 'Identified'])
+    if len(path_out) > 4: plt.savefig(path_out)
+    if show: plt.show()
