@@ -1,4 +1,3 @@
-# functions used for testing different model configurations
 from signal import valid_signals
 import tools
 import pandas as pd
@@ -9,8 +8,8 @@ from sklearn.preprocessing import normalize
 import tools
 import warnings
 warnings.filterwarnings('ignore')
- 
     
+# Class associated to the Latent-Dirichlet Allocation model
 class LDA_classifier(LdaModel):
     paths=[]
     topics_association=[]
@@ -22,12 +21,6 @@ class LDA_classifier(LdaModel):
         self.paths = paths
         self.dict = dict
         self.verbose = verbose
- 
-    def save_model(self):
-        self.save(self.paths["model"] + "lda")
-        
-    def load_model():
-        return LDA_classifier.load(conf.get_paths()["model"] + "lda")
          
     def test_model(self, corpus, sdgs, path_to_plot="", path_to_excel="", only_bad=False, score_threshold=3.0, only_positive=False,     segmentize=-1, filter_low=False, expand_factor=1.0, normalize=True):
         rawSDG = []; rawSDGseg = []
@@ -37,6 +30,7 @@ class LDA_classifier(LdaModel):
         validsAny = []
         texts = []
         statsGlobal = []
+        pred = []
         countPerSDG = np.zeros(17)
         countWellPredictionsPerSDG = np.zeros(17)
         maxSDG = 0.0
@@ -86,6 +80,7 @@ class LDA_classifier(LdaModel):
                 predictedSDGs.append(predic_sdgs)
                 realSDGs.append(labeled_sdgs)
                 texts.append(text)
+                pred.append(predic_sdgs)
             valids.append(valid)
             validsAny.append(validSingle)
             
@@ -107,7 +102,7 @@ class LDA_classifier(LdaModel):
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [rawSDG, perc_valid_global, perc_valid_any, maxSDG]
+        return [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred]
 
     def print_summary(self, top_words, path_csv=""):
         nTopics = len(self.get_topics())
@@ -168,6 +163,7 @@ class LDA_classifier(LdaModel):
         if verbose:
             print('GLOBAL: ' + '|'.join(listAscii))
          
+        listSDGsOut =  '|'.join(listAscii)
         if len(path_csv) > 4:
             dfMap = pd.DataFrame()
             rows = []
@@ -206,7 +202,7 @@ class LDA_classifier(LdaModel):
 
             df.to_csv(path_csv)
                       
-        return [sum_per_topic, listAscii]
+        return [sum_per_topic, listSDGsOut]
             
     def map_text_to_sdgs(self, text, min_threshold=0, only_positive=True, filter_low=True, normalize=True, expand_factor=1.0):
         if isinstance(text, str): text = text.split(' ')

@@ -72,6 +72,7 @@ if flag_optimize:
                         segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS{}.xlsx".format(ii)),
                         normalize=normalize, filter_low=filter, expand_factor=expandFactor)
             tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test{}.png".format(ii))
+        
         except:
             print('# Aborting execution of iteration{}'.format(ii))
             perc_valid_any = -1; perc_valid_global = -1
