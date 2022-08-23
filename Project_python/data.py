@@ -1,5 +1,7 @@
 # File that contains the functions for accesing the required data: training and validation
 
+from cmath import isnan
+# from curses import raw
 import os
 from typing import Dict
 from numpy import empty
@@ -214,7 +216,40 @@ def get_iGEM_files(ref_path, verbose=True):
             print('# Revise: ' + file)       
     
     return [abstracts, extInformation]
-                
+
+def get_aero_files(ref_path:str, verbose:bool=True) -> pd.DataFrame:  
+    path = ref_path + "Aero/"
+
+    authors = []; titles = []; years = []; citations = []; links = []; countries = []; abstracts = []; keywords = []
+    for csv_name in os.listdir(path):
+        csv = pd.read_csv(path + csv_name)
+        authors += list(csv["Authors"])
+        titles += list(csv["Title"])
+        years += list(csv["Year"])
+        citations += list(csv["Cited by"])
+        links += list(csv["Link"])
+
+        def extract_country(affiliation:str) -> str:
+            if not isinstance(affiliation, str): return "" # to protect
+            ind = affiliation.find(";")
+            if not ind == -1: affiliation = affiliation[0:ind]
+            country = affiliation.split(',')[-1]
+
+            if verbose: print('Affiliation: {} -> Country: {}'.format(affiliation, country))
+            return country
+
+        for affiliation in list(csv["Affiliations"]):
+            country = extract_country(affiliation)
+            countries.append(country)
+
+        abstracts += list(csv["Abstract"])
+        keywords += list(csv["Index Keywords"])
+
+    df = pd.DataFrame()
+    df["authors"] = authors; df["titles"] = titles; df["years"] = years; df["citations"] = citations
+    df["links"] = links; df["countries"] = countries; df["abstracts"] = abstracts; df["keywords"] = keywords
+    return df
+
 def update_datasets():
     # Updates the datasets that can be used for training, validation or analysis
     print("# Updating datasets...")
@@ -226,15 +261,25 @@ def update_datasets():
                                                         )
     raw_natureShort, sdgs_nature, index_abstracts = get_nature_abstracts()
     raw_natureExt, sdgs_natureAll, index_full = get_nature_files(abstract=True, kw=True, intro=True, body=True, concl=True)
-    
+
+    df_aero = get_aero_files(ref_path=paths["test"], verbose=False)
+    raw_aero = list(df_aero["abstracts"])
+
     # 1. Clears all the texts, standarizing them
     print("# 1. Clearing texts...")
     corpus = raw_orgFiles + raw_extraFiles + raw_natureShort + raw_natureExt
-    sdgs = sdgs_orgFiles + sdgs_extra + sdgs_nature + sdgs_natureAll
+    nFiles = len(corpus); nFilesAero = len(raw_aero)
+    corpus += raw_aero
+    sdgs = sdgs_orgFiles + sdgs_extra + sdgs_nature + sdgs_natureAll + [[] for ii in range(nFilesAero)]
     identifiers = ["org" for ii in range(len(raw_orgFiles))] \
                 + ["manual_extra" for ii in range(len(raw_extraFiles))] \
                 + ["nature_abstract" for ii in range(len(raw_natureShort))] \
-                + ["nature_all" for ii in range(len(raw_natureExt))]
+                + ["nature_all" for ii in range(len(raw_natureExt))] \
+                + ["aero" for ii in range(nFilesAero)]
+    years = [-1 for ii in range(nFiles)] + list(df_aero["years"])
+    citations = [-1 for ii in range(nFiles)] + list(df_aero["citations"])
+    countries = ["" for ii in range(nFiles)] + list(df_aero["countries"])
+    keywords = ["" for ii in range(nFiles)] + list(df_aero["keywords"])
     print("# Total number of texts in datasets: ", len(identifiers))
     
     # 2. Generates stem and lem datasets
@@ -246,7 +291,7 @@ def update_datasets():
         stand_texts.append(standarized)
         lem_texts.append(" ".join(tools.tokenize_text(standarized, min_word_length=3, punctuation=True, lemmatize=True, stem=False, stopwords=True, extended_stopwords=True)))
         lem_stem_texts.append(" ".join(tools.tokenize_text(standarized, min_word_length=3, punctuation=True, lemmatize=True, stem=True, stopwords=True, extended_stopwords=True)))
-    
+
     # 3. Stores the datasets
     outPath = "datasets/"
     print("# 3. Storing datasets in " + outPath + "...")
@@ -256,6 +301,11 @@ def update_datasets():
     df["lem_stem"] = lem_stem_texts
     df["sdgs"] = sdgs
     df["identifier"] = identifiers
+    df["years"] = years
+    df["citations"] = citations
+    df["countries"] = countries
+    df["keywords"] = keywords
+
     df.to_csv(outPath + "dataset.csv")
     
     dc = dict()
@@ -264,6 +314,10 @@ def update_datasets():
     dc["lem_stem"] = lem_stem_texts
     dc["sdgs"] = sdgs
     dc["identifier"] = identifiers
+    dc["years"] = years
+    dc["citations"] = citations
+    dc["countries"] = countries
+    dc["keywords"] = keywords
     
     with open(outPath + 'dataset.json', 'w') as outfile:
         json.dump(dc, outfile)
@@ -297,5 +351,5 @@ def get_dataset(requires_update:bool=False, filter:list=[]):
         
     return dataset
 
-# update_datasets()
-# db = get_dataset()
+update_datasets()
+db = get_dataset()

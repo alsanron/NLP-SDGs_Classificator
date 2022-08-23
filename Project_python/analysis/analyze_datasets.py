@@ -11,10 +11,12 @@ import os
 
 pathOut = "analysis/out/"
 
+
 def get_nfiles_per_wordscount(texts:list[str], label:str="", show:bool=False):
     indexes = []; sdgs = []; 
     words_per_text = [tools.count_words(text) for text in texts]
 
+    def_fontSize = 24 # default font size used for the plots
     ranges = ['-100', '100-200', '200-300', '300-400', '400+']
     count_per_range = np.zeros(5)
     for nWord in words_per_text:
@@ -35,8 +37,10 @@ def get_nfiles_per_wordscount(texts:list[str], label:str="", show:bool=False):
         print('# Proceeding to plot')
         plt.figure(figsize=(12, 8))
         plt.bar(ranges, count_per_range)
-        plt.xlabel('Number of words')
-        plt.ylabel("Number of texts: {}".format(label))
+        plt.xlabel('Number of words', fontsize=def_fontSize)
+        plt.ylabel("Number of texts: {}".format(label), fontsize=def_fontSize)
+        plt.tick_params(axis='x', labelsize=def_fontSize)
+        plt.tick_params(axis='y', labelsize=def_fontSize)
         figPath = pathOut + "nfiles_wordrange_" + label + ".png"
         if os.path.exists(figPath): 
             os.remove(figPath) # otherwise, old figures are not overwritten
@@ -52,13 +56,15 @@ def analyze_texts(texts:list[str], sdgs:list[list[int]], label:str="", show:bool
     
     countPerSdg, countPerSdgStr = tools.count_texts_per_sdg(sdgs)
     meanWords, meanWordsStr = tools.count_meanwords_per_sdg(texts, sdgs)
-    
+    def_fontSize = 30 # default font size used for the plots
     if len(label) > 0:
         plt.figure(figsize=(12, 8))
         sdgs = ["{}".format(ii) for ii in range(1,18)]
         plt.bar(sdgs, countPerSdg)
-        plt.xlabel('SDG')
-        plt.ylabel("Number of texts: {}".format(label))
+        plt.xlabel('SDG', fontsize=def_fontSize)
+        plt.ylabel("Number of texts: {}".format(label), fontsize=def_fontSize)
+        plt.tick_params(axis='x', labelsize=def_fontSize)
+        plt.tick_params(axis='y', labelsize=def_fontSize)
         figPath = pathOut + "ntexts_per_sdg_" + label + ".png"
         if os.path.exists(figPath): 
             os.remove(figPath) # otherwise, old figures are not overwritten
@@ -68,8 +74,10 @@ def analyze_texts(texts:list[str], sdgs:list[list[int]], label:str="", show:bool
         
         plt.figure(figsize=(12, 8))
         plt.bar(sdgs, meanWords)
-        plt.xlabel('SDG')
-        plt.ylabel("Mean number of words: {}".format(label))
+        plt.xlabel('SDG', fontsize=def_fontSize)
+        plt.ylabel("Mean number of words: {}".format(label), fontsize=def_fontSize)
+        plt.tick_params(axis='x', labelsize=def_fontSize)
+        plt.tick_params(axis='y', labelsize=def_fontSize)
         figPath = pathOut + "meanwords_per_sdg_" + label + ".png"
         if os.path.exists(figPath): 
             os.remove(figPath) # otherwise, old figures are not overwritten
