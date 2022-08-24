@@ -5,6 +5,7 @@ sys.path.insert(1, '../Project_python/')
 import data
 import tools
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import warnings
 import os
@@ -84,17 +85,82 @@ def analyze_texts(texts:list[str], sdgs:list[list[int]], label:str="", show:bool
         plt.savefig(figPath)
         
         if show: plt.show()
-    
 
-# CHECK FOR REPEATED TEXTS
-# dataset = data.get_dataset()
-# tools.search_for_repeated_texts(dataset["standard"], ratio=0.8) 
 
-# labels = ["org", "manual_extra", "nature_abstract", "nature_all"]
-# labels = ["org", "manual_extra"]
-# for label in labels:
-#     dataset = data.get_dataset(filter=[label])
-#     analyze_texts(texts=dataset["standard"], sdgs=dataset["sdgs"], label=label, show=False)
+def analyze_aero_texts(dataset:pd.DataFrame):
+    abstracts = list(dataset["standard"]); years = list(dataset["years"]); 
+    citations = list(dataset["citations"]); countries = list(dataset["countries"])
+
+    def get_nfiles_per_years(yearsList:list[float]):
+        def_fontSize = 24
+        plt.figure(figsize=(12, 8))
+        years = []; countPerYear = []
+        for year in yearsList:
+            if year not in years: 
+                # a new year was found. it is added to the list and count initalize to 1
+                years.append(year)
+                countPerYear.append(1) 
+            else:
+                countPerYear[years.index(year)] += 1
+
+        plt.bar(years, countPerYear)
+        plt.xlabel('Year', fontsize=def_fontSize)
+        plt.ylabel("Number of papers", fontsize=def_fontSize)
+        plt.tick_params(axis='x', labelsize=def_fontSize)
+        plt.tick_params(axis='y', labelsize=def_fontSize)
+        figPath = pathOut + "papers_per_year" + ".png"
+        if os.path.exists(figPath): 
+            os.remove(figPath) # otherwise, old figures are not overwritten
+        plt.savefig(figPath)
+
+    def get_ncitations_per_years(yearsList:list[float], nCitationsList:list[int]):
+        def_fontSize = 24
+        plt.figure(figsize=(12, 8))
+        years = []; countPerYear = []
+        for year, nCitations in zip(yearsList, nCitationsList):
+            if year not in years: 
+                years.append(year)
+                countPerYear.append(nCitations) 
+            else:
+                countPerYear[years.index(year)] += nCitations
+
+        plt.bar(years, countPerYear)
+        plt.xlabel('Year', fontsize=def_fontSize)
+        plt.ylabel("Number of citations", fontsize=def_fontSize)
+        plt.tick_params(axis='x', labelsize=def_fontSize)
+        plt.tick_params(axis='y', labelsize=def_fontSize)
+        figPath = pathOut + "citations_per_year" + ".png"
+        if os.path.exists(figPath): 
+            os.remove(figPath) # otherwise, old figures are not overwritten
+        plt.savefig(figPath)
+
+    def print_countries(countriesList:list[str]):
+        countries = []
+        for country in countriesList:
+            if country not in countries: countries.append(country)
+        print(','.join(countries))
+
+    get_nfiles_per_wordscount(abstracts, "aero", show=False) # the plot of files per words range
+    get_nfiles_per_years(years)
+    get_ncitations_per_years(years, citations)
+    print_countries(countries)
+
+
+def plot_npublications_peryear():
+    def_fontSize = 18
+    nPublications = [10, 12, 14, 15, 20, 24, 27, 29, 33, 33, 34, 35, 36, 35, 41, 46, 55, 66, 91, 124]
+    years = range(2000, 2020)
+    plt.figure(figsize=(12, 8))
+    plt.bar(years, nPublications)
+    plt.xlabel('Year', fontsize=def_fontSize)
+    plt.ylabel("Number of publications (in thousands)", fontsize=def_fontSize)
+    plt.xticks([2000, 2005, 2010, 2015, 2019], ['2000', '2005', '2010', '2015', '2019'])
+    plt.tick_params(axis='x', labelsize=def_fontSize)
+    plt.tick_params(axis='y', labelsize=def_fontSize)
+    figPath = pathOut + "npublications_per_year" + ".png"
+    if os.path.exists(figPath): 
+        os.remove(figPath) # otherwise, old figures are not overwritten
+    plt.savefig(figPath)
     
 labels = ["org", "manual_extra"]
 dataset = data.get_dataset(filter=labels, requires_update=False)
@@ -104,3 +170,9 @@ analyze_texts(texts=dataset["standard"], sdgs=dataset["sdgs"], label="training",
 labels = ["nature_abstract"]
 dataset = data.get_dataset(filter=labels, requires_update=False)
 analyze_texts(texts=dataset["standard"], sdgs=dataset["sdgs"], label="validation", show=False)
+
+labels = ["aero"]
+dataset = data.get_dataset(filter=labels, requires_update=False)
+analyze_aero_texts(dataset)
+
+plot_npublications_peryear()

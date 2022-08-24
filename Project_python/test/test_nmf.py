@@ -90,6 +90,7 @@ else:
     nTopics = 20; maxIter = 1000; l1 = 0.0; alpha_w = 0.0; alpha_h = 0.0
     score = 0.1
     
+    
     orgFiles = ds_train[type_texts]; sdgs_org = ds_train["sdgs"]
     natureShort = ds_valid_short[type_texts]; sdgs_natureShort = ds_valid_short["sdgs"]
     natureLong = ds_valid_long[type_texts]; sdgs_natureLong = ds_valid_long["sdgs"]

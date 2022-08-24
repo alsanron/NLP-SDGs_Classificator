@@ -2,7 +2,6 @@ from signal import valid_signals
 import tools
 import pandas as pd
 import numpy as np
-import conf
 from gensim.models import LdaModel
 from sklearn.preprocessing import normalize
 import tools
@@ -16,6 +15,7 @@ class LDA_classifier(LdaModel):
     dict=[]
     verbose=False
     train_data=[]
+
     
     def set_conf(self, paths, dict, verbose=False):
         self.paths = paths
@@ -207,7 +207,7 @@ class LDA_classifier(LdaModel):
     def map_text_to_sdgs(self, text, min_threshold=0, only_positive=True, filter_low=True, normalize=True, expand_factor=1.0):
         if isinstance(text, str): text = text.split(' ')
         elif isinstance(text, list): text = text
-        else: print('Error')
+        else: raise ValueError('Text type is not valid')
         topics, probs = self.infer_text(text)
         sdgs = np.zeros(17)
         for topic, prob in zip(topics, probs):
