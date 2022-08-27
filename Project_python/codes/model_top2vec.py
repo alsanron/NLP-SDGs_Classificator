@@ -1,6 +1,4 @@
-# functions used for testing different model configurations
 from signal import valid_signals
-import tools
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import normalize
@@ -9,6 +7,7 @@ import warnings
 from top2vec import Top2Vec
 warnings.filterwarnings('ignore')
          
+# Class associated to the Top2Vec model 
 class Top2Vec_classifier:
     paths=[]
     model=[]
@@ -19,13 +18,11 @@ class Top2Vec_classifier:
     def __init__(self, paths, verbose=False):
         self.paths = paths
         self.verbose = verbose
- 
-    def load(self, train_data):
-        self.model = Top2Vec.load(self.paths["model"] + "model_top2vec")
-        self.train_data = train_data
         
-    def save(self):
-        self.model.save(self.paths["model"] + "model_top2vec")
+    def set_conf(self, paths, dict, verbose=False):
+        self.paths = paths
+        self.dict = dict
+        self.verbose = verbose
             
     def train(self, train_data, embedding_model="doc2vec", ngram=True, method="learn", workers=8, min_count=2, tokenizer=False):
         # trains the model based on the training files
@@ -76,6 +73,7 @@ class Top2Vec_classifier:
                 valid = True
                 
             if (only_bad and not(valid)) or not(only_bad):
+                
                 raw_sdgsAscii = ["x{}: {:.3f}".format(xx, topic) for topic, xx in zip(raw_sdgs, range(1,18))]
                 raw_sdgsAscii = "|".join(raw_sdgsAscii)
                 rawSDG.append(raw_sdgsAscii)
@@ -112,7 +110,7 @@ class Top2Vec_classifier:
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return [perc_global, perc_single, probs_per_sdg, maxSDG]
+        return [perc_global, perc_single, probs_per_sdg, maxSDG, predictedSDGs]
         
     def map_model_topics_to_sdgs(self, path_csv="", normalize=False, version=1):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
@@ -195,6 +193,8 @@ class Top2Vec_classifier:
             rows.append('|'.join(sum_ascii))
             dfMap["topics_association_map"] = rows
             dfMap.to_excel(self.paths["out"] + "Top2vec/" + "topics_map.xlsx")
+            
+            #np.savetxt(path_csv, self.topics_association, delimiter=",")
             
             # Then the mapping result is stored in a csv
             topic_words, word_scores, topic_nums = self.model.get_topics()

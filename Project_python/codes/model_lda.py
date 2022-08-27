@@ -101,6 +101,7 @@ class LDA_classifier(LdaModel):
             df["all_valid"] = valids
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
+
             
         return [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred]
 
@@ -176,6 +177,8 @@ class LDA_classifier(LdaModel):
             rows.append('|'.join(sum_ascii))
             dfMap["topics_association_map"] = rows
             dfMap.to_excel(self.paths["out"] + "LDA/" + "topics_map.xlsx")
+
+            np.savetxt(self.paths["out"] + "LDA/" + "topics_map.csv", self.topics_association, delimiter=",")
             
             # Then the mapping result is stored in a csv
             df = pd.DataFrame()

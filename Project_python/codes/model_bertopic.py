@@ -2,12 +2,9 @@ from signal import valid_signals
 import tools
 import pandas as pd
 import numpy as np
-import conf
-import data
 import matplotlib.pyplot as plt
 import tools
 import warnings
-import hashlib
 from bertopic import BERTopic
 warnings.filterwarnings('ignore')
 
@@ -22,6 +19,11 @@ class BERTopic_classifier:
     
     def __init__(self, paths):
         self.paths = paths
+        
+    def set_conf(self, paths, dict, verbose=False):
+        self.paths = paths
+        self.dict = dict
+        self.verbose = verbose
             
     def train_model(self, train_data, 
                     embedding_model="all-MiniLM-L6-v2", # Others: all-MiniLM-L6-v2, all-MiniLM-L12-v2, all-mpnet-base-v2
@@ -133,7 +135,7 @@ class BERTopic_classifier:
             df["any_valid"] = validsAny
             df.to_excel(path_to_excel)
             
-        return predictedSDGs, maxSDG
+        return predictedSDGs, maxSDG, perc_global, perc_single
         
     def map_model_topics_to_sdgs(self, associated_sdgs, topics, probs, path_csv="", normalize=True, verbose=True):
         # maps each internal topic with the SDGs. A complete text associated to each specific SDG is fetched. Then each topic is compared with each text and the text-associated sdg with the maximum score is selected as the SDG.
@@ -151,7 +153,15 @@ class BERTopic_classifier:
         for topic_index in range(self.nTopics):
             if normalize: 
                 tmp = self.topics_association[topic_index, :]
-                self.topics_association[topic_index, :] = tmp / sum(tmp)
+                norm_topics = tmp / sum(tmp)
+                
+                for nn in norm_topics:
+                    if nn < 0.1: 
+                        norm_topics[list(norm_topics).index(nn)] = 0.0
+                norm_topics = norm_topics / sum(norm_topics)
+                
+                self.topics_association[topic_index, :]  = norm_topics
+                
             sum_per_topic += self.topics_association[topic_index, :]
             if verbose:
                 listAscii = ["x{}:{:.3f}".format(xx, sdg) for xx, sdg in zip(range(1,18), self.topics_association[topic_index, :])]

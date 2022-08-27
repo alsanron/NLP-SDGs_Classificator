@@ -5,7 +5,7 @@ import conf
 conf.import_paths()
 
 # CONFIGURATION FLAGS
-flag_optimize = 1
+flag_optimize = 0
 bigrams  = True; min_count_bigram  = 5
 trigrams = True; min_count_trigram = 5
 min_words_count = 2 # minimum number of times a word must appear in the corpus. It should be small since the training set is small
