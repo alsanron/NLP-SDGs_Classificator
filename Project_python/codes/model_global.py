@@ -1,5 +1,7 @@
 # functions used for testing different model configurations
+from cmath import isnan
 from logging import error
+from multiprocessing.sharedctypes import Value
 import data
 import conf
 import pandas as pd
@@ -7,9 +9,10 @@ import numpy as np
 import tools
 from scipy.special import softmax
          
+         
 class Global_Classifier:
     paths=[]
-    nmf=[]; lda=[]; top2vec=[]
+    nmf=[]; lda=[]; top2vec=[]; bertopic=[]
     verbose=False
     
     def __init__(self, paths, verbose=False):
@@ -26,6 +29,9 @@ class Global_Classifier:
         self.top2vec = tools.load_obj(self.paths["model"] + "top2vec.pickle")
         print('# Loaded top2vec...')
         
+        self.bertopic = tools.load_obj(self.paths["model"] + "bertopic.pickle")
+        print('# Loaded bertopic...')
+        
     def test_model(self, raw_corpus, corpus, associated_SDGs=[], path_to_plot="", path_to_excel="", only_bad=False,
                    score_threshold=3.0,  only_positive=False, filter_low=False):
         rawSDG = []; realSDGs = []; predic = []; scores = []; texts = []
@@ -37,47 +43,66 @@ class Global_Classifier:
             return sdgsAscii
         if len(associated_SDGs) == 0: associated_SDGs = [[-1] for ii in range(len(corpus))]
         
-        for raw_text, text, sdgs in zip(raw_corpus, corpus, associated_SDGs):
-            [nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs] = self.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=1, filter_low=filter_low, normalize=False, normalize_threshold=-1)  
+        topics, texts_Bertopic = self.bertopic.model.transform(corpus) # transforms the entire corpus for BERTopic. Faster than individual transforms.
+        
+        for raw_text, text, textBERTopic, sdgs in zip(raw_corpus, corpus, texts_Bertopic, associated_SDGs):
+            [nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs] = self.map_text_to_sdgs(text, textBERTopic, score_threshold=score_threshold, 
+                                                                               only_positive=only_positive, version=1, filter_low=filter_low, 
+                                                                               normalize=False, normalize_threshold=-1)  
             
-            concat_array = np.array([nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs])
+            bert_raw_sdgs = bert_raw_sdgs[0]
+            
+            def limit_values(array, min:float, max:float):
+                rtArray = array
+                for val, ind in zip(array, range(len(array))):
+                    if val < min: rtArray[ind] = min
+                    elif val > max: rtArray[ind] = max
+                    elif isnan(val): rtArray[ind] = 0.0
+                return rtArray
+            
+            minVal = 0; maxVal = 0.5
+            nmf_raw_sdgs = limit_values(nmf_raw_sdgs, minVal, maxVal); lda_raw_sdgs = limit_values(lda_raw_sdgs, minVal, maxVal)
+            top_raw_sdgs = limit_values(top_raw_sdgs, minVal, maxVal); bert_raw_sdgs = limit_values(bert_raw_sdgs, minVal, maxVal)
+            
+            concat_array = np.array([nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs])
             filt_mean = np.zeros(17)
             for ii in range(17):
                 counter = 0.0; tmp = 0.0
                 for val in concat_array[:, ii]:
                     if val >= 0.0:
-                        if val >= 0.5: val = 0.5
                         counter += 1; tmp += val
                 if counter > 0: tmp /= counter
                 filt_mean[ii] = tmp
                 
             # predict_sdgs, scores_sdgs = self.get_identified_sdgs(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs)
-            predict_sdgs, scores_sdgs = self.get_identified_sdgs_mean(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, filt_mean)
-            
-            filt_mean_softmax = softmax(filt_mean)
+            predict_sdgs, scores_sdgs = self.get_identified_sdgs_mean(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs, filt_mean)
                        
-            rawSDG.append("NMF -> "+ parse_line(nmf_raw_sdgs) + "LDA -> " + parse_line(lda_raw_sdgs) + "TOP2VEC -> " + parse_line(top_raw_sdgs) + "MEAN -> " + parse_line(filt_mean) + "SOFTMAX -> " + parse_line(filt_mean_softmax))
+            rawSDG.append("NMF -> "+ parse_line(nmf_raw_sdgs) + "LDA -> " + parse_line(lda_raw_sdgs) + 
+                          "TOP2VEC -> " + parse_line(top_raw_sdgs) + "BERTOPIC -> " + parse_line(bert_raw_sdgs) + 
+                          "MEAN -> " + parse_line(filt_mean))
             predic.append(predict_sdgs); scores.append(scores_sdgs)
             realSDGs.append(sdgs)
             
             if len(raw_corpus) == 0: texts.append(text)
             else: texts.append(raw_text)
-
-        # oks = [ok for ok in valids if ok == True]
-        # oksSingle = [ok for ok in validsAny if ok == True]
-        # perc_global = len(oks) / len(valids) * 100
-        # perc_single = len(oksSingle) / len(valids) * 100
-        # print("- {:.2f} % valid global, {:.3f} % valid any, of {} files".format(perc_global, perc_single, len(valids)))
-        # print('Max found: {:.3f}'.format(maxSDG))
-        
-        # for probs, index in zip(probs_per_sdg, range(len(probs_per_sdg))):
-        #     probs_per_sdg[index] = np.mean(probs_per_sdg[index])
         
         if len(path_to_excel) > 0:
             df = pd.DataFrame()
             df["text"] = texts
             df["real"] = realSDGs
-            df["predict"] = predic
+            
+            def compare_second(elem): return elem[1]
+            
+            # parses the predict with the scores
+            predic_str = []
+            for pred, sc in zip(predic, scores):
+                tpls = [(pp, ss) for pp, ss in zip(pred, sc)]
+                tpls.sort(reverse=True, key=compare_second)
+                
+                pstr = ["{:.2f}:{}".format(elem[1], elem[0]) for elem in tpls]
+                predic_str.append(", ".join(pstr))
+                
+            df["predict"] = predic_str
             df["sdgs_association"] = rawSDG
             # df = df.applymap(lambda x: x.encode('unicode_escape').decode('utf-8') if isinstance(x, str) else x)
             df.to_excel(path_to_excel)
@@ -93,7 +118,9 @@ class Global_Classifier:
                 count += 1
                 if sdg in pred_sdg: ok +=1
                 else: wrong += 1
-        print('## RESULTS OF TEST: OK: {:.2f} %'.format(ok / float(count) * 100.0))
+        print('# Results: OK: {:.2f} %'.format(ok / float(count) * 100.0))
+        
+        if not (ok + wrong) == count: raise ValueError('Something went wrong')
         
     def get_identified_sdgs(self, nmf, lda, top2vec):
         identified = []; scores = []
@@ -109,31 +136,37 @@ class Global_Classifier:
             else: pass # not identified
         return identified, scores
     
-    def get_identified_sdgs_mean(self, nmf, lda, top2vec, mean_vec):
+    def get_identified_sdgs_mean(self, nmf, lda, top2vec, bertopic, mean_vec):
         identified = []; scores = []
         for sdg, predic in zip(range(1, 18), mean_vec):
             index = sdg - 1; 
-            tmp = np.array([nmf[index], lda[index], top2vec[index]])
+            tmp = np.array([nmf[index], lda[index], top2vec[index], bertopic[index]])
             
-            flag_mean = predic >= 0.2
-            flag_count_low = np.count_nonzero(tmp >= 0.2) >= 2
-            flag_coun_high = np.count_nonzero(tmp >= 0.35) >= 1 and np.count_nonzero(tmp >= 0.1) >= 2
+            flag_mean = predic >= 0.12
+            flag_count_low = np.count_nonzero(tmp >= 0.1) >= 2
+            # flag_coun_high = np.count_nonzero(tmp >= 0.35) >= 1 and np.count_nonzero(tmp >= 0.1) >= 2
             
             # if flag_mean or flag_count_low or flag_coun_high:
-            if flag_mean:
+            if flag_mean and flag_count_low:
                 identified.append(sdg)
                 scores.append(predic)
             else: pass # not identified
         return identified, scores
             
            
-    def map_text_to_sdgs(self, text, score_threshold, only_positive=False, version=1, filter_low=True, normalize=True, normalize_threshold=0.25):
+    def map_text_to_sdgs(self, text, textBertopic, score_threshold, only_positive=False, version=1, filter_low=True, normalize=True, normalize_threshold=0.25):
         scale_factor = 1.4
-        top_raw_sdgs, top_predic, top_score, top_raw_topicsScores = self.top2vec.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive, version=version, expand_factor=1.2*scale_factor, filter_low=filter_low, normalize=normalize, normalize_threshold=normalize_threshold)  
+        top_raw_sdgs, top_predic, top_score, top_raw_topicsScores = self.top2vec.map_text_to_sdgs(text, score_threshold=score_threshold, only_positive=only_positive,
+                                                                                                  version=version, expand_factor=1.56*scale_factor, 
+                                                                                                  filter_low=filter_low, normalize=normalize, 
+                                                                                                  normalize_threshold=normalize_threshold)  
             
         nmf_raw_sdgs = self.nmf.map_text_to_sdgs(text, filter_low=filter_low, normalize=normalize, expand_factor=4.0*scale_factor)  
         
         lda_raw_sdgs = self.lda.map_text_to_sdgs(text, only_positive=only_positive, filter_low=filter_low, normalize=normalize, expand_factor=1.3*scale_factor) 
+        
+        bert_raw_sdgs = self.bertopic.map_text_to_sdgs_with_probs(textBertopic, score_threshold=score_threshold, only_positive=only_positive, expand_factor=1.0*scale_factor,
+                                                                      filter_low=filter_low, normalize=normalize)  
 
-        return [nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs]
+        return [nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs]
     
