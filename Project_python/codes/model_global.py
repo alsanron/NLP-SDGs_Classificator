@@ -109,7 +109,7 @@ class Global_Classifier:
             
         self.get_statistics_from_test(actual_sdgs=associated_SDGs, predict_sdgs=predic)
             
-        return predic, scores
+        return predic, scores, predic_str
     
     def get_statistics_from_test(self, actual_sdgs, predict_sdgs):
         count = 0; ok = 0; wrong = 0

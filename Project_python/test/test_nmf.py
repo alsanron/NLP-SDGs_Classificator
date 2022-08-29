@@ -13,6 +13,7 @@ from logging import error
 import data
 import conf
 import pandas as pd
+import numpy as np
 import tools
 
 # Loads all the datasets
@@ -118,4 +119,7 @@ else:
                 segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS.xlsx"),
                 normalize=normalize, filter_low=filter, expand_factor=expandFactor)
     tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test.png")
+    
+    pred_sdgs = pd.DataFrame(pred_sdgs)
+    pred_sdgs.to_csv(paths["out"] + "ALL/Individual/pred_test_nmf.csv")
 

@@ -142,3 +142,6 @@ else:
     path_to_excel=(path_out + "test_natureS.xlsx"), expand_factor=expandFactor)
     tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test.png")
     
+    pred_sdgs = pd.DataFrame(pred_sdgs)
+    pred_sdgs.to_csv(paths["out"] + "ALL/Individual/pred_test_lda.csv")
+    

@@ -90,6 +90,9 @@ for jj in range(n_repetitions):
                       )
     tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, paths["out"] + "Top2vec/" + "sdgs_test_it{}_{}.png".format(jj, ii))
     
+    pred_sdgs = pd.DataFrame(pred_sdgs)
+    pred_sdgs.to_csv(paths["out"] + "ALL/Individual/pred_test_top2vec.csv")
+    
     if not flag_train: 
       print('# Closing testing, no training...')
       break

@@ -26,6 +26,7 @@ def preprocess_files(folderPath):
     # Converts the pdfs to txt
     pdfs2txt(folderPath)
     
+    
 def check_dictionary_valid(filesDict):
     # Checks if 2 files have a very close name. This generally avoids having to compare all texts
     for file in filesDict.keys():
@@ -132,14 +133,14 @@ def segmentize_text(text:str, segment_size):
             index += segment_size
     return text_segments
 
-def parse_sdgs_ascii_list(sdgs_ascii:list):
+def parse_sdgs_ascii_list(sdgs_ascii:list, append_always:bool=False):
     # Parses a list of SDGs from ascii to int
     # @param sdgs_ascii List of sdgs in ascii -> "[1,2,4]" = SDG1,2,4
     # return sdgs List of sdgs in int -> [1,2,4]
     sdgs = []
     for sdgAscii in sdgs_ascii:
         tmp = [int(sdg) for sdg in sdgAscii[1:-1].split(',') if len(sdg) > 0]
-        if len(tmp) > 0: sdgs.append(tmp)
+        if len(tmp) > 0 or append_always: sdgs.append(tmp)
     return sdgs
 
 def save_figure(fig:plt, path:str):
@@ -233,5 +234,20 @@ def plot_ok_vs_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified
     # plt.ylim(top=0.5)
     # plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
     plt.legend(['Not identified', 'Identified'])
+    if len(path_out) > 4: plt.savefig(path_out)
+    if show: plt.show()
+    
+    
+def plot_SDGsidentified(sdgs_identified:list[list[int]], path_out:str="", show:bool=False):
+    xlabel = [ii for ii in range(1, 18)]
+    counts, countstr = count_texts_per_sdg(sdgs_identified)
+    
+    plt.figure(figsize=(8, 8))
+    plt.bar(xlabel, counts, width=0.3, alpha=1.0, color='green')
+    plt.xticks(xlabel)
+    plt.xlabel('SDG')
+    plt.ylabel("Number of times identified")
+    # plt.ylim(top=0.5)
+    # plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
     if len(path_out) > 4: plt.savefig(path_out)
     if show: plt.show()

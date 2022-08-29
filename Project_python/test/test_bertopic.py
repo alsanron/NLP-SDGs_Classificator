@@ -119,6 +119,9 @@ for ii in range(nOptims):
       # tools.analyze_predict_real_sdgs(sdgs_natureShort, predic, path_out=paths["out"] + "Bertopic/", case_name="nature_short_it{}case_{}".format(jj, ii), show=False)
       tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, predic, paths["out"] + "Bertopic/" + "sdgs_test_it{}_{}.png".format(jj, ii))
       
+      pred_sdgs = pd.DataFrame(predic)
+      pred_sdgs.to_csv(paths["out"] + "ALL/Individual/pred_test_bertopic.csv")
+      
       if not flag_train: 
         print('# Closing testing, no training...')
         break
