@@ -176,10 +176,19 @@ def count_texts_per_sdg(sdgs:list[list[int]]):
     countPerSdg = np.zeros(17)
     for sdgG in sdgs:
         for sdg in sdgG:
-            countPerSdg[sdg - 1] += 1
-    countPerSdgStr = ["SDG{}:{}".format(sdg, int(count)) for sdg, count in zip(range(1,18), countPerSdg)]
+            countPerSdg[int(sdg) - 1] += 1
+    countPerSdgStr = ["SDG{}:{}".format(int(sdg), int(count)) for sdg, count in zip(range(1,18), countPerSdg)]
     countPerSdgStr = " | ".join(countPerSdgStr)
     
+    return countPerSdg, countPerSdgStr
+
+def count_texts_per_score(sdgs_identified, sdgs_score):
+    countPerSdg = np.zeros(17)
+    for sdgG, scoreS in zip(sdgs_identified, sdgs_score):
+        for sdg, score in zip(sdgG, scoreS):
+            countPerSdg[int(sdg) - 1] += score
+    countPerSdgStr = ["SDG{}:{:.2f}".format(int(sdg), weight) for sdg, weight in zip(range(1,18), countPerSdg)]
+    countPerSdgStr = " | ".join(countPerSdgStr)
     return countPerSdg, countPerSdgStr
 
 def count_meanwords_per_sdg(texts:list[str], sdgs:list[list[int]]):
@@ -238,16 +247,30 @@ def plot_ok_vs_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified
     if show: plt.show()
     
     
-def plot_SDGsidentified(sdgs_identified:list[list[int]], path_out:str="", show:bool=False):
+def plot_SDGsidentified(sdgs_identified:list[list[int]], sdgs_scores:list[list[float]], path_out:str="", with_score:bool=False,
+                        show:bool=False, fontsize:int=14):
     xlabel = [ii for ii in range(1, 18)]
-    counts, countstr = count_texts_per_sdg(sdgs_identified)
+    if with_score:
+        counts, countstr = count_texts_per_score(sdgs_identified, sdgs_scores)
+    else:
+        counts, countstr = count_texts_per_sdg(sdgs_identified)
     
     plt.figure(figsize=(8, 8))
     plt.bar(xlabel, counts, width=0.3, alpha=1.0, color='green')
     plt.xticks(xlabel)
-    plt.xlabel('SDG')
-    plt.ylabel("Number of times identified")
+    plt.xlabel('SDG', fontsize=fontsize)
+    if with_score:
+        plt.ylabel("Total weight (sum of individual score)", fontsize=fontsize)
+    else:
+        plt.ylabel("Number of times identified", fontsize=fontsize)
     # plt.ylim(top=0.5)
     # plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
-    if len(path_out) > 4: plt.savefig(path_out)
+    plt.tick_params(axis='x', labelsize=fontsize)
+    plt.tick_params(axis='y', labelsize=fontsize)
+    if len(path_out) > 4: 
+        if os.path.exists(path_out): 
+            os.remove(path_out) # otherwise, old figures are not overwritten
+        plt.savefig(path_out)
     if show: plt.show()
+
+       
