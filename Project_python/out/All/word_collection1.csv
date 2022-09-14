@@ -1,0 +1,21 @@
+,NMF,LDA,Top2Vec,BERTopic
+0,0.0616:energy,0.0080:energy,0.2391:paper,0.0139:energy
+1,0.0325:policy,0.0062:country,0.2360:approach,0.0043:electricity
+2,0.0184:chapter,0.0062:marine,0.2358:discus,0.0037:renewable
+3,0.0165:paper,0.0059:ocean,0.2309:evaluation,0.0033:fuel
+4,0.0158:waste,0.0059:country,0.2258:analysis,0.0032:renewable energy
+5,0.0156:government,0.0044:woman,0.2256:policy,0.0030:efficiency
+6,0.0154:oecd,0.0041:sustainable,0.2233:explores,0.0030:technology
+7,0.0145:innovation,0.0038:including,0.2232:examines,0.0029:energy efficiency
+8,0.0134:development,0.0037:global,0.2214:chapter,0.0028:access
+9,0.0131:digital,0.0031:child,0.2210:strategic,0.0027:carbon
+10,0.0130:renewable,0.0031:development,0.2185:effectiveness,0.0014:climate
+11,0.0120:electricity,0.0031:manufacturing,0.2168:highlight,0.0014:disaster
+12,0.0112:renewable energy,0.0029:sustainable,0.2167:summarises,0.0014:material
+13,0.0110:energy efficiency,0.0028:food,0.2161:organisation,0.0014:waste
+14,0.0107:support,0.0027:developing,0.2122:attractiveness,0.0011:consumption
+15,0.0107:challenge,0.0026:developed,0.2120:present,0.0010:climate change
+16,0.0103:efficiency,0.0025:education,0.2119:look,0.0010:change
+17,0.0101:public,0.0025:access,0.2106:realise,0.0010:urban
+18,0.0099:environmental,0.0025:developing,0.2097:focus,0.0008:city
+19,0.0096:approach,0.0024:country,0.2094:renewal,0.0008:sustainable

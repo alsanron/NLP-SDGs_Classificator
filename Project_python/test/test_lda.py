@@ -5,7 +5,7 @@ import conf
 conf.import_paths()
 
 # CONFIGURATION FLAGS
-flag_optimize = 0
+flag_optimize = 1
 bigrams  = True; min_count_bigram  = 5
 trigrams = True; min_count_trigram = 5
 min_words_count = 2 # minimum number of times a word must appear in the corpus. It should be small since the training set is small
@@ -64,6 +64,9 @@ dict.filter_extremes(no_below=1, no_above=0.7)
 dict[0] # just to load the dict
 id2word = dict.id2token
 corpus = [dict.doc2bow(text) for text in trainData[0]]
+
+tmp= [text.split(' ') for text in natureShort] # requires the words separated
+corpusPerplexity = [dict.doc2bow(text) for text in tmp]
         
 # Optimization/Calculation section
 path_out = paths["out"] + "LDA/"
@@ -98,28 +101,28 @@ if flag_optimize:
         sumPerTopic, listAscii = lda.map_model_topics_to_sdgs(trainData, path_csv=(path_out + "topic_words{}.csv".format(ii)), 
                                                             normalize=True, verbose=True)
 
-        tools.save_obj(lda, paths["model"] + "lda{}.pickle".format(ii))
+        # tools.save_obj(lda, paths["model"] + "lda{}.pickle".format(ii))
         
         print('# Testing model...')
         filter = True; normalize = False
         
-        [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = lda.test_model(trainData[0], trainData[1], score_threshold=score_threshold, segmentize=-1, filter_low=filter, normalize=normalize,
-        path_to_excel=(path_out + "test_training{}.xlsx".format(ii)), expand_factor=1.0)
-        tools.plot_ok_vs_nok_SDGsidentified(trainData[1], pred_sdgs, path_out + "sdgs_train{}.png".format(ii))
+        # [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = lda.test_model(trainData[0], trainData[1], score_threshold=score_threshold, segmentize=-1, filter_low=filter, normalize=normalize,
+        # path_to_excel=(path_out + "test_training{}.xlsx".format(ii)), expand_factor=1.0)
+        # tools.plot_ok_vs_nok_SDGsidentified(trainData[1], pred_sdgs, path_out + "sdgs_train{}.png".format(ii))
             
         
-        [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = lda.test_model(natureShort, sdgs_natureShort, score_threshold=score_threshold, segmentize=-1, filter_low=filter, normalize=normalize,
-        path_to_excel=(path_out + "test_natureS{}.xlsx".format(ii)), expand_factor=expandFactor)
-        tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test{}.png".format(ii))
+        # [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = lda.test_model(natureShort, sdgs_natureShort, score_threshold=score_threshold, segmentize=-1, filter_low=filter, normalize=normalize,
+        # path_to_excel=(path_out + "test_natureS{}.xlsx".format(ii)), expand_factor=expandFactor)
+        # tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test{}.png".format(ii))
     
-        perplexity = lda.log_perplexity(corpus)
+        perplexity = lda.log_perplexity(corpusPerplexity)
         print('# Model perplexity: {:.2f}'.format(perplexity))
     
-        out_perc_global.append(perc_valid_global); out_perc_any.append(perc_valid_any)
+        # out_perc_global.append(perc_valid_global); out_perc_any.append(perc_valid_any)
         perp.append(perplexity); repSdgs.append(listAscii)
         
-    optimData["perc_global"] = out_perc_global
-    optimData["perc_any"] = out_perc_any
+    # optimData["perc_global"] = out_perc_global
+    # optimData["perc_any"] = out_perc_any
     optimData["log_perplexity"] = perp
     optimData["representativitySDGs"] = repSdgs
     optimData.to_excel(path_out + "optimization.xlsx")

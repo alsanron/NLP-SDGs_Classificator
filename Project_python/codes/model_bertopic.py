@@ -184,6 +184,22 @@ class BERTopic_classifier:
                 
         return [predictSDGs, sdgs, scores]
     
+    def map_text_to_topwords(self, text, top_n):
+        topics_inf = self.model.get_topics()
+        words_collection = []
+        topics, probs = self.model.transform(text)
+        topics = range(len(probs[0]))
+        for topic, prob in zip(topics, probs[0]):
+            for pair in topics_inf[topic]:
+                wrd = pair[0]; score = pair[1]
+                words_collection.append((wrd, score * prob))
+       
+        def sort_method(elem):
+            return elem[1]
+
+        words_collection.sort(key=sort_method, reverse=True)    
+        return words_collection[:top_n]
+    
     def map_text_to_sdgs_with_probs(self, probs, score_threshold, only_positive=False, 
                          expand_factor=3, filter_low=True, normalize=False):
         predictSDGs = np.zeros(17)  
@@ -211,8 +227,7 @@ class BERTopic_classifier:
                 scores.append(top[ii])
                 
         return [predictSDGs, sdgs, scores]
-         
-                
+                     
     def print_summary(self, path_csv=""):
         topic_words_scores = [[] for ii in range(self.nTopics)]
         dfTopics = pd.DataFrame()

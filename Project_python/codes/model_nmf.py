@@ -30,6 +30,9 @@ class NMF_classifier:
         self.model = NMF(n_components=n_topics, random_state=5, verbose=False, max_iter=max_iter,
                          alpha_W=alpha_w, alpha_H=alpha_h, l1_ratio=l1)
         self.model.fit(vectorized_data) 
+        a=2
+
+        
         
     def print_stopwords(self, path_csv=""):
         stopwords = list(self.vectorizer.stop_words_)
@@ -197,6 +200,22 @@ class NMF_classifier:
             sdgs_score = sdgs_score / sum(sdgs_score)
         
         return sdgs_score
+    
+    def map_text_to_topwords(self, text, top_n):
+        query_words_vect = self.vectorizer.transform([text])
+        topicFeats = self.model.transform(query_words_vect)[0]
+        
+        words_collection = []
+        for topicScore, topicIndex in zip(topicFeats, range(len(topicFeats))):
+            words, scores = self.get_topic_terms(topicIndex, top_n)
+            for word, score in zip(words, scores):
+                words_collection.append((word, score * topicScore))
+       
+        def sort_method(elem):
+            return elem[1]
+
+        words_collection.sort(key=sort_method, reverse=True)    
+        return words_collection[:top_n]
     
     def infer_text(self, text):
         query_words_vect = self.vectorizer.transform([text])

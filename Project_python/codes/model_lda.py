@@ -208,9 +208,8 @@ class LDA_classifier(LdaModel):
         return [sum_per_topic, listSDGsOut]
             
     def map_text_to_sdgs(self, text, min_threshold=0, only_positive=True, filter_low=True, normalize=True, expand_factor=1.0):
-        if isinstance(text, str): text = text.split(' ')
-        elif isinstance(text, list): text = text
-        else: raise ValueError('Text type is not valid')
+        text = self.convert_text(text)
+        
         topics, probs = self.infer_text(text)
         sdgs = np.zeros(17)
         for topic, prob in zip(topics, probs):
@@ -230,11 +229,37 @@ class LDA_classifier(LdaModel):
             
         return sdgs
     
+    def map_text_to_topwords(self, text, top_n):
+        if isinstance(text, str): text = text.split(' ')
+        elif isinstance(text, list): text = text
+        else: raise ValueError('Text type is not valid')
+
+        words_collection = []
+        topics, probs = self.infer_text(text)
+        for topic, prob in zip(topics, probs):
+            words = self.get_topic_terms(topic)
+            for pair in words:
+                wrd = self.dict.id2token[pair[0]]
+                score = pair[1]
+                words_collection.append((wrd, score * prob))
+       
+        def sort_method(elem):
+            return elem[1]
+
+        words_collection.sort(key=sort_method, reverse=True)    
+        return words_collection[:top_n]
+    
     def infer_text(self, text):
         bow = self.dict.doc2bow(text)
         result = self.get_document_topics(bow, minimum_probability=None, minimum_phi_value=None)
         topics = [elem[0] for elem in result]
         probs = [elem[1] for elem in result]
         return [topics, probs]
+    
+    def convert_text(text):
+        if isinstance(text, str): text = text.split(' ')
+        elif isinstance(text, list): text = text
+        else: raise ValueError('Text type is not valid')
+        return text
         
         

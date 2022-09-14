@@ -266,6 +266,23 @@ class Top2Vec_classifier:
 
         return [predictSDGs, sdgs, scores, probabilities]
     
+    
+    def map_text_to_topwords(self, text, top_n):
+        topics_words, word_scores, topic_nums = self.model.get_topics()
+
+        words_collection = []
+        topics, probs = self.infer_text(text)
+        for topic, prob in zip(topics, probs):
+            for word, score in zip(topics_words[topic], word_scores[topic]):
+                words_collection.append((word, score * prob))
+       
+        def sort_method(elem):
+            return elem[1]
+
+        words_collection.sort(key=sort_method, reverse=True)    
+        return words_collection[:top_n]
+    
+    
     def infer_text(self, text):
         nTopics = self.model.get_num_topics()
         t1, t2, topic_scores , topic_nums = self.model.query_topics(text, nTopics)

@@ -1,0 +1,16 @@
+NMF,LDA,Top2Vec,BERTopic
+0.0517:health,0.0075:death,0.1976:dying,0.0076:urban
+0.0454:disease,0.0072:disease,0.1896:communicable,0.0064:city
+0.0370:death,0.0070:health,0.1875:malaria,0.0036:transport
+0.0290:mortality,0.0068:climate,0.1864:mortality,0.0035:disaster
+0.0219:communicable,0.0067:water,0.1827:disease,0.0034:housing
+0.0211:maternal,0.0055:change,0.1776:diabetes,0.0031:population
+0.0203:waste,0.0053:urban,0.1774:infectious,0.0030:slum
+0.0198:communicable disease,0.0044:country,0.1768:era,0.0028:climate
+0.0178:education,0.0043:child,0.1764:skilled,0.0026:public
+0.0177:care,0.0042:climate_change,0.1762:tuberculosis,0.0022:urban population
+0.0175:climate,0.0041:rate,0.1756:prevented,0.0021:climate change
+0.0160:school,0.0041:city,0.1750:hepatitis,0.0020:change
+0.0160:cancer,0.0039:mortality,0.1748:death,0.0020:air
+0.0132:primary,0.0038:population,0.1740:infected,0.0019:policy
+0.0130:mental,0.0036:country,0.1740:vaccination,0.0018:energy

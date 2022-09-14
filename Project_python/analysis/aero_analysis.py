@@ -149,7 +149,7 @@ listC = [[country, count] for country, count in zip(list_countries, count_countr
 
 def order_second(elem):
     return elem[1]
-listC.sort(key=order_second)
+listC.sort(key=order_second, reverse=True)
 a=2
 # import matplotlib.pyplot as plt
 
