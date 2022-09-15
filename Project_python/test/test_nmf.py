@@ -91,7 +91,6 @@ else:
     nTopics = 20; maxIter = 1000; l1 = 0.0; alpha_w = 0.0; alpha_h = 0.0
     score = 0.1
     
-    
     orgFiles = ds_train[type_texts]; sdgs_org = ds_train["sdgs"]
     natureShort = ds_valid_short[type_texts]; sdgs_natureShort = ds_valid_short["sdgs"]
     natureLong = ds_valid_long[type_texts]; sdgs_natureLong = ds_valid_long["sdgs"]
@@ -113,13 +112,14 @@ else:
     
     [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = nmf.test_model(corpus=trainData[0], associated_SDGs=trainData[1], score_threshold=score, segmentize=-1, filter_low=filter, normalize=normalize,
                 path_to_excel=(path_out + "test_nmf_training.xlsx"), expand_factor=expandFactor)
-    tools.plot_ok_vs_nok_SDGsidentified(trainData[1], pred_sdgs, path_out + "sdgs_train.png")
+    tools.plot_ok_vs_nok_SDGsidentified(trainData[1], pred_sdgs, path_out + "sdgs_train.png", fontsize=18, color='green')
     
     [rawSDG, perc_valid_global, perc_valid_any, maxSDG, pred_sdgs] = nmf.test_model(corpus=natureShort, associated_SDGs=sdgs_natureShort, score_threshold=score,
                 segmentize=-1, path_to_excel=(path_out + "test_nmf_natureS.xlsx"),
                 normalize=normalize, filter_low=filter, expand_factor=expandFactor)
-    tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test.png")
+    tools.plot_ok_vs_nok_SDGsidentified(sdgs_natureShort, pred_sdgs, path_out + "sdgs_test.png",  fontsize=18, color='red')
     
     pred_sdgs = pd.DataFrame(pred_sdgs)
     pred_sdgs.to_csv(paths["out"] + "ALL/Individual/pred_test_nmf.csv")
+
 

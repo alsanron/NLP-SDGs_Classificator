@@ -227,22 +227,24 @@ def get_ok_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified:lis
             else: nok[sdg - 1] += 1
     return ok, nok
         
-def plot_ok_vs_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified:list[list[int]], path_out:str="", show:bool=False):
+def plot_ok_vs_nok_SDGsidentified(sdgs_labelled:list[list[int]], sdgs_identified:list[list[int]], path_out:str="", show:bool=False, fontsize=14, color='green'):
     ok, nok = get_ok_nok_SDGsidentified(sdgs_labelled, sdgs_identified)
     
     xlabel = [ii for ii in range(1, 18)]
     
     plt.figure(figsize=(8, 8))
     for xx in xlabel:
-        plt.bar(xx, ok[xx - 1] + nok[xx - 1], width=0.3, alpha=0.5, color='green',)
-        plt.bar(xx, ok[xx - 1]              , width=0.3, alpha=1.0, color='green')
+        plt.bar(xx, ok[xx - 1] + nok[xx - 1], width=0.3, alpha=0.5, color=color,)
+        plt.bar(xx, ok[xx - 1]              , width=0.3, alpha=1.0, color=color)
         
     plt.xticks(xlabel)
-    plt.xlabel('SDG')
-    plt.ylabel("Number of texts")
+    plt.xlabel('SDG', fontsize=fontsize)
+    plt.ylabel("Number of texts", fontsize=fontsize)
+    plt.tick_params(axis='x', labelsize=fontsize)
+    plt.tick_params(axis='y', labelsize=fontsize)
     # plt.ylim(top=0.5)
     # plt.title('SDGs to identify: {}'.format(labeledSDGs[textIndex]))
-    plt.legend(['Not identified', 'Identified'])
+    plt.legend(['Not identified', 'Identified'], fontsize=fontsize)
     if len(path_out) > 4: plt.savefig(path_out)
     if show: plt.show()
     
