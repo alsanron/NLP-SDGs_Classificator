@@ -9,7 +9,7 @@ import conf
 conf.import_paths()
 
 # Configuration flags
-identify_sdgs = False # true: all the texts are identified, false: it used previous stored data
+identify_sdgs = True # true: all the texts are identified, false: it used previous stored data
 
 # Imports required to work properly
 from logging import error
@@ -36,7 +36,7 @@ if identify_sdgs:
     print('# Identifying SDGs in texts...')
     predic, scores, predicStr = model.test_model(raw_corpus=raw_files, corpus=files, associated_SDGs=[], 
                  path_to_plot="", path_to_excel=paths["out"] + "All/test_aero.xlsx", 
-                 only_bad=False, score_threshold=-1,  only_positive=True, filter_low=True)
+                 only_bad=False, score_threshold=-1,  only_positive=True, filter_low=True, only_main_topic=False)
     ds_aero["id_sdgs"] = predicStr
     pd.DataFrame(ds_aero).to_excel(paths["out"] + "All/df_test_aero.xlsx")
     print('# Results were updated')

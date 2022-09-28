@@ -33,7 +33,7 @@ class Global_Classifier:
         print('# Loaded bertopic...')
         
     def test_model(self, raw_corpus, corpus, associated_SDGs=[], path_to_plot="", path_to_excel="", only_bad=False,
-                   score_threshold=3.0,  only_positive=False, filter_low=False):
+                   score_threshold=3.0,  only_positive=False, filter_low=False, only_main_topic=False):
         rawSDG = []; realSDGs = []; predic = []; scores = []; texts = []
        
         def parse_line(sdgs):
@@ -43,8 +43,10 @@ class Global_Classifier:
             return sdgsAscii
         if len(associated_SDGs) == 0: associated_SDGs = [[-1] for ii in range(len(corpus))]
         
+        print('# Transforming corpus for bertopic...')
         topics, texts_Bertopic = self.bertopic.model.transform(corpus) # transforms the entire corpus for BERTopic. Faster than individual transforms.
         
+        print('# Texts are being analysed...')
         for raw_text, text, textBERTopic, sdgs in zip(raw_corpus, corpus, texts_Bertopic, associated_SDGs):
             [nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs] = self.map_text_to_sdgs(text, textBERTopic, score_threshold=score_threshold, 
                                                                                only_positive=only_positive, version=1, filter_low=filter_low, 
@@ -75,7 +77,7 @@ class Global_Classifier:
                 filt_mean[ii] = tmp
                 
             # predict_sdgs, scores_sdgs = self.get_identified_sdgs(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs)
-            predict_sdgs, scores_sdgs = self.get_identified_sdgs_mean(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs, filt_mean)
+            predict_sdgs, scores_sdgs = self.get_identified_sdgs_mean(nmf_raw_sdgs, lda_raw_sdgs, top_raw_sdgs, bert_raw_sdgs, filt_mean, only_main=only_main_topic)
                        
             rawSDG.append("NMF -> "+ parse_line(nmf_raw_sdgs) + "LDA -> " + parse_line(lda_raw_sdgs) + 
                           "TOP2VEC -> " + parse_line(top_raw_sdgs) + "BERTOPIC -> " + parse_line(bert_raw_sdgs) + 
@@ -136,7 +138,7 @@ class Global_Classifier:
             else: pass # not identified
         return identified, scores
     
-    def get_identified_sdgs_mean(self, nmf, lda, top2vec, bertopic, mean_vec):
+    def get_identified_sdgs_mean(self, nmf, lda, top2vec, bertopic, mean_vec, only_main=False):
         identified = []; scores = []
         for sdg, predic in zip(range(1, 18), mean_vec):
             index = sdg - 1; 
@@ -151,6 +153,15 @@ class Global_Classifier:
                 identified.append(sdg)
                 scores.append(predic)
             else: pass # not identified
+        
+        if only_main:
+            pairs = [(ii, jj) for ii, jj in zip(identified, scores)]
+            def sort_sdgs(x):
+                return x[1]
+            sorted(pairs, key=sort_sdgs, reverse=True)
+            identified = []; scores = []
+            if len(pairs) > 0:
+                identified = [pairs[0][0]]; scores = [pairs[0][1]]
         return identified, scores
             
            

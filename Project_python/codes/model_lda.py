@@ -256,7 +256,7 @@ class LDA_classifier(LdaModel):
         probs = [elem[1] for elem in result]
         return [topics, probs]
     
-    def convert_text(text):
+    def convert_text(self, text):
         if isinstance(text, str): text = text.split(' ')
         elif isinstance(text, list): text = text
         else: raise ValueError('Text type is not valid')
